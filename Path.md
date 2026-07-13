@@ -294,6 +294,7 @@ This document will be updated while work is performed, not reconstructed after a
 7. failures, rejected approaches, rollbacks, unresolved risks, and corrective work;
 8. the phase exit-gate decision with direct evidence rather than summary booleans;
 9. the commit hash that freezes the accepted phase state.
+10. after the phase exit audit passes, commit the complete phase implementation and selected authoritative evidence, then push the accepted phase state to the configured GitHub remote before reporting final completion.
 
 No later phase may be marked in progress until the preceding phase exit gate has passed. A phase may only be marked complete when every stated exit criterion in `WorkPlan.md` has independently reproducible evidence. Missing, simulated, placeholder, hard-coded, or structurally inferred evidence is a failure, not a pass.
 

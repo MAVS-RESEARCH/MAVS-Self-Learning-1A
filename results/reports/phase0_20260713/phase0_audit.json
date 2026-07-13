@@ -1,0 +1,110 @@
+{
+  "checks": {
+    "allocation_exact": true,
+    "canonical_opportunities_total": 15000,
+    "console_log_lines": [
+      20,
+      23,
+      28,
+      33,
+      39,
+      44,
+      49,
+      57,
+      62,
+      67,
+      74,
+      79,
+      84,
+      89,
+      95,
+      101,
+      105
+    ],
+    "deterministic_replay_byte_equivalent": true,
+    "final_inherited_smoke": {
+      "errors": [],
+      "records": 8,
+      "sha256": "3a21fa5439d03ef014cb1532d74bd8a5a822ddad976b9f90ffb18a80c0ce8dba"
+    },
+    "forbidden_or_inherited_results": [],
+    "metamorphic": true,
+    "metric_identities": true,
+    "mismatched_console_log_comments": [],
+    "orchestration_complete": true,
+    "orchestration_steps": [
+      "clean_results",
+      "inherited_tests_before",
+      "inherited_smoke_before",
+      "regression_output_removed",
+      "generation_ledgers_compiled",
+      "generation_resets_and_participants_validated",
+      "update_contract_validated",
+      "stress_executed",
+      "self_learning_traces_validated",
+      "provenance_guarded_aggregation",
+      "phase0_tests",
+      "full_regression_tests",
+      "inherited_smoke_after"
+    ],
+    "replay_records_total": 90000,
+    "required_files": {
+      "CLAIMS.md": true,
+      "Makefile": true,
+      "REPRODUCIBILITY.md": true,
+      "configs/phases/phase0.yaml": true,
+      "configs/suites/self_learning_300k.yaml": true,
+      "configs/worlds/generator_defaults.yaml": true,
+      "configs/worlds/independent_generator.yaml": true,
+      "schemas/candidate_configuration.schema.json": true,
+      "schemas/certification_report.schema.json": true,
+      "schemas/decision_trace.schema.json": true,
+      "schemas/diagnostic_proposal.schema.json": true,
+      "schemas/learning_event.schema.json": true,
+      "schemas/participant_state.schema.json": true,
+      "schemas/update_decision.schema.json": true,
+      "schemas/world_manifest.schema.json": true,
+      "scripts/aggregate_phase0.py": true,
+      "scripts/clean_results.py": true,
+      "scripts/compile_generation_ledgers.py": true,
+      "scripts/validate_generation_resets.py": true,
+      "scripts/validate_participant_state.py": true,
+      "scripts/validate_updates.py": true,
+      "src/mavs10d/corruption/adversarial_schedule.py": true,
+      "src/mavs10d/corruption/composer.py": true,
+      "src/mavs10d/envs/world_compiler.py": true,
+      "src/mavs10d/envs/world_ledger.py": true,
+      "src/mavs10d/metrics/burden.py": true,
+      "src/mavs10d/metrics/frontier.py": true,
+      "src/mavs10d/metrics/transfer.py": true
+    },
+    "reset_errors": [],
+    "traces": {
+      "1": {
+        "canonical_opportunities": 5000,
+        "errors": [],
+        "participant_errors": [],
+        "records": 30000,
+        "replay_trace_sha256": "acb79de75208ad1c6c19a559cca593384d8e870a900dc98fdd0a0643eaac28d2"
+      },
+      "2": {
+        "canonical_opportunities": 5000,
+        "errors": [],
+        "participant_errors": [],
+        "records": 30000,
+        "replay_trace_sha256": "b36b322e8a1a8ddb12bc3a1dc08e1d074ccdd329a0d0d239b372fd069d8e5dbd"
+      },
+      "3": {
+        "canonical_opportunities": 5000,
+        "errors": [],
+        "participant_errors": [],
+        "records": 30000,
+        "replay_trace_sha256": "e091d06c4000f26845cd717b739b7dd36d6033200427262445c01c539d688c7c"
+      }
+    },
+    "uncommented_console_logs": []
+  },
+  "passed": true,
+  "phase": 0,
+  "run_id": "phase0_20260713"
+}

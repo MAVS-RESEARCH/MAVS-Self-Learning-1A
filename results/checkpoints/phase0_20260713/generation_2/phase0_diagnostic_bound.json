@@ -1,0 +1,17 @@
+{
+  "checkpoint_hash": "d53d36bffbbe908b3f848861f5b0ccb93634993918bab82ffce35fd60680a62c",
+  "component_hashes": {},
+  "condition": "diagnostic_bound",
+  "forbidden_state_audit": {
+    "no_answer_keys": true,
+    "no_final_metrics": true,
+    "no_future_manifests": true,
+    "no_raw_hidden_labels": true,
+    "no_unapproved_configuration": true
+  },
+  "generation": 2,
+  "participant_id": "phase0_diagnostic_bound",
+  "persistence_eligible": false,
+  "prior_library_hash": null,
+  "retained_bytes": 0
+}

@@ -1,0 +1,55 @@
+{
+  "claim_boundary": "infrastructure_only_no_self_learning_superiority_claim",
+  "generations": [
+    {
+      "generation": 1,
+      "ledger": "results\\manifests\\phase0_20260713\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "38c7700dfd2cccd9e64116c9ed232dbfe81efeefe50dcc4f4b090de7acd1a839",
+      "manifest": "results\\manifests\\phase0_20260713\\generation_1\\generation_manifest.json",
+      "manifest_sha256": "71942c08ae5cc83f803140c3c77dfa0d285d40aea2b409b8a47ab1bda5c66b88",
+      "opportunity_count": 5000,
+      "participant_checkpoint": "results\\checkpoints\\phase0_20260713\\generation_1\\phase0_diagnostic_bound.json"
+    },
+    {
+      "generation": 2,
+      "ledger": "results\\manifests\\phase0_20260713\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "66fad89e9c5f19ac1273bf39f6ea4560b52fa60b009a837cdca2ae24f9a0004c",
+      "manifest": "results\\manifests\\phase0_20260713\\generation_2\\generation_manifest.json",
+      "manifest_sha256": "ea8c3b7d0767bace968e860f16e330d79c74be971630fc230d3daf7c1987bb10",
+      "opportunity_count": 5000,
+      "participant_checkpoint": "results\\checkpoints\\phase0_20260713\\generation_2\\phase0_diagnostic_bound.json"
+    },
+    {
+      "generation": 3,
+      "ledger": "results\\manifests\\phase0_20260713\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "01864e72b1740d027fd9b5fe26fd0d3f36675a587687c41dcdba6644b8fc852b",
+      "manifest": "results\\manifests\\phase0_20260713\\generation_3\\generation_manifest.json",
+      "manifest_sha256": "d7d46526b1b3feed79145af494a7bea04705475298d3b3df3e2684f1644f5b86",
+      "opportunity_count": 5000,
+      "participant_checkpoint": "results\\checkpoints\\phase0_20260713\\generation_3\\phase0_diagnostic_bound.json"
+    }
+  ],
+  "implementation_git_sha": "5168bd065200bbfdb4ad2d07310041d2e17ebb4e",
+  "logical_artifacts": {
+    "generation_ledgers": [
+      "results\\manifests\\phase0_20260713\\generation_1\\world_ledger.parquet",
+      "results\\manifests\\phase0_20260713\\generation_2\\world_ledger.parquet",
+      "results\\manifests\\phase0_20260713\\generation_3\\world_ledger.parquet"
+    ],
+    "generation_manifests": [
+      "results\\manifests\\phase0_20260713\\generation_1\\generation_manifest.json",
+      "results\\manifests\\phase0_20260713\\generation_2\\generation_manifest.json",
+      "results\\manifests\\phase0_20260713\\generation_3\\generation_manifest.json"
+    ],
+    "participant_checkpoints": [
+      "results\\checkpoints\\phase0_20260713\\generation_1\\phase0_diagnostic_bound.json",
+      "results\\checkpoints\\phase0_20260713\\generation_2\\phase0_diagnostic_bound.json",
+      "results\\checkpoints\\phase0_20260713\\generation_3\\phase0_diagnostic_bound.json"
+    ]
+  },
+  "manifest_hash": "5af1c5be0f2164fa41f5243b7027e3771f7a3a8f5c731abdcef9e3e92e386b4f",
+  "phase": 0,
+  "run_id": "phase0_20260713",
+  "schema_version": "1.0.0",
+  "upstream_git_sha": "a1bfd52b59aaba69b2c041a5e7da0ee263125c1f"
+}

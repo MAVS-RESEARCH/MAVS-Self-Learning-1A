@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "phase0_20260713",
+  "completed_steps": [
+    "clean_results",
+    "inherited_tests_before",
+    "inherited_smoke_before",
+    "regression_output_removed",
+    "generation_ledgers_compiled",
+    "generation_resets_and_participants_validated",
+    "update_contract_validated",
+    "stress_executed",
+    "self_learning_traces_validated",
+    "provenance_guarded_aggregation",
+    "phase0_tests",
+    "full_regression_tests",
+    "inherited_smoke_after"
+  ]
+}

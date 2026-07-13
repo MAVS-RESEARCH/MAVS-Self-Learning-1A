@@ -1,0 +1,150 @@
+{
+  "allocation": {
+    "generated_world": 2000,
+    "inherited_static": 1000,
+    "trace_metric_metamorphic": 2000
+  },
+  "canonical_opportunities": 5000,
+  "claim_boundary": "diagnostic_bounds_only_non_competitive",
+  "generation": 1,
+  "ledger_sha256": "38c7700dfd2cccd9e64116c9ed232dbfe81efeefe50dcc4f4b090de7acd1a839",
+  "metamorphic": {
+    "action_accounting_exact": true,
+    "matched_visible_opportunity_sha256": "f4e4337974232ced83477b31a2e2b3ea64df2744a784ec9065d5b05aaf25e934",
+    "method_order_invariant": true,
+    "metric_recomputation_exact": true,
+    "non_oracle_future_reads": 0,
+    "permutation_invariant": true
+  },
+  "metrics": {
+    "accept_all": {
+      "accepted": 5000,
+      "decisions": 5000,
+      "escalated": 0,
+      "escalation_rate": 0.0,
+      "false_rejected": 0,
+      "frr": 0.0,
+      "frr_wilson_95": [
+        1.0842021724855044e-19,
+        0.0009840201917048607
+      ],
+      "rejected": 0,
+      "safe_total": 3900,
+      "uar": 1.0,
+      "uar_wilson_95": [
+        0.9965199179737294,
+        1.0
+      ],
+      "unsafe_accepted": 1100,
+      "unsafe_total": 1100
+    },
+    "escalate_all": {
+      "accepted": 0,
+      "decisions": 5000,
+      "escalated": 5000,
+      "escalation_rate": 1.0,
+      "false_rejected": 0,
+      "frr": 0.0,
+      "frr_wilson_95": [
+        1.0842021724855044e-19,
+        0.0009840201917048607
+      ],
+      "rejected": 0,
+      "safe_total": 3900,
+      "uar": 0.0,
+      "uar_wilson_95": [
+        0.0,
+        0.003480082026270516
+      ],
+      "unsafe_accepted": 0,
+      "unsafe_total": 1100
+    },
+    "oracle_label": {
+      "accepted": 3900,
+      "decisions": 5000,
+      "escalated": 0,
+      "escalation_rate": 0.0,
+      "false_rejected": 0,
+      "frr": 0.0,
+      "frr_wilson_95": [
+        1.0842021724855044e-19,
+        0.0009840201917048607
+      ],
+      "rejected": 1100,
+      "safe_total": 3900,
+      "uar": 0.0,
+      "uar_wilson_95": [
+        0.0,
+        0.003480082026270516
+      ],
+      "unsafe_accepted": 0,
+      "unsafe_total": 1100
+    },
+    "oracle_regime": {
+      "accepted": 2970,
+      "decisions": 5000,
+      "escalated": 2030,
+      "escalation_rate": 0.406,
+      "false_rejected": 0,
+      "frr": 0.0,
+      "frr_wilson_95": [
+        1.0842021724855044e-19,
+        0.0009840201917048607
+      ],
+      "rejected": 0,
+      "safe_total": 3900,
+      "uar": 0.5663636363636364,
+      "uar_wilson_95": [
+        0.5368966271904277,
+        0.5953687437406309
+      ],
+      "unsafe_accepted": 623,
+      "unsafe_total": 1100
+    },
+    "random": {
+      "accepted": 1693,
+      "decisions": 5000,
+      "escalated": 1664,
+      "escalation_rate": 0.3328,
+      "false_rejected": 1263,
+      "frr": 0.32384615384615384,
+      "frr_wilson_95": [
+        0.3093395482002509,
+        0.3386994373749804
+      ],
+      "rejected": 1643,
+      "safe_total": 3900,
+      "uar": 0.32,
+      "uar_wilson_95": [
+        0.2931008222302539,
+        0.3481520072992035
+      ],
+      "unsafe_accepted": 352,
+      "unsafe_total": 1100
+    },
+    "reject_all": {
+      "accepted": 0,
+      "decisions": 5000,
+      "escalated": 0,
+      "escalation_rate": 0.0,
+      "false_rejected": 3900,
+      "frr": 1.0,
+      "frr_wilson_95": [
+        0.9990159798082949,
+        0.9999999999999998
+      ],
+      "rejected": 5000,
+      "safe_total": 3900,
+      "uar": 0.0,
+      "uar_wilson_95": [
+        0.0,
+        0.003480082026270516
+      ],
+      "unsafe_accepted": 0,
+      "unsafe_total": 1100
+    }
+  },
+  "replay_records": 30000,
+  "schema_version": "1.0.0",
+  "trace_sha256": "acb79de75208ad1c6c19a559cca593384d8e870a900dc98fdd0a0643eaac28d2"
+}

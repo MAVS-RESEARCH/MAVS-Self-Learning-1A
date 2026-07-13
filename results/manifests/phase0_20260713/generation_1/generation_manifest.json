@@ -1,0 +1,27 @@
+{
+  "body": {
+    "config_hashes": {
+      "phase0": "3cd85d6d087b5eb4ea9c05418fe392a549d29cea8ca3d2c3093ef06b2fdb39ac",
+      "suite": "e895748c6a56c57ad6221a832427d0a04a57acd78cf44d59b03422ace65a2265",
+      "world_defaults": "dc9eb050fa074b2606dac678157c3d91e32fe6279613582c695def860b3b450a"
+    },
+    "generation": 1,
+    "generator_package_sha256": "542324030c7a5ef0aa1d546d41a5a92dcd5090865e2da461ba44e5a25469c552",
+    "hidden_manifest_sha256": "96fed2a1cca54fc3e7de81db7b0fe6639a534a4321382df76088ec9e7de1658b",
+    "hidden_parameters_sha256": "8e40c298dd56f4a3c522a3f008c7b610d97cc144960a6917bcda4b4ace50021f",
+    "implementation_git_sha": "5168bd065200bbfdb4ad2d07310041d2e17ebb4e",
+    "ledger_sha256": "38c7700dfd2cccd9e64116c9ed232dbfe81efeefe50dcc4f4b090de7acd1a839",
+    "opportunity_count": 5000,
+    "partition_counts": {
+      "generated_world": 2000,
+      "inherited_static": 1000,
+      "trace_metric_metamorphic": 2000
+    },
+    "row_order_sha256": "f4e4337974232ced83477b31a2e2b3ea64df2744a784ec9065d5b05aaf25e934",
+    "schema_sha256": "35e33fd02f3dfe698f7574cf7c8ee7b39458aed6eb9e8f929fb1ebeba3e02745",
+    "schema_version": "1.0.0",
+    "signer_key_id": "phase0-generation-1-deterministic",
+    "signing_algorithm": "HMAC-SHA256"
+  },
+  "signature": "6434e4675d9f823442610fdd1075efedc185b9e72559e6d0a48de0b7f44596c2"
+}
