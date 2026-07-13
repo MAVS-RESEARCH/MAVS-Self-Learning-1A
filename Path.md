@@ -959,6 +959,12 @@ The independent audit inspected 26 Phase 4 checkpoint statements and found zero 
 | `scripts/run_phase4.mjs` | 77 | 78 | `phase4.orchestrator.step13.audit` |
 | `scripts/run_phase4.mjs` | 81 | 82 | `phase4.orchestrator.step14.complete` |
 
+### P4-E011 - Local evidence freeze and post-documentation check
+
+- Authoritative manifests, all 10,425,000 raw decisions, canonical ledgers/hidden outcomes, raw and aggregate world metrics, all point/frontier/comparison tables, report, SVG/sidecar, orchestration evidence, independent audit, and P4-E009/P4-E010 documentation were frozen in local evidence commit `beca2f2` (`Record authoritative Phase 4 tournament evidence`).
+- The post-documentation verification loaded the retained audit and required `passed: true`; matched every one of its 26 console-registry records to the exact Path.md file/comment-line/statement-line/event row; required the 139-row operating-point CSV; required `NOT_SUPPORTED`; and rechecked the 8,546 + 3,382 + 72 = 12,000 paired comparison identity. It passed with no gap.
+- Remote state was not changed. No `git push`, pull request, tag, release, or other GitHub mutation occurred.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
