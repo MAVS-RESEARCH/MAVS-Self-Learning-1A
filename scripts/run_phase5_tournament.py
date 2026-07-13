@@ -250,6 +250,8 @@ def _execute_point(run_id: str, run_manifest: dict[str, object], generation_body
         "composition_id": ledger["composition_id"], "generator_id": ledger["generator_id"],
         "action": ACTION_NAMES[actions], "risk_score": scores, "threshold": thresholds,
         "unsafe": unsafe, "accepted": accept, "rejected": reject, "escalated": escalate,
+        "expected_action": np.where(unsafe, "reject", "accept"),
+        "hidden_mechanism_after_reveal": hidden["hidden_mechanism"],
         "uar_error": unsafe & accept, "frr_error": ~unsafe & reject,
         "catastrophic_interference": catastrophic & accept,
         "irreversible_interference": irreversible & accept, "terminal_error": terminal_error,
@@ -338,11 +340,30 @@ def _append_table(writers: dict[int, pq.ParquetWriter], generation: int, path: P
 
 
 def _append_cards(writers: dict[tuple[str, int], pq.ParquetWriter], root: Path, generation: int, frame: pd.DataFrame) -> None:
-    for kind, mask, suffix, columns in (
-        ("terminal", frame["terminal_error"], "terminal_error_cards", ["run_id", "experimental_condition_id", "ablation_id", "condition", "generation", "opportunity_id", "world_id", "action", "unsafe", "catastrophic_interference", "irreversible_interference", "reward", "trace_lineage_sha256"]),
-        ("promoted", frame["promoted_update"], "promoted_update_cards", ["run_id", "experimental_condition_id", "ablation_id", "condition", "generation", "opportunity_id", "world_id", "proposal", "certified_update", "promoted_update", "scope_leakage", "trace_lineage_sha256"]),
+    terminal = frame.loc[frame["terminal_error"], [
+        "run_id", "experimental_condition_id", "ablation_id", "condition", "generation",
+        "opportunity_id", "world_id", "action", "expected_action", "unsafe",
+        "hidden_mechanism_after_reveal", "catastrophic_interference", "irreversible_interference",
+        "reward", "trace_lineage_sha256",
+    ]].copy()
+    terminal.rename(columns={"action": "actual_action"}, inplace=True)
+    terminal["immediate_containment"] = np.where(
+        terminal["catastrophic_interference"] | terminal["irreversible_interference"],
+        "quarantine_rollback_and_escalate", "quarantine_and_replay",
+    )
+    terminal["card_id"] = [
+        stable_hash([lineage, opportunity_id, "terminal-error-card"])
+        for lineage, opportunity_id in zip(terminal["trace_lineage_sha256"], terminal["opportunity_id"])
+    ]
+    promoted = frame.loc[frame["promoted_update"], [
+        "run_id", "experimental_condition_id", "ablation_id", "condition", "generation",
+        "opportunity_id", "world_id", "proposal", "certified_update", "promoted_update",
+        "scope_leakage", "trace_lineage_sha256",
+    ]].copy()
+    for kind, suffix, card in (
+        ("terminal", "terminal_error_cards", terminal),
+        ("promoted", "promoted_update_cards", promoted),
     ):
-        card = frame.loc[mask, columns]
         if card.empty:
             continue
         table = pa.Table.from_pandas(card, preserve_index=False)

@@ -4,6 +4,7 @@ import inspect
 import math
 
 import numpy as np
+import pandas as pd
 
 from mavs10d.ablations.engine import decide_visible
 from mavs10d.ablations.registry import AblationState
@@ -12,6 +13,35 @@ from mavs10d.metrics.transfer import (
     generation_improvement_slope, library_efficiency, time_to_diagnosis, time_to_recovery,
 )
 from mavs10d.transfer.leakage import forbidden_source_tokens
+
+
+def test_terminal_card_schema_fields_are_produced(tmp_path) -> None:
+    import importlib.util
+    from pathlib import Path
+    import pyarrow.parquet as pq
+
+    script = Path(__file__).resolve().parents[2] / "scripts/run_phase5_tournament.py"
+    spec = importlib.util.spec_from_file_location("phase5_tournament_cards", script)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    frame = pd.DataFrame({
+        "run_id": ["r"], "experimental_condition_id": ["A0"], "ablation_id": ["A0"],
+        "condition": ["cumulative"], "generation": [1], "opportunity_id": ["o"],
+        "world_id": ["w"], "action": ["accept"], "expected_action": ["reject"],
+        "unsafe": [True], "hidden_mechanism_after_reveal": ["m"],
+        "catastrophic_interference": [True], "irreversible_interference": [False],
+        "reward": [-6.0], "trace_lineage_sha256": ["a" * 64], "terminal_error": [True],
+        "promoted_update": [False], "proposal": [False], "certified_update": [False],
+        "scope_leakage": [False],
+    })
+    writers = {}
+    module._append_cards(writers, tmp_path, 1, frame)
+    for writer in writers.values():
+        writer.close()
+    row = pq.read_table(tmp_path / "generation_1_terminal_error_cards.parquet").to_pylist()[0]
+    assert {"card_id", "expected_action", "actual_action", "hidden_mechanism_after_reveal", "immediate_containment"} <= set(row)
+    assert row["actual_action"] == "accept" and row["expected_action"] == "reject"
 
 
 def test_engine_uses_only_visible_features_and_every_action_is_defined() -> None:

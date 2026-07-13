@@ -1021,6 +1021,12 @@ The independent audit inspected 26 Phase 4 checkpoint statements and found zero 
 - Aggregation calculated and wrote intermediate metrics but failed before completing the report because `pandas.DataFrame.to_markdown` imports the optional undeclared `tabulate` package, which is not present. The traceback and failed command are retained in the orchestration log. No claim, audit, or accepted report was produced.
 - Removed the optional dependency by implementing a deterministic internal CommonMark table formatter with pipe/newline escaping. No scientific calculation, record, threshold, bank, participant action, or gate changed. The partially generated named aggregates/reports/figures and all raw/manifests must be cleared by the next named restart; a new commit is required so the final run has one implementation SHA.
 
+### P5-E006 - Post-audit terminal-card schema gap and corrective rejection
+
+- Report-correction commit `929ae3ab0e8c86f0df9e2710b477e039ab9cf0d7` completed a clean end-to-end run: exact allocation and separation passed, 10,740,000 traces passed the complete scan, aggregation published 1,764 negative results and correctly returned `NOT_SUPPORTED`, focused tests passed, 194/194 full regression tests passed, the inherited smoke passed, and the independent audit returned `PASS` with zero findings. A second complete 10,740,000-row tournament replay then reproduced all 13 raw artifact hashes exactly.
+- The subsequent independent JSON Schema check rejected the terminal-error card artifact. Its rows retained trace/condition/opportunity/action/outcome lineage but omitted the declared required `card_id`, `expected_action`, `actual_action`, `hidden_mechanism_after_reveal`, and `immediate_containment` fields. Therefore the otherwise successful run is not accepted and Phase 5 remains in progress.
+- Corrective implementation reveals the evaluator-only hidden mechanism only after the participant decision, records expected and actual action separately, derives immediate quarantine/rollback containment, and binds a content-derived terminal card ID to trace lineage and opportunity ID. Added a direct Parquet card regression requiring all five fields and correct unsafe-accept semantics. A new implementation commit and clean full pipeline are mandatory; no result threshold, participant input, action, or claim rule changes.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
