@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A04"
+ablation_id: "A4"
+exact_condition: "Calibration-only: adapt diagnostic thresholds and weights only."
+category: "learning"
+competitive: true
+oracle: false
+changes:
+  learning_mode: "calibration_only"
+

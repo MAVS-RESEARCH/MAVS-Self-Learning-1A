@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A11"
+ablation_id: "A11"
+exact_condition: "No adversarial certification: replay and IID holdout only."
+category: "certification"
+competitive: true
+oracle: false
+changes:
+  adversarial_certification: false
+

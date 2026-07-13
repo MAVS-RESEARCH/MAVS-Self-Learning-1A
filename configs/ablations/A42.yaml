@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A42"
+ablation_id: "A42"
+exact_condition: "Frozen after Generation 1: learn only in G1."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  learning_horizon: "generation_1_only"
+

@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A36"
+ablation_id: "A36"
+exact_condition: "Ontology-only persistence: retain classes/signatures; rebuild diagnostics/configurations."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  persistence: "ontology_only"
+

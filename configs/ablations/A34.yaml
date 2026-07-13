@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A34"
+ablation_id: "A34"
+exact_condition: "No inter-generation persistence: reset all learned state between G1/G2/G3."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  persistence: "none"
+

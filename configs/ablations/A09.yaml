@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A09"
+ablation_id: "A9"
+exact_condition: "No failure capsules: remove compressed reusable mechanism memory."
+category: "memory"
+competitive: true
+oracle: false
+changes:
+  failure_capsules: false
+

@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A08"
+ablation_id: "A8"
+exact_condition: "No failure ontology: flat replay memory only."
+category: "memory"
+competitive: true
+oracle: false
+changes:
+  failure_ontology: false
+

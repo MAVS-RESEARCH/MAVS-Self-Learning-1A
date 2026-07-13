@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 5 terminal error card",
+  "type": "object",
+  "required": ["card_id", "trace_lineage_sha256", "ablation_id", "condition", "generation", "world_id", "opportunity_id", "expected_action", "actual_action", "hidden_mechanism_after_reveal", "immediate_containment"],
+  "properties": {"card_id": {"type": "string"}, "trace_lineage_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+  "additionalProperties": true
+}

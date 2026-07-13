@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A45"
+ablation_id: "A45"
+exact_condition: "Surface-reset only: easy-transfer upper bound."
+category: "reset_control"
+competitive: true
+oracle: false
+changes:
+  reset_filter: "surface"
+

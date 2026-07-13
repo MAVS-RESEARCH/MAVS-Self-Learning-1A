@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A49"
+ablation_id: "A49"
+exact_condition: "Matched-memory cumulative baseline: same persistent-state byte budget as MAVS-SL."
+category: "memory_control"
+competitive: true
+oracle: false
+changes:
+  memory_budget: "matched_baseline"
+

@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A29"
+ablation_id: "A29"
+exact_condition: "No selector fallback: allow low-confidence configuration selection."
+category: "library"
+competitive: true
+oracle: false
+changes:
+  selector_fallback: false
+

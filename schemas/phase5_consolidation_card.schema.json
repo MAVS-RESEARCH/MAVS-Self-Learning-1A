@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 5 consolidation card",
+  "type": "object",
+  "required": ["generation", "ablation_id", "condition", "action", "complexity_delta", "retained_replay_passed", "catastrophic_interference", "rollback_target", "change_hash"],
+  "properties": {"change_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+  "additionalProperties": true
+}

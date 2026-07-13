@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A30"
+ablation_id: "A30"
+exact_condition: "Unlimited diagnostic growth: remove complexity/redundancy control."
+category: "complexity"
+competitive: true
+oracle: false
+changes:
+  diagnostic_growth: "unlimited"
+

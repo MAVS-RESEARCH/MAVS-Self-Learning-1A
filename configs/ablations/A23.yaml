@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A23"
+ablation_id: "A23"
+exact_condition: "No provenance diagnostics."
+category: "evidence"
+competitive: true
+oracle: false
+changes:
+  provenance_diagnostics: false
+

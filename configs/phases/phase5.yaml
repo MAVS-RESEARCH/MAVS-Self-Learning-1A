@@ -1,0 +1,56 @@
+schema_version: 1.0.0
+phase: 5
+name: deep_ablation_transfer_and_anti_overfit
+generations: [1, 2, 3]
+canonical_decisions_per_generation: 15000
+canonical_decisions_total: 45000
+worlds_per_generation: 300
+decisions_per_world: 50
+final_seed_ranges:
+  1: [930000, 930299]
+  2: [940000, 940299]
+  3: [950000, 950299]
+benchmark_strata:
+  domain_leave_out: 50
+  corruption_family_leave_out: 50
+  corruption_composition_leave_out: 50
+  generator_leave_out: 50
+  policy_semantic_transfer: 50
+  long_horizon_recurrence: 50
+reset_mixtures:
+  1: {surface: 150, structural: 100, adversarial: 50}
+  2: {surface: 100, structural: 100, adversarial: 100}
+  3: {surface: 50, structural: 100, adversarial: 150}
+domains: [text_safety, tool_use, cyber_triage, medical_triage_proxy, financial_approval_proxy, multi_agent_operations]
+corruption_families: [input_corruption, evidence_masking, provenance_spoofing, policy_conflict, correlated_collapse, feedback_poisoning, temporal_shift, specialist_swap, misleading_agreement, tool_observation_attack]
+composition_count: 20
+generator_implementations: [phase5_primary_v1, phase5_independent_v1]
+participant_conditions: [cumulative, fresh]
+controls: [raw_memory, frozen_after_g1, no_consolidation, no_persistence, unlimited_memory, matched_memory]
+factorial:
+  factors: [meta_diagnostics, synthesis, retained_replay, counterfactual_validation, certification, configuration_library]
+  design: regular_2_6_minus_2
+  generators: {E: ABC, F: BCD}
+  expected_runs: 16
+  minimum_resolution: 4
+  targeted_interactions: 5
+attack:
+  generator: phase5_independent_adversary_v1
+  probes_per_adversarial_world: 12
+  families: [scope_collision, witness_spoofing, evidence_masking, policy_conflict, misleading_agreement, timed_shift]
+retention_noninferiority:
+  uar_margin: 0.01
+  objective_margin: 0.02
+  catastrophic_interference_max: 0
+negative_transfer_tolerance: 0.02
+early_window_decisions: 1000
+checkpoints: [0, 1000, 5000, 10000, 15000]
+bootstrap_repetitions: 200
+cvar_alpha: 0.10
+memory_budgets_bytes: {tiny: 4096, bounded_raw: 1048576, mavs_sl: 4194304, matched_baseline: 4194304, unlimited: 67108864}
+model_training: none
+post_holdout_retuning: false
+publish_all_negative_results: true
+replay_counts_as_canonical: false
+claim_boundary: evaluated_phase5_transfer_only
+

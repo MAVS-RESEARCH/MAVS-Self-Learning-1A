@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A25"
+ablation_id: "A25"
+exact_condition: "No feedback-reliability model: poisoned labels update governance normally."
+category: "feedback"
+competitive: true
+oracle: false
+changes:
+  feedback_reliability: false
+

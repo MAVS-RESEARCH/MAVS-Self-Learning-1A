@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A00"
+ablation_id: "A0"
+exact_condition: "Full MAVS-SL reference."
+category: "reference"
+competitive: true
+oracle: false
+changes:
+  {}
+

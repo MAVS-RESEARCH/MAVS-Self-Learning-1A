@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A40"
+ablation_id: "A40"
+exact_condition: "No negative-transfer detector."
+category: "transfer"
+competitive: true
+oracle: false
+changes:
+  negative_transfer_detector: false
+

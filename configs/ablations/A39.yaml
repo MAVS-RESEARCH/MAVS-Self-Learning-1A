@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A39"
+ablation_id: "A39"
+exact_condition: "No diagnostic genealogy: keep active functions but remove lineage and historical scope evidence."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  diagnostic_genealogy: false
+

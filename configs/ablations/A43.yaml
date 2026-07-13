@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A43"
+ablation_id: "A43"
+exact_condition: "Fresh selector each generation: retain diagnostics/configs, reset context selection."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  selector_reset: "each_generation"
+

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 5 primitive decision trace",
+  "type": "object",
+  "required": ["run_id", "run_kind", "experimental_condition_id", "ablation_id", "condition", "generation", "opportunity_id", "world_id", "action", "unsafe", "uar_error", "frr_error", "terminal_error", "trace_lineage_sha256", "trace_complete"],
+  "properties": {
+    "ablation_id": {"type": "string"},
+    "condition": {"enum": ["cumulative", "fresh"]},
+    "generation": {"enum": [1, 2, 3]},
+    "action": {"enum": ["accept", "reject", "escalate"]},
+    "trace_complete": {"const": true}
+  },
+  "additionalProperties": true
+}

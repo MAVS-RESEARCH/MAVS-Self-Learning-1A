@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A10"
+ablation_id: "A10"
+exact_condition: "No counterfactual validation."
+category: "certification"
+competitive: true
+oracle: false
+changes:
+  counterfactual_validation: false
+

@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A38"
+ablation_id: "A38"
+exact_condition: "No consolidation: carry every diagnostic/configuration without pruning, merging, or deprecation."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  consolidation: false
+

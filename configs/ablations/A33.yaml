@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A33"
+ablation_id: "A33"
+exact_condition: "Oracle failure-family labels: attribution upper bound, not a competitor."
+category: "diagnostic_bound"
+competitive: false
+oracle: true
+changes:
+  attribution_labels: "oracle"
+

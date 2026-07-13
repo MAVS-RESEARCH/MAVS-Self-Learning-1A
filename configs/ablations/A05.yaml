@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A05"
+ablation_id: "A5"
+exact_condition: "No diagnostic creation: tune existing G, never expand it."
+category: "diagnostics"
+competitive: true
+oracle: false
+changes:
+  diagnostic_creation: false
+

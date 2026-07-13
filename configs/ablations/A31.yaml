@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A31"
+ablation_id: "A31"
+exact_condition: "Tiny memory: severe replay compression."
+category: "memory"
+competitive: true
+oracle: false
+changes:
+  memory_budget: "tiny"
+

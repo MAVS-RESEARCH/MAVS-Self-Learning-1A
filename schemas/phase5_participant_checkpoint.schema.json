@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 5 participant checkpoint",
+  "type": "object",
+  "required": ["generation", "ablation_id", "condition", "retained_bytes", "raw_answer_keys", "future_manifest_access", "component_hashes", "checkpoint_hash"],
+  "properties": {
+    "raw_answer_keys": {"const": 0},
+    "future_manifest_access": {"const": false},
+    "checkpoint_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

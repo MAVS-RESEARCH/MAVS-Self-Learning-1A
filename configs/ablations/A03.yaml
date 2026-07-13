@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A03"
+ablation_id: "A3"
+exact_condition: "Selector-only learning: fixed library, adaptive context selection only."
+category: "learning"
+competitive: true
+oracle: false
+changes:
+  learning_mode: "selector_only"
+

@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A01"
+ablation_id: "A1"
+exact_condition: "No learning: frozen best development configuration."
+category: "learning"
+competitive: true
+oracle: false
+changes:
+  learning_mode: "frozen"
+

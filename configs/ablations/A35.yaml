@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A35"
+ablation_id: "A35"
+exact_condition: "Diagnostics-only persistence: retain G and scopes; reset ontology, capsules, selector, and library."
+category: "persistence"
+competitive: true
+oracle: false
+changes:
+  persistence: "diagnostics_only"
+

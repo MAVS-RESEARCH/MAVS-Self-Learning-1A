@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A06"
+ablation_id: "A6"
+exact_condition: "No split/merge: prevent scope refinement."
+category: "diagnostics"
+competitive: true
+oracle: false
+changes:
+  scope_refinement: false
+

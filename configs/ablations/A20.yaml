@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A20"
+ablation_id: "A20"
+exact_condition: "Raw-correlation hard veto: reintroduce the pre-DS-CF failure."
+category: "decision"
+competitive: true
+oracle: false
+changes:
+  correlation_policy: "hard_veto"
+

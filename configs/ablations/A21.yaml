@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A21"
+ablation_id: "A21"
+exact_condition: "No safe witness."
+category: "evidence"
+competitive: true
+oracle: false
+changes:
+  safe_witness: false
+

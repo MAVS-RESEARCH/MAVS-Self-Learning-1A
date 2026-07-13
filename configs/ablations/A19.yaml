@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A19"
+ablation_id: "A19"
+exact_condition: "No bounded mitigation: safe evidence cannot protect recall."
+category: "decision"
+competitive: true
+oracle: false
+changes:
+  bounded_mitigation: false
+

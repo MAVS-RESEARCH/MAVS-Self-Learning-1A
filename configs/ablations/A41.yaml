@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A41"
+ablation_id: "A41"
+exact_condition: "No prior-generation retention replay: certify later updates on current evidence only."
+category: "retention"
+competitive: true
+oracle: false
+changes:
+  prior_generation_retention_replay: false
+

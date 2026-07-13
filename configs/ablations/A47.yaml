@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A47"
+ablation_id: "A47"
+exact_condition: "Adversarial library-targeting reset under fixed pre-registered budget."
+category: "reset_control"
+competitive: true
+oracle: false
+changes:
+  reset_filter: "adversarial"
+

@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+file_id: "A22"
+ablation_id: "A22"
+exact_condition: "No danger witnesses: harm score acts alone."
+category: "evidence"
+competitive: true
+oracle: false
+changes:
+  danger_witness: false
+
