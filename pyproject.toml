@@ -14,6 +14,7 @@ dependencies = [
   "pyarrow>=14.0",
   "PyYAML>=6.0",
   "jsonschema>=4.22",
+  "scikit-learn>=1.4",
 ]
 
 [project.optional-dependencies]

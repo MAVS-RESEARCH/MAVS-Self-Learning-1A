@@ -1,0 +1,230 @@
+{
+  "activation": "relu_relu_sigmoid",
+  "architecture": [
+    8,
+    64,
+    64,
+    1
+  ],
+  "batch_size": 256,
+  "blind_evaluation_domains": [
+    "text_safety",
+    "tool_use",
+    "cyber_triage",
+    "financial_approval_proxy",
+    "multi_agent_operations"
+  ],
+  "checkpoint_sha256": "48d35d9f49c306bcc17fbb490f864cad2bc8afaf07a3a30f930a25f91fc05319",
+  "component": "phase1_ctta_source_predictor",
+  "early_stopping_patience": 8,
+  "feature_visibility": "visible_features_only",
+  "final_manifest_access": false,
+  "known_limitations": [
+    "synthetic proxy",
+    "fixed binary unsafe target",
+    "not a governance safety guarantee"
+  ],
+  "manifest_sha256": "ae75490058585c3bec49cd5a1a8b7736b5a39ed1dd49c275dbf5e2e142a8c018",
+  "maximum_epochs": 100,
+  "optimizer": "adam",
+  "schema_version": "1.0.0",
+  "selected_trial": {
+    "epochs": 9,
+    "learning_rate": 0.0001,
+    "seed": 53,
+    "validation_brier": 0.2507645038782588,
+    "validation_uar": 0.45255474452554745
+  },
+  "train_manifest": {
+    "bank": "train",
+    "domain_adapters": {
+      "medical_triage_proxy": {
+        "action_namespace": "route_or_escalate",
+        "evidence_semantics": "non-clinical synthetic urgency evidence",
+        "opportunity_kind": "medical_proxy_case"
+      },
+      "retrieval_qa": {
+        "action_namespace": "answer_or_abstain",
+        "evidence_semantics": "support, provenance, and contradiction evidence",
+        "opportunity_kind": "retrieval_answer"
+      },
+      "synthetic_control": {
+        "action_namespace": "act_or_hold",
+        "evidence_semantics": "bounded synthetic process evidence",
+        "opportunity_kind": "control_state"
+      }
+    },
+    "domains": [
+      "medical_triage_proxy",
+      "retrieval_qa",
+      "synthetic_control"
+    ],
+    "generation": 0,
+    "hidden_outcome_sha256": "cd981a30539890b7559972ff7c90773e3f925936eb913522a46e3fd0d6912acc",
+    "manifest_sha256": "2b23b19fa993dae4494df1fa5538af3c40be2dc0ae6770eef6baf686ad06a10a",
+    "opportunity_count": 1500,
+    "opportunity_ids_sha256": "c4ed99a5f521c906dccaf037d30d7747f6e0b566746f5f9221b6b7ace7b6f5c7",
+    "policy_namespace": "train_policies_v1",
+    "prior_version": "phase1_train_v1",
+    "schedule_namespace": "train_schedules_v1",
+    "schema_version": "1.0.0",
+    "seed_max": 1014,
+    "seed_min": 1000,
+    "surface_template_namespace": "train_templates_v1",
+    "visible_schema_sha256": "1bd1e8b3d02e3d5232103a5d7311f73c0bda8acdbee1af4ca56232891db5bd8d",
+    "world_count": 15,
+    "world_ids_sha256": "017a426358f6d4c6a93b1a191a437f01bd3fe294923387e186dbf6064602292c"
+  },
+  "training_domains": [
+    "medical_triage_proxy",
+    "retrieval_qa",
+    "synthetic_control"
+  ],
+  "trials": [
+    {
+      "epochs": 9,
+      "learning_rate": 0.0001,
+      "seed": 11,
+      "validation_brier": 0.2351479653135403,
+      "validation_uar": 0.8029197080291971
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0003,
+      "seed": 11,
+      "validation_brier": 0.22553179296846862,
+      "validation_uar": 0.9221411192214112
+    },
+    {
+      "epochs": 10,
+      "learning_rate": 0.001,
+      "seed": 11,
+      "validation_brier": 0.1982332205843442,
+      "validation_uar": 1.0
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0001,
+      "seed": 23,
+      "validation_brier": 0.22112792931993872,
+      "validation_uar": 0.9586374695863747
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0003,
+      "seed": 23,
+      "validation_brier": 0.2164421583133362,
+      "validation_uar": 0.9829683698296837
+    },
+    {
+      "epochs": 15,
+      "learning_rate": 0.001,
+      "seed": 23,
+      "validation_brier": 0.19835966288198778,
+      "validation_uar": 1.0
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0001,
+      "seed": 37,
+      "validation_brier": 0.23130278479129399,
+      "validation_uar": 0.8369829683698297
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0003,
+      "seed": 37,
+      "validation_brier": 0.22354830653614333,
+      "validation_uar": 0.9245742092457421
+    },
+    {
+      "epochs": 12,
+      "learning_rate": 0.001,
+      "seed": 37,
+      "validation_brier": 0.198937244865133,
+      "validation_uar": 1.0
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0001,
+      "seed": 53,
+      "validation_brier": 0.2507645038782588,
+      "validation_uar": 0.45255474452554745
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0003,
+      "seed": 53,
+      "validation_brier": 0.24118265063345928,
+      "validation_uar": 0.5912408759124088
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.001,
+      "seed": 53,
+      "validation_brier": 0.21713920007308823,
+      "validation_uar": 0.9391727493917275
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0001,
+      "seed": 71,
+      "validation_brier": 0.25259251177441966,
+      "validation_uar": 0.5085158150851582
+    },
+    {
+      "epochs": 9,
+      "learning_rate": 0.0003,
+      "seed": 71,
+      "validation_brier": 0.24168708362568422,
+      "validation_uar": 0.7226277372262774
+    },
+    {
+      "epochs": 18,
+      "learning_rate": 0.001,
+      "seed": 71,
+      "validation_brier": 0.199556312672753,
+      "validation_uar": 1.0
+    }
+  ],
+  "validation_manifest": {
+    "bank": "validation",
+    "domain_adapters": {
+      "medical_triage_proxy": {
+        "action_namespace": "route_or_escalate",
+        "evidence_semantics": "non-clinical synthetic urgency evidence",
+        "opportunity_kind": "medical_proxy_case"
+      },
+      "retrieval_qa": {
+        "action_namespace": "answer_or_abstain",
+        "evidence_semantics": "support, provenance, and contradiction evidence",
+        "opportunity_kind": "retrieval_answer"
+      },
+      "synthetic_control": {
+        "action_namespace": "act_or_hold",
+        "evidence_semantics": "bounded synthetic process evidence",
+        "opportunity_kind": "control_state"
+      }
+    },
+    "domains": [
+      "medical_triage_proxy",
+      "retrieval_qa",
+      "synthetic_control"
+    ],
+    "generation": 0,
+    "hidden_outcome_sha256": "b3d61c742c3b7360a2c6b9671085f9bb7d541ccde66c47807b324fe17374a72f",
+    "manifest_sha256": "01479b0952d86a4cc7ce1d555852208058e051dbdae872901ee6ff53df377b3e",
+    "opportunity_count": 1500,
+    "opportunity_ids_sha256": "7a0189997f1187a59f98a57eaefca011662b8aefa4b71e343580e9f7a883376a",
+    "policy_namespace": "validation_policies_v1",
+    "prior_version": "phase1_validation_v1",
+    "schedule_namespace": "validation_schedules_v1",
+    "schema_version": "1.0.0",
+    "seed_max": 10014,
+    "seed_min": 10000,
+    "surface_template_namespace": "validation_templates_v1",
+    "visible_schema_sha256": "1bd1e8b3d02e3d5232103a5d7311f73c0bda8acdbee1af4ca56232891db5bd8d",
+    "world_count": 15,
+    "world_ids_sha256": "72a827d2683c8754eab73d71f3b2b023fed3de82b97ae9de849e8bb974f415aa"
+  }
+}

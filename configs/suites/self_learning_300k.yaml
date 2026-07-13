@@ -6,8 +6,8 @@ canonical_decisions_total: 300000
 replay_all_methods: true
 generation_seed_ranges:
   generation_1: [100000, 199999]
-  generation_2: [200000, 299999]
-  generation_3: [300000, 399999]
+  generation_2: [300000, 399999]
+  generation_3: [500000, 599999]
 final_seed_range: [900000, 999999]
 phase_budgets:
   phase_0: 5000
@@ -21,6 +21,7 @@ reset_dimensions: [surface, structural, adversarial]
 participant_conditions: [cumulative_mavs_sl, fresh_mavs_sl, frozen_after_g1, cumulative_adaptive_baseline, fresh_adaptive_baseline, fixed_baseline, bounded_raw_memory, no_consolidation, no_persistence, unlimited_memory_diagnostic, matched_memory_cumulative_baseline]
 forbidden_persistence: [raw_hidden_labels, future_manifests, answer_keys, final_metrics, unapproved_configuration]
 consolidation_after_each_generation: true
-checkpoints: [pre_g1, post_g1, post_g1_consolidation, pre_g2, post_g2, post_g2_consolidation, pre_g3, post_g3]
+checkpoints: [0, 1000, 5000, 10000, 25000, 50000, 75000, 100000]
+generation_boundary_checkpoints: [pre_g1, post_g1, post_g1_consolidation, pre_g2, post_g2, post_g2_consolidation, pre_g3, post_g3]
 post_holdout_tuning_prohibited: true
 immutable_output_schemas: true

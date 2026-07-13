@@ -1,0 +1,10 @@
+schema_version: 1.0.0
+recovery_contract:
+  safe_acceptance_stability_window: 5
+  unsafe_containment_stability_window: 5
+  conservative_after_end_is_penalized: true
+  maximum_reported_lag: 100
+schedule_requirements:
+  recovery_trap: {corruption_end_min: 55, corruption_end_max: 75, residual_bias: 0.12}
+  recurring_regime: {minimum_returns: 2}
+  burst: {minimum_bursts: 2, maximum_width: 12}

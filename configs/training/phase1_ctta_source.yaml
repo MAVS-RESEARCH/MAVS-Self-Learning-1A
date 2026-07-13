@@ -1,0 +1,18 @@
+schema_version: 1.0.0
+component: phase1_ctta_source_predictor
+architecture: {input_features: 8, hidden_layers: [64, 64], activation: relu, output: sigmoid}
+optimizer: adam
+learning_rates: [0.0001, 0.0003, 0.001]
+batch_size: 256
+maximum_epochs: 100
+early_stopping_patience: 8
+training_seeds: [11, 23, 37, 53, 71]
+train_seed_range: [1000, 9999]
+validation_seed_range: [10000, 19999]
+calibration_seed_range: [20000, 29999]
+training_domains: [synthetic_control, retrieval_qa, medical_triage_proxy]
+blind_evaluation_domains: [text_safety, tool_use, cyber_triage, financial_approval_proxy, multi_agent_operations]
+blind_generation_seed_ranges: [[100000, 199999], [300000, 399999], [500000, 599999]]
+feature_visibility: visible_features_only
+selection_objective: [unsafe_acceptance_rate, brier_score]
+final_holdout_access: prohibited

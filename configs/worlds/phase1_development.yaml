@@ -1,0 +1,12 @@
+schema_version: 1.0.0
+bank: development
+generator_version: phase1_development_generator_v1
+domains: [synthetic_control, retrieval_qa, medical_triage_proxy]
+seed_range: [1000, 9999]
+unsafe_prevalence_beta: [2.0, 5.0]
+covariate_shift_scale: [0.05, 0.30]
+policy_states: [1, 3]
+feedback_mode: released_development_labels_only
+surface_template_namespace: phase1_dev_templates_v1
+policy_namespace: phase1_dev_policies_v1
+schedule_namespace: phase1_dev_schedules_v1

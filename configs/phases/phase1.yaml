@@ -1,0 +1,37 @@
+schema_version: 1.0.0
+phase: 1
+name: nonstationary_distribution_gauntlet
+canonical_decisions_per_generation: 15000
+evaluation_design:
+  domains: [text_safety, tool_use, cyber_triage, financial_approval_proxy, multi_agent_operations]
+  worlds_per_domain: 30
+  decisions_per_world: 100
+  total_worlds: 150
+  shift_class_counts: {abrupt: 38, gradual: 38, recurring: 37, mixed: 37}
+  schedule_families: [piecewise_hidden, gradual_random_walk, burst, recurring_regime, adversarial_response, compositional, recovery_trap]
+development_design:
+  domains: [synthetic_control, retrieval_qa, medical_triage_proxy]
+  seed_range: [1000, 9999]
+  prior_version: phase1_development_v1
+calibration_design:
+  domains: [synthetic_control, retrieval_qa, medical_triage_proxy]
+  seed_range: [20000, 29999]
+  prior_version: phase1_calibration_v1
+evaluation_prior_versions:
+  generation_1: phase1_eval_g1_v1
+  generation_2: phase1_eval_g2_v1
+  generation_3: phase1_eval_g3_v1
+feedback:
+  immediate: 0.45
+  geometric_delay: 0.35
+  censored: 0.20
+  geometric_mean: 8
+  noisy_reliability: [0.85, 1.0]
+shift_classes: [abrupt, gradual, recurring, mixed]
+adaptive_methods: [adaptive_conformal, online_conformal, adwin, page_hinkley, online_experts, ctta_entropy, ctta_pseudo_label]
+fixed_methods: [context_fixed, confidence_gate, entropy_gate, margin_gate, generalized_selective, neyman_pearson, cost_sensitive, split_conformal, conformal_risk_control]
+later_generation_conditions: [cumulative, fresh]
+claim_boundary: dynamic_baseline_characterization_no_self_learning_superiority
+post_holdout_tuning_prohibited: true
+required_metrics: [uar, frr, escalation_rate, adaptation_lag, recovery_lag, ece, brier, catastrophic_episode_rate, governance_regret, dynamic_regret, selector_accuracy, compute_normalized_loss, worst_decile_loss, worst_world_loss, configuration_switches]
+resource_accounting: [calibration_examples, calls, tokens, latency_ms, wall_time_ms, memory_bytes, update_operations]

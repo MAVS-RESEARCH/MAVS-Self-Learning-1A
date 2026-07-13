@@ -281,6 +281,70 @@ Pre-documentation verdict: all technical Phase 0 requirements pass. Phase 0 rema
 - Final Phase 0 verdict: PASS, 100% compliant with WorkPlan Section 7 and its referenced prerequisite contracts. Every listed file class, coding method, decision allocation, benchmark, and exit criterion has direct evidence. No deviation is open, no provisional result remains, and no Phase 1 code was implemented.
 - Claim restriction: this verdict certifies Phase 0 measurement integrity only. It does not assert MAVS-SL superiority, repair effectiveness, transfer, consolidation, or any trained-model result.
 
+## Phase 1 execution log
+
+### P1-E000 - Authorization, governing-source lock, and claim boundary
+
+- Time: 2026-07-13 Asia/Karachi.
+- Status: IN PROGRESS.
+- User authorization: implement Phase 1 only, stress-test it, audit it against WorkPlan Section 8 with no open gaps, document exact console comment/statement lines, then commit and push the complete accepted phase.
+- WorkPlan clauses locked: Sections 4-6, 8, 13, 14, 16, and 18, with Phase 1's binding scope/files/method/allocation/output language at lines 422-451.
+- Architecture authority: `MAVS_Self_Learning_Architecture_and_Pareto_Comparison.docx.pdf`, SHA-256 `3797AEBE1528B26C06BDCEA6231A80D4D3EB937524C5F6EDBBE9F55D2EC2626E`.
+- PDF verification: Poppler reported 23 letter-size pages; all 23 were rendered at 110 DPI and inspected in four contact sheets. No clipping, missing page, overlap, unreadable table, or layout defect was observed. Complete text extraction was also searched for fast-loop, selector, feedback, calibration, conformal, online-learning, drift, recovery, regret, and frontier constraints.
+- Architecture constraints carried into Phase 1: approved-configuration-only execution; no direct slow-loop or candidate deployment; three decisions (`ACCEPT`, `REJECT`, `ESCALATE/QUERY`); unreleased feedback remains unavailable rather than becoming a negative label; selector uncertainty fails to a known configuration or escalation; resource/burden accounting is explicit; and adaptive baselines optimize within fixed representations and cannot establish frontier expansion.
+- Acceptance allocation: exactly five evaluation domains, 30 worlds per domain, and 100 decisions per world, yielding 15,000 canonical opportunities in each of three independently generated generations.
+- Shift scope: unknown prior/covariate, policy/label-boundary, recurring-regime, delayed/censored/noisy-feedback, recovery, and changing-cost-preference shifts, with non-maximal corruption.
+- Required schedule implementations: piecewise hidden, gradual random walk, burst, recurring regime, adversarial response, compositional, and recovery trap; acceptance worlds must balance abrupt, gradual, recurring, and mixed shift classes.
+- Required baseline coverage: confidence/entropy/margin/generalized-selective gates; Neyman-Pearson/risk-constrained/cost-sensitive rules; split conformal/CRC/adaptive/online conformal; ADWIN/Page-Hinkley drift; online experts; CTTA entropy and pseudo-label variants with reset/recovery; and context-selected fixed configurations.
+- Separation rule: development training/tuning/calibration and Phase 1 evaluation must have disjoint domains where applicable, seed/world/episode/step/example/template/policy/schedule identities, changed priors, frozen chosen configurations, and no post-holdout retuning. Any trainable CTTA source predictor must be evaluated only on entirely different domains and manifests.
+- Claim boundary: Phase 1 may report dynamic-baseline behavior, calibration, regret, lags, burden, and failures. It cannot claim MAVS-SL superiority, transfer, repair, consolidation, or Pareto-frontier expansion.
+
+### P1-E001 - Accepted starting state
+
+- Local/remote branch: clean `main`, synchronized with `origin/main` at `1584450ed3605e2f8bbe2c93ba32c21aeaf2f378`.
+- Phase 0 remains immutable and complete; its accepted code and results are retained. Phase 1 output will use a separate namespaced run ID and its scoped cleaner must not delete Phase 0 artifacts.
+- Inherited foundation available: five existing domain environments, baseline/registry contracts, schedules, calibration/dynamic metrics, trace machinery, and 106 passing tests.
+- Gap at start: Phase 1 configs, changed-prior world banks, medical/financial/retrieval adapters, required adaptive baseline families, strict data-separation tooling, Phase 1 stress orchestration, Phase 1 audit, and Phase 1-specific tests do not yet exist.
+- Next gate: design the exact file architecture and implement only after confirming every required mechanism maps to a concrete file, config, test, metric, and audit assertion.
+
+### P1-E002 - Phase 1 requirement-to-file implementation map
+
+- Phase control and allocation: `configs/phases/phase1.yaml` fixes 15,000 canonical opportunities per generation, the five acceptance domains, 30 worlds per domain, 100 decisions per world, exact shift-class balance, all seven schedule families, fixed/adaptive method inventories, later-generation conditions, claim boundary, required metrics, and all resource fields. `configs/worlds/phase1_development.yaml`, `phase1_evaluation.yaml`, and `phase1_recovery.yaml` declare development/evaluation separation, feedback, shift, and recovery contracts. `configs/baselines/phase1_dynamic.yaml` pre-registers every development sweep and the lexicographic selection rule. `configs/training/phase1_ctta_source.yaml` fixes the trainable proxy architecture, optimizer, grid, seeds, early stopping, split boundaries, and blind domains.
+- Global plan correction: `configs/suites/self_learning_300k.yaml` previously contained noncompliant Generation 2/3 seed ranges and symbolic checkpoint names. It now records WorkPlan-exact seed ranges G1 `[100000,199999]`, G2 `[300000,399999]`, G3 `[500000,599999]`, final `[900000,999999]`, and numeric checkpoints `[0,1000,5000,10000,25000,50000,75000,100000]`. Generation-boundary names remain separately identified and do not replace numeric checkpoints.
+- Domain adapters: `src/mavs10d/envs/domain_adapters.py` explicitly declares text safety, tool use, cyber triage, medical proxy, financial proxy, multi-agent operations, synthetic control, and retrieval QA contracts. Undeclared domains fail closed. All five acceptance domains are used; the remaining three are development-only, producing a stricter domain-disjoint model evaluation.
+- Dynamic worlds: `src/mavs10d/envs/phase1_gauntlet.py` separates immutable visible opportunities from evaluator-only hidden outcomes. It compiles exactly 150 worlds and 15,000 opportunities per generation using prescribed generation seed ranges, changed prior/policy/template/schedule namespaces, per-world schedule and shift assignments, within-world changing cost preferences, bounded non-maximal corruption, and immediate/delayed/censored/noisy feedback. Censored outcomes have `observed_feedback_label: null`; delayed events expose no label before release.
+- Schedules: `src/mavs10d/corruption/nonstationary.py` implements piecewise-hidden, gradual-random-walk, burst, recurring-regime, adversarial-response, compositional, and recovery-trap state functions. Every output is deterministic from explicit inputs and clamps corruption to `[0,0.55]`.
+- Baselines: `phase1_common.py` implements the inherited `GovernanceMethod` reset/decide/update contract, three-action semantics, released-feedback gate, serialization, and resource accounting. `selective.py`, `neyman_pearson.py`, `online_conformal.py`, `drift.py`, `online_experts.py`, `test_time_adaptation.py`, and `context_fixed.py` implement the named mechanisms. `phase1_registry.py` provides the frozen 9-fixed/7-adaptive inventory, config construction, and exact cumulative/fresh matrix. All methods receive only visible observations, the visible candidate, and feedback events whose release time has arrived.
+- Training and selection: `phase1_tuning.py` exhaustively evaluates the pre-registered grid on the tuning bank and selects lexicographically by UAR, FRR, escalation, then stable configuration hash; calibration residuals come only from the separate calibration bank. `phase1_proxy.py` trains the only Phase 1 model, a real `8-64-64-1` ReLU MLP with Adam, batch 256, three learning rates, five seeds, up to 100 epochs, and development-validation patience 8. No evaluation manifest is loaded by either path.
+- Metrics and schemas: `src/mavs10d/metrics/phase1.py` computes UAR, FRR, escalation, five-step-stability adaptation/recovery lags, ECE, Brier, catastrophic episode rate, governance/dynamic regret, selector accuracy, compute-normalized loss, worst-decile/world loss, switches, and resources; recovery lag reaches the episode remainder when a method stays conservative. `schemas/phase1_trace.schema.json` fails closed on missing/extra trace fields, including wall time.
+- Execution and audit: `compile_phase1_ledgers.py` freezes development metadata/selection before writing three immutable Parquet ledgers, evaluator-hidden outcome files, signed manifests, and a run manifest bound to Git/config/model hashes. `run_phase1_stress.py` runs every method on matched identities, releases only due feedback, checkpoints adaptive state, and produces 240,000 G1 plus 345,000 G2 plus 345,000 G3 method decisions. Separation, model, trace, checkpoint, aggregation, and independent replay checks are implemented in the remaining Phase 1 scripts. `run_phase1.mjs` is the single authoritative orchestrator.
+
+### P1-E003 - Baseline fidelity and architecture boundary
+
+- `docs/baseline_sources.md` records a mechanism-level implementation statement, required information, faithful elements, deliberate benchmark adaptation, and primary source for every baseline family. No adaptation is represented as exact library reproduction where it is not one.
+- Selective baselines expose confidence, entropy, margin, and generalized evidence/disagreement scoring. Risk-constrained rules use visible risk odds and cost preference. Split conformal and CRC remain fixed after development calibration; adaptive/online conformal update only from released residuals. ADWIN-style and Page-Hinkley detectors trigger approved threshold changes; Hedge updates weights over three approved configurations. CTTA updates only a bounded visible source-risk bias under entropy or confidence-filtered pseudo-label rules. Context selection chooses only from an approved domain/cost table.
+- The implementation obeys the architecture document's Phase 1 boundary: the representation is fixed, adaptive baselines may select or adjust approved governance configurations, no generated candidate is deployed, no slow-loop repair occurs, and no result may be interpreted as Self-Learning or frontier-expansion evidence.
+
+### P1-E004 - Trainable CTTA source model and anti-overfit controls
+
+- Artifact paths: `artifacts/models/phase1_ctta/phase1_ctta_source.npz`, `training_manifest.json`, and `docs/model_cards/phase1_ctta_source.md`.
+- Development-only data: train domains `medical_triage_proxy`, `retrieval_qa`, `synthetic_control`, seeds 1000-1014, 1,500 examples; validation uses the same development domain class but seeds 10000-10014 and disjoint world/opportunity identities, 1,500 examples. Model selection contains 15 complete trials: seeds `{11,23,37,53,71}` by learning rates `{0.0001,0.0003,0.001}`.
+- Selected frozen trial: seed 53, learning rate 0.0001, 9 epochs, validation UAR `0.45255474452554745`, validation Brier `0.2507645038782588`. The weak validation result is retained and declared; it was not repaired using evaluation evidence.
+- Frozen checkpoint SHA-256: `48d35d9f49c306bcc17fbb490f864cad2bc8afaf07a3a30f930a25f91fc05319`; training-manifest semantic hash: `ae75490058585c3bec49cd5a1a8b7736b5a39ed1dd49c275dbf5e2e142a8c018`.
+- Reproducibility check: the trainer was executed twice from the final compiler; both outputs had the exact checkpoint hash above and identical selected metrics. `validate_phase1_model.py` additionally recompiles the declared train and validation banks from current source and fails on manifest mismatch.
+- Entirely different blind benchmark: evaluation uses `text_safety`, `tool_use`, `cyber_triage`, `financial_approval_proxy`, and `multi_agent_operations`, disjoint generation seeds, changed priors, policies, templates, schedule namespaces, and stronger shift intensity. The checkpoint is frozen before evaluation ledger compilation, the manifest states `final_manifest_access: false`, and the run audit requires `post_blind_retuning: false`.
+
+### P1-E005 - Preflight failures, corrective work, and focused verification
+
+- Initial focused run: `python -m compileall -q src scripts tests; python -m pytest -q tests/phase1`; PASS, 30 tests.
+- Requirement audit after the initial pass found three untested omissions: no explicit eight-domain adapter registry, cost preference was constant within each world rather than changing, and `wall_time_ms` was declared by config but missing from trace/resource outputs. These were compliance gaps despite the green suite; none was waived.
+- Correction: added fail-closed domain adapters and manifest metadata; cost preference now rotates every 25 steps while remaining visible; deterministic charged wall time is reported per call in method state, traces, schemas, summaries, validators, and audits. Added direct adapter, changing-cost, schema, resource, and monotonic-call assertions.
+- Corrected focused run: compileall plus `tests/phase1`; PASS, 31 tests.
+- Complete pre-freeze regression: `python -m compileall -q src scripts tests; python scripts/validate_phase1_model.py; python -m pytest -q; git diff --check`; PASS. Model validator reported zero errors, all 137 inherited plus Phase 1 tests passed, compilation passed, and the diff check found no whitespace errors.
+- The compiler correction invalidated reproducibility of the earlier provisional model artifact. It was therefore retrained before evaluation compilation, strictly on the same declared development banks. A second training replay proved byte-identical checkpoint output. This was a development-artifact correction, not post-holdout tuning.
+- Initial trainer output produced repeated scikit-learn `ConvergenceWarning` messages because external one-epoch `warm_start` fitting intentionally controls early stopping. The warning was scoped and suppressed at the expected call site; convergence is still controlled and recorded through the external 100-epoch/patience-8 procedure. No exception or unexpected warning is hidden.
+- Current gate: Phase 1 implementation is not yet accepted. It must pass full regression, freeze in an implementation commit, produce the authoritative 45,000 canonical/930,000 method-decision workload, pass deterministic replay and the independent exit audit, then receive final evidence documentation and a pushed closure commit.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -303,7 +367,7 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | Phase | WorkPlan scope | Status | Exit-gate evidence |
 |---|---|---|---|
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
-| 1 | Non-stationary distribution gauntlet | Not started | None |
+| 1 | Non-stationary distribution gauntlet | In progress | P1-E000 through P1-E005; focused tests pass, authoritative run pending |
 | 2 | Corruption, correlated collapse, and partial observability | Not started | None |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
@@ -311,4 +375,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 is complete and frozen. Its accepted implementation is `5168bd065200bbfdb4ad2d07310041d2e17ebb4e`; its authoritative run is `phase0_20260713`; its independent audit passes; and its post-documentation re-aggregation control passes. Phase 1 remains not started and is not authorized by this closure.
+Phase 0 is complete and frozen. Phase 1 implementation and preflight are active under P1-E000 through P1-E005; the authoritative run has not yet been accepted. No Phase 2 work is authorized.
