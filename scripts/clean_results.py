@@ -46,7 +46,7 @@ def clean_results(*, run_id: str | None, all_runs: bool) -> list[Path]:
 
 
 def _run_roots() -> tuple[Path, ...]:
-    return tuple(RESULTS_ROOT / category for category in ("manifests", "checkpoints", "raw", "processed", "figures", "reports"))
+    return tuple(RESULTS_ROOT / category for category in ("manifests", "checkpoints", "raw", "processed", "aggregates", "figures", "reports"))
 
 
 def main() -> int:

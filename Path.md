@@ -909,6 +909,11 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - Before closure, a manual WorkPlan clause review identified evidence-presentation gaps: paired comparisons carried reward deltas but did not explicitly count baseline wins/MAVS-SL wins/ties; the figure sidecar linked point/config/trace/Git/environment provenance but relied on trace rows rather than directly listing the three ledger artifacts; and the resource gate did not report each intervention dimension.
 - Added explicit paired baseline/MAVS-SL/tie counts with an audited identity summing to all 1,500 paired worlds per family; direct ledger paths/hashes and generation-manifest hashes in the tournament manifest and figure sidecar; a complete 139-row operating-point CSV table; and strict matched comparisons across escalation, calls, tokens, latency, and normalized compute. The pipeline is rerun after freezing these evidence changes, ensuring the final audit and artifacts bind to one immutable SHA.
 
+### P4-E008 - Scoped prior-aggregate cleanup correction
+
+- Evidence-completion commit `98053af` was frozen and a new run began. Its named clean log proved that manifests, raw data, and reports were removed, but also revealed that the inherited result cleaner predated the `results/aggregates` directory and did not remove the prior Phase 4 aggregate directory. The attempt was stopped during inherited pre-tests, before bank compilation.
+- Added `aggregates` to the cleaner's allowlisted per-run roots. Added a destructive-scope regression using the unique `phase4-cleaner-regression-probe` run ID: it creates generated markers under manifests/raw/processed/aggregates/figures/reports, invokes named cleanup, requires all six returned parent categories, and verifies that only those probe directories are absent. The final run must log removal of the prior aggregate directory before compiling any canonical ledger.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
