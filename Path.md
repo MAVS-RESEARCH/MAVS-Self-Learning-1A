@@ -646,6 +646,15 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - Pre-documentation verdict: Phase 2 is technically complete with no open WorkPlan Section 9 compliance gap. Closure remains pending only until this evidence and the authoritative result tree are committed, the audit is rerun from the evidence successor commit without altering frozen implementation inputs, and the accepted state is pushed to `origin/main`.
 - Claim restriction: this verdict certifies Phase 2 corruption, correlated-collapse, and partial-observability characterization. It does not assert Self-Learning, autonomous repair, transfer, consolidation, deployment readiness, superiority, or Pareto-frontier expansion.
 
+### P2-E011 - Post-documentation provenance control and Phase 2 closure
+
+- Evidence/results commit: `f68fefed39854c32c545231b15e8a0a4dd8598a1` (`results: record authoritative phase 2 evidence`), adding this Phase 2 evidence record and the complete 28-file authoritative result namespace. The frozen experiment implementation remains `9d5d3c42d0a2ce42d8e523225c06316683ea7793`.
+- Post-evidence aggregation command: `python scripts/aggregate_phase2.py --run-id phase2_20260713`; PASS. The summary and world-metric hashes remained byte-identical at `89786CAE21478AFBEA42E830393829F55A42BF8BDA5D6918C397E08941386A38` and `D128A7A59C94E69562CE1E12D30D275EBD49AE167E5057AF3556694C583710AB`.
+- Post-evidence audit command: `python scripts/audit_phase2.py --run-id phase2_20260713`; PASS after 191.9 seconds. It independently regenerated all 180,000 decisions and retained `deterministic_replay: true`, all three exact generation allocations, zero separation/trace/schema/console errors, 14,221/14,221 complete cards, solved DS-CF regressions, and `passed: true`.
+- The audit artifact remained byte-identical after the evidence successor commit, SHA-256 `BFC279D1A7A1E2AB27DDB41392708F13B14FD70CF8F22F2D0EDE4B6BD9FF5B08`. No implementation, configuration, ledger, trace, feedback, card, metric, or report byte changed during post-documentation control. The worktree was clean before this closure-only documentation update.
+- Final Phase 2 verdict: PASS, 100% compliant with WorkPlan Section 9 and every applicable prerequisite contract. Every stated scope item, file class, coding method, allocation, corruption/separation control, output, failure-card rule, DS-CF invariant, logging requirement, and exit criterion has direct evidence and an independently reproducible check. No compliance gap, provisional result, simulated benchmark, trained-on-evaluation model, or unresolved Phase 2 defect remains.
+- Claim restriction remains binding: the verdict certifies Phase 2 measurement and implementation compliance only. It does not assert MAVS-SL superiority, Self-Learning, autonomous repair, transfer, consolidation, deployment readiness, or Pareto-frontier expansion.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -669,11 +678,11 @@ No later phase may be marked in progress until the preceding phase exit gate has
 |---|---|---|---|
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
 | 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
-| 2 | Corruption, correlated collapse, and partial observability | In progress | P2-E000 through P2-E010; authoritative audit passed, evidence commit and post-documentation audit pending |
+| 2 | Corruption, correlated collapse, and partial observability | Complete | P2-E000 through P2-E011; authoritative and post-evidence deterministic audits pass |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Not started | None |
 
 ## Current checkpoint
 
-Phase 0 and Phase 1 are complete and frozen. Phase 2 has passed its authoritative technical audit under P2-E000 through P2-E010; evidence commit, post-documentation provenance control, and push remain before closure. No Phase 3 work is authorized.
+Phase 0, Phase 1, and Phase 2 are complete and frozen. Phase 2 passed its authoritative and post-documentation deterministic audits under P2-E000 through P2-E011. No Phase 3 work is authorized.
