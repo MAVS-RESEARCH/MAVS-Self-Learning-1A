@@ -965,6 +965,13 @@ The independent audit inspected 26 Phase 4 checkpoint statements and found zero 
 - The post-documentation verification loaded the retained audit and required `passed: true`; matched every one of its 26 console-registry records to the exact Path.md file/comment-line/statement-line/event row; required the 139-row operating-point CSV; required `NOT_SUPPORTED`; and rechecked the 8,546 + 3,382 + 72 = 12,000 paired comparison identity. It passed with no gap.
 - Remote state was not changed. No `git push`, pull request, tag, release, or other GitHub mutation occurred.
 
+### P4-E012 - Subsequent user-authorized GitHub publication
+
+- After Phase 4 was locally closed under the earlier no-push instruction, the user explicitly issued a new `Push and commit` instruction on 2026-07-14 Asia/Karachi time. This superseded only the earlier remote-publication prohibition; it did not alter any Phase 4 implementation, result, metric, claim, or audit evidence.
+- Pre-push verification: authenticated GitHub CLI account `InfernusReal`; clean `main` worktree; remote `origin` equal to `https://github.com/MAVS-RESEARCH/MAVS-Self-Learning-1A.git`; local main exactly seven commits ahead of `origin/main` and zero commits behind.
+- Push result: success, `ba1c12d..849d7ca main -> main`. GitHub accepted the full authoritative evidence. It emitted non-blocking `GH001` recommendations because the three generation trace Parquet files are 54.87 MiB, 55.33 MiB, and 55.77 MiB, above GitHub's recommended 50 MiB threshold but below its enforced per-file limit. No file was dropped, rewritten, or moved to preserve complete raw-trace evidence.
+- No pull request, tag, release, branch rewrite, or force push was performed. Publication was a direct fast-forward of the repository's existing `main` branch, consistent with prior phase publication.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -995,4 +1002,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 through Phase 4 are complete and frozen. The Phase 4 implementation/audit verdict is PASS; the scientific MAVS-SL superiority verdict is `NOT_SUPPORTED` under the required fail-closed gates. Phase 5 is not started and remains unauthorized. No Phase 4 GitHub push was performed, as explicitly directed by the user.
+Phase 0 through Phase 4 are complete and frozen. The Phase 4 implementation/audit verdict is PASS; the scientific MAVS-SL superiority verdict is `NOT_SUPPORTED` under the required fail-closed gates. Phase 5 is not started and remains unauthorized. Phase 4 was subsequently published to `origin/main` only after the user's explicit 2026-07-14 `Push and commit` authorization; see P4-E012.
