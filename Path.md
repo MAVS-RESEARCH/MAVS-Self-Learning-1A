@@ -830,6 +830,15 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - Pre-documentation verdict: Phase 3 is technically complete and 100% compliant with WorkPlan Section 10 and every inherited gate applicable to this phase. No open compliance gap, failed certification, unrecorded rejection, benchmark leakage, trained-on-holdout component, placeholder result, or unresolved implementation defect remains. Closure remains pending only until the authoritative evidence and this record are committed, the audit is rerun from the evidence successor commit without modifying frozen inputs, and the accepted state is pushed.
 - Claim restriction: this verdict certifies the controlled three-generation synthetic mechanism-recovery phase. It does not establish baseline superiority, deployment readiness, universal self-learning, unrestricted autonomous code changes, or Pareto-frontier expansion; those are later-phase questions.
 
+### P3-E010 - Post-documentation provenance control and Phase 3 closure
+
+- Evidence/results commit: `d1f5873` (`results: record authoritative phase 3 evidence`), adding P3-E007 through P3-E009 and the complete 89-file authoritative namespace. The frozen experimental implementation remains `faf45c83ae3f5480aa1132802bebdf92031466b3`.
+- Post-evidence aggregation: `python scripts/aggregate_phase3.py --run-id phase3_20260713`; PASS. It reproduced 60,000 canonical opportunities, 120,000 condition decisions, six summary rows, 60 curriculum rows, and 60 rejected candidates. Summary, curriculum, and rejection hashes remained byte-identical at `71898F98246952600C4A9A5EF0CEDCEC74A3669203E3C710CEF2FDD7BA8B8FC6`, `BF469F4B88A8BB7DF28AAE927C1EBCA11F9F38F83E60034A9D60773064DDFDBF`, and `37991A83F94A6293F86786479C5F43D9A6BD567D7ACDDE3FCFE59963F274C808`.
+- Post-evidence audit: `python scripts/audit_phase3.py --run-id phase3_20260713`; PASS after the combined control completed in 265.7 seconds. It independently replayed all 120,000 condition decisions and retained exact equality for six trace hashes, repair-event hash, and learning-artifact hash; all separation/trace/update/library/trigger/hidden-access/console/orchestration/card/metric checks remained green.
+- Audit output remained byte-identical after the evidence successor commit, SHA-256 `995901CE490521E0B2CE1C0F8688727AFD0DE9FD6A93BD07EDEE9670B0378C6C`. `git status -sb` showed only `main...origin/main [ahead 2]` and no modified/untracked path after the rerun. No implementation, configuration, curriculum, manifest, ledger, checkpoint, trace, card, metric, log, or audit byte changed.
+- Final Phase 3 verdict: PASS, 100% compliant with WorkPlan Section 10 and all applicable architecture/inherited contracts. All stated scope, file, code-method, trigger, operation, candidate, certification, allocation, separation, anti-overfit, metric, harmful-update, recurrence, rollback, lineage, logging, regression, and reproducibility requirements have direct retained evidence. No compliance gap or unresolved defect remains.
+- Phase 3 is closed. Phase 4 remains not started and unauthorized. The controlled-mechanism-recovery claim restriction remains binding.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -854,10 +863,10 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
 | 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
 | 2 | Corruption, correlated collapse, and partial observability | Complete | P2-E000 through P2-E011; authoritative and post-evidence deterministic audits pass |
-| 3 | Autonomous failure discovery and self-repair | In progress | P3-E000 through P3-E009; frozen authoritative run/audit pass; evidence commit and post-documentation control pending |
+| 3 | Autonomous failure discovery and self-repair | Complete | P3-E000 through P3-E010; frozen authoritative and post-evidence deterministic audits pass |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Not started | None |
 
 ## Current checkpoint
 
-Phase 0, Phase 1, and Phase 2 are complete and frozen. Phase 3 frozen implementation and authoritative evidence pass under P3-E000 through P3-E009 with no open technical gap. The next gate is the evidence commit, post-documentation deterministic control, closure commit, and push. No Phase 4 work is authorized.
+Phase 0, Phase 1, Phase 2, and Phase 3 are complete and frozen. Phase 3 is closed under P3-E000 through P3-E010 with no open compliance gap. No Phase 4 work is authorized.
