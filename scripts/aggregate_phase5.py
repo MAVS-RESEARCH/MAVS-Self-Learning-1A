@@ -323,11 +323,22 @@ def _report_markdown(summary: dict[str, object], points: pd.DataFrame, transfer:
         f"- 50 authoritative ablations, 16 resolution-IV runs, and 5 four-cell targeted interactions under cumulative and fresh conditions.",
         f"- {summary['trace_rows']:,} complete primitive trace rows. Replays did not inflate the canonical budget.",
         "- No model training and no post-holdout retuning.", "",
-        "## Reference results", "", a0[["generation", "objective", "uar", "frr", "diagnostic_reuse_rate", "novel_diagnostic_yield", "scope_leakage_rate", "update_stability"]].to_markdown(index=False), "",
+        "## Reference results", "", _markdown_table(a0[["generation", "objective", "uar", "frr", "diagnostic_reuse_rate", "novel_diagnostic_yield", "scope_leakage_rate", "update_stability"]]), "",
         "## Required evidence", "",
         f"Causal component rows: {len(causal)}. Transfer-estimand rows: {len(transfer)}. Factorial effect rows: {len(factorial)}. Targeted interaction rows: {len(interactions)}. Retention-bank rows: {len(retention)}.", "",
         "All nonpositive effects and gate failures are published in `negative_results.csv`; undefined diagnosis acceleration is explicitly represented with a reason rather than imputed.", "",
     ])
+
+
+def _markdown_table(frame: pd.DataFrame) -> str:
+    """Render a deterministic dependency-free CommonMark table."""
+
+    columns = [str(column) for column in frame.columns]
+    lines = ["| " + " | ".join(columns) + " |", "| " + " | ".join("---" for _ in columns) + " |"]
+    for row in frame.itertuples(index=False, name=None):
+        values = [str(value).replace("|", "\\|").replace("\n", " ") for value in row]
+        lines.append("| " + " | ".join(values) + " |")
+    return "\n".join(lines)
 
 
 def main() -> int:

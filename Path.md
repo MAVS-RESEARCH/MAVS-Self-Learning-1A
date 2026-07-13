@@ -1015,6 +1015,12 @@ The independent audit inspected 26 Phase 4 checkpoint statements and found zero 
 - The streaming validator then made unacceptable progress because its row loop reconstructed the authoritative 50-ID set for every primitive record. This was a validation-performance defect, not a scientific result. The named Node process and its validator child were stopped before aggregation, claims, reports, or audit; all incomplete named artifacts must be removed by the next orchestrator clean step.
 - Replaced row-wise identities with 100,000-record NumPy batches: authoritative-ID membership, action-domain, UAR/FRR identities, action partition, trace completeness, and lineage-length checks are now vectorized. The same fail-closed predicates and first-invalid-row reporting are retained. The correction requires focused tests, a new implementation commit, and a complete clean restart so every manifest binds to one immutable corrected SHA.
 
+### P5-E005 - Rejected second authoritative attempt and report dependency correction
+
+- Validator-correction commit `13c616be302abf57873a9625bbb5a84abc04c5e7` began a complete clean restart. The named cleaner explicitly removed the previous manifests and raw directory. Inherited pre-tests and Phase 5 focused tests passed; compilation and separation passed; the tournament regenerated all 10,740,000 rows; and the corrected complete trace validator returned `errors: []`.
+- Aggregation calculated and wrote intermediate metrics but failed before completing the report because `pandas.DataFrame.to_markdown` imports the optional undeclared `tabulate` package, which is not present. The traceback and failed command are retained in the orchestration log. No claim, audit, or accepted report was produced.
+- Removed the optional dependency by implementing a deterministic internal CommonMark table formatter with pipe/newline escaping. No scientific calculation, record, threshold, bank, participant action, or gate changed. The partially generated named aggregates/reports/figures and all raw/manifests must be cleared by the next named restart; a new commit is required so the final run has one implementation SHA.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
