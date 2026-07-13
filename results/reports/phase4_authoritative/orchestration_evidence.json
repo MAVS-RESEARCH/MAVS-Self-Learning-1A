@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "phase4_authoritative",
+  "completed_steps": [
+    "clean_phase4_run",
+    "inherited_tests_before",
+    "phase4_ledgers_compiled",
+    "separation_validated",
+    "tournament_executed",
+    "traces_validated",
+    "metrics_aggregated",
+    "phase4_tests",
+    "full_regression",
+    "inherited_smoke_after"
+  ]
+}

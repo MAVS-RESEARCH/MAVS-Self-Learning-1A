@@ -1,0 +1,3203 @@
+{
+  "points": [
+    {
+      "budget": {
+        "calls": 0,
+        "latency_ms": 0.05,
+        "memory_bytes": 128,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": false,
+      "condition": "diagnostic",
+      "config_hash": "7cdeda9d8ec34a42245bc8db8f7afc33ab59d9a7f8ba8890424901f966e8e408",
+      "family": "trivial",
+      "fidelity_label": "diagnostic_bound",
+      "mechanism": "accept_all",
+      "module": "trivial.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.5
+      },
+      "point_id": "trivial.accept_all.diagnostic.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 0,
+        "latency_ms": 0.05,
+        "memory_bytes": 128,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": false,
+      "condition": "diagnostic",
+      "config_hash": "f7b8d8dc08f15cb2ccaf597c03bf7568e789a76cbb8e6501deb644dc83d5eba2",
+      "family": "trivial",
+      "fidelity_label": "diagnostic_bound",
+      "mechanism": "reject_all",
+      "module": "trivial.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.5
+      },
+      "point_id": "trivial.reject_all.diagnostic.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 0,
+        "latency_ms": 0.05,
+        "memory_bytes": 128,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": false,
+      "condition": "diagnostic",
+      "config_hash": "22282ec9291ee3e4b35ace48dcd184f6321d676e9d829c3a6be19ca53c67dffb",
+      "family": "trivial",
+      "fidelity_label": "diagnostic_bound",
+      "mechanism": "escalate_all",
+      "module": "trivial.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.5
+      },
+      "point_id": "trivial.escalate_all.diagnostic.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 0,
+        "latency_ms": 0.05,
+        "memory_bytes": 128,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": false,
+      "condition": "diagnostic",
+      "config_hash": "3cbda0a305ca41e3919622c70d86374ed020895dff0926a7bad5455bb1402c8b",
+      "family": "trivial",
+      "fidelity_label": "diagnostic_bound",
+      "mechanism": "random",
+      "module": "trivial.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.5
+      },
+      "point_id": "trivial.random.diagnostic.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 0,
+        "latency_ms": 0.05,
+        "memory_bytes": 128,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": false,
+      "condition": "oracle",
+      "config_hash": "5291091bb91b12a63fb336c7914b33a198960496d5a60dfcd5baa6800c8dcd0e",
+      "family": "oracle",
+      "fidelity_label": "diagnostic_bound",
+      "mechanism": "oracle_label",
+      "module": "oracle.py",
+      "oracle": true,
+      "parameters": {
+        "reject_threshold": 0.5
+      },
+      "point_id": "oracle.oracle_label.oracle.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 0,
+        "latency_ms": 0.05,
+        "memory_bytes": 128,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": false,
+      "condition": "oracle",
+      "config_hash": "f2917aef84660a1f250efc9cf44e5b7c8baef92e3154e07f25e4b35b391ffc44",
+      "family": "oracle",
+      "fidelity_label": "diagnostic_bound",
+      "mechanism": "oracle_regime",
+      "module": "oracle.py",
+      "oracle": true,
+      "parameters": {
+        "reject_threshold": 0.5
+      },
+      "point_id": "oracle.oracle_regime.oracle.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "d595695c8dfbf220ab7c20dc697aea90408e3bdad4dbefa66cf5b5964b693ee6",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "mavs_gc",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.64
+      },
+      "point_id": "mavs_lineage.mavs_gc.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "66e907d2c13ce4fff6a0c64881a6b3dc46b0d2664dd445232fa1b4fcb396d470",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "mavs_gc",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "mavs_lineage.mavs_gc.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "9650e3ad49fa57423292f42f3f6c1344f6459d7a4e6812a456c3334b3d015f8e",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ds_cf",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.64
+      },
+      "point_id": "mavs_lineage.ds_cf.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "0bb0639a3016f49f576314c25fc3e963341c81a00ea8e0ff7adf88f57e05648d",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ds_cf",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "mavs_lineage.ds_cf.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "ce68ac657c517b946f07b94efaa6ebf043ccd37ce3dbebf225be655be1751345",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "fixed_full_mavs",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.64
+      },
+      "point_id": "mavs_lineage.fixed_full_mavs.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "f8fc4498e1012221ceafec9fda370142d09eca5779e8af3fea29cb43b6b27863",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "fixed_full_mavs",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "mavs_lineage.fixed_full_mavs.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "eb49d45da2eb384ca194e73a268ac56f862cc275f4aa5e4455451b0291fcba96",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "context_selected_fixed",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.64
+      },
+      "point_id": "mavs_lineage.context_selected_fixed.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "7eb24a93487b50be361e694d13c52c2977f70a2822fcbd80fbdf98d1c550f05d",
+      "family": "mavs_lineage",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "context_selected_fixed",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "mavs_lineage.context_selected_fixed.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "2bb3428ef744fc1b0a5828cbe1b2c2e425ba5bff1e84a2632d432a870a5246ff",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "confidence",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "selective.confidence.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "eeca8701688118adb4fb61467e1491f4f4f873cf754375581b6619ea68375c04",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "confidence",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "selective.confidence.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "6e0a3400ffe402b3fda384a7db7d7e6f3e647af76f1eb27f6153582376c4c08a",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "entropy",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "selective.entropy.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "caef2b05bcee61199d3c0eebb419aa84a70d1314037a1e312c5e0cd8715179f4",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "entropy",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "selective.entropy.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "3f93af130b8d14fd9fd202f29551ee356e06f0afdd0632d8639f8e34d6e1a46a",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "margin",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "selective.margin.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "08649d51535619ccc2eea93145c0a9adebb72241a5e3fd65b007a38887be090d",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "margin",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "selective.margin.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "76e1df0c6172c50c92df5a6de35eaee113423311ff325cf9dcd929f3cd37dfef",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "reject_option",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "selective.reject_option.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "77587323ba7f8b37d3e988c16d3b888d9b862d4da831c02185ada67ae332dcd2",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "reject_option",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "selective.reject_option.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "0b47c694f4014abe7c95581f3a825d4dc4a9400d5f16af3bdceaf5b3160e86ab",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "generalized_selective",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "selective.generalized_selective.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.0,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "586d1fc565336e25e2f8d7b004ce27d192d85b34e8aac12276ee6634b510cfb4",
+      "family": "selective",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "generalized_selective",
+      "module": "selective.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "selective.generalized_selective.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.2,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "3b735bcde695df911b326a17e17129b15d0c49dcfa62a60dc1be91cfa7e8bf7f",
+      "family": "neyman_pearson",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "risk_constrained",
+      "module": "neyman_pearson.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "neyman_pearson.risk_constrained.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.2,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "be448f8107a81c76d7040f850303841d2fc677b2987b1a52a3463b9deed8d746",
+      "family": "neyman_pearson",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "risk_constrained",
+      "module": "neyman_pearson.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "neyman_pearson.risk_constrained.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.2,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "a7a1c19fca24f5a4e474444d8cc47afc99b4b20d83f84ecbbcc49f322f2d91c0",
+      "family": "neyman_pearson",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "likelihood_ratio",
+      "module": "neyman_pearson.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "neyman_pearson.likelihood_ratio.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.2,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "32495bf0a75da630bc2ea1e2c5fd1a1f861e9b738658d6b63827adc942935d4d",
+      "family": "neyman_pearson",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "likelihood_ratio",
+      "module": "neyman_pearson.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "neyman_pearson.likelihood_ratio.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.2,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "47edb2e638063fe8020f330c82e8ad318768c4524d1081f995bc0d9b32f66d43",
+      "family": "neyman_pearson",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "cost_sensitive",
+      "module": "neyman_pearson.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.62
+      },
+      "point_id": "neyman_pearson.cost_sensitive.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.2,
+        "memory_bytes": 1048576,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "c6031bfec4589998689a344d1d2ebbd7d12acbfbab24612448b1dff4250c808c",
+      "family": "neyman_pearson",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "cost_sensitive",
+      "module": "neyman_pearson.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.72
+      },
+      "point_id": "neyman_pearson.cost_sensitive.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.8,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "a44604c1b68f8b1f776be66e15b7a0cbdee9a0e42ee93b10cfe469980c922dd3",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "split_conformal",
+      "module": "conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.split_conformal.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.8,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "45edbeb11249868254da532cd81f91eb4de90824490e6b657f64b464f32d827c",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "split_conformal",
+      "module": "conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.split_conformal.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.8,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "47cc4229841aa2836dda25f8cd8ab77167ef0fe1b6fd2f62992449860e309aa5",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "conformal_risk_control",
+      "module": "conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.conformal_risk_control.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 1.8,
+        "memory_bytes": 2097152,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "f6d33871f63c09a9f4d7137986c27b2bb982312314ba6c67fe5abd14c5f562ba",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "conformal_risk_control",
+      "module": "conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.conformal_risk_control.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "1f4f46d95f7686433e8e7ef086e64b58e7a43e62e8ca70baba0cf93f516345f1",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adaptive_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.adaptive_conformal.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "f73c2a62c6c90df99993cd24a79fb3a3b313c17e23bc3036ad8c845335e26228",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adaptive_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.adaptive_conformal.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "4ca7bb7d4b3d0fb672ae43747917db122dd9d2f4c92d9ddd2090a6b69c5eec48",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adaptive_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.adaptive_conformal.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "aff5bbbdd2be2a93732ee14ef84b646255d4735941794446cdcef14ee2c1343d",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adaptive_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.adaptive_conformal.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "bc875435b9feef3f5e34e235d7399f29ea75d6c2c569b229b6446a321dccc1d9",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "online_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.online_conformal.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "37ea74717d9735566cea9903311ac82099851dc4e534db4df58ae394eb6ccdc6",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "online_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.online_conformal.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "c9331f6cff560abdfc71d44798554f6826f21831560ffbfaee519d1becaef519",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "online_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.online_conformal.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "bc5d5b4cb1bf9afd0b472eaee2f9167c402060cff003516010fbd7161d8be3e2",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "online_conformal",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.online_conformal.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "cf91dfd5992dc5ebfe5957c7f845823cf50eb6d87f78d7b586c2c47baad96068",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "distribution_informed_online",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.distribution_informed_online.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "333d27ddbb9ad848fbb0693a01075bd126ed4256b7f62d411984e4e2283623e4",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "distribution_informed_online",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.distribution_informed_online.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "967b5900376004b1d7dc685f810ec512d9cb1c8c34608db47ee6ea19faadedc6",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "distribution_informed_online",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.distribution_informed_online.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "29942ff04a6b21ae11745e9fef30fa77bbee6289c9e54a18779840c3d012bd9c",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "distribution_informed_online",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.distribution_informed_online.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "8b09949b27faa864c810efe6cdd4cd74169acf7fa355cf1769f22d7351f3e30b",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "retrospective_adjustment",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.retrospective_adjustment.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "9eb19257176254404cd35f27499391642e071be6ce5ecb4b9dc4203217caf34a",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "retrospective_adjustment",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.retrospective_adjustment.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "db8ce2fcd07a5081493faacc7e1223d7dcbb3c1973f0c9fffd5ce9ed4699ad4b",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "retrospective_adjustment",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.05
+      },
+      "point_id": "conformal.retrospective_adjustment.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.2,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.15
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "12243b6d2d92cda2b9b82feb5378fab4d2f3379baf0e501c9d230fb88e6418ef",
+      "family": "conformal",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "retrospective_adjustment",
+      "module": "online_conformal.py",
+      "oracle": false,
+      "parameters": {
+        "alpha": 0.1
+      },
+      "point_id": "conformal.retrospective_adjustment.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "c24047f169017fdf09a01edf945ac6d32f8ca770105af752ce3bae7460eec467",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "disagreement",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.3
+      },
+      "point_id": "uncertainty.disagreement.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "95213d0a7f23577fee7ec5fbd4e587a40cebc27a81db472cf042b317a02b6f87",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "disagreement",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.5
+      },
+      "point_id": "uncertainty.disagreement.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "0af5815ff7b52b045b5a5f4944690f841ad13876e7bd4f73b3bbf7eeb49923b1",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "variance",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.3
+      },
+      "point_id": "uncertainty.variance.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "d60bd6c0fcb458717807c1c1ceade6ad23d2792522f62bfb1b987b341a5ff3aa",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "variance",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.5
+      },
+      "point_id": "uncertainty.variance.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "665bedeff80b046aba0616b9d9edbfdd9d3608cda802c193e11d4f2903915dbe",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "mutual_information",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.3
+      },
+      "point_id": "uncertainty.mutual_information.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "7621864a5717fc344df56b23f1184a11e7c2391be0557a2961c9d36a12f547e9",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "mutual_information",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.5
+      },
+      "point_id": "uncertainty.mutual_information.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "9d0803be955ed43bbe1e73efab45f133fa6f8d16bce874c6c399b085ca672eba",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "deep_ensemble",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.3
+      },
+      "point_id": "uncertainty.deep_ensemble.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "c00dbe1b2f75816d758888470c9329311b2ec907bbf1b6e1b4b0bbf13f01f46a",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "deep_ensemble",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.5
+      },
+      "point_id": "uncertainty.deep_ensemble.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "3e8595339370deb0fce6ef9f9f84638b92a258aeb09867704a0596dfae9c5170",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "self_consistency",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.3
+      },
+      "point_id": "uncertainty.self_consistency.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 5,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "7de038097505c32cb87d59560cb9192e69a4f4f42ebdcbf8fd6b02161b686c73",
+      "family": "uncertainty",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "self_consistency",
+      "module": "uncertainty.py",
+      "oracle": false,
+      "parameters": {
+        "uncertainty_threshold": 0.5
+      },
+      "point_id": "uncertainty.self_consistency.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "a8a9d53cbebdb7b9a61e862943e1b8d34b351693bb14566fcfc601b07e31a908",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "policy_rails",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "guardrails.policy_rails.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "8c42d13076f7db56fec7a464143d0bd3e44dbc8a928d69b6ea37d492e820a316",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "policy_rails",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "guardrails.policy_rails.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "35cc52a40ad13c97671dcfaf679b0c1670a41d3c50f39fbfa0de79780be123c6",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "validator_stack",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "guardrails.validator_stack.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "64d617f61c3f591525fb520583322afd34daf4d019b88fd229785453a0674256",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "validator_stack",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "guardrails.validator_stack.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "0852558ab26f35ed0a62239610cfb4e115c8193004e5f51d857052478a553e8c",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "schema_guard",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "guardrails.schema_guard.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "afac5056f642ea281b773e896e035d6a206d7324fb69d1a1f9e41bdd2abf2b1c",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "schema_guard",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "guardrails.schema_guard.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "5d2ae5bc2f339bbcfa35bb39cb4536d47d5ed9d68a0b3981ee83829a03fa0e6b",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "tool_use_guard",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "guardrails.tool_use_guard.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 8.0,
+        "memory_bytes": 4194304,
+        "tokens": 256,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "7d1bd1305424c04cf1982a27ff9fabef90bdf843fc6aa51504978014f8bc675f",
+      "family": "guardrails",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "tool_use_guard",
+      "module": "rails.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "guardrails.tool_use_guard.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "dc448dacf94d9b57f5c77052fe88a0752acdafdb51fbf85475b851dcc65d381a",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "critique_revise",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "critique_verifier.critique_revise.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "651a843d09a3b11ab5ff355869b0d6e9ccd20e8f488e63bd6cd7c6d257bd4674",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "critique_revise",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "critique_verifier.critique_revise.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "a1755eb9baa27da774357a32499abdbc03ffcf8dc5c1b7edcd07a014c635581a",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "single_judge",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "critique_verifier.single_judge.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "93c5a4fc8789f2be4311e368497f0ae874467f3a2e84ff0c45773e0207c9e591",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "single_judge",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "critique_verifier.single_judge.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "08669a24ade3a065cbcdeef3ccf6b7860d9d184c9327a67ab5577a54ff51a89d",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "verifier_cascade",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "critique_verifier.verifier_cascade.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "92259fd13eae8131a4cfd2de69d5861e3c5dc4bf6da76ff9ff854890bd7880b8",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "verifier_cascade",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "critique_verifier.verifier_cascade.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "cc9d2da2967b5449cf94abf761e522dfda3ee8d25123a0b7b6e5e96aba1591f2",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "bounded_debate",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.6
+      },
+      "point_id": "critique_verifier.bounded_debate.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 4,
+        "latency_ms": 25.0,
+        "memory_bytes": 8388608,
+        "tokens": 1024,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "cc98608ca0607df2734f42aef5fe1122cd088d50ab6c52c13f9b8976ed0dd7f2",
+      "family": "critique_verifier",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "bounded_debate",
+      "module": "verifier.py",
+      "oracle": false,
+      "parameters": {
+        "reject_threshold": 0.7
+      },
+      "point_id": "critique_verifier.bounded_debate.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "8a9b6a15404e1385db09523bfb65b216e9b78cce2f7bb17fe558cb35233f6e81",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adwin",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.2
+      },
+      "point_id": "drift.adwin.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "0e146b4bfed7b35da33ad05c29fd7e503a8657263d9c47ca81bc6073f63a991a",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adwin",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.35
+      },
+      "point_id": "drift.adwin.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "cca94fb6477cc2e53f0399ae02596f398a496697ed5dd90af30e56feb17f384f",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adwin",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.2
+      },
+      "point_id": "drift.adwin.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "1eabb0337803469c85b92f185f95a1ae9b73787ae576c5943d7ca8b0b97f45bf",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "adwin",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.35
+      },
+      "point_id": "drift.adwin.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "4e9dde2469aa925e777ac1da74ed324b1c8dd3ef1ab8880a8594dd54dcbfd6d8",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "page_hinkley",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.2
+      },
+      "point_id": "drift.page_hinkley.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "45e28f51135130f3e579057845faf6cee3002aedcc571a934acb5b9af2b9ba31",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "page_hinkley",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.35
+      },
+      "point_id": "drift.page_hinkley.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "3ce6d15b6b96e37ad0e7da9ab17696478fe0d777309c2ac71b542379e9c575f5",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "page_hinkley",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.2
+      },
+      "point_id": "drift.page_hinkley.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "f8d8b086199e953c1ceefb9ded608a0d905631886a0daa619d8d7089fabb0e23",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "page_hinkley",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.35
+      },
+      "point_id": "drift.page_hinkley.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "0e3db278dbfea9cded4f4b967121a9cd44d0e7fdc8a835332967d0ad2d4c7474",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "change_point_selector",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.2
+      },
+      "point_id": "drift.change_point_selector.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "c86ac1edb28585490da59df169e536e9c065fb8a7e747d9c0082397a705d6dde",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "change_point_selector",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.35
+      },
+      "point_id": "drift.change_point_selector.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "4eeb308af4974ba5a26d99f005070be88e03f64669fb5f90f7381895fdfd9880",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "change_point_selector",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.2
+      },
+      "point_id": "drift.change_point_selector.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 2.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.1
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "0d49485a0b193f1f45c72bcf165ec2a16aa20fe88b133c60b7010ca433ca035f",
+      "family": "drift",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "change_point_selector",
+      "module": "drift.py",
+      "oracle": false,
+      "parameters": {
+        "drift_threshold": 0.35
+      },
+      "point_id": "drift.change_point_selector.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "0ac10bca2c1729feb9f8980eddb82d54ff8b80d7dcd27acf28c2c585614cde84",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "hedge",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.05
+      },
+      "point_id": "online_experts.hedge.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "c86f6b1b71fe24b1f853721811e81d000e88be3f5b4d37fa73dd5aa144669621",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "hedge",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.2
+      },
+      "point_id": "online_experts.hedge.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "60d617e2f2d156cf85f27bce182ce27c793b4f069c5339f5400d47ff1ff43c11",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "hedge",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.05
+      },
+      "point_id": "online_experts.hedge.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "7f13c98c0e590e36ab17ac940f6143013a4ef98e44b9f7dabb70f6a0e639bcfb",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "hedge",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.2
+      },
+      "point_id": "online_experts.hedge.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "0ca16d86abdd67ebd01224ae3f6e8784da87531776390b5d8579ce37cfaf9422",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "contextual_bandit",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.05
+      },
+      "point_id": "online_experts.contextual_bandit.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "01c8f5f4383c255cec4c7319fa850b77cd3e0a8906275ce2a51936e4f9c7004f",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "contextual_bandit",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.2
+      },
+      "point_id": "online_experts.contextual_bandit.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "f7ba0ba232a2f6db05ab7c1b00614525b693947c42cff78b6bea8964208ccdb7",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "contextual_bandit",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.05
+      },
+      "point_id": "online_experts.contextual_bandit.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 3.0,
+        "memory_bytes": 4194304,
+        "tokens": 0,
+        "update_compute": 0.2
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "cfc3d29018def8b9fb46d71249929df07853348998d3acc21c7c8bdc1b64ce7a",
+      "family": "online_experts",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "contextual_bandit",
+      "module": "online_experts.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.2
+      },
+      "point_id": "online_experts.contextual_bandit.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "42c7f0a192d87efaaa81c33bf0ad06a7fe79b55b6b511ff9eb5014b87c013e58",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "entropy_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.entropy_ctta.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "6f78693a699688590590c983f77e1c3bff99ce9938f70455047a1426959a7513",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "entropy_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.entropy_ctta.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "98f0c78d43d62a6ee0e9224cdb48009ac3b6245663f3d739f2aea76eeb718054",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "entropy_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.entropy_ctta.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "321dd82307d1f34ae7b54cfbcd187959702796bde2b69a6c61b25ad8c889cc5c",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "entropy_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.entropy_ctta.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "1f2047465c23f57a729f03deded5fc027ab197e98a94b11da5315e25d62d4c2f",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "pseudo_label_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.pseudo_label_ctta.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "379ccc2d926c9aa8ab8312e72edfee987d20900f64851aa26ae41a20d90e4712",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "pseudo_label_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.pseudo_label_ctta.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "24c1eec91a3ff014c542501c4fdc30786092eb6a927120a378a0819976d613fe",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "pseudo_label_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.pseudo_label_ctta.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "eefc5baa1c9aff0e20980e529f96642c7ba74578ef5f3abebbfde56e68eb5fb3",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "pseudo_label_ctta",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.pseudo_label_ctta.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "ea0741d3e083ea74c8dbfbffe241e6ab7f70d4fc4c8a27833f851797a0003a5f",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_reset",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.ctta_reset.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "67337f5e7105fc7cfd7cf623862b2e9f258a573957f36d9a465775470f7e6a7e",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_reset",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.ctta_reset.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "6d0f1c1473acbbdd0b8b4307c316b75308b9845e67bf7d5ca548bda2d8e66b7b",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_reset",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.ctta_reset.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "51d8e68b77fd4827774c9f5d4a37269e90712e072af9561b4101ec82ff313484",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_reset",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.ctta_reset.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "0841c9d3838c5a7e9371e56f851cab28685df0abcb5c56ec145cfe39a85981be",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_recovery",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.ctta_recovery.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "91b29c766cd4ffc87a278fde4781e250431b66bee92a6758146ea027a2bda664",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_recovery",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.ctta_recovery.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "b4e4d84bb3c27dcee615a6c549dfc03135b19639da57b5de3ef535d2bb84c8a5",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_recovery",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.0001
+      },
+      "point_id": "test_time_adaptation.ctta_recovery.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 1,
+        "latency_ms": 7.0,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.6
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "44bc1922c40f08103900c3b0a1b6e32555793f2e500a12c7e70aa45e65c65425",
+      "family": "test_time_adaptation",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ctta_recovery",
+      "module": "test_time_adaptation.py",
+      "oracle": false,
+      "parameters": {
+        "learning_rate": 0.001
+      },
+      "point_id": "test_time_adaptation.ctta_recovery.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "bcc766b256a884f60487436698af6c043f7e42fa096ae04251c6c1fcdc7fb3a0",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "weighted_scalarization",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.5
+      },
+      "point_id": "pareto.weighted_scalarization.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "59544ff0f4af9c6a4d708ee9218dcf06d1109eaedba89ddaa0899a043f80083d",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "weighted_scalarization",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.75
+      },
+      "point_id": "pareto.weighted_scalarization.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "9a888b74582313cbed4ae152f5a72db166d28c0e7be597cbe1c11636972219a6",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "weighted_scalarization",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.9
+      },
+      "point_id": "pareto.weighted_scalarization.fixed.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "b277a03c71c65f42fd21a253f7a9d671eec5ccf60cde4e6ea759e82a4f398095",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "epsilon_constraint",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.5
+      },
+      "point_id": "pareto.epsilon_constraint.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "b3dec92a4a12ef8fb2764f7703b37c0922c9aad8b7f0eed4a9c645bac800f31f",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "epsilon_constraint",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.75
+      },
+      "point_id": "pareto.epsilon_constraint.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "6ad4a42918774842c2b24d5a8ecd9283dffae506acf2bb8a11d30fe14ab95759",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "epsilon_constraint",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.9
+      },
+      "point_id": "pareto.epsilon_constraint.fixed.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "779adc4f04be4d28ebd291417f21844627d9838b14dab4e05e398bb71b619f80",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ipro_pareto_set",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.5
+      },
+      "point_id": "pareto.ipro_pareto_set.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "bed43b8d4c50d7ab8d57872925aff7f4d140826b60499cd9298283159fd768ce",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ipro_pareto_set",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.75
+      },
+      "point_id": "pareto.ipro_pareto_set.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "daf97b8418ae4cfe1bb0394089f21a02eb12c635dc3dd382e52a8127a4118d5f",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "ipro_pareto_set",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.9
+      },
+      "point_id": "pareto.ipro_pareto_set.fixed.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "8a84daa2c128dec7e40d33328fae2064901f45fb803dc6fb6c3b100296ed0081",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "preference_conditioned",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.5
+      },
+      "point_id": "pareto.preference_conditioned.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "99ddd5c2cc90ea802dea146cffc88499ebd9fa034621b5acf9c3d4778fdb0945",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "preference_conditioned",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.75
+      },
+      "point_id": "pareto.preference_conditioned.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 5.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "5b56190974efc15874654e0fcd4cfd06da791044e916ac304e4b765af7864a01",
+      "family": "pareto",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "preference_conditioned",
+      "module": "pareto_morl.py",
+      "oracle": false,
+      "parameters": {
+        "safety_weight": 0.9
+      },
+      "point_id": "pareto.preference_conditioned.fixed.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 6.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "dfd7c975066475e361a26b1fe0a30158c7bf100c5ea2b8518be2531461c21dd3",
+      "family": "safe_control",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "lagrangian_policy",
+      "module": "safe_control.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.05
+      },
+      "point_id": "safe_control.lagrangian_policy.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 6.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "639cf8cfdb0da66cabf6b5a13e89dc1fbef9978ee2b66ff6ebf85cfe354143af",
+      "family": "safe_control",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "lagrangian_policy",
+      "module": "safe_control.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.1
+      },
+      "point_id": "safe_control.lagrangian_policy.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 6.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "c6dd7e0a06072dd382a43143dc17d9309b46d540fb5f18ad22e9d6e8ff6e4d2e",
+      "family": "safe_control",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "safety_critic",
+      "module": "safe_control.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.05
+      },
+      "point_id": "safe_control.safety_critic.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 6.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "b6972a473a27cc835a20d531c314856a00be8f1cdc50b9595579a309ce3f4dc0",
+      "family": "safe_control",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "safety_critic",
+      "module": "safe_control.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.1
+      },
+      "point_id": "safe_control.safety_critic.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 6.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "4843502c87b23c058e7733cf64bc1fc8c51f00261e55e5ca625d34c707f047b3",
+      "family": "safe_control",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "shielded_policy",
+      "module": "safe_control.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.05
+      },
+      "point_id": "safe_control.shielded_policy.fixed.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 2,
+        "latency_ms": 6.0,
+        "memory_bytes": 8388608,
+        "tokens": 0,
+        "update_compute": 0.0
+      },
+      "competitive": true,
+      "condition": "fixed",
+      "config_hash": "31df11da743c70e0c04edbf376f6b57c7b3a995b533c9f30488c98b8ba953a03",
+      "family": "safe_control",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "shielded_policy",
+      "module": "safe_control.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.1
+      },
+      "point_id": "safe_control.shielded_policy.fixed.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "843132de62d57ec5d23c5289d7ad40ad02b7dfe080b00fd02eec0a60622298b8",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.04
+      },
+      "point_id": "mavs_sl.full_mavs_sl.cumulative.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "89c05a43c2164e56e11d9279a0ffa21c4a24ca1978f1fb2363809bb6d20383d1",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.08
+      },
+      "point_id": "mavs_sl.full_mavs_sl.cumulative.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "cumulative",
+      "config_hash": "78f555378aff76291d94801240881bcba7379ffc652ca1a974c1eb6ec8a9bfc7",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.12
+      },
+      "point_id": "mavs_sl.full_mavs_sl.cumulative.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "9d01878879300cfe6e92577472275cc1075117cc3a0b3b945102a52698bba53f",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.04
+      },
+      "point_id": "mavs_sl.full_mavs_sl.fresh.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "23c6522ccedce3057eb90c77f21a55737cb03aec7025946cd5d6a4faa9bfc4a5",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.08
+      },
+      "point_id": "mavs_sl.full_mavs_sl.fresh.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "fresh",
+      "config_hash": "b8c532f337244928cb97074adc7705af4ce70ecf6a65801e3ea518aae86487c6",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.12
+      },
+      "point_id": "mavs_sl.full_mavs_sl.fresh.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "frozen_after_g1",
+      "config_hash": "0093cb251365dd4560a36faec525228add271aef1f460b6531e42f4c470ce774",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.04
+      },
+      "point_id": "mavs_sl.full_mavs_sl.frozen_after_g1.p00",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "frozen_after_g1",
+      "config_hash": "54845681f764d51f8a210566d35977d724da9b5440c644b364ea2405a755315c",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.08
+      },
+      "point_id": "mavs_sl.full_mavs_sl.frozen_after_g1.p01",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    },
+    {
+      "budget": {
+        "calls": 3,
+        "latency_ms": 7.5,
+        "memory_bytes": 16777216,
+        "tokens": 0,
+        "update_compute": 0.35
+      },
+      "competitive": true,
+      "condition": "frozen_after_g1",
+      "config_hash": "d8128ea084c9e46531b300875d8438e7c2ed96db25200c7f1f96e6c7940fffa8",
+      "family": "mavs_sl",
+      "fidelity_label": "faithful_benchmark_adaptation",
+      "mechanism": "full_mavs_sl",
+      "module": "mavs_tournament.py",
+      "oracle": false,
+      "parameters": {
+        "safety_budget": 0.12
+      },
+      "point_id": "mavs_sl.full_mavs_sl.frozen_after_g1.p02",
+      "source_registry": "docs/baseline_sources.md",
+      "validated": true
+    }
+  ],
+  "registry_hash": "35c3e523d8b850eac09fc186f2dab219a37e5901e2106c1d34b55da46a447803",
+  "schema_version": "1.0.0"
+}

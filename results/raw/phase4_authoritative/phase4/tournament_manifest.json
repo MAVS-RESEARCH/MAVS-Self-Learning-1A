@@ -1,0 +1,66 @@
+{
+  "artifacts": [
+    {
+      "generation": 1,
+      "trace": "results\\raw\\phase4_authoritative\\phase4\\generation_1_traces.parquet",
+      "trace_rows": 3475000,
+      "trace_sha256": "8ed30c6d23a77ac2163a911b8d46d896ca0138be21809b790777a0b3c0a3b68d",
+      "world_metrics": "results\\raw\\phase4_authoritative\\phase4\\generation_1_world_metrics.parquet",
+      "world_metrics_sha256": "cdf18104d3d770017f9fd21c97df6b41abc034fe0f0984edef45528d798b8b20"
+    },
+    {
+      "generation": 2,
+      "trace": "results\\raw\\phase4_authoritative\\phase4\\generation_2_traces.parquet",
+      "trace_rows": 3475000,
+      "trace_sha256": "8ed81497ab9de323105da1efef995d2c4aeb9edcad8a24cbcfe786eb5476e5c5",
+      "world_metrics": "results\\raw\\phase4_authoritative\\phase4\\generation_2_world_metrics.parquet",
+      "world_metrics_sha256": "ad1ef49990ef759495e42ee6b070553da180b4da33b68f599a8db216c61af295"
+    },
+    {
+      "generation": 3,
+      "trace": "results\\raw\\phase4_authoritative\\phase4\\generation_3_traces.parquet",
+      "trace_rows": 3475000,
+      "trace_sha256": "b89571d53deb3b48f3dc6dfa0b9bb901d30e290a169b77a0e0691ff280f8ad4a",
+      "world_metrics": "results\\raw\\phase4_authoritative\\phase4\\generation_3_world_metrics.parquet",
+      "world_metrics_sha256": "1acdb50e672c1aa40a047f8ad16e3e210a2f97cc7b43ea513ba5929d37054c9f"
+    }
+  ],
+  "best_seed_selection": false,
+  "canonical_opportunities": 75000,
+  "complete_sweep": true,
+  "implementation_git_sha": "03ff5aa66cf1a820c42fde5edb67fe59f8738b0e",
+  "ledger_artifacts": [
+    {
+      "generation": 1,
+      "generation_manifest": "results\\manifests\\phase4_authoritative\\phase4\\generation_1\\generation_manifest.json",
+      "generation_manifest_sha256": "ea9084e723a96f89a882cb6b22f659b2882dfd7ca1ef7b93d4e770c231428de6",
+      "ledger": "results\\manifests\\phase4_authoritative\\phase4\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "64c8a76bddc2a14d51d0cbe05bfd9e32f9e13c6b9a9044f5fca0d4db084a90a4"
+    },
+    {
+      "generation": 2,
+      "generation_manifest": "results\\manifests\\phase4_authoritative\\phase4\\generation_2\\generation_manifest.json",
+      "generation_manifest_sha256": "24c777a5223762455cf6819672ea6634135db887dc8cd8dce3f331070ea9587a",
+      "ledger": "results\\manifests\\phase4_authoritative\\phase4\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "e5103383ce94258d61852d153b098242a33c14d71ca4610709d26cb5a50ae2ad"
+    },
+    {
+      "generation": 3,
+      "generation_manifest": "results\\manifests\\phase4_authoritative\\phase4\\generation_3\\generation_manifest.json",
+      "generation_manifest_sha256": "54205559d11621501e295f20a35f54797a2438a1d4525d0af8921375631222d0",
+      "ledger": "results\\manifests\\phase4_authoritative\\phase4\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "4c0e6bc1b987abef36bf74f9ee7e0e57731c5fdeea5a785a67f917392cd9cd6b"
+    }
+  ],
+  "manifest_sha256": "94d95f4348b7f9d6c73dccd02abecd0b47a5be5eefa9b2bffc509ee4b566608f",
+  "operating_point_count": 139,
+  "operating_point_registry_sha256": "35c3e523d8b850eac09fc186f2dab219a37e5901e2106c1d34b55da46a447803",
+  "participant_final_access": false,
+  "phase": 4,
+  "post_holdout_retuning": false,
+  "run_id": "phase4_authoritative",
+  "schema_version": "1.0.0",
+  "trace_rows": 10425000,
+  "world_metrics": "results\\raw\\phase4_authoritative\\phase4\\world_metrics.parquet",
+  "world_metrics_sha256": "ad314faa3c5ff265f875bcf2800fcd9a09644d180892989b91f99cd8d26eb457"
+}

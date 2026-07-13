@@ -1,0 +1,346 @@
+{
+  "checks": {
+    "allocation": {
+      "canonical": 75000,
+      "generation_opportunities": [
+        25000,
+        25000,
+        25000
+      ],
+      "generation_worlds": [
+        500,
+        500,
+        500
+      ],
+      "points": 139,
+      "replay_counts_as_canonical": false,
+      "replay_evaluations": 10425000
+    },
+    "console_registry": {
+      "errors": [],
+      "records": [
+        {
+          "comment": "// console.log: phase4.orchestrator.step01.start",
+          "comment_line": 17,
+          "event": "phase4.orchestrator.step01.start",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 18
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step02.clean_phase4_run",
+          "comment_line": 20,
+          "event": "phase4.orchestrator.step02.clean_phase4_run",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 21
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step03.inherited_tests_before",
+          "comment_line": 25,
+          "event": "phase4.orchestrator.step03.inherited_tests_before",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 26
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step04.compile_ledgers",
+          "comment_line": 30,
+          "event": "phase4.orchestrator.step04.compile_ledgers",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 31
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step05.validate_separation",
+          "comment_line": 35,
+          "event": "phase4.orchestrator.step05.validate_separation",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 36
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step06.execute_tournament",
+          "comment_line": 40,
+          "event": "phase4.orchestrator.step06.execute_tournament",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 41
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step07.validate_traces",
+          "comment_line": 45,
+          "event": "phase4.orchestrator.step07.validate_traces",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 46
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step08.aggregate",
+          "comment_line": 50,
+          "event": "phase4.orchestrator.step08.aggregate",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 51
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step09.phase4_tests",
+          "comment_line": 55,
+          "event": "phase4.orchestrator.step09.phase4_tests",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 56
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step10.full_regression",
+          "comment_line": 60,
+          "event": "phase4.orchestrator.step10.full_regression",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 61
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step11.final_inherited_smoke",
+          "comment_line": 65,
+          "event": "phase4.orchestrator.step11.final_inherited_smoke",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 66
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step12.write_evidence",
+          "comment_line": 71,
+          "event": "phase4.orchestrator.step12.write_evidence",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 72
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step13.audit",
+          "comment_line": 77,
+          "event": "phase4.orchestrator.step13.audit",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 78
+        },
+        {
+          "comment": "// console.log: phase4.orchestrator.step14.complete",
+          "comment_line": 81,
+          "event": "phase4.orchestrator.step14.complete",
+          "file": "scripts/run_phase4.mjs",
+          "matched": true,
+          "statement_line": 82
+        },
+        {
+          "comment": "# console.log: phase4.compile.step01.start",
+          "comment_line": 89,
+          "event": "phase4.compile.step01.start",
+          "file": "scripts/compile_phase4_ledgers.py",
+          "matched": true,
+          "statement_line": 90
+        },
+        {
+          "comment": "# console.log: phase4.compile.step02.complete",
+          "comment_line": 92,
+          "event": "phase4.compile.step02.complete",
+          "file": "scripts/compile_phase4_ledgers.py",
+          "matched": true,
+          "statement_line": 93
+        },
+        {
+          "comment": "# console.log: phase4.separation.step01.start",
+          "comment_line": 67,
+          "event": "phase4.separation.step01.start",
+          "file": "scripts/validate_phase4_separation.py",
+          "matched": true,
+          "statement_line": 68
+        },
+        {
+          "comment": "# console.log: phase4.separation.step02.complete",
+          "comment_line": 70,
+          "event": "phase4.separation.step02.complete",
+          "file": "scripts/validate_phase4_separation.py",
+          "matched": true,
+          "statement_line": 71
+        },
+        {
+          "comment": "# console.log: phase4.tournament.step01.start",
+          "comment_line": 218,
+          "event": "phase4.tournament.step01.start",
+          "file": "scripts/run_phase4_tournament.py",
+          "matched": true,
+          "statement_line": 219
+        },
+        {
+          "comment": "# console.log: phase4.tournament.step02.complete",
+          "comment_line": 221,
+          "event": "phase4.tournament.step02.complete",
+          "file": "scripts/run_phase4_tournament.py",
+          "matched": true,
+          "statement_line": 222
+        },
+        {
+          "comment": "# console.log: phase4.traces.step01.start",
+          "comment_line": 80,
+          "event": "phase4.traces.step01.start",
+          "file": "scripts/validate_phase4_traces.py",
+          "matched": true,
+          "statement_line": 81
+        },
+        {
+          "comment": "# console.log: phase4.traces.step02.complete",
+          "comment_line": 83,
+          "event": "phase4.traces.step02.complete",
+          "file": "scripts/validate_phase4_traces.py",
+          "matched": true,
+          "statement_line": 84
+        },
+        {
+          "comment": "# console.log: phase4.aggregate.step01.start",
+          "comment_line": 256,
+          "event": "phase4.aggregate.step01.start",
+          "file": "scripts/aggregate_phase4.py",
+          "matched": true,
+          "statement_line": 257
+        },
+        {
+          "comment": "# console.log: phase4.aggregate.step02.complete",
+          "comment_line": 259,
+          "event": "phase4.aggregate.step02.complete",
+          "file": "scripts/aggregate_phase4.py",
+          "matched": true,
+          "statement_line": 260
+        },
+        {
+          "comment": "# console.log: phase4.audit.step01.start",
+          "comment_line": 173,
+          "event": "phase4.audit.step01.start",
+          "file": "scripts/audit_phase4.py",
+          "matched": true,
+          "statement_line": 174
+        },
+        {
+          "comment": "# console.log: phase4.audit.step02.complete",
+          "comment_line": 179,
+          "event": "phase4.audit.step02.complete",
+          "file": "scripts/audit_phase4.py",
+          "matched": true,
+          "statement_line": 180
+        }
+      ]
+    },
+    "deterministic_replay": {
+      "combined_world_metrics_match": true,
+      "trace_hashes_match": true,
+      "world_metric_hashes_match": true
+    },
+    "frontier": {
+      "claim": "NOT_SUPPORTED",
+      "claim_consistent": true,
+      "epsilon": 0.5577866666666667,
+      "hypervolume_difference": -0.6405787091792948,
+      "matched": {
+        "best_frr_delta_at_matched_uar": -0.08116761708890344,
+        "best_uar_delta_at_matched_frr": -0.07826275922016639,
+        "lower_frr_at_matched_uar": true,
+        "lower_uar_at_matched_frr": true,
+        "matched_frr_pairs": 432,
+        "matched_uar_pairs": 344
+      },
+      "reject_all_excluded": true,
+      "rows": 111,
+      "types": [
+        "matched_compute",
+        "unconstrained"
+      ]
+    },
+    "metrics": {
+      "decisions_per_point": [
+        75000
+      ],
+      "nulls": 0,
+      "required_complete": true,
+      "rows": 139,
+      "trace_complete": true,
+      "worlds_per_point": [
+        1500
+      ]
+    },
+    "model_policy": true,
+    "orchestration_complete": true,
+    "provenance": {
+      "complete_sweep_points": 139,
+      "config_hashes_linked": true,
+      "environment_hash_present": true,
+      "frontier_points_linked": true,
+      "git_sha_present": true,
+      "ledger_artifacts": 3,
+      "trace_artifacts": 3
+    },
+    "registry": {
+      "all_budgeted": true,
+      "all_validated": true,
+      "families": [
+        "conformal",
+        "critique_verifier",
+        "drift",
+        "guardrails",
+        "mavs_lineage",
+        "mavs_sl",
+        "neyman_pearson",
+        "online_experts",
+        "oracle",
+        "pareto",
+        "safe_control",
+        "selective",
+        "test_time_adaptation",
+        "trivial",
+        "uncertainty"
+      ],
+      "points": 139,
+      "unique": 139
+    },
+    "required_files": {
+      "CLAIMS.md": true,
+      "configs/baselines/phase4_sweeps.yaml": true,
+      "configs/phases/phase4.yaml": true,
+      "docs/baseline_sources.md": true,
+      "scripts/aggregate_phase4.py": true,
+      "scripts/audit_phase4.py": true,
+      "scripts/compile_phase4_ledgers.py": true,
+      "scripts/run_phase4.mjs": true,
+      "scripts/run_phase4_tournament.py": true,
+      "scripts/validate_phase4_separation.py": true,
+      "scripts/validate_phase4_traces.py": true,
+      "src/mavs10d/baselines/mavs_tournament.py": true,
+      "src/mavs10d/baselines/pareto_morl.py": true,
+      "src/mavs10d/baselines/phase4_base.py": true,
+      "src/mavs10d/baselines/phase4_registry.py": true,
+      "src/mavs10d/baselines/rails.py": true,
+      "src/mavs10d/baselines/safe_control.py": true,
+      "src/mavs10d/baselines/uncertainty.py": true,
+      "src/mavs10d/baselines/validators.py": true,
+      "src/mavs10d/baselines/verifier.py": true,
+      "src/mavs10d/envs/phase4_tournament.py": true,
+      "src/mavs10d/metrics/frontier.py": true,
+      "src/mavs10d/metrics/phase4.py": true
+    },
+    "separation_errors": [],
+    "statistics": {
+      "baseline_win_identity": true,
+      "baseline_wins_reported": true,
+      "confirmatory_rows": 8,
+      "exact_intervals_bounded": true,
+      "hierarchical_intervals_bounded": true,
+      "holm_complete": true,
+      "paired_worlds": [
+        1500
+      ]
+    },
+    "trace_errors": []
+  },
+  "passed": true,
+  "phase": 4,
+  "run_id": "phase4_authoritative",
+  "schema_version": "1.0.0"
+}

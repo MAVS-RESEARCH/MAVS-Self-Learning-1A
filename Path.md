@@ -914,6 +914,51 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - Evidence-completion commit `98053af` was frozen and a new run began. Its named clean log proved that manifests, raw data, and reports were removed, but also revealed that the inherited result cleaner predated the `results/aggregates` directory and did not remove the prior Phase 4 aggregate directory. The attempt was stopped during inherited pre-tests, before bank compilation.
 - Added `aggregates` to the cleaner's allowlisted per-run roots. Added a destructive-scope regression using the unique `phase4-cleaner-regression-probe` run ID: it creates generated markers under manifests/raw/processed/aggregates/figures/reports, invokes named cleanup, requires all six returned parent categories, and verifies that only those probe directories are absent. The final run must log removal of the prior aggregate directory before compiling any canonical ledger.
 
+### P4-E009 - Final authoritative run, complete evidence, and exit verdict
+
+- Final implementation Git SHA: `03ff5aa66cf1a820c42fde5edb67fe59f8738b0e`. The final `phase4_authoritative` clean checkpoint explicitly removed `results/aggregates/phase4_authoritative` before pre-tests or ledger compilation. No prior Phase 4 manifest, raw, aggregate, or report artifact survived. The run manifest hash is `ab2df1bc96bf274a875d311b70e8b0f827cb93a4a0b93c6298980a0bfb7e5cc9`; frozen registry hash is `35c3e523d8b850eac09fc186f2dab219a37e5901e2106c1d34b55da46a447803`.
+- Allocation and replay: exactly three disjoint generations, 500 worlds x 50 opportunities = 25,000 canonical opportunities each and 75,000 total. Exactly 139 unique validated/budgeted operating points replayed every bank, producing 3,475,000 raw rows per generation and 10,425,000 total. Replays remain explicitly excluded from the canonical budget. The three trace hashes are Generation 1 `8ed30c6d23a77ac2163a911b8d46d896ca0138be21809b790777a0b3c0a3b68d`, Generation 2 `8ed81497ab9de323105da1efef995d2c4aeb9edcad8a24cbcfe786eb5476e5c5`, and Generation 3 `b89571d53deb3b48f3dc6dfa0b9bb901d30e290a169b77a0e0691ff280f8ad4a`.
+- Separation and trace integrity: independent separation errors `[]`; independent streaming trace errors `[]`; 139 point summaries each cover 75,000 decisions and 1,500 worlds; 208,500 point-world rows; zero required-metric nulls; all trace-complete flags true. The final bank has no model training, no final-access selection, no post-holdout retuning, no best-seed selection, no post-hoc deletion, no competitive oracle point, and no reject-all/escalate-all frontier point.
+- Required statistics: all UAR/FRR hierarchical world-then-episode intervals and exact Clopper-Pearson intervals are bounded; mean/median/SD/worst-decile/worst-world/CVaR are populated; eight preregistered confirmatory family comparisons each contain exactly 1,500 paired worlds; Holm correction is complete; baseline/MAVS-SL/tie identities pass. Across those comparisons there were 8,546 baseline wins, 3,382 MAVS-SL wins, and 72 ties, totaling 12,000 paired family-world comparisons.
+- Frontier result: 63 unconstrained and 48 matched-compute non-dominated points. MAVS-SL hypervolume `0.19373295070842558`; baseline hypervolume `0.8343116598877204`; paired-bank difference `-0.6405787091792948`; additive epsilon `0.5577866666666667`. MAVS-SL achieved a best UAR delta of `-0.07826275922016639` over 432 matched-FRR pairs and a best FRR delta of `-0.08116761708890344` over 344 matched-UAR pairs. However, hypervolume improvement was not positive and none of 1,035 matched resource pairs was non-regressing across escalation, calls, tokens, latency, and normalized compute. Therefore the only compliant scientific claim is `NOT_SUPPORTED`; favorable matched-rate points cannot override the failed hypervolume and burden gates.
+- Evidence-to-claim automation: complete sweep, complete lineage, Holm evidence, matched UAR/FRR, multiple favorable operating points, and diagnostic-bound exclusion gates passed. Positive hypervolume and no-resource-regression gates failed. `CLAIMS.md` and `phase4_summary.json` therefore fail closed consistently. Summary SHA-256 is `f43cc567692247ce6513fb91fc1dc1202417dc3c4b6ccb9e7db428880294e07e`.
+- Provenance/reporting: the SVG frontier SHA-256 is `f99afc7895167812fad2627dec87b6e1966411decee948fbc985493e62dd6f08`; the complete 139-row operating-point table SHA-256 is `b720a80be877355fdeB72f98a5be59d29e4934997cb5b1eada6700e801cff59c` (case-insensitive hexadecimal). The sidecar directly records all 139 config hashes, all frontier IDs, three raw trace artifacts, three canonical ledger artifacts with generation-manifest hashes, Git SHA, environment hash, and registry hash.
+- Stress and regression evidence: final focused suite passed 6/6; final full repository regression passed 188/188; final inherited smoke produced and validated eight records. The independent audit reran separation and all 10,425,000-row trace identities, then executed a second complete 10,425,000-row tournament. All three trace hashes, all three generation world-metric hashes, and the combined world-metric hash matched exactly. The final audit result is `passed: true`; audit file SHA-256 is `02d98d9ac8b49a9cb7acbd73ae49a2097f20a364abfb360402720c2d723f950c`.
+- Phase 4 implementation verdict: PASS. Every Phase 4 WorkPlan scope, file, method-family, sweep, allocation, isolation, raw-trace, statistic, frontier, resource, provenance, reporting, test, anti-overfit, and fail-closed claim requirement has retained evidence. The experiment does not demonstrate MAVS-SL superiority, and no such claim is made. Phase 4 is complete; Phase 5 remains unauthorized. Per the user's explicit instruction, no GitHub push is performed.
+
+### P4-E010 - Final console checkpoint comment/statement registry
+
+The independent audit inspected 26 Phase 4 checkpoint statements and found zero missing, mismatched, or non-adjacent identifying comments. Lines are one-based; every comment immediately precedes its statement.
+
+| File | Comment line | Statement line | Event |
+|---|---:|---:|---|
+| `scripts/compile_phase4_ledgers.py` | 89 | 90 | `phase4.compile.step01.start` |
+| `scripts/compile_phase4_ledgers.py` | 92 | 93 | `phase4.compile.step02.complete` |
+| `scripts/validate_phase4_separation.py` | 67 | 68 | `phase4.separation.step01.start` |
+| `scripts/validate_phase4_separation.py` | 70 | 71 | `phase4.separation.step02.complete` |
+| `scripts/run_phase4_tournament.py` | 218 | 219 | `phase4.tournament.step01.start` |
+| `scripts/run_phase4_tournament.py` | 221 | 222 | `phase4.tournament.step02.complete` |
+| `scripts/validate_phase4_traces.py` | 80 | 81 | `phase4.traces.step01.start` |
+| `scripts/validate_phase4_traces.py` | 83 | 84 | `phase4.traces.step02.complete` |
+| `scripts/aggregate_phase4.py` | 256 | 257 | `phase4.aggregate.step01.start` |
+| `scripts/aggregate_phase4.py` | 259 | 260 | `phase4.aggregate.step02.complete` |
+| `scripts/audit_phase4.py` | 173 | 174 | `phase4.audit.step01.start` |
+| `scripts/audit_phase4.py` | 179 | 180 | `phase4.audit.step02.complete` |
+| `scripts/run_phase4.mjs` | 17 | 18 | `phase4.orchestrator.step01.start` |
+| `scripts/run_phase4.mjs` | 20 | 21 | `phase4.orchestrator.step02.clean_phase4_run` |
+| `scripts/run_phase4.mjs` | 25 | 26 | `phase4.orchestrator.step03.inherited_tests_before` |
+| `scripts/run_phase4.mjs` | 30 | 31 | `phase4.orchestrator.step04.compile_ledgers` |
+| `scripts/run_phase4.mjs` | 35 | 36 | `phase4.orchestrator.step05.validate_separation` |
+| `scripts/run_phase4.mjs` | 40 | 41 | `phase4.orchestrator.step06.execute_tournament` |
+| `scripts/run_phase4.mjs` | 45 | 46 | `phase4.orchestrator.step07.validate_traces` |
+| `scripts/run_phase4.mjs` | 50 | 51 | `phase4.orchestrator.step08.aggregate` |
+| `scripts/run_phase4.mjs` | 55 | 56 | `phase4.orchestrator.step09.phase4_tests` |
+| `scripts/run_phase4.mjs` | 60 | 61 | `phase4.orchestrator.step10.full_regression` |
+| `scripts/run_phase4.mjs` | 65 | 66 | `phase4.orchestrator.step11.final_inherited_smoke` |
+| `scripts/run_phase4.mjs` | 71 | 72 | `phase4.orchestrator.step12.write_evidence` |
+| `scripts/run_phase4.mjs` | 77 | 78 | `phase4.orchestrator.step13.audit` |
+| `scripts/run_phase4.mjs` | 81 | 82 | `phase4.orchestrator.step14.complete` |
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -939,9 +984,9 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
 | 2 | Corruption, correlated collapse, and partial observability | Complete | P2-E000 through P2-E011; authoritative and post-evidence deterministic audits pass |
 | 3 | Autonomous failure discovery and self-repair | Complete | P3-E000 through P3-E010; frozen authoritative and post-evidence deterministic audits pass |
-| 4 | Full baseline tournament and Pareto audit | In progress | P4-E000 through P4-E001; authority and implementation/evidence design locked |
+| 4 | Full baseline tournament and Pareto audit | Complete | P4-E000 through P4-E010; full paired tournament, deterministic replay, and fail-closed audit pass |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Not started | None |
 
 ## Current checkpoint
 
-Phase 0, Phase 1, Phase 2, and Phase 3 are complete and frozen. Phase 4 is authorized and active under P4-E000 through P4-E001. No Phase 5 work is authorized, and Phase 4 must not be pushed remotely.
+Phase 0 through Phase 4 are complete and frozen. The Phase 4 implementation/audit verdict is PASS; the scientific MAVS-SL superiority verdict is `NOT_SUPPORTED` under the required fail-closed gates. Phase 5 is not started and remains unauthorized. No Phase 4 GitHub push was performed, as explicitly directed by the user.

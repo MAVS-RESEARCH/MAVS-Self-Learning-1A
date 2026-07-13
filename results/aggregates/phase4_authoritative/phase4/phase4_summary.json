@@ -1,0 +1,59 @@
+{
+  "additive_epsilon": 0.5577866666666667,
+  "baseline_hypervolume": 0.8343116598877204,
+  "baseline_wins": 8546,
+  "canonical_opportunities": 75000,
+  "claim_policy": "fail_closed_all_gates_required",
+  "frontiers_sha256": "ac7eccb933b2b97f1f7d581bf15170ffe945ed67f66f7bbcda99bfdef640604b",
+  "matched_comparisons": {
+    "best_frr_delta_at_matched_uar": -0.08116761708890344,
+    "best_uar_delta_at_matched_frr": -0.07826275922016639,
+    "lower_frr_at_matched_uar": true,
+    "lower_uar_at_matched_frr": true,
+    "matched_frr_pairs": 432,
+    "matched_uar_pairs": 344
+  },
+  "matched_compute_frontier_points": 48,
+  "mavs_sl_hypervolume": 0.19373295070842558,
+  "mavs_sl_wins": 3382,
+  "model_training": "none",
+  "operating_point_count": 139,
+  "operating_point_registry_sha256": "35c3e523d8b850eac09fc186f2dab219a37e5901e2106c1d34b55da46a447803",
+  "paired_comparisons_sha256": "831fb70b05faee74df8705cc6e8f745e7a9d4fa1fea19b3390fb83e7e77e91b7",
+  "paired_hypervolume_improvement": -0.6405787091792948,
+  "paired_ties": 72,
+  "phase": 4,
+  "point_metrics_sha256": "ee75de5f9d05013242ccc1e6625997089473c7c89dcac02aec7f05bb1b7860ba",
+  "resource_matching": {
+    "dimensions": [
+      "escalation_rate",
+      "calls",
+      "tokens",
+      "latency_ms",
+      "normalized_compute"
+    ],
+    "matched_resource_pairs": 1035,
+    "no_regression": false,
+    "non_regressing_resource_pairs": 0
+  },
+  "run_id": "phase4_authoritative",
+  "schema_version": "1.0.0",
+  "summary_sha256": "f43cc567692247ce6513fb91fc1dc1202417dc3c4b6ccb9e7db428880294e07e",
+  "superiority_claim": "NOT_SUPPORTED",
+  "superiority_gates": {
+    "all_sweep_values_published": true,
+    "complete_trace_lineage": true,
+    "confirmatory_fwer_recorded": true,
+    "lower_frr_at_matched_uar": true,
+    "lower_uar_at_matched_frr": true,
+    "no_hidden_escalation_intervention_latency_compute_regression": false,
+    "not_single_favorable_scalarization": true,
+    "paired_hypervolume_improvement_gt_zero": false,
+    "reject_all_not_competitive": true
+  },
+  "tournament_manifest_sha256": "94d95f4348b7f9d6c73dccd02abecd0b47a5be5eefa9b2bffc509ee4b566608f",
+  "trace_rows": 10425000,
+  "unconstrained_frontier_points": 63,
+  "world_metric_rows": 208500,
+  "world_metrics_sha256": "ad314faa3c5ff265f875bcf2800fcd9a09644d180892989b91f99cd8d26eb457"
+}

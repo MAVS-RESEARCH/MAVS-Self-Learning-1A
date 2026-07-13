@@ -1,0 +1,57 @@
+{
+  "canonical_opportunities": 75000,
+  "claim_boundary": "complete_matched_tournament_only",
+  "environment_packages": {
+    "pyarrow": "21.0.0",
+    "python": "3.13.7"
+  },
+  "generations": [
+    {
+      "generation": 1,
+      "hidden": "results\\manifests\\phase4_authoritative\\phase4\\generation_1\\hidden_outcomes.json",
+      "hidden_sha256": "33147cb9cb3f477671bccce6619c99de0cd2e548468361a7bdaac222f0748be4",
+      "ledger": "results\\manifests\\phase4_authoritative\\phase4\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "64c8a76bddc2a14d51d0cbe05bfd9e32f9e13c6b9a9044f5fca0d4db084a90a4",
+      "manifest": "results\\manifests\\phase4_authoritative\\phase4\\generation_1\\generation_manifest.json",
+      "manifest_sha256": "ea9084e723a96f89a882cb6b22f659b2882dfd7ca1ef7b93d4e770c231428de6",
+      "opportunities": 25000,
+      "worlds": 500
+    },
+    {
+      "generation": 2,
+      "hidden": "results\\manifests\\phase4_authoritative\\phase4\\generation_2\\hidden_outcomes.json",
+      "hidden_sha256": "e825dec2d7493f9b7583f5d083e8d2f9a18237c7c7253d2cb9e01ab56df371cb",
+      "ledger": "results\\manifests\\phase4_authoritative\\phase4\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "e5103383ce94258d61852d153b098242a33c14d71ca4610709d26cb5a50ae2ad",
+      "manifest": "results\\manifests\\phase4_authoritative\\phase4\\generation_2\\generation_manifest.json",
+      "manifest_sha256": "24c777a5223762455cf6819672ea6634135db887dc8cd8dce3f331070ea9587a",
+      "opportunities": 25000,
+      "worlds": 500
+    },
+    {
+      "generation": 3,
+      "hidden": "results\\manifests\\phase4_authoritative\\phase4\\generation_3\\hidden_outcomes.json",
+      "hidden_sha256": "48bb900a967e178d03e6fdfec7c9c958d9f93b9394bd74e1c9979447c8bde0de",
+      "ledger": "results\\manifests\\phase4_authoritative\\phase4\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "4c0e6bc1b987abef36bf74f9ee7e0e57731c5fdeea5a785a67f917392cd9cd6b",
+      "manifest": "results\\manifests\\phase4_authoritative\\phase4\\generation_3\\generation_manifest.json",
+      "manifest_sha256": "54205559d11621501e295f20a35f54797a2438a1d4525d0af8921375631222d0",
+      "opportunities": 25000,
+      "worlds": 500
+    }
+  ],
+  "implementation_git_sha": "03ff5aa66cf1a820c42fde5edb67fe59f8738b0e",
+  "manifest_sha256": "ab2df1bc96bf274a875d311b70e8b0f827cb93a4a0b93c6298980a0bfb7e5cc9",
+  "model_training": "none",
+  "operating_point_count": 139,
+  "operating_point_registry_sha256": "35c3e523d8b850eac09fc186f2dab219a37e5901e2106c1d34b55da46a447803",
+  "phase": 4,
+  "phase_config_sha256": "d4c781f813ff9fff5f3084e9dbdbf17ebf9aec2adf0525a8d5ccbcc0543d4eaf",
+  "post_holdout_retuning": false,
+  "replay_counts_as_canonical": false,
+  "replay_evaluations": 10425000,
+  "run_id": "phase4_authoritative",
+  "schema_version": "1.0.0",
+  "selection_final_access": false,
+  "sweep_config_sha256": "fec62ee8bef9f6cd2c712988093cdb02ff40ce43a585311499dad7dcbaf39d8b"
+}
