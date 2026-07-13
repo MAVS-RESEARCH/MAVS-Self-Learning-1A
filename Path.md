@@ -1086,6 +1086,12 @@ The independent audit inspected all 27 Phase 5 checkpoint statements and found z
 - The three complete raw decision traces are 66,748,973, 104,101,023, and 106,551,907 bytes. The repository's existing Git LFS policy is extended only to `results/raw/*/phase5/generation_*_traces.parquet`, so the local evidence commit retains all raw decisions without creating ordinary Git blobs above GitHub's 100 MiB limit. Manifests continue to hash the actual local Parquet bytes, not the LFS pointer.
 - The user explicitly prohibited GitHub publication for Phase 5. No `git push`, pull request, tag, release, remote branch mutation, or other GitHub write is performed. Local `main` remains ahead of `origin/main`; remote state is intentionally unchanged.
 
+### P5-E011 - Authoritative evidence freeze
+
+- Local commit `436fceca0924210e37ca2e5bc6ee1b2460411541` freezes the complete accepted Phase 5 evidence set: manifests, all primitive raw evidence, aggregate tables, figures, reports, the zero-finding audit, the LFS policy, and P5-E007 through P5-E010.
+- The evidence commit contains Git LFS pointers for the three complete trace Parquet files. Their pointer object identifiers exactly equal the trace SHA-256 values recorded in P5-E007, while the local working files remain the full 66,748,973-, 104,101,023-, and 106,551,907-byte datasets.
+- This entry is documentation-only. It does not alter the implementation SHA bound into the immutable manifests, rerun or select results, change the scientific verdict, or publish any local commit. A final local documentation commit freezes this closure statement after read-only verification.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
