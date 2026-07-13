@@ -1,0 +1,37 @@
+{
+  "eligible_entry_count": 141,
+  "eligible_git_tree_record_sha256": "28F09676AB6D636A3689196C14BB5AE52CE64E007046A9EFD74DF181D23DBF62",
+  "excluded": [
+    {
+      "path": ".git/",
+      "reason": "Target repository history is authoritative."
+    },
+    {
+      "path": "results/",
+      "reason": "All 12200 tracked inherited result files are prohibited evidence."
+    },
+    {
+      "path": "WorkPlan.md",
+      "reason": "The target Self-Learning work plan is authoritative."
+    },
+    {
+      "path": "Path.md",
+      "reason": "The target contemporaneous evidence ledger is authoritative."
+    }
+  ],
+  "imported_paths": [
+    ".gitattributes",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "configs/",
+    "data/",
+    "pyproject.toml",
+    "scripts/",
+    "src/",
+    "tests/"
+  ],
+  "schema_version": "1.0.0",
+  "upstream_commit": "a1bfd52b59aaba69b2c041a5e7da0ee263125c1f",
+  "upstream_repository": "https://github.com/MAVS-RESEARCH/MAVS-Chapter-10D.git"
+}

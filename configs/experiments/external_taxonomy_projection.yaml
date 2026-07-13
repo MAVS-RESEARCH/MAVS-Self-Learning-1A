@@ -1,0 +1,35 @@
+experiment:
+  name: external_taxonomy_projection
+  run_id: external_taxonomy_projection_phase5
+  seeds: [10000, 10001]
+  episode_steps: 4
+  env:
+    id: external_taxonomy_projection_env
+    type: static_accuracy_adapter
+    params:
+      episode_steps: 4
+      schedule:
+        id: external_taxonomy_projection_metadata
+        type: piecewise
+        phases:
+          - name: category_projection_only
+            steps: [0, 3]
+            corruption_level: 0.00
+            transforms: []
+  methods:
+    - id: mavs_gc_external_projection
+      type: mavs_gc
+      params:
+        ablation:
+          name: full_mavs_gc
+  metrics:
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/external_taxonomy_projection.jsonl
+  metadata:
+    phase: phase5
+    benchmark_set: external_taxonomy_projection
+    seed_policy: final_seed_range_10000_19999
+    model_training: none
+    external_data_policy: category_mapping_only_no_official_validation_or_test_data
+

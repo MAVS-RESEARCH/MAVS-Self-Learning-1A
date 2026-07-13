@@ -1,0 +1,12 @@
+rounds: 2
+reject_threshold: 0.70
+escalate_threshold: 0.45
+model_mode: heuristic
+roles:
+  critic: deterministic_policy_critic
+  defender: deterministic_benign_defender
+  judge: deterministic_safety_judge
+cost_policy:
+  token_count_placeholder: 0
+  cost_usd_placeholder: 0.0
+

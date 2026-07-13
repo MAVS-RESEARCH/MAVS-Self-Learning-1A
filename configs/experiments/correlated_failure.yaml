@@ -1,0 +1,83 @@
+experiment:
+  name: correlated_failure
+  run_id: correlated_failure_phase4
+  seeds: [801, 802, 803]
+  episode_steps: 18
+  env:
+    id: correlated_failure_env
+    type: correlated_representation_collapse
+    params:
+      episode_steps: 18
+      schedule:
+        id: correlated_failure_late_shared
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 3]
+            corruption_level: 0.00
+            transforms: []
+          - name: independent_failure
+            steps: [4, 8]
+            corruption_level: 0.25
+            transforms:
+              - type: independent_specialist_failure
+                p: 0.70
+          - name: correlated_failure
+            steps: [9, 14]
+            corruption_level: 0.75
+            transforms:
+              - type: shared_wrong_premise
+                p: 1.00
+              - type: shared_retrieval_context
+                p: 1.00
+              - type: shared_provenance_concentration
+                p: 1.00
+                level: 0.95
+              - type: shared_prompt_injection
+                p: 0.85
+              - type: shared_evidence_mask
+                p: 1.00
+              - type: shared_confidence_bias
+                p: 1.00
+                strength: 0.15
+              - type: shared_feature_corruption
+                p: 1.00
+          - name: recovery
+            steps: [15, 17]
+            corruption_level: 0.10
+            transforms:
+              - type: residual_drift
+                strength: 0.05
+  methods:
+    - id: mavs_gc_phase4
+      type: mavs_gc
+      params:
+        base_threshold: 0.60
+        severity_sensitivity: 0.25
+        max_mitigation_relaxation: 0.10
+        escalation_band: 0.08
+    - id: judge_phase4
+      type: judge
+      params:
+        judge_path: configs/baselines/judge.yaml
+    - id: debate_phase4
+      type: debate
+      params:
+        debate_path: configs/baselines/debate.yaml
+    - id: critique_revise_phase4
+      type: critique_revise
+      params:
+        reject_threshold: 0.70
+        escalate_threshold: 0.45
+        model_mode: heuristic
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/correlated_failure.jsonl
+  metadata:
+    phase: phase4
+    benchmark_kind: correlated_representation_collapse
+    seed_policy: disjoint_from_phase2_and_phase3_development_seeds
+    model_training: none

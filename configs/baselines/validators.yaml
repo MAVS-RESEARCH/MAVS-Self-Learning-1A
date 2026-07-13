@@ -1,0 +1,28 @@
+validators:
+  - name: jailbreak_heuristic
+    weight: 1.0
+  - name: pii_detector
+    weight: 0.9
+  - name: unsafe_tool_call
+    weight: 1.0
+  - name: factuality_proxy
+    weight: 0.7
+  - name: hallucination_proxy
+    weight: 0.6
+  - name: schema_validator
+    weight: 0.8
+  - name: toxicity_heuristic
+    weight: 0.8
+  - name: secret_detector
+    weight: 1.0
+  - name: sql_code_validator
+    weight: 0.9
+  - name: topic_restriction
+    weight: 0.8
+    topics:
+      - malware
+      - credential theft
+aggregation:
+  mode: noisy_or
+  threshold: 0.55
+

@@ -1,0 +1,44 @@
+experiment:
+  name: model_training_optional
+  run_id: model_training_optional_phase5
+  seeds: [101, 102]
+  episode_steps: 6
+  env:
+    id: model_training_text_env
+    type: text_safety_stream
+    params:
+      episode_steps: 6
+      schedule:
+        id: clean_to_mild_training
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 2]
+            corruption_level: 0.00
+            transforms: []
+          - name: mild_training
+            steps: [3, 5]
+            corruption_level: 0.20
+            transforms:
+              - type: ambiguity_injection
+                p: 0.50
+              - type: confidence_miscalibration
+                strength: 0.10
+  methods:
+    - id: mavs_gc_training_scaffold
+      type: mavs_gc
+      params:
+        ablation:
+          name: full_mavs_gc
+  metrics:
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/model_training_optional.jsonl
+  metadata:
+    phase: phase5
+    benchmark_set: model_training_optional
+    seed_policy: training_seed_range_1_999
+    model_training_decision: no_models_trained_in_phase5
+    allowed_training_families: [text_safety_stream, synthetic_ops]
+    allowed_training_transforms: [ambiguity_injection, confidence_miscalibration]
+

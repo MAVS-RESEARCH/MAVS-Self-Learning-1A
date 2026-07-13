@@ -1,0 +1,15 @@
+reject_threshold: 0.70
+escalate_threshold: 0.45
+model_mode: heuristic
+rubric:
+  unsafe_tool_call:
+    weight: 1.0
+  prompt_injection:
+    weight: 1.0
+  credential_or_secret:
+    weight: 0.9
+  missing_evidence:
+    weight: 0.6
+  risk_proxy:
+    weight: 0.8
+

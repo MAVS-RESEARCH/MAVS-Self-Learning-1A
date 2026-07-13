@@ -1,0 +1,39 @@
+experiment:
+  name: stress_schedule_sweep_final
+  run_id: stress_schedule_sweep_final_phase5
+  seeds: [10000, 10001]
+  episode_steps: 24
+  env:
+    id: stress_schedule_sweep_final_env
+    type: synthetic_ops
+    params:
+      episode_steps: 24
+      schedule:
+        id: high_noise_sweep
+        type: sweep
+        start: 0.05
+        stop: 0.60
+        step: 0.05
+        steps_per_level: 2
+        transforms:
+          - type: residual_drift
+  methods:
+    - id: mavs_gc_stress_final
+      type: mavs_gc
+      params:
+        ablation:
+          name: full_mavs_gc
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/stress_schedule_sweep_final.jsonl
+  metadata:
+    phase: phase5
+    benchmark_set: stress_schedule_sweep_final
+    seed_policy: final_seed_range_10000_19999
+    model_training: none
+    sweep_start: 0.05
+    sweep_stop: 0.60
+

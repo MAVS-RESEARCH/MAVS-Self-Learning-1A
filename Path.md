@@ -64,6 +64,32 @@ The architecture review fixed the Phase 0 semantic floor: deterministic fast-loo
 - Result: PASS. All pages were present, readable, and free of observed clipping, overlap, broken tables, or missing content.
 - Temporary evidence location: `tmp/pdfs/architecture/`; this directory is not a research result and will be removed before Phase 0 closure.
 
+### P0-E003 - Immutable Chapter 10D foundation qualification
+
+- Upstream: `https://github.com/MAVS-RESEARCH/MAVS-Chapter-10D.git`.
+- Qualified commit: `a1bfd52b59aaba69b2c041a5e7da0ee263125c1f`.
+- Eligible import: 141 Git tree entries after excluding `.git/`, all 12,200 tracked `results/` files, upstream `WorkPlan.md`, and upstream `Path.md`.
+- Eligible Git-tree record SHA-256: `28F09676AB6D636A3689196C14BB5AE52CE64E007046A9EFD74DF181D23DBF62`. This digest is over the newline-terminated, ordered `git ls-tree -r HEAD` records remaining after the documented exclusions; it is not a digest of generated output.
+- Runtime used for qualification: CPython 3.13.7.
+- Original test command: `python -m pytest -q`.
+- Original test result: PASS, 78 collected tests, exit status 0.
+- Original smoke command: `python scripts/run_experiment.py --config configs/experiments/synthetic_smoke.yaml`.
+- Original smoke result: PASS, 8 records, exit status 0.
+- Original trace-validation command: `python scripts/validate_traces.py --input results/raw/synthetic_smoke.jsonl`.
+- Original trace-validation result: PASS, 8 records, exit status 0.
+- Qualification smoke trace SHA-256: `D55F993CA34C3B652314CA76B35CDA07E787798793F75BC197997F85E10A37EC`.
+- Failed command retained as evidence: `python scripts/validate_trace.py --trace ...` failed because the inherited command is named `validate_traces.py` and accepts `--input`. The correct inherited command above then passed without modifying the upstream code.
+- Qualification conclusion: PASS. The immutable foundation satisfies all three pre-import regression gates in WorkPlan Section 1.1. Temporary qualification results will not be imported.
+
+### P0-E004 - Provenance-only foundation import
+
+- Import method: `git archive` at the qualified upstream commit, explicitly restricted to `.gitattributes`, `.gitignore`, `LICENSE`, `README.md`, `configs/`, `data/`, `pyproject.toml`, `scripts/`, `src/`, and `tests/`.
+- Imported behavior changes: none. Every imported source/config/test file is the upstream blob at the pinned commit.
+- Excluded paths: `.git/`, `results/`, upstream `WorkPlan.md`, and upstream `Path.md`.
+- Provenance evidence: `UPSTREAM_PROVENANCE.md` and `provenance/upstream_import_exclusions.json`.
+- Result-tree assertion immediately after extraction: PASS; target `results/` did not exist.
+- Runtime lock: CPython 3.13.7, NumPy 2.3.4, pandas 2.3.2, PyArrow 21.0.0, PyYAML 6.0.2, pytest 9.0.2.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:

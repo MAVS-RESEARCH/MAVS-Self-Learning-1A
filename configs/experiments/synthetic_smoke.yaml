@@ -1,0 +1,25 @@
+experiment:
+  name: synthetic_smoke
+  run_id: synthetic_smoke_phase1
+  seeds: [1, 2]
+  episode_steps: 4
+  env:
+    id: synthetic_smoke_env
+    type: synthetic_smoke
+    params:
+      episode_steps: 4
+  methods:
+    - id: risk_threshold_smoke
+      type: risk_threshold
+      params:
+        threshold: 0.5
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/synthetic_smoke.jsonl
+  metadata:
+    phase: phase1
+    purpose: framework_contract_smoke_test
+

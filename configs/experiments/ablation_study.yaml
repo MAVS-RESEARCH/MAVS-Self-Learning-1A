@@ -1,0 +1,128 @@
+experiment:
+  name: ablation_study_final
+  run_id: ablation_study_phase5
+  seeds: [10000, 10001]
+  episode_steps: 8
+  env:
+    id: ablation_tool_use_security_env
+    type: tool_use_security
+    params:
+      episode_steps: 8
+      schedule:
+        id: ablation_burst_recovery_final
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 1]
+            corruption_level: 0.00
+            transforms: []
+          - name: burst_recovery
+            steps: [2, 5]
+            corruption_level: 0.55
+            transforms:
+              - type: prompt_injection
+                p: 0.70
+              - type: evidence_masking
+                p: 0.60
+              - type: exfiltration_bait
+                p: 0.50
+          - name: recovery
+            steps: [6, 7]
+            corruption_level: 0.10
+            transforms:
+              - type: residual_drift
+                strength: 0.05
+  methods:
+    - id: mavs_gc_full_mavs_gc
+      type: mavs_gc
+      params:
+        ablation:
+          name: full_mavs_gc
+    - id: mavs_gc_no_severity
+      type: mavs_gc
+      params:
+        ablation:
+          name: no_severity
+    - id: mavs_gc_fixed_severity
+      type: mavs_gc
+      params:
+        ablation:
+          name: fixed_severity
+    - id: mavs_gc_noisy_severity
+      type: mavs_gc
+      params:
+        ablation:
+          name: noisy_severity
+    - id: mavs_gc_no_diagnostics
+      type: mavs_gc
+      params:
+        ablation:
+          name: no_diagnostics
+    - id: mavs_gc_single_diagnostic_only
+      type: mavs_gc
+      params:
+        ablation:
+          name: single_diagnostic_only
+    - id: mavs_gc_randomized_diagnostic
+      type: mavs_gc
+      params:
+        ablation:
+          name: randomized_diagnostic
+    - id: mavs_gc_fixed_threshold
+      type: mavs_gc
+      params:
+        ablation:
+          name: fixed_threshold
+    - id: mavs_gc_delayed_threshold
+      type: mavs_gc
+      params:
+        ablation:
+          name: delayed_threshold
+    - id: mavs_gc_over_sensitive_threshold
+      type: mavs_gc
+      params:
+        ablation:
+          name: over_sensitive_threshold
+    - id: mavs_gc_homogeneous_specialists
+      type: mavs_gc
+      params:
+        ablation:
+          name: homogeneous_specialists
+    - id: mavs_gc_heterogeneous_specialists
+      type: mavs_gc
+      params:
+        ablation:
+          name: heterogeneous_specialists
+    - id: mavs_gc_shared_representation
+      type: mavs_gc
+      params:
+        ablation:
+          name: shared_representation
+    - id: mavs_gc_reject_only_fallback
+      type: mavs_gc
+      params:
+        ablation:
+          name: reject_only_fallback
+    - id: mavs_gc_accept_reject_only_no_escalation
+      type: mavs_gc
+      params:
+        ablation:
+          name: accept_reject_only_no_escalation
+    - id: mavs_gc_no_escalation
+      type: mavs_gc
+      params:
+        ablation:
+          name: no_escalation
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/ablation_study.jsonl
+  metadata:
+    phase: phase5
+    benchmark_set: ablation_study_final
+    seed_policy: final_seed_range_10000_19999
+    model_training: none
+    schedule_family: burst_recovery
+

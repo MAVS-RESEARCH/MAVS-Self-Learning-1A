@@ -1,0 +1,55 @@
+experiment:
+  name: correlated_failure_final
+  run_id: correlated_failure_final_phase5
+  seeds: [10000, 10001]
+  episode_steps: 8
+  env:
+    id: correlated_failure_final_env
+    type: correlated_representation_collapse
+    params:
+      episode_steps: 8
+      schedule:
+        id: late_correlated_collapse
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 1]
+            corruption_level: 0.00
+            transforms: []
+          - name: late_correlated_collapse
+            steps: [2, 5]
+            corruption_level: 0.75
+            transforms:
+              - type: shared_wrong_premise
+                p: 1.00
+              - type: shared_retrieval_context
+                p: 1.00
+              - type: shared_provenance_concentration
+                p: 1.00
+                level: 0.95
+              - type: shared_feature_corruption
+                p: 1.00
+          - name: recovery
+            steps: [6, 7]
+            corruption_level: 0.10
+            transforms:
+              - type: residual_drift
+                strength: 0.05
+  methods:
+    - id: mavs_gc_correlated_final
+      type: mavs_gc
+      params:
+        ablation:
+          name: full_mavs_gc
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/correlated_failure_final.jsonl
+  metadata:
+    phase: phase5
+    benchmark_set: correlated_failure_final
+    seed_policy: final_seed_range_10000_19999
+    model_training: none
+

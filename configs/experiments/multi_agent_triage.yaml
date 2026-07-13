@@ -1,0 +1,59 @@
+experiment:
+  name: multi_agent_triage
+  run_id: multi_agent_triage_phase2
+  seeds: [401, 402]
+  episode_steps: 15
+  env:
+    id: multi_agent_operations_env
+    type: multi_agent_operations
+    params:
+      episode_steps: 15
+      schedule:
+        id: multi_agent_piecewise
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 2]
+            corruption_level: 0.00
+            transforms: []
+          - name: mild_noise
+            steps: [3, 5]
+            corruption_level: 0.15
+            transforms:
+              - type: confidence_miscalibration
+                strength: 0.10
+          - name: adversarial_burst
+            steps: [6, 8]
+            corruption_level: 0.45
+            transforms:
+              - type: ambiguity_injection
+                p: 0.40
+              - type: evidence_masking
+                p: 0.40
+          - name: correlated_failure
+            steps: [9, 11]
+            corruption_level: 0.65
+            transforms:
+              - type: shared_wrong_premise
+                p: 0.60
+          - name: recovery
+            steps: [12, 14]
+            corruption_level: 0.10
+            transforms:
+              - type: residual_drift
+                strength: 0.10
+  methods:
+    - id: risk_threshold_smoke
+      type: risk_threshold
+      params:
+        threshold: 0.5
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/multi_agent_triage.jsonl
+  metadata:
+    phase: phase2
+    environment_family: multi_agent_operations
+

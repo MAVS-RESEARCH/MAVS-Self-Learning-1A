@@ -1,0 +1,59 @@
+experiment:
+  name: synthetic_ops
+  run_id: synthetic_ops_phase2
+  seeds: [501, 502]
+  episode_steps: 15
+  env:
+    id: synthetic_ops_env
+    type: synthetic_ops
+    params:
+      episode_steps: 15
+      schedule:
+        id: synthetic_ops_piecewise
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 2]
+            corruption_level: 0.00
+            transforms: []
+          - name: mild_noise
+            steps: [3, 5]
+            corruption_level: 0.15
+            transforms:
+              - type: ambiguity_injection
+                p: 0.35
+          - name: adversarial_burst
+            steps: [6, 8]
+            corruption_level: 0.50
+            transforms:
+              - type: evidence_masking
+                p: 0.45
+              - type: label_drift
+                p: 0.35
+          - name: correlated_failure
+            steps: [9, 11]
+            corruption_level: 0.60
+            transforms:
+              - type: shared_wrong_premise
+                p: 0.50
+          - name: recovery
+            steps: [12, 14]
+            corruption_level: 0.10
+            transforms:
+              - type: residual_drift
+                strength: 0.10
+  methods:
+    - id: risk_threshold_smoke
+      type: risk_threshold
+      params:
+        threshold: 0.5
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/synthetic_ops.jsonl
+  metadata:
+    phase: phase2
+    environment_family: synthetic_ops
+

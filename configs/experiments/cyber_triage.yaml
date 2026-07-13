@@ -1,0 +1,59 @@
+experiment:
+  name: cyber_triage
+  run_id: cyber_triage_phase2
+  seeds: [301, 302]
+  episode_steps: 15
+  env:
+    id: cyber_triage_env
+    type: cyber_triage
+    params:
+      episode_steps: 15
+      schedule:
+        id: cyber_triage_piecewise
+        type: piecewise
+        phases:
+          - name: clean_start
+            steps: [0, 2]
+            corruption_level: 0.00
+            transforms: []
+          - name: mild_noise
+            steps: [3, 5]
+            corruption_level: 0.15
+            transforms:
+              - type: alert_severity_drift
+                strength: 0.10
+          - name: adversarial_burst
+            steps: [6, 8]
+            corruption_level: 0.45
+            transforms:
+              - type: evidence_masking
+                p: 0.50
+              - type: label_drift
+                p: 0.35
+          - name: correlated_failure
+            steps: [9, 11]
+            corruption_level: 0.60
+            transforms:
+              - type: shared_wrong_premise
+                p: 0.45
+          - name: recovery
+            steps: [12, 14]
+            corruption_level: 0.10
+            transforms:
+              - type: residual_drift
+                strength: 0.10
+  methods:
+    - id: risk_threshold_smoke
+      type: risk_threshold
+      params:
+        threshold: 0.5
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/cyber_triage.jsonl
+  metadata:
+    phase: phase2
+    environment_family: cyber_triage
+

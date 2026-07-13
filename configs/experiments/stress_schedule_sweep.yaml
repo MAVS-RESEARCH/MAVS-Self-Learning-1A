@@ -1,0 +1,36 @@
+experiment:
+  name: stress_schedule_sweep
+  run_id: stress_schedule_sweep_phase2
+  seeds: [601, 602]
+  episode_steps: 24
+  env:
+    id: stress_schedule_sweep_env
+    type: synthetic_ops
+    params:
+      episode_steps: 24
+      schedule:
+        id: stress_schedule_sweep_005_to_060
+        type: sweep
+        start: 0.05
+        stop: 0.60
+        step: 0.05
+        steps_per_level: 2
+        transforms:
+          - type: residual_drift
+  methods:
+    - id: risk_threshold_smoke
+      type: risk_threshold
+      params:
+        threshold: 0.5
+  metrics:
+    - unsafe_acceptance_rate
+    - false_rejection_rate
+    - trace_completeness
+  outputs:
+    raw_traces: results/raw/stress_schedule_sweep.jsonl
+  metadata:
+    phase: phase2
+    environment_family: synthetic_ops
+    sweep_start: 0.05
+    sweep_stop: 0.60
+

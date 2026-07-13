@@ -1,0 +1,5 @@
+conformal:
+  alpha: 0.10
+  window: 25
+  escalate_band: 0.05
+  calibration_scores_path: data/calibration/phase3_conformal_scores.yaml
