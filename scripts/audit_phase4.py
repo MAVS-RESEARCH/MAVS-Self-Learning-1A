@@ -86,6 +86,8 @@ def audit(run_id: str, *, deterministic_replay: bool = True) -> dict[str, object
         "holm_complete": bool(comparisons["holm_p"].notna().all()),
         "hierarchical_intervals_bounded": bool(((metrics["uar_hier_ci_low"] >= 0) & (metrics["uar_hier_ci_high"] <= 1)).all()),
         "exact_intervals_bounded": bool(((metrics["uar_exact_ci_low"] >= 0) & (metrics["uar_exact_ci_high"] <= 1)).all()),
+        "baseline_win_identity": bool(((comparisons["baseline_wins"] + comparisons["mavs_sl_wins"] + comparisons["ties"]) == comparisons["paired_worlds"]).all()),
+        "baseline_wins_reported": summary["baseline_wins"] == int(comparisons["baseline_wins"].sum()),
     }
     sidecar = json.loads((REPO_ROOT / "results/reports" / run_id / "phase4/figures/safety_utility_burden_frontier.provenance.json").read_text(encoding="utf-8"))
     checks["provenance"] = {
@@ -93,6 +95,7 @@ def audit(run_id: str, *, deterministic_replay: bool = True) -> dict[str, object
         "frontier_points_linked": set(frontiers["point_id"]) <= set(sidecar["point_ids"]),
         "config_hashes_linked": set(metrics["point_id"]) == set(sidecar["point_config_hashes"]),
         "trace_artifacts": len(sidecar["trace_artifacts"]), "git_sha_present": len(sidecar["git_sha"]) == 40,
+        "ledger_artifacts": len(sidecar["ledger_artifacts"]),
         "environment_hash_present": len(sidecar["environment_hash"]) == 64,
     }
     console_records, console_errors = _console_registry()
@@ -132,8 +135,9 @@ def audit(run_id: str, *, deterministic_replay: bool = True) -> dict[str, object
         and set(checks["frontier"]["types"]) == {"matched_compute", "unconstrained"} and checks["frontier"]["claim_consistent"] and checks["frontier"]["reject_all_excluded"]
         and checks["statistics"]["confirmatory_rows"] == 8 and checks["statistics"]["paired_worlds"] == [1500]
         and checks["statistics"]["holm_complete"] and checks["statistics"]["hierarchical_intervals_bounded"] and checks["statistics"]["exact_intervals_bounded"]
+        and checks["statistics"]["baseline_win_identity"] and checks["statistics"]["baseline_wins_reported"]
         and checks["provenance"]["complete_sweep_points"] == 139 and checks["provenance"]["frontier_points_linked"]
-        and checks["provenance"]["config_hashes_linked"] and checks["provenance"]["trace_artifacts"] == 3
+        and checks["provenance"]["config_hashes_linked"] and checks["provenance"]["trace_artifacts"] == 3 and checks["provenance"]["ledger_artifacts"] == 3
         and checks["provenance"]["git_sha_present"] and checks["provenance"]["environment_hash_present"]
         and not console_errors and checks["orchestration_complete"] and checks["model_policy"]
         and all(checks["deterministic_replay"].values())

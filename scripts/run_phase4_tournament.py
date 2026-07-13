@@ -95,6 +95,13 @@ def run_tournament(run_id: str, output_root: Path | None = None) -> dict[str, ob
         "operating_point_count": len(points), "canonical_opportunities": 75000,
         "trace_rows": 75000 * len(points), "complete_sweep": True, "best_seed_selection": False,
         "post_holdout_retuning": False, "participant_final_access": False,
+        "ledger_artifacts": [
+            {
+                "generation": item["generation"], "ledger": item["ledger"], "ledger_sha256": item["ledger_sha256"],
+                "generation_manifest": item["manifest"], "generation_manifest_sha256": item["manifest_sha256"],
+            }
+            for item in run_manifest["generations"]
+        ],
         "world_metrics": str(combined_path.relative_to(REPO_ROOT)), "world_metrics_sha256": file_sha256(combined_path),
         "artifacts": trace_artifacts,
     }

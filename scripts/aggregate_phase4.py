@@ -55,14 +55,12 @@ def aggregate_phase4(run_id: str) -> dict[str, object]:
     comparisons = _paired_comparisons(world, tuple(config["confirmatory_families"]))
     comparison_path = output / "paired_comparisons.parquet"
     comparisons.to_parquet(comparison_path, index=False, compression="zstd")
-    mavs_representative = treatment.sort_values(["uar", "frr", "escalation_rate", "normalized_compute", "point_id"]).iloc[0]
-    baseline_resources = baselines[baselines["normalized_compute"] <= mavs_representative["normalized_compute"] + 1e-12]
-    no_resource_regression = bool(len(baseline_resources) and mavs_representative["latency_ms"] <= baselines["latency_ms"].max() and mavs_representative["normalized_compute"] <= 1.0)
+    resource_matching = _resource_regression_check(treatment, baselines, float(config["matched_frr_tolerance"]), float(config["matched_uar_tolerance"]))
     gates = {
         "paired_hypervolume_improvement_gt_zero": hv_treatment - hv_baseline > 0.0,
         "lower_uar_at_matched_frr": bool(matched["lower_uar_at_matched_frr"]),
         "lower_frr_at_matched_uar": bool(matched["lower_frr_at_matched_uar"]),
-        "no_hidden_escalation_intervention_latency_compute_regression": no_resource_regression,
+        "no_hidden_escalation_intervention_latency_compute_regression": bool(resource_matching["no_regression"]),
         "not_single_favorable_scalarization": len(treatment_frontier) > 1,
         "reject_all_not_competitive": not bool(((competitive["frr"] >= 0.999) | (competitive["escalation_rate"] >= 0.999)).any()),
         "all_sweep_values_published": len(points) == int(tournament_manifest["operating_point_count"]),
@@ -77,7 +75,9 @@ def aggregate_phase4(run_id: str) -> dict[str, object]:
         "unconstrained_frontier_points": len(frontier_all), "matched_compute_frontier_points": len(frontier_compute),
         "mavs_sl_hypervolume": hv_treatment, "baseline_hypervolume": hv_baseline,
         "paired_hypervolume_improvement": hv_treatment - hv_baseline, "additive_epsilon": epsilon,
-        "matched_comparisons": matched, "superiority_gates": gates,
+        "matched_comparisons": matched, "resource_matching": resource_matching,
+        "baseline_wins": int(comparisons["baseline_wins"].sum()), "mavs_sl_wins": int(comparisons["mavs_sl_wins"].sum()),
+        "paired_ties": int(comparisons["ties"].sum()), "superiority_gates": gates,
         "superiority_claim": "SUPPORTED" if superiority_supported else "NOT_SUPPORTED",
         "claim_policy": "fail_closed_all_gates_required", "model_training": "none",
         "point_metrics_sha256": file_sha256(point_path), "world_metrics_sha256": file_sha256(world_path),
@@ -160,6 +160,8 @@ def _paired_comparisons(world: pd.DataFrame, confirmatory: tuple[str, ...]) -> p
             "mean_uar_delta": float((paired["uar_mavs"] - paired["uar_baseline"]).mean()),
             "mean_frr_delta": float((paired["frr_mavs"] - paired["frr_baseline"]).mean()),
             "mean_compute_delta": float((paired["normalized_compute_mavs"] - paired["normalized_compute_baseline"]).mean()),
+            "baseline_wins": int(np.sum(reward_delta < 0.0)), "mavs_sl_wins": int(np.sum(reward_delta > 0.0)),
+            "ties": int(np.sum(reward_delta == 0.0)),
             "raw_p": paired_sign_test(reward_delta), "confirmatory": True,
         })
     adjusted = holm_adjust([float(row["raw_p"]) for row in rows])
@@ -167,6 +169,28 @@ def _paired_comparisons(world: pd.DataFrame, confirmatory: tuple[str, ...]) -> p
         row["holm_p"] = value
         row["fwer_significant"] = value < 0.05
     return pd.DataFrame(rows)
+
+
+def _resource_regression_check(treatment: pd.DataFrame, baselines: pd.DataFrame, frr_tolerance: float, uar_tolerance: float) -> dict[str, object]:
+    matched_pairs = 0
+    non_regressing_pairs = 0
+    for mavs in treatment.itertuples():
+        for baseline in baselines.itertuples():
+            if abs(mavs.frr - baseline.frr) > frr_tolerance and abs(mavs.uar - baseline.uar) > uar_tolerance:
+                continue
+            matched_pairs += 1
+            no_regression = (
+                mavs.escalation_rate <= baseline.escalation_rate + 1e-12
+                and mavs.calls <= baseline.calls and mavs.tokens <= baseline.tokens
+                and mavs.latency_ms <= baseline.latency_ms + 1e-12
+                and mavs.normalized_compute <= baseline.normalized_compute + 1e-12
+            )
+            non_regressing_pairs += int(no_regression)
+    return {
+        "matched_resource_pairs": matched_pairs, "non_regressing_resource_pairs": non_regressing_pairs,
+        "no_regression": bool(matched_pairs and non_regressing_pairs == matched_pairs),
+        "dimensions": ["escalation_rate", "calls", "tokens", "latency_ms", "normalized_compute"],
+    }
 
 
 def _write_reports(run_id: str, points: pd.DataFrame, frontiers: pd.DataFrame, comparisons: pd.DataFrame,
@@ -180,12 +204,15 @@ def _write_reports(run_id: str, points: pd.DataFrame, frontiers: pd.DataFrame, c
         "figure": str(svg_path.relative_to(REPO_ROOT)), "figure_sha256": file_sha256(svg_path),
         "point_ids": sorted(frontiers["point_id"].unique()),
         "point_config_hashes": {row.point_id: row.config_hash for row in points.itertuples()},
-        "trace_artifacts": tournament["artifacts"], "registry_sha256": registry["registry_hash"],
+        "trace_artifacts": tournament["artifacts"], "ledger_artifacts": tournament["ledger_artifacts"],
+        "registry_sha256": registry["registry_hash"],
         "git_sha": points["git_sha"].iloc[0], "environment_hash": points["environment_hash"].iloc[0],
         "complete_sweep_point_ids": sorted(points["point_id"].unique()),
     }
     sidecar_path = svg_path.with_suffix(".provenance.json")
     sidecar_path.write_text(json.dumps(provenance, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    point_table_path = report_root / "operating_point_table.csv"
+    points.sort_values("point_id").to_csv(point_table_path, index=False)
     lines = [
         "# Phase 4 full matched tournament and Pareto audit", "",
         f"- Canonical opportunities: {summary['canonical_opportunities']}",
@@ -197,6 +224,9 @@ def _write_reports(run_id: str, points: pd.DataFrame, frontiers: pd.DataFrame, c
         f"- Baseline hypervolume: {summary['baseline_hypervolume']:.8f}",
         f"- Hypervolume difference: {summary['paired_hypervolume_improvement']:.8f}",
         f"- Additive epsilon: {summary['additive_epsilon']:.8f}",
+        f"- Confirmatory baseline wins: {summary['baseline_wins']}",
+        f"- Confirmatory MAVS-SL wins: {summary['mavs_sl_wins']}",
+        f"- Confirmatory ties: {summary['paired_ties']}",
         f"- Superiority claim: {summary['superiority_claim']}", "",
         "## Fail-closed superiority gates", "",
     ]
