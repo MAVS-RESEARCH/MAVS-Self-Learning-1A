@@ -1,0 +1,60 @@
+{
+  "body": {
+    "bank": "evaluation",
+    "composition_config_sha256": "9a24845411837b5f81f1f3ab2b3f8884998b067905da1e08232d60795d76865a",
+    "composition_count": 48,
+    "corruption_families": [
+      "ambiguity_injection",
+      "evidence_masking",
+      "evidence_source_compromise",
+      "feedback_poisoning",
+      "harmful_correlated_collapse",
+      "label_poisoning",
+      "malicious_specialist",
+      "overconfident_consensus",
+      "policy_conflict",
+      "prompt_adversarial_manipulation",
+      "provenance_concentration",
+      "safe_correlated_agreement",
+      "shared_wrong_premise"
+    ],
+    "domains": [
+      "cyber_triage",
+      "financial_approval_proxy",
+      "multi_agent_operations",
+      "text_safety",
+      "tool_use"
+    ],
+    "family_config_sha256": "a46c29ca2d5644976a8e7697bb45ff03842c1c951707bf78d36478442c58bd1e",
+    "generation": 3,
+    "held_out_mechanisms": [
+      "evidence_source_compromise",
+      "feedback_poisoning"
+    ],
+    "hidden_outcomes_file_sha256": "d1234e669d977e541e0486e0228e3adf8d70a7640b9ab4eb0c1ffb525e11d7b9",
+    "hidden_outcomes_sha256": "7d84637c06ca219057637e743116c236e478a8acffadd1d129d873727e376d16",
+    "implementation_git_sha": "9d5d3c42d0a2ce42d8e523225c06316683ea7793",
+    "ledger_sha256": "d059ca56a6786ea3f5a10bf3792e62a6c7030b9f500cb79c4679540782976d17",
+    "manifest_sha256": "aa292682382fcb6e6ccaec5326f11f5a39285b8477bda40dff1ab276988e952a",
+    "namespace": "phase2_eval_g3_v1",
+    "opportunity_count": 20000,
+    "opportunity_ids_sha256": "03754ea7de696489a8aa29bb605351724e6bb2484716f5ae3dc5ffa6065c5156",
+    "phase_config_sha256": "cc4252d78bbbe13b5d5b3ea1038ff36ffc107d3a0831a6afc8a9aa29f0d3d1e9",
+    "run_id": "phase2_20260713",
+    "scenario_class_counts": {
+      "ambiguous_masking": 40,
+      "harmful_collapse": 60,
+      "mixed": 40,
+      "safe_correlated_agreement": 60
+    },
+    "schema_version": "1.0.0",
+    "seed_max": 520199,
+    "seed_min": 520000,
+    "specialist_manifests_sha256": "f3319d3a002205151d767524c26f1601541f5f75493d36e2a90598d93ab1bb43",
+    "stage": 2,
+    "visible_schema_sha256": "2e503f25f279016106297cd3f20efcad1845b30fc89325e8cf514ef81746c2f9",
+    "world_count": 200,
+    "world_ids_sha256": "c63682aba05588e01d309121af61b1bcf3bdf437c5ce661c17ff169754aaea3e"
+  },
+  "signature": "44265784ce2749e200b762ca229d970319c5f583b68960a3bd0e48f0cd549dc5"
+}

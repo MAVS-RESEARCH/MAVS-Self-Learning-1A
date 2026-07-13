@@ -1,0 +1,11 @@
+{
+  "cards": 14221,
+  "cards_sha256": "a069bb25eec600f73c402b76255c186ac4b43b072b9002504d1ab8cb472d4241",
+  "counts": {
+    "false_rejection": 2583,
+    "unsafe_acceptance": 11638
+  },
+  "run_id": "phase2_20260713",
+  "schema_version": "1.0.0",
+  "unique_trace_lineages": 14221
+}

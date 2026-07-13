@@ -1,0 +1,36 @@
+{
+  "canonical_opportunities": 60000,
+  "generation_records": [
+    {
+      "canonical_opportunities": 20000,
+      "feedback_quarantine_sha256": "4c90f8e8ef42700f62938233b4ee81c55737777009974403c94123a85c1ade44",
+      "generation": 1,
+      "methods": 3,
+      "trace_path": "results\\raw\\phase2_20260713\\phase2\\generation_1.parquet",
+      "trace_records": 60000,
+      "trace_sha256": "815795347f2874447bd862b604fc9be26c3e2306a2eb51e56a1df21ca6b614b2"
+    },
+    {
+      "canonical_opportunities": 20000,
+      "feedback_quarantine_sha256": "1196a155619c1377d680825c23bb899bf3b8d1f2e6a52b161d4783010b0c923c",
+      "generation": 2,
+      "methods": 3,
+      "trace_path": "results\\raw\\phase2_20260713\\phase2\\generation_2.parquet",
+      "trace_records": 60000,
+      "trace_sha256": "b61fd74a0d4fa4529b5d7a8f2105d7acd8a82b257dca7c0e3fe3774c15950522"
+    },
+    {
+      "canonical_opportunities": 20000,
+      "feedback_quarantine_sha256": "df9016c3a2ee016c1e7cb3c591e0e22e84ae1aa870571b64bc515a79ea7c91bb",
+      "generation": 3,
+      "methods": 3,
+      "trace_path": "results\\raw\\phase2_20260713\\phase2\\generation_3.parquet",
+      "trace_records": 60000,
+      "trace_sha256": "5f0ae2d2b4345cb436fb6d0c6898950f279b30e515a2ad9a5f7ff0865d161b6c"
+    }
+  ],
+  "implementation_git_sha": "9d5d3c42d0a2ce42d8e523225c06316683ea7793",
+  "run_id": "phase2_20260713",
+  "schema_version": "1.0.0",
+  "trace_records": 180000
+}

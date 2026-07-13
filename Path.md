@@ -520,6 +520,132 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - PDF-skill cleanup: verified `tmp` resolved to `C:\Users\Saif malik\Self-Learning-MAVS-1\tmp`, a child of the workspace, then removed 28 qualification files totaling 10,772,003 bytes. No temporary render remains.
 - Current gate: freeze the implementation commit, run the authoritative 60,000-canonical/180,000-method-decision workload, then independently replay-audit every trace/card/manifest requirement. Phase 2 is not yet accepted.
 
+### P2-E005 - Frozen implementation and authoritative Phase 2 execution
+
+- Frozen implementation commit: `9d5d3c42d0a2ce42d8e523225c06316683ea7793` (`feat: freeze phase 2 corruption gauntlet`). Every run manifest and generated trace binds this exact implementation SHA; no Phase 2 source or configuration changed after the freeze.
+- Run ID and command: `phase2_20260713`; `node scripts/run_phase2.mjs --run-id phase2_20260713`.
+- Time window: 2026-07-13 19:22:15 through 19:31:36 Asia/Karachi (UTC+05:00), measured from the preserved console log. The development manifest was frozen at 19:22:47 and the independent audit completed at 19:31:35.
+- Scoped cleaning resolved the repository-owned results root and reported `removed: []`. Phase 0 and Phase 1 result namespaces were neither removed nor modified. All new evidence is confined to `phase2_20260713` namespaces.
+- Authoritative result inventory: 28 files, 107,943,898 bytes. This includes signed development/evaluation manifests, three immutable visible Parquet ledgers, three evaluator-only hidden-outcome files, three matched stress traces, three feedback-quarantine ledgers, two processed metric tables, 14,221 failure cards, the orchestration record, console/stderr logs, and the independent audit.
+- Exact workload: 60,000 canonical opportunities and 180,000 method decisions. G1, G2, and G3 each contain 200 worlds x 100 opportunities = 20,000 canonical opportunities; each opportunity is replayed through `ds_cf`, `provenance_selective`, and `visible_risk_threshold`, producing 60,000 trace rows per generation.
+- Gates executed by the authoritative orchestrator: scoped clean; inherited Phase 0/1 regression; ledger compilation; separation audit; stress execution; trace validation before cards; card generation; trace/card completeness validation; aggregation; 21 Phase 2 tests; complete 158-test repository regression; final inherited 8-record smoke; evidence emission; deterministic independent audit. Every command exited zero.
+- Standard error is empty: zero bytes, SHA-256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`. Console log SHA-256: `E469C5268A1E512155C16FB552FE5634C5A10D088791B114C8BA480613A28D9E`.
+
+### P2-E006 - Allocation, corruption coverage, manifests, and anti-overfit separation
+
+- Evaluation uses five domains: `text_safety`, `tool_use`, `cyber_triage`, `financial_approval_proxy`, and `multi_agent_operations`. Every domain has exactly 40 worlds and, independently within each domain, 12 safe-correlated, 12 harmful-collapse, 8 ambiguous-masking, and 8 mixed worlds. Every generation therefore has exactly 60/60/40/40 worlds and the required exact 30%/30%/20%/20% mixture without domain-class confounding.
+- All three generations use 13 corruption families and 48 explicitly registered evaluation compositions; every composition contains two to four unique families. The family floor is 10, the required-composition floor is 20, and the Phase 2 target of at least 40 is exceeded.
+- Schedule records randomize onset, duration, intensity, target, interaction, and recovery. Property tests cover parameter bounds and clean/active/recovery/recovered transitions, including finite recovery. Each canonical opportunity also has a nuisance-preserving paired evidence intervention and a drop-one diagnostic across every specialist.
+- Generation seeds are disjoint: G1 `120000-120199`, G2 `320000-320199`, and G3 `520000-520199`. Generation world-ID, opportunity-ID, specialist-manifest, hidden-outcome, ledger, and namespace hashes are distinct.
+- Development is frozen before evaluation with 30 worlds/3,000 opportunities, domains `medical_triage_proxy`, `retrieval_qa`, and `synthetic_control`, seeds `40000-40029`, 11 families, and 12 development-only compositions. It declares `final_evaluation_access: false`.
+- Evaluation introduces the held-out mechanisms `feedback_poisoning` and `evidence_source_compromise`; neither occurs in development. Development and evaluation additionally differ in domains, seeds, identities, namespaces, schedule draws, intensity draws, and composition sets. The separation validator returned `error_count: 0` and the independent audit returned `separation_errors: []`.
+- No model is trained, tuned, calibrated, or selected in Phase 2. `model_training: none` is frozen in the run manifest. All three participants are fixed explicit mechanisms, so there is no training benchmark to leak into evaluation and no post-holdout parameter update.
+- Visible-ledger SHA-256 values: G1 `666183133E0D4B99056ADDE76CA2E946AADA17D035132C46C490F010FCA895F4`; G2 `2D677589CCC9FBCB172CAA7462BD257E48656DD0D9C2D03D575327B6E2C5DF19`; G3 `D059CA56A6786EA3F5A10BF3792E62A6C7030B9F500CB79C4679540782976D17`.
+- Trace SHA-256 values: G1 `815795347F2874447BD862B604FC9BE26C3E2306A2EB51E56A1DF21CA6B614B2`; G2 `B61FD74A0D4FA4529B5D7A8F2105D7ACD8A82B257DCA7C0E3FE3774C15950522`; G3 `5F0AE2D2B4345CB436FB6D0C6898950F279B30E515A2AD9A5F7FF0865D161B6C`.
+
+### P2-E007 - Governance invariants and required benchmark measurements
+
+- The independent audit replayed all 180,000 decisions into an isolated temporary directory and reproduced all three authoritative trace hashes exactly: `deterministic_replay: true`.
+- Every generation reports `raw_correlation_only_vetoes: 0`. The audit separately verifies that DS-CF hard vetoes always satisfy the registered conjunction and that participant code contains no access to hidden outcomes, catastrophic labels, feedback-poison labels, or hidden-mechanism hashes.
+- Masked evidence produced zero DS-CF acceptances and DS-CF masked-evidence escalation `1.0` in all generations. Regression fixtures separately prove that evidence absence and evidence-channel unavailability serialize and decide differently; neither is converted into a negative label or a hard veto.
+- Bounded mitigation is clamped to `0.12`. Poisoned or reliability-below-`0.75` feedback is quarantined; censored feedback remains censored. Feedback quarantine rates were `0.27870`, `0.28425`, and `0.28410` in G1-G3.
+- The complete nine-row processed benchmark is below. Values are measured from `phase2_summary.parquet`; no value is inferred from source structure.
+
+| Gen | Method | UAR | FRR | Escalation | Collapse sensitivity | Masked escalation | CF fragility | Drop-one fragility | Ambiguity escalation | Recovery lag | Retained safety |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | `ds_cf` | 0.062376 | 0.005689 | 0.605350 | -0.029515 | 1.000000 | 0.499000 | 0.087230 | 0.701250 | 9.525 | 0.937624 |
+| 1 | `provenance_selective` | 0.026715 | 0.000000 | 0.781950 | -0.381206 | 1.000000 | 0.247400 | 0.087230 | 0.772750 | 21.620 | 0.973285 |
+| 1 | `visible_risk_threshold` | 0.382083 | 0.067855 | 0.260750 | -0.939476 | 0.234055 | 0.000000 | 0.087230 | 0.140000 | 11.010 | 0.617917 |
+| 2 | `ds_cf` | 0.072738 | 0.004822 | 0.616600 | -0.040154 | 1.000000 | 0.476850 | 0.087737 | 0.713750 | 9.680 | 0.927262 |
+| 2 | `provenance_selective` | 0.029951 | 0.000000 | 0.780700 | -0.384615 | 1.000000 | 0.250000 | 0.087737 | 0.757750 | 20.355 | 0.970049 |
+| 2 | `visible_risk_threshold` | 0.385575 | 0.066328 | 0.264450 | -0.942600 | 0.236985 | 0.000000 | 0.087737 | 0.126000 | 9.685 | 0.614425 |
+| 3 | `ds_cf` | 0.058337 | 0.002943 | 0.612950 | -0.012376 | 1.000000 | 0.477800 | 0.091049 | 0.693000 | 9.720 | 0.941663 |
+| 3 | `provenance_selective` | 0.030587 | 0.000000 | 0.780100 | -0.407225 | 1.000000 | 0.241400 | 0.091049 | 0.747250 | 21.690 | 0.969413 |
+| 3 | `visible_risk_threshold` | 0.386162 | 0.069627 | 0.257100 | -0.940295 | 0.242758 | 0.000000 | 0.091049 | 0.139500 | 9.795 | 0.613838 |
+
+- The measurements show different failure surfaces, not a declared winner. DS-CF achieves complete masked-evidence escalation and high retained safety but still has measured UAR `0.058337-0.072738` and counterfactual fragility `0.476850-0.499000`. The provenance comparator has lower UAR but materially longer recovery. The visible-risk comparator escalates less but has substantially higher UAR and lower retained safety. Phase 2 characterizes these trade-offs; it does not claim Self-Learning or Pareto superiority.
+- Processed outputs: `phase2_summary.parquet` has 9 method-generation rows; `phase2_world_metrics.parquet` has 1,800 method-world rows. SHA-256 values are `89786CAE21478AFBEA42E830393829F55A42BF8BDA5D6918C397E08941386A38` and `D128A7A59C94E69562CE1E12D30D275EBD49AE167E5057AF3556694C583710AB`.
+
+### P2-E008 - Failure-card, lineage, feedback, schema, and hidden-state evidence
+
+- Terminal errors across all methods and generations: 11,638 unsafe acceptances plus 2,583 false rejections = 14,221. Exactly 14,221 JSONL failure-card records were emitted, all schema-valid, with 14,221 unique immutable trace lineages. Card SHA-256: `A069BB25EEC600F73C402B76255C186AC4B43B072B9002504D1AB8CB472D4241`.
+- Every card contains the visible evidence and DS-CF diagnostic state available at decision time, the decision and causal counterfactual/drop-one results, specialist-manifest hash, post-reveal evaluator mechanism, cause classification, containment status, and trace lineage. The card completeness validator compares error identities from all three Parquet traces against card identities and fails on missing, duplicate, extra, or lineage-mismatched records.
+- Both trace and card schemas reject unknown or missing fields. The authoritative audit reports `schema_columns_complete: true` for all generations, `schema_errors: 0`, `trace_errors: []`, `hash_match: true`, and exact expected/observed card counts.
+- Specialist manifest parameters remain evaluator-owned. A participant-source scan found no use of `hidden_outcomes`, `catastrophic_if_accepted`, `feedback_poisoned`, or `hidden_mechanism_hash`; all four forbidden-access result lists are empty.
+- Feedback disposition is stored separately as accepted, quarantined, censored, or unreleased. The trace validator proves that poison is quarantined, censoring does not become absence or a negative target, and unreleased events do not enter participant decisions.
+
+### P2-E009 - Phase 2 console checkpoint and identifying-comment registry
+
+- Phase 2 adds 30 console checkpoints: 16 orchestration checkpoints using native JavaScript `console.log`, and 14 Python checkpoints using the shared structured `console_log` emitter, whose emitted prefix is `console.log`. A source-level checker found `CHECKPOINTS 30 ERRORS 0`: every statement has an immediately preceding identifying comment and the comment event exactly matches the emitted event.
+- Native JavaScript line registry; each comment is the literal `// console.log: <event>` shown in the Event column.
+
+| File | Comment line | `console.log` line | Event/comment identifier |
+|---|---:|---:|---|
+| `scripts/run_phase2.mjs` | 17 | 18 | `phase2.orchestrator.step01.start` |
+| `scripts/run_phase2.mjs` | 20 | 21 | `phase2.orchestrator.step02.clean_phase2_run` |
+| `scripts/run_phase2.mjs` | 25 | 26 | `phase2.orchestrator.step03.inherited_tests_before` |
+| `scripts/run_phase2.mjs` | 30 | 31 | `phase2.orchestrator.step04.compile_ledgers` |
+| `scripts/run_phase2.mjs` | 35 | 36 | `phase2.orchestrator.step05.validate_separation` |
+| `scripts/run_phase2.mjs` | 40 | 41 | `phase2.orchestrator.step06.execute_stress` |
+| `scripts/run_phase2.mjs` | 45 | 46 | `phase2.orchestrator.step07.validate_traces_without_cards` |
+| `scripts/run_phase2.mjs` | 50 | 51 | `phase2.orchestrator.step08.create_failure_cards` |
+| `scripts/run_phase2.mjs` | 55 | 56 | `phase2.orchestrator.step09.validate_traces_and_cards` |
+| `scripts/run_phase2.mjs` | 60 | 61 | `phase2.orchestrator.step10.aggregate_metrics` |
+| `scripts/run_phase2.mjs` | 65 | 66 | `phase2.orchestrator.step11.phase2_tests` |
+| `scripts/run_phase2.mjs` | 70 | 71 | `phase2.orchestrator.step12.full_regression` |
+| `scripts/run_phase2.mjs` | 75 | 76 | `phase2.orchestrator.step13.final_inherited_smoke` |
+| `scripts/run_phase2.mjs` | 81 | 82 | `phase2.orchestrator.step14.write_evidence` |
+| `scripts/run_phase2.mjs` | 87 | 88 | `phase2.orchestrator.step15.audit` |
+| `scripts/run_phase2.mjs` | 91 | 92 | `phase2.orchestrator.step16.complete` |
+
+- Python line registry; each comment is the literal `# console.log: <event>` shown in the Event column, immediately before the listed `console_log` statement.
+
+| File | Comment line | emitter line | Event/comment identifier |
+|---|---:|---:|---|
+| `scripts/compile_phase2_ledgers.py` | 96 | 97 | `phase2.compile.step01.start` |
+| `scripts/compile_phase2_ledgers.py` | 99 | 100 | `phase2.compile.step02.complete` |
+| `scripts/validate_phase2_separation.py` | 53 | 54 | `phase2.separation.step01.start` |
+| `scripts/validate_phase2_separation.py` | 56 | 57 | `phase2.separation.step02.complete` |
+| `scripts/run_phase2_stress.py` | 149 | 150 | `phase2.stress.step01.start` |
+| `scripts/run_phase2_stress.py` | 152 | 153 | `phase2.stress.step02.complete` |
+| `scripts/validate_phase2_traces.py` | 77 | 78 | `phase2.validate_traces.step01.start` |
+| `scripts/validate_phase2_traces.py` | 80 | 81 | `phase2.validate_traces.step02.complete` |
+| `scripts/make_phase2_failure_cards.py` | 79 | 80 | `phase2.cards.step01.start` |
+| `scripts/make_phase2_failure_cards.py` | 82 | 83 | `phase2.cards.step02.complete` |
+| `scripts/aggregate_phase2.py` | 61 | 62 | `phase2.aggregate.step01.start` |
+| `scripts/aggregate_phase2.py` | 64 | 65 | `phase2.aggregate.step02.complete` |
+| `scripts/audit_phase2.py` | 125 | 126 | `phase2.audit.step01.start` |
+| `scripts/audit_phase2.py` | 131 | 132 | `phase2.audit.step02.complete` |
+
+- The preserved authoritative console transcript is `results/reports/phase2_20260713/phase2_console.log`. The orchestrator audit separately confirms all 16 native lines, zero uncommented statements, and zero comment/event mismatches.
+
+### P2-E010 - Clause-level extreme audit and pre-documentation verdict
+
+| WorkPlan Phase 2 requirement | Direct evidence | Verdict |
+|---|---|---|
+| All named corruption/failure families | 13-family registry includes every named family; 48 evaluation compositions exercise two to four families | PASS |
+| Required configs, transforms, DS-CF, diagnostics, fixtures, and tests | All 20 required-file audit entries present; strict schemas and Phase 2 scripts added; 21 focused tests pass | PASS |
+| Presence distinct from harmfulness; raw presence cannot veto | DS-CF typed state and truth-table fixtures; zero raw-only vetoes across 180,000 traces | PASS |
+| Conjunctive hard veto, bounded mitigation, ambiguity escalation | Hard-veto conjunction audit true; mitigation clamp `0.12`; masked/conflicting/ambiguous paths escalate | PASS |
+| Manifest-generated specialists with visible-only projection | Signed per-world specialist hashes; evaluator traits excluded from observations; forbidden-source scan empty | PASS |
+| Random onset/duration/intensity/target/interaction/recovery | Typed schedule, stored parameters, state-transition properties, deterministic regeneration | PASS |
+| Nuisance-preserving causal evidence pairs | One paired evidence intervention per canonical opportunity; nuisance identity and evidence-order tests pass | PASS |
+| Poisoned/censored feedback quarantine | Four-state disposition ledger; poison/reliability gate; censored and unreleased chronology assertions pass | PASS |
+| 20,000 opportunities/generation and >=40 compositions | Exact 20,000 in each of three generations; 48 evaluation compositions | PASS |
+| Approximate 30/30/20/20 mixture | Exact 60/60/40/40 worlds per generation, also exact 12/12/8/8 within every domain | PASS |
+| Final differs from development | Disjoint domains/seeds/identities/namespaces/compositions/schedules/intensities; two held-out mechanisms | PASS |
+| Collapse, masking, counterfactual, ambiguity, recovery, retained-safety outputs | All seven measurements non-null in every one of nine summary rows; 1,800 world rows retained | PASS |
+| Every unsafe acceptance/false rejection has lineage/card | Expected 14,221; observed 14,221; 14,221 unique lineages; zero schema errors; hash matches | PASS |
+| DS-CF regressions remain solved | Fixture and property regressions pass in focused/full suites and independent audit | PASS |
+| Evidence absence differs from unavailability | Serialized state and decision regression; trace validator and audit report no conflation | PASS |
+| No overfit or evaluation leakage | No model/training; fixed comparators; frozen development manifest; held-out mechanisms; no final access | PASS |
+| Regression, determinism, and logging | 21 Phase 2 tests; 158 full tests; 8-record final smoke; exact three-trace replay; 30/30 comment pairs; zero stderr | PASS |
+| Claim boundary | Config, manifest, aggregation, and report restrict results to corruption characterization | PASS |
+
+- Independent audit artifact: `results/reports/phase2_20260713/phase2_audit.json`, SHA-256 `BFC279D1A7A1E2AB27DDB41392708F13B14FD70CF8F22F2D0EDE4B6BD9FF5B08`, with top-level `passed: true`. It reports deterministic replay true, orchestration complete, metrics complete, all generation allocations exact, every DS-CF regression solved, zero trace/separation/schema/console errors, and complete failure-card lineage.
+- Pre-documentation verdict: Phase 2 is technically complete with no open WorkPlan Section 9 compliance gap. Closure remains pending only until this evidence and the authoritative result tree are committed, the audit is rerun from the evidence successor commit without altering frozen implementation inputs, and the accepted state is pushed to `origin/main`.
+- Claim restriction: this verdict certifies Phase 2 corruption, correlated-collapse, and partial-observability characterization. It does not assert Self-Learning, autonomous repair, transfer, consolidation, deployment readiness, superiority, or Pareto-frontier expansion.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -543,11 +669,11 @@ No later phase may be marked in progress until the preceding phase exit gate has
 |---|---|---|---|
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
 | 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
-| 2 | Corruption, correlated collapse, and partial observability | In progress | P2-E000 through P2-E004; implementation complete, corrected preflight active |
+| 2 | Corruption, correlated collapse, and partial observability | In progress | P2-E000 through P2-E010; authoritative audit passed, evidence commit and post-documentation audit pending |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Not started | None |
 
 ## Current checkpoint
 
-Phase 0 and Phase 1 are complete and frozen. Phase 2 is authorized and active under P2-E000 through P2-E001. No Phase 3 work is authorized.
+Phase 0 and Phase 1 are complete and frozen. Phase 2 has passed its authoritative technical audit under P2-E000 through P2-E010; evidence commit, post-documentation provenance control, and push remain before closure. No Phase 3 work is authorized.

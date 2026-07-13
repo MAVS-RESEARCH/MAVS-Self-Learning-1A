@@ -1,0 +1,43 @@
+{
+  "claim_boundary": "phase2_corruption_characterization_no_self_learning_or_frontier_claim",
+  "composition_config_sha256": "9a24845411837b5f81f1f3ab2b3f8884998b067905da1e08232d60795d76865a",
+  "development_manifest_sha256": "f803f2658dc98f9125570197b15b309b134cfa384dd8bb2ec486fa0a20bd6454",
+  "environment_packages": {
+    "pyarrow": "21.0.0",
+    "python": "3.13.7"
+  },
+  "family_config_sha256": "a46c29ca2d5644976a8e7697bb45ff03842c1c951707bf78d36478442c58bd1e",
+  "generations": [
+    {
+      "generation": 1,
+      "ledger": "results\\manifests\\phase2_20260713\\phase2\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "666183133e0d4b99056adde76ca2e946aada17d035132c46c490f010fca895f4",
+      "manifest": "results\\manifests\\phase2_20260713\\phase2\\generation_1\\generation_manifest.json",
+      "manifest_sha256": "94a04c2538e20c1af3a4e5e4cd7f31cdc84c2989f7c4a19dd6f61865fbcb637b",
+      "opportunities": 20000
+    },
+    {
+      "generation": 2,
+      "ledger": "results\\manifests\\phase2_20260713\\phase2\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "2d677589ccc9fbcb172caa7462bd257e48656dd0d9c2d03d575327b6e2c5df19",
+      "manifest": "results\\manifests\\phase2_20260713\\phase2\\generation_2\\generation_manifest.json",
+      "manifest_sha256": "fac3f4a9bb39a8d4228746d4c5cb28867bde6d6e4c5572faf26eedcac4dffe94",
+      "opportunities": 20000
+    },
+    {
+      "generation": 3,
+      "ledger": "results\\manifests\\phase2_20260713\\phase2\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "d059ca56a6786ea3f5a10bf3792e62a6c7030b9f500cb79c4679540782976d17",
+      "manifest": "results\\manifests\\phase2_20260713\\phase2\\generation_3\\generation_manifest.json",
+      "manifest_sha256": "c501dcf21204aaedcf73b029e4898a91719a53cca9f1a04902ab6166d7c7a58c",
+      "opportunities": 20000
+    }
+  ],
+  "implementation_git_sha": "9d5d3c42d0a2ce42d8e523225c06316683ea7793",
+  "manifest_sha256": "d6787a4aa67e37ebb7f698e6a881df32d699314887d8832eea103f8c9cf410f2",
+  "model_training": "none",
+  "phase": 2,
+  "phase_config_sha256": "cc4252d78bbbe13b5d5b3ea1038ff36ffc107d3a0831a6afc8a9aa29f0d3d1e9",
+  "run_id": "phase2_20260713",
+  "schema_version": "1.0.0"
+}

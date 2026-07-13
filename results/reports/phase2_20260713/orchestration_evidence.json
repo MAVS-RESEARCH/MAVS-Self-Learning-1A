@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "phase2_20260713",
+  "completed_steps": [
+    "clean_phase2_run",
+    "inherited_tests_before",
+    "phase2_ledgers_compiled",
+    "separation_validated",
+    "stress_executed",
+    "traces_validated_without_cards",
+    "failure_cards_created",
+    "traces_and_cards_validated",
+    "metrics_aggregated",
+    "phase2_tests",
+    "full_regression",
+    "inherited_smoke_after"
+  ]
+}

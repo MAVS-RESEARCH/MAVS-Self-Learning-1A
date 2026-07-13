@@ -1,0 +1,139 @@
+{
+  "checks": {
+    "claim_boundary": true,
+    "console_log_lines": [
+      18,
+      21,
+      26,
+      31,
+      36,
+      41,
+      46,
+      51,
+      56,
+      61,
+      66,
+      71,
+      76,
+      82,
+      88,
+      92
+    ],
+    "deterministic_replay": true,
+    "ds_cf_regressions": true,
+    "failure_cards": {
+      "expected": 14221,
+      "hash_match": true,
+      "observed": 14221,
+      "schema_errors": 0,
+      "unique_lineages": 14221
+    },
+    "final_inherited_smoke_records": 8,
+    "generations": {
+      "1": {
+        "canonical_opportunities": 20000,
+        "composition_count": 48,
+        "corruption_family_count": 13,
+        "hard_veto_conjunctive": true,
+        "masked_acceptances": 0,
+        "methods": [
+          "ds_cf",
+          "provenance_selective",
+          "visible_risk_threshold"
+        ],
+        "raw_correlation_only_vetoes": 0,
+        "scenario_class_counts": {
+          "ambiguous_masking": 40,
+          "harmful_collapse": 60,
+          "mixed": 40,
+          "safe_correlated_agreement": 60
+        },
+        "schema_columns_complete": true,
+        "trace_records": 60000,
+        "worlds": 200
+      },
+      "2": {
+        "canonical_opportunities": 20000,
+        "composition_count": 48,
+        "corruption_family_count": 13,
+        "hard_veto_conjunctive": true,
+        "masked_acceptances": 0,
+        "methods": [
+          "ds_cf",
+          "provenance_selective",
+          "visible_risk_threshold"
+        ],
+        "raw_correlation_only_vetoes": 0,
+        "scenario_class_counts": {
+          "ambiguous_masking": 40,
+          "harmful_collapse": 60,
+          "mixed": 40,
+          "safe_correlated_agreement": 60
+        },
+        "schema_columns_complete": true,
+        "trace_records": 60000,
+        "worlds": 200
+      },
+      "3": {
+        "canonical_opportunities": 20000,
+        "composition_count": 48,
+        "corruption_family_count": 13,
+        "hard_veto_conjunctive": true,
+        "masked_acceptances": 0,
+        "methods": [
+          "ds_cf",
+          "provenance_selective",
+          "visible_risk_threshold"
+        ],
+        "raw_correlation_only_vetoes": 0,
+        "scenario_class_counts": {
+          "ambiguous_masking": 40,
+          "harmful_collapse": 60,
+          "mixed": 40,
+          "safe_correlated_agreement": 60
+        },
+        "schema_columns_complete": true,
+        "trace_records": 60000,
+        "worlds": 200
+      }
+    },
+    "metrics_complete": true,
+    "mismatched_console_log_comments": [],
+    "orchestration_complete": true,
+    "participant_hidden_access": {
+      "catastrophic_if_accepted": [],
+      "feedback_poisoned": [],
+      "hidden_mechanism_hash": [],
+      "hidden_outcomes": []
+    },
+    "required_files": {
+      "configs/corruptions/phase2_compositions.yaml": true,
+      "configs/corruptions/phase2_families.yaml": true,
+      "configs/phases/phase2.yaml": true,
+      "schemas/phase2_failure_card.schema.json": true,
+      "schemas/phase2_trace.schema.json": true,
+      "scripts/aggregate_phase2.py": true,
+      "scripts/compile_phase2_ledgers.py": true,
+      "scripts/make_phase2_failure_cards.py": true,
+      "scripts/run_phase2.mjs": true,
+      "scripts/run_phase2_stress.py": true,
+      "scripts/validate_phase2_separation.py": true,
+      "scripts/validate_phase2_traces.py": true,
+      "src/mavs10d/baselines/phase2_methods.py": true,
+      "src/mavs10d/corruption/phase2.py": true,
+      "src/mavs10d/envs/phase2_gauntlet.py": true,
+      "src/mavs10d/governance/ds_cf.py": true,
+      "src/mavs10d/governance/feedback_quarantine.py": true,
+      "src/mavs10d/governance/phase2_diagnostics.py": true,
+      "src/mavs10d/metrics/phase2.py": true,
+      "tests/fixtures/phase2_ds_cf_regressions.json": true
+    },
+    "separation_errors": [],
+    "trace_errors": [],
+    "uncommented_console_logs": []
+  },
+  "passed": true,
+  "phase": 2,
+  "run_id": "phase2_20260713",
+  "schema_version": "1.0.0"
+}

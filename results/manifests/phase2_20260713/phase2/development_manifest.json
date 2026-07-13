@@ -1,0 +1,46 @@
+{
+  "final_evaluation_access": false,
+  "manifest": {
+    "bank": "development",
+    "composition_count": 12,
+    "corruption_families": [
+      "ambiguity_injection",
+      "evidence_masking",
+      "harmful_correlated_collapse",
+      "label_poisoning",
+      "malicious_specialist",
+      "overconfident_consensus",
+      "policy_conflict",
+      "prompt_adversarial_manipulation",
+      "provenance_concentration",
+      "safe_correlated_agreement",
+      "shared_wrong_premise"
+    ],
+    "domains": [
+      "medical_triage_proxy",
+      "retrieval_qa",
+      "synthetic_control"
+    ],
+    "generation": 0,
+    "held_out_mechanisms": [],
+    "hidden_outcomes_sha256": "6c8e9d136a20d9bcc65ce58a75c9eda15406624cefeae2e1ffbc6676aa378278",
+    "manifest_sha256": "f803f2658dc98f9125570197b15b309b134cfa384dd8bb2ec486fa0a20bd6454",
+    "namespace": "phase2_development_v1",
+    "opportunity_count": 3000,
+    "opportunity_ids_sha256": "d022de4f36d985e44d3799ae2422cf3f90413f77d338d9896c05536243f120b2",
+    "scenario_class_counts": {
+      "ambiguous_masking": 7,
+      "harmful_collapse": 8,
+      "mixed": 7,
+      "safe_correlated_agreement": 8
+    },
+    "schema_version": "1.0.0",
+    "seed_max": 40029,
+    "seed_min": 40000,
+    "specialist_manifests_sha256": "4e43ef9f59fdbb90ebd82414b8274054214346c40f97a492adb092edae1ca6c8",
+    "visible_schema_sha256": "2e503f25f279016106297cd3f20efcad1845b30fc89325e8cf514ef81746c2f9",
+    "world_count": 30,
+    "world_ids_sha256": "8030a21a2beb62fa5b4e4d3b4410b20e81a0116a7a281e1f1a4286a2b949f761"
+  },
+  "stage": 0
+}

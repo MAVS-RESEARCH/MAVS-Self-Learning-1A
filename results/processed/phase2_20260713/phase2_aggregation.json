@@ -1,0 +1,14 @@
+{
+  "artifacts": {
+    "phase2_summary.parquet": "89786cae21478afbea42e830393829f55a42bf8bda5d6918c397e08941386a38",
+    "phase2_world_metrics.parquet": "d128a7a59c94e69562ce1e12d30d275ebd49ae167e5057af3556694c583710ab"
+  },
+  "canonical_opportunities": 60000,
+  "claim_boundary": "phase2_corruption_characterization_no_self_learning_or_frontier_claim",
+  "implementation_git_sha": "9d5d3c42d0a2ce42d8e523225c06316683ea7793",
+  "run_id": "phase2_20260713",
+  "schema_version": "1.0.0",
+  "summary_rows": 9,
+  "trace_records": 180000,
+  "world_metric_rows": 1800
+}
