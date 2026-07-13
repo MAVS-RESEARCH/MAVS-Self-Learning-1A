@@ -345,6 +345,115 @@ Pre-documentation verdict: all technical Phase 0 requirements pass. Phase 0 rema
 - Initial trainer output produced repeated scikit-learn `ConvergenceWarning` messages because external one-epoch `warm_start` fitting intentionally controls early stopping. The warning was scoped and suppressed at the expected call site; convergence is still controlled and recorded through the external 100-epoch/patience-8 procedure. No exception or unexpected warning is hidden.
 - Current gate: Phase 1 implementation is not yet accepted. It must pass full regression, freeze in an implementation commit, produce the authoritative 45,000 canonical/930,000 method-decision workload, pass deterministic replay and the independent exit audit, then receive final evidence documentation and a pushed closure commit.
 
+### P1-E006 - Frozen implementation and authoritative Phase 1 execution
+
+- Frozen implementation commit: `bcd2633570a72a7fbe5153926d337367a3bbf809` (`feat: freeze phase 1 dynamic gauntlet`). Every authoritative run manifest and every trace row records this SHA.
+- Run ID: `phase1_20260713`.
+- Time window: 2026-07-13 18:18:30 through 18:26:19 Asia/Karachi (UTC+05:00); observed wall duration 469.1 seconds.
+- Command: `node scripts/run_phase1.mjs --run-id phase1_20260713`, with stdout and stderr preserved after the scoped cleaner completed.
+- Scoped result cleaning: `clean_results.py --run-id phase1_20260713` resolved the repository-owned results root and reported `removed: []`. It did not remove or modify accepted Phase 0 results.
+- Pre-ledger inherited gate: 93 tests from `tests/unit`, `tests/integration`, and `tests/phase0` passed. The frozen CTTA validator returned zero checkpoint, domain, manifest-reproduction, or final-access errors.
+- Frozen selection: 16 baseline configurations selected before evaluation; selection SHA-256 `9b5421c82fe0ec0af7c484ca31edae941df0e3cbfbd66144e8d7f182b792857e`; objective `lexicographic_uar_then_frr_then_escalation`; `post_holdout_retuning: false`.
+- Canonical allocation: G1, G2, and G3 each contain 150 worlds, 15,000 opportunities, exactly 30 worlds in each of five domains, and exactly 100 steps in each world. Total canonical opportunities: 45,000.
+- Replay allocation: G1 executes 9 fixed plus 7 cumulative adaptive methods, 16 conditions and 240,000 trace rows. G2 and G3 execute 9 fixed plus cumulative/fresh conditions for all 7 adaptive methods, 23 conditions and 345,000 rows each. Total method decisions: 930,000.
+- Result inventory: 29 Phase 1 files, 27,795,629 bytes, under only the `phase1_20260713` checkpoint/manifest/processed/raw/report namespaces.
+- Post-stress gates: checkpoint validator zero errors; trace/allocation/causality/resource validator zero errors; 31 Phase 1 tests passed; complete 137-test repository regression passed; final inherited smoke produced and validated exactly 8 records.
+- Stderr: zero bytes, SHA-256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`.
+
+### P1-E007 - World, feedback, separation, and replay evidence
+
+- Generation seeds are independently regenerated and within the prescribed ranges: G1 100000-100149, G2 300000-300149, G3 500000-500149. Opportunity-ID digests, world-ID digests, prior namespaces, and ledger hashes differ across generations.
+- Ledger SHA-256: G1 `A6867CA1C95FBC16760963BE1563E2E58CDCD5FF3B498AE0C199FAC697B9E234`; G2 `6A1AFADE67E428B2D8A379E4571F9D00E778BA9D1C1A6CB6FE7F8F407D98FEFE`; G3 `7EEFFDB543E6EDF8FBEB63BDA4CF9696A43DE508773F13BED40640122B7E911A`.
+- Exact shift balance in every generation: abrupt 38 worlds, gradual 38, recurring 37, mixed 37. Every generation uses all seven required schedule families. Every world exposes all three cost preferences over time, changing every 25 steps.
+- Feedback realization: G1 immediate/delayed/censored counts `6866/5144/2990`; G2 `6808/5252/2940`; G3 `6976/5089/2935`. Reliability stays within the declared noisy interval `[0.85,1.0]`. Censored outcomes remain null and absent from participant updates; delayed events appear only when `release_step <= current step`.
+- Development/evaluation separation validator returned zero errors across four mutually seed-disjoint development banks and three evaluation generations. Evaluation domains are disjoint from all train/validation/calibration/tuning domains. Selection stage precedes evaluation stage, every generation binds the same frozen selection hash, and no post-holdout retuning flag is permitted.
+- Trace SHA-256: G1 `B90EC11828FE9B6BB943DE10F3B9927604FC1EBEA35763DA03904AFDDBA810D8`; G2 `9EA8504868746EEF9A3A6649E05977F9E9B5E496FF40753B8F36354E235AE41C`; G3 `7D2FA3BA5B7AA43D24104ED08B339CFA17FE0C9047EA6CCCE054FDA6DDEC849D`.
+- Independent replay: `audit_phase1.py` reran all 930,000 method decisions into an isolated temporary directory and compared each regenerated Parquet SHA-256 to the authoritative trace. All three hashes matched exactly.
+- Hidden-information audit: participant baseline sources contain zero occurrences of evaluator-only `hidden_outcomes`, `latent_probability`, or `catastrophic_if_accepted`. State checkpoints contain no hidden label, future manifest, answer key, or final metric. Matched method conditions replay identical ordered opportunity IDs.
+
+### P1-E008 - Required benchmark outputs and factual interpretation
+
+- Processed outputs: `phase1_summary.parquet` has 62 method-generation-condition rows; `phase1_world_metrics.parquet` has 9,300 method-world rows; `phase1_frontier.parquet` has 59 nondominated UAR/FRR/escalation rows. Aggregation SHA-256 values are respectively `002AA60D0689CB817399CE8D84F5900043DD4FF3E10CFA54CBD73860EDB5E2E7`, `C2C2FC307978D33138963422F492C204B7786A1DD72ED3BCF5989351DC67B5A2`, and `AA35AC901D51D56FC747A914143DC41463C0AF903856C28B37074E7C0BD49FDB`.
+- Every summary row contains UAR, FRR, escalation rate, adaptation lag, recovery lag, ECE, Brier score, catastrophic episode rate, governance regret, dynamic regret, selector accuracy, compute-normalized loss, worst-decile loss, worst-world loss, configuration switches, calibration examples, calls, tokens, latency, charged wall time, memory, and update operations; no required value is null.
+- The output shows trade-offs rather than a false single winner. Example: G1 entropy gate has UAR `0.034384` but FRR `0.941454`, while G1 cumulative CTTA pseudo-label has UAR `0.159265`, FRR `0.087773`, escalation `0.730000`, and compute-normalized loss `0.176210`. The conservative entropy result is not represented as dominance.
+- Cumulative/fresh behavior is separately reported. For G3 pseudo-label CTTA, cumulative versus fresh UAR is `0.047261` versus `0.165536`, but FRR is `0.436362` versus `0.078536` and escalation is `0.497600` versus `0.734800`. This is evidence of an adaptation/conservatism trade-off, not general superiority.
+- Recovery penalization is active: summary recovery lags are nonzero and can consume the entire post-recovery remainder when safe decisions remain rejected. The focused negative test forces persistent conservatism and obtains the maximum 30-step lag.
+- Blind CTTA report: ten CTTA rows cover G1 cumulative and G2/G3 cumulative/fresh variants for both CTTA mechanisms. The report binds the frozen checkpoint hash, disjoint train/blind domains, all required dynamic/calibration/tail metrics, and `post_blind_retuning: false`; SHA-256 `9FB4EAF14FB9F15B23C0B4D0A2010704C8710CA0D4BE266F2D17C51EA32643E1`.
+- Factual limitation: catastrophic episode rate is zero for all reported operating points in this generated workload. This does not prove catastrophic safety; it states that no candidate satisfying the generator's catastrophic threshold was accepted by these evaluated configurations. The claim boundary remains dynamic-baseline characterization only.
+
+### P1-E009 - Console comment and statement line registry
+
+The Phase 1 implementation adds 16 native JavaScript `console.log` checkpoints and 19 structured Python `console_log` checkpoints. Every statement has an immediately preceding identifying comment. The frozen implementation commit fixes these exact pairs:
+
+| File | Comment/statement lines | Exact comment identifier |
+|---|---:|---|
+| `scripts/run_phase1.mjs` | 17/18 | `phase1.orchestrator.step01.start` |
+| `scripts/run_phase1.mjs` | 20/21 | `phase1.orchestrator.step02.clean_phase1_run` |
+| `scripts/run_phase1.mjs` | 25/26 | `phase1.orchestrator.step03.inherited_tests_before` |
+| `scripts/run_phase1.mjs` | 30/31 | `phase1.orchestrator.step04.verify_ctta_checkpoint` |
+| `scripts/run_phase1.mjs` | 35/36 | `phase1.orchestrator.step05.compile_ledgers` |
+| `scripts/run_phase1.mjs` | 40/41 | `phase1.orchestrator.step06.validate_separation` |
+| `scripts/run_phase1.mjs` | 45/46 | `phase1.orchestrator.step07.execute_stress` |
+| `scripts/run_phase1.mjs` | 50/51 | `phase1.orchestrator.step08.validate_checkpoints` |
+| `scripts/run_phase1.mjs` | 54/55 | `phase1.orchestrator.step09.validate_traces` |
+| `scripts/run_phase1.mjs` | 59/60 | `phase1.orchestrator.step10.aggregate_metrics` |
+| `scripts/run_phase1.mjs` | 64/65 | `phase1.orchestrator.step11.phase1_tests` |
+| `scripts/run_phase1.mjs` | 69/70 | `phase1.orchestrator.step12.full_regression` |
+| `scripts/run_phase1.mjs` | 74/75 | `phase1.orchestrator.step13.final_inherited_smoke` |
+| `scripts/run_phase1.mjs` | 80/81 | `phase1.orchestrator.step14.write_evidence` |
+| `scripts/run_phase1.mjs` | 86/87 | `phase1.orchestrator.step15.audit` |
+| `scripts/run_phase1.mjs` | 90/91 | `phase1.orchestrator.step16.complete` |
+| `scripts/train_phase1_proxy.py` | 22/23 | `phase1.train_proxy.step01.start` |
+| `scripts/train_phase1_proxy.py` | 25/26 | `phase1.train_proxy.step02.complete` |
+| `scripts/compile_phase1_ledgers.py` | 109/110 | `phase1.compile.step01.validate_arguments` |
+| `scripts/compile_phase1_ledgers.py` | 111/112 | `phase1.compile.step02.compile_development_and_evaluation` |
+| `scripts/compile_phase1_ledgers.py` | 114/115 | `phase1.compile.step03.complete` |
+| `scripts/validate_phase1_model.py` | 23/24 | `phase1.validate_model.step01.start` |
+| `scripts/validate_phase1_model.py` | 41/42 | `phase1.validate_model.step02.complete` |
+| `scripts/validate_phase1_separation.py` | 60/61 | `phase1.separation.step01.start` |
+| `scripts/validate_phase1_separation.py` | 63/64 | `phase1.separation.step02.complete` |
+| `scripts/run_phase1_stress.py` | 153/154 | `phase1.stress.step01.start` |
+| `scripts/run_phase1_stress.py` | 156/157 | `phase1.stress.step02.complete` |
+| `scripts/validate_phase1_checkpoints.py` | 53/54 | `phase1.validate_checkpoints.step01.start` |
+| `scripts/validate_phase1_checkpoints.py` | 56/57 | `phase1.validate_checkpoints.step02.complete` |
+| `scripts/validate_phase1_traces.py` | 73/74 | `phase1.validate_traces.step01.start` |
+| `scripts/validate_phase1_traces.py` | 76/77 | `phase1.validate_traces.step02.complete` |
+| `scripts/aggregate_phase1.py` | 82/83 | `phase1.aggregate.step01.start` |
+| `scripts/aggregate_phase1.py` | 85/86 | `phase1.aggregate.step02.complete` |
+| `scripts/audit_phase1.py` | 183/184 | `phase1.audit.step01.start` |
+| `scripts/audit_phase1.py` | 189/190 | `phase1.audit.step02.complete` |
+
+The independent audit reports native statement lines `18,21,26,31,36,41,46,51,55,60,65,70,75,81,87,91`, with empty uncommented and mismatched-comment lists. Complete stdout contains 91 lines and 26,280 bytes, SHA-256 `2C5A488FABD0DBE7CB74E87033EB3514A77DB6F94DF937302889B4FE9128C208`.
+
+### P1-E010 - Independent exit audit and clause-by-clause decision
+
+- Audit artifact: `results/reports/phase1_20260713/phase1_audit.json`, SHA-256 `73B457D960A9D8691963005BED4ADE2447D669A46194E5A465E35422A4E37D6C`; top-level result `passed: true`.
+- Run-manifest SHA-256: `B7089A2C725FC087B4F1BA064A09B07A2AB16064C924391DEB9B65F078E2FA0E`; semantic manifest hash `d0f967fdd55299a1ae8a24eb7edb7cf3d68da4ef664299775a243a5b4334281a`.
+- Aggregation-report SHA-256: `9B9762053624409ACFC0EE218F657FBA4C378F88CD882B6B63B60A09A8F2F20E`; orchestration-evidence SHA-256: `5FDA750E3619EB74FD11FC061CDD9CD4D2DAC070E55CB8AC93FFB3F2A5F47BE1`.
+
+| WorkPlan Phase 1 requirement | Direct evidence | Decision |
+|---|---|---|
+| Unknown prior/covariate and policy/label-boundary shift | Seven schedules expose prior, covariate, and boundary state; changed generation priors/policies; all schedules present | PASS |
+| Recurring regimes and non-maximal corruption | Recurring/compositional/recovery schedules; corruption property bound `[0,0.55]` | PASS |
+| Delayed/censored/noisy feedback | Realized counts recorded in P1-E007; reliability bounds; zero causality errors; censored labels null | PASS |
+| Recovery and changing costs | Recovery-active ledgers and max-lag negative test; all three cost preferences in every world | PASS |
+| Required files and seven schedule families | P1-E002 map; audit required-file inventory all true; schedule set exact in all generations | PASS |
+| Eight named environment adapters, at least five accepted | Exact fail-closed eight-adapter registry; five disjoint evaluation adapters each receive 3,000 opportunities per generation | PASS |
+| All named fixed/adaptive baseline families | Frozen 9-fixed/7-adaptive registry; 16 G1 and 23 G2/G3 method-condition matrices exact | PASS |
+| Common `GovernanceMethod` interface and documented fidelity | 16 parameterized contract tests; `docs/baseline_sources.md` records mechanisms, information, and deviations | PASS |
+| Development-only pre-registered tuning | Complete grid enumeration; frozen selection hash; stage ordering; no retuning; disjoint bank validator zero errors | PASS |
+| Calibration/calls/tokens/latency/wall/memory/update charge | Schema, every trace, summary, state, validator, and audit contain all eight nonnegative resource fields | PASS |
+| Frozen disjoint replay | Frozen implementation/config/selection/model hashes; disjoint seeds/domains/priors; no post-holdout retuning | PASS |
+| Five x 30 x 100 allocation and balanced shifts | 15,000 per generation, 150 worlds, domain counts 30, shift counts 38/38/37/37 | PASS |
+| Required frontiers, lags, calibration, catastrophic, regret, selector, compute, tail outputs | 62-row summary, 9,300 world rows, 59-row frontier; required metric audit complete with no nulls | PASS |
+| No hidden information | Source scan empty; checkpoint forbidden-state scan empty; feedback chronology and matched identities valid | PASS |
+| Cumulative/fresh for every adaptive baseline in later generations | Exact seven-baseline, two-condition matrix for both G2 and G3 | PASS |
+| Trainable-model anti-overfit requirement | Real MLP; 15 development trials; byte-reproducible checkpoint; five entirely different blind domains; ten blind rows; no retuning | PASS |
+| Regression, determinism, and console evidence | 137 tests; 8-record final smoke; exact three-trace replay; 35/35 comment-statement pairs; zero stderr | PASS |
+| Claim boundary | Run/config/report explicitly prohibit Self-Learning superiority or frontier-expansion inference | PASS |
+
+Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan Section 8 compliance gap. Closure remains pending only until this evidence and the authoritative result tree are committed, the audit is re-run from the documentation successor commit without changing frozen implementation inputs, and the accepted state is pushed to `origin/main`.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -367,7 +476,7 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | Phase | WorkPlan scope | Status | Exit-gate evidence |
 |---|---|---|---|
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
-| 1 | Non-stationary distribution gauntlet | In progress | P1-E000 through P1-E005; focused tests pass, authoritative run pending |
+| 1 | Non-stationary distribution gauntlet | In progress | P1-E000 through P1-E010; authoritative audit passes, closure commit/push pending |
 | 2 | Corruption, correlated collapse, and partial observability | Not started | None |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
@@ -375,4 +484,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 is complete and frozen. Phase 1 implementation and preflight are active under P1-E000 through P1-E005; the authoritative run has not yet been accepted. No Phase 2 work is authorized.
+Phase 0 is complete and frozen. Phase 1 has passed its authoritative technical audit under P1-E000 through P1-E010; documentation successor validation, closure commit, and push remain. No Phase 2 work is authorized.

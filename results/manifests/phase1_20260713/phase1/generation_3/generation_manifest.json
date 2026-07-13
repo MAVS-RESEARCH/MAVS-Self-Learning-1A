@@ -1,0 +1,63 @@
+{
+  "body": {
+    "bank": "evaluation",
+    "domain_adapters": {
+      "cyber_triage": {
+        "action_namespace": "triage_or_escalate",
+        "evidence_semantics": "observable alert and exposure evidence",
+        "opportunity_kind": "cyber_alert"
+      },
+      "financial_approval_proxy": {
+        "action_namespace": "approve_or_review",
+        "evidence_semantics": "synthetic approval and anomaly evidence",
+        "opportunity_kind": "financial_proxy_case"
+      },
+      "multi_agent_operations": {
+        "action_namespace": "delegate_or_veto",
+        "evidence_semantics": "delegation, dependency, and consensus evidence",
+        "opportunity_kind": "delegated_operation"
+      },
+      "text_safety": {
+        "action_namespace": "respond_or_abstain",
+        "evidence_semantics": "policy and content-risk evidence",
+        "opportunity_kind": "text_response"
+      },
+      "tool_use": {
+        "action_namespace": "execute_or_block",
+        "evidence_semantics": "permission, argument, and side-effect evidence",
+        "opportunity_kind": "tool_invocation"
+      }
+    },
+    "domains": [
+      "cyber_triage",
+      "financial_approval_proxy",
+      "multi_agent_operations",
+      "text_safety",
+      "tool_use"
+    ],
+    "generation": 3,
+    "hidden_outcome_sha256": "06e37449648f567f62683f0319a753b35ab9ae4392d536f2dd9b51c6645a5e46",
+    "hidden_outcomes_sha256": "67f61ad36f544fb855c2f6c940e8a776665246bc417e8927ec498cdd53608ab3",
+    "implementation_git_sha": "bcd2633570a72a7fbe5153926d337367a3bbf809",
+    "ledger_sha256": "7eeffdb543e6edf8fbeb63bda4cf9696a43de508773f13bed40640122b7e911a",
+    "manifest_sha256": "a4e4783387d6e90a2ec7a1165794e91903599ccfd985c15234916d601044c030",
+    "opportunity_count": 15000,
+    "opportunity_ids_sha256": "de915d64ad288ee64805f8ad931ee630d4ff0547d77c0e2b56591a4cb2591f12",
+    "phase_config_sha256": "5bcf37407cfe14f2495ae9c78899861682e1e8bc712bf899b5eb59ea6af527b0",
+    "policy_namespace": "evaluation_policies_v1",
+    "prior_version": "phase1_eval_g3_v1",
+    "run_id": "phase1_20260713",
+    "schedule_namespace": "evaluation_schedules_v1",
+    "schema_version": "1.0.0",
+    "seed_max": 500149,
+    "seed_min": 500000,
+    "selection_sha256": "9b5421c82fe0ec0af7c484ca31edae941df0e3cbfbd66144e8d7f182b792857e",
+    "stage": 2,
+    "surface_template_namespace": "evaluation_templates_v1",
+    "visible_schema_sha256": "1bd1e8b3d02e3d5232103a5d7311f73c0bda8acdbee1af4ca56232891db5bd8d",
+    "world_config_sha256": "f18e1d66f850d5adc85669e1fb5dcc1c2390742b9d44e297d390021850b2bc2e",
+    "world_count": 150,
+    "world_ids_sha256": "b190aea62a40fdaf29b7e492fd2ade02ecc98ee64278933aa5867406c60341ba"
+  },
+  "signature": "dae37d670f02134d5f9d89f876f59d56802d36b0d36c0ca14b3839fe130832d4"
+}

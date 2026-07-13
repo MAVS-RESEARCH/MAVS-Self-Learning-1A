@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "phase1_frontier.parquet": "aa35ac901d51d56fc747a914143dc41463c0af903856c28b37074e7c0bd49fdb",
+    "phase1_summary.parquet": "002aa60d0689cb817399ce8d84f5900043dd4ff3e10cfa54cbd73860edb5e2e7",
+    "phase1_world_metrics.parquet": "c2c2fc307978d33138963422f492c204b7786a1dd72ed3bcf5989351dc67b5a2"
+  },
+  "canonical_opportunities": 45000,
+  "claim_boundary": "dynamic_baseline_characterization_no_self_learning_superiority",
+  "ctta_blind_evaluation_sha256": "9fb4eaf14fb9f15b23c0b4d0a2010704c8710ca0d4be266f2d17c51ea32643e1",
+  "frontier_rows": 59,
+  "implementation_git_sha": "bcd2633570a72a7fbe5153926d337367a3bbf809",
+  "run_id": "phase1_20260713",
+  "schema_version": "1.0.0",
+  "summary_rows": 62,
+  "trace_records": 930000,
+  "world_metric_rows": 9300
+}

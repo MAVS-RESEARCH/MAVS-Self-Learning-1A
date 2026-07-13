@@ -1,0 +1,168 @@
+{
+  "checks": {
+    "adaptive_cumulative_fresh_complete": true,
+    "baseline_hidden_access": {
+      "catastrophic_if_accepted": [],
+      "hidden_outcomes": [],
+      "latent_probability": []
+    },
+    "checkpoint_errors": [],
+    "claim_boundary": true,
+    "console_log_lines": [
+      18,
+      21,
+      26,
+      31,
+      36,
+      41,
+      46,
+      51,
+      55,
+      60,
+      65,
+      70,
+      75,
+      81,
+      87,
+      91
+    ],
+    "ctta_blind_complete": true,
+    "deterministic_replay": true,
+    "domain_adapters_exact": true,
+    "final_inherited_smoke_records": 8,
+    "generations": {
+      "1": {
+        "canonical_opportunities": 15000,
+        "changing_cost_preferences": true,
+        "domain_counts": {
+          "cyber_triage": 30,
+          "financial_approval_proxy": 30,
+          "multi_agent_operations": 30,
+          "text_safety": 30,
+          "tool_use": 30
+        },
+        "method_matrix_exact": true,
+        "schedule_families": [
+          "adversarial_response",
+          "burst",
+          "compositional",
+          "gradual_random_walk",
+          "piecewise_hidden",
+          "recovery_trap",
+          "recurring_regime"
+        ],
+        "schema_columns_complete": true,
+        "shift_counts": {
+          "abrupt": 38,
+          "gradual": 38,
+          "mixed": 37,
+          "recurring": 37
+        },
+        "trace_records": 240000,
+        "worlds": 150
+      },
+      "2": {
+        "canonical_opportunities": 15000,
+        "changing_cost_preferences": true,
+        "domain_counts": {
+          "cyber_triage": 30,
+          "financial_approval_proxy": 30,
+          "multi_agent_operations": 30,
+          "text_safety": 30,
+          "tool_use": 30
+        },
+        "method_matrix_exact": true,
+        "schedule_families": [
+          "adversarial_response",
+          "burst",
+          "compositional",
+          "gradual_random_walk",
+          "piecewise_hidden",
+          "recovery_trap",
+          "recurring_regime"
+        ],
+        "schema_columns_complete": true,
+        "shift_counts": {
+          "abrupt": 38,
+          "gradual": 38,
+          "mixed": 37,
+          "recurring": 37
+        },
+        "trace_records": 345000,
+        "worlds": 150
+      },
+      "3": {
+        "canonical_opportunities": 15000,
+        "changing_cost_preferences": true,
+        "domain_counts": {
+          "cyber_triage": 30,
+          "financial_approval_proxy": 30,
+          "multi_agent_operations": 30,
+          "text_safety": 30,
+          "tool_use": 30
+        },
+        "method_matrix_exact": true,
+        "schedule_families": [
+          "adversarial_response",
+          "burst",
+          "compositional",
+          "gradual_random_walk",
+          "piecewise_hidden",
+          "recovery_trap",
+          "recurring_regime"
+        ],
+        "schema_columns_complete": true,
+        "shift_counts": {
+          "abrupt": 38,
+          "gradual": 38,
+          "mixed": 37,
+          "recurring": 37
+        },
+        "trace_records": 345000,
+        "worlds": 150
+      }
+    },
+    "metrics_complete": true,
+    "mismatched_console_log_comments": [],
+    "orchestration_complete": true,
+    "required_files": {
+      "artifacts/models/phase1_ctta/phase1_ctta_source.npz": true,
+      "artifacts/models/phase1_ctta/training_manifest.json": true,
+      "configs/baselines/phase1_dynamic.yaml": true,
+      "configs/phases/phase1.yaml": true,
+      "configs/training/phase1_ctta_source.yaml": true,
+      "configs/worlds/phase1_development.yaml": true,
+      "configs/worlds/phase1_evaluation.yaml": true,
+      "configs/worlds/phase1_recovery.yaml": true,
+      "docs/baseline_sources.md": true,
+      "docs/model_cards/phase1_ctta_source.md": true,
+      "schemas/phase1_trace.schema.json": true,
+      "scripts/aggregate_phase1.py": true,
+      "scripts/compile_phase1_ledgers.py": true,
+      "scripts/run_phase1.mjs": true,
+      "scripts/run_phase1_stress.py": true,
+      "scripts/validate_phase1_separation.py": true,
+      "scripts/validate_phase1_traces.py": true,
+      "src/mavs10d/baselines/context_fixed.py": true,
+      "src/mavs10d/baselines/drift.py": true,
+      "src/mavs10d/baselines/neyman_pearson.py": true,
+      "src/mavs10d/baselines/online_conformal.py": true,
+      "src/mavs10d/baselines/online_experts.py": true,
+      "src/mavs10d/baselines/selective.py": true,
+      "src/mavs10d/baselines/test_time_adaptation.py": true,
+      "src/mavs10d/corruption/nonstationary.py": true,
+      "src/mavs10d/envs/domain_adapters.py": true,
+      "src/mavs10d/envs/phase1_gauntlet.py": true,
+      "src/mavs10d/metrics/phase1.py": true,
+      "src/mavs10d/training/phase1_proxy.py": true
+    },
+    "resource_accounting_complete": true,
+    "separation_errors": [],
+    "trace_errors": [],
+    "uncommented_console_logs": []
+  },
+  "passed": true,
+  "phase": 1,
+  "run_id": "phase1_20260713",
+  "schema_version": "1.0.0"
+}

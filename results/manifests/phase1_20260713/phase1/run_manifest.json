@@ -1,0 +1,42 @@
+{
+  "claim_boundary": "dynamic_baseline_characterization_no_self_learning_superiority",
+  "ctta_checkpoint_sha256": "48d35d9f49c306bcc17fbb490f864cad2bc8afaf07a3a30f930a25f91fc05319",
+  "environment_packages": {
+    "pyarrow": "21.0.0",
+    "python": "3.13.7"
+  },
+  "generations": [
+    {
+      "generation": 1,
+      "ledger": "results\\manifests\\phase1_20260713\\phase1\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "a6867ca1c95fbc16760963be1563e2e58cdcd5ff3b498ae0c199fac697b9e234",
+      "manifest": "results\\manifests\\phase1_20260713\\phase1\\generation_1\\generation_manifest.json",
+      "manifest_sha256": "2fbbe6a5fe14d7ddb6dbdac952f76d3f814618a1aee98f5f19cfd502aff8597a",
+      "opportunities": 15000
+    },
+    {
+      "generation": 2,
+      "ledger": "results\\manifests\\phase1_20260713\\phase1\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "6a1afade67e428b2d8a379e4571f9d00e778ba9d1c1a6cb6fe7f8f407d98fefe",
+      "manifest": "results\\manifests\\phase1_20260713\\phase1\\generation_2\\generation_manifest.json",
+      "manifest_sha256": "3567268c329767d46edd67f85f48ef9a69a633f501fd8ad74f92502d7932d066",
+      "opportunities": 15000
+    },
+    {
+      "generation": 3,
+      "ledger": "results\\manifests\\phase1_20260713\\phase1\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "7eeffdb543e6edf8fbeb63bda4cf9696a43de508773f13bed40640122b7e911a",
+      "manifest": "results\\manifests\\phase1_20260713\\phase1\\generation_3\\generation_manifest.json",
+      "manifest_sha256": "e2dd35f22f4023c3dc7d3cd114fee12d68bc158a95092180f51774cd551a7752",
+      "opportunities": 15000
+    }
+  ],
+  "implementation_git_sha": "bcd2633570a72a7fbe5153926d337367a3bbf809",
+  "manifest_sha256": "d0f967fdd55299a1ae8a24eb7edb7cf3d68da4ef664299775a243a5b4334281a",
+  "phase": 1,
+  "phase_config_sha256": "5bcf37407cfe14f2495ae9c78899861682e1e8bc712bf899b5eb59ea6af527b0",
+  "run_id": "phase1_20260713",
+  "schema_version": "1.0.0",
+  "selection_sha256": "9b5421c82fe0ec0af7c484ca31edae941df0e3cbfbd66144e8d7f182b792857e",
+  "suite_config_sha256": "67cbc1da3ad109e246c7a9ddb8a54d787cb58f03990b725953a4872168012ed1"
+}

@@ -1,0 +1,32 @@
+{
+  "canonical_opportunities": 45000,
+  "generation_records": [
+    {
+      "checkpoint_sha256": "1d20048ef781346528dcfc790a4c7de5ec9f7b7a2fda8f42904c2bdc80dae938",
+      "generation": 1,
+      "methods": 16,
+      "records": 240000,
+      "trace_path": "results\\raw\\phase1_20260713\\phase1\\generation_1.parquet",
+      "trace_sha256": "b90ec11828fe9b6bb943de10f3b9927604fc1ebea35763da03904afddba810d8"
+    },
+    {
+      "checkpoint_sha256": "92613b7639d1717a9306eea885d7f4c59ff4b1ccff0e791ee1a99f47d674a3e1",
+      "generation": 2,
+      "methods": 23,
+      "records": 345000,
+      "trace_path": "results\\raw\\phase1_20260713\\phase1\\generation_2.parquet",
+      "trace_sha256": "9ea8504868746eef9a3a6649e05977f9e9b5e496ff40753b8f36354e235ae41c"
+    },
+    {
+      "checkpoint_sha256": "c2452876b4ccce28a270ffd77724befdc0c3de0ce1cff95657916bf13ac4f4c8",
+      "generation": 3,
+      "methods": 23,
+      "records": 345000,
+      "trace_path": "results\\raw\\phase1_20260713\\phase1\\generation_3.parquet",
+      "trace_sha256": "7d2fa3ba5b7aa43d24104ed08b339cfa17fe0c9047ea6ccce054fda6ddec849d"
+    }
+  ],
+  "implementation_git_sha": "bcd2633570a72a7fbe5153926d337367a3bbf809",
+  "run_id": "phase1_20260713",
+  "schema_version": "1.0.0"
+}
