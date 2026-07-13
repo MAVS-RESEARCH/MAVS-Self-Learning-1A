@@ -1,0 +1,102 @@
+{
+  "body": {
+    "adversarial_seeds": [
+      810001,
+      810002,
+      810003,
+      810004,
+      810005,
+      810006,
+      810007,
+      810008,
+      810009,
+      810010
+    ],
+    "certification_cases_file_sha256": "b083ccdb45ff3520134c7114500f8999aec89c57dd6f5137e0dc4208b23a535c",
+    "certification_cases_sha256": "efbb0422f88c59925b0a5d5dde1690a33d9a0d46e51bcff655dbbb83477676e6",
+    "curricula_count": 10,
+    "curriculum_counts": {
+      "R01": 2000,
+      "R02": 2000,
+      "R03": 2000,
+      "R04": 2000,
+      "R05": 2000,
+      "R06": 2000,
+      "R07": 2000,
+      "R08": 2000,
+      "R09": 2000,
+      "R10": 2000
+    },
+    "curriculum_manifest_sha256": "e99dad5032828c6b99a17618ca10254f03c0d1da7c2b541674bd41c501dda7ca",
+    "domains": [
+      "cyber_triage",
+      "financial_approval_proxy",
+      "multi_agent_operations",
+      "text_safety",
+      "tool_use"
+    ],
+    "generation": 3,
+    "hidden_outcomes_file_sha256": "ac7b96d7d41bd84d47f38fc2cff75ccb8f2361f2c5352b8f90f6bd6a478861bc",
+    "hidden_outcomes_sha256": "346c9686486c7d44c9d8056d5e1e669fc99dbf8f6c061e70f4875157f37695a0",
+    "hidden_repair_mechanisms_sha256": "e62e432ae1163ba41f81f1e4644a1eb7dc492f45243e53fbd2d1fbacba0c3f0c",
+    "holdout_seeds": [
+      710001,
+      710002,
+      710003,
+      710004,
+      710005,
+      710006,
+      710007,
+      710008,
+      710009,
+      710010
+    ],
+    "implementation_git_sha": "faf45c83ae3f5480aa1132802bebdf92031466b3",
+    "ledger_sha256": "e75bd7f8fb72c06a6b40911be1e874c498ea002375d8b25e25be029a04ab1644",
+    "operations": [
+      "recalibrate",
+      "scope_narrow",
+      "scope_expand",
+      "split",
+      "merge",
+      "add",
+      "retire",
+      "policy_interaction",
+      "configuration_specialization",
+      "evidence_recovery"
+    ],
+    "opportunity_count": 20000,
+    "opportunity_ids_sha256": "2dded56607b1315c90310b0784a38056000cf4edb27240674d40e7da1245cc58",
+    "participant_final_access": false,
+    "phase_config_sha256": "cf3c46e87826a81f49eb672e3b1ead98f6e51998fbab3445ccf7773dec666351",
+    "run_id": "phase3_20260713",
+    "schema_version": "1.0.0",
+    "stage_counts": {
+      "certification": 2000,
+      "containment": 1000,
+      "discovery": 2000,
+      "proposal": 1000,
+      "recurrence": 4000,
+      "rollback_challenge": 2000,
+      "shadow": 4000,
+      "transfer": 4000
+    },
+    "synthesis_seeds": [
+      610001,
+      610002,
+      610003,
+      610004,
+      610005,
+      610006,
+      610007,
+      610008,
+      610009,
+      610010
+    ],
+    "visible_schema_sha256": "f5a6323f978f53f902c44666db26fa2bf952f96d23375a54c9b4f9b56c1259a4",
+    "world_count": 200,
+    "world_seed_max": 550199,
+    "world_seed_min": 550000
+  },
+  "signature": "8b8a76c3635e97c53443aee2aa5c82947c7937853802e9866cb65f2139c6c3ca"
+}

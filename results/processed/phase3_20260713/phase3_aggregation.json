@@ -1,0 +1,15 @@
+{
+  "artifacts": {
+    "phase3_curriculum_metrics.parquet": "bf469f4b88a8bb7df28aae927c1ebca11f9f38f83e60034a9d60773064ddfdbf",
+    "phase3_rejected_candidates.parquet": "37991a83f94a6293f86786479c5f43d9a6bd567d7acdde3fcfe59963f274c808",
+    "phase3_summary.parquet": "71898f98246952600c4a9a5ef0cedcec74a3669203e3c710cef2fdd7ba8b8fc6"
+  },
+  "canonical_opportunities": 60000,
+  "claim_boundary": "controlled_mechanism_recovery_only",
+  "condition_decisions": 120000,
+  "curriculum_rows": 60,
+  "rejected_candidates": 60,
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0",
+  "summary_rows": 6
+}

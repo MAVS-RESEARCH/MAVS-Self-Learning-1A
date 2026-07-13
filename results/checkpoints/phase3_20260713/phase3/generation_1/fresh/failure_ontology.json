@@ -1,0 +1,441 @@
+{
+  "families": [
+    {
+      "causal_hypotheses": [
+        "severity",
+        "thresholds"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R01",
+        "domain": "text_safety"
+      },
+      "family_id": "family-calibration_residual",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "calibration_residual": 0.862315
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "text_safety"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by calibration_residual",
+      "severity_scale": {
+        "observed": 0.36
+      },
+      "status": "approved",
+      "version": 2
+    },
+    {
+      "causal_hypotheses": [
+        "selector",
+        "scope"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R02",
+        "domain": "tool_use"
+      },
+      "family_id": "family-selector_uncertainty",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "selector_uncertainty": 1.0
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "tool_use"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by selector_uncertainty",
+      "severity_scale": {
+        "observed": 0.871941
+      },
+      "status": "approved",
+      "version": 5
+    },
+    {
+      "causal_hypotheses": [
+        "evidence_availability",
+        "selector"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R06",
+        "domain": "text_safety"
+      },
+      "family_id": "family-novelty",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "novelty": 0.9
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "text_safety"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by novelty",
+      "severity_scale": {
+        "observed": 0.9
+      },
+      "status": "approved",
+      "version": 2
+    },
+    {
+      "causal_hypotheses": [
+        "evidence_availability",
+        "selector"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R06",
+        "domain": "text_safety"
+      },
+      "family_id": "family-evidence_masking",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "evidence_masking": 0.939668
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "text_safety"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by evidence_masking",
+      "severity_scale": {
+        "observed": 0.939668
+      },
+      "status": "approved",
+      "version": 2
+    },
+    {
+      "causal_hypotheses": [
+        "diagnostics",
+        "selector"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R07",
+        "domain": "tool_use"
+      },
+      "family_id": "family-counterfactual_instability",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "counterfactual_instability": 0.824927
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "tool_use"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by counterfactual_instability",
+      "severity_scale": {
+        "observed": 0.36
+      },
+      "status": "approved",
+      "version": 2
+    },
+    {
+      "causal_hypotheses": [
+        "mitigation",
+        "hard_veto"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R08",
+        "domain": "cyber_triage"
+      },
+      "family_id": "family-policy_conflict",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "policy_conflict": 0.905934
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "cyber_triage"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by policy_conflict",
+      "severity_scale": {
+        "observed": 0.36
+      },
+      "status": "approved",
+      "version": 2
+    },
+    {
+      "causal_hypotheses": [
+        "evidence_availability",
+        "selector"
+      ],
+      "confidence": 0.6,
+      "context_predicates": {
+        "curriculum_id": "R10",
+        "domain": "multi_agent_operations"
+      },
+      "family_id": "family-evidence_unavailable",
+      "known_confounders": [
+        "feedback_delay",
+        "evidence_reliability",
+        "scope_collision"
+      ],
+      "observable_signature": {
+        "evidence_unavailable": 1.0
+      },
+      "parent_ids": [],
+      "permissible_responses": [
+        "escalate",
+        "investigate",
+        "propose_bounded_candidate"
+      ],
+      "projections": [
+        "multi_agent_operations"
+      ],
+      "semantic_definition": "Provisional visible failure family dominated by evidence_unavailable",
+      "severity_scale": {
+        "observed": 1.0
+      },
+      "status": "approved",
+      "version": 2
+    }
+  ],
+  "genealogy": [
+    {
+      "children": [
+        "family-calibration_residual"
+      ],
+      "event_hash": "1597ffad880b1bf16b86be90da15ee80e3e8e65ed383f0879ef21eebfd0b5cb2",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 0
+    },
+    {
+      "children": [
+        "family-calibration_residual"
+      ],
+      "event_hash": "4f736941660c062c07c6ea01604c46cff54fbfb7ee9a00776e10ba8e524d8173",
+      "operation": "approve",
+      "parents": [
+        "family-calibration_residual"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 1
+    },
+    {
+      "children": [
+        "family-selector_uncertainty"
+      ],
+      "event_hash": "3125225905542322fcc86ab1b2adac912295cfb38c0d3e2bebd7b2bde5844ead",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 2
+    },
+    {
+      "children": [
+        "family-selector_uncertainty"
+      ],
+      "event_hash": "96a807442095bb0af6787790cb4beb8d02d967134571ba7f2a2707dbdafcc19c",
+      "operation": "approve",
+      "parents": [
+        "family-selector_uncertainty"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 3
+    },
+    {
+      "children": [
+        "family-selector_uncertainty"
+      ],
+      "event_hash": "d957c5729d98ac85163ff9ad555fa3260e93a6c06a4fd9e79f80d48935e7d5be",
+      "operation": "approve",
+      "parents": [
+        "family-selector_uncertainty"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 4
+    },
+    {
+      "children": [
+        "family-selector_uncertainty"
+      ],
+      "event_hash": "1f69ae8225650d817e39bb522c3e8b8ee30ed6c538236bfbdada71ae6ecfa4ba",
+      "operation": "approve",
+      "parents": [
+        "family-selector_uncertainty"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 5
+    },
+    {
+      "children": [
+        "family-selector_uncertainty"
+      ],
+      "event_hash": "aba3cd972a9950275f062c22c4a91bdc3941d8dc693a9e5fc9ab5c2e1456f69e",
+      "operation": "approve",
+      "parents": [
+        "family-selector_uncertainty"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 6
+    },
+    {
+      "children": [
+        "family-novelty"
+      ],
+      "event_hash": "dd9579e9e1e5f3d6b8776c1d75ffdcc3faab3cb01f170d20cd1c0f9413560293",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 7
+    },
+    {
+      "children": [
+        "family-evidence_masking"
+      ],
+      "event_hash": "c32bbd1ccefe5ea9238ec682fea683215712fbf6444ab607759ac155d5fa0c1c",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 8
+    },
+    {
+      "children": [
+        "family-evidence_masking"
+      ],
+      "event_hash": "8d3af4f6f86caded2275bc131150b959274b3d93da17001eed02f424b1b52da1",
+      "operation": "approve",
+      "parents": [
+        "family-evidence_masking"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 9
+    },
+    {
+      "children": [
+        "family-counterfactual_instability"
+      ],
+      "event_hash": "9a5fa921fc662b956dc501d97a45f9f693ea40caaf6872d6bdb584592d82e07f",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 10
+    },
+    {
+      "children": [
+        "family-counterfactual_instability"
+      ],
+      "event_hash": "e16306f5a46d1149e93c4d736d5e8c57adc9f20107a0e1b0ff685bfb88cd03ed",
+      "operation": "approve",
+      "parents": [
+        "family-counterfactual_instability"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 11
+    },
+    {
+      "children": [
+        "family-policy_conflict"
+      ],
+      "event_hash": "232938fa9a61181097709d0abb5241f69d23526dba46efd7c681c9d8041a482d",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 12
+    },
+    {
+      "children": [
+        "family-policy_conflict"
+      ],
+      "event_hash": "6e9055d878c9b6c767e646d57ae9aa5e80638bc133a5a2e88d6c0e236b0400bb",
+      "operation": "approve",
+      "parents": [
+        "family-policy_conflict"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 13
+    },
+    {
+      "children": [
+        "family-novelty"
+      ],
+      "event_hash": "d7261e1db977716eb2dc32d56ed34cad785ff906cd07d5d7c22e3c981baf5e6c",
+      "operation": "approve",
+      "parents": [
+        "family-novelty"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 14
+    },
+    {
+      "children": [
+        "family-evidence_unavailable"
+      ],
+      "event_hash": "33a7711e60a341a1c03b5324bb825d72ad8a973ac72c3dd03e6e326712bba050",
+      "operation": "add",
+      "parents": [],
+      "reason": "counterexample_trigger",
+      "sequence": 15
+    },
+    {
+      "children": [
+        "family-evidence_unavailable"
+      ],
+      "event_hash": "5041f942fffff75e3cd2faf043c74aeeab3898309c20d128f1ddc52b9b8f5c76",
+      "operation": "approve",
+      "parents": [
+        "family-evidence_unavailable"
+      ],
+      "reason": "candidate_promoted_after_full_certification",
+      "sequence": 16
+    }
+  ]
+}

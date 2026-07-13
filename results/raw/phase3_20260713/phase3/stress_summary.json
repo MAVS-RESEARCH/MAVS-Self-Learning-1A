@@ -1,0 +1,54 @@
+{
+  "canonical_opportunities": 60000,
+  "condition_decisions": 120000,
+  "implementation_git_sha": "faf45c83ae3f5480aa1132802bebdf92031466b3",
+  "learning_artifacts_sha256": "906ecdc9db8dd3ee04f52dee9d73e8eded908463fa51ab1fdca08adf571b4477",
+  "repair_curricula": 60,
+  "repair_events_sha256": "97214e4f088fc1be0c369d087b7dbe6ac0d22d0767e80f434ca58e3cb34aba0f",
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0",
+  "trace_files": [
+    {
+      "canonical_decisions": 20000,
+      "condition": "cumulative",
+      "generation": 1,
+      "trace_path": "results\\raw\\phase3_20260713\\phase3\\generation_1_cumulative.parquet",
+      "trace_sha256": "6d9f74be00a53c3e04dc2300f7ab4e1d583c3e7a6f95c254f64c1d4673a47fdd"
+    },
+    {
+      "canonical_decisions": 20000,
+      "condition": "fresh",
+      "generation": 1,
+      "trace_path": "results\\raw\\phase3_20260713\\phase3\\generation_1_fresh.parquet",
+      "trace_sha256": "fcac62d9742d16f06a4e6b07913613b409035bfdcdd94fb80f32f1a232d9037d"
+    },
+    {
+      "canonical_decisions": 20000,
+      "condition": "cumulative",
+      "generation": 2,
+      "trace_path": "results\\raw\\phase3_20260713\\phase3\\generation_2_cumulative.parquet",
+      "trace_sha256": "902f037429ef2031b5627d8640510b6417d8627e2fbc24b3efa4a3fe98e68df0"
+    },
+    {
+      "canonical_decisions": 20000,
+      "condition": "fresh",
+      "generation": 2,
+      "trace_path": "results\\raw\\phase3_20260713\\phase3\\generation_2_fresh.parquet",
+      "trace_sha256": "ac76217878ac4c4700c52d8017968e28e28e3edd1fa13925f2e1f69234510c13"
+    },
+    {
+      "canonical_decisions": 20000,
+      "condition": "cumulative",
+      "generation": 3,
+      "trace_path": "results\\raw\\phase3_20260713\\phase3\\generation_3_cumulative.parquet",
+      "trace_sha256": "30352de8eb322888f79c8dfd6fe79758beb41a6406f8acac3bfc6d8feb5229b6"
+    },
+    {
+      "canonical_decisions": 20000,
+      "condition": "fresh",
+      "generation": 3,
+      "trace_path": "results\\raw\\phase3_20260713\\phase3\\generation_3_fresh.parquet",
+      "trace_sha256": "7b6de0451e80f90734ba5d26ed75a9e81f904a855f15f0cc29da607e28b0c83b"
+    }
+  ]
+}

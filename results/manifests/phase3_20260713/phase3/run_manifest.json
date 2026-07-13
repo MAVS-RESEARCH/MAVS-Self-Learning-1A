@@ -1,0 +1,50 @@
+{
+  "canonical_opportunities": 60000,
+  "claim_boundary": "controlled_mechanism_recovery_only",
+  "conditions": [
+    "cumulative",
+    "fresh"
+  ],
+  "curriculum_manifest_sha256": "e99dad5032828c6b99a17618ca10254f03c0d1da7c2b541674bd41c501dda7ca",
+  "environment_packages": {
+    "pyarrow": "21.0.0",
+    "python": "3.13.7"
+  },
+  "generations": [
+    {
+      "certification_cases": 3240,
+      "generation": 1,
+      "ledger": "results\\manifests\\phase3_20260713\\phase3\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "447c68f1154297107f5825cc633a6825458490294443a623a4d9c5deee4aa19b",
+      "manifest": "results\\manifests\\phase3_20260713\\phase3\\generation_1\\generation_manifest.json",
+      "manifest_sha256": "5b081d119c1e2c33c814dc8cbacde6a190c03132e940db08a4188d15516a1a53",
+      "opportunities": 20000
+    },
+    {
+      "certification_cases": 3240,
+      "generation": 2,
+      "ledger": "results\\manifests\\phase3_20260713\\phase3\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "5895ba64f74be00d255543ed1ca67757ac19c756557ac344702ebce6a4bdd1ba",
+      "manifest": "results\\manifests\\phase3_20260713\\phase3\\generation_2\\generation_manifest.json",
+      "manifest_sha256": "38d7f63404a13ae58a3628da01e9d88f96600ec6e1725726cf14ae57815215af",
+      "opportunities": 20000
+    },
+    {
+      "certification_cases": 3240,
+      "generation": 3,
+      "ledger": "results\\manifests\\phase3_20260713\\phase3\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "e75bd7f8fb72c06a6b40911be1e874c498ea002375d8b25e25be029a04ab1644",
+      "manifest": "results\\manifests\\phase3_20260713\\phase3\\generation_3\\generation_manifest.json",
+      "manifest_sha256": "76861038a4a28f2c5978d814fcef29763b0fae373b84df98fc1febca89524479",
+      "opportunities": 20000
+    }
+  ],
+  "implementation_git_sha": "faf45c83ae3f5480aa1132802bebdf92031466b3",
+  "manifest_sha256": "42b23fff3a0bbfb3b4a0822e4165fd903099fdc3640ad3ab4861ae5f0ca76f7f",
+  "model_training": "none",
+  "phase": 3,
+  "phase_config_sha256": "cf3c46e87826a81f49eb672e3b1ead98f6e51998fbab3445ccf7773dec666351",
+  "post_holdout_retuning": false,
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0"
+}

@@ -774,6 +774,62 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 | `scripts/audit_phase3.py` | 187 | 188 | `phase3.audit.step01.start` |
 | `scripts/audit_phase3.py` | 193 | 194 | `phase3.audit.step02.complete` |
 
+### P3-E007 - Frozen implementation and authoritative Phase 3 execution
+
+- Frozen implementation commit: `faf45c83ae3f5480aa1132802bebdf92031466b3` (`feat: freeze phase 3 autonomous repair loop`). The authoritative run manifest, all six decision traces, checkpoint manifests, and inherited smoke trace bind this exact SHA. No Phase 3 source, schema, test, configuration, or curriculum changed after the freeze.
+- Run ID and command: `phase3_20260713`; `node scripts/run_phase3.mjs --run-id phase3_20260713`, with stdout/stderr preserved. Execution window from preserved file timestamps: 2026-07-13 21:35:02 through 21:48:23 Asia/Karachi. Wall time reported by the command runner: 801.3 seconds.
+- Scoped clean reported `removed: []`; no prior accepted result namespace was deleted or modified. The earlier `phase3_preflight` namespace had already been removed and an exhaustive result-tree search found no remaining preflight path.
+- Authoritative inventory: 89 files, 179,912,561 bytes. Namespaces: 14 manifests/51,550,674 bytes; 10 raw files/37,095,001 bytes; 42 checkpoint files/59,254,114 bytes; four processed files/52,761 bytes; 19 report/card/log files/31,960,011 bytes.
+- The orchestrator completed all 18 console steps and all 14 evidence steps: scoped clean, inherited tests, signed compilation, separation, stress, trace validation without cards, card creation, update validation, library inspection, trace/card validation, aggregation, Phase 3 tests, full regression, inherited smoke, evidence record, and independent audit. Every subprocess exited zero.
+- Frozen workload: 60,000 canonical opportunities and 120,000 matched cumulative/fresh decisions. Each generation has exactly 200 worlds, ten curricula, 20,000 canonical opportunities, every one of ten operations, and the exact eight-stage allocation. Ledger hashes: G1 `447C68F1154297107F5825CC633A6825458490294443A623A4D9C5DEEE4AA19B`; G2 `5895BA64F74BE00D255543ED1CA67757AC19C756557AC344702EBCE6A4BDD1BA`; G3 `E75BD7F8FB72C06A6B40911BE1E874C498EA002375D8B25E25BE029A04AB1644`.
+- Trace hashes: G1 cumulative `6D9F74BE00A53C3E04DC2300F7AB4E1D583C3E7A6F95C254F64C1D4673A47FDD`; G1 fresh `FCAC62D9742D16F06A4E6B07913613B409035BFDCDD94FB80F32F1A232D9037D`; G2 cumulative `902F037429EF2031B5627D8640510B6417D8627E2FBC24B3EFA4A3FE98E68DF0`; G2 fresh `AC76217878AC4C4700C52D8017968E28E28E3EDD1FA13925F2E1F69234510C13`; G3 cumulative `30352DE8EB322888F79C8DFD6FE79758BEB41A6406F8ACAC3BFC6D8FEB5229B6`; G3 fresh `7B6DE0451E80F90734BA5D26ED75A9E81F904A855F15F0CC29DA607E28B0C83B`.
+- Standard error is empty: zero bytes, SHA-256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`. Console log: 34,360 bytes, SHA-256 `7369577B6A6CDF006933AC83C1F4A79D45610F8DA19D43E78F929932074ED553`.
+
+### P3-E008 - Authoritative metrics, lifecycle, and rejected-candidate evidence
+
+- Six summary rows and 60 curriculum rows contain every required metric. Processed hashes: summary `71898F98246952600C4A9A5EF0CEDCEC74A3669203E3C710CEF2FDD7BA8B8FC6`; curriculum metrics `BF469F4B88A8BB7DF28AAE927C1EBCA11F9F38F83E60034A9D60773064DDFDBF`; rejected candidates `37991A83F94A6293F86786479C5F43D9A6BD567D7ACDDE3FCFE59963F274C808`.
+
+| Gen | Condition | TTD | TTC | TTR | Recurrence | Esc. contraction | Cert. P/R | Beneficial yield | Harmful proposal/promotion | Rollback | Perception | Leakage | Active/total library | UAR | FRR |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | cumulative | 0.0 | 0.0 | 696.5 | 0.0 | 0.397286 | 1.0/1.0 | 0.5 | 0.5/0.0 | 1.0 | 1.0 | 0.0 | 11/21 | 0.001199 | 0.000832 |
+| 1 | fresh | 0.0 | 0.0 | 696.5 | 0.0 | 0.397286 | 1.0/1.0 | 0.5 | 0.5/0.0 | 1.0 | 1.0 | 0.0 | 11/21 | 0.001199 | 0.000832 |
+| 2 | cumulative | 0.0 | 0.0 | 697.7 | 0.0 | 0.410571 | 1.0/1.0 | 0.5 | 0.5/0.0 | 1.0 | 1.0 | 0.0 | 21/41 | 0.000328 | 0.000737 |
+| 2 | fresh | 0.0 | 0.0 | 695.6 | 0.0 | 0.409286 | 1.0/1.0 | 0.5 | 0.5/0.0 | 1.0 | 1.0 | 0.0 | 11/21 | 0.000656 | 0.001289 |
+| 3 | cumulative | 0.0 | 0.0 | 697.6 | 0.0 | 0.417143 | 1.0/1.0 | 0.5 | 0.5/0.0 | 1.0 | 1.0 | 0.0 | 31/61 | 0.000866 | 0.000372 |
+| 3 | fresh | 0.0 | 0.0 | 696.0 | 0.0 | 0.415857 | 1.0/1.0 | 0.5 | 0.5/0.0 | 1.0 | 1.0 | 0.0 | 11/21 | 0.001408 | 0.000743 |
+
+- `TTD` is first trigger eligibility to detection and `TTC` is detection to containment; both are zero because the monitor and fail-closed containment transition execute on the same observable event. `TTR` is detection to promotion after the pre-registered step-400 certification and step-700 shadow/promotion schedule, not a training epoch count.
+- Lifecycle inventory: 60 repair events, 120 proposals, 120 candidates, 120 certificates, 60 beneficial promotions, 60 harmful/mismatched rejections, 60 rollback rehearsals, six genealogy reports, 20 consolidation actions, 14,114 failure capsules, and 14,023 uncertainty entries. All 60 accepted candidates pass all kernel, replay, holdout, boundary, counterfactual, adversarial, scope, invariant, shadow, trace, Pareto, rollback, and operation constraints. All 60 rejected candidates remain queryable with certificate and reason lineage.
+- Trigger counts: recurring escalation 60, unexplained novelty 30, confirmed error 29, scope leakage 6, instability 6. The required significant-regression path is directly machine-tested and audit-executed but is absent from authoritative post-promotion events because recurrence is zero. Six repair lifecycles prevented a confirmable error through earlier visible containment; none uses hidden state.
+- Error/card bijection: 104 terminal errors, 104 strict terminal-error cards, and 104 unique immutable trace lineages. There are no missing, duplicate, extra, or hash-mismatched cards. Terminal error card SHA-256: `2D8FDB4ADC6618B7B0F6A2409DBE7894E0087FA9B8BC1F3C364E4CF1E91F5CC2`.
+- Raw lifecycle hashes: repair events `97214E4F088FC1BE0C369D087B7DBE6AC0D22D0767E80F434CA58E3CB34ABA0F`; learning artifacts `906ECDC9DB8DD3EE04F52DEE9D73E8EDED908463FA51AB1FDCA08ADF571B4477`.
+- Exit gates: harmful promoted-update rate is exactly zero; median recurrence is zero in every generation/condition; recurrence rate is zero; rollback correctness, trace completeness, certification precision/recall, and held-out perception gain are all `1.0`; scope leakage is zero. Cumulative active library size reaches 31 in G3 and remains below the fixed maximum 32.
+
+### P3-E009 - WorkPlan Section 10 compliance matrix and independent audit
+
+| WorkPlan requirement | Authoritative evidence | Result |
+|---|---|---|
+| Full memory/ontology/meta/contrast/attribution/proposal/certification/promotion/quarantine/rollback/genealogy/reuse loop | Thirteen self-learning modules; six checkpoints; 60 complete repair lifecycles; library inspector zero errors | PASS |
+| Disable, broaden, corrupt, and add recoverable novel mechanisms without disclosure | Ten hidden mechanisms across all intervention classes; participant hidden-access lists empty | PASS |
+| All named file/schema/config/script classes | Ten curricula, Phase 3 config, fourteen schemas, ten pipeline scripts, metrics/compiler/package/tests; required-file audit all true | PASS |
+| Approved-only immutable fast loop before feedback | Selector tests and trace validator; 120,000 trace rows; pre-feedback field scan and complete hash chains | PASS |
+| Six slow-loop trigger classes | Five classes observed in zero-recurrence run; all six machine-detectable in audit; significant-regression negative state covered | PASS |
+| Minimal contrasts and nine-component attribution | Context-stratified nearest safe/unsafe/FRR/UAR/escalation investigation cards; capsule attribution maps every named component | PASS |
+| Least-complex explicit serializable grammar; no unrestricted code | Ten versioned operations; grammar operation count 10; `unrestricted_generated_code_absent: true`; harmful alternatives rejected | PASS |
+| Complete candidate declarations | 120 schema-valid proposal/candidate pairs with every WorkPlan declaration and content hash | PASS |
+| Every named promotion gate and mandatory operation constraint | 120 full certificates; exactly one passing operation per curriculum/generation/condition; update validator zero errors | PASS |
+| Ten x 2,000 decisions with eight stages | 20,000 per generation, exact stage counts, 200 worlds, ten operation curricula | PASS |
+| Synthesis/holdout/adversarial disjointness and no overfit | Mutually disjoint seed namespaces; hidden mechanisms separate; participant final access false; no model/training/retuning | PASS |
+| Required outputs and rejected-candidate inventory | Six complete summary rows, 60 curriculum rows, 60 rejected-candidate rows; no null required metric | PASS |
+| Zero harmful updates and median recurrence zero | Maximum harmful promotion `0.0`; maximum median recurrence `0.0`; exact rejected harmful inventory | PASS |
+| State machine, rollback, regression, and logging | 24 Phase 3 tests; 182 full tests; 60/60 rollbacks; eight smoke records; 36/36 comment pairs | PASS |
+| Determinism and evidence integrity | Six trace hashes, repair-event hash, and learning-artifact hash reproduced exactly in isolated replay | PASS |
+| Claim boundary | Manifest/audit restrict claim to controlled recoverable mechanisms; no superiority, deployment, Phase 4, or Pareto claim | PASS |
+
+- Independent audit artifact: `results/reports/phase3_20260713/phase3_audit.json`, SHA-256 `995901CE490521E0B2CE1C0F8688727AFD0DE9FD6A93BD07EDEE9670B0378C6C`, top-level `passed: true`. It reports exact generation allocations, complete metrics, zero harmful promotions, zero recurrence, complete card lineage, all trigger checks, operation count ten, no unrestricted code, no participant hidden access, zero separation/trace/update/library/console errors, complete orchestration, eight inherited smoke rows, and exact deterministic replay.
+- Pre-documentation verdict: Phase 3 is technically complete and 100% compliant with WorkPlan Section 10 and every inherited gate applicable to this phase. No open compliance gap, failed certification, unrecorded rejection, benchmark leakage, trained-on-holdout component, placeholder result, or unresolved implementation defect remains. Closure remains pending only until the authoritative evidence and this record are committed, the audit is rerun from the evidence successor commit without modifying frozen inputs, and the accepted state is pushed.
+- Claim restriction: this verdict certifies the controlled three-generation synthetic mechanism-recovery phase. It does not establish baseline superiority, deployment readiness, universal self-learning, unrestricted autonomous code changes, or Pareto-frontier expansion; those are later-phase questions.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -798,10 +854,10 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
 | 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
 | 2 | Corruption, correlated collapse, and partial observability | Complete | P2-E000 through P2-E011; authoritative and post-evidence deterministic audits pass |
-| 3 | Autonomous failure discovery and self-repair | In progress | P3-E000 through P3-E006; corrected implementation and preflight audit pass; freeze/authoritative run pending |
+| 3 | Autonomous failure discovery and self-repair | In progress | P3-E000 through P3-E009; frozen authoritative run/audit pass; evidence commit and post-documentation control pending |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Not started | None |
 
 ## Current checkpoint
 
-Phase 0, Phase 1, and Phase 2 are complete and frozen. Phase 3 code and corrected disposable preflight are complete under P3-E000 through P3-E006 with no open code-level gap. The next gate is removal of disposable evidence, implementation freeze, and a clean authoritative Phase 3 run. No Phase 4 work is authorized.
+Phase 0, Phase 1, and Phase 2 are complete and frozen. Phase 3 frozen implementation and authoritative evidence pass under P3-E000 through P3-E009 with no open technical gap. The next gate is the evidence commit, post-documentation deterministic control, closure commit, and push. No Phase 4 work is authorized.

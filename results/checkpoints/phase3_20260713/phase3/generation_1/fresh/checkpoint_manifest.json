@@ -1,0 +1,30 @@
+{
+  "active_library_size": 11,
+  "checkpoint_hash": "cd213dfda5910f43c7d6a6773de40d2ef7fe6bee40dd4f63266e1e5ab1be0901",
+  "condition": "fresh",
+  "failure_capsules": 2295,
+  "files": {
+    "append_only_memory.parquet": "8d7ab94262c8b44e659473a7bcb1850a659105f0de4ec9f97ad62c49689865a9",
+    "configuration_library.json": "b9bbe231f214f3916787cf10d83584f67fa79ecdf2ca9cc81ff301530f97066f",
+    "failure_capsules.parquet": "59e71f8119008bb59a419f57d6a09fd6e1dae5861f319afa4f7c7fe735426aee",
+    "failure_ontology.json": "ea282ed21d454d70e3d31ae3aace3e580eb1c98afe7bfbb4d510be6cc3ba28d1",
+    "retained_counterexamples.parquet": "89313ff2ec52b757cc1bc8b0eae5ab5615b65a3826409ea0e1c028ae9137145b",
+    "uncertainty_ledger.parquet": "74bded7c52c59978c8dc4be0bb0286e8d68a6b2f9c176affeccb7687ee00c759"
+  },
+  "forbidden_state_audit": {
+    "future_manifest_absent": true,
+    "hidden_label_absent": true,
+    "raw_answer_key_absent": true
+  },
+  "generation": 1,
+  "library_hash": "32fdc24fb92aa71117b07adfb8cdf75844133dca6be574ad7de45b3b8dd7ce5b",
+  "memory_chain_valid": true,
+  "memory_head_hash": "a1eb11e07090317c29c5f08ebe3d7b9b83817f40d125a7ee8926be284b64f13a",
+  "memory_records": 36311,
+  "ontology_hash": "3cfc31aab945b2086aa2e8541913152691e9838d3278c0652228ccabee8a206d",
+  "retained_counterexamples": 16231,
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0",
+  "total_library_size": 21,
+  "uncertainty_entries": 2277
+}

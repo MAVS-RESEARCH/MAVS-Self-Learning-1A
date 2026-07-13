@@ -1,0 +1,86 @@
+{
+  "checkpoints": {
+    "generation_1_cumulative": {
+      "active_library_size": 11,
+      "failure_capsules": 2295,
+      "file_errors": [],
+      "invalid_approved": [],
+      "library_hash": "745a99e1594b90fc45be82b96e921fe87c8763fa7405ecccc66fb1b751052913",
+      "memory_head_hash": "fe7f53c3817f6c9f2a35ba9ed4dbe25eb0bbae047812e89de59cb2debe2a2012",
+      "memory_records": 36311,
+      "ontology_hash": "3cfc31aab945b2086aa2e8541913152691e9838d3278c0652228ccabee8a206d",
+      "retained_counterexamples": 16231,
+      "total_library_size": 21,
+      "uncertainty_entries": 2277
+    },
+    "generation_1_fresh": {
+      "active_library_size": 11,
+      "failure_capsules": 2295,
+      "file_errors": [],
+      "invalid_approved": [],
+      "library_hash": "32fdc24fb92aa71117b07adfb8cdf75844133dca6be574ad7de45b3b8dd7ce5b",
+      "memory_head_hash": "a1eb11e07090317c29c5f08ebe3d7b9b83817f40d125a7ee8926be284b64f13a",
+      "memory_records": 36311,
+      "ontology_hash": "3cfc31aab945b2086aa2e8541913152691e9838d3278c0652228ccabee8a206d",
+      "retained_counterexamples": 16231,
+      "total_library_size": 21,
+      "uncertainty_entries": 2277
+    },
+    "generation_2_cumulative": {
+      "active_library_size": 21,
+      "failure_capsules": 2381,
+      "file_errors": [],
+      "invalid_approved": [],
+      "library_hash": "34dc1a3c15706e4e7542e95c2eb2dbe9f0ad11cb6fffd21540119d04bbb99562",
+      "memory_head_hash": "1272099947f2368ce85d4aeadc5f2f2916cba0141a82e967927ae013941ce42e",
+      "memory_records": 36466,
+      "ontology_hash": "adb32024fcd9f4c2e7921a640f2c9b222ce4899c61859a6c0df2170a307614b0",
+      "retained_counterexamples": 16386,
+      "total_library_size": 41,
+      "uncertainty_entries": 2373
+    },
+    "generation_2_fresh": {
+      "active_library_size": 11,
+      "failure_capsules": 2381,
+      "file_errors": [],
+      "invalid_approved": [],
+      "library_hash": "d9f24df4bf6a71f5bdc4e6decd4f0c867904d53cade5e8dbd248a534bf681a22",
+      "memory_head_hash": "ed03fb842205439a53134ec40783a0210f44d4464b7b2f6027dbaa9f14292af9",
+      "memory_records": 36466,
+      "ontology_hash": "3c6ba5a437ca5c1179e6dbf3443339c986d9580ffb16161bd072ad20815af638",
+      "retained_counterexamples": 16386,
+      "total_library_size": 21,
+      "uncertainty_entries": 2365
+    },
+    "generation_3_cumulative": {
+      "active_library_size": 31,
+      "failure_capsules": 2381,
+      "file_errors": [],
+      "invalid_approved": [],
+      "library_hash": "65b1b24992e1f4194cd25ba7d983730ddb819b3537abc9b6584fce7e2725f267",
+      "memory_head_hash": "3968b33874d7ee37fc01c6d5e6122bd3231ef050e57d9385790637c63bae30f6",
+      "memory_records": 36388,
+      "ontology_hash": "ac0f3d62d61128dc409074709b46ee75ee2c4865f996d6e9596ff518864c62f4",
+      "retained_counterexamples": 16308,
+      "total_library_size": 61,
+      "uncertainty_entries": 2370
+    },
+    "generation_3_fresh": {
+      "active_library_size": 11,
+      "failure_capsules": 2381,
+      "file_errors": [],
+      "invalid_approved": [],
+      "library_hash": "f54f0f2edb75597b2e558ca8d9598ff4d697d7aa3921aa2dbcc66309c650b567",
+      "memory_head_hash": "be03323b0d9133a0819e6aef49690b021315bcf5465af66f7d4d8a5e5678f8d3",
+      "memory_records": 36388,
+      "ontology_hash": "405c54272f214984e3b71e43c826d5e255e4319f4d25ef306e2faca49ac9222c",
+      "retained_counterexamples": 16308,
+      "total_library_size": 21,
+      "uncertainty_entries": 2361
+    }
+  },
+  "errors": [],
+  "passed": true,
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0"
+}

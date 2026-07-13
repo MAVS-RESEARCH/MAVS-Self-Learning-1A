@@ -1,0 +1,88 @@
+{
+  "artifacts": {
+    "candidates": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\candidates.jsonl",
+      "records": 120,
+      "schema": "phase3_candidate_configuration.schema.json",
+      "sha256": "8e791be502a374ffb98b1e503510f79cb29238e4ddde9c2cd6231e280923625a"
+    },
+    "certifications": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\certifications.jsonl",
+      "records": 120,
+      "schema": "phase3_certification_card.schema.json",
+      "sha256": "df31779d84073cd82202e642f1f51847c08afeee3eedf45db2f168fda504e07e"
+    },
+    "consolidations": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\consolidations.jsonl",
+      "records": 20,
+      "schema": "phase3_consolidation_card.schema.json",
+      "sha256": "366158cf18f776871afa80c7d6f5c198bbfcb2f303690ac9e39cf5581390e8e4"
+    },
+    "failure_capsules": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\failure_capsules.jsonl",
+      "records": 14114,
+      "schema": "phase3_failure_capsule.schema.json",
+      "sha256": "60fafd2c9c3c7d31673997e421526f8e098e95c289f3c06909ca63804c9c5d69"
+    },
+    "genealogies": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\genealogies.jsonl",
+      "records": 6,
+      "schema": "phase3_genealogy_report.schema.json",
+      "sha256": "ac546104666c9cb569d1f52e9c5227e8c6118da2864dcf2bdce87cfd8baae7eb"
+    },
+    "investigations": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\investigations.jsonl",
+      "records": 60,
+      "schema": "phase3_investigation_card.schema.json",
+      "sha256": "0b1735a6f05c0258816254a19ec2dc79eb3c0d653da53f7e8ca624045805e8de"
+    },
+    "learning_events": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\learning_events.jsonl",
+      "records": 60,
+      "schema": "phase3_learning_event.schema.json",
+      "sha256": "c3faa45595c715c5a7dcdfccf916b7a7444c3734b5076901fbf5c299cc3ebf42"
+    },
+    "promotions": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\promotions.jsonl",
+      "records": 60,
+      "schema": "phase3_promotion_card.schema.json",
+      "sha256": "8f61aeaa75590f2ddebafc7aafe607586f4df4155b73849928b4745e46d1b8e0"
+    },
+    "proposals": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\proposals.jsonl",
+      "records": 120,
+      "schema": "phase3_proposal_card.schema.json",
+      "sha256": "8619f5a2b63abdc39dfded4e23a0e89ba8326201b2dda82fd314972981786d8a"
+    },
+    "rejected_candidates": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\rejected_candidates.jsonl",
+      "records": 60,
+      "schema": "phase3_rejected_candidate.schema.json",
+      "sha256": "67554a1385576cbf0ceaad4076757a493cc039ee4f35b2aaedfc6f151d31222e"
+    },
+    "rollbacks": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\rollbacks.jsonl",
+      "records": 60,
+      "schema": "phase3_rollback_card.schema.json",
+      "sha256": "8bc9ebb00135e7bbf29ab1aebfda35d0e980717259a7c5ce7c89b4d56d68ad7e"
+    },
+    "terminal_errors": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\terminal_errors.jsonl",
+      "records": 104,
+      "schema": "phase3_terminal_error_card.schema.json",
+      "sha256": "2d8fdb4adc6618b7b0f6a2409dbe7894e0087fa9b8bc1f3c364e4cf1e91f5cc2"
+    },
+    "uncertainty_entries": {
+      "path": "results\\reports\\phase3_20260713\\phase3_cards\\uncertainty_entries.jsonl",
+      "records": 14023,
+      "schema": "phase3_uncertainty_entry.schema.json",
+      "sha256": "133cd6f294df8c8777cad146dfa8f887166369a69b2e2985c6ed361bcb9e4b93"
+    }
+  },
+  "manifest_hash": "7a6269c5aa44d5d24a2a8c98b720c7450ad55e9b98ccf652abaf0ccd8aecac4b",
+  "promoted_candidates": 60,
+  "rollback_configurations": 60,
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0",
+  "terminal_error_lineages": 104
+}

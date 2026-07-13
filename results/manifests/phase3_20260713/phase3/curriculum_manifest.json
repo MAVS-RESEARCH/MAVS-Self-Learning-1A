@@ -1,0 +1,50 @@
+{
+  "curricula_count": 10,
+  "curriculum_config_hashes": {
+    "R01_recalibrate.yaml": "f18cfdce27dfba544ea14f5ff5f27eb7601fe140b5041f654121f53ca10ae794",
+    "R02_scope_narrow.yaml": "14e4cbbd692b7764e0164deb298df0a24e6622957c6d84a3a1f9b351e45cc09a",
+    "R03_scope_expand.yaml": "094deb6330b7e219fe0f382002c0fa891354b46bb115e17cb0c1c7afd3c37e5f",
+    "R04_split.yaml": "384960f27e9e3e332300febd1a5cab85108bc9a1266bf85b33a1098764c8e191",
+    "R05_merge.yaml": "9846ea22bba508a872ed15f44b9d08a7534543c676e6ba77affa44980576d152",
+    "R06_add.yaml": "296066c60f59a0a4c001c4ba9cc838cc55cce7693ea01a90f344d86bb6efa1cb",
+    "R07_retire.yaml": "ae90f44489da9085057c420bea5cbf523a5f10dae5bf233f7c04b7f884d80eb2",
+    "R08_policy_interaction.yaml": "ca8c42771e0a14a8f0f0f1895545cb7a88025e0cb4ec7863645b408845e7d147",
+    "R09_configuration_specialization.yaml": "cab899789aa885e2154dcc1143097de5a1e7ff5b16b07905bd00ffcb2b7b7888",
+    "R10_evidence_recovery.yaml": "2e531be89927a87c7e15e57754911eb64008a081f36ebe3c2efe296fc69867ea"
+  },
+  "curriculum_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10"
+  ],
+  "domains": [
+    "cyber_triage",
+    "financial_approval_proxy",
+    "multi_agent_operations",
+    "text_safety",
+    "tool_use"
+  ],
+  "manifest_sha256": "e99dad5032828c6b99a17618ca10254f03c0d1da7c2b541674bd41c501dda7ca",
+  "model_training": "none",
+  "operations": [
+    "recalibrate",
+    "scope_narrow",
+    "scope_expand",
+    "split",
+    "merge",
+    "add",
+    "retire",
+    "policy_interaction",
+    "configuration_specialization",
+    "evidence_recovery"
+  ],
+  "proposal_synthesis_has_final_access": false,
+  "schema_version": "1.0.0"
+}

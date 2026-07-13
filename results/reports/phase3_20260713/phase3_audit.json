@@ -1,0 +1,515 @@
+{
+  "checks": {
+    "cards": {
+      "genealogies": 6,
+      "promotions": 60,
+      "rejected_candidates": 60,
+      "rollbacks": 60,
+      "terminal_error_cards": 104,
+      "terminal_errors": 104,
+      "unique_terminal_lineages": 104
+    },
+    "claim_boundary": true,
+    "console_registry": {
+      "errors": [],
+      "records": [
+        {
+          "comment": "// console.log: phase3.orchestrator.step01.start",
+          "comment_line": 17,
+          "event": "phase3.orchestrator.step01.start",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 18
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step02.clean_phase3_run",
+          "comment_line": 20,
+          "event": "phase3.orchestrator.step02.clean_phase3_run",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 21
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step03.inherited_tests_before",
+          "comment_line": 25,
+          "event": "phase3.orchestrator.step03.inherited_tests_before",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 26
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step04.compile_ledgers",
+          "comment_line": 30,
+          "event": "phase3.orchestrator.step04.compile_ledgers",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 31
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step05.validate_separation",
+          "comment_line": 35,
+          "event": "phase3.orchestrator.step05.validate_separation",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 36
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step06.execute_stress",
+          "comment_line": 40,
+          "event": "phase3.orchestrator.step06.execute_stress",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 41
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step07.validate_traces_without_cards",
+          "comment_line": 45,
+          "event": "phase3.orchestrator.step07.validate_traces_without_cards",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 46
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step08.create_cards",
+          "comment_line": 50,
+          "event": "phase3.orchestrator.step08.create_cards",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 51
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step09.validate_updates",
+          "comment_line": 55,
+          "event": "phase3.orchestrator.step09.validate_updates",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 56
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step10.inspect_library",
+          "comment_line": 60,
+          "event": "phase3.orchestrator.step10.inspect_library",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 61
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step11.validate_traces_and_cards",
+          "comment_line": 65,
+          "event": "phase3.orchestrator.step11.validate_traces_and_cards",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 66
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step12.aggregate_metrics",
+          "comment_line": 70,
+          "event": "phase3.orchestrator.step12.aggregate_metrics",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 71
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step13.phase3_tests",
+          "comment_line": 75,
+          "event": "phase3.orchestrator.step13.phase3_tests",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 76
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step14.full_regression",
+          "comment_line": 80,
+          "event": "phase3.orchestrator.step14.full_regression",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 81
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step15.final_inherited_smoke",
+          "comment_line": 85,
+          "event": "phase3.orchestrator.step15.final_inherited_smoke",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 86
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step16.write_evidence",
+          "comment_line": 91,
+          "event": "phase3.orchestrator.step16.write_evidence",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 92
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step17.audit",
+          "comment_line": 97,
+          "event": "phase3.orchestrator.step17.audit",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 98
+        },
+        {
+          "comment": "// console.log: phase3.orchestrator.step18.complete",
+          "comment_line": 101,
+          "event": "phase3.orchestrator.step18.complete",
+          "file": "scripts/run_phase3.mjs",
+          "matched": true,
+          "statement_line": 102
+        },
+        {
+          "comment": "# console.log: phase3.compile.step01.start",
+          "comment_line": 127,
+          "event": "phase3.compile.step01.start",
+          "file": "scripts/compile_phase3_ledgers.py",
+          "matched": true,
+          "statement_line": 128
+        },
+        {
+          "comment": "# console.log: phase3.compile.step02.complete",
+          "comment_line": 130,
+          "event": "phase3.compile.step02.complete",
+          "file": "scripts/compile_phase3_ledgers.py",
+          "matched": true,
+          "statement_line": 131
+        },
+        {
+          "comment": "# console.log: phase3.separation.step01.start",
+          "comment_line": 86,
+          "event": "phase3.separation.step01.start",
+          "file": "scripts/validate_phase3_separation.py",
+          "matched": true,
+          "statement_line": 87
+        },
+        {
+          "comment": "# console.log: phase3.separation.step02.complete",
+          "comment_line": 89,
+          "event": "phase3.separation.step02.complete",
+          "file": "scripts/validate_phase3_separation.py",
+          "matched": true,
+          "statement_line": 90
+        },
+        {
+          "comment": "# console.log: phase3.stress.step01.start",
+          "comment_line": 620,
+          "event": "phase3.stress.step01.start",
+          "file": "scripts/run_phase3_stress.py",
+          "matched": true,
+          "statement_line": 621
+        },
+        {
+          "comment": "# console.log: phase3.stress.step02.complete",
+          "comment_line": 623,
+          "event": "phase3.stress.step02.complete",
+          "file": "scripts/run_phase3_stress.py",
+          "matched": true,
+          "statement_line": 624
+        },
+        {
+          "comment": "# console.log: phase3.cards.step01.start",
+          "comment_line": 139,
+          "event": "phase3.cards.step01.start",
+          "file": "scripts/make_phase3_cards.py",
+          "matched": true,
+          "statement_line": 140
+        },
+        {
+          "comment": "# console.log: phase3.cards.step02.complete",
+          "comment_line": 142,
+          "event": "phase3.cards.step02.complete",
+          "file": "scripts/make_phase3_cards.py",
+          "matched": true,
+          "statement_line": 143
+        },
+        {
+          "comment": "# console.log: phase3.validate_updates.step01.start",
+          "comment_line": 92,
+          "event": "phase3.validate_updates.step01.start",
+          "file": "scripts/validate_phase3_updates.py",
+          "matched": true,
+          "statement_line": 93
+        },
+        {
+          "comment": "# console.log: phase3.validate_updates.step02.complete",
+          "comment_line": 95,
+          "event": "phase3.validate_updates.step02.complete",
+          "file": "scripts/validate_phase3_updates.py",
+          "matched": true,
+          "statement_line": 96
+        },
+        {
+          "comment": "# console.log: phase3.library.step01.start",
+          "comment_line": 68,
+          "event": "phase3.library.step01.start",
+          "file": "scripts/inspect_phase3_library.py",
+          "matched": true,
+          "statement_line": 69
+        },
+        {
+          "comment": "# console.log: phase3.library.step02.complete",
+          "comment_line": 71,
+          "event": "phase3.library.step02.complete",
+          "file": "scripts/inspect_phase3_library.py",
+          "matched": true,
+          "statement_line": 72
+        },
+        {
+          "comment": "# console.log: phase3.validate_traces.step01.start",
+          "comment_line": 99,
+          "event": "phase3.validate_traces.step01.start",
+          "file": "scripts/validate_phase3_traces.py",
+          "matched": true,
+          "statement_line": 100
+        },
+        {
+          "comment": "# console.log: phase3.validate_traces.step02.complete",
+          "comment_line": 102,
+          "event": "phase3.validate_traces.step02.complete",
+          "file": "scripts/validate_phase3_traces.py",
+          "matched": true,
+          "statement_line": 103
+        },
+        {
+          "comment": "# console.log: phase3.aggregate.step01.start",
+          "comment_line": 60,
+          "event": "phase3.aggregate.step01.start",
+          "file": "scripts/aggregate_phase3.py",
+          "matched": true,
+          "statement_line": 61
+        },
+        {
+          "comment": "# console.log: phase3.aggregate.step02.complete",
+          "comment_line": 63,
+          "event": "phase3.aggregate.step02.complete",
+          "file": "scripts/aggregate_phase3.py",
+          "matched": true,
+          "statement_line": 64
+        },
+        {
+          "comment": "# console.log: phase3.audit.step01.start",
+          "comment_line": 187,
+          "event": "phase3.audit.step01.start",
+          "file": "scripts/audit_phase3.py",
+          "matched": true,
+          "statement_line": 188
+        },
+        {
+          "comment": "# console.log: phase3.audit.step02.complete",
+          "comment_line": 193,
+          "event": "phase3.audit.step02.complete",
+          "file": "scripts/audit_phase3.py",
+          "matched": true,
+          "statement_line": 194
+        }
+      ]
+    },
+    "curriculum_files": [
+      "configs\\repair_curricula\\R01_recalibrate.yaml",
+      "configs\\repair_curricula\\R02_scope_narrow.yaml",
+      "configs\\repair_curricula\\R03_scope_expand.yaml",
+      "configs\\repair_curricula\\R04_split.yaml",
+      "configs\\repair_curricula\\R05_merge.yaml",
+      "configs\\repair_curricula\\R06_add.yaml",
+      "configs\\repair_curricula\\R07_retire.yaml",
+      "configs\\repair_curricula\\R08_policy_interaction.yaml",
+      "configs\\repair_curricula\\R09_configuration_specialization.yaml",
+      "configs\\repair_curricula\\R10_evidence_recovery.yaml"
+    ],
+    "deterministic_replay": {
+      "learning_artifacts_match": true,
+      "repair_events_match": true,
+      "trace_hashes_match": true
+    },
+    "final_inherited_smoke_records": 8,
+    "generations": {
+      "1": {
+        "canonical_opportunities": 20000,
+        "curricula": 10,
+        "ledger_hash": "447c68f1154297107f5825cc633a6825458490294443a623a4d9c5deee4aa19b",
+        "operations": [
+          "add",
+          "configuration_specialization",
+          "evidence_recovery",
+          "merge",
+          "policy_interaction",
+          "recalibrate",
+          "retire",
+          "scope_expand",
+          "scope_narrow",
+          "split"
+        ],
+        "participant_final_access": false,
+        "stage_counts": {
+          "certification": 2000,
+          "containment": 1000,
+          "discovery": 2000,
+          "proposal": 1000,
+          "recurrence": 4000,
+          "rollback_challenge": 2000,
+          "shadow": 4000,
+          "transfer": 4000
+        },
+        "worlds": 200
+      },
+      "2": {
+        "canonical_opportunities": 20000,
+        "curricula": 10,
+        "ledger_hash": "5895ba64f74be00d255543ed1ca67757ac19c756557ac344702ebce6a4bdd1ba",
+        "operations": [
+          "add",
+          "configuration_specialization",
+          "evidence_recovery",
+          "merge",
+          "policy_interaction",
+          "recalibrate",
+          "retire",
+          "scope_expand",
+          "scope_narrow",
+          "split"
+        ],
+        "participant_final_access": false,
+        "stage_counts": {
+          "certification": 2000,
+          "containment": 1000,
+          "discovery": 2000,
+          "proposal": 1000,
+          "recurrence": 4000,
+          "rollback_challenge": 2000,
+          "shadow": 4000,
+          "transfer": 4000
+        },
+        "worlds": 200
+      },
+      "3": {
+        "canonical_opportunities": 20000,
+        "curricula": 10,
+        "ledger_hash": "e75bd7f8fb72c06a6b40911be1e874c498ea002375d8b25e25be029a04ab1644",
+        "operations": [
+          "add",
+          "configuration_specialization",
+          "evidence_recovery",
+          "merge",
+          "policy_interaction",
+          "recalibrate",
+          "retire",
+          "scope_expand",
+          "scope_narrow",
+          "split"
+        ],
+        "participant_final_access": false,
+        "stage_counts": {
+          "certification": 2000,
+          "containment": 1000,
+          "discovery": 2000,
+          "proposal": 1000,
+          "recurrence": 4000,
+          "rollback_challenge": 2000,
+          "shadow": 4000,
+          "transfer": 4000
+        },
+        "worlds": 200
+      }
+    },
+    "grammar": {
+      "operation_count": 10,
+      "unrestricted_generated_code_absent": true
+    },
+    "library_inspection": {
+      "errors": [],
+      "passed": true
+    },
+    "metrics": {
+      "complete": true,
+      "harmful_promotion_rate_max": 0.0,
+      "median_recurrence_max": 0.0,
+      "rejected_candidates": 60,
+      "rollback_correctness_min": 1.0,
+      "rows": 6,
+      "trace_completeness_min": 1.0
+    },
+    "orchestration_complete": true,
+    "participant_hidden_access": {
+      "catastrophic_if_accepted": [],
+      "certification_cases.json": [],
+      "expected_operation": [],
+      "feedback_poisoned": [],
+      "hidden_outcomes": [],
+      "hidden_repair_mechanism": []
+    },
+    "required_files": {
+      "configs/phases/phase3.yaml": true,
+      "scripts/aggregate_phase3.py": true,
+      "scripts/compile_phase3_ledgers.py": true,
+      "scripts/inspect_phase3_library.py": true,
+      "scripts/make_phase3_cards.py": true,
+      "scripts/run_phase3.mjs": true,
+      "scripts/run_phase3_stress.py": true,
+      "scripts/validate_phase3_separation.py": true,
+      "scripts/validate_phase3_traces.py": true,
+      "scripts/validate_phase3_updates.py": true,
+      "src/mavs10d/envs/phase3_gauntlet.py": true,
+      "src/mavs10d/governance/self_learning/config_library.py": true,
+      "src/mavs10d/governance/self_learning/consolidation.py": true,
+      "src/mavs10d/governance/self_learning/controller.py": true,
+      "src/mavs10d/governance/self_learning/diagnostic_grammar.py": true,
+      "src/mavs10d/governance/self_learning/failure_attribution.py": true,
+      "src/mavs10d/governance/self_learning/memory.py": true,
+      "src/mavs10d/governance/self_learning/meta_diagnostics.py": true,
+      "src/mavs10d/governance/self_learning/ontology.py": true,
+      "src/mavs10d/governance/self_learning/proposal_engine.py": true,
+      "src/mavs10d/governance/self_learning/rollback.py": true,
+      "src/mavs10d/governance/self_learning/safety_kernel.py": true,
+      "src/mavs10d/governance/self_learning/selector.py": true,
+      "src/mavs10d/governance/self_learning/validator.py": true,
+      "src/mavs10d/metrics/phase3.py": true
+    },
+    "schema_files": [
+      "schemas\\phase3_candidate_configuration.schema.json",
+      "schemas\\phase3_certification_card.schema.json",
+      "schemas\\phase3_consolidation_card.schema.json",
+      "schemas\\phase3_failure_capsule.schema.json",
+      "schemas\\phase3_genealogy_report.schema.json",
+      "schemas\\phase3_investigation_card.schema.json",
+      "schemas\\phase3_learning_event.schema.json",
+      "schemas\\phase3_promotion_card.schema.json",
+      "schemas\\phase3_proposal_card.schema.json",
+      "schemas\\phase3_rejected_candidate.schema.json",
+      "schemas\\phase3_rollback_card.schema.json",
+      "schemas\\phase3_terminal_error_card.schema.json",
+      "schemas\\phase3_trace.schema.json",
+      "schemas\\phase3_uncertainty_entry.schema.json"
+    ],
+    "separation_errors": [],
+    "slow_loop_triggers": {
+      "machine_detectable": [
+        "confirmed_error",
+        "instability",
+        "recurring_escalation",
+        "scope_leakage",
+        "significant_regression",
+        "unexplained_novelty"
+      ],
+      "observed": [
+        "confirmed_error",
+        "instability",
+        "recurring_escalation",
+        "scope_leakage",
+        "unexplained_novelty"
+      ],
+      "required": [
+        "confirmed_error",
+        "instability",
+        "recurring_escalation",
+        "scope_leakage",
+        "significant_regression",
+        "unexplained_novelty"
+      ]
+    },
+    "trace_errors": [],
+    "update_errors": []
+  },
+  "passed": true,
+  "phase": 3,
+  "run_id": "phase3_20260713",
+  "schema_version": "1.0.0"
+}
