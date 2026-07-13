@@ -1,0 +1,5 @@
+schema_version: 1.0.0
+generator_version: independent_reference_compiler_v1
+purpose: leave-generator-out Phase 0 contract testing only
+seed_domain_separator: 0x5A17C9E3
+inherits_contract: configs/worlds/generator_defaults.yaml

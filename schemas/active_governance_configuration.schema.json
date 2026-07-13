@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/active_governance_configuration.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["config_id", "parent_config_id", "version", "approval_status", "activation_scope", "omega_scope_policy", "G_t", "A_t", "W_t", "P_t", "Theta_t", "tau_hard_t", "alpha_t", "lambda_t", "delta_t", "theta_0_t", "tau_G_t", "S_t", "config_hash"],
+  "properties": {
+    "config_id": {"type": "string"}, "parent_config_id": {"type": ["string", "null"]}, "version": {"type": "string"},
+    "approval_status": {"enum": ["approved", "proposed", "quarantined", "rolled_back"]}, "activation_scope": {"type": "object"}, "omega_scope_policy": {"type": "object"},
+    "G_t": {"$ref": "#/$defs/component"}, "A_t": {"$ref": "#/$defs/component"}, "W_t": {"$ref": "#/$defs/component"}, "P_t": {"$ref": "#/$defs/component"},
+    "Theta_t": {"$ref": "#/$defs/component"}, "tau_hard_t": {"$ref": "#/$defs/component"}, "alpha_t": {"$ref": "#/$defs/component"},
+    "lambda_t": {"$ref": "#/$defs/component"}, "delta_t": {"$ref": "#/$defs/component"}, "theta_0_t": {"$ref": "#/$defs/component"},
+    "tau_G_t": {"$ref": "#/$defs/component"}, "S_t": {"$ref": "#/$defs/component"}, "config_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {"component": {"type": "object", "additionalProperties": false, "required": ["symbol", "semantic_name", "definition", "value_type", "value", "bounds"], "properties": {"symbol": {"type": "string"}, "semantic_name": {"type": "string"}, "definition": {"type": "string"}, "value_type": {"type": "string"}, "value": {}, "bounds": {"type": "object"}}}}
+}

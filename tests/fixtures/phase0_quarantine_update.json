@@ -1,0 +1,17 @@
+{
+  "activation_scope": {},
+  "action": "quarantine",
+  "candidate_id": "phase0-uncertified",
+  "certification_report_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "decision_hash": "48beff688d8715a5d6f256d943b5458885b2dfc4a6238615d8bb51bc7b4297e2",
+  "effective_time": "2026-01-01T00:00:00+00:00",
+  "fallback_configuration": "phase0-approved-diagnostic-only",
+  "monitoring_conditions": [
+    "NO_LIVE_ACTIVATION"
+  ],
+  "reason_codes": [
+    "PHASE0_NO_PROMOTION"
+  ],
+  "signer": "phase0-audit",
+  "update_id": "phase0-noop"
+}

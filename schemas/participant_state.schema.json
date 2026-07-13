@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/participant_state.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["participant_id", "condition", "generation", "persistence_eligible", "checkpoint_hash", "retained_bytes", "component_hashes", "forbidden_state_audit", "prior_library_hash"],
+  "properties": {
+    "participant_id": {"type": "string", "minLength": 1},
+    "condition": {"type": "string", "minLength": 1},
+    "generation": {"type": "integer", "minimum": 1, "maximum": 3},
+    "persistence_eligible": {"type": "boolean"},
+    "checkpoint_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "retained_bytes": {"type": "integer", "minimum": 0},
+    "component_hashes": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "forbidden_state_audit": {"type": "object", "minProperties": 1, "additionalProperties": {"const": true}},
+    "prior_library_hash": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+  }
+}

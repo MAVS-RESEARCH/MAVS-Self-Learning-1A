@@ -1,8 +1,16 @@
-# MAVS Chapter 10D
+# MAVS Self-Learning 1A
 
-This repository implements the Chapter 10D dynamic validation plan for MAVS-GC. The Phase 1 code establishes the method-neutral benchmark foundation: typed contracts, config loading, deterministic seeds, registry wiring, JSONL audit traces, a runner, validation scripts, and a deterministic smoke experiment.
+This repository extends the pinned MAVS Chapter 10D foundation with the staged
+MAVS-Self-Learning 300K validation program. Phase 0 establishes clone provenance,
+typed contracts, randomized world compilation, immutable signed ledgers,
+visible/hidden separation, measurement identities, deterministic replay, and
+non-competitive trivial/oracle diagnostic bounds.
 
-## Phase 1 Commands
+Phase 0 trains no model and makes no Self-Learning performance or superiority
+claim. See `CLAIMS.md`, `REPRODUCIBILITY.md`, `WorkPlan.md`, and the contemporaneous
+evidence ledger in `Path.md`.
+
+## Inherited regression commands
 
 Install development dependencies:
 
@@ -31,4 +39,10 @@ python -m pytest
 ## Claim Discipline
 
 Phase 1 is software infrastructure only. It does not test MAVS-GC performance, does not train models, and does not support any frontier-model, industrial-scale, universal robustness, or correlated-failure claims.
+
+## Phase 0 command
+
+```bash
+node scripts/run_phase0.mjs --run-id phase0_20260713
+```
 

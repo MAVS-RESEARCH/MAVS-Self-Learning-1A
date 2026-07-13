@@ -90,6 +90,60 @@ The architecture review fixed the Phase 0 semantic floor: deterministic fast-loo
 - Result-tree assertion immediately after extraction: PASS; target `results/` did not exist.
 - Runtime lock: CPython 3.13.7, NumPy 2.3.4, pandas 2.3.2, PyArrow 21.0.0, PyYAML 6.0.2, pytest 9.0.2.
 
+### P0-E005 - Post-import inherited regression before behavioral changes
+
+- Imported-target test command: `python -m pytest -q`.
+- Result: PASS, 78 inherited tests, exit status 0.
+- Imported-target smoke command: `python scripts/run_experiment.py --config configs/experiments/synthetic_smoke.yaml`.
+- Result: PASS, 8 records, exit status 0.
+- Imported-target validator command: `python scripts/validate_traces.py --input results/raw/synthetic_smoke.jsonl`.
+- Result: PASS, zero trace errors, exit status 0.
+- Imported-target smoke SHA-256: `6F7DF087220FCB377C39EB4888297E1258EB359F66B74F529ED8024C5D31D7EE`.
+- Interpretation: the smoke hash differs from isolated upstream because the trace correctly embeds target commit `052b03eefd54e6f89d3bb9b59b0f0baa8549fe04`; functional record count and validation are unchanged.
+- Gate decision: PASS. Behavioral Phase 0 implementation began only after this target-side gate.
+
+### P0-E006 - Phase 0 contract, compiler, ledger, and measurement implementation
+
+- Status: IMPLEMENTED; final acceptance run pending the code checkpoint.
+- Typed contracts: `src/mavs10d/core/contracts.py` defines `SeedTuple`, `WorldSpec`, `VisibleOpportunity`, `LearningEvent`, `DiagnosticProposal`, `CandidateConfiguration`, `CertificationReport`, `UpdateDecision`, `ParticipantState`, `GovernanceComponent`, and `ActiveGovernanceConfiguration`.
+- Active configuration: all twelve symbols `G_t`, `A_t`, `W_t`, `P_t`, `Theta_t`, `tau_hard_t`, `alpha_t`, `lambda_t`, `delta_t`, `theta_0_t`, `tau_G_t`, and `S_t` have exact, checked meanings. `omega_scope_policy` separately preserves the architecture authority's intended-scope contract. Proposed configurations fail closed when an approved fast-loop configuration is required.
+- Randomness: `HierarchicalSeeds` derives suite/generation/world/episode/step/method seeds with SHA-256 domain separation and local NumPy generators. Tests prove that derivation does not mutate Python or NumPy global RNG state.
+- World compilation: `world_compiler.py` implements the pre-registered domain, horizon, prevalence, feedback, policy, specialist, corruption, observability, cost, and temporal priors. It retains every latent world parameter in the signed hidden manifest and exposes only `VisibleOpportunity` fields to participants.
+- Inherited allocation: `InheritedStaticCompiler` executes the pinned Chapter 10D `StaticAccuracyAdapterEnv` for ten 100-step episodes per generation, producing the required 1,000 inherited static decisions. These are not relabeled generated-world rows.
+- Independent generator: `IndependentReferenceCompiler` uses a distinct implementation ID and RNG domain separator for leave-generator-out contract testing.
+- Ledger integrity: `world_ledger.py` writes deterministic Zstandard Parquet ledgers and signed JSON envelopes. Manifests bind ledger bytes, row order, Arrow schema, generator source package, configs, hidden parameters, and the hidden-manifest file. Existing unequal artifacts cannot be overwritten.
+- Leakage barrier: methods receive no hidden object; oracle access requires an evaluator payload; `participant_file_guard` denies direct Python file reads of registered hidden manifests during participant decisions. Leakage tests cover payload absence, oracle fail-closed behavior, and file denial.
+- Corruption and schedules: added bounded deterministic composition and budgeted adversarial-response scheduling without hidden method inputs.
+- Measurements: added exact burden, non-dominance/frontier, transfer-estimand, Wilson-interval, and primitive action-accounting implementations.
+- Bounds: added accept-all, reject-all, escalate-all, deterministic-random, oracle-label, and oracle-regime implementations. All declare or are recorded as non-competitive diagnostics.
+- Schemas: added the eight WorkPlan schemas plus `active_governance_configuration.schema.json`; Draft 2020-12 schema checks pass.
+- Results discipline: `clean_results.py` resolves and verifies the repository-owned root before deletion and fails if generated files survive an all-run cleanup. New compile, stress, aggregation, reset, participant, trace, and update commands require or consume a safe run ID and namespaced run manifest.
+- Provenance aggregation: `aggregate_phase0.py` refuses any trace whose run ID, Git SHA, Phase 0 config hash, or ledger hash differs from the selected run.
+- Documentation: added `REPRODUCIBILITY.md`, `CLAIMS.md`, `Makefile`, updated `README.md`, and frozen Phase 0/suite/world/active-configuration YAML contracts.
+- Model training: none. Phase 0 contains no optimizer, checkpoint, training split, or trained-model benchmark. This exactly follows the Phase 0 default and prevents training evidence from being confused with infrastructure evidence.
+
+### P0-E007 - Phase 0 test package and rejected attempts
+
+- Phase 0 test directories: `tests/phase0`, `tests/metamorphic`, `tests/leakage`, and `tests/statistical`.
+- Current Phase 0-specific result: PASS, 27 tests.
+- Current complete result: PASS, 105 tests (78 inherited plus 27 Phase 0-specific), exit status 0.
+- Bytecode compilation: `python -m compileall -q src scripts tests`; PASS, exit status 0.
+- Patch hygiene: `git diff --check`; PASS, exit status 0.
+- Rejected attempt 1: the bundled Python runtime lacked pytest. No dependency assumption was made; the qualified CPython 3.13.7 environment was recorded and used.
+- Rejected attempt 2: an incorrect singular inherited validator filename was attempted once; the inherited README/source established `validate_traces.py --input`, which passed without source modification.
+- Rejected attempt 3: the first stress prototype called `git rev-parse` once per record and was terminated as computationally invalid. The implementation now resolves immutable provenance once per generation and passes it into record construction.
+- Rejected attempt 4: the first cleanup of that terminated prototype encountered the still-running child process holding a trace handle. The exact process was identified and stopped, the scoped cleaner then removed only `phase0_dryrun`, and no provisional output was retained.
+- Rejected attempt 5: the first world-manifest representation retained only a latent-state hash. Audit identified that this did not satisfy the requirement to store all latent parameters. The hidden manifest now stores the complete per-world latent record and hashes the combined hidden opportunity/world-parameter payload.
+- Rejected attempt 6: the first 1,000-row static partition used the randomized compiler under an inherited label. Audit rejected this as semantically insufficient. The replacement executes the inherited `StaticAccuracyAdapterEnv` directly and reset validation checks its implementation ID and exact ten-by-100 allocation.
+- Dry-run stress evidence produced before the last compiler/manifest changes is invalidated and removed. It will not appear in final evidence or results.
+
+### P0-E008 - Console checkpoint implementation
+
+- `scripts/run_phase0.mjs` is the authoritative Phase 0 orchestrator and uses native JavaScript `console.log` at every orchestration checkpoint.
+- Every `console.log` has an immediately preceding `// console.log: <event>` identifier comment. `audit_phase0.py` independently fails on missing or mismatched comments.
+- Python implementation steps use the inherited structured `console_log` adapter, which prints `console.log {JSON}`; every newly added call has an adjacent `# console.log: <event>` comment.
+- Exact file/line/comment/event registry will be frozen after the implementation checkpoint so line numbers cannot be invalidated by later code edits.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -119,4 +173,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 is active. No implementation code has been imported or written yet. The next gate is a documentation-only checkpoint followed by qualification of the immutable Chapter 10D upstream SHA. No Phase 1 work is authorized.
+Phase 0 is active. The implementation and 105-test preflight pass, but Phase 0 is not yet accepted: code must be checkpointed, the clean authoritative three-generation run must execute against that checkpoint, every result must be validated and independently replayed, exact console line evidence must be added, and the final clause-by-clause audit must pass. No Phase 1 work is authorized.

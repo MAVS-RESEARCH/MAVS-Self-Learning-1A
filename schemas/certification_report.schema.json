@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/certification_report.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["report_id", "candidate_id", "trigger_replay", "retained_replay", "disjoint_temporal_holdout", "boundary_counterfactual_tests", "independent_adversarial_search", "scope_audit", "invariant_audit", "shadow_results", "pareto_deltas", "compute", "artifact_hashes", "passed", "reason_codes"],
+  "properties": {
+    "report_id": {"type": "string"}, "candidate_id": {"type": "string"}, "trigger_replay": {"type": "object"}, "retained_replay": {"type": "object"},
+    "disjoint_temporal_holdout": {"type": "object"}, "boundary_counterfactual_tests": {"type": "object"}, "independent_adversarial_search": {"type": "object"},
+    "scope_audit": {"type": "object"}, "invariant_audit": {"type": "object"}, "shadow_results": {"type": "object"},
+    "pareto_deltas": {"type": "object", "additionalProperties": {"type": "number"}}, "compute": {"type": "object", "additionalProperties": {"type": "number"}},
+    "artifact_hashes": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "passed": {"type": "boolean"}, "reason_codes": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}

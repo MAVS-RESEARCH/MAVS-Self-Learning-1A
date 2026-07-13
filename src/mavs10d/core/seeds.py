@@ -1,9 +1,50 @@
 from __future__ import annotations
 
 import random
+import hashlib
 from dataclasses import dataclass
+from typing import Final
 
 import numpy as np
+
+from mavs10d.core.contracts import SeedTuple
+
+
+_SEED_MODULUS: Final[int] = 2**63 - 1
+
+
+@dataclass(frozen=True)
+class HierarchicalSeeds:
+    """Deterministic seed derivation without mutating module-global RNG state."""
+
+    suite_seed: int
+
+    def derive(
+        self,
+        *,
+        generation: int = 0,
+        world: int = 0,
+        episode: int = 0,
+        step: int = 0,
+        method: int = 0,
+    ) -> SeedTuple:
+        values = [self.suite_seed]
+        for namespace, index in (
+            ("generation", generation),
+            ("world", world),
+            ("episode", episode),
+            ("step", step),
+            ("method", method),
+        ):
+            if index < 0:
+                raise ValueError(f"{namespace} index must be non-negative.")
+            payload = f"{values[-1]}:{namespace}:{index}".encode("utf-8")
+            values.append(int.from_bytes(hashlib.sha256(payload).digest()[:8], "big") % _SEED_MODULUS)
+        return SeedTuple(*values)
+
+    def generator(self, **indices: int) -> np.random.Generator:
+        seed_tuple = self.derive(**indices)
+        return np.random.default_rng(seed_tuple.method)
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/world_manifest.schema.json",
+  "title": "Signed generation world manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["body", "signature"],
+  "properties": {
+    "signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "generation", "opportunity_count", "partition_counts", "row_order_sha256", "schema_sha256", "ledger_sha256", "hidden_manifest_sha256", "hidden_parameters_sha256", "generator_package_sha256", "config_hashes", "signing_algorithm", "signer_key_id"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "generation": {"type": "integer", "minimum": 1, "maximum": 3},
+        "opportunity_count": {"type": "integer", "minimum": 1},
+        "partition_counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "row_order_sha256": {"$ref": "#/$defs/hash"},
+        "schema_sha256": {"$ref": "#/$defs/hash"},
+        "ledger_sha256": {"$ref": "#/$defs/hash"},
+        "hidden_manifest_sha256": {"$ref": "#/$defs/hash"},
+        "hidden_parameters_sha256": {"$ref": "#/$defs/hash"},
+        "generator_package_sha256": {"$ref": "#/$defs/hash"},
+        "config_hashes": {"type": "object", "minProperties": 1, "additionalProperties": {"$ref": "#/$defs/hash"}},
+        "signing_algorithm": {"const": "HMAC-SHA256"},
+        "signer_key_id": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+}

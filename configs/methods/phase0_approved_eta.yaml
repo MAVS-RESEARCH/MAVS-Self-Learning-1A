@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+config_id: phase0-approved-diagnostic-only
+parent_config_id: null
+version: 1.0.0
+approval_status: approved
+activation_scope: {phase: 0, use: diagnostic_bounds_only}
+omega_scope_policy: {domains: all_compiled, actions: [accept, reject, escalate], learning_enabled: false}
+components:
+  G_t: {semantic_name: governance_graph, definition: Approved governance decision graph and ordering., value_type: directed_acyclic_graph, value: diagnostic_bound, bounds: {certified_only: true}}
+  A_t: {semantic_name: aggregation_rule, definition: Approved specialist/evidence aggregation rule., value_type: enum, value: none, bounds: {allowed: [none]}}
+  W_t: {semantic_name: specialist_weights, definition: Bounded specialist and evidence weights., value_type: vector, value: [], bounds: {l1_maximum: 0.0}}
+  P_t: {semantic_name: policy_state, definition: Approved policy clauses and cost preferences., value_type: policy_reference, value: phase0_diagnostic, bounds: {mutable: false}}
+  Theta_t: {semantic_name: diagnostic_parameters, definition: Certified diagnostic parameter set., value_type: mapping, value: {}, bounds: {certified_only: true}}
+  tau_hard_t: {semantic_name: hard_veto_threshold, definition: Certified danger threshold for hard veto., value_type: float, value: 1.0, bounds: {minimum: 0.0, maximum: 1.0}}
+  alpha_t: {semantic_name: mitigation_bound, definition: Maximum certified mitigating influence., value_type: float, value: 0.0, bounds: {minimum: 0.0, maximum: 1.0}}
+  lambda_t: {semantic_name: burden_tradeoff, definition: Escalation and intervention cost weight., value_type: float, value: 0.0, bounds: {minimum: 0.0}}
+  delta_t: {semantic_name: decision_margin, definition: Required accept/reject decision margin., value_type: float, value: 0.0, bounds: {minimum: 0.0, maximum: 1.0}}
+  theta_0_t: {semantic_name: base_threshold, definition: Base governance threshold before diagnostics., value_type: float, value: 0.5, bounds: {minimum: 0.0, maximum: 1.0}}
+  tau_G_t: {semantic_name: selector_fallback_threshold, definition: Applicability threshold below which fallback applies., value_type: float, value: 1.0, bounds: {minimum: 0.0, maximum: 1.0}}
+  S_t: {semantic_name: governed_selector, definition: Approved selector over certified configurations., value_type: enum, value: fixed_phase0, bounds: {allowed: [fixed_phase0]}}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/candidate_configuration.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["candidate_id", "parent_id", "exact_delta", "proposal_bundle", "expected_gains", "expected_failures", "protected_metrics", "protected_families", "rollback_target"],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1}, "parent_id": {"type": "string", "minLength": 1}, "exact_delta": {"type": "object"},
+    "proposal_bundle": {"type": "array", "items": {"type": "string"}}, "expected_gains": {"type": "object", "additionalProperties": {"type": "number"}},
+    "expected_failures": {"type": "array", "items": {"type": "string"}}, "protected_metrics": {"type": "array", "items": {"type": "string"}},
+    "protected_families": {"type": "array", "items": {"type": "string"}}, "rollback_target": {"type": "string", "minLength": 1}
+  }
+}

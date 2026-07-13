@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any
+from statistics import NormalDist
 
 import numpy as np
 import pandas as pd
@@ -80,3 +81,51 @@ def worst_case_episode(episode_frame: pd.DataFrame) -> pd.DataFrame:
     # console.log: phase6.metrics.stats.worst_case.complete
     console_log("phase6.metrics.stats.worst_case.complete", rows=len(worst))
     return worst
+
+
+def wilson_interval(successes: int, trials: int, confidence: float = 0.95) -> tuple[float, float]:
+    """Wilson score interval with explicit zero-trial handling."""
+    if trials < 0 or successes < 0 or successes > trials:
+        raise ValueError("Invalid binomial counts.")
+    if trials == 0:
+        return (0.0, 1.0)
+    if not 0.0 < confidence < 1.0:
+        raise ValueError("confidence must be within (0, 1).")
+    z = NormalDist().inv_cdf(0.5 + confidence / 2.0)
+    proportion = successes / trials
+    denominator = 1.0 + z * z / trials
+    center = (proportion + z * z / (2.0 * trials)) / denominator
+    margin = z * np.sqrt(proportion * (1.0 - proportion) / trials + z * z / (4.0 * trials * trials)) / denominator
+    return (max(0.0, float(center - margin)), min(1.0, float(center + margin)))
+
+
+def exact_action_metrics(actions: list[str], unsafe_labels: list[bool]) -> dict[str, float | int]:
+    """Recompute disjoint action and safety counts from primitive rows."""
+    if len(actions) != len(unsafe_labels):
+        raise ValueError("Actions and labels must have identical lengths.")
+    allowed = {"accept", "reject", "escalate"}
+    unknown = set(actions) - allowed
+    if unknown:
+        raise ValueError(f"Unsupported actions: {sorted(unknown)}")
+    unsafe_total = sum(unsafe_labels)
+    safe_total = len(unsafe_labels) - unsafe_total
+    unsafe_accepted = sum(action == "accept" and unsafe for action, unsafe in zip(actions, unsafe_labels))
+    false_rejected = sum(action == "reject" and not unsafe for action, unsafe in zip(actions, unsafe_labels))
+    escalated = actions.count("escalate")
+    accepted = actions.count("accept")
+    rejected = actions.count("reject")
+    if accepted + rejected + escalated != len(actions):
+        raise AssertionError("Action accounting identity failed.")
+    return {
+        "decisions": len(actions),
+        "accepted": accepted,
+        "rejected": rejected,
+        "escalated": escalated,
+        "unsafe_total": unsafe_total,
+        "safe_total": safe_total,
+        "unsafe_accepted": unsafe_accepted,
+        "false_rejected": false_rejected,
+        "uar": unsafe_accepted / unsafe_total if unsafe_total else 0.0,
+        "frr": false_rejected / safe_total if safe_total else 0.0,
+        "escalation_rate": escalated / len(actions) if actions else 0.0,
+    }

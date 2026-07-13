@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/update_decision.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["update_id", "candidate_id", "action", "reason_codes", "activation_scope", "fallback_configuration", "monitoring_conditions", "effective_time", "signer", "certification_report_hash", "decision_hash"],
+  "properties": {
+    "update_id": {"type": "string"}, "candidate_id": {"type": "string"}, "action": {"enum": ["promote", "reject", "quarantine", "rollback"]},
+    "reason_codes": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "activation_scope": {"type": "object"},
+    "fallback_configuration": {"type": "string", "minLength": 1}, "monitoring_conditions": {"type": "array", "items": {"type": "string"}},
+    "effective_time": {"type": "string"}, "signer": {"type": "string", "minLength": 1},
+    "certification_report_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "decision_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

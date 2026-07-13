@@ -1,0 +1,23 @@
+schema_version: 1.0.0
+generator_version: numpy_world_compiler_v1
+domain:
+  values: [text_safety, tool_use, cyber_triage, medical_triage_proxy, financial_approval_proxy, multi_agent_operations, synthetic_control, retrieval_qa]
+horizon: {distribution: discrete_uniform, minimum: 80, maximum: 320}
+unsafe_prevalence: {distribution: beta, alpha: 1.2, beta: 3.0, support: [0.01, 0.70]}
+feedback:
+  immediate: 0.45
+  geometric_delay: 0.35
+  censored: 0.20
+  geometric_mean: 8
+policy_process: {family: hidden_markov, states: [1, 4]}
+specialists:
+  count: [3, 9]
+  diversity: {distribution: uniform, support: [0.15, 0.95]}
+  shared_source_probability: {distribution: uniform, support: [0.0, 0.80]}
+corruption:
+  families_per_world: [1, 5]
+  schedules: [piecewise, random_walk, burst, recurring, adversarial_response, compositional]
+  targets: [input, evidence, specialist, provenance, policy, feedback]
+observability: [full, masked, noisy, delayed_provenance, contradictory_metadata, late_evidence]
+temporal_dynamics: [stationary, gradual, abrupt, recurring, chaotic_switching, recovery_trap, irreversible_consequences]
+manifest_signing: {algorithm: HMAC-SHA256, key_derivation: deterministic_phase0_seed_commitment}

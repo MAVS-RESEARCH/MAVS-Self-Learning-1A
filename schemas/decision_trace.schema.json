@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/decision_trace.schema.json",
+  "title": "Self-Learning MAVS decision trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["world", "decision", "specialists", "diagnostics", "outcome", "learning", "integrity", "generation", "participant_state", "transfer", "consolidation"],
+  "properties": {
+    "world": {"$ref": "#/$defs/category"},
+    "decision": {"$ref": "#/$defs/category"},
+    "specialists": {"$ref": "#/$defs/category"},
+    "diagnostics": {"$ref": "#/$defs/category"},
+    "outcome": {"$ref": "#/$defs/category"},
+    "learning": {"$ref": "#/$defs/category"},
+    "integrity": {"$ref": "#/$defs/category"},
+    "generation": {"$ref": "#/$defs/category"},
+    "participant_state": {"$ref": "#/$defs/category"},
+    "transfer": {"$ref": "#/$defs/category"},
+    "consolidation": {"$ref": "#/$defs/category"}
+  },
+  "$defs": {"category": {"type": "object"}}
+}

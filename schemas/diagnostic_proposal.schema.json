@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/diagnostic_proposal.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["proposal_id", "name", "intended_scope", "bounded_function", "threshold", "allowed_influence", "invariants", "lineage", "provenance", "validation_plan"],
+  "properties": {
+    "proposal_id": {"type": "string", "minLength": 1}, "name": {"type": "string", "minLength": 1},
+    "intended_scope": {"type": "object"}, "bounded_function": {"type": "object"}, "threshold": {"type": "number"},
+    "allowed_influence": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+    "invariants": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "lineage": {"type": "array", "items": {"type": "string"}}, "provenance": {"type": "object"}, "validation_plan": {"type": "object"}
+  }
+}

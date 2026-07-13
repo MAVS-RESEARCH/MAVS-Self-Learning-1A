@@ -1,0 +1,22 @@
+schema_version: 1.0.0
+phase: 0
+name: clone_qualification_and_measurement_integrity
+canonical_decisions_per_generation: 5000
+allocations:
+  inherited_static: 1000
+  generated_world: 2000
+  trace_metric_metamorphic: 2000
+world_defaults: configs/worlds/generator_defaults.yaml
+independent_generator: configs/worlds/independent_generator.yaml
+diagnostic_bounds: [accept_all, reject_all, escalate_all, random, oracle_label, oracle_regime]
+competitive_methods: []
+claim_boundary: infrastructure_only_no_self_learning_superiority_claim
+required_exit:
+  trace_schema_hash_errors: 0
+  deterministic_replay: field_equivalent
+  metric_identities: exact
+  matched_visible_opportunities: true
+  hidden_state_access_tests: pass
+  inherited_regression: pass
+  inherited_results: 0
+  manifest_and_reset_validation: pass
