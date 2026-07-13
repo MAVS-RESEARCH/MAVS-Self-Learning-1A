@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "phase5_authoritative",
+  "completed_steps": [
+    "clean_named_run",
+    "inherited_tests_before",
+    "phase5_tests_before",
+    "banks_compiled",
+    "separation_validated",
+    "tournament_executed",
+    "traces_validated",
+    "metrics_aggregated",
+    "phase5_tests_after",
+    "full_regression",
+    "inherited_smoke_after"
+  ]
+}

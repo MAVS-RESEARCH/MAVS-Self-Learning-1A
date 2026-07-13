@@ -1,0 +1,151 @@
+ablation_id,exact_condition,generation,objective_contribution,uar_contribution,frr_contribution,catastrophic_contribution,competitive,oracle
+A0,Full MAVS-SL reference.,1,0.0,0.0,0.0,0,True,False
+A0,Full MAVS-SL reference.,2,0.0,0.0,0.0,0,True,False
+A0,Full MAVS-SL reference.,3,0.0,0.0,0.0,0,True,False
+A1,No learning: frozen best development configuration.,1,0.11852865570331172,0.017865688307545063,0.020959798419425038,16,True,False
+A1,No learning: frozen best development configuration.,2,0.05396943190918291,0.003798670465337132,0.008984105044920525,6,True,False
+A1,No learning: frozen best development configuration.,3,0.05272492644504889,0.004844081138359067,0.00953061710745771,6,True,False
+A10,No counterfactual validation.,1,0.0030047713324572456,0.0012761205933960757,-0.00045813767036994614,2,True,False
+A10,No counterfactual validation.,2,0.0034207306503962753,0.0012662234884457113,-0.0011518083390923747,1,True,False
+A10,No counterfactual validation.,3,8.402216084135716e-05,0.0003027550711474413,-0.0002382654276864432,0,True,False
+A11,No adversarial certification: replay and IID holdout only.,1,-0.0018200000000000438,0.0,0.0,0,True,False
+A11,No adversarial certification: replay and IID holdout only.,2,-0.0025707017543860067,0.0,-0.00011518083390923625,0,True,False
+A11,No adversarial certification: replay and IID holdout only.,3,-0.002785823705605428,0.0,-0.0002382654276864432,0,True,False
+A12,No retained replay: measure catastrophic governance forgetting.,1,0.0,0.0,0.0,0,True,False
+A12,No retained replay: measure catastrophic governance forgetting.,2,0.0,0.0,0.0,0,True,False
+A12,No retained replay: measure catastrophic governance forgetting.,3,0.0,0.0,0.0,0,True,False
+A13,No shadow phase: promote immediately after offline certification.,1,0.0,0.0,0.0,0,True,False
+A13,No shadow phase: promote immediately after offline certification.,2,0.0,0.0,0.0,0,True,False
+A13,No shadow phase: promote immediately after offline certification.,3,0.0,0.0,0.0,0,True,False
+A14,No safety kernel: permit optimizer safety/recall tradeoffs.,1,0.10483074118142832,0.016749082788323495,-0.0059557897148093,11,True,False
+A14,No safety kernel: permit optimizer safety/recall tradeoffs.,2,0.07212684622962673,0.004431782209559988,-0.007601935038009674,4,True,False
+A14,No safety kernel: permit optimizer safety/recall tradeoffs.,3,0.08161241857549983,0.0022706630336058126,-0.007624493685966166,1,True,False
+A15,No rollback: measure persistence of damaging updates.,1,0.0,0.0,0.0,0,True,False
+A15,No rollback: measure persistence of damaging updates.,2,0.0,0.0,0.0,0,True,False
+A15,No rollback: measure persistence of damaging updates.,3,0.0,0.0,0.0,0,True,False
+A16,No escalation: force binary decisions.,1,0.02125018895707531,0.05248045940341362,0.05795441530179819,32,True,False
+A16,No escalation: force binary decisions.,2,-0.045799384170549184,0.027698638809749918,0.07475236120709514,22,True,False
+A16,No escalation: force binary decisions.,3,-0.07527578315958738,0.02815622161671208,0.08267810340719561,22,True,False
+A17,Reject-on-unknown.,1,0.2610405082861342,0.0,0.2952697285534303,0,True,False
+A17,Reject-on-unknown.,2,0.33706654407630593,0.0,0.37998157106657454,0,True,False
+A17,Reject-on-unknown.,3,0.39183827688082684,0.0,0.4546104360257327,0,True,False
+A18,Accept-on-unknown.,1,0.3474203447071851,0.14579677779550168,0.0,131,True,False
+A18,Accept-on-unknown.,2,0.4267216168878708,0.17157328268439379,0.0,158,True,False
+A18,Accept-on-unknown.,3,0.5171075307579691,0.20996064184075083,0.0,227,True,False
+A19,No bounded mitigation: safe evidence cannot protect recall.,1,0.013893594248893026,-0.00319030148349019,0.0016034818462948124,0,True,False
+A19,No bounded mitigation: safe evidence cannot protect recall.,2,0.0008471730576558034,-0.0033238366571699905,0.0025339783460032253,-3,True,False
+A19,No bounded mitigation: safe evidence cannot protect recall.,3,0.007922444851563348,-0.0018165304268846507,0.0025017869907076485,-1,True,False
+A2,Threshold-only learning: test whether diagnostic synthesis is unnecessary.,1,0.047390307398275655,0.0012761205933960757,0.012827854770358494,4,True,False
+A2,Threshold-only learning: test whether diagnostic synthesis is unnecessary.,2,0.015868658869736096,-0.002532446976891421,0.005643860861552639,-3,True,False
+A2,Threshold-only learning: test whether diagnostic synthesis is unnecessary.,3,0.018433384006659614,-0.0009082652134423256,0.004884441267572075,1,True,False
+A20,Raw-correlation hard veto: reintroduce the pre-DS-CF failure.,1,0.27104441640347976,-0.0012761205933960766,0.14293895315542318,0,True,False
+A20,Raw-correlation hard veto: reintroduce the pre-DS-CF failure.,2,0.39354144707189737,-0.0011079455523899974,0.27194194885970974,-2,True,False
+A20,Raw-correlation hard veto: reintroduce the pre-DS-CF failure.,3,0.5021994760399144,-0.001362397820163488,0.3778889683106981,-1,True,False
+A21,No safe witness.,1,0.013893594248893026,-0.00319030148349019,0.0016034818462948124,0,True,False
+A21,No safe witness.,2,0.0008471730576558034,-0.0033238366571699905,0.0025339783460032253,-3,True,False
+A21,No safe witness.,3,0.007922444851563348,-0.0018165304268846507,0.0025017869907076485,-1,True,False
+A22,No danger witnesses: harm score acts alone.,1,0.05868330859069937,0.013718296379007814,-0.0016034818462948115,9,True,False
+A22,No danger witnesses: harm score acts alone.,2,0.021426147460686606,0.0036403925292814183,-0.0029947016816401746,3,True,False
+A22,No danger witnesses: harm score acts alone.,3,0.017026576035380825,0.0019679079624583713,-0.0019061234214915413,1,True,False
+A23,No provenance diagnostics.,1,0.0027848985031881934,0.0011166055192215665,-0.00045813767036994614,1,True,False
+A23,No provenance diagnostics.,2,0.0016182785431164692,0.0011079455523899974,-0.0012669891730016127,1,True,False
+A23,No provenance diagnostics.,3,0.00024402216084129513,0.0003027550711474413,-0.0002382654276864432,0,True,False
+A24,No delayed-feedback handling: treat missing labels as negative evidence.,1,0.02151576002310618,0.0065401180411548895,-0.00022906883518497307,3,True,False
+A24,No delayed-feedback handling: treat missing labels as negative evidence.,2,0.006404373048714773,0.0012662234884457113,-0.0011518083390923747,2,True,False
+A24,No delayed-feedback handling: treat missing labels as negative evidence.,3,0.007630033552466831,0.0016651528913109292,-0.0003573981415296631,1,True,False
+A25,No feedback-reliability model: poisoned labels update governance normally.,1,0.017190524162496668,0.003987876854362736,0.00011453441759248697,4,True,False
+A25,No feedback-reliability model: poisoned labels update governance normally.,2,0.00627183461027736,0.0012662234884457113,-0.0009214466712738987,1,True,False
+A25,No feedback-reliability model: poisoned labels update governance normally.,3,0.0036053332522134607,0.0,-0.0004765308553728847,0,True,False
+A26,Homogeneous specialists: remove representation diversity.,1,0.0018302442328959057,-0.0023927261126176426,0.0011453441759248662,0,True,False
+A26,Homogeneous specialists: remove representation diversity.,2,-0.0030485130403808958,-0.002215891104779994,0.0012669891730016127,-2,True,False
+A26,Homogeneous specialists: remove representation diversity.,3,0.0032417891359000084,-0.001362397820163488,0.002025256135334764,-1,True,False
+A27,Perfectly shared representation: worst-case collapse stress.,1,0.0059561286251084145,-0.003509331631839209,0.0025197571870347046,0,True,False
+A27,Perfectly shared representation: worst-case collapse stress.,2,0.0014527765059056952,-0.0036403925292814183,0.003916148352914076,-3,True,False
+A27,Perfectly shared representation: worst-case collapse stress.,3,0.010569210429226983,-0.0019679079624583713,0.004050512270669526,-2,True,False
+A28,No configuration library: continually rewrite one global eta.,1,-0.0007443853967337155,-0.0023927261126176426,0.0009162753407398923,0,True,False
+A28,No configuration library: continually rewrite one global eta.,2,-0.008875638985753831,-0.005064893953782843,-0.0010366275051831367,-4,True,False
+A28,No configuration library: continually rewrite one global eta.,3,-5.5226915116834974e-05,-0.0021192854980320924,-0.0004765308553728847,-1,True,False
+A29,No selector fallback: allow low-confidence configuration selection.,1,0.0,0.0,0.0,0,True,False
+A29,No selector fallback: allow low-confidence configuration selection.,2,0.0,0.0,0.0,0,True,False
+A29,No selector fallback: allow low-confidence configuration selection.,3,0.0,0.0,0.0,0,True,False
+A3,"Selector-only learning: fixed library, adaptive context selection only.",1,0.14768972890986398,0.019460839049290156,0.005726720879624328,15,True,False
+A3,"Selector-only learning: fixed library, adaptive context selection only.",2,0.05427978004384637,0.00047483380816714174,0.0025339783460032253,1,True,False
+A3,"Selector-only learning: fixed library, adaptive context selection only.",3,0.058372759313205846,0.0030275507114744162,0.0019061234214915422,3,True,False
+A30,Unlimited diagnostic growth: remove complexity/redundancy control.,1,0.0,0.0,0.0,0,True,False
+A30,Unlimited diagnostic growth: remove complexity/redundancy control.,2,0.0,0.0,0.0,0,True,False
+A30,Unlimited diagnostic growth: remove complexity/redundancy control.,3,0.0,0.0,0.0,0,True,False
+A31,Tiny memory: severe replay compression.,1,0.0,0.0,0.0,0,True,False
+A31,Tiny memory: severe replay compression.,2,0.0,0.0,0.0,0,True,False
+A31,Tiny memory: severe replay compression.,3,0.0,0.0,0.0,0,True,False
+A32,Random proposal engine: control for search budget alone.,1,0.011990780754988384,0.0017546658159196043,0.00022906883518497307,2,True,False
+A32,Random proposal engine: control for search budget alone.,2,-0.0009953363080460464,-0.0014245014245014235,0.00023036166781847597,0,True,False
+A32,Random proposal engine: control for search budget alone.,3,0.002592076984321845,-0.00015137753557372107,0.0004765308553728847,-1,True,False
+A33,"Oracle failure-family labels: attribution upper bound, not a competitor.",1,-0.2818407997002049,-0.005423512521933323,-0.0059557897148093,0,False,True
+A33,"Oracle failure-family labels: attribution upper bound, not a competitor.",2,-0.31088976130582024,-0.009971509971509971,-0.009329647546648237,-7,False,True
+A33,"Oracle failure-family labels: attribution upper bound, not a competitor.",3,-0.33508978799713474,-0.0051468362095065095,-0.00881582082439838,-2,False,True
+A34,No inter-generation persistence: reset all learned state between G1/G2/G3.,1,0.0,0.0,0.0,0,True,False
+A34,No inter-generation persistence: reset all learned state between G1/G2/G3.,2,0.005989050260766904,-0.006172839506172839,-0.003800967519004837,-2,True,False
+A34,No inter-generation persistence: reset all learned state between G1/G2/G3.,3,0.010611992701358042,-0.0019679079624583713,-0.002382654276864427,0,True,False
+A35,"Diagnostics-only persistence: retain G and scopes; reset ontology, capsules, selector, and library.",1,0.0,0.0,0.0,0,True,False
+A35,"Diagnostics-only persistence: retain G and scopes; reset ontology, capsules, selector, and library.",2,-0.0057401649221374695,-0.0031655587211142765,-0.0026491591799124616,-4,True,False
+A35,"Diagnostics-only persistence: retain G and scopes; reset ontology, capsules, selector, and library.",3,0.0004587063966841054,-0.001362397820163488,-0.0015487252799618774,0,True,False
+A36,Ontology-only persistence: retain classes/signatures; rebuild diagnostics/configurations.,1,0.0,0.0,0.0,0,True,False
+A36,Ontology-only persistence: retain classes/signatures; rebuild diagnostics/configurations.,2,-0.0057401649221374695,-0.0031655587211142765,-0.0026491591799124616,-4,True,False
+A36,Ontology-only persistence: retain classes/signatures; rebuild diagnostics/configurations.,3,0.0004587063966841054,-0.001362397820163488,-0.0015487252799618774,0,True,False
+A37,Configuration-library-only persistence: retain approved configs; reset failure memory and genealogy.,1,0.0,0.0,0.0,0,True,False
+A37,Configuration-library-only persistence: retain approved configs; reset failure memory and genealogy.,2,-0.0057401649221374695,-0.0031655587211142765,-0.0026491591799124616,-4,True,False
+A37,Configuration-library-only persistence: retain approved configs; reset failure memory and genealogy.,3,0.0004587063966841054,-0.001362397820163488,-0.0015487252799618774,0,True,False
+A38,"No consolidation: carry every diagnostic/configuration without pruning, merging, or deprecation.",1,0.0,0.0,0.0,0,True,False
+A38,"No consolidation: carry every diagnostic/configuration without pruning, merging, or deprecation.",2,0.0,0.0,0.0,0,True,False
+A38,"No consolidation: carry every diagnostic/configuration without pruning, merging, or deprecation.",3,0.0,0.0,0.0,0,True,False
+A39,No diagnostic genealogy: keep active functions but remove lineage and historical scope evidence.,1,0.0,0.0,0.0,0,True,False
+A39,No diagnostic genealogy: keep active functions but remove lineage and historical scope evidence.,2,0.0,0.0,0.0,0,True,False
+A39,No diagnostic genealogy: keep active functions but remove lineage and historical scope evidence.,3,0.0,0.0,0.0,0,True,False
+A4,Calibration-only: adapt diagnostic thresholds and weights only.,1,0.01428543288993045,-0.0027117562609666615,0.004581376703699461,0,True,False
+A4,Calibration-only: adapt diagnostic thresholds and weights only.,2,-0.0008251564931377464,-0.0030072807850585626,0.0035706058511863637,-3,True,False
+A4,Calibration-only: adapt diagnostic thresholds and weights only.,3,0.005167513739695706,-0.001362397820163488,0.0027400524183940917,0,True,False
+A40,No negative-transfer detector.,1,0.0,0.0,0.0,0,True,False
+A40,No negative-transfer detector.,2,0.017398897139695668,0.0009496676163342835,0.0,1,True,False
+A40,No negative-transfer detector.,3,0.01912385155906904,0.0001513775355737202,0.0004765308553728847,0,True,False
+A41,No prior-generation retention replay: certify later updates on current evidence only.,1,0.0,0.0,0.0,0,True,False
+A41,No prior-generation retention replay: certify later updates on current evidence only.,2,0.0,0.0,0.0,0,True,False
+A41,No prior-generation retention replay: certify later updates on current evidence only.,3,0.0,0.0,0.0,0,True,False
+A42,Frozen after Generation 1: learn only in G1.,1,0.0,0.0,0.0,0,True,False
+A42,Frozen after Generation 1: learn only in G1.,2,0.0,0.0,0.0,0,True,False
+A42,Frozen after Generation 1: learn only in G1.,3,0.000685208529068615,-0.0018165304268846507,-0.0015487252799618774,-1,True,False
+A43,"Fresh selector each generation: retain diagnostics/configs, reset context selection.",1,0.0,0.0,0.0,0,True,False
+A43,"Fresh selector each generation: retain diagnostics/configs, reset context selection.",2,-0.006743547725461596,-0.002532446976891421,-0.0018428933425477991,-2,True,False
+A43,"Fresh selector each generation: retain diagnostics/configs, reset context selection.",3,-0.0011689669022391103,-0.0009082652134423256,-0.0008339289969025495,0,True,False
+A44,Raw-memory persistence: bounded raw cases/nearest-neighbor lookup without abstract capsules or synthesis.,1,0.0,0.0,0.0,0,True,False
+A44,Raw-memory persistence: bounded raw cases/nearest-neighbor lookup without abstract capsules or synthesis.,2,0.0021338216908758367,-0.00031655587211142783,0.0005759041695461882,0,True,False
+A44,Raw-memory persistence: bounded raw cases/nearest-neighbor lookup without abstract capsules or synthesis.,3,0.003059077273369737,-0.0007568876778686045,0.0002382654276864432,-1,True,False
+A45,Surface-reset only: easy-transfer upper bound.,1,0.0,0.0,0.0,0,True,False
+A45,Surface-reset only: easy-transfer upper bound.,2,0.005772868477672888,-0.0011079455523899974,-0.0003455425017277122,-1,True,False
+A45,Surface-reset only: easy-transfer upper bound.,3,0.007766939118057703,-0.0007568876778686045,-0.0004765308553728847,-1,True,False
+A46,Structural-reset stress.,1,0.0,0.0,0.0,0,True,False
+A46,Structural-reset stress.,2,0.00037618178309417605,-0.005064893953782843,-0.003455425017277124,-1,True,False
+A46,Structural-reset stress.,3,0.0028983869166337994,-0.0012110202845897668,-0.0019061234214915413,1,True,False
+A47,Adversarial library-targeting reset under fixed pre-registered budget.,1,0.0,0.0,0.0,0,True,False
+A47,Adversarial library-targeting reset under fixed pre-registered budget.,2,0.005829050260767077,-0.006172839506172839,-0.003800967519004837,-2,True,False
+A47,Adversarial library-targeting reset under fixed pre-registered budget.,3,0.010558659368024692,-0.0019679079624583713,-0.002382654276864427,0,True,False
+A48,Unlimited participant memory: storage upper bound.,1,0.0,0.0,0.0,0,True,False
+A48,Unlimited participant memory: storage upper bound.,2,0.0,0.0,0.0,0,True,False
+A48,Unlimited participant memory: storage upper bound.,3,0.0,0.0,0.0,0,True,False
+A49,Matched-memory cumulative baseline: same persistent-state byte budget as MAVS-SL.,1,0.0,0.0,0.0,0,True,False
+A49,Matched-memory cumulative baseline: same persistent-state byte budget as MAVS-SL.,2,0.0,0.0,0.0,0,True,False
+A49,Matched-memory cumulative baseline: same persistent-state byte budget as MAVS-SL.,3,0.0,0.0,0.0,0,True,False
+A5,"No diagnostic creation: tune existing G, never expand it.",1,0.0,0.0,0.0,0,True,False
+A5,"No diagnostic creation: tune existing G, never expand it.",2,0.0,0.0,0.0,0,True,False
+A5,"No diagnostic creation: tune existing G, never expand it.",3,0.0,0.0,0.0,0,True,False
+A6,No split/merge: prevent scope refinement.,1,0.0,0.0,0.0,0,True,False
+A6,No split/merge: prevent scope refinement.,2,0.0,0.0,0.0,0,True,False
+A6,No split/merge: prevent scope refinement.,3,0.0,0.0,0.0,0,True,False
+A7,"No meta-diagnostics: remove novelty, coverage-gap, scope, and masking monitors.",1,0.013586450712687603,0.004466422076886266,-0.0008017409231474053,5,True,False
+A7,"No meta-diagnostics: remove novelty, coverage-gap, scope, and masking monitors.",2,0.005066071886110635,0.001899335232668567,-0.001727712508638562,1,True,False
+A7,"No meta-diagnostics: remove novelty, coverage-gap, scope, and masking monitors.",3,0.0014228609641051548,0.0007568876778686036,-0.0011913271384322134,0,True,False
+A8,No failure ontology: flat replay memory only.,1,0.0,0.0,0.0,0,True,False
+A8,No failure ontology: flat replay memory only.,2,0.0,0.0,0.0,0,True,False
+A8,No failure ontology: flat replay memory only.,3,0.0,0.0,0.0,0,True,False
+A9,No failure capsules: remove compressed reusable mechanism memory.,1,0.0,0.0,0.0,0,True,False
+A9,No failure capsules: remove compressed reusable mechanism memory.,2,0.0,0.0,0.0,0,True,False
+A9,No failure capsules: remove compressed reusable mechanism memory.,3,0.0,0.0,0.0,0,True,False

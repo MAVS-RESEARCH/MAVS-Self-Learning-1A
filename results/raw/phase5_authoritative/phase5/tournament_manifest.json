@@ -1,0 +1,114 @@
+{
+  "ablation_count": 50,
+  "artifacts": [
+    {
+      "generation": 1,
+      "promoted_update_cards": "results\\raw\\phase5_authoritative\\phase5\\generation_1_promoted_update_cards.parquet",
+      "terminal_cards": "results\\raw\\phase5_authoritative\\phase5\\generation_1_terminal_error_cards.parquet",
+      "trace": "results\\raw\\phase5_authoritative\\phase5\\generation_1_traces.parquet",
+      "trace_rows": 2580000,
+      "trace_sha256": "e680d23999453d75e9a7259b965fb3aa0ee40da5adca1a2b6c515c41e00003cb"
+    },
+    {
+      "generation": 2,
+      "promoted_update_cards": "results\\raw\\phase5_authoritative\\phase5\\generation_2_promoted_update_cards.parquet",
+      "terminal_cards": "results\\raw\\phase5_authoritative\\phase5\\generation_2_terminal_error_cards.parquet",
+      "trace": "results\\raw\\phase5_authoritative\\phase5\\generation_2_traces.parquet",
+      "trace_rows": 4080000,
+      "trace_sha256": "2ce7a809dc01aa58df8ba97b33b184511dbbce873a472d9142454ff101bb0f7e"
+    },
+    {
+      "generation": 3,
+      "promoted_update_cards": "results\\raw\\phase5_authoritative\\phase5\\generation_3_promoted_update_cards.parquet",
+      "terminal_cards": "results\\raw\\phase5_authoritative\\phase5\\generation_3_terminal_error_cards.parquet",
+      "trace": "results\\raw\\phase5_authoritative\\phase5\\generation_3_traces.parquet",
+      "trace_rows": 4080000,
+      "trace_sha256": "d92366eb84e2cdcb329c1367076ef9a2d794b2622164fe4697d2b1fd51582545"
+    }
+  ],
+  "best_seed_selection": false,
+  "canonical_opportunities": 45000,
+  "canonical_per_generation": 15000,
+  "complete_sweep": true,
+  "conditions": [
+    "cumulative",
+    "fresh"
+  ],
+  "consolidation_cards": "results\\raw\\phase5_authoritative\\phase5\\consolidation_cards.json",
+  "consolidation_cards_sha256": "ba3cf94ae164af0e0b910d344278006cbc016cc8eda85804fe7d940b38b418be",
+  "factorial_run_count": 16,
+  "implementation_git_sha": "127edbaf3f0013665368c5abdb32800bcb307d8c",
+  "manifest_sha256": "f91b48e1c0867952c423849e2df015520164ba2883c678f62dbbc0fa84eba4ba",
+  "model_training": "none",
+  "participant_checkpoints": "results\\raw\\phase5_authoritative\\phase5\\participant_checkpoints.json",
+  "participant_checkpoints_sha256": "2d0b85b8f55697bfd8a682c89e9aa87762d37101fae59da25cff7d29d2bada14",
+  "participant_final_access": false,
+  "phase": 5,
+  "post_holdout_retuning": false,
+  "replays_count_as_canonical": false,
+  "retention_replay_count": 200,
+  "run_id": "phase5_authoritative",
+  "schema_version": "1.0.0",
+  "targeted_interaction_count": 5,
+  "targeted_interaction_selection": "generation_1_factorial_exploratory_absolute_interaction_magnitude",
+  "targeted_interactions": [
+    {
+      "cells": [
+        "I-counterfactual_validation-certification-00",
+        "I-counterfactual_validation-certification-01",
+        "I-counterfactual_validation-certification-10",
+        "I-counterfactual_validation-certification-11"
+      ],
+      "first_factor": "counterfactual_validation",
+      "generation_1_exploratory_magnitude": 0.004066828145255622,
+      "second_factor": "certification"
+    },
+    {
+      "cells": [
+        "I-meta_diagnostics-configuration_library-00",
+        "I-meta_diagnostics-configuration_library-01",
+        "I-meta_diagnostics-configuration_library-10",
+        "I-meta_diagnostics-configuration_library-11"
+      ],
+      "first_factor": "meta_diagnostics",
+      "generation_1_exploratory_magnitude": 0.004066828145255622,
+      "second_factor": "configuration_library"
+    },
+    {
+      "cells": [
+        "I-certification-configuration_library-00",
+        "I-certification-configuration_library-01",
+        "I-certification-configuration_library-10",
+        "I-certification-configuration_library-11"
+      ],
+      "first_factor": "certification",
+      "generation_1_exploratory_magnitude": 0.0022533463419867417,
+      "second_factor": "configuration_library"
+    },
+    {
+      "cells": [
+        "I-meta_diagnostics-counterfactual_validation-00",
+        "I-meta_diagnostics-counterfactual_validation-01",
+        "I-meta_diagnostics-counterfactual_validation-10",
+        "I-meta_diagnostics-counterfactual_validation-11"
+      ],
+      "first_factor": "meta_diagnostics",
+      "generation_1_exploratory_magnitude": 0.0022533463419867417,
+      "second_factor": "counterfactual_validation"
+    },
+    {
+      "cells": [
+        "I-counterfactual_validation-configuration_library-00",
+        "I-counterfactual_validation-configuration_library-01",
+        "I-counterfactual_validation-configuration_library-10",
+        "I-counterfactual_validation-configuration_library-11"
+      ],
+      "first_factor": "counterfactual_validation",
+      "generation_1_exploratory_magnitude": 0.001764321031413824,
+      "second_factor": "configuration_library"
+    }
+  ],
+  "trace_rows": 10740000,
+  "world_metrics": "results\\raw\\phase5_authoritative\\phase5\\world_metrics.parquet",
+  "world_metrics_sha256": "ce55bcb9b60fced28c34a2719f36100b3da8c134a6cfa0e975ce9007eae1e16c"
+}

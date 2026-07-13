@@ -1,0 +1,9 @@
+{
+  "figure": "ablation_contributions.svg",
+  "metric": "Objective contribution",
+  "phase": 5,
+  "run_id": "phase5_authoritative",
+  "schema_version": "1.0.0",
+  "selection": "all frozen Phase 5 worlds; no post-holdout tuning",
+  "source": "world_metrics.parquet"
+}

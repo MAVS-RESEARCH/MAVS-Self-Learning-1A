@@ -1,0 +1,9 @@
+{
+  "figure": "retention_and_update.svg",
+  "metric": "Update stability",
+  "phase": 5,
+  "run_id": "phase5_authoritative",
+  "schema_version": "1.0.0",
+  "selection": "all frozen Phase 5 worlds; no post-holdout tuning",
+  "source": "world_metrics.parquet"
+}

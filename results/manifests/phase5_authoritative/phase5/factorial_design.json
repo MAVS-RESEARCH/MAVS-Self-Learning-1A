@@ -1,0 +1,198 @@
+{
+  "defining_words": [
+    "ABCE",
+    "BCDF",
+    "ADEF"
+  ],
+  "design": "regular_2_6_minus_2_resolution_iv",
+  "factorial_sha256": "caaab887e95d3801b8a4ef11f4452423a3563eb4c1b911c5ec7befb5ed967f6e",
+  "factors": [
+    "meta_diagnostics",
+    "synthesis",
+    "retained_replay",
+    "counterfactual_validation",
+    "certification",
+    "configuration_library"
+  ],
+  "resolution": 4,
+  "runs": [
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": -1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": -1,
+        "retained_replay": -1,
+        "synthesis": -1
+      },
+      "run_id": "F00"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": 1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": -1,
+        "retained_replay": -1,
+        "synthesis": -1
+      },
+      "run_id": "F01"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": 1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": -1,
+        "retained_replay": 1,
+        "synthesis": -1
+      },
+      "run_id": "F02"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": -1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": -1,
+        "retained_replay": 1,
+        "synthesis": -1
+      },
+      "run_id": "F03"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": 1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": -1,
+        "retained_replay": -1,
+        "synthesis": 1
+      },
+      "run_id": "F04"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": -1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": -1,
+        "retained_replay": -1,
+        "synthesis": 1
+      },
+      "run_id": "F05"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": -1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": -1,
+        "retained_replay": 1,
+        "synthesis": 1
+      },
+      "run_id": "F06"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": 1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": -1,
+        "retained_replay": 1,
+        "synthesis": 1
+      },
+      "run_id": "F07"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": -1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": 1,
+        "retained_replay": -1,
+        "synthesis": -1
+      },
+      "run_id": "F08"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": 1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": 1,
+        "retained_replay": -1,
+        "synthesis": -1
+      },
+      "run_id": "F09"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": 1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": 1,
+        "retained_replay": 1,
+        "synthesis": -1
+      },
+      "run_id": "F10"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": -1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": 1,
+        "retained_replay": 1,
+        "synthesis": -1
+      },
+      "run_id": "F11"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": 1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": 1,
+        "retained_replay": -1,
+        "synthesis": 1
+      },
+      "run_id": "F12"
+    },
+    {
+      "levels": {
+        "certification": -1,
+        "configuration_library": -1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": 1,
+        "retained_replay": -1,
+        "synthesis": 1
+      },
+      "run_id": "F13"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": -1,
+        "counterfactual_validation": -1,
+        "meta_diagnostics": 1,
+        "retained_replay": 1,
+        "synthesis": 1
+      },
+      "run_id": "F14"
+    },
+    {
+      "levels": {
+        "certification": 1,
+        "configuration_library": 1,
+        "counterfactual_validation": 1,
+        "meta_diagnostics": 1,
+        "retained_replay": 1,
+        "synthesis": 1
+      },
+      "run_id": "F15"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "selection_basis": "generation_1_exploratory_interaction_magnitude"
+}

@@ -1,0 +1,62 @@
+{
+  "ablation_count": 50,
+  "ablation_registry_sha256": "3a993adad23aa7f9373e72f1dae68588d1d34bfd793b8db44a26d6cf74f223cc",
+  "canonical_opportunities": 45000,
+  "canonical_per_generation": 15000,
+  "claim_boundary": "evaluated_phase5_transfer_only",
+  "conditions": [
+    "cumulative",
+    "fresh"
+  ],
+  "environment_packages": {
+    "pyarrow": "21.0.0",
+    "python": "3.13.7"
+  },
+  "factorial_run_count": 16,
+  "factorial_sha256": "caaab887e95d3801b8a4ef11f4452423a3563eb4c1b911c5ec7befb5ed967f6e",
+  "generations": [
+    {
+      "generation": 1,
+      "hidden": "results\\manifests\\phase5_authoritative\\phase5\\generation_1\\hidden_outcomes.json",
+      "hidden_sha256": "988f02d2105ce6bfc481d5af30f8f5eb2de23dd568a6af379b7972557fe4208d",
+      "ledger": "results\\manifests\\phase5_authoritative\\phase5\\generation_1\\world_ledger.parquet",
+      "ledger_sha256": "4f619ad1bdc265cd6d1bc84576a9fda6a4328f5dd3c2116d1ee8faa9b4d5be66",
+      "manifest": "results\\manifests\\phase5_authoritative\\phase5\\generation_1\\generation_manifest.json",
+      "manifest_sha256": "54de6be8688bb4679f7e91a68618552afee95a4f61ae64bd5a90d59603976820",
+      "opportunities": 15000,
+      "worlds": 300
+    },
+    {
+      "generation": 2,
+      "hidden": "results\\manifests\\phase5_authoritative\\phase5\\generation_2\\hidden_outcomes.json",
+      "hidden_sha256": "7de96fdd97ef975a524122cf2227ee7a0f063e24f5769118549aa6400e85d0e9",
+      "ledger": "results\\manifests\\phase5_authoritative\\phase5\\generation_2\\world_ledger.parquet",
+      "ledger_sha256": "75b6eb0a28a0341288496f59328bad81617938afff3a8448d2dade9209154aac",
+      "manifest": "results\\manifests\\phase5_authoritative\\phase5\\generation_2\\generation_manifest.json",
+      "manifest_sha256": "5c5c2368898e9f7f29ae9d06cbea812c4d4675bcbc6bce418f228b6df1671e49",
+      "opportunities": 15000,
+      "worlds": 300
+    },
+    {
+      "generation": 3,
+      "hidden": "results\\manifests\\phase5_authoritative\\phase5\\generation_3\\hidden_outcomes.json",
+      "hidden_sha256": "721916738c46f6ebd65173d2159cdd180bb97b8ebdfbb2ce4e826bc7aabc86cc",
+      "ledger": "results\\manifests\\phase5_authoritative\\phase5\\generation_3\\world_ledger.parquet",
+      "ledger_sha256": "b7401edac19db57b9a6e2f5aa6af592371f54fefb9a2134a25e3dc34d384f7c2",
+      "manifest": "results\\manifests\\phase5_authoritative\\phase5\\generation_3\\generation_manifest.json",
+      "manifest_sha256": "0af90f5b60ca0bfe0bb7e6c0dcf74fe549b0a2bf09654ca162b69ae97fe93a93",
+      "opportunities": 15000,
+      "worlds": 300
+    }
+  ],
+  "implementation_git_sha": "127edbaf3f0013665368c5abdb32800bcb307d8c",
+  "manifest_sha256": "78daa6d297a4def5d1b6b92ce1434a78f5316d6a5b6862845fb598bde1567256",
+  "model_training": "none",
+  "participant_final_access": false,
+  "phase": 5,
+  "phase_config_sha256": "4decf6ceb41f1162780614a2d8599ae2fec87cdee0343a93dcf4e066f6a0e67d",
+  "post_holdout_retuning": false,
+  "replays_count_as_canonical": false,
+  "run_id": "phase5_authoritative",
+  "schema_version": "1.0.0"
+}

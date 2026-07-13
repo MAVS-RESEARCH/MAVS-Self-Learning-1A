@@ -1,0 +1,42 @@
+{
+  "ablation_count": 50,
+  "all_negative_results_published": true,
+  "artifact_sha256": {
+    "causal_contributions.parquet": "251e8fdb2e84dd289c6ad7b55a46f0a8ed25a172e23e9bd3271e5c66af09c957",
+    "cross_generation_metrics.parquet": "ff5f077c1e1436eeb6aa648f5fc66df26c771e6677f1b688e9872f43911d3a56",
+    "factorial_effects.parquet": "07eb6264f51a73f6bace3197247f6f1d18e6938246a3341dd864df3b6e7b4139",
+    "point_metrics.parquet": "e94fe0f705fee6683b939452431e258f3c145c24724bd0e6757771a15c31089a",
+    "retention_evidence.parquet": "2a20c00a51e34e6169e51c89357b3cffc9558438797eaf9c1c751fbd311116d3",
+    "targeted_interactions.parquet": "4adfcb30f83cdcac47d19072724173e1ef0a5ceaa37d3d7d6fa6a307070421f9",
+    "transfer_estimands.parquet": "40ccf74d75f7a820ff9e9b05bdb2bafe8ce03c5489fc5342512b0b589b94d6ce"
+  },
+  "canonical_opportunities": 45000,
+  "canonical_per_generation": 15000,
+  "claim_gates": {
+    "all_retention_noninferiority_gates": false,
+    "complete_trace_and_no_retuning": true,
+    "cumulative_beats_fresh_on_paired_g2_g3": false,
+    "negative_transfer_within_tolerance": false,
+    "new_world_gains_do_not_require_forgetting": false,
+    "positive_generation_improvement_slope": false,
+    "raw_memory_does_not_explain_transfer": true,
+    "structural_reset_gain_persists": true,
+    "zero_catastrophic_governance_interference": false
+  },
+  "claim_policy": "fail_closed_all_gates_required",
+  "continual_governance_claim": "NOT_SUPPORTED",
+  "factorial_run_count": 16,
+  "final_benchmarks": "three frozen disjoint Phase 5 generation banks",
+  "model_training": "none",
+  "negative_result_count": 1764,
+  "phase": 5,
+  "post_holdout_retuning": false,
+  "run_id": "phase5_authoritative",
+  "schema_version": "1.0.0",
+  "summary_sha256": "fce1779b4d56f98daf77254c07a962457e9f8aee1eb7c2a608c8c2acb5d283e4",
+  "targeted_interaction_count": 5,
+  "tournament_manifest_sha256": "f91b48e1c0867952c423849e2df015520164ba2883c678f62dbbc0fa84eba4ba",
+  "trace_rows": 10740000,
+  "training_benchmarks": "not_applicable",
+  "world_metric_rows": 214800
+}

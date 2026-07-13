@@ -1027,6 +1027,65 @@ The independent audit inspected 26 Phase 4 checkpoint statements and found zero 
 - The subsequent independent JSON Schema check rejected the terminal-error card artifact. Its rows retained trace/condition/opportunity/action/outcome lineage but omitted the declared required `card_id`, `expected_action`, `actual_action`, `hidden_mechanism_after_reveal`, and `immediate_containment` fields. Therefore the otherwise successful run is not accepted and Phase 5 remains in progress.
 - Corrective implementation reveals the evaluator-only hidden mechanism only after the participant decision, records expected and actual action separately, derives immediate quarantine/rollback containment, and binds a content-derived terminal card ID to trace lineage and opportunity ID. Added a direct Parquet card regression requiring all five fields and correct unsafe-accept semantics. A new implementation commit and clean full pipeline are mandatory; no result threshold, participant input, action, or claim rule changes.
 
+### P5-E007 - Final authoritative execution, stress evidence, and implementation exit
+
+- Final immutable implementation Git SHA: `127edbaf3f0013665368c5abdb32800bcb307d8c`. The final named cleaner removed the preceding manifests, raw data, aggregates, figures, and reports before any test or compilation. Run manifest/factorial/registry artifacts bind to that SHA; authoritative ablation registry hash is `3a993adad23aa7f9373e72f1dae68588d1d34bfd793b8db44a26d6cf74f223cc` and tournament manifest hash is `f91b48e1c0867952c423849e2df015520164ba2883c678f62dbbc0fa84eba4ba`.
+- Canonical allocation: three independently compiled generations, each exactly 300 worlds x 50 opportunities = 15,000, for 45,000 total. Each generation contains exactly 50 worlds in each domain/family/composition/generator leave-out, policy-semantic transfer, and recurrence stratum. Reset worlds are G1 `150/100/50`, G2 `100/100/100`, and G3 `50/100/150` surface/structural/adversarial. Independent adversarial probes equal exactly 12 per adversarial world. Replays are explicitly non-canonical.
+- Complete replay matrix: all 50 authoritative ablations under cumulative/fresh conditions; all 16 balanced/orthogonal resolution-IV runs under cumulative/fresh; five exploratory-G1-selected four-cell paired interactions under cumulative/fresh in all generations; and 200 later-state prior-bank retention replays. Total primitive evidence is 10,740,000 trace rows. Generation trace SHA-256 values are G1 `e680d23999453d75e9a7259b965fb3aa0ee40da5adca1a2b6c515c41e00003cb`, G2 `2ce7a809dc01aa58df8ba97b33b184511dbbce873a472d9142454ff101bb0f7e`, and G3 `d92366eb84e2cdcb329c1367076ef9a2d794b2622164fe4697d2b1fd51582545`.
+- Final interaction targets, selected only from Generation 1 factorial interaction magnitude before later-generation interpretation, are counterfactual-validation x certification, meta-diagnostics x configuration-library, certification x configuration-library, meta-diagnostics x counterfactual-validation, and counterfactual-validation x configuration-library. The selection manifest marks Generation 1 exploratory and later generations confirmatory.
+- Separation validator returned `errors: []`: exact seed/opportunity/raw-hash/near-signature generation disjointness, prior-result seed/opportunity disjointness, hidden-field exclusion, no participant answer-key token, no future-manifest access, independent attacker identity, exact fixed attack budget, no model training, no final retuning, and zero replay inflation all passed. The complete trace validator returned `errors: []` across all action domains/partitions, UAR/FRR identities, A0-A49 trace IDs, lineage fields, hashes, 300 participant checkpoints, 200 consolidation cards, and terminal/promoted-card presence.
+- Stress/regression evidence: focused Phase 5 tests passed 7/7 before and after the tournament; full repository regression passed 195/195; inherited eight-record smoke generated and validated successfully. The independent audit evaluated 20 fail-closed implementation/evidence checks and returned `PASS`, finding count `0`; audit content hash is `33bbff6ca3f3251a956a297fca316a4f83f274338155168112663e5d4620ee56`, and audit-file SHA-256 is `7e6ff54328732f4a144a988810e55d38d97b8c698ae10c8b6d84335ee3547569`.
+- Post-audit schema verification validated all three primitive trace samples, all three terminal-error card samples, all 300 participant checkpoints, and all 200 consolidation cards against the four declared Draft 2020-12 schemas: `ALL_PHASE5_SCHEMAS_PASS`. A second complete tournament replay regenerated all 13 raw Phase 5 files and returned `mismatches: []`; every trace, update/error card, checkpoint, consolidation card, world metric, and tournament-manifest byte hash was identical.
+- Phase 5 implementation compliance verdict: PASS. Every WorkPlan Phase 5 scope, file, exact ablation, factorial/interaction, leave-out/reset, control, memory, retention, negative-transfer, leakage, attack, canonical-allocation, trace, metric, report, anti-overfit, stress, and fail-closed audit requirement has direct retained evidence. This implementation verdict does not convert a failed scientific claim into a positive result.
+
+### P5-E008 - Scientific results and fail-closed continual-governance verdict
+
+- Published table sizes: 300 ablation/generation/condition point rows; 2,700 paired transfer rows across leave-out/reset strata; 150 causal-contribution rows; 126 factorial main/aliased interaction rows; 30 targeted interaction rows; 1,200 retention rows covering every ablation/condition/later-generation/stratum; and 100 cross-generation metric rows. Every required FWT/CSR/TTR/TTD status/reuse/novelty/NTR/CGI/retention/library-efficiency/slope/leakage/forgetting/stability metric is explicit. TTD acceleration is not imputed where decision timestamps are unavailable; the reason is published.
+- A0 cumulative reference objective was `0.6991592003` in G1, `0.6701102387` in G2, and `0.6459102120` in G3. A0 UAR was `0.0054235125`, `0.0099715100`, and `0.0051468362`; FRR was `0.0059557897`, `0.0093296475`, and `0.0088158208`. Diagnostic reuse was undefined in G1 by construction, `0.6345798865` in G2, and `0.4728971963` in G3. Scope leakage increased from `0.0288` to `0.0554666667` to `0.0892`; update stability remained `0.9967778544`, `0.9962411586`, and `0.9959017619`.
+- Mean A0 forward transfer was positive (`0.0071481989` G2; `0.0127818963` G3), and mean cold-start reduction was positive (`0.0148443722`; `0.0171016723`). These means do not pass the stricter paired all-strata confidence gate. Negative-transfer rates were `0.1591298073` and `0.1359074770`, above the preregistered `0.02` tolerance. CGI rates were `0.0158027645` and `0.0030864198`, not zero. Only 75% of A0 cumulative protected retention strata passed all objective/UAR/zero-CGI gates, and Generation 1-3 objective slope was negative.
+- Gates passed: complete trace/no retuning; structural-reset transfer remained positive; bounded raw-memory did not explain the full reference result. Gates failed: paired cumulative superiority over fresh across all G2/G3 strata; NTR tolerance; zero CGI; all retention non-inferiority; zero forgetting; and positive generation slope. Accordingly `CLAIMS.md` and `phase5_summary.json` both report `NOT_SUPPORTED` under the all-gates-required policy. Summary hash is `fce1779b4d56f98daf77254c07a962457e9f8aee1eb7c2a608c8c2acb5d283e4`.
+- All 1,764 nonpositive component/transfer/retention results remain published in `negative_results.csv`; no ablation, stratum, seed, world, interaction, or error was deleted after final evaluation. There was no model training, checkpoint selection, final-bank repair, benchmark retuning, or claim substitution.
+
+### P5-E009 - Final console checkpoint comment/statement registry
+
+The independent audit inspected all 27 Phase 5 checkpoint statements and found zero missing or non-adjacent identifying comments. Lines are one-based; every comment immediately precedes its statement.
+
+| File | Comment line | Statement line | Event |
+|---|---:|---:|---|
+| `scripts/aggregate_phase5.py` | 348 | 349 | `phase5.aggregate.step01.start` |
+| `scripts/aggregate_phase5.py` | 351 | 352 | `phase5.aggregate.step02.complete` |
+| `scripts/audit_phase5.py` | 141 | 142 | `phase5.audit.step01.start` |
+| `scripts/audit_phase5.py` | 144 | 145 | `phase5.audit.step02.complete` |
+| `scripts/compile_phase5_ledgers.py` | 99 | 100 | `phase5.compile.step01.start` |
+| `scripts/compile_phase5_ledgers.py` | 102 | 103 | `phase5.compile.step02.complete` |
+| `scripts/run_phase5.mjs` | 17 | 18 | `phase5.orchestrator.step01.start` |
+| `scripts/run_phase5.mjs` | 20 | 21 | `phase5.orchestrator.step02.clean_named_run` |
+| `scripts/run_phase5.mjs` | 25 | 26 | `phase5.orchestrator.step03.inherited_tests_before` |
+| `scripts/run_phase5.mjs` | 30 | 31 | `phase5.orchestrator.step04.phase5_tests_before` |
+| `scripts/run_phase5.mjs` | 35 | 36 | `phase5.orchestrator.step05.compile_banks` |
+| `scripts/run_phase5.mjs` | 40 | 41 | `phase5.orchestrator.step06.validate_separation` |
+| `scripts/run_phase5.mjs` | 45 | 46 | `phase5.orchestrator.step07.execute_tournament` |
+| `scripts/run_phase5.mjs` | 50 | 51 | `phase5.orchestrator.step08.validate_traces` |
+| `scripts/run_phase5.mjs` | 55 | 56 | `phase5.orchestrator.step09.aggregate` |
+| `scripts/run_phase5.mjs` | 60 | 61 | `phase5.orchestrator.step10.phase5_tests_after` |
+| `scripts/run_phase5.mjs` | 65 | 66 | `phase5.orchestrator.step11.full_regression` |
+| `scripts/run_phase5.mjs` | 70 | 71 | `phase5.orchestrator.step12.final_inherited_smoke` |
+| `scripts/run_phase5.mjs` | 76 | 77 | `phase5.orchestrator.step13.write_evidence` |
+| `scripts/run_phase5.mjs` | 82 | 83 | `phase5.orchestrator.step14.audit` |
+| `scripts/run_phase5.mjs` | 87 | 88 | `phase5.orchestrator.step15.complete` |
+| `scripts/run_phase5_tournament.py` | 380 | 381 | `phase5.tournament.step01.start` |
+| `scripts/run_phase5_tournament.py` | 383 | 384 | `phase5.tournament.step02.complete` |
+| `scripts/validate_phase5_separation.py` | 95 | 96 | `phase5.separation.step01.start` |
+| `scripts/validate_phase5_separation.py` | 98 | 99 | `phase5.separation.step02.complete` |
+| `scripts/validate_phase5_traces.py` | 95 | 96 | `phase5.traces.step01.start` |
+| `scripts/validate_phase5_traces.py` | 98 | 99 | `phase5.traces.step02.complete` |
+
+### P5-E010 - Local closure and no-push enforcement
+
+- Phase 5 source is frozen by implementation commits `1783bf5`, `13c616b`, `929ae3a`, and `127edba`; final manifests bind only to `127edba`. The final accepted evidence and P5-E007 through P5-E010 documentation are committed locally after this entry.
+- The three complete raw decision traces are 66,748,973, 104,101,023, and 106,551,907 bytes. The repository's existing Git LFS policy is extended only to `results/raw/*/phase5/generation_*_traces.parquet`, so the local evidence commit retains all raw decisions without creating ordinary Git blobs above GitHub's 100 MiB limit. Manifests continue to hash the actual local Parquet bytes, not the LFS pointer.
+- The user explicitly prohibited GitHub publication for Phase 5. No `git push`, pull request, tag, release, remote branch mutation, or other GitHub write is performed. Local `main` remains ahead of `origin/main`; remote state is intentionally unchanged.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1053,8 +1112,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 2 | Corruption, correlated collapse, and partial observability | Complete | P2-E000 through P2-E011; authoritative and post-evidence deterministic audits pass |
 | 3 | Autonomous failure discovery and self-repair | Complete | P3-E000 through P3-E010; frozen authoritative and post-evidence deterministic audits pass |
 | 4 | Full baseline tournament and Pareto audit | Complete | P4-E000 through P4-E010; full paired tournament, deterministic replay, and fail-closed audit pass |
-| 5 | Deep ablation, transfer, and anti-overfit trials | In progress | P5-E000 through P5-E001; authorization, exact workload, and evidence design frozen |
+| 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E010; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
 
 ## Current checkpoint
 
-Phase 0 through Phase 4 are complete and frozen. Phase 5 is authorized and active under P5-E000 through P5-E001. No later work is authorized. Phase 5 must not be pushed to GitHub.
+Phase 0 through Phase 5 are complete and frozen. The Phase 5 implementation/evidence audit passed, while the scientific continual-governance claim correctly remains `NOT_SUPPORTED`. No later work is authorized. Phase 5 must not be pushed to GitHub.

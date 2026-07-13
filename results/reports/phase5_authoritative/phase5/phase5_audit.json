@@ -1,0 +1,31 @@
+{
+  "audit_sha256": "33bbff6ca3f3251a956a297fca316a4f83f274338155168112663e5d4620ee56",
+  "checks": {
+    "all_negative_results_published": true,
+    "all_required_metrics": true,
+    "artifact_hashes": true,
+    "authoritative_a0_a49": true,
+    "canonical_budget": true,
+    "causal_and_interaction_outputs": true,
+    "complete_replay_matrix": true,
+    "console_comments_and_calls": true,
+    "deterministic_bank_recompile": true,
+    "fail_closed_claims": true,
+    "generation_slope_derivable": true,
+    "independent_adversary": true,
+    "library_efficiency_derivable": true,
+    "no_training_or_retuning": true,
+    "reports_and_sidecars": true,
+    "resolution_iv": true,
+    "retention_every_later_update_stratum": true,
+    "separation_validator": true,
+    "single_explicit_diff": true,
+    "trace_validator": true
+  },
+  "finding_count": 0,
+  "findings": [],
+  "phase": 5,
+  "run_id": "phase5_authoritative",
+  "schema_version": "1.0.0",
+  "verdict": "PASS"
+}
