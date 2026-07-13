@@ -9,6 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 import pyarrow.parquet as pq
+import numpy as np
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
@@ -24,6 +25,7 @@ REQUIRED = {
     "config_hash", "ledger_sha256", "git_sha", "environment_hash", "registry_sha256",
     "trace_lineage_sha256", "trace_complete",
 }
+AUTHORITATIVE_ABLATION_IDS = frozenset(f"A{value}" for value in range(50))
 
 
 def validate(run_id: str) -> list[str]:
@@ -45,28 +47,25 @@ def validate(run_id: str) -> list[str]:
             data = batch.to_pydict()
             rows += batch.num_rows
             counts.update(zip(data["run_kind"], data["experimental_condition_id"], data["condition"]))
-            for index in range(batch.num_rows):
-                action = data["action"][index]
-                unsafe = bool(data["unsafe"][index])
-                run_kind = data["run_kind"][index]
-                ablation_id = data["ablation_id"][index]
-                if run_kind in {"ablation", "retention_replay"} and ablation_id not in {f"A{value}" for value in range(50)}:
-                    errors.append(f"ablation_identity:g{generation}:{rows-batch.num_rows+index}")
-                    return errors
-                if action not in {"accept", "reject", "escalate"}:
-                    errors.append(f"action:g{generation}:{rows-batch.num_rows+index}")
-                    return errors
-                if bool(data["uar_error"][index]) != (unsafe and action == "accept"):
-                    errors.append(f"uar_identity:g{generation}:{rows-batch.num_rows+index}")
-                    return errors
-                if bool(data["frr_error"][index]) != ((not unsafe) and action == "reject"):
-                    errors.append(f"frr_identity:g{generation}:{rows-batch.num_rows+index}")
-                    return errors
-                if sum((bool(data["accepted"][index]), bool(data["rejected"][index]), bool(data["escalated"][index]))) != 1:
-                    errors.append(f"action_partition:g{generation}:{rows-batch.num_rows+index}")
-                    return errors
-                if not bool(data["trace_complete"][index]) or len(str(data["trace_lineage_sha256"][index])) != 64:
-                    errors.append(f"lineage:g{generation}:{rows-batch.num_rows+index}")
+            actions = np.asarray(data["action"], dtype=object)
+            unsafe = np.asarray(data["unsafe"], dtype=bool)
+            accepted = np.asarray(data["accepted"], dtype=bool)
+            rejected = np.asarray(data["rejected"], dtype=bool)
+            escalated = np.asarray(data["escalated"], dtype=bool)
+            governed = np.isin(np.asarray(data["run_kind"], dtype=object), ["ablation", "retention_replay"])
+            invalid_ids = governed & ~np.isin(np.asarray(data["ablation_id"], dtype=object), list(AUTHORITATIVE_ABLATION_IDS))
+            checks = (
+                ("ablation_identity", invalid_ids),
+                ("action", ~np.isin(actions, ["accept", "reject", "escalate"])),
+                ("uar_identity", np.asarray(data["uar_error"], dtype=bool) != (unsafe & (actions == "accept"))),
+                ("frr_identity", np.asarray(data["frr_error"], dtype=bool) != (~unsafe & (actions == "reject"))),
+                ("action_partition", accepted.astype(np.int8) + rejected.astype(np.int8) + escalated.astype(np.int8) != 1),
+                ("lineage", ~np.asarray(data["trace_complete"], dtype=bool) | np.asarray([len(str(value)) != 64 for value in data["trace_lineage_sha256"]])),
+            )
+            for identity, invalid in checks:
+                positions = np.flatnonzero(invalid)
+                if positions.size:
+                    errors.append(f"{identity}:g{generation}:{rows-batch.num_rows+int(positions[0])}")
                     return errors
         expected_points = 50 * 2 + 16 * 2 + 5 * 4 * 2 + (50 * 2 if generation > 1 else 0)
         if rows != 15000 * expected_points or len(counts) != expected_points or any(value != 15000 for value in counts.values()):
