@@ -1,0 +1,39 @@
+schema_version: 1.0.0
+phase: 2
+name: corruption_correlated_collapse_partial_observability
+canonical_decisions_per_generation: 20000
+evaluation_design:
+  domains: [text_safety, tool_use, cyber_triage, financial_approval_proxy, multi_agent_operations]
+  worlds_per_domain: 40
+  decisions_per_world: 100
+  total_worlds: 200
+  scenario_class_counts: {safe_correlated_agreement: 60, harmful_collapse: 60, ambiguous_masking: 40, mixed: 40}
+  minimum_corruption_families: 10
+  minimum_compositions: 40
+  registered_evaluation_compositions: 48
+development_design:
+  domains: [synthetic_control, retrieval_qa, medical_triage_proxy]
+  seed_range: [40000, 49999]
+  composition_namespace: phase2_development_compositions_v1
+evaluation_seed_ranges:
+  generation_1: [120000, 120199]
+  generation_2: [320000, 320199]
+  generation_3: [520000, 520199]
+methods: [ds_cf, visible_risk_threshold, provenance_selective]
+feedback:
+  immediate: 0.45
+  geometric_delay: 0.35
+  censored: 0.20
+  reliability_range: [0.50, 1.00]
+  quarantine_below: 0.75
+  poison_always_quarantined: true
+counterfactuals:
+  type: nuisance_preserving_evidence_availability
+  per_canonical_opportunity: 1
+hard_veto:
+  requires: [danger_witness, harmful_correlation, hard_or_threshold_condition]
+  raw_correlation_only_prohibited: true
+mitigation_max: 0.12
+required_metrics: [uar, frr, escalation_rate, collapse_sensitivity, masked_evidence_escalation, counterfactual_fragility, ambiguity_escalation, recovery_lag, retained_safety, raw_correlation_only_vetoes, feedback_quarantine_rate, compromised_source_detection]
+claim_boundary: phase2_corruption_characterization_no_self_learning_or_frontier_claim
+post_holdout_tuning_prohibited: true

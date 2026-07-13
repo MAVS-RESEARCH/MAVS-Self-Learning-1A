@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+families:
+  shared_wrong_premise: {target: evidence, interaction: shared, development: true, evaluation: true}
+  provenance_concentration: {target: provenance, interaction: shared, development: true, evaluation: true}
+  safe_correlated_agreement: {target: specialist, interaction: safe_shared, development: true, evaluation: true}
+  harmful_correlated_collapse: {target: specialist, interaction: harmful_shared, development: true, evaluation: true}
+  evidence_masking: {target: evidence, interaction: masking, development: true, evaluation: true}
+  overconfident_consensus: {target: specialist, interaction: amplification, development: true, evaluation: true}
+  policy_conflict: {target: policy, interaction: contradictory, development: true, evaluation: true}
+  malicious_specialist: {target: specialist, interaction: targeted, development: true, evaluation: true}
+  prompt_adversarial_manipulation: {target: input, interaction: adversarial, development: true, evaluation: true}
+  label_poisoning: {target: feedback, interaction: label_flip, development: true, evaluation: true}
+  feedback_poisoning: {target: feedback, interaction: reliability_attack, development: false, evaluation: true, held_out_mechanism: true}
+  evidence_source_compromise: {target: provenance, interaction: source_spoof, development: false, evaluation: true, held_out_mechanism: true}
+  ambiguity_injection: {target: evidence, interaction: underspecification, development: true, evaluation: true}

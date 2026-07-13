@@ -464,6 +464,62 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - Final Phase 1 verdict: PASS, 100% compliant with WorkPlan Section 8 and its applicable prerequisite contracts. Every listed scope item, file class, baseline family, coding rule, allocation, anti-overfit constraint, metric, and exit criterion has direct and independently replayed evidence. No compliance gap or provisional artifact remains.
 - Claim restriction: this verdict certifies Phase 1 non-stationary baseline characterization and measurement integrity. It does not assert MAVS-SL superiority, repair, transfer, consolidation, deployment readiness, or Pareto-frontier expansion.
 
+## Phase 2 execution log
+
+### P2-E000 - Authorization, governing-source lock, and exact phase boundary
+
+- Time: 2026-07-13 Asia/Karachi.
+- Status: IN PROGRESS.
+- User authorization: implement Phase 2 only; add an identifying comment immediately before every new console checkpoint; maintain this live evidence record; stress-test and independently audit the phase; commit and push only after the Phase 2 gate has no open compliance gap.
+- Binding WorkPlan clauses: Sections 4-6, 9, 13-16, and 18. Phase 2's direct scope/files/method/allocation/output requirements are WorkPlan lines 453-482.
+- Architecture authority: `MAVS_Self_Learning_Architecture_and_Pareto_Comparison.docx.pdf`, SHA-256 `3797AEBE1528B26C06BDCEA6231A80D4D3EB937524C5F6EDBBE9F55D2EC2626E`.
+- PDF qualification: Poppler reports 23 unencrypted letter-size pages. All pages were rendered at 110 DPI into four contact sheets and visually inspected; no missing page, clipping, overlap, illegible table, broken glyph, or layout defect was found. Text extraction was separately searched for correlation presence/harm/safe/ambiguity, evidence masking/recovery, hard veto, bounded mitigation, provenance, counterfactual fragility, poisoned feedback, policy conflict, maliciousness, and recovery semantics.
+- Architecture constraints carried into Phase 2: distinguish correlation presence from certified harmful correlation and safe consistency; absence/unavailability/masking are different states; require a danger witness plus hard/threshold condition for rejection; raw presence, confidence inflation, or missing evidence cannot alone hard-veto; mitigation is bounded; genuine ambiguity escalates; alternate-view/drop-one fragility is observable; participant decisions use only approved visible evidence; poisoned/unreliable feedback remains tagged or quarantined; Phase 2 cannot claim Self-Learning, repair, frontier expansion, transfer, or deployment readiness.
+- Exact acceptance allocation: 20,000 canonical opportunities per generation across three independently compiled generations. Each must include at least ten corruption families and at least forty compositions, using an approximate 30% safe correlated agreement, 30% harmful collapse, 20% ambiguous masking, and 20% mixed allocation.
+- Required outputs: zero raw-correlation-only vetoes; collapse sensitivity; masked-evidence behavior; counterfactual fragility; ambiguity escalation; recovery; retained safety; trace lineage plus failure cards for every unsafe acceptance or false rejection; solved DS-CF regressions; explicit separation of evidence absence and evidence unavailability.
+
+### P2-E001 - Accepted starting state and live gap inventory
+
+- Local and remote `main` are synchronized and clean at `625c4fc39d5478fe126f76db4d07d155e4f0ec0a`.
+- Phase 0 and Phase 1 code/results remain frozen. Phase 2 will use a new namespaced run ID; its cleaner must preserve both accepted earlier-phase namespaces.
+- Reusable foundation: typed observations/candidates/configuration contracts, immutable/signed ledger utilities, Phase 1 disjoint five-domain generator, schedule and feedback machinery, existing corruption transforms/composer, MAVS-GC diagnostics/escalation, baseline contracts, failure-card utilities, and 137 passing inherited tests.
+- Gaps at authorization: no `configs/phases/phase2.yaml`; no Phase 2 family/composition registries; no explicit DS-CF presence/harm/safe/ambiguity governance module; no manifest-derived specialist population model; no Phase 2 causal counterfactual compiler; no poison quarantine ledger; no 20,000-opportunity Phase 2 ledger compiler/stress runner/schema/metrics/failure-card completeness validator/audit/orchestrator; no Phase 2 tests; and no Phase 2 console line registry.
+- Next gate: map every requirement to a concrete module, config, trace field, property test, and audit assertion before freezing any authoritative ledger.
+
+### P2-E002 - Requirement-to-module design accepted for implementation
+
+- Configuration: `configs/phases/phase2.yaml` will freeze the 20,000-opportunity allocation, 30/30/20/20 scenario mixture, family/composition floors, methods, metrics, and claim boundary. `configs/corruptions/phase2_families.yaml` will declare at least twelve bounded families with targets and held-out status. `phase2_compositions.yaml` will explicitly register at least forty-eight two-to-four-family evaluation compositions plus a structurally disjoint development set.
+- Corruption and world compilation: `corruption/phase2.py` will implement the typed family registry, schedule parameters, deterministic bounded transforms, and a composer that records onset/duration/intensity/target/interaction/recovery. `envs/phase2_gauntlet.py` will compile five domains x 40 worlds x 100 opportunities, exact scenario-class counts, specialist manifests, visible projections, evaluator-only hidden outcomes, causal evidence counterfactuals, and released-feedback metadata.
+- Governance semantics: `governance/ds_cf.py` will implement serializable evidence states and DS-CF decisions. Hard veto requires conjunction of a danger witness, certified harmful correlation, and an explicit hard/threshold condition. Correlation presence alone, confidence inflation alone, or missing evidence alone cannot reject. Safe correlated consistency may accept; genuine conflict, masking, or evidence-channel unavailability escalates; mitigation is clamped to a configured bound.
+- Diagnostics and feedback: `governance/phase2_diagnostics.py` will calculate provenance concentration, source independence, masking, safe/danger witnesses, conflict, fragility, feedback reliability, and compromised-source signals exclusively from the visible projection. `governance/feedback_quarantine.py` will separate accepted, censored, unreleased, and quarantined feedback using explicit provenance/reliability/poison metadata.
+- Experiment and evidence: Phase 2 compile, stress, trace-validation, aggregation, failure-card, and independent-audit scripts will freeze manifests before participant execution, replay matched visible opportunities, run nuisance-preserving evidence counterfactuals, persist lineage for every terminal error, and regenerate all traces in isolation. `schemas/phase2_trace.schema.json` and `phase2_failure_card.schema.json` will fail closed on missing evidence/lineage fields.
+- Tests: Phase 2 unit/property/regression tests will enforce exact allocation and mixture, family/composition floors and held-out differences, schedule bounds/state transitions/recovery, manifest-only specialist generation, hidden-state denial, DS-CF truth-table fixtures, raw-correlation veto prohibition, bounded mitigation, absence-versus-unavailability distinction, counterfactual nuisance identity, evidence-order invariance, boundary behavior, poison quarantine, deterministic replay, metric identities, and one-card-per-terminal-error completeness.
+- Model policy: Phase 2 introduces no trained model. The mechanisms are explicit bounded diagnostics and fixed governance comparators; therefore no training benchmark can contaminate evaluation. Anti-overfit controls are disjoint development/evaluation seeds, intensities, schedules, compositions, held-out mechanisms, manifest hashes, and no post-holdout tuning.
+
+### P2-E003 - Implemented Phase 2 contracts and experiment surface
+
+- Configs: `configs/phases/phase2.yaml` fixes five domains x 40 worlds x 100 decisions, 20,000 per generation, exact 60/60/40/40 scenario counts, three fixed participant methods, metrics, feedback quarantine, counterfactual, hard-veto, mitigation, no-training, and claim-boundary rules. `configs/corruptions/phase2_families.yaml` declares 13 families; `phase2_compositions.yaml` declares 12 development and 48 evaluation compositions, each containing two to four unique families.
+- Held-out mechanisms: `feedback_poisoning` and `evidence_source_compromise` are prohibited from development and present in evaluation. Development and evaluation also differ in domains, seeds, opportunity/world identities, namespace, compositions, schedule draws, and intensity draws.
+- Corruption engine: `corruption/phase2.py` defines typed family/composition/schedule contracts. Schedule construction randomizes onset, duration, intensity, target, interaction, and recovery; `state_at` has clean, active, bounded decay/recovery, and recovered states. Visible transforms never add latent labels or hidden mechanism fields.
+- World compiler: `envs/phase2_gauntlet.py` generates hidden specialist manifests with 3-9 members and bounded competence, calibration, diversity, source dependency, fatigue, recovery, maliciousness, and specialization. Participant-visible rows contain only outputs, declared provenance, allowed diagnostics, limited corruption hints, and feedback timing/reliability. Evaluator-only outcomes contain scenario class, compositions/families, unsafe/catastrophic labels, poison status, schedule parameters, manifest hash, and hidden-mechanism hash.
+- Mixture deconfounding: each evaluation domain contains 12 safe-correlated, 12 harmful-collapse, 8 ambiguous-masking, and 8 mixed worlds. This yields the exact 60/60/40/40 global mixture without making a scenario class synonymous with a domain.
+- Counterfactuals: every canonical opportunity includes a nuisance-preserving evidence counterfactual. Domain, world, step, prompt kind, specialists, risk, provenance, and policy signals remain fixed; evidence availability/masking and resulting ambiguity are toggled. Matched methods evaluate both views, while only the original is counted as a canonical decision.
+- Governance: `governance/phase2_diagnostics.py` computes visible-only provenance concentration, independence, masking, safe/danger witnesses, harmful correlation, safe consistency, conflict, fragility, reliability, and source compromise. `governance/ds_cf.py` requires danger witness AND no safe witness AND certified harmful correlation AND an explicit hard/threshold condition for hard veto. Raw correlation alone cannot reject. Masking/unavailability, witness conflict, or uncovered states escalate. Mitigation is clamped to `0.12`.
+- Feedback: `governance/feedback_quarantine.py` distinguishes unreleased, censored, quarantined, and accepted feedback. Poison metadata or reliability below `0.75` is quarantined; censored feedback stays unavailable and never becomes a negative label.
+- Comparators: `baselines/phase2_methods.py` adds DS-CF, a visible-risk threshold, and a provenance-selective method, all satisfying the inherited `GovernanceMethod` protocol and using no evaluator-only fields or learned state.
+- Evidence pipeline: Phase 2 compile/stress/separation/trace/card/aggregation/audit scripts, two strict schemas, and the authoritative JavaScript orchestrator are implemented. Stress produces 60,000 canonical opportunities and 180,000 matched method decisions over three generations. Every unsafe acceptance or false rejection is converted to a schema-validated card with visible evidence, post-reveal hidden mechanism, specialist hash, diagnostic trace, containment, cause, and immutable trace lineage.
+
+### P2-E004 - Focused failures, corrective work, and current preflight
+
+- First focused command: `python -m compileall -q src scripts tests; python -m pytest -q tests/phase2`. Compilation passed; 18 tests passed and one failed.
+- Failure: `test_exact_evaluation_allocation_mixture_and_composition_coverage` combined a sorted set of world IDs with unrelated positional visible rows and raised `StopIteration`. The compiler output was not at fault. Correction replaced the lookup with the compiler's aligned visible/hidden pairs. Rerun: 19/19 tests passed.
+- Complete preflight before deconfounding correction: Phase 2 19/19 tests passed; complete repository regression 156/156 passed.
+- Manual audit then found a test-design omission: scenario-class blocks were exact globally but ordered by domain, making ambiguous and mixed classes domain-confounded. No result was generated or accepted. Correction distributes the exact 12/12/8/8 class mixture inside every domain and adds a per-domain assertion.
+- A second requirement audit found that alternate-view, evidence-order, boundary, and recovery tests existed but the named drop-one counterfactual lacked a direct implementation. Added `drop_one_fragility`, a maximum visible-diagnostic change across all one-specialist removals; added it to traces, metrics, cards, schema, and a positive bounded test. Added a danger-witness threshold-boundary regression.
+- Corrected focused verification: compileall passed; Phase 2 tests passed 21/21; `git diff --check` found no whitespace errors. Corrected full regression: 158/158 tests passed.
+- PDF-skill cleanup: verified `tmp` resolved to `C:\Users\Saif malik\Self-Learning-MAVS-1\tmp`, a child of the workspace, then removed 28 qualification files totaling 10,772,003 bytes. No temporary render remains.
+- Current gate: freeze the implementation commit, run the authoritative 60,000-canonical/180,000-method-decision workload, then independently replay-audit every trace/card/manifest requirement. Phase 2 is not yet accepted.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -487,11 +543,11 @@ No later phase may be marked in progress until the preceding phase exit gate has
 |---|---|---|---|
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
 | 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
-| 2 | Corruption, correlated collapse, and partial observability | Not started | None |
+| 2 | Corruption, correlated collapse, and partial observability | In progress | P2-E000 through P2-E004; implementation complete, corrected preflight active |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Not started | None |
 
 ## Current checkpoint
 
-Phase 0 and Phase 1 are complete and frozen. Phase 1 closure evidence is P1-E000 through P1-E011. No Phase 2 work is authorized.
+Phase 0 and Phase 1 are complete and frozen. Phase 2 is authorized and active under P2-E000 through P2-E001. No Phase 3 work is authorized.

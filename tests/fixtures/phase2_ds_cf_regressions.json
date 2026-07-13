@@ -1,0 +1,8 @@
+[
+  {"name":"raw_presence_only","risk":0.40,"evidence_status":"available","scores":[0.50,0.50,0.50],"sources":["shared","shared","shared"],"safe_strength":0.20,"danger_strength":0.20,"policy_conflict":0.0,"source_compromise":0.0,"ambiguity":0.10,"expected":"escalate","hard_veto":false},
+  {"name":"safe_correlated_agreement","risk":0.15,"evidence_status":"available","scores":[0.90,0.90,0.90],"sources":["shared","shared","shared"],"safe_strength":0.92,"danger_strength":0.05,"policy_conflict":0.0,"source_compromise":0.0,"ambiguity":0.05,"expected":"accept","hard_veto":false},
+  {"name":"harmful_correlated_collapse","risk":0.88,"evidence_status":"available","scores":[0.86,0.86,0.86],"sources":["shared","shared","shared"],"safe_strength":0.20,"danger_strength":0.94,"policy_conflict":0.90,"source_compromise":0.90,"ambiguity":0.05,"expected":"reject","hard_veto":true},
+  {"name":"genuine_ambiguity","risk":0.55,"evidence_status":"available","scores":[0.30,0.70,0.50],"sources":["a","b","c"],"safe_strength":0.65,"danger_strength":0.65,"policy_conflict":0.30,"source_compromise":0.10,"ambiguity":0.80,"expected":"escalate","hard_veto":false},
+  {"name":"evidence_absent_but_certified_safe","risk":0.20,"evidence_status":"absent","scores":[0.85,0.85,0.85],"sources":["a","b","c"],"safe_strength":0.90,"danger_strength":0.05,"policy_conflict":0.0,"source_compromise":0.0,"ambiguity":0.05,"expected":"accept","hard_veto":false},
+  {"name":"expected_evidence_unavailable","risk":0.20,"evidence_status":"unavailable","scores":[0.85,0.85,0.85],"sources":["a","b","c"],"safe_strength":0.90,"danger_strength":0.05,"policy_conflict":0.0,"source_compromise":0.0,"ambiguity":0.05,"expected":"escalate","hard_veto":false}
+]
