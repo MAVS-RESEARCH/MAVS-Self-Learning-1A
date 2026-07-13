@@ -28,3 +28,4 @@ def test_rare_event_hierarchical_and_multiplicity_statistics() -> None:
     assert first == second
     assert holm_adjust([0.01, 0.04, 0.03]) == (0.03, 0.06, 0.06)
     assert paired_sign_test([1.0] * 10) < 0.01
+    assert 0.0 <= paired_sign_test([1.0] * 1500) < 1e-100

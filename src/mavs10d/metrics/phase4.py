@@ -82,8 +82,13 @@ def paired_sign_test(deltas: Sequence[float]) -> float:
         return 1.0
     positive = sum(value > 0.0 for value in nonzero)
     smaller = min(positive, len(nonzero) - positive)
-    probability = sum(math.comb(len(nonzero), k) for k in range(smaller + 1)) / (2.0 ** len(nonzero))
-    return min(1.0, 2.0 * probability)
+    log_terms = [
+        math.lgamma(len(nonzero) + 1) - math.lgamma(k + 1) - math.lgamma(len(nonzero) - k + 1)
+        for k in range(smaller + 1)
+    ]
+    maximum = max(log_terms)
+    log_tail = maximum + math.log(sum(math.exp(value - maximum) for value in log_terms)) - len(nonzero) * math.log(2.0)
+    return min(1.0, 2.0 * math.exp(log_tail))
 
 
 def _beta_quantile(probability: float, a: float, b: float) -> float:

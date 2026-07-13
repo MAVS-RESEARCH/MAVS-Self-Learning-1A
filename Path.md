@@ -897,6 +897,12 @@ Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan
 - The first tournament attempt revealed an unacceptable performance defect: the trace engine correctly wrote primitive rows, but `_world_metrics` performed 69,500 small pandas group operations. Generation 1 had not completed after the diagnostic interval. Only the named orchestration PID and its child Python process were terminated; the incomplete named results are discarded by the next orchestrator clean step and cannot enter authoritative evidence.
 - Replaced the group loop with equivalent vectorized `500 x 50` matrices. Counts, UAR, FRR, action partitions, reward/regret means, Brier, ten-bin per-world ECE, adaptation lag, first-to-last recovery, recurrence, catastrophic/irreversible counts, and provenance retain the same definitions. This is a performance-only correction: operating points, decisions, canonical opportunities, parameters, and claim gates are unchanged. Focused tests and a direct identity check are rerun before freezing the correction and restarting from a clean named run.
 
+### P4-E006 - Full-trace validation and exact sign-test numerical correction
+
+- Froze performance-correction commit `9730286`. The next clean authoritative attempt again passed inherited pre-tests, compiled the exact frozen bank, passed separation with zero errors, produced all 10,425,000 primitive traces, and passed the streaming validation with zero allocation, schema, action-partition, UAR, FRR, completeness, or hash errors.
+- Aggregation then failed before publishing a summary: the exact paired sign test evaluated its binomial denominator as the floating value `2.0 ** 1500`, which raises `OverflowError` for the required 1,500 paired worlds. No results were selected, deleted, or interpreted, and the failed aggregation cannot enter accepted evidence.
+- Replaced the exact tail calculation with a log-sum-exp evaluation of the same binomial coefficients and denominator. Added an explicit 1,500-one-sided-pair regression case as well as the existing ten-pair identity. This changes only numerical representation, not the test, pairing, hypotheses, correction family, decisions, or bank. The complete pipeline is restarted after a corrective commit so manifests bind to the corrected immutable implementation SHA.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
