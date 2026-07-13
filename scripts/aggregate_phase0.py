@@ -13,7 +13,7 @@ SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from mavs10d.core.hashing import file_sha256, git_commit_hash  # noqa: E402
+from mavs10d.core.hashing import file_sha256  # noqa: E402
 from mavs10d.core.trace_logging import console_log, iter_jsonl  # noqa: E402
 
 
@@ -22,13 +22,15 @@ def aggregate(run_id: str) -> dict[str, object]:
     run_manifest = json.loads(run_manifest_path.read_text(encoding="utf-8"))
     if run_manifest["run_id"] != run_id:
         raise ValueError("Run-manifest ID mismatch.")
-    expected_git = git_commit_hash(REPO_ROOT)
+    expected_git = str(run_manifest["implementation_git_sha"])
     expected_config = file_sha256(REPO_ROOT / "configs/phases/phase0.yaml")
     generation_summaries = []
     for generation in (1, 2, 3):
         manifest_path = REPO_ROOT / "results/manifests" / run_id / f"generation_{generation}/generation_manifest.json"
         manifest_envelope = json.loads(manifest_path.read_text(encoding="utf-8"))
         expected_ledger = manifest_envelope["body"]["ledger_sha256"]
+        if manifest_envelope["body"]["implementation_git_sha"] != expected_git:
+            raise ValueError(f"Generation-manifest implementation SHA mismatch in generation {generation}.")
         trace_path = REPO_ROOT / "results/raw" / run_id / "phase0" / f"generation_{generation}.jsonl"
         method_counts: Counter[str] = Counter()
         records = 0

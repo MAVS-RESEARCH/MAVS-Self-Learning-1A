@@ -74,6 +74,7 @@ def test_ledger_is_byte_deterministic_signed_and_hidden_fields_are_absent(tmp_pa
         partitions=(("test", compiled),),
         config_hashes={"test": "0" * 64},
         generator_package_hash="1" * 64,
+        implementation_git_sha="2" * 40,
         signer=signer,
     )
     first = write_generation_ledger(output_directory=tmp_path / "first", **kwargs)
@@ -82,6 +83,23 @@ def test_ledger_is_byte_deterministic_signed_and_hidden_fields_are_absent(tmp_pa
     assert verify_signed_manifest(first.manifest_path, signer)["opportunity_count"] == 400
     rows = public_ledger_rows(first.ledger_path)
     assert "unsafe_label" not in rows[0]
+
+
+def test_ledger_rejects_invalid_implementation_git_sha(tmp_path: Path) -> None:
+    compiled = RandomizedWorldCompiler(100000, DEFAULTS).compile_partition(
+        generation=1, partition="test", decisions=80, world_offset=0
+    )
+    signer = ManifestSigner(hashlib.sha256(b"test-key").digest(), "test")
+    with pytest.raises(ValueError, match="implementation_git_sha"):
+        write_generation_ledger(
+            output_directory=tmp_path / "invalid",
+            generation=1,
+            partitions=(("test", compiled),),
+            config_hashes={"test": "0" * 64},
+            generator_package_hash="1" * 64,
+            implementation_git_sha="unknown",
+            signer=signer,
+        )
 
 
 def test_manifest_tampering_is_detected(tmp_path: Path) -> None:

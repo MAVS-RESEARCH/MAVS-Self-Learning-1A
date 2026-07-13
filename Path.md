@@ -144,6 +144,21 @@ The architecture review fixed the Phase 0 semantic floor: deterministic fast-loo
 - Python implementation steps use the inherited structured `console_log` adapter, which prints `console.log {JSON}`; every newly added call has an adjacent `# console.log: <event>` comment.
 - Exact file/line/comment/event registry will be frozen after the implementation checkpoint so line numbers cannot be invalidated by later code edits.
 
+### P0-E009 - First authoritative run rejected during provenance review
+
+- Implementation checkpoint tested: `941bde5` (`feat: implement Phase 0 measurement foundation`).
+- Run ID: `phase0_20260713`.
+- Observed result before rejection: the orchestrator, 105-test regression, 15,000 canonical-opportunity run, 90,000 matched replay records, deterministic replay, and Phase 0 audit all returned success.
+- Rejection decision: these outputs are invalidated and cannot serve as Phase 0 evidence.
+- Defect: `aggregate_phase0.py` compared trace provenance with the repository's current `HEAD`. A later documentation-only `Path.md` commit would therefore make a valid immutable run impossible to re-aggregate, even though neither its implementation nor its inputs changed.
+- WorkPlan clauses affected: Sections 2.2, 4 mandatory integrity traces, 7 steps 1 and 5, the Phase 0 hash-error exit gate, and Section 18 reproducibility evidence.
+- Corrective action: freeze one validated 40-character implementation Git SHA when ledgers are compiled; bind it into the run manifest and every signed generation manifest; make trace emission, reset validation, and aggregation consume that immutable SHA; reject invalid SHAs and generation/run provenance disagreement.
+- Additional checkpoint correction: the Python checkpoint comments for stress steps 03 and 04 were made text-identical to their emitted event identifiers.
+- Corrective-test preflight attempt 1: the new invalid-SHA test initially requested a two-decision randomized partition, below the compiler's pre-registered minimum horizon of 80. The test failed before reaching its target assertion; its fixture was corrected to 80 without changing production behavior, and this failed attempt is retained here rather than omitted.
+- Corrective preflight after the fixture repair: PASS, 106 tests total (78 inherited plus 28 Phase 0-specific); `python -m compileall -q src scripts tests` PASS; `git diff --check` PASS.
+- Result hygiene: the rejected run will be removed with the scoped cleaner before the replacement run. No metric or hash from it will be used in the Phase 0 verdict.
+- Next gate: pass the complete preflight after this correction, commit it, verify a clean result tree, and regenerate all authoritative evidence against that commit.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:

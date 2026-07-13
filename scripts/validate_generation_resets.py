@@ -27,6 +27,8 @@ def validate_run(run_id: str) -> list[str]:
     phase_path = REPO_ROOT / "configs/phases/phase0.yaml"
     defaults_path = REPO_ROOT / "configs/worlds/generator_defaults.yaml"
     suite = yaml.safe_load(suite_path.read_text(encoding="utf-8"))
+    run_manifest_path = REPO_ROOT / "results/manifests" / run_id / "run_manifest.json"
+    run_manifest = json.loads(run_manifest_path.read_text(encoding="utf-8")) if run_manifest_path.exists() else {}
     seen_ids: set[str] = set()
     seen_commitments: set[str] = set()
     ledger_hashes: set[str] = set()
@@ -76,6 +78,7 @@ def validate_run(run_id: str) -> list[str]:
             "row_order_hash": manifest["row_order_sha256"] == stable_hash(ids),
             "schema_hash": manifest["schema_sha256"] == stable_hash(str(table.schema)),
             "config_hashes": manifest["config_hashes"] == expected_configs,
+            "implementation_git_sha": manifest["implementation_git_sha"] == run_manifest.get("implementation_git_sha"),
             "visible_hidden_count": len(hidden["opportunities"]) == len(rows),
         }
         errors.extend(f"generation {generation}: {name} mismatch" for name, passed in checks.items() if not passed)

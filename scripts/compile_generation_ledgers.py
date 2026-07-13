@@ -15,13 +15,13 @@ SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from mavs10d.core.hashing import file_sha256, stable_hash  # noqa: E402
+from mavs10d.core.hashing import file_sha256, git_commit_hash, stable_hash  # noqa: E402
 from mavs10d.core.trace_logging import console_log  # noqa: E402
 from mavs10d.envs.world_compiler import InheritedStaticCompiler, RandomizedWorldCompiler  # noqa: E402
 from mavs10d.envs.world_ledger import ManifestSigner, write_generation_ledger  # noqa: E402
 
 
-def compile_generation(run_id: str, generation: int) -> dict[str, object]:
+def compile_generation(run_id: str, generation: int, implementation_git_sha: str) -> dict[str, object]:
     phase_path = REPO_ROOT / "configs" / "phases" / "phase0.yaml"
     world_path = REPO_ROOT / "configs" / "worlds" / "generator_defaults.yaml"
     suite_path = REPO_ROOT / "configs" / "suites" / "self_learning_300k.yaml"
@@ -61,6 +61,7 @@ def compile_generation(run_id: str, generation: int) -> dict[str, object]:
             "suite": file_sha256(suite_path),
         },
         generator_package_hash=generator_hash,
+        implementation_git_sha=implementation_git_sha,
         signer=signer,
     )
     checkpoint_directory = REPO_ROOT / "results/checkpoints" / run_id / f"generation_{generation}"
@@ -108,11 +109,14 @@ def main() -> int:
     generations = (1, 2, 3) if args.generation == "all" else (int(args.generation),)
     # console.log: phase0.compile_ledgers.step01.load_and_validate_arguments
     console_log("phase0.compile_ledgers.step01.load_and_validate_arguments", run_id=args.run_id, generations=generations)
+    implementation_git_sha = git_commit_hash(REPO_ROOT)
+    if len(implementation_git_sha) != 40:
+        raise RuntimeError("Phase 0 requires a resolved 40-character implementation Git SHA.")
     generation_results = []
     for generation in generations:
         # console.log: phase0.compile_ledgers.step02.compile_generation
         console_log("phase0.compile_ledgers.step02.compile_generation", generation=generation)
-        result = compile_generation(args.run_id, generation)
+        result = compile_generation(args.run_id, generation, implementation_git_sha)
         generation_results.append(result)
         # console.log: phase0.compile_ledgers.step03.generation_complete
         console_log("phase0.compile_ledgers.step03.generation_complete", **result)
@@ -121,6 +125,8 @@ def main() -> int:
         "schema_version": "1.0.0",
         "run_id": args.run_id,
         "phase": 0,
+        "implementation_git_sha": implementation_git_sha,
+        "upstream_git_sha": "a1bfd52b59aaba69b2c041a5e7da0ee263125c1f",
         "claim_boundary": "infrastructure_only_no_self_learning_superiority_claim",
         "generations": generation_results,
         "logical_artifacts": {

@@ -56,8 +56,13 @@ def write_generation_ledger(
     partitions: Iterable[tuple[str, CompiledPartition]],
     config_hashes: Mapping[str, str],
     generator_package_hash: str,
+    implementation_git_sha: str,
     signer: ManifestSigner,
 ) -> LedgerArtifacts:
+    if len(implementation_git_sha) != 40 or any(
+        character not in "0123456789abcdef" for character in implementation_git_sha
+    ):
+        raise ValueError("implementation_git_sha must be a lowercase 40-character Git SHA.")
     partition_items = tuple(partitions)
     visible_rows: list[dict[str, Any]] = []
     hidden_rows: list[dict[str, Any]] = []
@@ -117,6 +122,7 @@ def write_generation_ledger(
             {"opportunities": hidden_rows, "latent_world_parameters": latent_world_rows}
         ),
         "generator_package_sha256": generator_package_hash,
+        "implementation_git_sha": implementation_git_sha,
         "config_hashes": dict(sorted(config_hashes.items())),
         "signing_algorithm": signer.algorithm,
         "signer_key_id": signer.key_id,

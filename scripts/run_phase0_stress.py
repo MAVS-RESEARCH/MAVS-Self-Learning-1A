@@ -21,7 +21,7 @@ SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
-from mavs10d.core.hashing import file_sha256, git_commit_hash, stable_hash  # noqa: E402
+from mavs10d.core.hashing import file_sha256, stable_hash  # noqa: E402
 from mavs10d.core.access_control import participant_file_guard  # noqa: E402
 from mavs10d.core.trace_logging import console_log  # noqa: E402
 from mavs10d.metrics.stats import exact_action_metrics, wilson_interval  # noqa: E402
@@ -61,6 +61,7 @@ def run_generation(run_id: str, generation: int, output_root: Path) -> dict[str,
     hidden_path = directory / "hidden_world_manifest.json"
     manifest_path = directory / "generation_manifest.json"
     suite = yaml.safe_load((REPO_ROOT / "configs/suites/self_learning_300k.yaml").read_text(encoding="utf-8"))
+    run_manifest = json.loads((REPO_ROOT / "results/manifests" / run_id / "run_manifest.json").read_text(encoding="utf-8"))
     suite_seed = int(suite["generation_seed_ranges"][f"generation_{generation}"][0])
     signer = ManifestSigner(
         hashlib.sha256(f"mavs-sl-phase0:{suite_seed}".encode()).digest(),
@@ -85,7 +86,7 @@ def run_generation(run_id: str, generation: int, output_root: Path) -> dict[str,
     metrics: dict[str, Any] = {}
     matched_opportunity_hashes: dict[str, str] = {}
     logical_origin = datetime(2026, 1, 1, tzinfo=timezone.utc) + timedelta(days=generation)
-    commit_hash = git_commit_hash(REPO_ROOT)
+    commit_hash = str(run_manifest["implementation_git_sha"])
     phase_config_hash = file_sha256(REPO_ROOT / "configs/phases/phase0.yaml")
     environment_packages = {"python": platform.python_version(), "numpy": np.__version__}
     with trace_path.open("x", encoding="utf-8", newline="\n") as handle:
@@ -247,10 +248,10 @@ def main() -> int:
     for generation in generations:
         # console.log: phase0.stress.step02.load_signed_ledgers
         console_log("phase0.stress.step02.load_signed_ledgers", generation=generation)
-        # console.log: phase0.stress.step03_execute_bounds_and_metamorphic_checks
+        # console.log: phase0.stress.step03.execute_bounds_and_metamorphic_checks
         console_log("phase0.stress.step03.execute_bounds_and_metamorphic_checks", generation=generation)
         summary = run_generation(args.run_id, generation, output_root)
-        # console.log: phase0.stress.step04_generation_complete
+        # console.log: phase0.stress.step04.generation_complete
         console_log("phase0.stress.step04.generation_complete", generation=generation, canonical_opportunities=summary["canonical_opportunities"], replay_records=summary["replay_records"], trace_sha256=summary["trace_sha256"])
     # console.log: phase0.stress.step05.complete
     console_log("phase0.stress.step05.complete", generation_count=len(generations))
