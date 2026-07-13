@@ -159,6 +159,116 @@ The architecture review fixed the Phase 0 semantic floor: deterministic fast-loo
 - Result hygiene: the rejected run will be removed with the scoped cleaner before the replacement run. No metric or hash from it will be used in the Phase 0 verdict.
 - Next gate: pass the complete preflight after this correction, commit it, verify a clean result tree, and regenerate all authoritative evidence against that commit.
 
+### P0-E010 - Replacement authoritative Phase 0 execution
+
+- Time window: 2026-07-13 17:33:11 through 17:36:00 Asia/Karachi (UTC+05:00).
+- Status: PASS.
+- Run ID: `phase0_20260713`.
+- Frozen implementation commit: `5168bd065200bbfdb4ad2d07310041d2e17ebb4e` (`fix: freeze phase 0 implementation provenance`).
+- Frozen upstream foundation: `a1bfd52b59aaba69b2c041a5e7da0ee263125c1f`.
+- Command: `node scripts/run_phase0.mjs --run-id phase0_20260713`.
+- Result cleanliness: the authoritative first step ran `python scripts/clean_results.py --all-runs`; it resolved the repository-owned `results/` path and reported `removed: []`. Thus the replacement run began with no prior output and generated the only active results.
+- Pre-run inherited gates: `tests/unit` plus `tests/integration` PASS, 78 tests; inherited smoke PASS and validated; that temporary smoke output was removed before ledgers were compiled.
+- Allocation per generation: 1,000 real `StaticAccuracyAdapterEnv` decisions, 2,000 randomized-world decisions, and 2,000 trace/metric metamorphic decisions; exact total 5,000. Across G1-G3: 15,000 canonical opportunities.
+- Matched methods: accept-all, reject-all, escalate-all, deterministic random, oracle-label, and oracle-regime. Each replays the same 5,000 visible opportunities in each generation; exact total 30,000 trace records per generation and 90,000 across generations. Oracle methods remain evaluator-only diagnostic bounds.
+- Generation ledger SHA-256 values: G1 `38C7700DFD2CCD9E64116C9ED232DBFE81EFEFE50DCC4F4B090DE7ACD1A839`; G2 `66FAD89E9C5F19AC1273BF39F6EA4560B52FA60B009A837CDCA2AE24F9A0004C`; G3 `01864E72B1740D027FD9B5FE26FD0D3F36675A587687C41DCDBA6644B8FC852B`.
+- Trace SHA-256 values: G1 `ACB79DE75208AD1C6C19A559CCA593384D8E870A900DC98FDD0A0643EAAC28D2`; G2 `B36B322E8A1A8DDB12BC3A1DC08E1D074CCDD329A0D0D239B372FD069D8E5DBD`; G3 `E091D06C4000F26845CD717B739B7DD36D6033200427262445C01C539D688C7C`.
+- Matched visible-opportunity SHA-256 values: G1 `F4E4337974232CED83477B31A2E2B3EA64DF2744A784EC9065D5B05AAF25E934`; G2 `02AF663A4E9DCA54C0E9E64C63D2BC8A41A10ED363ED6C70701A9A5CA6E3F7CB`; G3 `3BAE0E6FD8B5C692ECA25698B612AC5730782AE50AA33961B62CCB403016374B`.
+- Provenance checks: the run manifest, three signed generation manifests, and every trace record agree on the frozen implementation SHA, run ID, Phase 0 config hash, and applicable ledger hash. Generation reset, participant-state, update-contract, three trace-schema, and provenance aggregation validators all returned zero errors.
+- Regression checks after stress: Phase 0 suite PASS, 28 tests; full suite PASS, 106 tests; final inherited smoke PASS, 8 records, SHA-256 `3A21FA5439D03EF014CB1532D74BD8A5A822DDAD976B9F90FFB18A80C0CE8DBA`.
+- Stderr: 0 bytes.
+
+### P0-E011 - Benchmark, metamorphic, leakage, and anti-overfit evidence
+
+- G1 labels: 1,100 unsafe and 3,900 safe. Deterministic-random UAR `0.320000`, FRR `0.323846`, escalation `0.332800`.
+- G2 labels: 1,010 unsafe and 3,990 safe. Deterministic-random UAR `0.317822`, FRR `0.342356`, escalation `0.332600`.
+- G3 labels: 1,315 unsafe and 3,685 safe. Deterministic-random UAR `0.335361`, FRR `0.310176`, escalation `0.332000`.
+- Bound identities in every generation: accept-all UAR `1.0` and FRR `0.0`; reject-all UAR `0.0` and FRR `1.0`; escalate-all UAR/FRR `0.0/0.0` only at escalation `1.0`; oracle-label UAR/FRR `0.0/0.0`. These results prove action and metric semantics; they are explicitly excluded from competitive or Self-Learning claims.
+- Metamorphic outcome for G1-G3: method-order invariance true; intended permutation invariance true; exact action accounting true; exact metric recomputation true; non-oracle future reads `0`.
+- Deterministic replay: the independent audit regenerated every generation into isolated temporary directories and compared trace bytes. All three replay hashes exactly equal the authoritative hashes.
+- Matched opportunity evidence: each generation records one visible-opportunity digest shared by all six methods; the three generation digests differ, proving generation regeneration rather than reuse.
+- Hidden-state barrier: participants receive only typed visible projections; hidden manifests are denied by the participant file guard; non-oracle bounds execute without hidden payloads; oracle bounds fail closed without evaluator payloads. All four leakage test families pass.
+- Leave-generator-out control: `IndependentReferenceCompiler` has a distinct implementation ID and RNG domain; its contract/output distinction test passes. It is a Phase 0 compiler generalization control, not a trained-model benchmark.
+- Model training and overfitting status: no model was trained, tuned, calibrated, selected, or checkpointed in Phase 0. Therefore no training benchmark can contaminate evaluation. Anti-overfit evidence at this phase is generator/seed separation, three independently regenerated ledgers, independent-generator testing, immutable manifests, and the ban on future/hidden reads. Model-specific disjoint blind testing remains mandatory only in later phases if a trainable component is introduced.
+
+### P0-E012 - Independent exit-gate audit and immutable evidence
+
+- Command: `python scripts/audit_phase0.py --run-id phase0_20260713` (invoked by the authoritative orchestrator).
+- Result: PASS; `results/reports/phase0_20260713/phase0_audit.json` has `passed: true`.
+- Direct audit evidence: zero trace errors, zero participant errors, zero reset errors, zero forbidden/inherited outputs, zero uncommented native console calls, zero console-comment mismatches, exact 15,000 canonical opportunities, exact 90,000 replay records, exact 5,000 per-generation allocation, metric identities true, metamorphic suite true, byte-equivalent deterministic replay true, all required files present, all orchestration steps present, and final inherited smoke 8/8 valid.
+- Run manifest: `results/manifests/phase0_20260713/run_manifest.json`, SHA-256 `9C8EBB11BB2E17468BC862D3F1C90990C37120DA32C18DA3E1A6760ED8592053`.
+- Processed summary: `results/processed/phase0_20260713/phase0_summary.json`, SHA-256 `1C10A4EAFE7230D846402E7A19E4F6EC1D0E8E5FA93C2F2DF327771819B1AC25`.
+- Audit report: SHA-256 `6542EF1793507345493AE500E5F3A167564C538699C53128BBF66196E2C70B66`.
+- Orchestration evidence: SHA-256 `CBC2DC2B9B91D9E6C0C1B23AF2809745F615BEC77C28A4339836C19CCD6AB48A`.
+- Complete console evidence: `results/reports/phase0_20260713/phase0_console.log`, 21,409 lines, 3,258,361 bytes, SHA-256 `064289E9BCBAA49FC5D9C467C934C0191D02846CD59F7D5306BBC20C137E9868`.
+
+### P0-E013 - Console comment and statement line registry
+
+The authoritative orchestration has 17 native JavaScript `console.log` statements. The Phase 0 Python entry points add 22 structured `console_log` statements, each of which emits a `console.log {JSON}` record. Every statement has an immediately preceding identifying comment. The immutable implementation commit fixes these source lines:
+
+| File | Comment/statement lines | Exact comment identifier |
+|---|---:|---|
+| `scripts/run_phase0.mjs` | 19/20 | `phase0.orchestrator.step01.start` |
+| `scripts/run_phase0.mjs` | 22/23 | `phase0.orchestrator.step02.clean_results` |
+| `scripts/run_phase0.mjs` | 27/28 | `phase0.orchestrator.step03.inherited_tests_before` |
+| `scripts/run_phase0.mjs` | 32/33 | `phase0.orchestrator.step04.inherited_smoke` |
+| `scripts/run_phase0.mjs` | 38/39 | `phase0.orchestrator.step05.remove_regression_output` |
+| `scripts/run_phase0.mjs` | 43/44 | `phase0.orchestrator.step06.compile_ledgers` |
+| `scripts/run_phase0.mjs` | 48/49 | `phase0.orchestrator.step07.validate_resets` |
+| `scripts/run_phase0.mjs` | 56/57 | `phase0.orchestrator.step08.validate_update_contract` |
+| `scripts/run_phase0.mjs` | 61/62 | `phase0.orchestrator.step09.execute_stress` |
+| `scripts/run_phase0.mjs` | 66/67 | `phase0.orchestrator.step10.validate_self_learning_traces` |
+| `scripts/run_phase0.mjs` | 73/74 | `phase0.orchestrator.step11.aggregate_with_provenance_guard` |
+| `scripts/run_phase0.mjs` | 78/79 | `phase0.orchestrator.step12.phase0_tests` |
+| `scripts/run_phase0.mjs` | 83/84 | `phase0.orchestrator.step13.full_regression` |
+| `scripts/run_phase0.mjs` | 88/89 | `phase0.orchestrator.step14.final_inherited_smoke` |
+| `scripts/run_phase0.mjs` | 94/95 | `phase0.orchestrator.step15.write_orchestration_evidence` |
+| `scripts/run_phase0.mjs` | 100/101 | `phase0.orchestrator.step16.audit` |
+| `scripts/run_phase0.mjs` | 104/105 | `phase0.orchestrator.step17.complete` |
+| `scripts/clean_results.py` | 57/58 | `phase0.clean_results.step01.verify_scope` |
+| `scripts/clean_results.py` | 67/68 | `phase0.clean_results.step02.complete` |
+| `scripts/compile_generation_ledgers.py` | 110/111 | `phase0.compile_ledgers.step01.load_and_validate_arguments` |
+| `scripts/compile_generation_ledgers.py` | 117/118 | `phase0.compile_ledgers.step02.compile_generation` |
+| `scripts/compile_generation_ledgers.py` | 121/122 | `phase0.compile_ledgers.step03.generation_complete` |
+| `scripts/compile_generation_ledgers.py` | 143/144 | `phase0.compile_ledgers.step04.write_run_manifest` |
+| `scripts/compile_generation_ledgers.py` | 145/146 | `phase0.compile_ledgers.step05.complete` |
+| `scripts/validate_generation_resets.py` | 129/130 | `phase0.validate_resets.step01.start` |
+| `scripts/validate_generation_resets.py` | 132/133 | `phase0.validate_resets.step02.complete` |
+| `scripts/validate_participant_state.py` | 43/44 | `phase0.validate_participant_state.step01.start` |
+| `scripts/validate_participant_state.py` | 46/47 | `phase0.validate_participant_state.step02.complete` |
+| `scripts/validate_updates.py` | 38/39 | `phase0.validate_updates.step01.start` |
+| `scripts/validate_updates.py` | 42/43 | `phase0.validate_updates.step02.complete` |
+| `scripts/run_phase0_stress.py` | 246/247 | `phase0.stress.step01.validate_arguments` |
+| `scripts/run_phase0_stress.py` | 249/250 | `phase0.stress.step02.load_signed_ledgers` |
+| `scripts/run_phase0_stress.py` | 251/252 | `phase0.stress.step03.execute_bounds_and_metamorphic_checks` |
+| `scripts/run_phase0_stress.py` | 254/255 | `phase0.stress.step04.generation_complete` |
+| `scripts/run_phase0_stress.py` | 256/257 | `phase0.stress.step05.complete` |
+| `scripts/aggregate_phase0.py` | 77/78 | `phase0.aggregate.step01.validate_provenance` |
+| `scripts/aggregate_phase0.py` | 80/81 | `phase0.aggregate.step02.complete` |
+| `scripts/audit_phase0.py` | 153/154 | `phase0.audit.step01.start` |
+| `scripts/audit_phase0.py` | 159/160 | `phase0.audit.step02.complete` |
+
+The audit independently reports the 17 native statement lines as `20, 23, 28, 33, 39, 44, 49, 57, 62, 67, 74, 79, 84, 89, 95, 101, 105`, with empty missing-comment and mismatch lists.
+
+### P0-E014 - Clause-by-clause Phase 0 compliance decision before documentation commit
+
+| WorkPlan Phase 0 requirement | Evidence | Decision |
+|---|---|---|
+| Foundation import and lock | P0-E003 through P0-E005; pinned upstream/source-tree/exclusion hashes; provenance-only commit `052b03e` | PASS |
+| Remove inherited results | Pre-import exclusion of 12,200 result files; authoritative cleaner began with `removed: []`; audit forbidden list empty | PASS |
+| Inherited interfaces and regressions | 78 inherited tests before behavior; 78 before authoritative ledgers; 106 full tests after stress; 8-record final smoke | PASS |
+| Explicit hierarchical randomness | Typed seed tuple, SHA-256 domain separation, no-global-RNG mutation test | PASS |
+| Immutable Parquet and signed manifests | Three byte-stable ledgers; signed hidden/generation manifests; config/schema/row/generator/latent/implementation hashes | PASS |
+| Visible/hidden separation | Typed projection, evaluator-only oracle payload, file guard, four leakage test families, future reads zero | PASS |
+| Required metamorphic properties | Method order, permutation, metric recomputation, action accounting, delayed-feedback/no-future causality all pass | PASS |
+| Required bounds | All six bounds executed on matched opportunities; diagnostic/noncompetitive boundary present in manifests/summaries | PASS |
+| Exact benchmarks | 1,000 inherited + 2,000 generated + 2,000 metamorphic per generation; 15,000 canonical and 90,000 replay records total | PASS |
+| Original smoke/tests before and after | Isolated upstream, imported pre-behavior, authoritative pre-run, full post-run, and final smoke evidence | PASS |
+| Exit gate | Audit `passed: true`; zero schema/trace/hash/reset/leakage/result errors; byte replay and metric identities true | PASS |
+| Claim boundary | `CLAIMS.md`, run manifest, and summaries prohibit Self-Learning superiority inference; no model training occurred | PASS |
+
+Pre-documentation verdict: all technical Phase 0 requirements pass. Phase 0 remains marked in progress until this evidence is committed and the same immutable run successfully re-aggregates and re-audits with repository `HEAD` changed only by documentation.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -179,7 +289,7 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 | Phase | WorkPlan scope | Status | Exit-gate evidence |
 |---|---|---|---|
-| 0 | Clone qualification and measurement integrity | In progress | P0-E000 through P0-E002 |
+| 0 | Clone qualification and measurement integrity | In progress | P0-E003 through P0-E014; post-documentation provenance check pending |
 | 1 | Non-stationary distribution gauntlet | Not started | None |
 | 2 | Corruption, correlated collapse, and partial observability | Not started | None |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
@@ -188,4 +298,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 is active. The implementation and 105-test preflight pass, but Phase 0 is not yet accepted: code must be checkpointed, the clean authoritative three-generation run must execute against that checkpoint, every result must be validated and independently replayed, exact console line evidence must be added, and the final clause-by-clause audit must pass. No Phase 1 work is authorized.
+Phase 0 technical execution and the clause audit pass. Acceptance is pending one final control: commit this evidence-only `Path.md` update, then prove that provenance-guarded re-aggregation and the independent audit still pass while the run remains bound to implementation commit `5168bd065200bbfdb4ad2d07310041d2e17ebb4e`. No Phase 1 work is authorized.
