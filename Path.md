@@ -1088,7 +1088,7 @@ The independent audit inspected all 27 Phase 5 checkpoint statements and found z
 
 ### P5-E011 - Authoritative evidence freeze
 
-- Local commit `436fceca0924210e37ca2e5bc6ee1b2460411541` freezes the complete accepted Phase 5 evidence set: manifests, all primitive raw evidence, aggregate tables, figures, reports, the zero-finding audit, the LFS policy, and P5-E007 through P5-E010.
+- Local commit `436fcec4a2da5eabc9de58f3893b6ad4390ba0f7` freezes the complete accepted Phase 5 evidence set: manifests, all primitive raw evidence, aggregate tables, figures, reports, the zero-finding audit, the LFS policy, and P5-E007 through P5-E010.
 - The evidence commit contains Git LFS pointers for the three complete trace Parquet files. Their pointer object identifiers exactly equal the trace SHA-256 values recorded in P5-E007, while the local working files remain the full 66,748,973-, 104,101,023-, and 106,551,907-byte datasets.
 - This entry is documentation-only. It does not alter the implementation SHA bound into the immutable manifests, rerun or select results, change the scientific verdict, or publish any local commit. A final local documentation commit freezes this closure statement after read-only verification.
 
@@ -1118,7 +1118,7 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 2 | Corruption, correlated collapse, and partial observability | Complete | P2-E000 through P2-E011; authoritative and post-evidence deterministic audits pass |
 | 3 | Autonomous failure discovery and self-repair | Complete | P3-E000 through P3-E010; frozen authoritative and post-evidence deterministic audits pass |
 | 4 | Full baseline tournament and Pareto audit | Complete | P4-E000 through P4-E010; full paired tournament, deterministic replay, and fail-closed audit pass |
-| 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E010; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
+| 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E011; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
 
 ## Current checkpoint
 
