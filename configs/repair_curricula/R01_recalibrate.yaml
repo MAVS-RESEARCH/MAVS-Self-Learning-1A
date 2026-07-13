@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R01
+operation: recalibrate
+intervention_class: corrupted_known_distinction
+hidden_mechanism: calibration_temperature_inversion
+domain: text_safety
+primary_meta_signal: calibration_residual
+grammar_primitive: calibration_residual
+protected_family: harmful_correlated_collapse
+synthesis_seed: 610001
+holdout_seed: 710001
+adversarial_seed: 810001
+complexity: 1

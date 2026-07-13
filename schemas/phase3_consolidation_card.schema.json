@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_consolidation_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["generation", "condition", "action_id", "operation", "affected_configurations", "marginal_value", "redundancy", "instability", "complexity_delta", "retained_replay_passed", "rollback_target", "reason_codes", "consolidation_hash"],
+  "properties": {
+    "generation": {"enum": [1, 2, 3]}, "condition": {"enum": ["cumulative", "fresh"]}, "action_id": {"type": "string"}, "operation": {"enum": ["merge", "retain", "deprecate", "prune", "recalibrate"]},
+    "affected_configurations": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "marginal_value": {"type": "number"}, "redundancy": {"type": "number", "minimum": 0, "maximum": 1},
+    "instability": {"type": "number", "minimum": 0, "maximum": 1}, "complexity_delta": {"type": "integer"}, "retained_replay_passed": {"type": "boolean"}, "rollback_target": {"type": "string"},
+    "reason_codes": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "consolidation_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R08
+operation: policy_interaction
+intervention_class: disabled_known_distinction
+hidden_mechanism: harm_safe_policy_interaction_gap
+domain: cyber_triage
+primary_meta_signal: policy_conflict
+grammar_primitive: response_routing
+protected_family: policy_conflict
+synthesis_seed: 610008
+holdout_seed: 710008
+adversarial_seed: 810008
+complexity: 5

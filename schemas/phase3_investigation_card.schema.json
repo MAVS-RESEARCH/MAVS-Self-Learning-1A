@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_investigation_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["investigation_id", "learning_event_id", "curriculum_id", "trace_ids", "nearest_correct_safe", "nearest_correct_unsafe", "nearest_false_rejection", "nearest_unsafe_acceptance", "nearest_escalation", "discriminating_variables", "attribution_scores", "ontology_mapping", "evidence_sufficient", "feedback_provenance", "card_hash"],
+  "properties": {
+    "investigation_id": {"type": "string"}, "learning_event_id": {"type": "string"}, "curriculum_id": {"type": "string"}, "trace_ids": {"type": "array", "items": {"type": "string"}},
+    "nearest_correct_safe": {"type": ["string", "null"]}, "nearest_correct_unsafe": {"type": ["string", "null"]}, "nearest_false_rejection": {"type": ["string", "null"]}, "nearest_unsafe_acceptance": {"type": ["string", "null"]}, "nearest_escalation": {"type": ["string", "null"]},
+    "discriminating_variables": {"type": "object"}, "attribution_scores": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}}, "ontology_mapping": {"type": "string"},
+    "evidence_sufficient": {"type": "boolean"}, "feedback_provenance": {"type": "string"}, "card_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

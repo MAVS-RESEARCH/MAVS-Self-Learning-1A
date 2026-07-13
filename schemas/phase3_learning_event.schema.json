@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_learning_event.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["event_id", "generation", "condition", "curriculum_id", "trigger", "trace_ids", "attributed_mechanism", "candidate_operations", "evidence_sufficient", "feedback_provenance", "feedback_reliability", "event_hash"],
+  "properties": {
+    "event_id": {"type": "string"}, "generation": {"enum": [1, 2, 3]}, "condition": {"enum": ["cumulative", "fresh"]}, "curriculum_id": {"type": "string"},
+    "trigger": {"type": "string"}, "trace_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "attributed_mechanism": {"type": "string"}, "candidate_operations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "evidence_sufficient": {"type": "boolean"}, "feedback_provenance": {"type": "string"}, "feedback_reliability": {"type": "number", "minimum": 0.75, "maximum": 1},
+    "event_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

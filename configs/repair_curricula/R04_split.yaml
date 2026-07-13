@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R04
+operation: split
+intervention_class: corrupted_known_distinction
+hidden_mechanism: correlation_semantic_conflation
+domain: financial_approval_proxy
+primary_meta_signal: witness_conflict
+grammar_primitive: bounded_conjunction
+protected_family: harmful_correlated_collapse
+synthesis_seed: 610004
+holdout_seed: 710004
+adversarial_seed: 810004
+complexity: 3

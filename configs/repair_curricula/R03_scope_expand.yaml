@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R03
+operation: scope_expand
+intervention_class: disabled_known_distinction
+hidden_mechanism: homologous_scope_coverage_gap
+domain: cyber_triage
+primary_meta_signal: coverage_gap
+grammar_primitive: nearest_validated_support
+protected_family: policy_conflict
+synthesis_seed: 610003
+holdout_seed: 710003
+adversarial_seed: 810003
+complexity: 2

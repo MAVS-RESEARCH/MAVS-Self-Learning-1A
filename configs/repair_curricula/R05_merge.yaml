@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R05
+operation: merge
+intervention_class: recoverable_novel_mechanism
+hidden_mechanism: duplicate_masking_sensor_interference
+domain: multi_agent_operations
+primary_meta_signal: diagnostic_redundancy
+grammar_primitive: bounded_weighted_combination
+protected_family: evidence_masking
+synthesis_seed: 610005
+holdout_seed: 710005
+adversarial_seed: 810005
+complexity: 3

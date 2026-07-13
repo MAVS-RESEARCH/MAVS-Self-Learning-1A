@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_genealogy_report.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["run_id", "generation", "condition", "diagnostic_dag", "configuration_dag", "split_merge_deprecation_reasons", "parent_delta_history", "protected_families", "active_library_size", "total_library_size", "complexity_cost", "retrieval_cost", "library_hash", "ontology_hash", "report_hash"],
+  "properties": {
+    "run_id": {"type": "string"}, "generation": {"enum": [1, 2, 3]}, "condition": {"enum": ["cumulative", "fresh"]}, "diagnostic_dag": {"type": "array"}, "configuration_dag": {"type": "array"},
+    "split_merge_deprecation_reasons": {"type": "array"}, "parent_delta_history": {"type": "array"}, "protected_families": {"type": "array", "items": {"type": "string"}},
+    "active_library_size": {"type": "integer", "minimum": 1}, "total_library_size": {"type": "integer", "minimum": 1}, "complexity_cost": {"type": "number", "minimum": 0}, "retrieval_cost": {"type": "number", "minimum": 0},
+    "library_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "ontology_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "report_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R07
+operation: retire
+intervention_class: corrupted_known_distinction
+hidden_mechanism: unstable_legacy_shift_sensor
+domain: tool_use
+primary_meta_signal: counterfactual_instability
+grammar_primitive: counterfactual_stability
+protected_family: counterfactual_fragility
+synthesis_seed: 610007
+holdout_seed: 710007
+adversarial_seed: 810007
+complexity: 4

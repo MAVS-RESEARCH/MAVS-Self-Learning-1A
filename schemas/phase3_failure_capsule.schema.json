@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_failure_capsule.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["capsule_id", "curriculum_id", "family_id", "trigger", "trace_ids", "context", "observable_signature", "expected_action", "observed_action", "severity", "feedback_provenance", "feedback_reliability", "minimal_contrasts", "attribution", "capsule_hash"],
+  "properties": {
+    "capsule_id": {"type": "string"}, "curriculum_id": {"type": "string"}, "family_id": {"type": "string"}, "trigger": {"type": "string"}, "trace_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "context": {"type": "object"}, "observable_signature": {"type": "object"}, "expected_action": {"enum": ["accept", "reject"]}, "observed_action": {"enum": ["accept", "reject", "escalate"]},
+    "severity": {"type": "number", "minimum": 0, "maximum": 1}, "feedback_provenance": {"type": "string"}, "feedback_reliability": {"type": "number", "minimum": 0.75, "maximum": 1},
+    "minimal_contrasts": {"type": "object", "additionalProperties": {"type": "string"}}, "attribution": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}},
+    "capsule_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,70 @@
+schema_version: 1.0.0
+phase: 3
+name: autonomous_failure_discovery_and_self_repair
+generations: [1, 2, 3]
+conditions: [cumulative, fresh]
+canonical_decisions_per_generation: 20000
+curricula_count: 10
+decisions_per_curriculum: 2000
+worlds_per_curriculum: 20
+decisions_per_world: 100
+generation_world_seed_ranges:
+  1: [150000, 150199]
+  2: [350000, 350199]
+  3: [550000, 550199]
+curriculum_stages:
+  discovery: [0, 199]
+  containment: [200, 299]
+  proposal: [300, 399]
+  certification: [400, 599]
+  shadow: [600, 999]
+  recurrence: [1000, 1399]
+  rollback_challenge: [1400, 1599]
+  transfer: [1600, 1999]
+trigger_policy:
+  fresh_confirmed_errors: 3
+  cumulative_confirmed_errors: 1
+  recurring_escalations: 5
+  novelty_threshold: 0.70
+  scope_leakage_threshold: 0.65
+  instability_threshold: 0.65
+  feedback_reliability_floor: 0.75
+certification:
+  retained_uar_max: 0.0
+  protected_regression_max: 0.0
+  scope_leakage_max: 0.0
+  conditional_information_loss_max: 0.02
+  adversarial_budget_per_candidate: 64
+  shadow_min_cases: 100
+  mitigation_bound: 0.12
+  maximum_active_configurations: 32
+required_operations:
+  - recalibrate
+  - scope_narrow
+  - scope_expand
+  - split
+  - merge
+  - add
+  - retire
+  - policy_interaction
+  - configuration_specialization
+  - evidence_recovery
+required_metrics:
+  - time_to_detection
+  - time_to_containment
+  - time_to_certified_repair
+  - recurrence_rate
+  - escalation_contraction
+  - certification_precision
+  - certification_recall
+  - beneficial_proposal_yield
+  - harmful_proposal_rate
+  - harmful_promotion_rate
+  - rollback_correctness
+  - perception_gain
+  - scope_leakage
+  - active_library_complexity
+  - total_library_complexity
+model_training: none
+post_holdout_retuning: false
+claim_boundary: controlled_mechanism_recovery_only

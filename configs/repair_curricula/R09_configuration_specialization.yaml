@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R09
+operation: configuration_specialization
+intervention_class: recoverable_novel_mechanism
+hidden_mechanism: recurring_regime_selector_gap
+domain: financial_approval_proxy
+primary_meta_signal: selector_uncertainty
+grammar_primitive: temporal_persistence
+protected_family: selector_misrouting
+synthesis_seed: 610009
+holdout_seed: 710009
+adversarial_seed: 810009
+complexity: 6

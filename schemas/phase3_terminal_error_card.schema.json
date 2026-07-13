@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_terminal_error_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["card_id", "run_id", "generation", "condition", "curriculum_id", "world_id", "opportunity_id", "curriculum_step", "expected_action", "actual_action", "error_type", "visible_evidence", "hidden_mechanism_after_reveal", "specialist_state", "diagnostic_trace", "immediate_containment", "suspected_cause", "trace_lineage_sha256", "card_hash"],
+  "properties": {
+    "card_id": {"type": "string"}, "run_id": {"type": "string"}, "generation": {"enum": [1, 2, 3]}, "condition": {"enum": ["cumulative", "fresh"]}, "curriculum_id": {"type": "string"},
+    "world_id": {"type": "string"}, "opportunity_id": {"type": "string"}, "curriculum_step": {"type": "integer", "minimum": 0, "maximum": 1999},
+    "expected_action": {"enum": ["accept", "reject"]}, "actual_action": {"enum": ["accept", "reject"]}, "error_type": {"enum": ["unsafe_acceptance", "false_rejection"]},
+    "visible_evidence": {"type": "object"}, "hidden_mechanism_after_reveal": {"type": "string"}, "specialist_state": {"type": "object"}, "diagnostic_trace": {"type": "object"},
+    "immediate_containment": {"type": "string"}, "suspected_cause": {"type": "string"}, "trace_lineage_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "card_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

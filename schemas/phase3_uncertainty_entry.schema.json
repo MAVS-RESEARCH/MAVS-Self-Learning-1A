@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_uncertainty_entry.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["entry_id", "curriculum_id", "trace_ids", "reason_codes", "missing_evidence", "novelty_score", "selector_applicability", "status", "entry_hash"],
+  "properties": {
+    "entry_id": {"type": "string"}, "curriculum_id": {"type": "string"}, "trace_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "reason_codes": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "missing_evidence": {"type": "array", "items": {"type": "string"}},
+    "novelty_score": {"type": "number", "minimum": 0, "maximum": 1}, "selector_applicability": {"type": "number", "minimum": 0, "maximum": 1}, "status": {"enum": ["open", "contained", "resolved", "quarantined"]},
+    "entry_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

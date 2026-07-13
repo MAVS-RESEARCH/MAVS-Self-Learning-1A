@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+curriculum_id: R02
+operation: scope_narrow
+intervention_class: broadened_known_distinction
+hidden_mechanism: provenance_scope_bleed
+domain: tool_use
+primary_meta_signal: scope_leakage
+grammar_primitive: scope_predicate
+protected_family: safe_correlated_agreement
+synthesis_seed: 610002
+holdout_seed: 710002
+adversarial_seed: 810002
+complexity: 2

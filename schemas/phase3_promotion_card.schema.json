@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_promotion_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["update_id", "candidate_id", "config_id", "action", "condition", "curriculum_id", "activation_scope", "effective_generation", "effective_step", "fallback_configuration", "monitoring_conditions", "rollback_target", "parent_hash", "certification_hash", "decision_hash"],
+  "properties": {
+    "update_id": {"type": "string"}, "candidate_id": {"type": "string"}, "config_id": {"type": "string"}, "action": {"const": "promote"}, "condition": {"enum": ["cumulative", "fresh"]}, "curriculum_id": {"type": "string"}, "activation_scope": {"type": "object"},
+    "effective_generation": {"enum": [1, 2, 3]}, "effective_step": {"type": "integer", "minimum": 0, "maximum": 1999}, "fallback_configuration": {"type": "string"},
+    "monitoring_conditions": {"type": "array", "items": {"type": "string"}}, "rollback_target": {"type": "string"}, "parent_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "certification_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "decision_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

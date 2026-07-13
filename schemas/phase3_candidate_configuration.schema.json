@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_candidate_configuration.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["candidate_id", "config_id", "parent_id", "status", "version", "config_hash", "proposal_id", "exact_delta", "protected_metrics", "protected_families", "rollback_target", "candidate_hash"],
+  "properties": {
+    "candidate_id": {"type": "string"}, "config_id": {"type": "string"}, "parent_id": {"type": "string"}, "status": {"enum": ["proposed", "certified", "shadow", "approved", "rejected", "quarantined", "rolled_back"]},
+    "version": {"type": "integer", "minimum": 1}, "config_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "proposal_id": {"type": "string"}, "exact_delta": {"type": "object"},
+    "protected_metrics": {"type": "array", "items": {"type": "string"}}, "protected_families": {"type": "array", "items": {"type": "string"}}, "rollback_target": {"type": "string"},
+    "candidate_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_rollback_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["rollback_id", "generation", "condition", "curriculum_id", "config_id", "rollback_target", "trigger", "library_hash_before", "library_hash_after_rollback", "library_hash_after_restore", "fallback_verified", "protected_replay_passed", "restored_after_rehearsal", "passed", "affected_versions", "rejected_alternatives", "rollback_hash"],
+  "properties": {
+    "rollback_id": {"type": "string"}, "generation": {"enum": [1, 2, 3]}, "condition": {"enum": ["cumulative", "fresh"]}, "curriculum_id": {"type": "string"}, "config_id": {"type": "string"}, "rollback_target": {"type": "string"}, "trigger": {"type": "string"},
+    "library_hash_before": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "library_hash_after_rollback": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "library_hash_after_restore": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fallback_verified": {"type": "boolean"}, "protected_replay_passed": {"type": "boolean"}, "restored_after_rehearsal": {"type": "boolean"}, "passed": {"type": "boolean"},
+    "affected_versions": {"type": "array", "items": {"type": "string"}}, "rejected_alternatives": {"type": "array", "items": {"type": "string"}}, "rollback_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

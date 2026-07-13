@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_rejected_candidate.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["generation", "condition", "curriculum_id", "candidate_id", "proposal_id", "configuration_id", "operation", "certification_report_id", "reason_codes", "harmful", "truly_beneficial", "retained_for_audit", "candidate_hash", "rejection_hash"],
+  "properties": {
+    "generation": {"enum": [1, 2, 3]}, "condition": {"enum": ["cumulative", "fresh"]}, "curriculum_id": {"type": "string"}, "candidate_id": {"type": "string"}, "proposal_id": {"type": "string"}, "configuration_id": {"type": "string"}, "operation": {"type": "string"}, "certification_report_id": {"type": "string"},
+    "reason_codes": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "harmful": {"type": "boolean"}, "truly_beneficial": {"type": "boolean"}, "retained_for_audit": {"const": true},
+    "candidate_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "rejection_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_proposal_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["proposal_id", "candidate_id", "operation", "name", "intended_scope", "exact_function", "threshold", "allowed_influence", "bounds", "invariants", "provenance", "parent_id", "exact_delta", "expected_benefit", "expected_failures", "complexity", "validation_plan", "rollback_target", "proposal_hash"],
+  "properties": {
+    "proposal_id": {"type": "string"}, "candidate_id": {"type": "string"}, "operation": {"enum": ["recalibrate", "scope_narrow", "scope_expand", "split", "merge", "add", "retire", "policy_interaction", "configuration_specialization", "evidence_recovery"]},
+    "name": {"type": "string"}, "intended_scope": {"type": "object"}, "exact_function": {"type": "object"}, "threshold": {"type": "number", "minimum": 0, "maximum": 1}, "allowed_influence": {"type": "object"}, "bounds": {"type": "object"},
+    "invariants": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "provenance": {"type": "object"}, "parent_id": {"type": "string"}, "exact_delta": {"type": "object"}, "expected_benefit": {"type": "object"},
+    "expected_failures": {"type": "array", "items": {"type": "string"}}, "complexity": {"type": "integer", "minimum": 1}, "validation_plan": {"type": "object"}, "rollback_target": {"type": "string"},
+    "proposal_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

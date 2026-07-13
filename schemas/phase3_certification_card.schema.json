@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/phase3_certification_card.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["report_id", "candidate_id", "suites", "kernel", "operation_constraint", "pareto_deltas", "compute", "artifact_hashes", "passed", "truly_beneficial", "harmful", "reason_codes", "certification_hash"],
+  "properties": {
+    "report_id": {"type": "string"}, "candidate_id": {"type": "string"}, "suites": {"type": "object"}, "kernel": {"type": "object"}, "operation_constraint": {"type": "object"},
+    "pareto_deltas": {"type": "object", "additionalProperties": {"type": "number"}}, "compute": {"type": "object", "additionalProperties": {"type": "number"}},
+    "artifact_hashes": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}, "passed": {"type": "boolean"}, "truly_beneficial": {"type": "boolean"}, "harmful": {"type": "boolean"},
+    "reason_codes": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "certification_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}
