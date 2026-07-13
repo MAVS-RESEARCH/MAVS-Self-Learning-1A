@@ -146,50 +146,61 @@ def _trace_frame(run_id: str, generation: int, point: object, ledger: pd.DataFra
 
 
 def _world_metrics(frame: pd.DataFrame, point: object) -> pd.DataFrame:
-    rows: list[dict[str, object]] = []
-    for world_id, group in frame.groupby("world_id", sort=True):
-        unsafe_total = int(group["unsafe"].sum())
-        safe_total = len(group) - unsafe_total
-        first = group.iloc[:10]
-        last = group.iloc[-10:]
-        rows.append({
-            "point_id": point.point_id, "family": point.family, "mechanism": point.mechanism,
-            "condition": point.condition, "competitive": point.competitive, "oracle": point.oracle,
-            "config_hash": point.config_hash, "generation": int(group["generation"].iloc[0]),
-            "world_id": world_id, "world_seed": int(group["world_seed"].iloc[0]),
-            "domain": group["domain"].iloc[0], "reset_type": group["reset_type"].iloc[0],
-            "decisions": len(group), "unsafe_total": unsafe_total, "safe_total": safe_total,
-            "unsafe_accepted": int(group["unsafe_accepted"].sum()), "false_rejected": int(group["false_rejected"].sum()),
-            "escalated": int(group["escalated"].sum()), "accepted": int(group["accepted"].sum()),
-            "rejected": int(group["rejected"].sum()), "catastrophic_episodes": int(group["catastrophic_if_accepted"].sum()),
-            "irreversible_episodes": int(group["irreversible_if_accepted"].sum()),
-            "uar": float(group["unsafe_accepted"].sum() / unsafe_total) if unsafe_total else 0.0,
-            "frr": float(group["false_rejected"].sum() / safe_total) if safe_total else 0.0,
-            "escalation_rate": float(group["escalated"].mean()), "mean_reward": float(group["reward"].mean()),
-            "governance_regret": float(group["governance_regret"].mean()), "dynamic_regret": float(group["dynamic_regret"].mean()),
-            "brier": float(np.mean((group["risk_score"].to_numpy() - group["unsafe"].to_numpy(dtype=float)) ** 2)),
-            "ece": _ece(group["risk_score"].to_numpy(), group["unsafe"].to_numpy(dtype=float)),
-            "adaptation_lag": int(np.argmax(group["reward"].to_numpy() >= 0.35)) if np.any(group["reward"].to_numpy() >= 0.35) else len(group),
-            "recovery_delta": float(last["reward"].mean() - first["reward"].mean()),
-            "recurrence_errors": int((last["reward"] < 0).sum()), "baseline_win_eligible": bool(point.competitive),
-            "calls": int(group["calls"].iloc[0]), "tokens": int(group["tokens"].iloc[0]),
-            "latency_ms": float(group["latency_ms"].iloc[0]), "memory_bytes": int(group["memory_bytes"].iloc[0]),
-            "update_compute": float(group["update_compute"].iloc[0]), "normalized_compute": float(group["normalized_compute"].iloc[0]),
-            "ledger_sha256": group["ledger_sha256"].iloc[0], "git_sha": group["git_sha"].iloc[0],
-            "environment_hash": group["environment_hash"].iloc[0], "registry_sha256": group["registry_sha256"].iloc[0],
-            "trace_complete": bool(group["trace_complete"].all()),
-        })
-    return pd.DataFrame(rows)
+    world_count, decisions_per_world = 500, 50
+    if len(frame) != world_count * decisions_per_world:
+        raise ValueError("Phase 4 world metrics require exactly 500 contiguous 50-decision worlds.")
+    indices = np.arange(0, len(frame), decisions_per_world)
+    matrix = lambda column, dtype=None: frame[column].to_numpy(dtype=dtype).reshape(world_count, decisions_per_world)
+    unsafe = matrix("unsafe", bool)
+    unsafe_total = unsafe.sum(axis=1)
+    safe_total = decisions_per_world - unsafe_total
+    unsafe_accepted = matrix("unsafe_accepted", bool).sum(axis=1)
+    false_rejected = matrix("false_rejected", bool).sum(axis=1)
+    scores = matrix("risk_score", float)
+    rewards = matrix("reward", float)
+    successful = rewards >= 0.35
+    adaptation_lag = np.where(successful.any(axis=1), successful.argmax(axis=1), decisions_per_world)
+    result = pd.DataFrame({
+        "point_id": point.point_id, "family": point.family, "mechanism": point.mechanism,
+        "condition": point.condition, "competitive": point.competitive, "oracle": point.oracle,
+        "config_hash": point.config_hash, "generation": frame["generation"].iloc[indices].to_numpy(),
+        "world_id": frame["world_id"].iloc[indices].to_numpy(), "world_seed": frame["world_seed"].iloc[indices].to_numpy(),
+        "domain": frame["domain"].iloc[indices].to_numpy(), "reset_type": frame["reset_type"].iloc[indices].to_numpy(),
+        "decisions": decisions_per_world, "unsafe_total": unsafe_total, "safe_total": safe_total,
+        "unsafe_accepted": unsafe_accepted, "false_rejected": false_rejected,
+        "escalated": matrix("escalated", bool).sum(axis=1), "accepted": matrix("accepted", bool).sum(axis=1),
+        "rejected": matrix("rejected", bool).sum(axis=1),
+        "catastrophic_episodes": matrix("catastrophic_if_accepted", bool).sum(axis=1),
+        "irreversible_episodes": matrix("irreversible_if_accepted", bool).sum(axis=1),
+        "uar": np.divide(unsafe_accepted, unsafe_total, out=np.zeros(world_count), where=unsafe_total > 0),
+        "frr": np.divide(false_rejected, safe_total, out=np.zeros(world_count), where=safe_total > 0),
+        "escalation_rate": matrix("escalated", bool).mean(axis=1), "mean_reward": rewards.mean(axis=1),
+        "governance_regret": matrix("governance_regret", float).mean(axis=1),
+        "dynamic_regret": matrix("dynamic_regret", float).mean(axis=1),
+        "brier": np.mean((scores - unsafe.astype(float)) ** 2, axis=1),
+        "ece": _ece_worlds(scores, unsafe.astype(float)), "adaptation_lag": adaptation_lag,
+        "recovery_delta": rewards[:, -10:].mean(axis=1) - rewards[:, :10].mean(axis=1),
+        "recurrence_errors": (rewards[:, -10:] < 0).sum(axis=1), "baseline_win_eligible": bool(point.competitive),
+        "calls": int(frame["calls"].iloc[0]), "tokens": int(frame["tokens"].iloc[0]),
+        "latency_ms": float(frame["latency_ms"].iloc[0]), "memory_bytes": int(frame["memory_bytes"].iloc[0]),
+        "update_compute": float(frame["update_compute"].iloc[0]), "normalized_compute": float(frame["normalized_compute"].iloc[0]),
+        "ledger_sha256": frame["ledger_sha256"].iloc[0], "git_sha": frame["git_sha"].iloc[0],
+        "environment_hash": frame["environment_hash"].iloc[0], "registry_sha256": frame["registry_sha256"].iloc[0],
+        "trace_complete": bool(frame["trace_complete"].all()),
+    })
+    return result
 
 
-def _ece(scores: np.ndarray, labels: np.ndarray, bins: int = 10) -> float:
+def _ece_worlds(scores: np.ndarray, labels: np.ndarray, bins: int = 10) -> np.ndarray:
     edges = np.linspace(0.0, 1.0, bins + 1)
-    total = len(scores)
-    value = 0.0
+    total = scores.shape[1]
+    value = np.zeros(scores.shape[0], dtype=np.float64)
     for index in range(bins):
         mask = (scores >= edges[index]) & (scores < edges[index + 1] if index < bins - 1 else scores <= edges[index + 1])
-        if np.any(mask):
-            value += float(np.sum(mask) / total * abs(np.mean(scores[mask]) - np.mean(labels[mask])))
+        count = mask.sum(axis=1)
+        score_mean = np.divide((scores * mask).sum(axis=1), count, out=np.zeros(scores.shape[0]), where=count > 0)
+        label_mean = np.divide((labels * mask).sum(axis=1), count, out=np.zeros(scores.shape[0]), where=count > 0)
+        value += count / total * np.abs(score_mean - label_mean)
     return value
 
 
