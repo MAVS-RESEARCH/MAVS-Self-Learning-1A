@@ -454,6 +454,16 @@ The independent audit reports native statement lines `18,21,26,31,36,41,46,51,55
 
 Pre-documentation verdict: Phase 1 is technically complete with no open WorkPlan Section 8 compliance gap. Closure remains pending only until this evidence and the authoritative result tree are committed, the audit is re-run from the documentation successor commit without changing frozen implementation inputs, and the accepted state is pushed to `origin/main`.
 
+### P1-E011 - Post-documentation provenance control and Phase 1 closure
+
+- Evidence/results commit: `3673a95` (`results: record authoritative phase 1 evidence`), adding `Path.md` evidence and the complete 29-file authoritative result namespace. Frozen experiment implementation remains `bcd2633570a72a7fbe5153926d337367a3bbf809`.
+- Post-evidence aggregation: `python scripts/aggregate_phase1.py --run-id phase1_20260713`; PASS. All three processed hashes remained byte-identical to P1-E008.
+- Post-evidence audit: `python scripts/audit_phase1.py --run-id phase1_20260713`; completed with `passed: true`, deterministic replay true, separation/trace/checkpoint error counts zero, and audit SHA-256 unchanged at `73B457D960A9D8691963005BED4ADE2447D669A46194E5A465E35422A4E37D6C`.
+- Closure-attempt exception: the shell wrapper reached its execution ceiling while the post-evidence audit child was still running. This attempt was not treated as a pass. Process inspection showed the child responsive and using CPU; it was monitored without modification until normal completion. The audit file was not partially overwritten, then updated at completion with the exact authoritative bytes and passing checks above. This operational timeout does not alter benchmark allocation, results, or compliance, but it is retained here as required failure evidence.
+- Current worktree before closure documentation: clean. No implementation, configuration, model, ledger, trace, checkpoint, metric, or report byte changed during the post-evidence control.
+- Final Phase 1 verdict: PASS, 100% compliant with WorkPlan Section 8 and its applicable prerequisite contracts. Every listed scope item, file class, baseline family, coding rule, allocation, anti-overfit constraint, metric, and exit criterion has direct and independently replayed evidence. No compliance gap or provisional artifact remains.
+- Claim restriction: this verdict certifies Phase 1 non-stationary baseline characterization and measurement integrity. It does not assert MAVS-SL superiority, repair, transfer, consolidation, deployment readiness, or Pareto-frontier expansion.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -476,7 +486,7 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | Phase | WorkPlan scope | Status | Exit-gate evidence |
 |---|---|---|---|
 | 0 | Clone qualification and measurement integrity | Complete | P0-E003 through P0-E015; authoritative audit and post-documentation provenance control pass |
-| 1 | Non-stationary distribution gauntlet | In progress | P1-E000 through P1-E010; authoritative audit passes, closure commit/push pending |
+| 1 | Non-stationary distribution gauntlet | Complete | P1-E000 through P1-E011; authoritative and post-evidence audits pass |
 | 2 | Corruption, correlated collapse, and partial observability | Not started | None |
 | 3 | Autonomous failure discovery and self-repair | Not started | None |
 | 4 | Full baseline tournament and Pareto audit | Not started | None |
@@ -484,4 +494,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 is complete and frozen. Phase 1 has passed its authoritative technical audit under P1-E000 through P1-E010; documentation successor validation, closure commit, and push remain. No Phase 2 work is authorized.
+Phase 0 and Phase 1 are complete and frozen. Phase 1 closure evidence is P1-E000 through P1-E011. No Phase 2 work is authorized.
