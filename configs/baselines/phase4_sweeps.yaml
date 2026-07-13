@@ -1,0 +1,120 @@
+schema_version: 1.0.0
+selection_bank: frozen_phase4_development_registry_v1
+selection_rule: lexicographic_uar_then_frr_then_burden
+final_access: false
+families:
+  trivial:
+    module: trivial.py
+    mechanisms: [accept_all, reject_all, escalate_all, random]
+    conditions: [diagnostic]
+    grid: {reject_threshold: [0.50]}
+    budget: {calls: 0, tokens: 0, latency_ms: 0.05, memory_bytes: 128, update_compute: 0.0}
+    competitive: false
+  oracle:
+    module: oracle.py
+    mechanisms: [oracle_label, oracle_regime]
+    conditions: [oracle]
+    grid: {reject_threshold: [0.50]}
+    budget: {calls: 0, tokens: 0, latency_ms: 0.05, memory_bytes: 128, update_compute: 0.0}
+    competitive: false
+  mavs_lineage:
+    module: mavs_tournament.py
+    mechanisms: [mavs_gc, ds_cf, fixed_full_mavs, context_selected_fixed]
+    conditions: [fixed]
+    grid: {reject_threshold: [0.64, 0.72]}
+    budget: {calls: 1, tokens: 0, latency_ms: 2.0, memory_bytes: 2097152, update_compute: 0.0}
+    competitive: true
+  selective:
+    module: selective.py
+    mechanisms: [confidence, entropy, margin, reject_option, generalized_selective]
+    conditions: [fixed]
+    grid: {reject_threshold: [0.62, 0.72]}
+    budget: {calls: 1, tokens: 0, latency_ms: 1.0, memory_bytes: 1048576, update_compute: 0.0}
+    competitive: true
+  neyman_pearson:
+    module: neyman_pearson.py
+    mechanisms: [risk_constrained, likelihood_ratio, cost_sensitive]
+    conditions: [fixed]
+    grid: {reject_threshold: [0.62, 0.72]}
+    budget: {calls: 1, tokens: 0, latency_ms: 1.2, memory_bytes: 1048576, update_compute: 0.0}
+    competitive: true
+  conformal_fixed:
+    family: conformal
+    module: conformal.py
+    mechanisms: [split_conformal, conformal_risk_control]
+    conditions: [fixed]
+    grid: {alpha: [0.05, 0.10]}
+    budget: {calls: 1, tokens: 0, latency_ms: 1.8, memory_bytes: 2097152, update_compute: 0.0}
+    competitive: true
+  conformal_adaptive:
+    family: conformal
+    module: online_conformal.py
+    mechanisms: [adaptive_conformal, online_conformal, distribution_informed_online, retrospective_adjustment]
+    conditions: [cumulative, fresh]
+    grid: {alpha: [0.05, 0.10]}
+    budget: {calls: 1, tokens: 0, latency_ms: 2.2, memory_bytes: 4194304, update_compute: 0.15}
+    competitive: true
+  uncertainty:
+    module: uncertainty.py
+    mechanisms: [disagreement, variance, mutual_information, deep_ensemble, self_consistency]
+    conditions: [fixed]
+    grid: {uncertainty_threshold: [0.30, 0.50]}
+    budget: {calls: 5, tokens: 0, latency_ms: 5.0, memory_bytes: 8388608, update_compute: 0.0}
+    competitive: true
+  guardrails:
+    module: rails.py
+    mechanisms: [policy_rails, validator_stack, schema_guard, tool_use_guard]
+    conditions: [fixed]
+    grid: {reject_threshold: [0.60, 0.70]}
+    budget: {calls: 2, tokens: 256, latency_ms: 8.0, memory_bytes: 4194304, update_compute: 0.0}
+    competitive: true
+  critique_verifier:
+    module: verifier.py
+    mechanisms: [critique_revise, single_judge, verifier_cascade, bounded_debate]
+    conditions: [fixed]
+    grid: {reject_threshold: [0.60, 0.70]}
+    budget: {calls: 4, tokens: 1024, latency_ms: 25.0, memory_bytes: 8388608, update_compute: 0.0}
+    competitive: true
+  drift:
+    module: drift.py
+    mechanisms: [adwin, page_hinkley, change_point_selector]
+    conditions: [cumulative, fresh]
+    grid: {drift_threshold: [0.20, 0.35]}
+    budget: {calls: 1, tokens: 0, latency_ms: 2.0, memory_bytes: 4194304, update_compute: 0.10}
+    competitive: true
+  online_experts:
+    module: online_experts.py
+    mechanisms: [hedge, contextual_bandit]
+    conditions: [cumulative, fresh]
+    grid: {learning_rate: [0.05, 0.20]}
+    budget: {calls: 3, tokens: 0, latency_ms: 3.0, memory_bytes: 4194304, update_compute: 0.20}
+    competitive: true
+  test_time_adaptation:
+    module: test_time_adaptation.py
+    mechanisms: [entropy_ctta, pseudo_label_ctta, ctta_reset, ctta_recovery]
+    conditions: [cumulative, fresh]
+    grid: {learning_rate: [0.0001, 0.001]}
+    budget: {calls: 1, tokens: 0, latency_ms: 7.0, memory_bytes: 16777216, update_compute: 0.60}
+    competitive: true
+  pareto:
+    module: pareto_morl.py
+    mechanisms: [weighted_scalarization, epsilon_constraint, ipro_pareto_set, preference_conditioned]
+    conditions: [fixed]
+    grid: {safety_weight: [0.50, 0.75, 0.90]}
+    budget: {calls: 2, tokens: 0, latency_ms: 5.0, memory_bytes: 8388608, update_compute: 0.0}
+    competitive: true
+  safe_control:
+    module: safe_control.py
+    mechanisms: [lagrangian_policy, safety_critic, shielded_policy]
+    conditions: [fixed]
+    grid: {safety_budget: [0.05, 0.10]}
+    budget: {calls: 2, tokens: 0, latency_ms: 6.0, memory_bytes: 8388608, update_compute: 0.0}
+    competitive: true
+  mavs_sl:
+    module: mavs_tournament.py
+    mechanisms: [full_mavs_sl]
+    conditions: [cumulative, fresh, frozen_after_g1]
+    grid: {safety_budget: [0.04, 0.08, 0.12]}
+    budget: {calls: 3, tokens: 0, latency_ms: 7.5, memory_bytes: 16777216, update_compute: 0.35}
+    competitive: true
+

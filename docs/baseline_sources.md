@@ -17,3 +17,18 @@ All Phase 1 implementations are labeled benchmark adaptations, not author-code r
 | Context-selected fixed configurations | Architecture authority, Section 13 | Select only among approved configurations and fall back through governed thresholds | Deterministic domain/cost table; no learned selector | Visible domain and cost preference; fixed-state and scope tests |
 
 The Phase 1 source predictor and every adaptive method remain fixed-representation comparators. Their behavior cannot support a claim that the feasible governance frontier expanded.
+
+## Phase 4 frozen tournament registry
+
+Phase 4 freezes every adapter, parameter grid, condition, information budget, and compute budget in `configs/baselines/phase4_sweeps.yaml` before the untouched bank is compiled. The registry carries a content hash and every trace carries the corresponding point/config/ledger/Git/environment hashes. All methods are benchmark adaptations under the common three-action contract; no author-code or transferred formal-guarantee claim is made.
+
+| Family | Source/mechanism basis | Preserved behavior | Declared adaptation and fidelity boundary |
+|---|---|---|---|
+| Trivial and oracle bounds | Diagnostic controls | Accept/reject/escalate/random and label/regime upper bounds | Non-competitive; oracle runs only in evaluator code |
+| MAVS lineage and full MAVS-SL | Chapter 10D and supplied architecture | MAVS-GC, DS-CF, fixed/context-selected MAVS, governed self-learning | Deterministic benchmark signals; claims require the complete frontier gate |
+| Selective, Neyman-Pearson, conformal | Phase 1 sources above | Abstention, risk/cost constraints, split/CRC/adaptive/online conformal | Three-action visible-score proxy; no distribution-free guarantee transferred |
+| Uncertainty and self-consistency | Ensemble uncertainty and repeated-decision consistency | Disagreement, variance, mutual information, ensemble and consistency gates | Frozen synthetic specialist projections; no learned ensemble is trained in Phase 4 |
+| Rails, validators, critique, judge, verifier, debate | Guardrail and process-supervision comparator classes | Policy/schema/tool checks and bounded review cascades | Deterministic visible-risk adapters with declared calls/tokens/latency/memory |
+| Drift, experts/bandits, CTTA | Phase 1 sources above | ADWIN/Page-Hinkley/change selection, Hedge/contextual routing, entropy/pseudo-label/reset/recovery | Only earlier released feedback updates bounded state; fresh and cumulative conditions are both retained |
+| Pareto/MORL | Weighted scalarization, epsilon constraint, IPRO-style set and preference conditioning | Multiple safety weights and objective treatments | Offline operating-point adaptation, not a claim of reproducing a full MORL trainer |
+| Safe control/RL | Lagrangian, safety-critic, and shielding concepts | Explicit safety budgets, critic risk and shielded action | Frozen evaluator-independent policy adapter; no reinforcement-learning model is trained |

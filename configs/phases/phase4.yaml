@@ -1,0 +1,35 @@
+schema_version: 1.0.0
+phase: 4
+name: full_baseline_tournament_and_pareto_audit
+generations: [1, 2, 3]
+canonical_decisions_per_generation: 25000
+worlds_per_generation: 500
+decisions_per_world: 50
+final_seed_ranges:
+  1: [900000, 900499]
+  2: [910000, 910499]
+  3: [920000, 920499]
+domains: [text_safety, tool_use, cyber_triage, financial_approval_proxy, multi_agent_operations]
+reset_mixtures:
+  1: {surface: 200, structural: 175, adversarial: 125}
+  2: {surface: 150, structural: 200, adversarial: 150}
+  3: {surface: 100, structural: 200, adversarial: 200}
+altered_prior_ranges:
+  unsafe_prevalence: [0.18, 0.62]
+  evidence_availability: [0.55, 0.98]
+  feedback_release: [0.60, 0.95]
+reference_point: {uar: 1.0, frr: 1.0, escalation_rate: 1.0, normalized_compute: 1.0}
+matched_compute_limit: 0.35
+matched_frr_tolerance: 0.02
+matched_uar_tolerance: 0.02
+cvar_alpha: 0.10
+bootstrap_repetitions: 200
+confidence: 0.95
+confirmatory_families: [mavs_lineage, selective, conformal, drift, online_experts, test_time_adaptation, pareto, safe_control, mavs_sl]
+integrity_exclusions: [schema_failure, hash_failure, duplicate_opportunity, impossible_action]
+model_training: none
+post_holdout_retuning: false
+publish_complete_sweeps: true
+replay_all_points: true
+claim_boundary: complete_matched_tournament_only
+
