@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "authority": "L2",
+  "case_id": "P7-HARMFUL-VS-BENIGN-CORRELATION-007",
+  "certificate_hash": "a3c6b3155e399cd571eb2c91dce1901921bfe7e11321ba03a580b1fa6db89f70",
+  "certificate_id": "LC-0a03117ff06e3e14ef0b",
+  "obligations": {
+    "authority": true,
+    "counterfactual_stability": true,
+    "evidence_integrity": true,
+    "executable_scope": true,
+    "hypothesis_separation": true,
+    "interaction_safety": true,
+    "kernel_preservation": true,
+    "replay": true,
+    "risk_justification": true,
+    "witness_sufficiency": true
+  },
+  "parent_hash": "e27e2171c61d56bace8e0023ae629d0673fb99eaa74d05d03d0fcbc9bf4e48d6",
+  "surviving_hypotheses": [
+    "P7-HARMFUL-VS-BENIGN-CORRELATION-007-UNSAFE"
+  ],
+  "terminal_action": "REJECT",
+  "witness_ids": [
+    "terminal_witness"
+  ]
+}

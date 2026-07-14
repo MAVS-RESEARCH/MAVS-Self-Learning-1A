@@ -1,0 +1,5446 @@
+{
+  "certificate_count": 320,
+  "passed": true,
+  "records": [
+    {
+      "certificate_id": "FC-4a86c0a81a77a84988de",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-77bf260e3395199f6914",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-559191e040ea8d8f1cdb",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-efe0291cc55e8b57f9e7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-c9f8ee9be7da4ef6d509",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-1ae91398001e3a49da69",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-862b41ec6a09d60e3fce",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-083e9f25af6f059d7455",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-669be19b27643aefa473",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d4f0b4d0f1421fd76d0a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7435e13a6956b6fa5cd8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7bb42a39fbcffaab1905",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d5666f30555464ec6615",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8c353ac36b386e6cf1bb",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f1abbb94f771552fe4f6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-93fa4b414e25abf2b259",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-eb911b5c59ec8b1cd5c4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-ed12954d7a1fb9a5d2ab",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2751f866e95c637634d6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-93bc9662baa24a268eaf",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8e951e4ec2f1fb33db65",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f30c7cabd88d802e4d44",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a577b672da9d4eef8b80",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6b44f570995ebd8be876",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e54d3003fd21a76b6999",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a38c97041e519be93b21",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4adb250816df5540068a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-01088b9d7cb09a4fce6f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5dcfbd57852bef3c2ab2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6f44e43a0f10e97c024a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f86effe26199077b28c1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5ed86f173f68892c8b40",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f5f491af02d92ada831d",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b179322194c98cd0e0d1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7cb444a118c07eb3b519",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-bd1a6a40b1e26fdae3be",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5ef9e19176b5972e772c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2492ecc3d4d9784938a2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9e5249d46f517629318f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-45eecfdcc6c9503b5cfa",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-34a32a11f09dd448d89e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-fb92289f542ef5d487ce",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-188b4de8c724721e4ba4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b754da9959924c921db9",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8e169c0cce5fa0601b03",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-be6d73313d37406aa173",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-972e5d49c6a4f0ec455d",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-645883ebd1a19069af57",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-47912fd02b27de687a81",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d55b25a64d9e9d957b5b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-03b0cc4195d860eca959",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-443d0753fbdf90247ed2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8798f1c13ac23baabc36",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a1415a62286d98edf113",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a4db0153cc41c77e1f62",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-683feb95aa4607869ce8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9464ac19847f028c5877",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f5d3c83e4693e36b2865",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f7919de136b0712c3ea0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9c989ee04ee625cb9dc7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9141acd4723eec92e6d2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-eb55fa033a00b0b3865d",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-21d3bafec1b252198279",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-15e0ca74503c149b303a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7545482ec0bff24f9047",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f63daf8c0aa523454831",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f7434e66e406873db08e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f4cc17c8c430fe6dc3c3",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-51e6607df80be7cbe92c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6e648737c69888dbf983",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-717c1f266ac79e49f2a1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-85eb2077acaf5897f217",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2c0b0149f5ee4c5f49fe",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-059a229940446cbde87b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-421ad76b880a1fbe9eb1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5853c028c05aaad88945",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-06229dfb74eb3fb9ef27",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-0bc2243aeff28dd8d213",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-53d9446118d4f4308576",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-31bff1e5cbcb0d02b523",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-38cd48fd11651e2af8d3",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-8b39b6b84dbfc69ab2b7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-5faa8a5dbcba50994386",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-e624ef1918ef8baac184",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-c5ade451b4b41d0d0fef",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-b9cb1cf1e60ecbdd1b87",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-b9f516f12895d63f0d31",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-05e6b76c7d374905ede7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6232fef4381538a8e5d3",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d45e1461af702ac33542",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8eb3491c4acb601c6d2b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-53e26e287d2172f5b9cd",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3940fe5754a30259c86f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-dea10bcd333ed3e9aee6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6f072737802cdfd78d01",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2b21717883bb60632978",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2a31f0d4938502a84985",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-39b86782a88e3d8ae0b5",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-57008a10fd1eb738e272",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-690f6a76d65af1ff2b2c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b0c4026afbcfe5038225",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7000532b3d669218c48e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f07dda7cb83e87efc010",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2fd416b390a00856b351",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5cb43b8e85018829c44d",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-1b3600fe47cbd6cb85b4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8eebc51c58ed2f207c34",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2f35804425f17789b656",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7fea7248538f411b311b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f2d15e90041538829235",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-67e65509716a57cb236b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e1818ae8900f09a1752f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f3cee98c3694d2e1d75a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-817ec24b52fa4fd73d90",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-99e01a84f3fa78ecf9bf",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-48827686408c9b63109a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-17c28f5654207e3430b7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-1fd5b66e425676527680",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a1b612b384434c29ee59",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6763342f9dfd4a33c4af",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9392c63de7e46fe93b83",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2dd609ea14329e39b6c6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2c542a5a4631326f5fd0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-129bb6822323b33515a6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-68867f09994f47adaa31",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-46cdff01cda7bbe83e4f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-11db87bb59afc2e6e92a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-784f078f1241bc4b1fb0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-346ca763812a30384e87",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-dfce2f6961bb4cbc41f2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8db263d7fec892feec12",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a1c281bbe1a2a07d8877",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-473f9dfc79ec81b6fdd1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6b5c2afa5ef1b33fda69",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5480efb334969c185577",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9debb4be9482111aed33",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b25b96d1373b35063977",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e38d5a4dbf912778da50",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8a609c3e809c03836637",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e270efa4f45d2f68b751",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-816012d311d9602c8923",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8f4fb77b259672ad447b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6c270702edfbc569191a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-22ec9800ece1c8170a9b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4709f7dc9792b78861c8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a0e7db1b2eca40059f77",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c6e42a987536ce277e2b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-0297cc7914c93edccddb",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8d317d04fa9cc3ad437a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d59cf6817d56f5b9dffb",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3468856419662440f8f7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-22701c162ecd06812822",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-74486b1d2e898b5998cf",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-abc301cfd9b59d0665b9",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6daf6c01aa1f223de104",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-75c4b33c8780c4879534",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-12227976076a191ed4d0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8b117af63969e59a9255",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4af85dd93df2c0f25b6b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-dd9d5d36c04556bd332a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-e59665f131f9c78fef84",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-5603b278fb7545c255e9",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-72608a49adccf0c4040b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-8e633f92f09b04cf21d7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-e7541a6e0f3fcb7da043",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-0c40bfce6a237bfc2459",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-9e603aca8540ba6b7a7c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-040802dc8cf2856608cf",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-1799be9b73cf6fb7ef7a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e968205f4bcc57821d50",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d137705004e6833d163b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-54143ae4a77fc438bfce",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9ad582d789e4bf1a7950",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4f3b6a76a9739996665b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2f5f0973be91e5356250",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-14da50923b0ef103b990",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a4da9821ed263f2c0397",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b87e51a4f121cb84a017",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-ea90e9430b09b45d8791",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a81b90ca01ebd88bf010",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-1c9448d72888dedaebcf",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-cfdf90fc10b4898355ca",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-27b71de58f2f54051bb2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a2d21450e80a93d06021",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-00591362790df7ab6409",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-36a76ab00ac4cdcaf2ff",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4b4cbe67864668c032ee",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a6fc57c10425d7040674",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-170818485a8a124b0c1d",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5bf2cc8bac11c02d72e5",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4d54e89dec4a1de7c182",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b07e752d3a142148eb6b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-336c837b26155d8e38d4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e2a6bb4c5d6aee44f44c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4299550b8d7dff73cfe5",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7a01bfb7dafc67b33b5e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-fb460a3aa396666037e4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c07792774ce1ecb2260f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-be547e4ccd353beab84b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-0a03117ff06e3e14ef0b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-501dfbcf46ff1cd5050e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-00a92583e5ed1f382547",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4ba4666743f61a275b8c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-839c3ef9957d554a6826",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-411a05b4bb67dd8079ba",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d1a23a68d09860cf62b9",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3d32e1e903589e8bacae",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e26f9ffc2ac98a6da510",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-494dc8ca551b5b2fb28d",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-57d834354f95ab9d29b3",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3034bd9c842df8e9c6a6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7fa150e74e4d6cbda280",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-411d812b3922726947ae",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-cdabefcbaab9112a93be",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5ffe0bdcd4827f5e6107",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6ab516e361259f4b6fa7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-0c2062fb7c561e332b6a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9152bfc7c3780a615571",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-590bb59e59c83cd1d010",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-804b585d01ec6fa1d06e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-fc7f56d975d2bbe8bc4c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-09e1b7448bd8c57383d1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-50b16a3ddef2995eb15c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-50d515645c2667fe4fb9",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7041419aced69123af92",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-0dbe325b10f9ed1cb540",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-dcd4efe300c3599c3989",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-363b630a21c040bc7c83",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-24a41076ede74a019ba0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c341bd465379da9cdf68",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2fadf5471f5e30184d2b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-23b4feb4570cf2d86512",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-1cf5b2699dac72ecb90b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c1003c953538e9451b48",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a651ff2cecd2685e51f0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-775996e18d06a1b0a384",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-04e5114c124ae3a7c9f2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b88d9e800cd255e45b5a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5d376efa401b537df5f4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a4402c35c7cdec25706b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-ad6009483d3a27a62abb",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-b8791cc43227cea15e74",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-0b40f7bc32aacb88ed6b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-69dec8274e402139c4d7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-46711ac5777314a39f6f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-ede9bc29885c0be0789a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-31decf9a084cc971f6f6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "FC-44f9c8c3d0bd8ec9925b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-92e1d2826ffc1f7b0e24",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-facc4c2d4d27cd300c4a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-36e32369699ccd5109b0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-12acd07442dc1702f19b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f0001fb91881df9a44fc",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2b97817f379d698adee9",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-ac0fafd893845d64a1eb",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-cc3153ca2cf0d6cd23d6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5fb650775b481e07bbc2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6969b1a2076f16eaa4e8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-ddc8a33d56196397efa3",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-82541ed608952c67bb70",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-dd2ad8a2144862406a95",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-93bbc8a5c017e7dec477",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e8ce33df54d092b2f0b4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f9718c52d26995e72fb8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a33e347b7fb26dcdd9f5",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e93ffae93b29458b0947",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4e9f8940434538863154",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-edfb4a9dfb6cd2829e44",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9237152dd1e4e286166c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-bb7cff8bfa457b4425a1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-fa01ad434cbe0cc0261b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-41e0a072f6d85f441157",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9c68ddf3e7e52206e6aa",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b12c073b54176450ae8f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d6841582f6639fc31a36",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-574b39f1802eae79b3ef",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-af2166c8d5b85da79338",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-06e5409e30867fb9a508",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-370bddd4e0e34a42525b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b54c3a16c82c434c2e05",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c84debfc1354aa0b38f2",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-69052085a6977c1db726",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-d5ca88db8bc6235e007b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-49a645a68cb2173ebd44",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2e5c6a4be29053ebba66",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-10efc8b8f39044fbfa4e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-4feba420f99d2ccc040a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e8d3298860e8d0149fc5",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-21328431d564e43763d7",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-5cf841f96fbe8553e165",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-bd3e4d817c4a58c84dc1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-8865fe189f0c8118515c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-770d89150ad1d8ff3d72",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-398a9da3b4be1a8b22be",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-9065307d4d18053cd3d8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6fd07d68be1d763e3aa6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c53ec42153306d8ace9c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-c565f97a1f7d342072ac",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-cbcf880fdb482caf67c3",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e33bdaf0f263034d48c6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-82be6eb77873de0b0cec",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-f71e881ee24c9b24397a",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a96f308456a5f0e0d9b1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2471f627fc611eaf0fb6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-b2fcb31b9c6a972945c1",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-396ec68619446bd3267b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6e4c20400634ae796aa8",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-828ca88cd632beedba3c",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3a6321d50c14c6b66869",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-91dfbf4e2ca577f8f3e5",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-6d67b10c4d20de4cdb0e",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3af14c5950841c5b50e0",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-7882691f42c67973c183",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-2969c9f17952af81a2ff",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-a07bafe9653ece84197b",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-3ecb81154389ae0426c4",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-898c029a0ff9051d73b6",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-20931e4c1805f1c6c670",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-e4f2fe1a9b39201e8154",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    },
+    {
+      "certificate_id": "LC-59ded43895ea9c9f313f",
+      "hash_passed": true,
+      "obligations": {
+        "authority": true,
+        "counterfactual_stability": true,
+        "evidence_integrity": true,
+        "executable_scope": true,
+        "hypothesis_separation": true,
+        "interaction_safety": true,
+        "kernel_preservation": true,
+        "replay": true,
+        "risk_justification": true,
+        "witness_sufficiency": true
+      },
+      "passed": true
+    }
+  ]
+}

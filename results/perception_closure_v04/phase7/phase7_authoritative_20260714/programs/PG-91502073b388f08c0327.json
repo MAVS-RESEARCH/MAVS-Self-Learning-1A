@@ -1,0 +1,20 @@
+{
+  "action_ids": [
+    "P7-NEW-COMPOSITION-002-COMPOSE"
+  ],
+  "case_id": "P7-NEW-COMPOSITION-002",
+  "conditional_perception_gain": 0.5,
+  "influential_basis": [
+    "P6-EVIDENCE-RECOVERY-A",
+    "P6-POLICY-INTERACTION-A"
+  ],
+  "interaction_certificates": [
+    "IC-18c88919b0c7976ee62a"
+  ],
+  "primary_causal_family": "certified_composition",
+  "program_hash": "a8d1d19c92fe04583a8dbbaf26764eacefed21d29e082e2759dd87cc676f3274",
+  "program_id": "PG-91502073b388f08c0327",
+  "redundant_suppressed": [],
+  "round_index": 1,
+  "scope_certified": true
+}

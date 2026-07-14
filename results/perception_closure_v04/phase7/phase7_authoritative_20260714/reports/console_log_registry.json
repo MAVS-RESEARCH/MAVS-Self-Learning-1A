@@ -1,0 +1,153 @@
+{
+  "entries": [
+    {
+      "comment": "# console.log: phase7.audit.complete",
+      "comment_line": 537,
+      "file": "scripts/audit_phase7_closure.py",
+      "statement": "print(f'{{\"event\":\"phase7.audit.complete\",\"status\":\"{report[\"status\"]}\",\"findings\":{len(findings)}}}')",
+      "statement_line": 538
+    },
+    {
+      "comment": "# console.log: phase7.clean.named_run",
+      "comment_line": 20,
+      "file": "scripts/clean_phase7_results.py",
+      "statement": "print(f'{{\"event\":\"phase7.clean.named_run\",\"run_id\":\"{args.run_id}\"}}')",
+      "statement_line": 21
+    },
+    {
+      "comment": "# console.log: phase7.compile.complete",
+      "comment_line": 294,
+      "file": "scripts/compile_phase7_microbenchmarks.py",
+      "statement": "print(f'{{\"event\":\"phase7.compile.complete\",\"cases\":{len(cases)},\"families\":{len(family_counts)}}}')",
+      "statement_line": 295
+    },
+    {
+      "comment": "# console.log: phase7.replay.complete",
+      "comment_line": 72,
+      "file": "scripts/replay_phase7.py",
+      "statement": "print(f'{{\"event\":\"phase7.replay.complete\",\"executions\":{len(replayed)},\"comparisons\":4}}')",
+      "statement_line": 73
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step01.start",
+      "comment_line": 26,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step01.start\", run_id: runId }));",
+      "statement_line": 27
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step02.clean_named_run",
+      "comment_line": 29,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step02.clean_named_run\" }));",
+      "statement_line": 30
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step03.source_cleanliness",
+      "comment_line": 34,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step03.source_cleanliness\" }));",
+      "statement_line": 35
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step04.inherited_tests_before",
+      "comment_line": 41,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step04.inherited_tests_before\" }));",
+      "statement_line": 42
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step05.phase7_tests_before",
+      "comment_line": 46,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step05.phase7_tests_before\" }));",
+      "statement_line": 47
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step06.compile_microbenchmarks",
+      "comment_line": 51,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step06.compile_microbenchmarks\" }));",
+      "statement_line": 52
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step07.run_runtime",
+      "comment_line": 56,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step07.run_runtime\" }));",
+      "statement_line": 57
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step08.validate_traces",
+      "comment_line": 61,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step08.validate_traces\" }));",
+      "statement_line": 62
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step09.replay",
+      "comment_line": 66,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step09.replay\" }));",
+      "statement_line": 67
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step10.phase7_tests_after",
+      "comment_line": 71,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step10.phase7_tests_after\" }));",
+      "statement_line": 72
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step11.full_regression",
+      "comment_line": 76,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step11.full_regression\" }));",
+      "statement_line": 77
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step12.write_orchestration_evidence",
+      "comment_line": 81,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step12.write_orchestration_evidence\" }));",
+      "statement_line": 82
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step13.independent_audit",
+      "comment_line": 87,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step13.independent_audit\" }));",
+      "statement_line": 88
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step14.seal",
+      "comment_line": 92,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step14.seal\" }));",
+      "statement_line": 93
+    },
+    {
+      "comment": "// console.log: phase7.orchestrator.step15.complete",
+      "comment_line": 101,
+      "file": "scripts/run_phase7.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase7.orchestrator.step15.complete\", run_id: runId, source_commit: sourceCommit }));",
+      "statement_line": 102
+    },
+    {
+      "comment": "# console.log: phase7.runtime.complete",
+      "comment_line": 173,
+      "file": "scripts/run_phase7_runtime.py",
+      "statement": "print(f'{{\"event\":\"phase7.runtime.complete\",\"executions\":{len(results)},\"rounds\":{len(rounds)},\"escalations\":{len(escalations)}}}')",
+      "statement_line": 174
+    },
+    {
+      "comment": "# console.log: phase7.trace_validation.complete",
+      "comment_line": 179,
+      "file": "scripts/validate_phase7_traces.py",
+      "statement": "print(f'{{\"event\":\"phase7.trace_validation.complete\",\"executions\":{len(traces)},\"findings\":0}}')",
+      "statement_line": 180
+    }
+  ],
+  "entry_count": 21,
+  "passed": true
+}

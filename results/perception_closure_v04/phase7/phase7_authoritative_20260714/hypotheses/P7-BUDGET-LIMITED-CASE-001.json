@@ -1,0 +1,79 @@
+{
+  "case_id": "P7-BUDGET-LIMITED-CASE-001",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-BUDGET-LIMITED-CASE-001-COSTLY"
+      ],
+      "hypothesis_id": "P7-BUDGET-LIMITED-CASE-001-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-BUDGET-LIMITED-CASE-001-COSTLY"
+      ],
+      "hypothesis_id": "P7-BUDGET-LIMITED-CASE-001-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "missing_evidence",
+    "case_id": "P7-BUDGET-LIMITED-CASE-001",
+    "evidence_hash": "0f1824ecf29ba06daab7324f5b1cfa5259e5872892bc7d5810bc8c23bc64dc68",
+    "parent_hash": "9793ce62b19946b87c49fe724a876e9b909b75f2b473a31a3bada44bf5383ab4",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "cfd0b5a23fb422b42c511be7bb023614a0c00c5e85c4215f661f75d5b3a96ba5",
+    "surviving_hypotheses": [
+      "P7-BUDGET-LIMITED-CASE-001-SAFE",
+      "P7-BUDGET-LIMITED-CASE-001-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

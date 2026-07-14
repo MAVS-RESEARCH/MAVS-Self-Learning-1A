@@ -1,0 +1,130 @@
+{
+  "auditor_truth_hash": "7b3d37eb860dfdc5bf2ae46772b57d53db9c4786e27c1af7052e9d432fb2dec0",
+  "case_bank_hash": "2c5eb986fe7c64aa9d74d5a7267bbb31467865233e9678e2ce973644abbc07f9",
+  "case_count": 96,
+  "family_counts": {
+    "adversarial_query_trap": 8,
+    "budget_limited_case": 8,
+    "conflicting_diagnostics": 8,
+    "genuinely_new_semantic_need": 8,
+    "harmful_vs_benign_correlation": 8,
+    "immediately_separable": 8,
+    "irreducible_pair": 8,
+    "masked_safe_evidence": 8,
+    "multi_step_separable": 8,
+    "new_composition": 8,
+    "one_query_separable": 8,
+    "scope_neighbor": 8
+  },
+  "hypothesis_authority_counts": {
+    "L0": 16,
+    "L1": 160
+  },
+  "library_size_sweep": [
+    20,
+    200,
+    2000,
+    20000
+  ],
+  "locked": true,
+  "perception_mode_counts": {
+    "alternate_view": 16,
+    "counterfactual_probe": 8,
+    "delayed_observation": 8,
+    "diagnostic_composition": 16,
+    "disjoint_specialist": 8,
+    "evidence_recovery": 8,
+    "provenance_reconstruction": 16,
+    "simulation": 8,
+    "targeted_query": 24,
+    "tool": 16
+  },
+  "run_id": "phase7_authoritative_20260714",
+  "runtime_forbidden_fields": [
+    "expected_outcome",
+    "oracle_label",
+    "unsafe",
+    "hidden_world",
+    "target_decision"
+  ],
+  "schema_version": "1.0.0",
+  "strata": {
+    "budget": [
+      "diagnostic_research",
+      "industrial_latency",
+      "strict_call_limit"
+    ],
+    "evidence_access": [
+      "available",
+      "delayed",
+      "costly",
+      "corrupted",
+      "adversarially_masked",
+      "permanently_inaccessible"
+    ],
+    "interaction": [
+      "single_cause",
+      "certified_two_family",
+      "redundancy",
+      "contradictory_witnesses"
+    ],
+    "novelty": [
+      "known_primitive",
+      "new_composition",
+      "new_scope",
+      "genuinely_new_semantics"
+    ],
+    "scope": [
+      "clean",
+      "neighboring_confounder",
+      "overlapping_families",
+      "structural_reset"
+    ],
+    "separability": [
+      "immediate",
+      "one_query",
+      "multi_step",
+      "irreducible"
+    ]
+  },
+  "strata_counts": {
+    "budget": {
+      "diagnostic_research": 8,
+      "industrial_latency": 80,
+      "strict_call_limit": 8
+    },
+    "evidence_access": {
+      "adversarially_masked": 8,
+      "available": 40,
+      "corrupted": 16,
+      "costly": 16,
+      "delayed": 8,
+      "permanently_inaccessible": 8
+    },
+    "interaction": {
+      "certified_two_family": 8,
+      "contradictory_witnesses": 8,
+      "redundancy": 8,
+      "single_cause": 72
+    },
+    "novelty": {
+      "genuinely_new_semantics": 8,
+      "known_primitive": 72,
+      "new_composition": 8,
+      "new_scope": 8
+    },
+    "scope": {
+      "clean": 72,
+      "neighboring_confounder": 8,
+      "overlapping_families": 8,
+      "structural_reset": 8
+    },
+    "separability": {
+      "immediate": 8,
+      "irreducible": 8,
+      "multi_step": 16,
+      "one_query": 64
+    }
+  },
+  "truth_isolation": "auditor_only_separate_parquet_not_loaded_by_runtime"
+}

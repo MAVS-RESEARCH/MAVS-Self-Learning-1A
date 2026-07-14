@@ -1447,6 +1447,63 @@ The replacement authoritative `reports/console_log_registry.json` records 25/25 
 - Final pre-checkpoint full regression: `python -m pytest -q` **PASS, 266/266**, represented by `72 + 72 + 72 + 50` progress marks, exit code `0`, wall time `77.4 s`.
 - Advancement gate: source implementation, focused stress, full inherited regression, and disposable independent audit pass. Authoritative evidence is still pending a clean source commit; Phase 7 remains **in progress**.
 
+### P7-E005 - Authoritative committed-source execution and sealed evidence
+
+- Date and phase: 2026-07-14 (Asia/Karachi), Phase 7.
+- Accepted source checkpoint: `d71d667a377ed2c0dd80a93e38b3ba70554d3a9a` (`Implement Phase 7 perception-closure runtime`). The working tree was clean before compilation; the run manifest and environment lock record this exact commit.
+- Command: `node scripts/run_phase7.mjs --run-id phase7_authoritative_20260714`.
+- Exact orchestration result: **PASS**, exit code `0`, wall time `175.4 s`; all 15 console-instrumented steps reached completion. Inherited Phase 0-6 pre-tests passed; focused Phase 7 tests passed **60/60** before and after execution; full repository regression passed **266/266**.
+- Locked benchmark: 96 unique cases, exactly 8 in each of the 12 prescribed families. All required separability, evidence-access, scope, novelty, interaction, and budget levels are represented. Ten concrete perception modes cover targeted query, counterfactual probe, disjoint specialist, tool, simulation, delayed observation, provenance reconstruction, alternate view, evidence recovery, and diagnostic composition.
+- Runtime stress: the same 96 cases executed under persistent-library sizes 20, 200, 2,000, and 20,000, producing 384 executions, 352 resolver rounds, 320 terminal closure certificates, and 64 external escalations across the complete sweep. Contrast indexing considered at most three live actions while the remaining library stayed dormant; maximum influential basis was 2 at every size.
+- Phase 6 continuity: the compiler independently deserialized and validated all 20 promoted executable contracts; semantic hashes match the sealed inventory and blind requests; every independent gate and replay bit remains passing. Runtime primitive references resolve only to the promoted set. No runtime-created diagnostic bypassed Phase 6; the new composition is an ephemeral locally certified program with a certified interaction, not a silently promoted global candidate.
+- Trace and artifact validation: zero findings across public runtime field isolation, nine Phase 7 schemas, action/hypothesis/program/certificate/persistent records, exact query/probe/program/round/escalation counters, scope activation, interaction safety, typed channels, parent/hash chains, and Phase 6 continuity. Every action/round/escalation and all four artifact groups replayed hash-identically.
+- Independent certification: all 320 terminal certificates were recomputed from raw cases, executable program outputs, evidence, hypotheses, scopes, interactions, authorities, kernel obligations, and replay state by an auditor importing neither the production runtime nor the production local certifier. Obligation and certificate-hash disagreements: zero.
+- Failed closure accounting: the canonical run records **104/104** expected failed nonhomogeneous closure attempts; all are preserved rather than omitted. Every escalation has exactly one residual reason and a complete invalid/untried action and budget proof.
+- Persistence: 9 repeated paths were evaluated. One exact evidence-recovery reuse passed candidate-specific blind Phase 6 certification and remains eligible; 8 semantically non-equivalent paths remain pending and inactive. Local success never grants global authority. Consolidation retains lineage, anti-scope, parent-improvement, active-cap, and shifted-prior recertification fields; negative knowledge is persisted separately.
+- Result contract: 465 files, 1,559,962 bytes, under `results/perception_closure_v04/phase7/phase7_authoritative_20260714/`. Required manifests, traces, 320 certificate files, program and hypothesis artifacts, persistence tables, per-case/per-round/per-family/per-obligation metrics, query-yield distribution, basis curve, integrity reports, report, and Phase 7-limited claims are present. No Phase 0-6 result path changed.
+- Seal: `SEALED` records source `d71d667a377ed2c0dd80a93e38b3ba70554d3a9a`, audit `PASS`, zero findings, and audit SHA-256 `A9D2C8A475B7EEE31B79192E902C0224C0E700CCAEA48460E9D2A9A424DD09C8`. Independent recomputation matched exactly.
+- Model policy: no opaque model was trained. The scientific controls apply to deterministic executable search, case conditioning, auditor-only truth isolation, blind scope neighbors, adversarial evidence, metamorphic order, independent closure recomputation, and replay.
+
+### P7-E006 - Exact Phase 7 console comment and statement registry
+
+The authoritative independent auditor scanned every Phase 7 script. All **21/21** statements have an immediately preceding identifying comment; `reports/console_log_registry.json` records `passed: true`.
+
+| File | Comment line and exact comment | Statement line/event |
+|---|---|---|
+| `scripts/audit_phase7_closure.py` | 537 `# console.log: phase7.audit.complete` | 538 `print(...)`, audit complete |
+| `scripts/clean_phase7_results.py` | 20 `# console.log: phase7.clean.named_run` | 21 `print(...)`, named-run clean/refusal boundary |
+| `scripts/compile_phase7_microbenchmarks.py` | 294 `# console.log: phase7.compile.complete` | 295 `print(...)`, compile complete |
+| `scripts/replay_phase7.py` | 72 `# console.log: phase7.replay.complete` | 73 `print(...)`, replay complete |
+| `scripts/run_phase7.mjs` | 26 `// console.log: phase7.orchestrator.step01.start` | 27 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 29 `// console.log: phase7.orchestrator.step02.clean_named_run` | 30 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 34 `// console.log: phase7.orchestrator.step03.source_cleanliness` | 35 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 41 `// console.log: phase7.orchestrator.step04.inherited_tests_before` | 42 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 46 `// console.log: phase7.orchestrator.step05.phase7_tests_before` | 47 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 51 `// console.log: phase7.orchestrator.step06.compile_microbenchmarks` | 52 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 56 `// console.log: phase7.orchestrator.step07.run_runtime` | 57 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 61 `// console.log: phase7.orchestrator.step08.validate_traces` | 62 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 66 `// console.log: phase7.orchestrator.step09.replay` | 67 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 71 `// console.log: phase7.orchestrator.step10.phase7_tests_after` | 72 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 76 `// console.log: phase7.orchestrator.step11.full_regression` | 77 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 81 `// console.log: phase7.orchestrator.step12.write_orchestration_evidence` | 82 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 87 `// console.log: phase7.orchestrator.step13.independent_audit` | 88 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 92 `// console.log: phase7.orchestrator.step14.seal` | 93 `console.log(...)` |
+| `scripts/run_phase7.mjs` | 101 `// console.log: phase7.orchestrator.step15.complete` | 102 `console.log(...)` |
+| `scripts/run_phase7_runtime.py` | 173 `# console.log: phase7.runtime.complete` | 174 `print(...)`, runtime complete |
+| `scripts/validate_phase7_traces.py` | 179 `# console.log: phase7.trace_validation.complete` | 180 `print(...)`, validation complete |
+
+### P7-E007 - Post-seal stress and final advancement verdict
+
+- Seal-enforcement command: `python scripts/clean_phase7_results.py --run-id phase7_authoritative_20260714`.
+- Exact result: expected nonzero exit `1`, `RuntimeError: Refusing to clean a sealed Phase 7 run.` The run and seal remained present. Post-refusal audit SHA-256 remained `A9D2C8A475B7EEE31B79192E902C0224C0E700CCAEA48460E9D2A9A424DD09C8`.
+- Scientific results on the fully observable core: `n=88`, unsafe cases `44`, safe cases `44`; observed UAR `0/44`; observed FRR `0/44`; one-sided 95% zero-event upper bound `0.065819` for each protected error; residual escalation `8/88`, exactly equal to the 8 known irreducible cases. The separate 8 strict-budget cases all escalate specifically as budget exhaustion and are not mislabeled irreducible.
+- Query and burden results: 80 canonical QUERY/PROBE actions, 64 with measurable protected ambiguity contraction, preregistered positive-yield fraction `0.80 > 0.50`. QUERY, PROBE, DIAGNOSTIC_PROGRAM, RESOLVER_ROUND, and external ESCALATE counts reconcile exactly and never alias.
+- Scope/influence results: zero influential out-of-scope activation on retained or blind neighbors; zero typed meta-channel hard veto; zero additive severity use; zero uncertified/prohibited interaction influence; sparse-basis maximum 2 and bounded median independent of total library size; 100% residual escalation decomposition.
+- Compliance audit: all 12 microbenchmark family gates, all 17 exit/integrity gates, and all 20 WorkPlan clause mappings pass. Independent audit status `PASS`, findings `0`.
+- Claim boundary: `reports/CLAIMS.md` is limited to this locked Phase 7 runtime microbenchmark. It makes no Phase 8 ablation, Phase 9 three-generation, Phase 10 release, or general deployment claim.
+- Final verdict: **PASS - 100% compliant with WorkPlan Section 22 Phase 7 as implemented, stress-tested, independently audited, and sealed**. Phase 8 remains unimplemented and may begin only from this accepted evidence.
+- Commit/checkpoint: the authoritative source is `d71d667a377ed2c0dd80a93e38b3ba70554d3a9a`; the evidence commit containing this ledger entry is recorded in P7-E008 immediately after creation.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1475,8 +1532,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 4 | Full baseline tournament and Pareto audit | Complete | P4-E000 through P4-E010; full paired tournament, deterministic replay, and fail-closed audit pass |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E011; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
 | 6 | Executable diagnostic synthesis and anti-gaming foundation | Complete | P6-E021 through P6-E023; strengthened replacement run, 206-test regression, 24,600 schema records, 1,240 objective recomputations, and zero-finding audit pass |
-| 7 | Live Perception-Closure Runtime | In progress | P7-E000 and P7-E001; normative and sealed Phase 6 dependency locks established; no completion claim |
+| 7 | Live Perception-Closure Runtime | Complete | P7-E005 through P7-E007; sealed 384-execution run, 320 independent certificate recomputations, 266-test regression, 17/17 gates, and zero-finding audit |
 
 ## Current checkpoint
 
-Phase 0 through Phase 6 are complete and frozen. Phase 7 implementation is authorized and in progress from repository checkpoint `44d90ed43ee436ec883800c0ba399363be646d86`; its advancement gate has not passed. The accepted Phase 6 source checkpoint and sealed evidence remain unchanged. Phase 8 is blocked.
+Phase 0 through Phase 7 are complete and frozen. The accepted Phase 7 source checkpoint is `d71d667a377ed2c0dd80a93e38b3ba70554d3a9a`; accepted evidence is `results/perception_closure_v04/phase7/phase7_authoritative_20260714/`. Phase 8 is not implemented or authorized in this task.

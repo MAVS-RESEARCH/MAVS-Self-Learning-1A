@@ -1,0 +1,26 @@
+{
+  "bounded": true,
+  "curve": [
+    {
+      "library_size": 20,
+      "maximum_active_basis": 2,
+      "median_active_basis": 0.0
+    },
+    {
+      "library_size": 200,
+      "maximum_active_basis": 2,
+      "median_active_basis": 0.0
+    },
+    {
+      "library_size": 2000,
+      "maximum_active_basis": 2,
+      "median_active_basis": 0.0
+    },
+    {
+      "library_size": 20000,
+      "maximum_active_basis": 2,
+      "median_active_basis": 0.0
+    }
+  ],
+  "passed": true
+}

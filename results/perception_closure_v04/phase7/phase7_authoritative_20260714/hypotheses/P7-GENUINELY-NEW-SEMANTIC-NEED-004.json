@@ -1,0 +1,81 @@
+{
+  "case_id": "P7-GENUINELY-NEW-SEMANTIC-NEED-004",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L0",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-004-L0-PROBE",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-004-L2-QUERY"
+      ],
+      "hypothesis_id": "P7-GENUINELY-NEW-SEMANTIC-NEED-004-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L0",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-004-L0-PROBE",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-004-L2-QUERY"
+      ],
+      "hypothesis_id": "P7-GENUINELY-NEW-SEMANTIC-NEED-004-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "novelty",
+    "case_id": "P7-GENUINELY-NEW-SEMANTIC-NEED-004",
+    "evidence_hash": "8481084a09ec3526c63c8040ae31563140a2d6672df88eca0819135b546e592c",
+    "parent_hash": "13aa9918311002dbb2a7ce753b8d03e4701dff2c6cc9cc966b672bd73fb57eee",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "2d811b783967b57051f97f6103dcb89a2aa15d3d0bd7ea710221b7bd0ff80164",
+    "surviving_hypotheses": [
+      "P7-GENUINELY-NEW-SEMANTIC-NEED-004-SAFE",
+      "P7-GENUINELY-NEW-SEMANTIC-NEED-004-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

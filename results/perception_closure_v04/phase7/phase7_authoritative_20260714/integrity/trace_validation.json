@@ -1,0 +1,12 @@
+{
+  "case_count": 96,
+  "certificate_count": 320,
+  "escalation_count": 64,
+  "execution_count": 384,
+  "finding_count": 0,
+  "findings": [],
+  "passed": true,
+  "query_probe_program_count": 352,
+  "round_count": 352,
+  "schema_findings": 0
+}

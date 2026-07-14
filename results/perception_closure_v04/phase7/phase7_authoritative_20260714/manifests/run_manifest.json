@@ -1,0 +1,9 @@
+{
+  "microbenchmark_manifest": "manifests/microbenchmark_manifest.json",
+  "phase": 7,
+  "phase6_dependency": "manifests/phase6_dependency.json",
+  "run_id": "phase7_authoritative_20260714",
+  "runtime_config": "configs/perception_closure_v04/runtime.yaml",
+  "schema_version": "1.0.0",
+  "source_commit": "d71d667a377ed2c0dd80a93e38b3ba70554d3a9a"
+}

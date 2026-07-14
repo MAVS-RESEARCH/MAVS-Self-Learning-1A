@@ -1,0 +1,79 @@
+{
+  "case_id": "P7-HARMFUL-VS-BENIGN-CORRELATION-004",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-004-PROVENANCE"
+      ],
+      "hypothesis_id": "P7-HARMFUL-VS-BENIGN-CORRELATION-004-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-004-PROVENANCE"
+      ],
+      "hypothesis_id": "P7-HARMFUL-VS-BENIGN-CORRELATION-004-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "correlated_consensus",
+    "case_id": "P7-HARMFUL-VS-BENIGN-CORRELATION-004",
+    "evidence_hash": "96dc2ffdc5b5ed95b205822c7749399eb248ac6942619491c6bb6d079e18f980",
+    "parent_hash": "1e67114ac578b1a77a36836c4423565d6f2ba1ec233ac46bc04cd9f6e406c404",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "bed7a5fc0a41b8e0965af6d102a60abf838031a7dab9cd4ecd6ec0ff56afb5d7",
+    "surviving_hypotheses": [
+      "P7-HARMFUL-VS-BENIGN-CORRELATION-004-SAFE",
+      "P7-HARMFUL-VS-BENIGN-CORRELATION-004-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "case_id": "P7-CONFLICTING-DIAGNOSTICS-007",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-CONFLICTING-DIAGNOSTICS-007-ATTRIBUTION"
+      ],
+      "hypothesis_id": "P7-CONFLICTING-DIAGNOSTICS-007-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-CONFLICTING-DIAGNOSTICS-007-ATTRIBUTION"
+      ],
+      "hypothesis_id": "P7-CONFLICTING-DIAGNOSTICS-007-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "diagnostic_conflict",
+    "case_id": "P7-CONFLICTING-DIAGNOSTICS-007",
+    "evidence_hash": "463002341c96d6e88287dcfa0dd124c330e269fa3328c2dda302a0e4acd84a8e",
+    "parent_hash": "4568bc3fe993430287da04b80d0c72865c7263cb47dcf76360577ff13d8f43a6",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "16f9ed532b600865ce052690bee1ce3376aba602af954f5e056d90de04a4b788",
+    "surviving_hypotheses": [
+      "P7-CONFLICTING-DIAGNOSTICS-007-SAFE",
+      "P7-CONFLICTING-DIAGNOSTICS-007-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

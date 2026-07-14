@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "perception_modes": [
+    "alternate_view",
+    "counterfactual_probe",
+    "delayed_observation",
+    "diagnostic_composition",
+    "disjoint_specialist",
+    "evidence_recovery",
+    "provenance_reconstruction",
+    "simulation",
+    "targeted_query",
+    "tool"
+  ],
+  "required_perception_modes": [
+    "alternate_view",
+    "counterfactual_probe",
+    "delayed_observation",
+    "diagnostic_composition",
+    "disjoint_specialist",
+    "evidence_recovery",
+    "provenance_reconstruction",
+    "simulation",
+    "targeted_query",
+    "tool"
+  ],
+  "required_strata": {
+    "budget": [
+      "diagnostic_research",
+      "industrial_latency",
+      "strict_call_limit"
+    ],
+    "evidence_access": [
+      "available",
+      "delayed",
+      "costly",
+      "corrupted",
+      "adversarially_masked",
+      "permanently_inaccessible"
+    ],
+    "interaction": [
+      "single_cause",
+      "certified_two_family",
+      "redundancy",
+      "contradictory_witnesses"
+    ],
+    "novelty": [
+      "known_primitive",
+      "new_composition",
+      "new_scope",
+      "genuinely_new_semantics"
+    ],
+    "scope": [
+      "clean",
+      "neighboring_confounder",
+      "overlapping_families",
+      "structural_reset"
+    ],
+    "separability": [
+      "immediate",
+      "one_query",
+      "multi_step",
+      "irreducible"
+    ]
+  },
+  "strata": {
+    "budget": [
+      "diagnostic_research",
+      "industrial_latency",
+      "strict_call_limit"
+    ],
+    "evidence_access": [
+      "adversarially_masked",
+      "available",
+      "corrupted",
+      "costly",
+      "delayed",
+      "permanently_inaccessible"
+    ],
+    "interaction": [
+      "certified_two_family",
+      "contradictory_witnesses",
+      "redundancy",
+      "single_cause"
+    ],
+    "novelty": [
+      "genuinely_new_semantics",
+      "known_primitive",
+      "new_composition",
+      "new_scope"
+    ],
+    "scope": [
+      "clean",
+      "neighboring_confounder",
+      "overlapping_families",
+      "structural_reset"
+    ],
+    "separability": [
+      "immediate",
+      "irreducible",
+      "multi_step",
+      "one_query"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "authority": "L2",
+  "case_id": "P7-SCOPE-NEIGHBOR-003",
+  "certificate_hash": "bcb537a89691cec1719388215528c720a0908b3e3f029699e9435d02cf823ce0",
+  "certificate_id": "LC-839c3ef9957d554a6826",
+  "obligations": {
+    "authority": true,
+    "counterfactual_stability": true,
+    "evidence_integrity": true,
+    "executable_scope": true,
+    "hypothesis_separation": true,
+    "interaction_safety": true,
+    "kernel_preservation": true,
+    "replay": true,
+    "risk_justification": true,
+    "witness_sufficiency": true
+  },
+  "parent_hash": "c634f7b1f15b881005150e076abd44654f9df6b184d42c138e321b72277c87ae",
+  "surviving_hypotheses": [
+    "P7-SCOPE-NEIGHBOR-003-UNSAFE"
+  ],
+  "terminal_action": "REJECT",
+  "witness_ids": [
+    "terminal_witness"
+  ]
+}

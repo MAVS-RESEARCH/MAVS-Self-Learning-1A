@@ -1,0 +1,81 @@
+{
+  "case_id": "P7-ONE-QUERY-SEPARABLE-007",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-ONE-QUERY-SEPARABLE-007-TARGET",
+        "P7-ONE-QUERY-SEPARABLE-007-DISTRACTOR"
+      ],
+      "hypothesis_id": "P7-ONE-QUERY-SEPARABLE-007-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-ONE-QUERY-SEPARABLE-007-TARGET",
+        "P7-ONE-QUERY-SEPARABLE-007-DISTRACTOR"
+      ],
+      "hypothesis_id": "P7-ONE-QUERY-SEPARABLE-007-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "missing_evidence",
+    "case_id": "P7-ONE-QUERY-SEPARABLE-007",
+    "evidence_hash": "0f1824ecf29ba06daab7324f5b1cfa5259e5872892bc7d5810bc8c23bc64dc68",
+    "parent_hash": "b4816bc998593a3a96d0ba1f6af5edaff3b25a4c8c8890db7e2d1df0bfec1ae4",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "70ad6ddbe3abcec2ae4c2c0c413dd17187f257ccc10c8e5220a59155238b91d7",
+    "surviving_hypotheses": [
+      "P7-ONE-QUERY-SEPARABLE-007-SAFE",
+      "P7-ONE-QUERY-SEPARABLE-007-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

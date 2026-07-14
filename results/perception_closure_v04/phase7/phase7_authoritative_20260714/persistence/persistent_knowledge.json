@@ -1,0 +1,283 @@
+{
+  "records": [
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-adversarial_query_trap"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "65da9ce24c707b239ceebc6b4f4cb040f69bbeb8b9ae60b926d4354472ee15f6",
+      "knowledge_id": "PK-8f29e03a0119251fa812",
+      "lineage": [
+        "P7-ADVERSARIAL-QUERY-TRAP-000",
+        "P7-ADVERSARIAL-QUERY-TRAP-001",
+        "P7-ADVERSARIAL-QUERY-TRAP-002",
+        "P7-ADVERSARIAL-QUERY-TRAP-003",
+        "P7-ADVERSARIAL-QUERY-TRAP-004",
+        "P7-ADVERSARIAL-QUERY-TRAP-005",
+        "P7-ADVERSARIAL-QUERY-TRAP-006",
+        "P7-ADVERSARIAL-QUERY-TRAP-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "adversarial_query_trap"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "adversarial_query_trap",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-certified_composition"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "closure_program",
+      "knowledge_hash": "3b8fc7761f59ff15bda0d4f019155b3a8fa1f42939c8bc45cc01b266aae3decf",
+      "knowledge_id": "PK-e947fab6fec19d9c8b0c",
+      "lineage": [
+        "P7-NEW-COMPOSITION-000",
+        "P7-NEW-COMPOSITION-001",
+        "P7-NEW-COMPOSITION-002",
+        "P7-NEW-COMPOSITION-003",
+        "P7-NEW-COMPOSITION-004",
+        "P7-NEW-COMPOSITION-005",
+        "P7-NEW-COMPOSITION-006",
+        "P7-NEW-COMPOSITION-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "certified_composition"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "certified_composition",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-conflicting_diagnostics"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "7d3dc2bb341cc42cf5b40054b628698b630ad446e04a2d7b6599b0e8cb70d5de",
+      "knowledge_id": "PK-0d2a17b799cb61bb0ffb",
+      "lineage": [
+        "P7-CONFLICTING-DIAGNOSTICS-000",
+        "P7-CONFLICTING-DIAGNOSTICS-001",
+        "P7-CONFLICTING-DIAGNOSTICS-002",
+        "P7-CONFLICTING-DIAGNOSTICS-003",
+        "P7-CONFLICTING-DIAGNOSTICS-004",
+        "P7-CONFLICTING-DIAGNOSTICS-005",
+        "P7-CONFLICTING-DIAGNOSTICS-006",
+        "P7-CONFLICTING-DIAGNOSTICS-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "conflicting_diagnostics"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "conflicting_diagnostics",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-genuinely_new_semantic_need"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "64b805661acc8446c9dffc97dc80273e01d721c74bfb0a1cad7177ed8e83fc98",
+      "knowledge_id": "PK-ce2f490fa05d40496f02",
+      "lineage": [
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-000",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-001",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-002",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-003",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-004",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-005",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-006",
+        "P7-GENUINELY-NEW-SEMANTIC-NEED-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "genuinely_new_semantic_need"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "genuinely_new_semantic_need",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-harmful_vs_benign_correlation"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "4db3caf176f40491482b312fa08171da8fc21df332d303cea9b83a7aa6da2092",
+      "knowledge_id": "PK-a215ad4fb000cf2ffd12",
+      "lineage": [
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-000",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-001",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-002",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-003",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-004",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-005",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-006",
+        "P7-HARMFUL-VS-BENIGN-CORRELATION-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "harmful_vs_benign_correlation"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "harmful_vs_benign_correlation",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": true,
+      "anti_scope": [
+        "not-masked_safe_evidence"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "223cd123284b35cf1ef8de3e471520f47c64443ffd4419b8e6611dc17d6ff65e",
+        "gate_count": 15,
+        "passed": true
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "cd87a347f963c92b49531ac9c88aee69244de61edee9e8f808386163755f4ac5",
+      "knowledge_id": "PK-ac672bfed09b5b1048fc",
+      "lineage": [
+        "P7-MASKED-SAFE-EVIDENCE-000",
+        "P7-MASKED-SAFE-EVIDENCE-001",
+        "P7-MASKED-SAFE-EVIDENCE-002",
+        "P7-MASKED-SAFE-EVIDENCE-003",
+        "P7-MASKED-SAFE-EVIDENCE-004",
+        "P7-MASKED-SAFE-EVIDENCE-005",
+        "P7-MASKED-SAFE-EVIDENCE-006",
+        "P7-MASKED-SAFE-EVIDENCE-007"
+      ],
+      "outperforms_parent": true,
+      "positive_scope": [
+        "masked_safe_evidence"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "masked_safe_evidence",
+      "status": "promoted"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-multi_step_separable"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "27ce67469fb751809a80ffeba38be3ec0713db41c2e23214b6aaf4e56b69f39f",
+      "knowledge_id": "PK-576433fcb89a33350c21",
+      "lineage": [
+        "P7-MULTI-STEP-SEPARABLE-000",
+        "P7-MULTI-STEP-SEPARABLE-001",
+        "P7-MULTI-STEP-SEPARABLE-002",
+        "P7-MULTI-STEP-SEPARABLE-003",
+        "P7-MULTI-STEP-SEPARABLE-004",
+        "P7-MULTI-STEP-SEPARABLE-005",
+        "P7-MULTI-STEP-SEPARABLE-006",
+        "P7-MULTI-STEP-SEPARABLE-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "multi_step_separable"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "multi_step_separable",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-one_query_separable"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "cb64b09114d2c954822cd405466daa080ae8b59e28b1fb86cc29bf7f09d694c3",
+      "knowledge_id": "PK-91b8c1ec09da4b9a59bb",
+      "lineage": [
+        "P7-ONE-QUERY-SEPARABLE-000",
+        "P7-ONE-QUERY-SEPARABLE-001",
+        "P7-ONE-QUERY-SEPARABLE-002",
+        "P7-ONE-QUERY-SEPARABLE-003",
+        "P7-ONE-QUERY-SEPARABLE-004",
+        "P7-ONE-QUERY-SEPARABLE-005",
+        "P7-ONE-QUERY-SEPARABLE-006",
+        "P7-ONE-QUERY-SEPARABLE-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "one_query_separable"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "one_query_separable",
+      "status": "narrowed"
+    },
+    {
+      "active_eligible": false,
+      "anti_scope": [
+        "not-scope_neighbor"
+      ],
+      "blind_certification": {
+        "anonymous_semantic_id": "",
+        "gate_count": 0,
+        "passed": false
+      },
+      "kind": "query_policy",
+      "knowledge_hash": "b71cadbe0c929bcbf57c27b0d13bca1a4a4da9eed6ba2bcaa533983d69f55bf0",
+      "knowledge_id": "PK-b46eb5ab1ea65b05f717",
+      "lineage": [
+        "P7-SCOPE-NEIGHBOR-000",
+        "P7-SCOPE-NEIGHBOR-001",
+        "P7-SCOPE-NEIGHBOR-002",
+        "P7-SCOPE-NEIGHBOR-003",
+        "P7-SCOPE-NEIGHBOR-004",
+        "P7-SCOPE-NEIGHBOR-005",
+        "P7-SCOPE-NEIGHBOR-006",
+        "P7-SCOPE-NEIGHBOR-007"
+      ],
+      "outperforms_parent": false,
+      "positive_scope": [
+        "scope_neighbor"
+      ],
+      "recertification_due": true,
+      "semantic_distinction": "scope_neighbor",
+      "status": "narrowed"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "authority": "L2",
+  "case_id": "P7-ADVERSARIAL-QUERY-TRAP-003",
+  "certificate_hash": "255a896e11b5d101d9a9bb5823a1f57544a432bd4ffb5c9a83c65021e6e5ce38",
+  "certificate_id": "LC-775996e18d06a1b0a384",
+  "obligations": {
+    "authority": true,
+    "counterfactual_stability": true,
+    "evidence_integrity": true,
+    "executable_scope": true,
+    "hypothesis_separation": true,
+    "interaction_safety": true,
+    "kernel_preservation": true,
+    "replay": true,
+    "risk_justification": true,
+    "witness_sufficiency": true
+  },
+  "parent_hash": "db282f9adc38cead573fb4df9502a37b4d8d943e9dee6a394764022f3bce1ae5",
+  "surviving_hypotheses": [
+    "P7-ADVERSARIAL-QUERY-TRAP-003-UNSAFE"
+  ],
+  "terminal_action": "REJECT",
+  "witness_ids": [
+    "terminal_witness"
+  ]
+}

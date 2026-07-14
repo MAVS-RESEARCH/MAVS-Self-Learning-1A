@@ -1,0 +1,21 @@
+{
+  "case_executions": 384,
+  "external_escalation_count": 64,
+  "library_sizes": [
+    20,
+    200,
+    2000,
+    20000
+  ],
+  "local_certificate_count": 320,
+  "persistent_candidate_count": 9,
+  "query_probe_program_count": 352,
+  "round_count": 352,
+  "runtime_created_candidate_count": 0,
+  "terminal_counts": {
+    "ACCEPT": 160,
+    "ESCALATE": 64,
+    "REJECT": 160
+  },
+  "unique_cases": 96
+}

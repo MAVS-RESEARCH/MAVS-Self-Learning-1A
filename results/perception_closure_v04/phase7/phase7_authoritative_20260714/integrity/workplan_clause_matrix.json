@@ -1,0 +1,106 @@
+{
+  "clause_count": 20,
+  "clauses": [
+    {
+      "clause": "fast_loop_first",
+      "evidence": "family:immediately_separable",
+      "passed": true
+    },
+    {
+      "clause": "explicit_competing_hypotheses",
+      "evidence": "hypotheses/*.json and ambiguity recomputation",
+      "passed": true
+    },
+    {
+      "clause": "bounded_ambiguity_equivalence_class",
+      "evidence": "traces/perception_rounds.parquet",
+      "passed": true
+    },
+    {
+      "clause": "conditional_perception_action_coverage",
+      "evidence": "integrity/strata_and_action_coverage.json",
+      "passed": true
+    },
+    {
+      "clause": "scope_kernel_redundancy_negative_knowledge_filter",
+      "evidence": "integrity/scope_activation.json and family controls",
+      "passed": true
+    },
+    {
+      "clause": "lexicographic_protected_selection",
+      "evidence": "perception search source, focused protected-regression test, family traces",
+      "passed": true
+    },
+    {
+      "clause": "targeted_evidence_and_missing_not_adverse",
+      "evidence": "masked-safe and query-yield artifacts",
+      "passed": true
+    },
+    {
+      "clause": "smallest_sparse_nonredundant_program",
+      "evidence": "programs/*.json and basis curve",
+      "passed": true
+    },
+    {
+      "clause": "typed_non_additive_influence",
+      "evidence": "integrity/typed_channels.json",
+      "passed": true
+    },
+    {
+      "clause": "interaction_certificate_authority",
+      "evidence": "integrity/interaction_certificates.json",
+      "passed": true
+    },
+    {
+      "clause": "immutable_replayable_round_loop",
+      "evidence": "integrity/trace_replay.json",
+      "passed": true
+    },
+    {
+      "clause": "accept_reject_only_with_complete_local_closure",
+      "evidence": "independent certificate recomputation",
+      "passed": true
+    },
+    {
+      "clause": "external_escalation_residual_only",
+      "evidence": "traces/escalations.parquet",
+      "passed": true
+    },
+    {
+      "clause": "candidate_specific_blind_persistence_handoff",
+      "evidence": "integrity/persistent_handoff.json",
+      "passed": true
+    },
+    {
+      "clause": "consolidation_retirement_negative_knowledge",
+      "evidence": "persistence/*.parquet and focused operation tests",
+      "passed": true
+    },
+    {
+      "clause": "complete_failed_closure_accounting",
+      "evidence": "traces/closure_attempts.parquet",
+      "passed": true
+    },
+    {
+      "clause": "phase6_dependency_and_runtime_candidate_continuity",
+      "evidence": "integrity/phase6_continuity.json",
+      "passed": true
+    },
+    {
+      "clause": "exact_phase7_artifact_contract",
+      "evidence": "integrity/artifact_contract.json",
+      "passed": true
+    },
+    {
+      "clause": "all_twelve_locked_microbenchmark_families",
+      "evidence": "integrity/microbenchmark_family_gates.json",
+      "passed": true
+    },
+    {
+      "clause": "all_exit_gates",
+      "evidence": "reports/phase7_audit.json",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

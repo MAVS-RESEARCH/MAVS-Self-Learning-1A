@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "authority": "L2",
+  "case_id": "P7-MASKED-SAFE-EVIDENCE-002",
+  "certificate_hash": "f08f88500f3cbb08a4fecfc3a21b066040695b91f60f8389041d2f5305f277ab",
+  "certificate_id": "LC-8eebc51c58ed2f207c34",
+  "obligations": {
+    "authority": true,
+    "counterfactual_stability": true,
+    "evidence_integrity": true,
+    "executable_scope": true,
+    "hypothesis_separation": true,
+    "interaction_safety": true,
+    "kernel_preservation": true,
+    "replay": true,
+    "risk_justification": true,
+    "witness_sufficiency": true
+  },
+  "parent_hash": "4c11ef5cfcd7bc4992d4ee543f72786bd4798277ebd8f03726973d184291d8d8",
+  "surviving_hypotheses": [
+    "P7-MASKED-SAFE-EVIDENCE-002-SAFE"
+  ],
+  "terminal_action": "ACCEPT",
+  "witness_ids": [
+    "terminal_witness"
+  ]
+}

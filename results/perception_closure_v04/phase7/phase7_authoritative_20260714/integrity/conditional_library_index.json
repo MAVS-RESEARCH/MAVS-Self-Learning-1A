@@ -1,0 +1,11 @@
+{
+  "maximum_conditionally_indexed": 3,
+  "passed": true,
+  "round_count": 352,
+  "total_library_sizes": [
+    20,
+    200,
+    2000,
+    20000
+  ]
+}

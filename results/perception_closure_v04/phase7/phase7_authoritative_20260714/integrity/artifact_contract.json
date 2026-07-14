@@ -1,0 +1,33 @@
+{
+  "hypothesis_case_count": 88,
+  "local_certificate_count": 320,
+  "missing_files": [],
+  "passed": true,
+  "program_count": 8,
+  "required_files": [
+    "manifests/run_manifest.json",
+    "manifests/microbenchmark_manifest.json",
+    "manifests/seed_ledger.json",
+    "manifests/environment_lock.json",
+    "manifests/phase6_dependency.json",
+    "traces/perception_rounds.parquet",
+    "traces/terminal_decisions.parquet",
+    "traces/queries_and_probes.parquet",
+    "traces/escalations.parquet",
+    "traces/closure_attempts.parquet",
+    "persistence/promotion_candidates.parquet",
+    "persistence/consolidation_actions.parquet",
+    "persistence/negative_knowledge.parquet",
+    "metrics/case_metrics.parquet",
+    "metrics/round_metrics.parquet",
+    "metrics/family_metrics.parquet",
+    "metrics/query_yield_distribution.parquet",
+    "metrics/closure_obligation_metrics.parquet",
+    "metrics/basis_library_curve.parquet",
+    "integrity/scope_activation.json",
+    "integrity/typed_channels.json",
+    "integrity/interaction_safety.json",
+    "integrity/trace_replay.json",
+    "integrity/phase6_continuity.json"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "activation_contract_checks": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "passed": true,
+  "unknown_primitives": [],
+  "used_phase6_primitives": [
+    "P6-EVIDENCE-RECOVERY-A",
+    "P6-POLICY-INTERACTION-A"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "case_id": "P7-IRREDUCIBLE-PAIR-006",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "no_permitted_action"
+      ],
+      "hypothesis_id": "P7-IRREDUCIBLE-PAIR-006-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "no_permitted_action"
+      ],
+      "hypothesis_id": "P7-IRREDUCIBLE-PAIR-006-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "irreducible",
+    "case_id": "P7-IRREDUCIBLE-PAIR-006",
+    "evidence_hash": "0f1824ecf29ba06daab7324f5b1cfa5259e5872892bc7d5810bc8c23bc64dc68",
+    "parent_hash": "0000d4a8f5fbc57f52f637a9a245fdf156baa0d55dab699ad8ade057cf3d1681",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "711ef8a06911a0505592e7a79d304b8c5e0306b8636cdde02eb613e0b3f3e885",
+    "surviving_hypotheses": [
+      "P7-IRREDUCIBLE-PAIR-006-SAFE",
+      "P7-IRREDUCIBLE-PAIR-006-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

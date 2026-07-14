@@ -1,0 +1,17 @@
+{
+  "families": {
+    "adversarial_query_trap": true,
+    "budget_limited_case": true,
+    "conflicting_diagnostics": true,
+    "genuinely_new_semantic_need": true,
+    "harmful_vs_benign_correlation": true,
+    "immediately_separable": true,
+    "irreducible_pair": true,
+    "masked_safe_evidence": true,
+    "multi_step_separable": true,
+    "new_composition": true,
+    "one_query_separable": true,
+    "scope_neighbor": true
+  },
+  "passed": true
+}

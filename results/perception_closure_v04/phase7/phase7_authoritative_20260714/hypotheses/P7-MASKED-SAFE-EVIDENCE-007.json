@@ -1,0 +1,79 @@
+{
+  "case_id": "P7-MASKED-SAFE-EVIDENCE-007",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-MASKED-SAFE-EVIDENCE-007-RECOVER"
+      ],
+      "hypothesis_id": "P7-MASKED-SAFE-EVIDENCE-007-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-MASKED-SAFE-EVIDENCE-007-RECOVER"
+      ],
+      "hypothesis_id": "P7-MASKED-SAFE-EVIDENCE-007-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "missing_evidence",
+    "case_id": "P7-MASKED-SAFE-EVIDENCE-007",
+    "evidence_hash": "63f855b8895e223cc038cf989125665d7ad4bbd399f0f5ababa63adba5763abd",
+    "parent_hash": "9780efeb235d058573158f2d4a4a4397e9d20117d97305b96a5ad40bdb5a3c5a",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "56a905ebed329e6c3e5a56bb15354e16c9fe7d91d801026f3c62118f217dd68e",
+    "surviving_hypotheses": [
+      "P7-MASKED-SAFE-EVIDENCE-007-SAFE",
+      "P7-MASKED-SAFE-EVIDENCE-007-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

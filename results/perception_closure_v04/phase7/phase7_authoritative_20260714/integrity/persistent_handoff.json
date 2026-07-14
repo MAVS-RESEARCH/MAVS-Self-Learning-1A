@@ -1,0 +1,11 @@
+{
+  "blind_only": true,
+  "candidate_count": 9,
+  "candidate_specific_checks": [
+    true
+  ],
+  "certified_handoff_count": 1,
+  "consolidation_count": 9,
+  "passed": true,
+  "pending_inactive_count": 8
+}

@@ -1,0 +1,19 @@
+{
+  "certificates": [
+    {
+      "causal_family": "certified_composition",
+      "certificate_id": "IC-18c88919b0c7976ee62a",
+      "counterfactual_passed": true,
+      "nonredundant": true,
+      "primitive_ids": [
+        "P6-EVIDENCE-RECOVERY-A",
+        "P6-POLICY-INTERACTION-A"
+      ],
+      "protected_regression": 0.0,
+      "scope_ids": [
+        "new_composition"
+      ],
+      "status": "certified"
+    }
+  ]
+}

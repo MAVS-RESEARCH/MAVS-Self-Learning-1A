@@ -1,0 +1,27 @@
+{
+  "actual_hashes": {
+    "escalations": "d686122778747041311e13d7b36731f03d8262b2eba3cafab639af7a4723411e",
+    "queries_and_probes": "68f53152577a06bc99cab96269a66c731e4699946614d9f322e765aa62dc369f",
+    "rounds": "9c5bf2f42417feb37af68565da9304a53d8b92089213c2d24f1bfd7e31f60029",
+    "traces": "f51976a66b81d197eff021c0c1707becadeb2d05d221e4408503c67c323902a0"
+  },
+  "comparisons": {
+    "escalations": true,
+    "queries_and_probes": true,
+    "rounds": true,
+    "traces": true
+  },
+  "execution_count": 384,
+  "expected_hashes": {
+    "escalations": "d686122778747041311e13d7b36731f03d8262b2eba3cafab639af7a4723411e",
+    "queries_and_probes": "68f53152577a06bc99cab96269a66c731e4699946614d9f322e765aa62dc369f",
+    "rounds": "9c5bf2f42417feb37af68565da9304a53d8b92089213c2d24f1bfd7e31f60029",
+    "traces": "f51976a66b81d197eff021c0c1707becadeb2d05d221e4408503c67c323902a0"
+  },
+  "passed": true,
+  "terminal_counts": {
+    "ACCEPT": 160,
+    "ESCALATE": 64,
+    "REJECT": 160
+  }
+}

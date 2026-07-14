@@ -1,0 +1,79 @@
+{
+  "case_id": "P7-NEW-COMPOSITION-005",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-NEW-COMPOSITION-005-COMPOSE"
+      ],
+      "hypothesis_id": "P7-NEW-COMPOSITION-005-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-NEW-COMPOSITION-005-COMPOSE"
+      ],
+      "hypothesis_id": "P7-NEW-COMPOSITION-005-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "novelty",
+    "case_id": "P7-NEW-COMPOSITION-005",
+    "evidence_hash": "d1151230e3bcdbc9795b5ed28ea311ac16080ea57a0cbe8ed97a5d54d29fea5b",
+    "parent_hash": "f0b0bdddf3df49f6c804ab80747d1e83184ca1c9fe94e8791f65cd7db54b1010",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "c0a40f54e89c5a68afdfd3622314c380ff58ae393eb237c60f4a7e5fdde2e530",
+    "surviving_hypotheses": [
+      "P7-NEW-COMPOSITION-005-SAFE",
+      "P7-NEW-COMPOSITION-005-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

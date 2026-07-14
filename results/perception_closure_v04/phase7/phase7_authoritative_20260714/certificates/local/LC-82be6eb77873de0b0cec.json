@@ -1,0 +1,27 @@
+{
+  "all_passed": true,
+  "authority": "L2",
+  "case_id": "P7-NEW-COMPOSITION-004",
+  "certificate_hash": "141dddc80c327dda6b92f25d4292b8139d89bec86063021ca830768abaa53fb8",
+  "certificate_id": "LC-82be6eb77873de0b0cec",
+  "obligations": {
+    "authority": true,
+    "counterfactual_stability": true,
+    "evidence_integrity": true,
+    "executable_scope": true,
+    "hypothesis_separation": true,
+    "interaction_safety": true,
+    "kernel_preservation": true,
+    "replay": true,
+    "risk_justification": true,
+    "witness_sufficiency": true
+  },
+  "parent_hash": "35a4bd05864302a3fb8e18585ac52537e615f86d12c2cacea3d5e8413565c39b",
+  "surviving_hypotheses": [
+    "P7-NEW-COMPOSITION-004-SAFE"
+  ],
+  "terminal_action": "ACCEPT",
+  "witness_ids": [
+    "terminal_witness"
+  ]
+}

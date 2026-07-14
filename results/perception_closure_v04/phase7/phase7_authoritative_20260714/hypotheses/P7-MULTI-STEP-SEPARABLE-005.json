@@ -1,0 +1,83 @@
+{
+  "case_id": "P7-MULTI-STEP-SEPARABLE-005",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-MULTI-STEP-SEPARABLE-005-ROUTE",
+        "P7-MULTI-STEP-SEPARABLE-005-TERMINAL",
+        "P7-MULTI-STEP-SEPARABLE-005-IRRELEVANT"
+      ],
+      "hypothesis_id": "P7-MULTI-STEP-SEPARABLE-005-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-MULTI-STEP-SEPARABLE-005-ROUTE",
+        "P7-MULTI-STEP-SEPARABLE-005-TERMINAL",
+        "P7-MULTI-STEP-SEPARABLE-005-IRRELEVANT"
+      ],
+      "hypothesis_id": "P7-MULTI-STEP-SEPARABLE-005-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "missing_evidence",
+    "case_id": "P7-MULTI-STEP-SEPARABLE-005",
+    "evidence_hash": "de14eec7a0163e1b10b74b24836e232791a77cf834a44f390293d95e632c85e7",
+    "parent_hash": "0737603626f153beddaea812d7852885dd16b953b52504689b07a5e64279dd7e",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "6c4413fa6b7832cd3a4b770842e7dfbee910f81092a2cae00382e077237c7704",
+    "surviving_hypotheses": [
+      "P7-MULTI-STEP-SEPARABLE-005-SAFE",
+      "P7-MULTI-STEP-SEPARABLE-005-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}

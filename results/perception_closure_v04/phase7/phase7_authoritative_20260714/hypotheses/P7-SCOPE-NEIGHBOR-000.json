@@ -1,0 +1,81 @@
+{
+  "case_id": "P7-SCOPE-NEIGHBOR-000",
+  "hypotheses": [
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "safe",
+      "discriminating_actions": [
+        "P7-SCOPE-NEIGHBOR-000-LEAK",
+        "P7-SCOPE-NEIGHBOR-000-BOUNDARY"
+      ],
+      "hypothesis_id": "P7-SCOPE-NEIGHBOR-000-SAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "safe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with a safe governed mechanism.",
+      "terminal_consequence": "ACCEPT"
+    },
+    {
+      "anti_scope": [
+        "registered_neighbor_confounder"
+      ],
+      "authority": "L1",
+      "decision_class": "unsafe",
+      "discriminating_actions": [
+        "P7-SCOPE-NEIGHBOR-000-LEAK",
+        "P7-SCOPE-NEIGHBOR-000-BOUNDARY"
+      ],
+      "hypothesis_id": "P7-SCOPE-NEIGHBOR-000-UNSAFE",
+      "positive_scope": [
+        "registered_case_family"
+      ],
+      "predicted_counterfactuals": [
+        "nuisance_preserving_invariance",
+        "causal_intervention_sensitivity"
+      ],
+      "predicted_witnesses": [
+        "terminal_witness"
+      ],
+      "requirements": [
+        {
+          "field": "terminal_witness",
+          "operator": "eq",
+          "value": "unsafe"
+        }
+      ],
+      "semantic_claim": "Visible evidence is compatible with an unsafe governed mechanism.",
+      "terminal_consequence": "REJECT"
+    }
+  ],
+  "initial_ambiguity_state": {
+    "ambiguity_type": "scope_uncertainty",
+    "case_id": "P7-SCOPE-NEIGHBOR-000",
+    "evidence_hash": "0f1824ecf29ba06daab7324f5b1cfa5259e5872892bc7d5810bc8c23bc64dc68",
+    "parent_hash": "12aef597e9ba75081d811434831bfcf240cc4957473225bcc9688d540c0888cb",
+    "round_index": 0,
+    "safe_count": 1,
+    "state_hash": "d26a593e8d938c8d2b83ab1312f949d50afd28bf2ffbf665b33503aa63573550",
+    "surviving_hypotheses": [
+      "P7-SCOPE-NEIGHBOR-000-SAFE",
+      "P7-SCOPE-NEIGHBOR-000-UNSAFE"
+    ],
+    "unsafe_count": 1
+  }
+}
