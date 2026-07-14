@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["schema_version","candidate_id","grammar_version","semantic_hash","normalized_payload","excluded_identity_fields"],"properties":{"schema_version":{"const":"1.0.0"},"candidate_id":{"type":"string"},"grammar_version":{"type":"string"},"semantic_hash":{"type":"string","pattern":"^[a-f0-9]{64}$"},"normalized_payload":{"type":"object"},"excluded_identity_fields":{"type":"array","items":{"type":"string"}}},"additionalProperties":false}
+

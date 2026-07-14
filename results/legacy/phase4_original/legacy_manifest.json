@@ -1,0 +1,240 @@
+{
+  "claim_classification": "original preserved evidence",
+  "code_commit": "bbccd76ea0dbc04b8fe5694d15c51410f56acbd4",
+  "file_count": 32,
+  "files": [
+    {
+      "bytes": 2666,
+      "git_blob_oid": "7bc83fc4ad179ee457bef8f61d380322022ed737",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_1/generation_manifest.json",
+      "sha256": "ea9084e723a96f89a882cb6b22f659b2882dfd7ca1ef7b93d4e770c231428de6"
+    },
+    {
+      "bytes": 6553361,
+      "git_blob_oid": "a821483684f5daba76e7a8e499abb859954f0744",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_1/hidden_outcomes.json",
+      "sha256": "33147cb9cb3f477671bccce6619c99de0cd2e548468361a7bdaac222f0748be4"
+    },
+    {
+      "bytes": 7309738,
+      "git_blob_oid": "27c8df4b553d8644e5e1ae834448495359aa0324",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_1/world_ledger.parquet",
+      "sha256": "64c8a76bddc2a14d51d0cbe05bfd9e32f9e13c6b9a9044f5fca0d4db084a90a4"
+    },
+    {
+      "bytes": 2666,
+      "git_blob_oid": "3e0a66a73088d0b869000298f86833f7360705dc",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_2/generation_manifest.json",
+      "sha256": "24c777a5223762455cf6819672ea6634135db887dc8cd8dce3f331070ea9587a"
+    },
+    {
+      "bytes": 6560945,
+      "git_blob_oid": "16317369437b46be15cb2a7785508f6b0c7606b6",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_2/hidden_outcomes.json",
+      "sha256": "e825dec2d7493f9b7583f5d083e8d2f9a18237c7c7253d2cb9e01ab56df371cb"
+    },
+    {
+      "bytes": 7312949,
+      "git_blob_oid": "6ff42c7a5230c17a38583157c8646e88e025e23c",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_2/world_ledger.parquet",
+      "sha256": "e5103383ce94258d61852d153b098242a33c14d71ca4610709d26cb5a50ae2ad"
+    },
+    {
+      "bytes": 2666,
+      "git_blob_oid": "039904f2af1deaa7585c7df494de76376060146c",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_3/generation_manifest.json",
+      "sha256": "54205559d11621501e295f20a35f54797a2438a1d4525d0af8921375631222d0"
+    },
+    {
+      "bytes": 6570333,
+      "git_blob_oid": "b17d5d6d1f8d5ddb4270b49a4f8d89f0e0b9380f",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_3/hidden_outcomes.json",
+      "sha256": "48bb900a967e178d03e6fdfec7c9c958d9f93b9394bd74e1c9979447c8bde0de"
+    },
+    {
+      "bytes": 7313946,
+      "git_blob_oid": "00cd05b46f3b6b31d45c8241cb041322bb784001",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/generation_3/world_ledger.parquet",
+      "sha256": "4c0e6bc1b987abef36bf74f9ee7e0e57731c5fdeea5a785a67f917392cd9cd6b"
+    },
+    {
+      "bytes": 97161,
+      "git_blob_oid": "e546e110af9d2f09c8308a9d6a829007bec2d8e9",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/operating_points.json",
+      "sha256": "5def4160995e873b02f342c9e550a4b7604cbb72eb51367ed5b41fd733d70b40"
+    },
+    {
+      "bytes": 2969,
+      "git_blob_oid": "9762a760d8362fd2fcdad3a67d10d74688ea88ee",
+      "lfs_oid": null,
+      "path": "results/manifests/phase4_authoritative/phase4/run_manifest.json",
+      "sha256": "827de15fde5a3360d53f8d73d01e87dff4c39bdd4070c8797dc4b1c516cab127"
+    },
+    {
+      "bytes": 57532009,
+      "git_blob_oid": "72e6992dd3d559d8861584fb40035aa89bfa2325",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/generation_1_traces.parquet",
+      "sha256": "8ed30c6d23a77ac2163a911b8d46d896ca0138be21809b790777a0b3c0a3b68d"
+    },
+    {
+      "bytes": 990930,
+      "git_blob_oid": "ce4788a7dc1d028c5de34be26ddcc772ac299c4a",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/generation_1_world_metrics.parquet",
+      "sha256": "cdf18104d3d770017f9fd21c97df6b41abc034fe0f0984edef45528d798b8b20"
+    },
+    {
+      "bytes": 58014125,
+      "git_blob_oid": "e1f91bb305b0255d17934657828451a40b902c94",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/generation_2_traces.parquet",
+      "sha256": "8ed81497ab9de323105da1efef995d2c4aeb9edcad8a24cbcfe786eb5476e5c5"
+    },
+    {
+      "bytes": 1020449,
+      "git_blob_oid": "34aae562844084318ea7501c4c7c90a6db5ad4bc",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/generation_2_world_metrics.parquet",
+      "sha256": "ad1ef49990ef759495e42ee6b070553da180b4da33b68f599a8db216c61af295"
+    },
+    {
+      "bytes": 58479614,
+      "git_blob_oid": "64ee5ff2cb37d2abd5bb3a28bfecbffa78b22379",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/generation_3_traces.parquet",
+      "sha256": "b89571d53deb3b48f3dc6dfa0b9bb901d30e290a169b77a0e0691ff280f8ad4a"
+    },
+    {
+      "bytes": 1033440,
+      "git_blob_oid": "aa6c5040c487cfc644e679365d9891fc03023111",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/generation_3_world_metrics.parquet",
+      "sha256": "1acdb50e672c1aa40a047f8ad16e3e210a2f97cc7b43ea513ba5929d37054c9f"
+    },
+    {
+      "bytes": 3574,
+      "git_blob_oid": "5d782010157d1f6fd4e056ed5ec556530eccaae6",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/tournament_manifest.json",
+      "sha256": "1336073b9b8dad59bd7a8743deac41b12311bc03db8e4a362a9e5741a4387d21"
+    },
+    {
+      "bytes": 3033540,
+      "git_blob_oid": "2b7f63bdbf1e5573afa51991f217d3fca65049eb",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/phase4/world_metrics.parquet",
+      "sha256": "ad314faa3c5ff265f875bcf2800fcd9a09644d180892989b91f99cd8d26eb457"
+    },
+    {
+      "bytes": 20778,
+      "git_blob_oid": "f27aa3485dd582c5b56285ff9273f4526dd717f0",
+      "lfs_oid": null,
+      "path": "results/raw/phase4_authoritative/regression/synthetic_smoke.jsonl",
+      "sha256": "beb724a8ec1ee8e3f6616865e50c3ee8aa3b17433454ff36b60fdc33f9b5dcf7"
+    },
+    {
+      "bytes": 80789,
+      "git_blob_oid": "cedfeaedfd051583d4cf7d98dc968680378c5d64",
+      "lfs_oid": null,
+      "path": "results/aggregates/phase4_authoritative/phase4/frontiers.parquet",
+      "sha256": "ac7eccb933b2b97f1f7d581bf15170ffe945ed67f66f7bbcda99bfdef640604b"
+    },
+    {
+      "bytes": 10416,
+      "git_blob_oid": "63aa6b7ddc1ee2238c669b242f5079e963fabd05",
+      "lfs_oid": null,
+      "path": "results/aggregates/phase4_authoritative/phase4/paired_comparisons.parquet",
+      "sha256": "831fb70b05faee74df8705cc6e8f745e7a9d4fa1fea19b3390fb83e7e77e91b7"
+    },
+    {
+      "bytes": 2382,
+      "git_blob_oid": "5cc0cfd586ce3eda0580127fc6314448911ee3c6",
+      "lfs_oid": null,
+      "path": "results/aggregates/phase4_authoritative/phase4/phase4_summary.json",
+      "sha256": "96656eac741c9b7f47708d6e2b729eb8a8377bbd644077adafe1fad3302d88ed"
+    },
+    {
+      "bytes": 98152,
+      "git_blob_oid": "e5829b84eb754e7099aeae05ce13b482142faee1",
+      "lfs_oid": null,
+      "path": "results/aggregates/phase4_authoritative/phase4/point_metrics.parquet",
+      "sha256": "ee75de5f9d05013242ccc1e6625997089473c7c89dcac02aec7f05bb1b7860ba"
+    },
+    {
+      "bytes": 3033540,
+      "git_blob_oid": "2b7f63bdbf1e5573afa51991f217d3fca65049eb",
+      "lfs_oid": null,
+      "path": "results/aggregates/phase4_authoritative/phase4/world_metrics.parquet",
+      "sha256": "ad314faa3c5ff265f875bcf2800fcd9a09644d180892989b91f99cd8d26eb457"
+    },
+    {
+      "bytes": 357,
+      "git_blob_oid": "26a34f3a9911e74fcbbf359cd3411097a6424a82",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/orchestration_evidence.json",
+      "sha256": "9eb98826595088d03b9ce965573f47cc1c62a0c6443fcf15a4a41d2317b692d1"
+    },
+    {
+      "bytes": 2101,
+      "git_blob_oid": "eb52e6999b7d46bccaebbd00fea682b5e8db45b9",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/phase4/confirmatory_comparisons.csv",
+      "sha256": "4b7a44c3ba47966b2530d3802fe5e66b08e4b4958e4a56093b00f41d759f9b7c"
+    },
+    {
+      "bytes": 28705,
+      "git_blob_oid": "ad4b7484421c46551ede00c0bb617b2a5dfa9edc",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/phase4/figures/safety_utility_burden_frontier.provenance.json",
+      "sha256": "8287f435a69ad49ad3d6999e4dcca027ce0f19656793cd6becc383127baa5458"
+    },
+    {
+      "bytes": 18385,
+      "git_blob_oid": "58b782031df3e2842009c0c097063e72d015c288",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/phase4/figures/safety_utility_burden_frontier.svg",
+      "sha256": "f99afc7895167812fad2627dec87b6e1966411decee948fbc985493e62dd6f08"
+    },
+    {
+      "bytes": 193726,
+      "git_blob_oid": "57dd67457fb2fe4ac2a4648127dfe679bd2cd627",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/phase4/operating_point_table.csv",
+      "sha256": "b720a80be877355fdeb72f98a5be59d29e4934997cb5b1eada6700e801cff59c"
+    },
+    {
+      "bytes": 1215,
+      "git_blob_oid": "1c27bc72a2f9229747090986c1d22ba1f64fe7a3",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/phase4/phase4_report.md",
+      "sha256": "cc5f23b6aff1a5328abc1c3406bf0e10b058e986516ee96b8cd5f73ba9452fa4"
+    },
+    {
+      "bytes": 11389,
+      "git_blob_oid": "06c2f8b9ddb2c4990e86e5c8dedda8c9159f803f",
+      "lfs_oid": null,
+      "path": "results/reports/phase4_authoritative/phase4_audit.json",
+      "sha256": "02d98d9ac8b49a9cb7acbd73ae49a2097f20a364abfb360402720c2d723f950c"
+    }
+  ],
+  "logical_namespace": "phase4_original",
+  "schema_version": "1.0.0",
+  "source_paths": [
+    "results/manifests/phase4_authoritative",
+    "results/raw/phase4_authoritative",
+    "results/aggregates/phase4_authoritative",
+    "results/reports/phase4_authoritative"
+  ],
+  "storage_mode": "immutable_indexed_reference"
+}

@@ -1,0 +1,49 @@
+schema_version: "1.0.0"
+phase: 6
+name: executable_diagnostic_synthesis_and_anti_gaming_foundation
+grammar_version: mavs-diagnostic-ast-v1
+candidate_budget: 40
+operation_strata:
+  - recalibrate
+  - split
+  - merge
+  - add
+  - scope_narrow
+  - scope_expand
+  - evidence_recovery
+  - policy_interaction
+  - configuration_specialization
+  - retire
+variants_per_operation:
+  promoted: 2
+  integrity_control: 1
+  certification_control: 1
+split_sizes:
+  synthesis: 64
+  development: 64
+  certification_per_bank: 64
+seeds:
+  synthesis: 610001
+  development: 620001
+  certification: 630001
+  replay: 640001
+  permutation: 650001
+compute_limits:
+  maximum_ast_nodes: 31
+  maximum_structure_trials: 8
+  maximum_parameter_trials: 27
+  maximum_candidates: 40
+certification_banks:
+  - trigger
+  - retained
+  - holdout
+  - positive_scope_boundary
+  - anti_scope
+  - nuisance_counterfactual
+  - causal_counterfactual
+  - adversarial
+  - disjoint_analogue
+final_blind_access: prohibited
+results_root: results/perception_closure_v04/phase6
+legacy_index_root: results/legacy
+

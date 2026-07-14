@@ -1,0 +1,640 @@
+{
+  "claim_classification": "Phase 3 validates deterministic lifecycle, certification plumbing, promotion, rejection, persistence, and rollback mechanics; it does not validate genuine differentiated diagnostic synthesis.",
+  "code_commit": "bbccd76ea0dbc04b8fe5694d15c51410f56acbd4",
+  "file_count": 89,
+  "files": [
+    {
+      "bytes": 1716,
+      "git_blob_oid": "b76257ba01046b7db446dd3c0c84922476e68932",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/curriculum_manifest.json",
+      "sha256": "605119a22b7523b28a90bd9e50344eebfbec0500cea4f6131ba072d7c28f56eb"
+    },
+    {
+      "bytes": 4623499,
+      "git_blob_oid": "d67585a70ef646167f93d7a1968b8fac571e9204",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_1/certification_cases.json",
+      "sha256": "fb340e99e64576aab58418b1a5c908d6789fe2abc5a3b91f743d846bb56198ae"
+    },
+    {
+      "bytes": 2809,
+      "git_blob_oid": "b0a57bcc9098d1b69b29cee93c47fbe791d90f76",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_1/generation_manifest.json",
+      "sha256": "5b081d119c1e2c33c814dc8cbacde6a190c03132e940db08a4188d15516a1a53"
+    },
+    {
+      "bytes": 8854549,
+      "git_blob_oid": "cd7483c401222ede61373814123b6c6607a48ce3",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_1/hidden_outcomes.json",
+      "sha256": "9b0bd79164bf38610bdc76b2c8334dd6483b125225eb870df733f9864efea5ae"
+    },
+    {
+      "bytes": 3708385,
+      "git_blob_oid": "a8729d0415fcb57d67dc4fc3775cd9bd13f81822",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_1/world_ledger.parquet",
+      "sha256": "447c68f1154297107f5825cc633a6825458490294443a623a4d9c5deee4aa19b"
+    },
+    {
+      "bytes": 4623543,
+      "git_blob_oid": "bef90c624abe65ad8e332dec2073944f5f1ee1b6",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_2/certification_cases.json",
+      "sha256": "b209230965896ed29a909c6c505abb7e33efdc5edda6afeb3a79dee365afedf4"
+    },
+    {
+      "bytes": 2809,
+      "git_blob_oid": "5e8b48210df13582f576d3c623509c4702f96909",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_2/generation_manifest.json",
+      "sha256": "38d7f63404a13ae58a3628da01e9d88f96600ec6e1725726cf14ae57815215af"
+    },
+    {
+      "bytes": 8854674,
+      "git_blob_oid": "6ed6cce85209e0bf0278f271ca06dd899fc267b3",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_2/hidden_outcomes.json",
+      "sha256": "707ad54f3e1413694772f4d67d0a00f869766cbfe230731c0fd140cb0c13e843"
+    },
+    {
+      "bytes": 3695370,
+      "git_blob_oid": "b50a7d53d7bfcfb79283052b7835cdbb6613dd62",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_2/world_ledger.parquet",
+      "sha256": "5895ba64f74be00d255543ed1ca67757ac19c756557ac344702ebce6a4bdd1ba"
+    },
+    {
+      "bytes": 4623588,
+      "git_blob_oid": "6079344a5438df0879cfcc546c143ece165638c8",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_3/certification_cases.json",
+      "sha256": "b083ccdb45ff3520134c7114500f8999aec89c57dd6f5137e0dc4208b23a535c"
+    },
+    {
+      "bytes": 2809,
+      "git_blob_oid": "6a3e30590d452d77f136130a1989fce79a0dbcc3",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_3/generation_manifest.json",
+      "sha256": "76861038a4a28f2c5978d814fcef29763b0fae373b84df98fc1febca89524479"
+    },
+    {
+      "bytes": 8854445,
+      "git_blob_oid": "f30c6a8ad4bf548c46d9061d5e9f70df243d86eb",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_3/hidden_outcomes.json",
+      "sha256": "ac7b96d7d41bd84d47f38fc2cff75ccb8f2361f2c5352b8f90f6bd6a478861bc"
+    },
+    {
+      "bytes": 3700270,
+      "git_blob_oid": "20ba63f14b6bfefee9e8710ac52a84fdb25b5048",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/generation_3/world_ledger.parquet",
+      "sha256": "e75bd7f8fb72c06a6b40911be1e874c498ea002375d8b25e25be029a04ab1644"
+    },
+    {
+      "bytes": 2208,
+      "git_blob_oid": "1cace89d6c57c27f07e3554783ec1c8eb1ed974c",
+      "lfs_oid": null,
+      "path": "results/manifests/phase3_20260713/phase3/run_manifest.json",
+      "sha256": "72b9f0eeb4069554bc9026dfe21fd58d5863d92a528deba42cf1f9c7c96f0314"
+    },
+    {
+      "bytes": 7024360,
+      "git_blob_oid": "b9ad95983ddd4b85a5590dd2a74fbef3d7f3e37b",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/append_only_memory.parquet",
+      "sha256": "d1f4f44adc009567cfce06c1c6166da440a67475b5ab6cf866d877747316f20b"
+    },
+    {
+      "bytes": 1438,
+      "git_blob_oid": "d6523a4ea6bc8b9d1fe4df88ac69379db024a4e0",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/checkpoint_manifest.json",
+      "sha256": "f37e09925cfed3c73d4310e1c8c370584d414f408638db72e6888320c49f3556"
+    },
+    {
+      "bytes": 209358,
+      "git_blob_oid": "d322513ee8f888c2ecd439b2c3445b9e5c5a7f3a",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/configuration_library.json",
+      "sha256": "2491f36d3a4d0a2d81cb3f656a833902560f233eda96c71fdc9368d18e2524c7"
+    },
+    {
+      "bytes": 423111,
+      "git_blob_oid": "c9c927be4f0dd949881c97fd470f89340f9820d3",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/failure_capsules.parquet",
+      "sha256": "1defc8820535b369c75f87e587ac1b7186e4b4a1481993bdf510ad954731c542"
+    },
+    {
+      "bytes": 11564,
+      "git_blob_oid": "6c4e6471539cc53c3aeb7ed773262b40d6c597e3",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/failure_ontology.json",
+      "sha256": "ea282ed21d454d70e3d31ae3aace3e580eb1c98afe7bfbb4d510be6cc3ba28d1"
+    },
+    {
+      "bytes": 1991124,
+      "git_blob_oid": "5e178f768319e49444087fb9b7dade51562095ae",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/retained_counterexamples.parquet",
+      "sha256": "291ec66c680bc66fc323ac9ae0f4118d4b605e1786c540cfa92e98688fc00058"
+    },
+    {
+      "bytes": 85277,
+      "git_blob_oid": "ec6b682a07e91045afa14cdde08a81a5c1e50105",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/cumulative/uncertainty_ledger.parquet",
+      "sha256": "a263e992c4a38b110f2433a00f47e48fba0b5fabb396fcf1286c848a0d811b3d"
+    },
+    {
+      "bytes": 7021009,
+      "git_blob_oid": "18e4304365cab2ad89f8d6940530f37271dd26b6",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/append_only_memory.parquet",
+      "sha256": "8d7ab94262c8b44e659473a7bcb1850a659105f0de4ec9f97ad62c49689865a9"
+    },
+    {
+      "bytes": 1433,
+      "git_blob_oid": "4fd18f4435c38715bdf798134f3ba46bb71fddba",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/checkpoint_manifest.json",
+      "sha256": "1e353049cf48b2c45caabb64ba37a7da3da9f6e4814bf91a4585d3053bf4f375"
+    },
+    {
+      "bytes": 209358,
+      "git_blob_oid": "2ce187f76784aec0b80116d8316a5f8bf660915f",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/configuration_library.json",
+      "sha256": "b9bbe231f214f3916787cf10d83584f67fa79ecdf2ca9cc81ff301530f97066f"
+    },
+    {
+      "bytes": 423072,
+      "git_blob_oid": "94441e76fdb3b92873b2f1f74804c9f848db5de3",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/failure_capsules.parquet",
+      "sha256": "59e71f8119008bb59a419f57d6a09fd6e1dae5861f319afa4f7c7fe735426aee"
+    },
+    {
+      "bytes": 11564,
+      "git_blob_oid": "6c4e6471539cc53c3aeb7ed773262b40d6c597e3",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/failure_ontology.json",
+      "sha256": "ea282ed21d454d70e3d31ae3aace3e580eb1c98afe7bfbb4d510be6cc3ba28d1"
+    },
+    {
+      "bytes": 1991196,
+      "git_blob_oid": "f07a7a47057b28df154f3230253e9b02185f9af0",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/retained_counterexamples.parquet",
+      "sha256": "89313ff2ec52b757cc1bc8b0eae5ab5615b65a3826409ea0e1c028ae9137145b"
+    },
+    {
+      "bytes": 85218,
+      "git_blob_oid": "fe27f824def897e714db1abe04b1a4b7b681a4c1",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_1/fresh/uncertainty_ledger.parquet",
+      "sha256": "74bded7c52c59978c8dc4be0bb0286e8d68a6b2f9c176affeccb7687ee00c759"
+    },
+    {
+      "bytes": 7024253,
+      "git_blob_oid": "f59c5d72703100a7c71961631acc1ffcdbfaa159",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/append_only_memory.parquet",
+      "sha256": "5f778a0dfc3ca58e02f791c3049f01202bf680b52262cb2b9d1f5037dbbf8eaa"
+    },
+    {
+      "bytes": 1438,
+      "git_blob_oid": "015e914e4bffef5cf4e6204a88b3685f4dd79018",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/checkpoint_manifest.json",
+      "sha256": "f073574597e072e594be7d2cffff1531255d256b87a769c2a88964edb4651541"
+    },
+    {
+      "bytes": 413838,
+      "git_blob_oid": "15c5b7976dcecaec5f73784a6701c542592f0730",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/configuration_library.json",
+      "sha256": "401cc29252861833ff7fd213a0bdb95e6a00174f7a4297831960dd29ba95944c"
+    },
+    {
+      "bytes": 433846,
+      "git_blob_oid": "1fee113426889df255b331208f7c77ff6a56a686",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/failure_capsules.parquet",
+      "sha256": "8510abcb8dd807a8870dbb8972e693e7a9e32811ec6a676aa6ae8a5bac067dd3"
+    },
+    {
+      "bytes": 18406,
+      "git_blob_oid": "3a52835fbeff0146ba5d15b8ebd2324fe5b0f6da",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/failure_ontology.json",
+      "sha256": "9e32a7c85734d10ae93bef2d3f58b87dcb1004776edeec5e3edfb982c9ce939e"
+    },
+    {
+      "bytes": 2014060,
+      "git_blob_oid": "44853d98dadabb7c2d313b550602d0a3d1041eee",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/retained_counterexamples.parquet",
+      "sha256": "ad1ea1aa4247b2a3bb9277ad59686a1f15ffbcdb5a4be9ae0236edf8118e1ac5"
+    },
+    {
+      "bytes": 95665,
+      "git_blob_oid": "bb4b387583e62a309f5bc81b7d01afbd0c073bfd",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/cumulative/uncertainty_ledger.parquet",
+      "sha256": "0acb470314860ef30a0815b86efaf85948a130bb2b37bb879a33d08aac41d5ab"
+    },
+    {
+      "bytes": 7023395,
+      "git_blob_oid": "e5ad05eaac1e64cc5109bc55a022e9a54b5c3e24",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/append_only_memory.parquet",
+      "sha256": "33beb54911dd2cc8ffef54cbdb80f794949cc45b1f7a1c9424104e1b84d32ce9"
+    },
+    {
+      "bytes": 1433,
+      "git_blob_oid": "29518f2b978507af6a3c2e589956be5053227d29",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/checkpoint_manifest.json",
+      "sha256": "012933a8808b4710b897992a26befe493f510a28d76fe1cbf03126cba7103fea"
+    },
+    {
+      "bytes": 209276,
+      "git_blob_oid": "b0498310968458c79afea1f46a4f31f9ca707788",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/configuration_library.json",
+      "sha256": "89181513f14dd566cf9d270a7b95419db46bc888041c0f5bdab156a11ca698d8"
+    },
+    {
+      "bytes": 437010,
+      "git_blob_oid": "91860c95c7380fbf818b212c3339e531f55112fb",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/failure_capsules.parquet",
+      "sha256": "85d4571891cb42e0921493caa4639e4daa8e28c30495a7ace794f6c46c532df7"
+    },
+    {
+      "bytes": 11549,
+      "git_blob_oid": "a09a58837166e828b6b42ff3dffdb1ce977a9ab2",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/failure_ontology.json",
+      "sha256": "50b4017cd9123af3b4652261075bd6177613ca7134084cfadf78f60080e05079"
+    },
+    {
+      "bytes": 2013803,
+      "git_blob_oid": "e78f242b71d387397d9a2676e84111aef2ce090a",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/retained_counterexamples.parquet",
+      "sha256": "f41b62362e4bda0feda3a7f1b6292727a8e820558e46c346f2714a75a211ebf5"
+    },
+    {
+      "bytes": 88332,
+      "git_blob_oid": "0c8643d454b9bd354ebcf2c1927d51cb9cfa8509",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_2/fresh/uncertainty_ledger.parquet",
+      "sha256": "f5729ffa434b2cc038bef0fdb50aacc48d35305bd276d8b2c6cc1f98043b8b76"
+    },
+    {
+      "bytes": 7032161,
+      "git_blob_oid": "e55523f3c92a621814f18b7d30acb03d9a5a20e4",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/append_only_memory.parquet",
+      "sha256": "4ef13cd3a7567b63c8e79162ee144f6b103705f9eb687a0abdf0d7ce6bd94bd5"
+    },
+    {
+      "bytes": 1438,
+      "git_blob_oid": "517546d6375c8539dcec12c6b25eb93c9baa5453",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/checkpoint_manifest.json",
+      "sha256": "df10f3c914bb9cafef948d94931f400dc3fa8a20148267f6441764fcf5de61d1"
+    },
+    {
+      "bytes": 618376,
+      "git_blob_oid": "82c754ab75d3131fd00e5e9dacafe2412d89ae28",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/configuration_library.json",
+      "sha256": "896e43adc3da26ca54c4c5b3126599a4f516515ef2acbee7ef136895bbaa6f87"
+    },
+    {
+      "bytes": 433916,
+      "git_blob_oid": "fa3398180f442a4cc22ecc8d665747a1297fa849",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/failure_capsules.parquet",
+      "sha256": "3bb12978d4d7ab5c026fa434faa706055edb0ac8de9189aff3de8ec94cb0a72b"
+    },
+    {
+      "bytes": 21763,
+      "git_blob_oid": "5cc40a1518e7bd3d59f7c1bfa92ce43214f64b7f",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/failure_ontology.json",
+      "sha256": "33d413675a3a7bdddc9c52d3e91ef05bbdc1a43787a49b38d3d37666d2b502bb"
+    },
+    {
+      "bytes": 1999283,
+      "git_blob_oid": "2e726f3870cc84008afc721c0bf9d68bd5b15ca4",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/retained_counterexamples.parquet",
+      "sha256": "a0eabdfcff6f863b7a0526d93ec392683a3ab7f66cbecf2198896a2deebc2508"
+    },
+    {
+      "bytes": 95401,
+      "git_blob_oid": "fd6b37c36e57df73d70b906ee6e550f60df99910",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/cumulative/uncertainty_ledger.parquet",
+      "sha256": "d41a1db252262d58dc79dffbc0b64e21da5708f0b394f4fe1d96d1404a92c1ac"
+    },
+    {
+      "bytes": 7030348,
+      "git_blob_oid": "63c9015368571602ec3e0c858b34349798956e19",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/append_only_memory.parquet",
+      "sha256": "51b30cfffe4b7eca9f8de262c45ec44a685a52a1efff6d6e93cdf3e2a56f256b"
+    },
+    {
+      "bytes": 1433,
+      "git_blob_oid": "6f8498858dcd2b7925a3ba6c079c412ffac46276",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/checkpoint_manifest.json",
+      "sha256": "dec13852f6d313cfd5c800a880466eeea0ada0b154af7887432e73b110bfd1d6"
+    },
+    {
+      "bytes": 209324,
+      "git_blob_oid": "d30315c3d1b2e67f87e329df31c6aa8300de29ff",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/configuration_library.json",
+      "sha256": "1c650867ab27defb35fbf7c115696975ab0db590f66cfd071273d6bd4b69d419"
+    },
+    {
+      "bytes": 436785,
+      "git_blob_oid": "060b7fc60b5004114a1697eaf4f91bfeac6560dc",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/failure_capsules.parquet",
+      "sha256": "8eab94148b184e9d0a8ee39c8f7a530ecdd82d367624a3089735c2154a35323d"
+    },
+    {
+      "bytes": 11549,
+      "git_blob_oid": "03b16bdd248fb484dc0ec4b75faf9b6b1751a1d7",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/failure_ontology.json",
+      "sha256": "d5ccf261c4708dde68f79d14812580eb1789b41a1c2c8737418d4e281c25b4dc"
+    },
+    {
+      "bytes": 1998770,
+      "git_blob_oid": "ae026466b56d2619b5fe6f197054a88171d8559e",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/retained_counterexamples.parquet",
+      "sha256": "3a1045c3acf0d464f3793bf3c97279e98411da524dced1d0c0b57f340c9dcd29"
+    },
+    {
+      "bytes": 88181,
+      "git_blob_oid": "0d206e4d71a92211feeae0bc42a3e2e422270f52",
+      "lfs_oid": null,
+      "path": "results/checkpoints/phase3_20260713/phase3/generation_3/fresh/uncertainty_ledger.parquet",
+      "sha256": "689aaa14187ead76272abd5f637d81a2c0d2030a6a1ccb19ac6413ee8e8cabe2"
+    },
+    {
+      "bytes": 5845716,
+      "git_blob_oid": "53f1a343f3527abbe60bad2ae1e1054ba78a4877",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/generation_1_cumulative.parquet",
+      "sha256": "6d9f74be00a53c3e04dc2300f7ab4e1d583c3e7a6f95c254f64c1d4673a47fdd"
+    },
+    {
+      "bytes": 5842080,
+      "git_blob_oid": "43fba8ecf2f9cb3ccb228331441f8e7c7b941da6",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/generation_1_fresh.parquet",
+      "sha256": "fcac62d9742d16f06a4e6b07913613b409035bfdcdd94fb80f32f1a232d9037d"
+    },
+    {
+      "bytes": 5840226,
+      "git_blob_oid": "a3c0e067542f3195c428614d067450b34a1b9557",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/generation_2_cumulative.parquet",
+      "sha256": "902f037429ef2031b5627d8640510b6417d8627e2fbc24b3efa4a3fe98e68df0"
+    },
+    {
+      "bytes": 5842477,
+      "git_blob_oid": "183364393d1d344fb7e39725560721ca6d9e8a10",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/generation_2_fresh.parquet",
+      "sha256": "ac76217878ac4c4700c52d8017968e28e28e3edd1fa13925f2e1f69234510c13"
+    },
+    {
+      "bytes": 5843241,
+      "git_blob_oid": "c7586bcc1d4267a2cacc452f1618e8bb1acc2914",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/generation_3_cumulative.parquet",
+      "sha256": "30352de8eb322888f79c8dfd6fe79758beb41a6406f8acac3bfc6d8feb5229b6"
+    },
+    {
+      "bytes": 5841283,
+      "git_blob_oid": "3a0ef568e8527a226debfdc80c2603a28adaccbe",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/generation_3_fresh.parquet",
+      "sha256": "7b6de0451e80f90734ba5d26ed75a9e81f904a855f15f0cc29da607e28b0c83b"
+    },
+    {
+      "bytes": 1944465,
+      "git_blob_oid": "ee11b04db8ca3e703ee1af4253cf60b79a13de8f",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/learning_artifacts.json",
+      "sha256": "906ecdc9db8dd3ee04f52dee9d73e8eded908463fa51ab1fdca08adf571b4477"
+    },
+    {
+      "bytes": 72591,
+      "git_blob_oid": "bdb859a3664e92a3c02845db406322a8557c3b5e",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/repair_events.json",
+      "sha256": "97214e4f088fc1be0c369d087b7dbe6ac0d22d0767e80f434ca58e3cb34aba0f"
+    },
+    {
+      "bytes": 2144,
+      "git_blob_oid": "a82a7c9015a70bd48c8949b5cd20fa27d8453e50",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/phase3/stress_summary.json",
+      "sha256": "7588f90176da944b7af00d98d9cb61c4f4bfcbebcab5dc0772a2a584e9f632b3"
+    },
+    {
+      "bytes": 20778,
+      "git_blob_oid": "e97bb8d2ba357b4b1862bcad1d4a63ddad840d62",
+      "lfs_oid": null,
+      "path": "results/raw/phase3_20260713/regression/synthetic_smoke.jsonl",
+      "sha256": "5c72e474e997b16f24717a757f80f74dbdd996e32e0c4458bcd31bbc1ce25b75"
+    },
+    {
+      "bytes": 603,
+      "git_blob_oid": "74e6e77975bfd16f2597cd59a4afdc60e2c70cea",
+      "lfs_oid": null,
+      "path": "results/processed/phase3_20260713/phase3_aggregation.json",
+      "sha256": "72b659600f325481fae6a5fc7bdd2a8b0b5a227f0c23dd2d8cae7bc606435fb7"
+    },
+    {
+      "bytes": 10713,
+      "git_blob_oid": "0b30782f1850efaba80710597aa0aee10a42c558",
+      "lfs_oid": null,
+      "path": "results/processed/phase3_20260713/phase3_curriculum_metrics.parquet",
+      "sha256": "bf469f4b88a8bb7df28aae927c1ebca11f9f38f83e60034a9d60773064ddfdbf"
+    },
+    {
+      "bytes": 24782,
+      "git_blob_oid": "2ea886699cf96d2cd2e007307f4357e27252b1cc",
+      "lfs_oid": null,
+      "path": "results/processed/phase3_20260713/phase3_rejected_candidates.parquet",
+      "sha256": "37991a83f94a6293f86786479c5f43d9a6bd567d7acdde3fcfe59963f274c808"
+    },
+    {
+      "bytes": 16663,
+      "git_blob_oid": "55e0db7c108a8feeb43376fda2e1f8a8fd513f06",
+      "lfs_oid": null,
+      "path": "results/processed/phase3_20260713/phase3_summary.parquet",
+      "sha256": "71898f98246952600c4a9a5ef0cedcec74a3669203e3c710cef2fdd7ba8b8fc6"
+    },
+    {
+      "bytes": 467,
+      "git_blob_oid": "654581f4c77cfbe89b69d6a8cd1d4bd61774ff16",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/orchestration_evidence.json",
+      "sha256": "2d0d2ef6e0aee177859f2ef29d6f9b8c6389b56c277af7c48c633105a6c17445"
+    },
+    {
+      "bytes": 17963,
+      "git_blob_oid": "3c3fe316e07b8622fad83f5601de7d2f24394f15",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_audit.json",
+      "sha256": "995901ce490521e0b2ce1c0f8688727afd0de9fd6a93bd07edee9670b0378c6c"
+    },
+    {
+      "bytes": 110092,
+      "git_blob_oid": "ec17ac45939ba09cad8a5aec92b83823c153359b",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/candidates.jsonl",
+      "sha256": "8e791be502a374ffb98b1e503510f79cb29238e4ddde9c2cd6231e280923625a"
+    },
+    {
+      "bytes": 3871,
+      "git_blob_oid": "7d61d9640ddfeac4d84bae275a9a50a7fea7f8e7",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/card_manifest.json",
+      "sha256": "0c6fdb2f8252736051e46972c0f79d0affebe6d1153b5896743eff6bb2b6d2a4"
+    },
+    {
+      "bytes": 457016,
+      "git_blob_oid": "152f30628031d2e13c2ec0110174e548a6cb2f46",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/certifications.jsonl",
+      "sha256": "df31779d84073cd82202e642f1f51847c08afeee3eedf45db2f168fda504e07e"
+    },
+    {
+      "bytes": 11450,
+      "git_blob_oid": "909d8ab32352ab181141659b0bec0dfca814d553",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/consolidations.jsonl",
+      "sha256": "366158cf18f776871afa80c7d6f5c198bbfcb2f303690ac9e39cf5581390e8e4"
+    },
+    {
+      "bytes": 24915370,
+      "git_blob_oid": "65a1669575123bc904c2e1b570cca146bcb0b216",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/failure_capsules.jsonl",
+      "sha256": "60fafd2c9c3c7d31673997e421526f8e098e95c289f3c06909ca63804c9c5d69"
+    },
+    {
+      "bytes": 212825,
+      "git_blob_oid": "63e9a6dc098d64f77671f3f5db4011b0db49f5ab",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/genealogies.jsonl",
+      "sha256": "ac546104666c9cb569d1f52e9c5227e8c6118da2864dcf2bdce87cfd8baae7eb"
+    },
+    {
+      "bytes": 104682,
+      "git_blob_oid": "864ff18135a60d2795c29332e8a697dd487b3ee7",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/investigations.jsonl",
+      "sha256": "0b1735a6f05c0258816254a19ec2dc79eb3c0d653da53f7e8ca624045805e8de"
+    },
+    {
+      "bytes": 35906,
+      "git_blob_oid": "aea2c307fcf0bcd3db694031cfa1d3c3df5099e1",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/learning_events.jsonl",
+      "sha256": "c3faa45595c715c5a7dcdfccf916b7a7444c3734b5076901fbf5c299cc3ebf42"
+    },
+    {
+      "bytes": 49434,
+      "git_blob_oid": "e0a2444188357d40efc34b29fbae0c0abc7f7f2d",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/promotions.jsonl",
+      "sha256": "8f61aeaa75590f2ddebafc7aafe607586f4df4155b73849928b4745e46d1b8e0"
+    },
+    {
+      "bytes": 275056,
+      "git_blob_oid": "8ebaf4ded4ee23e6b77194b9ac26eac903e0b546",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/proposals.jsonl",
+      "sha256": "8619f5a2b63abdc39dfded4e23a0e89ba8326201b2dda82fd314972981786d8a"
+    },
+    {
+      "bytes": 57436,
+      "git_blob_oid": "c1b5cb285c5ea9ef5516de1af6df5e511de1f756",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/rejected_candidates.jsonl",
+      "sha256": "67554a1385576cbf0ceaad4076757a493cc039ee4f35b2aaedfc6f151d31222e"
+    },
+    {
+      "bytes": 48670,
+      "git_blob_oid": "3a431138d6cb1a476e4f5b65ae7ac6869c201d2a",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/rollbacks.jsonl",
+      "sha256": "8bc9ebb00135e7bbf29ab1aebfda35d0e980717259a7c5ce7c89b4d56d68ad7e"
+    },
+    {
+      "bytes": 247387,
+      "git_blob_oid": "16cf255733dd1f89b54d0804a5a346aa265623e1",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/terminal_errors.jsonl",
+      "sha256": "2d8fdb4adc6618b7b0f6a2409dbe7894e0087fa9b8bc1f3c364e4cf1e91f5cc2"
+    },
+    {
+      "bytes": 5374483,
+      "git_blob_oid": "a8983cb581a9fc4dd3e7360c3bd7239785eb929c",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_cards/uncertainty_entries.jsonl",
+      "sha256": "133cd6f294df8c8777cad146dfa8f887166369a69b2e2985c6ed361bcb9e4b93"
+    },
+    {
+      "bytes": 34360,
+      "git_blob_oid": "9eeb410e0a1372a5f53d2f8f0c68263fbcf7a0bc",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_console.log",
+      "sha256": "7369577b6a6cdf006933ac83c1f4a79d45610f8da19d43e78f929932074ed553"
+    },
+    {
+      "bytes": 3543,
+      "git_blob_oid": "7e709c7c0e5421a1ca8712f054757769a42ca16e",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_library_inspection.json",
+      "sha256": "af92987333796f8acfa3c851ca96b91968f1d4b33c64fc21b0c2b88f6532a55d"
+    },
+    {
+      "bytes": 0,
+      "git_blob_oid": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "lfs_oid": null,
+      "path": "results/reports/phase3_20260713/phase3_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "logical_namespace": "phase3_20260713_template_harness",
+  "schema_version": "1.0.0",
+  "source_paths": [
+    "results/manifests/phase3_20260713",
+    "results/checkpoints/phase3_20260713",
+    "results/raw/phase3_20260713",
+    "results/processed/phase3_20260713",
+    "results/reports/phase3_20260713"
+  ],
+  "storage_mode": "immutable_indexed_reference"
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs.local/schemas/v04/diagnostic_contract.schema.json",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "candidate_name", "expression_ast", "parameters", "positive_scope_ast", "anti_scope_ast", "evidence_contract", "influence_contract", "counterfactual_contract", "lineage", "operation_payload", "integrity_control", "certification_control"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "candidate_id": {"type": "string", "pattern": "^P6-[A-Z0-9-]+$"},
+    "candidate_name": {"type": "string"},
+    "expression_ast": {"$ref": "diagnostic_ast.schema.json"},
+    "parameters": {"type": "object", "additionalProperties": {"type": "number"}},
+    "positive_scope_ast": {"$ref": "diagnostic_ast.schema.json"},
+    "anti_scope_ast": {"$ref": "diagnostic_ast.schema.json"},
+    "evidence_contract": {"$ref": "https://mavs.local/schemas/v04/diagnostic_contract.schema.json#/$defs/evidence"},
+    "influence_contract": {"$ref": "https://mavs.local/schemas/v04/diagnostic_contract.schema.json#/$defs/influence"},
+    "counterfactual_contract": {"$ref": "https://mavs.local/schemas/v04/diagnostic_contract.schema.json#/$defs/counterfactual"},
+    "lineage": {"$ref": "https://mavs.local/schemas/v04/diagnostic_contract.schema.json#/$defs/lineage"},
+    "operation_payload": {"type": "object"},
+    "integrity_control": {"type": ["string", "null"]},
+    "certification_control": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {"type": "object", "required": ["sources", "provenance", "availability", "freshness_seconds", "minimum_trust", "failure_behavior"], "properties": {"sources": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "provenance": {"type": "string"}, "availability": {"type": "string"}, "freshness_seconds": {"type": "number", "minimum": 0}, "minimum_trust": {"type": "number", "minimum": 0, "maximum": 1}, "failure_behavior": {"enum": ["deactivate", "query", "escalate"]}}, "additionalProperties": false},
+    "influence": {"type": "object", "required": ["channel", "minimum", "maximum", "terminal_authority"], "properties": {"channel": {"enum": ["observation", "query", "soft", "terminal"]}, "minimum": {"type": "number"}, "maximum": {"type": "number"}, "terminal_authority": {"type": "boolean"}}, "additionalProperties": false},
+    "counterfactual": {"type": "object", "required": ["nuisance_interventions", "causal_interventions", "nuisance_tolerance", "minimum_causal_delta"], "properties": {"nuisance_interventions": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "causal_interventions": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "nuisance_tolerance": {"type": "number", "minimum": 0}, "minimum_causal_delta": {"type": "number", "exclusiveMinimum": 0}}, "additionalProperties": false},
+    "lineage": {"type": "object", "required": ["parents", "operation", "triggering_contrast", "synthesis_evidence", "structure_trace", "parameter_trace", "rollback_target"], "properties": {"parents": {"type": "array", "items": {"type": "string"}}, "operation": {"type": "string"}, "triggering_contrast": {"type": "string"}, "synthesis_evidence": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "structure_trace": {"type": "string"}, "parameter_trace": {"type": "string"}, "rollback_target": {"type": "string"}}, "additionalProperties": false}
+  }
+}
