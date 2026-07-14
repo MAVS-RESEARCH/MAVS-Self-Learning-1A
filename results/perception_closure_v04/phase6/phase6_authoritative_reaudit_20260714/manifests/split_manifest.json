@@ -1,0 +1,24 @@
+{
+  "certification_banks": {
+    "hashes": {
+      "adversarial": "bdfff365d270ccf8a6d5f3a366cd091227f30286ccb3a2b00d92435c18740f3c",
+      "anti_scope": "024c5e5f04546ac8ac5fac239c494719e8e7d9e2bdd54967609b38da04d4005f",
+      "causal_counterfactual": "29ce6156134359df7e780e84ae2076da4423f79e7902d22635103df62c23e1a3",
+      "disjoint_analogue": "a50a614c3db644ac295b43eb3726c2bebb9eab14d155f849654f75784d6e9d65",
+      "holdout": "1da49b63223439931fb40ca54012333dbdc731d9e36f3928fc07e6a706b8e5a7",
+      "nuisance_counterfactual": "93e68f04881ca1eb765f486e00e8a2b816ad6ba14b2a7f3db327d9c74fec7df5",
+      "positive_scope_boundary": "7918d20527254ec15c9e8712481714fafddf7b82569d62fbdadda8eac1d31f83",
+      "retained": "42b75c5c30fbcf508c3a1ba73e868105d557ff6ca8d8e11f3fc30a8dd3e4601f",
+      "trigger": "c28b523ad1e72892c1b9ae08dac3b213897255e22d600bdfff9f7c1fb800b243"
+    },
+    "rows": 576
+  },
+  "development": {
+    "hash": "e20bda741df83df14e008d8625a19412b824f5a7be9b62a5cbf89c17de176afa",
+    "rows": 576
+  },
+  "final_blind": {
+    "access": "prohibited",
+    "rows_read": 0
+  }
+}

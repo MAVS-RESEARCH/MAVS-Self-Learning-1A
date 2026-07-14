@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "executable_scope_changed": true,
+    "neighbor_deactivated": true,
+    "retained_scope_valid": true
+  },
+  "operation": "scope_narrow",
+  "passed": true,
+  "reason_code": null
+}

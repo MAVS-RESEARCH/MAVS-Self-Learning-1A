@@ -1,0 +1,11 @@
+{
+  "candidate_count": 40,
+  "final_blind_rows_read": 0,
+  "forbidden_certifier_imports": [],
+  "forbidden_environment_variables": [],
+  "passed": true,
+  "payload_failures": [],
+  "separate_hierarchical_seeds": true,
+  "separate_process_entrypoint": true,
+  "shared_mutable_rng": false
+}

@@ -1,0 +1,188 @@
+{
+  "all_passed": true,
+  "anonymous_semantic_id": "774573682cee66c99633867d52b49c9ca21a18407c2d32f1473a014f70fbc96e",
+  "certification_seed": 630001,
+  "gates": {
+    "adversarial": {
+      "passed": true,
+      "supporting_cases": [
+        "adversarial-0000",
+        "adversarial-0001",
+        "adversarial-0002",
+        "adversarial-0003",
+        "adversarial-0004"
+      ],
+      "threshold": "<=0.24",
+      "value": 0.03333333333333333
+    },
+    "anti_scope": {
+      "passed": true,
+      "supporting_cases": [
+        "anti_scope-0000",
+        "anti_scope-0001",
+        "anti_scope-0002",
+        "anti_scope-0003",
+        "anti_scope-0004"
+      ],
+      "threshold": "=0",
+      "value": 0.0
+    },
+    "boundary": {
+      "passed": true,
+      "supporting_cases": [
+        "positive_scope_boundary-0000",
+        "positive_scope_boundary-0001",
+        "positive_scope_boundary-0002",
+        "positive_scope_boundary-0003",
+        "positive_scope_boundary-0004"
+      ],
+      "threshold": "<=0.25",
+      "value": 0.0
+    },
+    "complexity": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "<=31",
+      "value": 7.0
+    },
+    "counterfactual": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": ">=0.74 both nuisance-invariant and causal-sensitive",
+      "value": 0.9193548387096774
+    },
+    "evidence_integrity": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "=0",
+      "value": 0.0
+    },
+    "kernel": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "=0",
+      "value": 0.0
+    },
+    "perception_extension_witness": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "=1",
+      "value": 1.0
+    },
+    "protected_error": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "<=0.24",
+      "value": 0.05183585313174946
+    },
+    "redundancy": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": ">1",
+      "value": 2.0
+    },
+    "replay": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "=0",
+      "value": 0.0
+    },
+    "retained": {
+      "passed": true,
+      "supporting_cases": [
+        "retained-0000",
+        "retained-0001",
+        "retained-0002",
+        "retained-0003",
+        "retained-0004"
+      ],
+      "threshold": "<=0.24",
+      "value": 0.06349206349206349
+    },
+    "scope": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "=1",
+      "value": 1.0
+    },
+    "stability": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "=0",
+      "value": 0.0
+    },
+    "trigger": {
+      "passed": true,
+      "supporting_cases": [
+        "trigger-0000",
+        "trigger-0001",
+        "trigger-0002",
+        "trigger-0003",
+        "trigger-0004"
+      ],
+      "threshold": "<=0.24",
+      "value": 0.0625
+    }
+  },
+  "supporting_trace_hash": "86f3b30997cf9f5d353beed627c08d38f9ba4ef84cd7702d69c2c66b01866264"
+}

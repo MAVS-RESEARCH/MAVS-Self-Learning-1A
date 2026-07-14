@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "parameters_independently_fitted": true,
+    "parent_ast_preserved": true,
+    "protected_gain": true
+  },
+  "operation": "recalibrate",
+  "passed": true,
+  "reason_code": null
+}

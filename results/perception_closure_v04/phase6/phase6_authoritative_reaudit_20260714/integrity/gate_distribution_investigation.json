@@ -1,0 +1,20 @@
+{
+  "all_fail_count": 0,
+  "all_pass_count": 30,
+  "nondegenerate": true,
+  "passed": true,
+  "patterns": [
+    {
+      "count": 30,
+      "failed_gates": []
+    },
+    {
+      "count": 10,
+      "failed_gates": [
+        "anti_scope",
+        "kernel",
+        "perception_extension_witness"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "allowlist_only": true,
+  "forbidden_field_findings": [],
+  "passed": true,
+  "requests": 40
+}

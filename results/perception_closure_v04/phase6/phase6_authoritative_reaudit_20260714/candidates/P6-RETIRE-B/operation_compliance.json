@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "influence_eligibility_removed": true,
+    "lineage_evidence_replay_rollback_preserved": true
+  },
+  "operation": "retire",
+  "passed": true,
+  "reason_code": null
+}

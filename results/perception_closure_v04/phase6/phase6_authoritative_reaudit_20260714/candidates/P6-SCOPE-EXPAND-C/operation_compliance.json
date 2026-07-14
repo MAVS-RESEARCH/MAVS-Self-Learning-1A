@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "boundary_anti_scope_holdout_analogue": true,
+    "executable_scope_changed": true,
+    "new_region": true
+  },
+  "operation": "scope_expand",
+  "passed": true,
+  "reason_code": null
+}

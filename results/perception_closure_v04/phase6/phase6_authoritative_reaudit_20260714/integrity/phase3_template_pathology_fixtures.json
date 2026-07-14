@@ -1,0 +1,13 @@
+{
+  "candidate_cards_indexed": 120,
+  "fixture_classes": [
+    "fixed_feature_threshold_0_5",
+    "unit_weight",
+    "shared_bounds_0_1",
+    "monotone_increasing",
+    "renamed_outer_template"
+  ],
+  "retained_in_phase6_integrity_benchmark": true,
+  "source_manifest": "results/legacy/phase3_20260713_template_harness/legacy_manifest.json",
+  "validates_differentiated_synthesis": false
+}

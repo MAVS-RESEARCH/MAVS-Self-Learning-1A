@@ -1,0 +1,21 @@
+{
+  "findings": {},
+  "json_payload_count": 387,
+  "parquet_file_count": 193,
+  "parquet_findings": [],
+  "passed": true,
+  "payload_count": 387,
+  "process_surfaces": [
+    "schemas",
+    "process_arguments",
+    "environment",
+    "open_file_ledger",
+    "imports",
+    "IPC_payloads",
+    "serialized_artifacts",
+    "checkpoints",
+    "logs"
+  ],
+  "sentinel": "PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D",
+  "taint_count": 0
+}

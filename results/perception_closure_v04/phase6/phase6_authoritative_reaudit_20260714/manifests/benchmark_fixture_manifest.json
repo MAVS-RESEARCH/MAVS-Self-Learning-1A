@@ -1,0 +1,21 @@
+{
+  "adversarial_metadata_traps": true,
+  "disjoint_structural_analogues": true,
+  "natural_protected_contrasts": [
+    "adversarial",
+    "anti_scope",
+    "causal_counterfactual",
+    "disjoint_analogue",
+    "holdout",
+    "nuisance_counterfactual",
+    "positive_scope_boundary",
+    "retained",
+    "trigger"
+  ],
+  "nuisance_and_causal_counterfactuals": true,
+  "positive_and_anti_scope_neighbors": true,
+  "random_control_count": 20,
+  "random_equal_budget_controls": "integrity/random_equal_budget_proposal_controls.parquet",
+  "retained_phase3_pathologies": "integrity/phase3_template_pathology_fixtures.json",
+  "trial_budget_per_control": 8
+}

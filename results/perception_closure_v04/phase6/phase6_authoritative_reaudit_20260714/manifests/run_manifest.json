@@ -1,0 +1,245 @@
+{
+  "candidate_budget": 40,
+  "code_commit": "210ebd712df13b8df84a54e9889e4db334295c53",
+  "feature_registry": {
+    "calibration_residual": {
+      "availability": "declared_per_case",
+      "domain": "calibration",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "calibration_residual",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "context_match": {
+      "availability": "declared_per_case",
+      "domain": "scope_context",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "context_match",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "danger_witness": {
+      "availability": "declared_per_case",
+      "domain": "typed_witness",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "danger_witness",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "evidence_available": {
+      "availability": "declared_per_case",
+      "domain": "evidence_availability",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "evidence_available",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "independence_score": {
+      "availability": "declared_per_case",
+      "domain": "specialist_independence",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "independence_score",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "masking_score": {
+      "availability": "declared_per_case",
+      "domain": "evidence_availability",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "masking_score",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "nuisance_marker": {
+      "availability": "declared_per_case",
+      "domain": "counterfactual_nuisance",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "nuisance_marker",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "policy_conflict": {
+      "availability": "declared_per_case",
+      "domain": "policy_state",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "policy_conflict",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "executable_policy",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "provenance_strength": {
+      "availability": "declared_per_case",
+      "domain": "evidence_integrity",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "provenance_strength",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "source_lineage",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "query_signal": {
+      "availability": "declared_per_case",
+      "domain": "query_output",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "query_signal",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "audited_query",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "risk_score": {
+      "availability": "declared_per_case",
+      "domain": "governance_risk",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "risk_score",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "safe_witness": {
+      "availability": "declared_per_case",
+      "domain": "typed_witness",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "safe_witness",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    },
+    "temporal_persistence": {
+      "availability": "declared_per_case",
+      "domain": "temporal_relation",
+      "lower_bound": 0.0,
+      "missing_behavior": "raise_missing_evidence",
+      "name": "temporal_persistence",
+      "permitted_operations": [
+        "compare",
+        "bounded_arithmetic",
+        "counterfactual",
+        "temporal"
+      ],
+      "provenance": "visible_evidence",
+      "trust": "provenance_validated",
+      "units": "normalized",
+      "upper_bound": 1.0,
+      "value_type": "number"
+    }
+  },
+  "grammar_version": "mavs-diagnostic-ast-v1",
+  "phase": 6,
+  "phase7_executed": false,
+  "run_id": "phase6_authoritative_reaudit_20260714",
+  "schema_version": "1.0.0"
+}

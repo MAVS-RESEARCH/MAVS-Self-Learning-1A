@@ -1,6 +1,6 @@
 {
   "claim_classification": "Phase 3 validates deterministic lifecycle, certification plumbing, promotion, rejection, persistence, and rollback mechanics; it does not validate genuine differentiated diagnostic synthesis.",
-  "code_commit": "37846e748df9be5cf24d9ab5683c17b16fceaa9c",
+  "code_commit": "210ebd712df13b8df84a54e9889e4db334295c53",
   "file_count": 89,
   "files": [
     {

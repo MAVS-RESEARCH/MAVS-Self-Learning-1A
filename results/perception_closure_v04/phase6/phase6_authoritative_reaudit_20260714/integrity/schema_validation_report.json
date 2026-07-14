@@ -1,0 +1,30 @@
+{
+  "compiled_schemas": [
+    "diagnostic_ast",
+    "diagnostic_contract",
+    "structure_search_trace",
+    "parameter_search_trace",
+    "semantic_identity",
+    "behavioral_fingerprint",
+    "perception_extension_witness",
+    "blind_certification_request",
+    "independent_gate_vector",
+    "integrity_finding"
+  ],
+  "findings": [],
+  "passed": true,
+  "total_validated_records": 24600,
+  "validated_candidates": 40,
+  "validated_records_by_schema": {
+    "behavioral_fingerprint": 23040,
+    "blind_certification_request": 40,
+    "diagnostic_ast": 120,
+    "diagnostic_contract": 40,
+    "independent_gate_vector": 40,
+    "integrity_finding": 0,
+    "parameter_search_trace": 920,
+    "perception_extension_witness": 40,
+    "semantic_identity": 40,
+    "structure_search_trace": 320
+  }
+}
