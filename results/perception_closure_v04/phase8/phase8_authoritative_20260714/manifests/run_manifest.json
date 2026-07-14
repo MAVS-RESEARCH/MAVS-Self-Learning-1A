@@ -1,0 +1,9 @@
+{
+  "matrix_hash": "938cf153623831ef5f7df078881402f810e68baf16b28f4a5cff9e40e8ece6e8",
+  "phase": 8,
+  "result_namespace": "results/perception_closure_v04/phase8/phase8_authoritative_20260714",
+  "run_id": "phase8_authoritative_20260714",
+  "schema_version": "1.0.0",
+  "shared_bank_manifest": "manifests/shared_bank_manifest.json",
+  "source_commit": "31d7a673ef0a23a24f41485bfc84a5c4541eac88"
+}

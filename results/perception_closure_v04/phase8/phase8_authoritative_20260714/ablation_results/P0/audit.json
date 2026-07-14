@@ -1,0 +1,13 @@
+{
+  "causal_gate_passed": true,
+  "causal_interpretation": "zero_uar=PASS; zero_frr=PASS; zero_closure_error=PASS; zero_scope_leakage=PASS; sparse_basis=PASS; no_uncertified_terminal=PASS",
+  "condition_id": "P0",
+  "execution_complete": true,
+  "finding_count": 0,
+  "negative_and_null_results_retained": true,
+  "schema_version": "1.0.0",
+  "shared_bank_bound": true,
+  "single_factor_diff_valid": true,
+  "status": "PASS",
+  "trace_index_complete": true
+}

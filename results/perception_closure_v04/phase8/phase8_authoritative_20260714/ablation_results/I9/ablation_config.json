@@ -1,0 +1,41 @@
+{
+  "causal_question": "Can confounded or label-leaking dependencies pass without counterfactual audit?",
+  "expected_direction": "counterfactual_violations_increase",
+  "group": "synthesis_integrity",
+  "id": "I9",
+  "isolated_factor": "counterfactual_dependency_audit",
+  "pass_fail_interpretation": "Violations must increase on planted confounds; failure to exercise them invalidates the fixture.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "nuisance_violations",
+    "causal_violations",
+    "false_witness_rate",
+    "promotion_pressure"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": false,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "structured",
+    "semantic_deduplication": true,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": true
+  },
+  "toggle": {
+    "counterfactual_dependency_audit": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "scope_gates",
+    "retained_gates",
+    "holdout_gates",
+    "adversarial_gates",
+    "fitting"
+  ]
+}

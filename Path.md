@@ -1569,6 +1569,64 @@ The authoritative independent auditor scanned every Phase 7 script. All **21/21*
 - Claim boundary: disposable `CLAIMS.md` is restricted to locked Phase 7, planted integrity/recurrence fixtures, and the preserved Phase 4 diagnostic pre-rerun. It excludes Phase 9, deployment, general-domain, and competitive-oracle claims.
 - Advancement state: disposable stress evidence passes. Clean source commit, authoritative rerun, final audit/seal, evidence commit, and GitHub synchronization remain pending; Phase 8 is **not yet complete**.
 
+### P8-E004 - Authoritative committed-source execution, independent audit, and seal
+
+- Date and phase: 2026-07-14 (Asia/Karachi), Phase 8.
+- Accepted source checkpoint: `31d7a673ef0a23a24f41485bfc84a5c4541eac88` (`Implement Phase 8 ablation integrity program`). The working tree was clean before compilation; the run manifest, environment lock, and seal record this exact commit.
+- Command: `node scripts/run_phase8.mjs --run-id phase8_authoritative_20260714`.
+- Exact orchestration result: **PASS**, exit code `0`, wall time `265.6 s`; all 16 console-instrumented orchestration steps completed. Inherited Phase 0-7 tests passed; focused Phase 8 tests passed **79/79** before and after execution; full repository regression passed **345/345**.
+- Matrix execution: 39/39 serialized conditions completed. Each non-reference condition has exactly one normalized semantic diff; I0/P0/L0 have none. All conditions share one bank manifest, one declared-budget hash, paired seeds, and complete per-ID evidence bundles.
+- Bank evidence: sealed Phase 7 contributes 96 canonical cases evaluated at four library sizes (384 executions per runtime condition). The preserved Phase 4 pre-rerun contributes exactly 500 worlds/25,000 decisions and is replayed for all 39 conditions, totaling 975,000 decision replays per matrix execution. The Phase 4 source SHA-256 remains equal to its immutable legacy index; Phase 9 was not started and no blind bank was accessed.
+- Synthesis results: I0 has 12 executable template classes, 20 active-eligible promoted references, and zero missing-witness promotions. I1 collapses to one template and has zero certification pressure/publication eligibility. I2 doubles certification pressure from 20 to 40; I3 raises behavioral equivalence from 10 to 25 and active eligibility from 20 to 40. I4 fixed parameters worsen mean protected error from `0.112370` to `0.119358`. I5 exposes 40 operation-noncompliant candidates. I6/I7 detect 1/3 taint paths respectively and do not change valid blind protected metrics. I8 permits 25 missing-witness promotions. I9 confounded candidates raise protected error to `0.397873`. I10 makes the planted one-template run publishable only with the alarm disabled. I11 random search has witnessed yield `0.40` versus structured I0 `0.50`, while I0 has lower protected error (`0.112370` versus `0.121658`).
+- Runtime results: P0 has UAR `0`, FRR `0`, closure error `0`, influential scope leakage `0`, uncertified terminals `0`, maximum active basis `2`, local resolution `288`, and residual escalation `64/384`. P1 has local resolution `0` and escalation `352/384`. Required pathologies are observed: P5 scope leakage `32` and FRR `0.083333`; P6 maximum basis `3`; P7 additive FRR `0.083333`; P8 meta-channel hard veto `96` and FRR `0.25`; P9 uncertified interactions `32`, UAR/FRR `0.083333/0.083333`; P10 uncertified terminals `352` and closure error `0.458333`; P12/P13 expose UAR `0.166667` and FRR `0.166667` respectively at zero escalation; P14 FRR is `0.083333`. P15 is quarantined, has 384 oracle accesses, zero protected error, zero escalation, and is excluded from competitive claims.
+- Persistence results: L0 has UAR/FRR `0/0`, scope leakage `0`, maximum basis `2`, library size `12`, repeated failed paths `0`, and mean rounds `0.171875`. Fresh L1 increases rounds to `0.223958`; frozen L2 increases rounds to `0.557292`; L3 grows the library to `203`, maximum basis to `8`, and leakage to `16`; L4 repeats 15 failed paths; L6 loses scope context and leaks 16 times; L8 matches the full-program round burden without protected/scope regression; L9 reaches maximum basis `12` and 16 leaks; L10 activates 16 stale scopes and raises FRR to `0.083333`.
+- Legacy diagnostic result: the P0 visible-evidence replay contracts the preserved Phase 4 escalation band from `0.26488` to `0.09564`. This is explicitly diagnostic, retrospective, and non-claim-bearing; its public input excludes `unsafe`, while the evaluator-only truth remains a separate parquet.
+- Isolation and integrity: zero findings; identical shared-bank and declared-budget hashes; no budget overrun; label/name/operation/order permutations invariant; I6/I7 firewalls pass; negative/null inventory contains all 39 conditions; no unresolved theory revision.
+- Replay: execute/isolation/aggregate regeneration covered 697 deterministic files with zero missing, added, or changed paths.
+- Independent audit: **PASS**, 39 conditions, 21/21 WorkPlan clauses, 699 indexed pre-audit artifacts, zero findings. Final audit SHA-256 and seal value are both `6AB6E66FB52B543D0776EF91BDFC5F1C141AEF3503C8A7FD879740F884B7CD7D`.
+- Result contract: 702 files, 50,470,795 bytes, under `results/perception_closure_v04/phase8/phase8_authoritative_20260714/`. Prior results remain byte-preserved. The run is sealed with `phase9_executed: false`.
+- Advancement gate: all 10/10 Phase 8 exit gates pass; all 39/39 condition interpretations resolve; 21/21 WorkPlan clauses pass; audit findings are zero. Evidence commit and GitHub synchronization remain pending.
+
+### P8-E005 - Exact Phase 8 console comment and statement registry
+
+The authoritative independent auditor scanned every Phase 8 script using Python AST call detection and JavaScript statement detection. All **23/23** statements have an immediately preceding identifying comment; `reports/console_log_registry.json` records `passed: true`.
+
+| File | Comment line and exact comment | Statement line |
+|---|---|---|
+| `scripts/aggregate_phase8.py` | 182 `# console.log: phase8.aggregate.complete` | 183 `print(...)` |
+| `scripts/audit_phase8.py` | 220 `# console.log: phase8.audit.complete` | 221 `print(...)` |
+| `scripts/clean_phase8_results.py` | 23 `# console.log: phase8.clean.named_run` | 24 `print(...)` |
+| `scripts/compile_phase8_matrix.py` | 117 `# console.log: phase8.compile.complete` | 118 `print(...)` |
+| `scripts/replay_phase8.py` | 57 `# console.log: phase8.replay.complete` | 58 `print(...)` |
+| `scripts/run_phase8.mjs` | 26 `// console.log: phase8.orchestrator.step01.start` | 27 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 29 `// console.log: phase8.orchestrator.step02.clean_named_run` | 30 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 34 `// console.log: phase8.orchestrator.step03.source_cleanliness` | 35 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 41 `// console.log: phase8.orchestrator.step04.inherited_tests_before` | 42 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 46 `// console.log: phase8.orchestrator.step05.phase8_tests_before` | 47 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 51 `// console.log: phase8.orchestrator.step06.compile_matrix` | 52 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 56 `// console.log: phase8.orchestrator.step07.run_ablations` | 57 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 61 `// console.log: phase8.orchestrator.step08.validate_isolation` | 62 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 66 `// console.log: phase8.orchestrator.step09.aggregate` | 67 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 71 `// console.log: phase8.orchestrator.step10.phase8_tests_after` | 72 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 76 `// console.log: phase8.orchestrator.step11.full_regression` | 77 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 81 `// console.log: phase8.orchestrator.step12.write_orchestration_evidence` | 82 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 87 `// console.log: phase8.orchestrator.step13.deterministic_replay` | 88 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 92 `// console.log: phase8.orchestrator.step14.independent_audit` | 93 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 97 `// console.log: phase8.orchestrator.step15.seal` | 98 `console.log(...)` |
+| `scripts/run_phase8.mjs` | 106 `// console.log: phase8.orchestrator.step16.complete` | 107 `console.log(...)` |
+| `scripts/run_phase8_ablations.py` | 190 `# console.log: phase8.run.complete` | 191 `print(...)` |
+| `scripts/validate_phase8_isolation.py` | 129 `# console.log: phase8.isolation.complete` | 130 `print(...)` |
+
+### P8-E006 - Post-seal stress and final advancement verdict before publication
+
+- Seal-enforcement command: `python scripts/clean_phase8_results.py --run-id phase8_authoritative_20260714`.
+- Exact result: expected nonzero exit `1`, `RuntimeError: Refusing to clean a sealed Phase 8 run.` The seal remained present. Audit SHA-256 before and after remained `6AB6E66FB52B543D0776EF91BDFC5F1C141AEF3503C8A7FD879740F884B7CD7D`.
+- Results preservation: Phase 6/7 seal and audit hashes, the immutable Phase 4 legacy-indexed source hash, and every prior result namespace remain unchanged. Phase 8 artifacts exist only under the prescribed Version 0.4 Phase 8 namespace.
+- No-training/anti-overfit evidence: Phase 8 trains no opaque model. It uses frozen Phase 6 executable candidates, the sealed Phase 7 microbenchmark, a separately indexed Phase 4 diagnostic replay, planted attack/recurrence fixtures, exact single-factor diffs, paired seeds, matched budgets, nonsemantic permutations, separated auditor truth, 2,000-draw deterministic paired intervals, full negative/null retention, and full artifact replay.
+- Claim boundary: `reports/CLAIMS.md` is Phase 8-limited. It does not claim Phase 9 blind-bank or three-generation validation, general deployment performance, or competitive oracle performance.
+- Final technical verdict: **PASS - 100% compliant with WorkPlan Section 23 Phase 8 as implemented, stress-tested, deterministically replayed, independently audited, and sealed**. Phase 9 remains unimplemented and unauthorized in this task.
+- Publication state: the source checkpoint is `31d7a673ef0a23a24f41485bfc84a5c4541eac88`; the sealed evidence and this ledger entry must still be committed and pushed before completion is reported.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:

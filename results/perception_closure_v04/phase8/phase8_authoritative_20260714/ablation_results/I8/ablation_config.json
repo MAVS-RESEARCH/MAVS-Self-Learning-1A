@@ -1,0 +1,40 @@
+{
+  "causal_question": "Can candidates promote without separating a previously inseparable contrast?",
+  "expected_direction": "missing_witness_promotions_increase",
+  "group": "synthesis_integrity",
+  "id": "I8",
+  "isolated_factor": "perception_extension_witness_gate",
+  "pass_fail_interpretation": "Missing-witness promotions must appear and demonstrate why the gate is necessary.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "missing_witness_promotions",
+    "noop_promotions",
+    "parent_identical_promotions",
+    "retained_regression"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": false,
+    "proposal_engine": "structured",
+    "semantic_deduplication": true,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": true
+  },
+  "toggle": {
+    "perception_extension_witness_gate": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "other_gates",
+    "certifier_blindness",
+    "budgets",
+    "candidate_count"
+  ]
+}

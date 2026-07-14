@@ -1,0 +1,18 @@
+{
+  "condition_count": 39,
+  "gates": {
+    "all_condition_gates_resolved": true,
+    "dedup_pressure_reproduced": true,
+    "firewalls_detected_attacks": true,
+    "i0_reference_passed": true,
+    "i1_rejected_before_metrics": true,
+    "l0_reference_passed": true,
+    "no_theory_revisions_unresolved": true,
+    "p0_outresolves_p1_without_protected_regression": true,
+    "p0_reference_passed": true,
+    "scope_sparse_additive_consolidation_pathologies": true
+  },
+  "passed": true,
+  "schema_version": "1.0.0",
+  "theory_revision_count": 0
+}

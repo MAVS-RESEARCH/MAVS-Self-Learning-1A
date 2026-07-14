@@ -1,0 +1,42 @@
+{
+  "causal_question": "Does structured synthesis outperform equal-budget random generation?",
+  "expected_direction": "valid_or_witnessed_yield_decrease",
+  "group": "synthesis_integrity",
+  "id": "I11",
+  "isolated_factor": "proposal_engine",
+  "pass_fail_interpretation": "Structured synthesis must improve a preregistered yield or closure metric without protected regression.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "valid_yield",
+    "witnessed_yield",
+    "semantic_diversity",
+    "harmful_noop_rate",
+    "search_cost"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "budget_matched_random",
+    "semantic_deduplication": true,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": true
+  },
+  "toggle": {
+    "proposal_engine": "budget_matched_random"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "grammar",
+    "fitting",
+    "certifier",
+    "candidate_budget",
+    "compute_budget"
+  ]
+}

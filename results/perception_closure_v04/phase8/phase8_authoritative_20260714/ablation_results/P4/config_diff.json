@@ -1,0 +1,13 @@
+{
+  "condition_id": "P4",
+  "diff_count": 1,
+  "normalized_diff": {
+    "active_query_planner": {
+      "ablation": false,
+      "reference": true
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

@@ -1,0 +1,38 @@
+{
+  "causal_question": "Are reusable closure operators the most useful memory unit?",
+  "expected_direction": "closure_burden_improvement_without_protected_regression",
+  "group": "persistence_consolidation",
+  "id": "L8",
+  "isolated_factor": "persistence_payload",
+  "pass_fail_interpretation": "Superiority over L5-L7 is supported only without protected or scope regression.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "rounds",
+    "time_to_closure",
+    "recurrence",
+    "complexity",
+    "transfer",
+    "scope_leakage"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "compact_case_programs_only",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {
+    "persistence_payload": "compact_case_programs_only"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "retained_byte_budget",
+    "ledgers",
+    "runtime",
+    "metrics"
+  ]
+}

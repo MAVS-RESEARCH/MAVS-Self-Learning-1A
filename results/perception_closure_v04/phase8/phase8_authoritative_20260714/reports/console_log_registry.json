@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "comment": "# console.log: phase8.aggregate.complete",
+      "comment_line": 182,
+      "passed": true,
+      "path": "scripts/aggregate_phase8.py",
+      "statement": "print(f'{{\"event\":\"phase8.aggregate.complete\",\"conditions\":{len(inventory)},\"theory_revisions\":{len(theory_revisions)},\"gates_passed\":{sum(phase_gates.values())}}}')",
+      "statement_line": 183
+    },
+    {
+      "comment": "# console.log: phase8.audit.complete",
+      "comment_line": 220,
+      "passed": true,
+      "path": "scripts/audit_phase8.py",
+      "statement": "print(f'{{\"event\":\"phase8.audit.complete\",\"conditions\":{len(observed_ids)},\"clauses\":{len(clauses)},\"findings\":0}}')",
+      "statement_line": 221
+    },
+    {
+      "comment": "# console.log: phase8.clean.named_run",
+      "comment_line": 23,
+      "passed": true,
+      "path": "scripts/clean_phase8_results.py",
+      "statement": "print(f'{{\"event\":\"phase8.clean.named_run\",\"run_id\":\"{args.run_id}\"}}')",
+      "statement_line": 24
+    },
+    {
+      "comment": "# console.log: phase8.compile.complete",
+      "comment_line": 117,
+      "passed": true,
+      "path": "scripts/compile_phase8_matrix.py",
+      "statement": "print(f'{{\"event\":\"phase8.compile.complete\",\"conditions\":{len(list(registry))},\"phase7_cases\":{len(phase7_cases)},\"phase4_decisions\":{len(phase4)}}}')",
+      "statement_line": 118
+    },
+    {
+      "comment": "# console.log: phase8.replay.complete",
+      "comment_line": 57,
+      "passed": true,
+      "path": "scripts/replay_phase8.py",
+      "statement": "print(f'{{\"event\":\"phase8.replay.complete\",\"files\":{len(after)},\"changed\":0}}')",
+      "statement_line": 58
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step01.start",
+      "comment_line": 26,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step01.start\", run_id: runId }));",
+      "statement_line": 27
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step02.clean_named_run",
+      "comment_line": 29,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step02.clean_named_run\" }));",
+      "statement_line": 30
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step03.source_cleanliness",
+      "comment_line": 34,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step03.source_cleanliness\" }));",
+      "statement_line": 35
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step04.inherited_tests_before",
+      "comment_line": 41,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step04.inherited_tests_before\" }));",
+      "statement_line": 42
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step05.phase8_tests_before",
+      "comment_line": 46,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step05.phase8_tests_before\" }));",
+      "statement_line": 47
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step06.compile_matrix",
+      "comment_line": 51,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step06.compile_matrix\" }));",
+      "statement_line": 52
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step07.run_ablations",
+      "comment_line": 56,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step07.run_ablations\" }));",
+      "statement_line": 57
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step08.validate_isolation",
+      "comment_line": 61,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step08.validate_isolation\" }));",
+      "statement_line": 62
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step09.aggregate",
+      "comment_line": 66,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step09.aggregate\" }));",
+      "statement_line": 67
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step10.phase8_tests_after",
+      "comment_line": 71,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step10.phase8_tests_after\" }));",
+      "statement_line": 72
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step11.full_regression",
+      "comment_line": 76,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step11.full_regression\" }));",
+      "statement_line": 77
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step12.write_orchestration_evidence",
+      "comment_line": 81,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step12.write_orchestration_evidence\" }));",
+      "statement_line": 82
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step13.deterministic_replay",
+      "comment_line": 87,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step13.deterministic_replay\" }));",
+      "statement_line": 88
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step14.independent_audit",
+      "comment_line": 92,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step14.independent_audit\" }));",
+      "statement_line": 93
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step15.seal",
+      "comment_line": 97,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step15.seal\" }));",
+      "statement_line": 98
+    },
+    {
+      "comment": "// console.log: phase8.orchestrator.step16.complete",
+      "comment_line": 106,
+      "passed": true,
+      "path": "scripts/run_phase8.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase8.orchestrator.step16.complete\", run_id: runId, source_commit: sourceCommit }));",
+      "statement_line": 107
+    },
+    {
+      "comment": "# console.log: phase8.run.complete",
+      "comment_line": 190,
+      "passed": true,
+      "path": "scripts/run_phase8_ablations.py",
+      "statement": "print(f'{{\"event\":\"phase8.run.complete\",\"conditions\":{len(metrics_by_id)},\"phase7_replays\":{len(reference_runtime_records or [])},\"phase4_replays\":{len(phase4_public) * len(metrics_by_id)}}}')",
+      "statement_line": 191
+    },
+    {
+      "comment": "# console.log: phase8.isolation.complete",
+      "comment_line": 129,
+      "passed": true,
+      "path": "scripts/validate_phase8_isolation.py",
+      "statement": "print(f'{{\"event\":\"phase8.isolation.complete\",\"conditions\":{len(list(registry))},\"findings\":0,\"permutation_passed\":true}}')",
+      "statement_line": 130
+    }
+  ],
+  "schema_version": "1.0.0",
+  "statement_count": 23
+}

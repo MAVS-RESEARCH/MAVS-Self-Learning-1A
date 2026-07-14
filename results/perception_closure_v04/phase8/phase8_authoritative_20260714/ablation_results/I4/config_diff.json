@@ -1,0 +1,13 @@
+{
+  "condition_id": "I4",
+  "diff_count": 1,
+  "normalized_diff": {
+    "parameter_fitting": {
+      "ablation": "fixed_0_5_unit_values",
+      "reference": "bounded_search"
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

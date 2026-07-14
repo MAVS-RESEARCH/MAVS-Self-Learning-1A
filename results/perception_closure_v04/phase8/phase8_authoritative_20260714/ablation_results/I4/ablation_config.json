@@ -1,0 +1,42 @@
+{
+  "causal_question": "Does real fitting prevent template collapse and poor scope or calibration?",
+  "expected_direction": "fit_or_scope_quality_decrease",
+  "group": "synthesis_integrity",
+  "id": "I4",
+  "isolated_factor": "parameter_fitting",
+  "pass_fail_interpretation": "Fixed parameters must reduce fit, witness, or scope quality; equivalence makes fitting attribution unsupported.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "parameter_diversity",
+    "calibration_error",
+    "scope_leakage",
+    "witness_success",
+    "unused_compute"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "fixed_0_5_unit_values",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "structured",
+    "semantic_deduplication": true,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": true
+  },
+  "toggle": {
+    "parameter_fitting": "fixed_0_5_unit_values"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "structure_proposals",
+    "splits",
+    "certifier",
+    "scopes_schema",
+    "compute_budget"
+  ]
+}

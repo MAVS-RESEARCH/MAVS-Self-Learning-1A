@@ -1,0 +1,45 @@
+{
+  "causal_question": "What is the causal value of the resolver itself?",
+  "expected_direction": "residual_escalation_increase",
+  "group": "perception_closure_runtime",
+  "id": "P11",
+  "isolated_factor": "uncertainty_fallback",
+  "pass_fail_interpretation": "P0 must reduce residual escalation and closure burden without protected regression.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "initial_unresolved",
+    "residual_escalation",
+    "local_resolution",
+    "burden"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": true,
+    "uncertainty_fallback": "immediate_escalation",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "uncertainty_fallback": "immediate_escalation"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "fast_loop",
+    "escalation_semantics",
+    "cases",
+    "budgets",
+    "metrics"
+  ]
+}

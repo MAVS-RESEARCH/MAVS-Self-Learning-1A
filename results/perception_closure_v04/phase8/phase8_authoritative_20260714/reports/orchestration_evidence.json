@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "phase8_authoritative_20260714",
+  "source_commit": "31d7a673ef0a23a24f41485bfc84a5c4541eac88",
+  "completed_steps": [
+    "clean_named_run",
+    "source_cleanliness",
+    "inherited_tests_before",
+    "phase8_tests_before",
+    "matrix_compiled",
+    "ablations_complete",
+    "isolation_validated",
+    "aggregate_complete",
+    "phase8_tests_after",
+    "full_regression"
+  ]
+}

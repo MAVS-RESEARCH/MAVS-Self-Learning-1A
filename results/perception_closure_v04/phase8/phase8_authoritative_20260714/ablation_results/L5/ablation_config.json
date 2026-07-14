@@ -1,0 +1,38 @@
+{
+  "causal_question": "What does semantic memory contribute without executable diagnostics?",
+  "expected_direction": "semantic_recognition_without_full_closure_gain",
+  "group": "persistence_consolidation",
+  "id": "L5",
+  "isolated_factor": "persistence_payload",
+  "pass_fail_interpretation": "This separates semantic recognition from executable closure and carries no standalone superiority claim.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "transfer",
+    "time_to_discovery",
+    "time_to_closure",
+    "local_resolution",
+    "query_cost",
+    "synthesis_count"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "ontology_only",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {
+    "persistence_payload": "ontology_only"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "retained_byte_budget",
+    "g2_g3_cases",
+    "runtime",
+    "metrics"
+  ]
+}

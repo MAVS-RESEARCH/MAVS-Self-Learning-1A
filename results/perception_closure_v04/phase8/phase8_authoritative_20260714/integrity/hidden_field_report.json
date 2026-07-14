@@ -1,0 +1,10 @@
+{
+  "forbidden_phase4_columns": [],
+  "i6_firewall_detected": true,
+  "i7_firewall_detected": true,
+  "passed": true,
+  "phase4_public_rows": 25000,
+  "phase7_case_count": 96,
+  "public_taint_count": 0,
+  "schema_version": "1.0.0"
+}

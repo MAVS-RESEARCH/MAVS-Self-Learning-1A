@@ -1,0 +1,13 @@
+{
+  "condition_id": "L1",
+  "diff_count": 1,
+  "normalized_diff": {
+    "retained_governance_state": {
+      "ablation": "fresh_reset_each_generation",
+      "reference": "cumulative"
+    }
+  },
+  "reference_id": "L0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

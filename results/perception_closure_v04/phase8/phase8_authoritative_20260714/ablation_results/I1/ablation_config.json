@@ -1,0 +1,39 @@
+{
+  "causal_question": "Does integrity reject the exact Phase 3 template pathology?",
+  "expected_direction": "rejected_before_outcome_interpretation",
+  "group": "synthesis_integrity",
+  "id": "I1",
+  "isolated_factor": "structure_search",
+  "pass_fail_interpretation": "Every fixed-template name-only candidate must be rejected before performance interpretation.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "template_count",
+    "name_only_rejections",
+    "promoted_count"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "structured",
+    "semantic_deduplication": true,
+    "structure_search": "fixed_outer_template_renamed_features",
+    "template_collapse_alarm": true
+  },
+  "toggle": {
+    "structure_search": "fixed_outer_template_renamed_features"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "budgets",
+    "candidate_count",
+    "certifier",
+    "metrics"
+  ]
+}

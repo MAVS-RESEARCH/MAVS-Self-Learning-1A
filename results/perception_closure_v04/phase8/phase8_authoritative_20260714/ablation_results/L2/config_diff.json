@@ -1,0 +1,13 @@
+{
+  "condition_id": "L2",
+  "diff_count": 1,
+  "normalized_diff": {
+    "post_g1_learning": {
+      "ablation": "frozen_after_g1",
+      "reference": "enabled"
+    }
+  },
+  "reference_id": "L0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

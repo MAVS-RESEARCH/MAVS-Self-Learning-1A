@@ -1,0 +1,13 @@
+{
+  "causal_gate_passed": true,
+  "causal_interpretation": "compact_program_burden=PASS; no_scope_regression=PASS",
+  "condition_id": "L8",
+  "execution_complete": true,
+  "finding_count": 0,
+  "negative_and_null_results_retained": true,
+  "schema_version": "1.0.0",
+  "shared_bank_bound": true,
+  "single_factor_diff_valid": true,
+  "status": "PASS",
+  "trace_index_complete": true
+}

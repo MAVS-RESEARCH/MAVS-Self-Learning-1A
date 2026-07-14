@@ -1,0 +1,252 @@
+{
+  "candidate_name_operation_expected_label_proposal_order": {
+    "candidate_count": 20,
+    "findings": [],
+    "passed": true,
+    "permuted_order": [
+      15,
+      8,
+      3,
+      13,
+      18,
+      7,
+      14,
+      19,
+      1,
+      12,
+      4,
+      9,
+      16,
+      5,
+      11,
+      0,
+      6,
+      2,
+      10,
+      17
+    ],
+    "records": [
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-POLICY-INTERACTION-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-15",
+        "permuted_operation": "retire",
+        "permuted_position": 0
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-SCOPE-NARROW-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-8",
+        "permuted_operation": "scope_expand",
+        "permuted_position": 1
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-SPLIT-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-3",
+        "permuted_operation": "merge",
+        "permuted_position": 2
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-EVIDENCE-RECOVERY-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-13",
+        "permuted_operation": "policy_interaction",
+        "permuted_position": 3
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-RETIRE-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-18",
+        "permuted_operation": "split",
+        "permuted_position": 4
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-ADD-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-7",
+        "permuted_operation": "configuration_specialization",
+        "permuted_position": 5
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-POLICY-INTERACTION-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-14",
+        "permuted_operation": "retire",
+        "permuted_position": 6
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-RETIRE-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-19",
+        "permuted_operation": "scope_narrow",
+        "permuted_position": 7
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-RECALIBRATE-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-1",
+        "permuted_operation": "recalibrate",
+        "permuted_position": 8
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-EVIDENCE-RECOVERY-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-12",
+        "permuted_operation": "add",
+        "permuted_position": 9
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-MERGE-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-4",
+        "permuted_operation": "evidence_recovery",
+        "permuted_position": 10
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-SCOPE-NARROW-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-9",
+        "permuted_operation": "merge",
+        "permuted_position": 11
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-16",
+        "permuted_operation": "add",
+        "permuted_position": 12
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-MERGE-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-5",
+        "permuted_operation": "scope_expand",
+        "permuted_position": 13
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-SCOPE-EXPAND-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-11",
+        "permuted_operation": "split",
+        "permuted_position": 14
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-RECALIBRATE-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-0",
+        "permuted_operation": "scope_narrow",
+        "permuted_position": 15
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-ADD-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "harmful",
+        "permuted_name": "permuted-documentary-label-6",
+        "permuted_operation": "evidence_recovery",
+        "permuted_position": 16
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-SPLIT-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-2",
+        "permuted_operation": "policy_interaction",
+        "permuted_position": 17
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-SCOPE-EXPAND-A",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-10",
+        "permuted_operation": "configuration_specialization",
+        "permuted_position": 18
+      },
+      {
+        "behavior_invariant": true,
+        "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-B",
+        "hash_invariant": true,
+        "outcome_invariant": true,
+        "permuted_expected_class": "beneficial",
+        "permuted_name": "permuted-documentary-label-17",
+        "permuted_operation": "recalibrate",
+        "permuted_position": 19
+      }
+    ],
+    "seed": 850001,
+    "tested_fields": [
+      "candidate_name",
+      "operation_label",
+      "expected_class",
+      "proposal_order"
+    ]
+  },
+  "passed": true,
+  "runtime_case_order": {
+    "execution_count": 384,
+    "outcome_multiset_invariant": true,
+    "seed": 850002
+  },
+  "schema_version": "1.0.0",
+  "tested_nonsemantic_fields": [
+    "candidate_name",
+    "operation_label",
+    "expected_class",
+    "proposal_order",
+    "runtime_case_order"
+  ]
+}

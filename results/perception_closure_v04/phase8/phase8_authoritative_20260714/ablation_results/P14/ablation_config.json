@@ -1,0 +1,45 @@
+{
+  "causal_question": "Does pre-DS-CF raw-correlation overbreadth recur?",
+  "expected_direction": "safe_correlation_frr_increase",
+  "group": "perception_closure_runtime",
+  "id": "P14",
+  "isolated_factor": "correlation_policy",
+  "pass_fail_interpretation": "Safe correlated cases must reveal overbreadth and favorable aggregates remain non-deployable.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "safe_correlation_frr",
+    "hard_veto_causes",
+    "uar",
+    "residual_escalation"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "raw_correlation_hard_veto",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": true,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "correlation_policy": "raw_correlation_hard_veto"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "evidence",
+    "cases",
+    "budgets",
+    "kernel_rules",
+    "metrics"
+  ]
+}

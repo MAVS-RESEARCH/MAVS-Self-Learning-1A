@@ -1,0 +1,13 @@
+{
+  "condition_id": "L3",
+  "diff_count": 1,
+  "normalized_diff": {
+    "consolidation_and_retirement": {
+      "ablation": false,
+      "reference": true
+    }
+  },
+  "reference_id": "L0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

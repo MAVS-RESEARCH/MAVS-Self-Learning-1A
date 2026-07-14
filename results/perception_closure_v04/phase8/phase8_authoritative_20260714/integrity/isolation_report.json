@@ -1,0 +1,12 @@
+{
+  "condition_count": 39,
+  "declared_budget_hash_count": 1,
+  "finding_count": 0,
+  "findings": [],
+  "runtime_monkey_patching_used": false,
+  "schema_version": "1.0.0",
+  "serialized_toggle_required": true,
+  "shared_bank_hash_count": 1,
+  "single_factor_diff_count": 36,
+  "status": "PASS"
+}

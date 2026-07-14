@@ -1,0 +1,25 @@
+{
+  "audit_sha256": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+  "checks": {
+    "audit_findings": true,
+    "audit_sha256": true,
+    "audit_status": true,
+    "family_gate_count": true,
+    "gate_count": true,
+    "phase8_previously_executed": true,
+    "run_id": true,
+    "source_commit": true
+  },
+  "passed": true,
+  "phase7_root": "results/perception_closure_v04/phase7/phase7_authoritative_20260714",
+  "seal": {
+    "audit_findings": 0,
+    "audit_sha256": "A9D2C8A475B7EEE31B79192E902C0224C0E700CCAEA48460E9D2A9A424DD09C8",
+    "audit_status": "PASS",
+    "phase8_executed": false,
+    "run_id": "phase7_authoritative_20260714",
+    "schema_version": "1.0.0",
+    "sealed_date": "2026-07-14",
+    "source_commit": "d71d667a377ed2c0dd80a93e38b3ba70554d3a9a"
+  }
+}

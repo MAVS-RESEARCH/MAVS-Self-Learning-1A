@@ -1,0 +1,37 @@
+{
+  "causal_question": "Is reusable evidence acquisition valuable independent of diagnostic growth?",
+  "expected_direction": "query_yield_gain_without_full_diagnostic_gain",
+  "group": "persistence_consolidation",
+  "id": "L7",
+  "isolated_factor": "persistence_payload",
+  "pass_fail_interpretation": "Improvement supports query-policy memory; no gain limits that claim.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "query_yield",
+    "rounds",
+    "evidence_unavailable_escalation",
+    "uar",
+    "frr"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "query_policies_only",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {
+    "persistence_payload": "query_policies_only"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "retained_byte_budget",
+    "ledgers",
+    "runtime",
+    "metrics"
+  ]
+}

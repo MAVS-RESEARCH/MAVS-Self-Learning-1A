@@ -1,0 +1,14 @@
+{
+  "condition_id": "L0",
+  "group": "persistence_consolidation",
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "full_governance_knowledge",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  }
+}

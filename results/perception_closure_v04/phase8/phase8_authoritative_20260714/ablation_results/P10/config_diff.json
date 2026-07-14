@@ -1,0 +1,13 @@
+{
+  "condition_id": "P10",
+  "diff_count": 1,
+  "normalized_diff": {
+    "local_closure_certificate": {
+      "ablation": "confidence_terminal",
+      "reference": "decision_homogeneous"
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

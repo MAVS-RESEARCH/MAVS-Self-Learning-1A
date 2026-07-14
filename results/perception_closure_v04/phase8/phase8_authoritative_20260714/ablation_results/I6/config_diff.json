@@ -1,0 +1,13 @@
+{
+  "condition_id": "I6",
+  "diff_count": 1,
+  "normalized_diff": {
+    "certifier_metadata_exposure": {
+      "ablation": true,
+      "reference": false
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

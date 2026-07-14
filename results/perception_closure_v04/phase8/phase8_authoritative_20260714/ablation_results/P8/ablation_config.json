@@ -1,0 +1,45 @@
+{
+  "causal_question": "Do novelty, masking, availability, or scope signals become false danger?",
+  "expected_direction": "false_danger_pressure_increase",
+  "group": "perception_closure_runtime",
+  "id": "P8",
+  "isolated_factor": "typed_channels",
+  "pass_fail_interpretation": "False-danger pressure must appear while P0 retains zero typed-channel violations.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "meta_signal_hard_veto",
+    "frr",
+    "unnecessary_rejection",
+    "query_suppression"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": false,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "typed_channels": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "diagnostics",
+    "queries",
+    "scopes",
+    "budgets",
+    "resolver"
+  ]
+}

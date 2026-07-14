@@ -1,0 +1,13 @@
+{
+  "condition_id": "I8",
+  "diff_count": 1,
+  "normalized_diff": {
+    "perception_extension_witness_gate": {
+      "ablation": false,
+      "reference": true
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

@@ -1,0 +1,25 @@
+{
+  "condition_id": "P7",
+  "intervals": {
+    "external_escalation": {
+      "lower_95": 0.0,
+      "mean": 0.0,
+      "n": 384.0,
+      "upper_95": 0.0
+    },
+    "protected_error": {
+      "lower_95": 0.0234375,
+      "mean": 0.041666666666666664,
+      "n": 384.0,
+      "upper_95": 0.0625
+    },
+    "rounds": {
+      "lower_95": -0.11197916666666667,
+      "mean": -0.08333333333333333,
+      "n": 384.0,
+      "upper_95": -0.057291666666666664
+    }
+  },
+  "method": "paired_deterministic_bootstrap_2000_draws",
+  "schema_version": "1.0.0"
+}

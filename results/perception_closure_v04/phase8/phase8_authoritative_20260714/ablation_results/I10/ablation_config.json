@@ -1,0 +1,40 @@
+{
+  "causal_question": "Would the pipeline publish an attractive one-template run without the collapse alarm?",
+  "expected_direction": "planted_collapse_becomes_publishable",
+  "group": "synthesis_integrity",
+  "id": "I10",
+  "isolated_factor": "template_collapse_alarm",
+  "pass_fail_interpretation": "The planted one-template run must become publishable only with the alarm disabled.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "template_count",
+    "collapse_detected",
+    "publication_allowed"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "structured",
+    "semantic_deduplication": true,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": false
+  },
+  "toggle": {
+    "template_collapse_alarm": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "semantic_deduplication",
+    "behavioral_deduplication",
+    "certification",
+    "proposals",
+    "budgets"
+  ]
+}

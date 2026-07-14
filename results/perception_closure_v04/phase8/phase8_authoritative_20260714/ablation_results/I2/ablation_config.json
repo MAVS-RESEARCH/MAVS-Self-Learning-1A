@@ -1,0 +1,40 @@
+{
+  "causal_question": "Can name-only or exact semantic duplicates enter certification pressure?",
+  "expected_direction": "duplicate_pressure_increase",
+  "group": "synthesis_integrity",
+  "id": "I2",
+  "isolated_factor": "semantic_deduplication",
+  "pass_fail_interpretation": "Duplicate or certification pressure must increase while the protected harness remains valid.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "semantic_duplicate_count",
+    "certification_pressure",
+    "active_eligibility"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "structured",
+    "semantic_deduplication": false,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": true
+  },
+  "toggle": {
+    "semantic_deduplication": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "budgets",
+    "behavioral_deduplication",
+    "fitting",
+    "certifier",
+    "runtime"
+  ]
+}

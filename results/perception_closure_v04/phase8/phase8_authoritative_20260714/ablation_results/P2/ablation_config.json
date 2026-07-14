@@ -1,0 +1,45 @@
+{
+  "causal_question": "Does generic confidence choose the wrong perception extension?",
+  "expected_direction": "query_waste_or_closure_error_increase",
+  "group": "perception_closure_runtime",
+  "id": "P2",
+  "isolated_factor": "explicit_hypothesis_set",
+  "pass_fail_interpretation": "Wrong actions, query waste, or closure error must rise or hypothesis attribution is unsupported.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "separating_action_accuracy",
+    "ambiguity_contraction",
+    "closure_error",
+    "query_waste"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": false,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": true,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "explicit_hypothesis_set": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "actions",
+    "queries",
+    "scopes",
+    "budgets",
+    "metrics"
+  ]
+}

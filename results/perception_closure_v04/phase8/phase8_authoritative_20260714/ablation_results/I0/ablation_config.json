@@ -1,0 +1,40 @@
+{
+  "causal_question": "What does the integrity-complete synthesis system achieve?",
+  "expected_direction": "reference_pass",
+  "group": "synthesis_integrity",
+  "id": "I0",
+  "isolated_factor": "integrity_complete_executable_synthesis",
+  "pass_fail_interpretation": "Every Phase 6 gate must pass or all synthesis contrasts are blocked.",
+  "reference_id": "I0",
+  "required_metrics": [
+    "candidate_diversity",
+    "template_count",
+    "semantic_classes",
+    "behavioral_classes",
+    "gate_pass_rate",
+    "witness_success"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "behavioral_deduplication": true,
+    "certifier_metadata_exposure": false,
+    "counterfactual_dependency_audit": true,
+    "hidden_field_exposure": false,
+    "operation_constraints": true,
+    "parameter_fitting": "bounded_search",
+    "perception_extension_witness_gate": true,
+    "proposal_engine": "structured",
+    "semantic_deduplication": true,
+    "structure_search": "protected_contrast_search",
+    "template_collapse_alarm": true
+  },
+  "toggle": {},
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "budgets",
+    "candidate_count",
+    "certifier",
+    "metrics"
+  ]
+}

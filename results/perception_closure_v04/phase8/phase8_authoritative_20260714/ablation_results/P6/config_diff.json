@@ -1,0 +1,13 @@
+{
+  "condition_id": "P6",
+  "diff_count": 1,
+  "normalized_diff": {
+    "sparse_basis_selection": {
+      "ablation": false,
+      "reference": true
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

@@ -1,0 +1,37 @@
+{
+  "condition_id": "L10",
+  "consumed": {
+    "candidate_budget": 0.0,
+    "compute_units_per_case": 0.2916666666666667,
+    "latency_ms_per_case": 17.1875,
+    "memory_bytes": 4194304.0,
+    "persistence_bytes": 65536.0,
+    "query_calls_per_case": 0.11979166666666667,
+    "synthesis_attempts": 0.0,
+    "token_budget_per_case": 0.0
+  },
+  "declared": {
+    "candidate_budget": 40.0,
+    "compute_units_per_case": 40.0,
+    "latency_ms_per_case": 20000.0,
+    "memory_bytes": 4194304.0,
+    "persistence_bytes": 65536.0,
+    "query_calls_per_case": 8.0,
+    "synthesis_attempts": 40.0,
+    "token_budget_per_case": 0.0
+  },
+  "matched": true,
+  "mismatch_fields": [],
+  "reference_id": "L0",
+  "schema_version": "1.0.0",
+  "unused": {
+    "candidate_budget": 40.0,
+    "compute_units_per_case": 39.708333333333336,
+    "latency_ms_per_case": 19982.8125,
+    "memory_bytes": 0.0,
+    "persistence_bytes": 0.0,
+    "query_calls_per_case": 7.880208333333333,
+    "synthesis_attempts": 40.0,
+    "token_budget_per_case": 0.0
+  }
+}

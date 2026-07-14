@@ -1,0 +1,42 @@
+{
+  "artifact_count": 699,
+  "auditor_independence": "raw artifacts recomputed without importing Phase 8 execution adapters or aggregate gate function",
+  "condition_count": 39,
+  "finding_count": 0,
+  "findings": [],
+  "recomputed_p0": {
+    "active_basis_max": 2.0,
+    "frr": 0.0,
+    "residual_escalation": 0.16666666666666666,
+    "scope_leakage": 0.0,
+    "uar": 0.0
+  },
+  "run_id": "phase8_authoritative_20260714",
+  "schema_version": "1.0.0",
+  "source_commit": "31d7a673ef0a23a24f41485bfc84a5c4541eac88",
+  "status": "PASS",
+  "workplan_clause_count": 21,
+  "workplan_clauses": {
+    "39_condition_matrix": true,
+    "claims_phase_limited": true,
+    "complete_per_id_bundles": true,
+    "dedup_pressure_measurable": true,
+    "deterministic_replay": true,
+    "i1_rejected": true,
+    "label_name_operation_order_invariance": true,
+    "matched_budgets": true,
+    "metadata_attacks_quarantined": true,
+    "negative_null_inventory_retained": true,
+    "p0_outresolves_p1": true,
+    "persistence_ablations": true,
+    "phase9_not_started": true,
+    "prior_results_preserved": true,
+    "runtime_ablations": true,
+    "scope_sparse_additive_consolidation_pathologies": true,
+    "sealed_500_world_pre_rerun_bank": true,
+    "shared_locked_phase7_bank": true,
+    "single_factor_serialized_configs": true,
+    "synthesis_integrity_ablations": true,
+    "theory_revision_ledger_resolved": true
+  }
+}

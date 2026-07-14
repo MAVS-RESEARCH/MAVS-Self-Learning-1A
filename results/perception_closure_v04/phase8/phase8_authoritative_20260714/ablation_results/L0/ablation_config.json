@@ -1,0 +1,37 @@
+{
+  "causal_question": "What does the complete cumulative learner achieve?",
+  "expected_direction": "reference_pass",
+  "group": "persistence_consolidation",
+  "id": "L0",
+  "isolated_factor": "full_persistence_and_consolidation",
+  "pass_fail_interpretation": "The reference must pass retention, leakage, growth, and Phase 6 integrity gates.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "uar",
+    "frr",
+    "residual_escalation",
+    "retention",
+    "consolidation",
+    "scope_leakage",
+    "library_growth"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "full_governance_knowledge",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {},
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "participant_budget",
+    "runtime",
+    "metrics",
+    "generations"
+  ]
+}

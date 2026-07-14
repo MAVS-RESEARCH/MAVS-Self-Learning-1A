@@ -1,0 +1,45 @@
+{
+  "causal_question": "What is the upper bound when all separating evidence is available?",
+  "expected_direction": "oracle_upper_bound",
+  "group": "perception_closure_runtime",
+  "id": "P15",
+  "isolated_factor": "evidence_access",
+  "pass_fail_interpretation": "This is a quarantined diagnostic upper bound and inclusion in competitive claims fails audit.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "uar",
+    "frr",
+    "residual_escalation",
+    "rounds",
+    "oracle_gap"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "quarantined_oracle",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": true,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "evidence_access": "quarantined_oracle"
+  },
+  "unchanged_fields": [
+    "locked_worlds",
+    "seeds",
+    "outcome_metrics",
+    "case_count",
+    "reporting",
+    "auditor_firewall"
+  ]
+}

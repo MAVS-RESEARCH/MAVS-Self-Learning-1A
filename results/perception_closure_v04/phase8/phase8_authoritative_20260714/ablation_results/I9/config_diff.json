@@ -1,0 +1,13 @@
+{
+  "condition_id": "I9",
+  "diff_count": 1,
+  "normalized_diff": {
+    "counterfactual_dependency_audit": {
+      "ablation": false,
+      "reference": true
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

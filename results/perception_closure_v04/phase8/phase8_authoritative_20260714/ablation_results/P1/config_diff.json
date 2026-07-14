@@ -1,0 +1,13 @@
+{
+  "condition_id": "P1",
+  "diff_count": 1,
+  "normalized_diff": {
+    "resolver": {
+      "ablation": "approved_configuration_only",
+      "reference": "perception_closure"
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

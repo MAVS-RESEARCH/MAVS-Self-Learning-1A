@@ -1,0 +1,19 @@
+{
+  "condition_id": "I2",
+  "intervals": {
+    "eligibility": {
+      "lower_95": 0.125,
+      "mean": 0.25,
+      "n": 40.0,
+      "upper_95": 0.4
+    },
+    "protected_error": {
+      "lower_95": 0.0,
+      "mean": 0.0,
+      "n": 40.0,
+      "upper_95": 0.0
+    }
+  },
+  "method": "paired_deterministic_bootstrap_2000_draws",
+  "schema_version": "1.0.0"
+}

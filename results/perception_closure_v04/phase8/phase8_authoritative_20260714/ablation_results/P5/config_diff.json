@@ -1,0 +1,13 @@
+{
+  "condition_id": "P5",
+  "diff_count": 1,
+  "normalized_diff": {
+    "positive_anti_scope_contract": {
+      "ablation": false,
+      "reference": true
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

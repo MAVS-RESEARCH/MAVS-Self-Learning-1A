@@ -1,0 +1,47 @@
+{
+  "causal_question": "Do redundant active diagnostics create conflict and escalation?",
+  "expected_direction": "basis_conflict_or_burden_increase",
+  "group": "perception_closure_runtime",
+  "id": "P6",
+  "isolated_factor": "sparse_basis_selection",
+  "pass_fail_interpretation": "Basis, conflict, or burden must grow or the library-pathology theory requires revision.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "active_basis",
+    "redundancy",
+    "interaction_pressure",
+    "frr",
+    "residual_escalation",
+    "cost"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": false,
+    "typed_channels": true,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "sparse_basis_selection": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "library",
+    "candidates",
+    "scopes",
+    "budgets",
+    "terminal_rules"
+  ]
+}

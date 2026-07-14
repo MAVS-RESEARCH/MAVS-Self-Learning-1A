@@ -1,0 +1,40 @@
+{
+  "causal_question": "Does unconsolidated library growth recreate leakage or escalation?",
+  "expected_direction": "library_pressure_or_leakage_increase",
+  "group": "persistence_consolidation",
+  "id": "L3",
+  "isolated_factor": "consolidation_and_retirement",
+  "pass_fail_interpretation": "Predicted growth pathology must worsen or consolidation theory requires revision.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "library_size",
+    "active_basis",
+    "redundancy",
+    "scope_leakage",
+    "residual_escalation",
+    "frr",
+    "retrieval_cost"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": false,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "full_governance_knowledge",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {
+    "consolidation_and_retirement": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "synthesis",
+    "certifications",
+    "memory_accounting",
+    "ledgers",
+    "metrics"
+  ]
+}

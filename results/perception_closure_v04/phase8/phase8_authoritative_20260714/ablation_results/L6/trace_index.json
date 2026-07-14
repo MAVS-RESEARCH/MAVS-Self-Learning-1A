@@ -1,0 +1,27 @@
+{
+  "index_hash": "d5c7b88597bf3b3e3346d18545afc06d3dba0d56543a72a5812393fe7f373eb9",
+  "schema_version": "1.0.0",
+  "trace_count": 4,
+  "traces": [
+    {
+      "path": "ablation_results/L6/generation_traces.parquet",
+      "rows": 192,
+      "sha256": "8f131f7c05826d3f182d47d61f2a48bc29443797b86852f39c686af44305907e"
+    },
+    {
+      "path": "ablation_results/L6/knowledge_actions.parquet",
+      "rows": 192,
+      "sha256": "412994237ecb22644a249956623404e5ac1545428370726d9a90414092604a59"
+    },
+    {
+      "path": "ablation_results/L6/auditor_generation_outcomes.parquet",
+      "rows": 192,
+      "sha256": "56f7f5aace728492e1fec91a73475a8cffe180ad93afc082af5ce6cb6598546f"
+    },
+    {
+      "path": "ablation_results/L6/phase4_pre_rerun_traces.parquet",
+      "rows": 25000,
+      "sha256": "a9c6b4a8650aabaf24c4f413b269382970e4420c76f975735b6ae870dff29418"
+    }
+  ]
+}

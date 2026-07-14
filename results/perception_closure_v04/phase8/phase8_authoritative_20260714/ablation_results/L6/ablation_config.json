@@ -1,0 +1,37 @@
+{
+  "causal_question": "Are scopes and query policies essential persistent memory?",
+  "expected_direction": "scope_leakage_or_query_burden_increase",
+  "group": "persistence_consolidation",
+  "id": "L6",
+  "isolated_factor": "persistence_payload",
+  "pass_fail_interpretation": "Leakage or burden must expose missing contextual memory or the persistence model is incomplete.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "scope_leakage",
+    "query_yield",
+    "local_resolution",
+    "recurrence",
+    "negative_transfer"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "diagnostics_only",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {
+    "persistence_payload": "diagnostics_only"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "retained_byte_budget",
+    "ledgers",
+    "runtime",
+    "metrics"
+  ]
+}

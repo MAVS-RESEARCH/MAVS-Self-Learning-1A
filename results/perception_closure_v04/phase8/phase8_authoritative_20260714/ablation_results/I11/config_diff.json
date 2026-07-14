@@ -1,0 +1,13 @@
+{
+  "condition_id": "I11",
+  "diff_count": 1,
+  "normalized_diff": {
+    "proposal_engine": {
+      "ablation": "budget_matched_random",
+      "reference": "structured"
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

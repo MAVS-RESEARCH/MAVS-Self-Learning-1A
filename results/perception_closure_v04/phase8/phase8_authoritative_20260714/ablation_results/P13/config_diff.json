@@ -1,0 +1,13 @@
+{
+  "condition_id": "P13",
+  "diff_count": 1,
+  "normalized_diff": {
+    "unresolved_fallback": {
+      "ablation": "reject",
+      "reference": "escalate"
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

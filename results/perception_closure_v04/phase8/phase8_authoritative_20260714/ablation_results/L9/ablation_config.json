@@ -1,0 +1,39 @@
+{
+  "causal_question": "Does unlimited eligibility violate sparse influence and library health?",
+  "expected_direction": "eligibility_or_retrieval_pressure_increase",
+  "group": "persistence_consolidation",
+  "id": "L9",
+  "isolated_factor": "active_eligibility_cap",
+  "pass_fail_interpretation": "Eligibility pressure or pathology must rise; flat results require larger-library testing.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "eligibility_size",
+    "active_basis",
+    "retrieval_cost",
+    "redundancy",
+    "scope_leakage",
+    "residual_escalation"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": false,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "full_governance_knowledge",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "cumulative"
+  },
+  "toggle": {
+    "active_eligibility_cap": false
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "stored_library",
+    "runtime",
+    "cases",
+    "query_budget",
+    "compute_budget"
+  ]
+}

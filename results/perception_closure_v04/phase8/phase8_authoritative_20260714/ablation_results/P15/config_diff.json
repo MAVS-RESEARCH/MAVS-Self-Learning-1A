@@ -1,0 +1,13 @@
+{
+  "condition_id": "P15",
+  "diff_count": 1,
+  "normalized_diff": {
+    "evidence_access": {
+      "ablation": "quarantined_oracle",
+      "reference": "visible_only"
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

@@ -1,0 +1,39 @@
+{
+  "causal_question": "What is the value of all retained governance knowledge?",
+  "expected_direction": "burden_or_learning_worse_than_cumulative",
+  "group": "persistence_consolidation",
+  "id": "L1",
+  "isolated_factor": "retained_governance_state",
+  "pass_fail_interpretation": "L0 must be no worse on protected errors and improve a preregistered learning or burden metric.",
+  "reference_id": "L0",
+  "required_metrics": [
+    "uar",
+    "frr",
+    "residual_escalation",
+    "rounds",
+    "cold_start",
+    "closure"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_eligibility_cap": true,
+    "consolidation_and_retirement": true,
+    "negative_knowledge": true,
+    "periodic_recertification": true,
+    "persistence_payload": "full_governance_knowledge",
+    "post_g1_learning": "enabled",
+    "retained_governance_state": "fresh_reset_each_generation"
+  },
+  "toggle": {
+    "retained_governance_state": "fresh_reset_each_generation"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "later_generation_ledgers",
+    "code",
+    "compute_budget",
+    "memory_budget",
+    "metrics"
+  ]
+}

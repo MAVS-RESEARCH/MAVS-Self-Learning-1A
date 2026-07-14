@@ -1,0 +1,20 @@
+{
+  "locked": true,
+  "phase4_pre_rerun": {
+    "claim_status": "diagnostic_pre_rerun_not_phase9_blind_claim",
+    "decision_count": 25000,
+    "ledger_sha256": "64c8a76bddc2a14d51d0cbe05bfd9e32f9e13c6b9a9044f5fca0d4db084a90a4",
+    "legacy_manifest_sha256": "5d4ec3643abae336d140305b7076c3642d380c3d635c4434892b5dae115288ef",
+    "source_path": "results/raw/phase4_authoritative/phase4/generation_1_traces.parquet",
+    "source_sha256": "8ed30c6d23a77ac2163a911b8d46d896ca0138be21809b790777a0b3c0a3b68d",
+    "world_count": 500
+  },
+  "phase7": {
+    "case_bank_hash": "2c5eb986fe7c64aa9d74d5a7267bbb31467865233e9678e2ce973644abbc07f9",
+    "case_count": 96,
+    "source_root": "results/perception_closure_v04/phase7/phase7_authoritative_20260714",
+    "truth_hash": "7b3d37eb860dfdc5bf2ae46772b57d53db9c4786e27c1af7052e9d432fb2dec0"
+  },
+  "phase9_blind_bank_accessed": false,
+  "schema_version": "1.0.0"
+}

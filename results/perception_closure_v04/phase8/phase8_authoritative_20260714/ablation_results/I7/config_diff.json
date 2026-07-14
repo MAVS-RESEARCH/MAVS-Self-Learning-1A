@@ -1,0 +1,13 @@
+{
+  "condition_id": "I7",
+  "diff_count": 1,
+  "normalized_diff": {
+    "hidden_field_exposure": {
+      "ablation": true,
+      "reference": false
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

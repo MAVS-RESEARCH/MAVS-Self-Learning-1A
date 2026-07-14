@@ -1,0 +1,13 @@
+{
+  "condition_id": "L5",
+  "diff_count": 1,
+  "normalized_diff": {
+    "persistence_payload": {
+      "ablation": "ontology_only",
+      "reference": "full_governance_knowledge"
+    }
+  },
+  "reference_id": "L0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

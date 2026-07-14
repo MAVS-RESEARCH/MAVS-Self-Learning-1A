@@ -1,0 +1,13 @@
+{
+  "condition_id": "P11",
+  "diff_count": 1,
+  "normalized_diff": {
+    "uncertainty_fallback": {
+      "ablation": "immediate_escalation",
+      "reference": "exhaust_valid_paths"
+    }
+  },
+  "reference_id": "P0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

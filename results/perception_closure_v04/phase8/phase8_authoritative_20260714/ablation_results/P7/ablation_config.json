@@ -1,0 +1,45 @@
+{
+  "causal_question": "Does additive semantic collapse recreate the ambiguity band?",
+  "expected_direction": "frr_or_escalation_increase",
+  "group": "perception_closure_runtime",
+  "id": "P7",
+  "isolated_factor": "causal_arbitration",
+  "pass_fail_interpretation": "The predicted FRR or escalation pathology must reappear without UAR benefit.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "frr",
+    "residual_escalation",
+    "channel_conflict",
+    "closure_error"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "additive_severity_stacking",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "decision_homogeneous",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": true,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "causal_arbitration": "additive_severity_stacking"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "diagnostic_outputs",
+    "scopes",
+    "queries",
+    "kernel_bounds",
+    "metrics"
+  ]
+}

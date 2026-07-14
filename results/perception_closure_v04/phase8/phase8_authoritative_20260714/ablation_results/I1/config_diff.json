@@ -1,0 +1,13 @@
+{
+  "condition_id": "I1",
+  "diff_count": 1,
+  "normalized_diff": {
+    "structure_search": {
+      "ablation": "fixed_outer_template_renamed_features",
+      "reference": "protected_contrast_search"
+    }
+  },
+  "reference_id": "I0",
+  "schema_version": "1.0.0",
+  "single_factor_valid": true
+}

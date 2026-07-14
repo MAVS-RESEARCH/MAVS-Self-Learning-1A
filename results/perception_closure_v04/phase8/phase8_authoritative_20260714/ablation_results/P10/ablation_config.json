@@ -1,0 +1,45 @@
+{
+  "causal_question": "Does confidence substitute incorrectly for decision-homogeneous evidence?",
+  "expected_direction": "uncertified_or_incorrect_terminal_increase",
+  "group": "perception_closure_runtime",
+  "id": "P10",
+  "isolated_factor": "local_closure_certificate",
+  "pass_fail_interpretation": "Incorrect or uncertified terminals must rise; any P0 uncertified terminal fails the reference.",
+  "reference_id": "P0",
+  "required_metrics": [
+    "closure_obligation_failures",
+    "closure_error",
+    "witness_absence",
+    "replay_gaps"
+  ],
+  "schema_version": "1.0.0",
+  "semantic_config": {
+    "active_query_planner": true,
+    "causal_arbitration": "typed_non_additive",
+    "conditional_perception_extension": true,
+    "correlation_policy": "causal_provenance",
+    "evidence_access": "visible_only",
+    "explicit_hypothesis_set": true,
+    "external_escalation": "residual_only",
+    "interaction_certificates": true,
+    "local_closure_certificate": "confidence_terminal",
+    "positive_anti_scope_contract": true,
+    "resolver": "perception_closure",
+    "sparse_basis_selection": true,
+    "typed_channels": true,
+    "uncertainty_fallback": "exhaust_valid_paths",
+    "unresolved_fallback": "escalate"
+  },
+  "toggle": {
+    "local_closure_certificate": "confidence_terminal"
+  },
+  "unchanged_fields": [
+    "locked_banks",
+    "seeds",
+    "hypotheses",
+    "evidence",
+    "actions",
+    "thresholds",
+    "metrics"
+  ]
+}

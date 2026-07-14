@@ -1,0 +1,22 @@
+{
+  "index_hash": "c7cde7df7d63cab56fdccf77d20f16c96c91681fdef0f19c8cc13452ca6676c1",
+  "schema_version": "1.0.0",
+  "trace_count": 3,
+  "traces": [
+    {
+      "path": "ablation_results/P13/runtime_traces.parquet",
+      "rows": 384,
+      "sha256": "f655d5308c9937846e3d3bbda7c61107511ed233cd2901f17db063780cac2f31"
+    },
+    {
+      "path": "ablation_results/P13/auditor_case_outcomes.parquet",
+      "rows": 384,
+      "sha256": "57d82ce1168a6ebb9b4575b5cae489b80244259b0296348af1fd1edf735bf8b6"
+    },
+    {
+      "path": "ablation_results/P13/phase4_pre_rerun_traces.parquet",
+      "rows": 25000,
+      "sha256": "6c2241518fac3948171acac3829c7fffa6f7cfde356a7e949b48ce2fa714a514"
+    }
+  ]
+}

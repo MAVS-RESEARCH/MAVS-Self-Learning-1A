@@ -1,0 +1,1155 @@
+{
+  "condition_count": 39,
+  "condition_ids": [
+    "I0",
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "I5",
+    "I6",
+    "I7",
+    "I8",
+    "I9",
+    "I10",
+    "I11",
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P15",
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8",
+    "L9",
+    "L10"
+  ],
+  "definitions": [
+    {
+      "causal_question": "What does the integrity-complete synthesis system achieve?",
+      "expected_direction": "reference_pass",
+      "group": "synthesis_integrity",
+      "id": "I0",
+      "isolated_factor": "integrity_complete_executable_synthesis",
+      "pass_fail_interpretation": "Every Phase 6 gate must pass or all synthesis contrasts are blocked.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "candidate_diversity",
+        "template_count",
+        "semantic_classes",
+        "behavioral_classes",
+        "gate_pass_rate",
+        "witness_success"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {},
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "budgets",
+        "candidate_count",
+        "certifier",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does integrity reject the exact Phase 3 template pathology?",
+      "expected_direction": "rejected_before_outcome_interpretation",
+      "group": "synthesis_integrity",
+      "id": "I1",
+      "isolated_factor": "structure_search",
+      "pass_fail_interpretation": "Every fixed-template name-only candidate must be rejected before performance interpretation.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "template_count",
+        "name_only_rejections",
+        "promoted_count"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "structure_search": "fixed_outer_template_renamed_features"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "budgets",
+        "candidate_count",
+        "certifier",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Can name-only or exact semantic duplicates enter certification pressure?",
+      "expected_direction": "duplicate_pressure_increase",
+      "group": "synthesis_integrity",
+      "id": "I2",
+      "isolated_factor": "semantic_deduplication",
+      "pass_fail_interpretation": "Duplicate or certification pressure must increase while the protected harness remains valid.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "semantic_duplicate_count",
+        "certification_pressure",
+        "active_eligibility"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "semantic_deduplication": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "budgets",
+        "behavioral_deduplication",
+        "fitting",
+        "certifier",
+        "runtime"
+      ]
+    },
+    {
+      "causal_question": "Can syntactically distinct but behaviorally identical candidates accumulate?",
+      "expected_direction": "behavioral_pressure_increase",
+      "group": "synthesis_integrity",
+      "id": "I3",
+      "isolated_factor": "behavioral_deduplication",
+      "pass_fail_interpretation": "Behavioral equivalents or eligibility pressure must measurably increase.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "behavioral_equivalent_count",
+        "eligibility_pressure",
+        "redundancy",
+        "active_basis"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "behavioral_deduplication": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "budgets",
+        "semantic_deduplication",
+        "fitting",
+        "operation_constraints",
+        "certifier"
+      ]
+    },
+    {
+      "causal_question": "Does real fitting prevent template collapse and poor scope or calibration?",
+      "expected_direction": "fit_or_scope_quality_decrease",
+      "group": "synthesis_integrity",
+      "id": "I4",
+      "isolated_factor": "parameter_fitting",
+      "pass_fail_interpretation": "Fixed parameters must reduce fit, witness, or scope quality; equivalence makes fitting attribution unsupported.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "parameter_diversity",
+        "calibration_error",
+        "scope_leakage",
+        "witness_success",
+        "unused_compute"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "parameter_fitting": "fixed_0_5_unit_values"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "structure_proposals",
+        "splits",
+        "certifier",
+        "scopes_schema",
+        "compute_budget"
+      ]
+    },
+    {
+      "causal_question": "Do operation labels become metadata rather than executable semantics?",
+      "expected_direction": "operation_noncompliance_increase",
+      "group": "synthesis_integrity",
+      "id": "I5",
+      "isolated_factor": "operation_constraints",
+      "pass_fail_interpretation": "Noncompliant labeled operations must increase on the planted operation fixtures.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "operation_noncompliance",
+        "metadata_only_count",
+        "parent_identity",
+        "promotion_pressure"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "operation_constraints": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "candidate_asts",
+        "parameter_fits",
+        "blind_certifier",
+        "budgets"
+      ]
+    },
+    {
+      "causal_question": "Does operation and expected-class metadata leakage inflate apparent certification?",
+      "expected_direction": "firewall_detection_no_valid_gain",
+      "group": "synthesis_integrity",
+      "id": "I6",
+      "isolated_factor": "certifier_metadata_exposure",
+      "pass_fail_interpretation": "The firewall must detect and quarantine exposure and valid blind performance cannot improve.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "taint_count",
+        "exposed_promotion_delta",
+        "permutation_sensitivity",
+        "blind_performance_delta"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "certifier_metadata_exposure": true
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "executable_inputs",
+        "gate_definitions",
+        "candidate_budget",
+        "runtime"
+      ]
+    },
+    {
+      "causal_question": "Can privileged hidden-world leakage create impossible performance?",
+      "expected_direction": "firewall_detection_no_valid_gain",
+      "group": "synthesis_integrity",
+      "id": "I7",
+      "isolated_factor": "hidden_field_exposure",
+      "pass_fail_interpretation": "The firewall must detect and quarantine hidden fields; any valid gain or contamination invalidates the harness.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "hidden_taint_count",
+        "impossible_witness_count",
+        "valid_performance_delta",
+        "contamination_count"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "hidden_field_exposure": true
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "candidate_runtime",
+        "public_evidence",
+        "metrics",
+        "budgets"
+      ]
+    },
+    {
+      "causal_question": "Can candidates promote without separating a previously inseparable contrast?",
+      "expected_direction": "missing_witness_promotions_increase",
+      "group": "synthesis_integrity",
+      "id": "I8",
+      "isolated_factor": "perception_extension_witness_gate",
+      "pass_fail_interpretation": "Missing-witness promotions must appear and demonstrate why the gate is necessary.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "missing_witness_promotions",
+        "noop_promotions",
+        "parent_identical_promotions",
+        "retained_regression"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "perception_extension_witness_gate": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "other_gates",
+        "certifier_blindness",
+        "budgets",
+        "candidate_count"
+      ]
+    },
+    {
+      "causal_question": "Can confounded or label-leaking dependencies pass without counterfactual audit?",
+      "expected_direction": "counterfactual_violations_increase",
+      "group": "synthesis_integrity",
+      "id": "I9",
+      "isolated_factor": "counterfactual_dependency_audit",
+      "pass_fail_interpretation": "Violations must increase on planted confounds; failure to exercise them invalidates the fixture.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "nuisance_violations",
+        "causal_violations",
+        "false_witness_rate",
+        "promotion_pressure"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "counterfactual_dependency_audit": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "scope_gates",
+        "retained_gates",
+        "holdout_gates",
+        "adversarial_gates",
+        "fitting"
+      ]
+    },
+    {
+      "causal_question": "Would the pipeline publish an attractive one-template run without the collapse alarm?",
+      "expected_direction": "planted_collapse_becomes_publishable",
+      "group": "synthesis_integrity",
+      "id": "I10",
+      "isolated_factor": "template_collapse_alarm",
+      "pass_fail_interpretation": "The planted one-template run must become publishable only with the alarm disabled.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "template_count",
+        "collapse_detected",
+        "publication_allowed"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "template_collapse_alarm": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "semantic_deduplication",
+        "behavioral_deduplication",
+        "certification",
+        "proposals",
+        "budgets"
+      ]
+    },
+    {
+      "causal_question": "Does structured synthesis outperform equal-budget random generation?",
+      "expected_direction": "valid_or_witnessed_yield_decrease",
+      "group": "synthesis_integrity",
+      "id": "I11",
+      "isolated_factor": "proposal_engine",
+      "pass_fail_interpretation": "Structured synthesis must improve a preregistered yield or closure metric without protected regression.",
+      "reference_id": "I0",
+      "required_metrics": [
+        "valid_yield",
+        "witnessed_yield",
+        "semantic_diversity",
+        "harmful_noop_rate",
+        "search_cost"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "proposal_engine": "budget_matched_random"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "grammar",
+        "fitting",
+        "certifier",
+        "candidate_budget",
+        "compute_budget"
+      ]
+    },
+    {
+      "causal_question": "What does the complete Version 0.4 Perception-Closure runtime achieve?",
+      "expected_direction": "reference_pass",
+      "group": "perception_closure_runtime",
+      "id": "P0",
+      "isolated_factor": "full_perception_closure_runtime",
+      "pass_fail_interpretation": "Every Phase 7 gate must pass or all runtime causal claims stop.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "uar",
+        "frr",
+        "residual_escalation",
+        "local_resolution",
+        "scope_leakage",
+        "active_basis"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {},
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "budgets",
+        "diagnostics",
+        "scopes",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "What remains unresolved without situational closure?",
+      "expected_direction": "residual_escalation_increase",
+      "group": "perception_closure_runtime",
+      "id": "P1",
+      "isolated_factor": "resolver",
+      "pass_fail_interpretation": "P0 must improve local resolution and residual escalation without protected regression.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "initial_unresolved",
+        "local_resolution",
+        "residual_escalation",
+        "uar",
+        "frr"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "resolver": "approved_configuration_only"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "fast_loop",
+        "visible_evidence",
+        "terminal_policy",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does generic confidence choose the wrong perception extension?",
+      "expected_direction": "query_waste_or_closure_error_increase",
+      "group": "perception_closure_runtime",
+      "id": "P2",
+      "isolated_factor": "explicit_hypothesis_set",
+      "pass_fail_interpretation": "Wrong actions, query waste, or closure error must rise or hypothesis attribution is unsupported.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "separating_action_accuracy",
+        "ambiguity_contraction",
+        "closure_error",
+        "query_waste"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "explicit_hypothesis_set": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "actions",
+        "queries",
+        "scopes",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does global utility activate irrelevant diagnostics?",
+      "expected_direction": "irrelevant_activation_or_burden_increase",
+      "group": "perception_closure_runtime",
+      "id": "P3",
+      "isolated_factor": "conditional_perception_extension",
+      "pass_fail_interpretation": "Irrelevance, leakage, or burden must rise or conditionality is not evidenced.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "conditional_perception_gain",
+        "irrelevant_activation",
+        "scope_leakage",
+        "active_basis",
+        "residual_escalation"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "conditional_perception_extension": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "hypotheses",
+        "candidates",
+        "scopes",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "How much ambiguity requires targeted observation?",
+      "expected_direction": "query_resolution_decrease",
+      "group": "perception_closure_runtime",
+      "id": "P4",
+      "isolated_factor": "active_query_planner",
+      "pass_fail_interpretation": "One-query, masked, or multi-step resolution must degrade without protected improvement.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "query_yield",
+        "local_resolution",
+        "evidence_unavailable_escalation",
+        "rounds"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "active_query_planner": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "diagnostic_search",
+        "evidence_interfaces",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Do explicit positive and anti-scopes prevent leakage and false rejection?",
+      "expected_direction": "scope_leakage_or_frr_increase",
+      "group": "perception_closure_runtime",
+      "id": "P5",
+      "isolated_factor": "positive_anti_scope_contract",
+      "pass_fail_interpretation": "Leakage or FRR must rise on neighbor suites or scope attribution is unsupported.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "scope_violations",
+        "anti_scope_violations",
+        "frr",
+        "residual_escalation"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "positive_anti_scope_contract": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "candidate_functions",
+        "hypotheses",
+        "query_planner",
+        "kernel",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Do redundant active diagnostics create conflict and escalation?",
+      "expected_direction": "basis_conflict_or_burden_increase",
+      "group": "perception_closure_runtime",
+      "id": "P6",
+      "isolated_factor": "sparse_basis_selection",
+      "pass_fail_interpretation": "Basis, conflict, or burden must grow or the library-pathology theory requires revision.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "active_basis",
+        "redundancy",
+        "interaction_pressure",
+        "frr",
+        "residual_escalation",
+        "cost"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "sparse_basis_selection": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "library",
+        "candidates",
+        "scopes",
+        "budgets",
+        "terminal_rules"
+      ]
+    },
+    {
+      "causal_question": "Does additive semantic collapse recreate the ambiguity band?",
+      "expected_direction": "frr_or_escalation_increase",
+      "group": "perception_closure_runtime",
+      "id": "P7",
+      "isolated_factor": "causal_arbitration",
+      "pass_fail_interpretation": "The predicted FRR or escalation pathology must reappear without UAR benefit.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "frr",
+        "residual_escalation",
+        "channel_conflict",
+        "closure_error"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "causal_arbitration": "additive_severity_stacking"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "diagnostic_outputs",
+        "scopes",
+        "queries",
+        "kernel_bounds",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Do novelty, masking, availability, or scope signals become false danger?",
+      "expected_direction": "false_danger_pressure_increase",
+      "group": "perception_closure_runtime",
+      "id": "P8",
+      "isolated_factor": "typed_channels",
+      "pass_fail_interpretation": "False-danger pressure must appear while P0 retains zero typed-channel violations.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "meta_signal_hard_veto",
+        "frr",
+        "unnecessary_rejection",
+        "query_suppression"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "typed_channels": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "diagnostics",
+        "queries",
+        "scopes",
+        "budgets",
+        "resolver"
+      ]
+    },
+    {
+      "causal_question": "Can individually valid diagnostics become unsafe together?",
+      "expected_direction": "unsafe_composition_influence_increase",
+      "group": "perception_closure_runtime",
+      "id": "P9",
+      "isolated_factor": "interaction_certificates",
+      "pass_fail_interpretation": "Planted unsafe combinations must activate or degrade; otherwise the fixture is inadequate.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "uncertified_composition_influence",
+        "interaction_violations",
+        "uar",
+        "frr",
+        "conflict"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "interaction_certificates": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "individual_certifications",
+        "scopes",
+        "sparse_limit",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does confidence substitute incorrectly for decision-homogeneous evidence?",
+      "expected_direction": "uncertified_or_incorrect_terminal_increase",
+      "group": "perception_closure_runtime",
+      "id": "P10",
+      "isolated_factor": "local_closure_certificate",
+      "pass_fail_interpretation": "Incorrect or uncertified terminals must rise; any P0 uncertified terminal fails the reference.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "closure_obligation_failures",
+        "closure_error",
+        "witness_absence",
+        "replay_gaps"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "local_closure_certificate": "confidence_terminal"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "hypotheses",
+        "evidence",
+        "actions",
+        "thresholds",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "What is the causal value of the resolver itself?",
+      "expected_direction": "residual_escalation_increase",
+      "group": "perception_closure_runtime",
+      "id": "P11",
+      "isolated_factor": "uncertainty_fallback",
+      "pass_fail_interpretation": "P0 must reduce residual escalation and closure burden without protected regression.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "initial_unresolved",
+        "residual_escalation",
+        "local_resolution",
+        "burden"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "uncertainty_fallback": "immediate_escalation"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "fast_loop",
+        "escalation_semantics",
+        "cases",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Is apparent zero escalation bought with protected errors?",
+      "expected_direction": "protected_error_increase",
+      "group": "perception_closure_runtime",
+      "id": "P12",
+      "isolated_factor": "external_escalation",
+      "pass_fail_interpretation": "Zero escalation is only a diagnostic bound and protected errors must expose its safety cost.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "uar",
+        "frr",
+        "closure_error",
+        "residual_escalation",
+        "cost"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "external_escalation": "force_binary"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "evidence",
+        "resolver",
+        "budgets",
+        "metrics",
+        "pre_fallback_trace"
+      ]
+    },
+    {
+      "causal_question": "What is the false-rejection cost of blunt containment?",
+      "expected_direction": "frr_increase",
+      "group": "perception_closure_runtime",
+      "id": "P13",
+      "isolated_factor": "unresolved_fallback",
+      "pass_fail_interpretation": "FRR must materially rise and cannot be presented as autonomy.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "frr",
+        "safe_exposure",
+        "residual_escalation",
+        "unresolved_composition"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "unresolved_fallback": "reject"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "resolver",
+        "evidence",
+        "budgets",
+        "metrics",
+        "pre_fallback_trace"
+      ]
+    },
+    {
+      "causal_question": "Does pre-DS-CF raw-correlation overbreadth recur?",
+      "expected_direction": "safe_correlation_frr_increase",
+      "group": "perception_closure_runtime",
+      "id": "P14",
+      "isolated_factor": "correlation_policy",
+      "pass_fail_interpretation": "Safe correlated cases must reveal overbreadth and favorable aggregates remain non-deployable.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "safe_correlation_frr",
+        "hard_veto_causes",
+        "uar",
+        "residual_escalation"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "correlation_policy": "raw_correlation_hard_veto"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "evidence",
+        "cases",
+        "budgets",
+        "kernel_rules",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "What is the upper bound when all separating evidence is available?",
+      "expected_direction": "oracle_upper_bound",
+      "group": "perception_closure_runtime",
+      "id": "P15",
+      "isolated_factor": "evidence_access",
+      "pass_fail_interpretation": "This is a quarantined diagnostic upper bound and inclusion in competitive claims fails audit.",
+      "reference_id": "P0",
+      "required_metrics": [
+        "uar",
+        "frr",
+        "residual_escalation",
+        "rounds",
+        "oracle_gap"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "evidence_access": "quarantined_oracle"
+      },
+      "unchanged_fields": [
+        "locked_worlds",
+        "seeds",
+        "outcome_metrics",
+        "case_count",
+        "reporting",
+        "auditor_firewall"
+      ]
+    },
+    {
+      "causal_question": "What does the complete cumulative learner achieve?",
+      "expected_direction": "reference_pass",
+      "group": "persistence_consolidation",
+      "id": "L0",
+      "isolated_factor": "full_persistence_and_consolidation",
+      "pass_fail_interpretation": "The reference must pass retention, leakage, growth, and Phase 6 integrity gates.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "uar",
+        "frr",
+        "residual_escalation",
+        "retention",
+        "consolidation",
+        "scope_leakage",
+        "library_growth"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {},
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "participant_budget",
+        "runtime",
+        "metrics",
+        "generations"
+      ]
+    },
+    {
+      "causal_question": "What is the value of all retained governance knowledge?",
+      "expected_direction": "burden_or_learning_worse_than_cumulative",
+      "group": "persistence_consolidation",
+      "id": "L1",
+      "isolated_factor": "retained_governance_state",
+      "pass_fail_interpretation": "L0 must be no worse on protected errors and improve a preregistered learning or burden metric.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "uar",
+        "frr",
+        "residual_escalation",
+        "rounds",
+        "cold_start",
+        "closure"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "retained_governance_state": "fresh_reset_each_generation"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "later_generation_ledgers",
+        "code",
+        "compute_budget",
+        "memory_budget",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does learning beyond initial discovery add value?",
+      "expected_direction": "g2_g3_novelty_burden_increase",
+      "group": "persistence_consolidation",
+      "id": "L2",
+      "isolated_factor": "post_g1_learning",
+      "pass_fail_interpretation": "L0 improvement supports continuing learning; parity or frozen superiority limits the claim.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "g2_closure",
+        "g3_closure",
+        "recurrence",
+        "new_scope_performance",
+        "new_composition_performance",
+        "cost"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "post_g1_learning": "frozen_after_g1"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "g1_state",
+        "g2_g3_ledgers",
+        "runtime",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does unconsolidated library growth recreate leakage or escalation?",
+      "expected_direction": "library_pressure_or_leakage_increase",
+      "group": "persistence_consolidation",
+      "id": "L3",
+      "isolated_factor": "consolidation_and_retirement",
+      "pass_fail_interpretation": "Predicted growth pathology must worsen or consolidation theory requires revision.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "library_size",
+        "active_basis",
+        "redundancy",
+        "scope_leakage",
+        "residual_escalation",
+        "frr",
+        "retrieval_cost"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "consolidation_and_retirement": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "synthesis",
+        "certifications",
+        "memory_accounting",
+        "ledgers",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does the system rediscover harmful programs and low-yield queries?",
+      "expected_direction": "rediscovery_or_cost_increase",
+      "group": "persistence_consolidation",
+      "id": "L4",
+      "isolated_factor": "negative_knowledge",
+      "pass_fail_interpretation": "Rediscovery must rise on recurrence fixtures or negative knowledge is not evidenced.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "repeated_failed_programs",
+        "repeated_low_yield_queries",
+        "rounds",
+        "cost",
+        "violations"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "negative_knowledge": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "positive_memory",
+        "diagnostics",
+        "query_policies",
+        "budgets",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "What does semantic memory contribute without executable diagnostics?",
+      "expected_direction": "semantic_recognition_without_full_closure_gain",
+      "group": "persistence_consolidation",
+      "id": "L5",
+      "isolated_factor": "persistence_payload",
+      "pass_fail_interpretation": "This separates semantic recognition from executable closure and carries no standalone superiority claim.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "transfer",
+        "time_to_discovery",
+        "time_to_closure",
+        "local_resolution",
+        "query_cost",
+        "synthesis_count"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "persistence_payload": "ontology_only"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "retained_byte_budget",
+        "g2_g3_cases",
+        "runtime",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Are scopes and query policies essential persistent memory?",
+      "expected_direction": "scope_leakage_or_query_burden_increase",
+      "group": "persistence_consolidation",
+      "id": "L6",
+      "isolated_factor": "persistence_payload",
+      "pass_fail_interpretation": "Leakage or burden must expose missing contextual memory or the persistence model is incomplete.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "scope_leakage",
+        "query_yield",
+        "local_resolution",
+        "recurrence",
+        "negative_transfer"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "persistence_payload": "diagnostics_only"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "retained_byte_budget",
+        "ledgers",
+        "runtime",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Is reusable evidence acquisition valuable independent of diagnostic growth?",
+      "expected_direction": "query_yield_gain_without_full_diagnostic_gain",
+      "group": "persistence_consolidation",
+      "id": "L7",
+      "isolated_factor": "persistence_payload",
+      "pass_fail_interpretation": "Improvement supports query-policy memory; no gain limits that claim.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "query_yield",
+        "rounds",
+        "evidence_unavailable_escalation",
+        "uar",
+        "frr"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "persistence_payload": "query_policies_only"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "retained_byte_budget",
+        "ledgers",
+        "runtime",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Are reusable closure operators the most useful memory unit?",
+      "expected_direction": "closure_burden_improvement_without_protected_regression",
+      "group": "persistence_consolidation",
+      "id": "L8",
+      "isolated_factor": "persistence_payload",
+      "pass_fail_interpretation": "Superiority over L5-L7 is supported only without protected or scope regression.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "rounds",
+        "time_to_closure",
+        "recurrence",
+        "complexity",
+        "transfer",
+        "scope_leakage"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "persistence_payload": "compact_case_programs_only"
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "retained_byte_budget",
+        "ledgers",
+        "runtime",
+        "metrics"
+      ]
+    },
+    {
+      "causal_question": "Does unlimited eligibility violate sparse influence and library health?",
+      "expected_direction": "eligibility_or_retrieval_pressure_increase",
+      "group": "persistence_consolidation",
+      "id": "L9",
+      "isolated_factor": "active_eligibility_cap",
+      "pass_fail_interpretation": "Eligibility pressure or pathology must rise; flat results require larger-library testing.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "eligibility_size",
+        "active_basis",
+        "retrieval_cost",
+        "redundancy",
+        "scope_leakage",
+        "residual_escalation"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "active_eligibility_cap": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "stored_library",
+        "runtime",
+        "cases",
+        "query_budget",
+        "compute_budget"
+      ]
+    },
+    {
+      "causal_question": "Do stale scopes fail under shifted generations?",
+      "expected_direction": "stale_scope_failures_increase",
+      "group": "persistence_consolidation",
+      "id": "L10",
+      "isolated_factor": "periodic_recertification",
+      "pass_fail_interpretation": "Shifted-scope failures must rise or re-certification attribution is limited.",
+      "reference_id": "L0",
+      "required_metrics": [
+        "stale_scope_activation",
+        "scope_leakage",
+        "uar",
+        "frr",
+        "quarantine",
+        "rollback",
+        "retention"
+      ],
+      "schema_version": "1.0.0",
+      "toggle": {
+        "periodic_recertification": false
+      },
+      "unchanged_fields": [
+        "locked_banks",
+        "seeds",
+        "original_certifications",
+        "retained_state",
+        "shifted_banks",
+        "metrics"
+      ]
+    }
+  ],
+  "group_references": {
+    "perception_closure_runtime": "P0",
+    "persistence_consolidation": "L0",
+    "synthesis_integrity": "I0"
+  },
+  "matrix_hash": "938cf153623831ef5f7df078881402f810e68baf16b28f4a5cff9e40e8ece6e8",
+  "schema_version": "1.0.0"
+}
