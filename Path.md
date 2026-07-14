@@ -1212,6 +1212,14 @@ The independent audit inspected all 27 Phase 5 checkpoint statements and found z
 - Evidence disposition: the first authoritative run is **invalidated and must be cleaned/replaced**, despite its prior zero-finding audit. It will not be cited as final evidence.
 - Advancement gate: **not passed** pending corrected committed rerun.
 
+### P6-E014 - Corrected authoritative rerun interrupted before synthesis
+
+- Date and phase: 2026-07-14 (Asia/Karachi), Phase 6.
+- Task performed: started the corrected authoritative orchestrator from commit `12a6bd0`; the user then explicitly requested continuation after the active tool execution was interrupted.
+- Exact result: the orchestrator process did not survive the interruption. Process inspection found only Codex MCP Node processes and no Phase 6 Python/Node orchestrator. No `phase6_authoritative_20260714` candidate/result subtree existed, so no partial candidate evidence was accepted.
+- Recovery: restart the same fail-closed orchestrator. Its named cleaner will independently confirm the run namespace is absent/unsealed before executing inherited tests and recreating evidence.
+- Advancement gate: **not passed**; interrupted execution is not evidence.
+
 ### P6-E000 - Authorization, normative lock, and exact phase boundary
 
 - Date/time: 2026-07-14 Asia/Karachi. Accepted repository checkpoint: clean `main` at `bbccd76ea0dbc04b8fe5694d15c51410f56acbd4`, exactly synchronized with `origin/main` before Phase 6 work.
