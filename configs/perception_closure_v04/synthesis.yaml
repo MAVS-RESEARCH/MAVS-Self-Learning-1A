@@ -63,4 +63,3 @@ permutation_fields:
   - operation
   - expected_class
   - proposal_order
-hidden_taint_sentinel: PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D

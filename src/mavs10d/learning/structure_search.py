@@ -94,7 +94,7 @@ def search_structures(candidate_id: str, operation: str, variant_index: int, par
     for trial, ast in enumerate(structure_space(operation, variant_index)):
         validate_ast(ast, parameters)
         vector = objective_vector(ast, parameters, development)
-        traces.append({"candidate_id": candidate_id, "trial": trial, "structure_id": f"S{trial:02d}", "expression_ast": ast, "split": "development", "seed": seed + trial, "valid": True, "objective_vector": vector, "selected": False, "rejection_reason": None})
+        traces.append({"candidate_id": candidate_id, "trial": trial, "structure_id": f"S{trial:02d}", "expression_ast": ast, "parameters": dict(parameters), "split": "development", "seed": seed + trial, "valid": True, "objective_vector": vector, "selected": False, "rejection_reason": None})
     # Structure trial zero is the contrast-derived structure; alternatives test whether
     # the search degenerates to a generic global-error template.
     winner = 0

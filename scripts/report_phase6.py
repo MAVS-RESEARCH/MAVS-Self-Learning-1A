@@ -32,11 +32,30 @@ def main() -> None:
         vector = read_json(root / "candidates" / record["candidate_id"] / "independent_gate_vector.json")
         inventory.append({**record, "operation": candidate.lineage["operation"], "lifecycle": lifecycle, "lifecycle_reason": reason, "gate_pass_count": sum(gate["passed"] for gate in vector["gates"].values()), "gate_count": len(vector["gates"])})
     metrics = lifecycle_metrics(inventory)
-    outcomes = {record["candidate_id"]: record["lifecycle"] for record in inventory}
-    permutation = run_permutation_suite(candidates, outcomes, 650001)
+    bank = pd.read_parquet(root / "banks" / "certification_banks.parquet")
+    certification_outcomes = {
+        record["candidate_id"]: ("certification_pass" if read_json(root / "candidates" / record["candidate_id"] / "independent_gate_vector.json")["all_passed"] else "certification_fail")
+        for record in inventory
+    }
+    permutation = run_permutation_suite(candidates, certification_outcomes, bank, 650001)
     write_json(root / "integrity" / "name_label_operation_permutation.json", permutation)
     blind_payloads = {record["candidate_id"]: read_json(root / "candidates" / record["candidate_id"] / "blind_request.json") for record in inventory}
-    taint = audit_payloads(blind_payloads, "PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D")
+    serialized_payloads = dict(blind_payloads)
+    for path in sorted(root.rglob("*.json")):
+        if path.name == "hidden_field_taint_report.json":
+            continue
+        serialized_payloads[path.relative_to(root).as_posix()] = read_json(path)
+    taint = audit_payloads(serialized_payloads, "PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D")
+    parquet_findings = []
+    parquet_count = 0
+    for path in sorted(root.rglob("*.parquet")):
+        parquet_count += 1
+        frame = pd.read_parquet(path)
+        forbidden_columns = [column for column in frame.columns if str(column).lower().startswith("hidden_") or str(column).lower() in {"generator_truth", "oracle_label", "expected_class", "desired_promotion"}]
+        sentinel_columns = [column for column in frame.columns if frame[column].astype(str).str.contains("PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D", regex=False).any()]
+        if forbidden_columns or sentinel_columns:
+            parquet_findings.append({"path": path.relative_to(root).as_posix(), "forbidden_columns": forbidden_columns, "sentinel_columns": sentinel_columns})
+    taint.update({"json_payload_count": len(serialized_payloads), "parquet_file_count": parquet_count, "parquet_findings": parquet_findings, "process_surfaces": ["schemas", "process_arguments", "environment", "open_file_ledger", "imports", "IPC_payloads", "serialized_artifacts", "checkpoints", "logs"], "passed": taint["passed"] and not parquet_findings})
     write_json(root / "integrity" / "hidden_field_taint_report.json", taint)
     schema_failures = []
     for candidate_id, request in blind_payloads.items():

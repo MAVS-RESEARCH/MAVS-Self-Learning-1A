@@ -1,0 +1,4 @@
+{
+  "hidden_world": "PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D",
+  "purpose": "Evaluator-only taint fixture. Production synthesis and certification must never load this file."
+}

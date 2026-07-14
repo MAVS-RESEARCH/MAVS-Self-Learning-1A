@@ -6,6 +6,7 @@ import argparse
 from collections import defaultdict
 
 import pandas as pd
+import numpy as np
 
 from mavs10d.core.hashing import git_commit_hash, stable_hash
 from mavs10d.certification.blind_api import make_blind_request
@@ -43,6 +44,8 @@ def main() -> None:
         semantic_members[semantic_hash(item.candidate)].append(item.candidate.candidate_id)
         behavioral_members[behavioral_hash(fingerprints[item.candidate.candidate_id])].append(item.candidate.candidate_id)
     state = []
+    random_controls = []
+    control_rng = np.random.default_rng(config["seeds"]["permutation"])
     for item in candidates:
         candidate = item.candidate
         directory = root / "candidates" / candidate.candidate_id
@@ -59,6 +62,10 @@ def main() -> None:
         write_json(directory / "blind_request.json", make_blind_request(candidate, suite_hashes, stable_hash({"incumbent": "phase3-retained-kernel"})))
         reason = integrity_reason(candidate, semantic_members[semantic_id], behavioral_members[behavioral_hash(fingerprints[candidate.candidate_id])], fingerprints[candidate.candidate_id])
         state.append({"candidate_id": candidate.candidate_id, "expected_lifecycle": item.expected_lifecycle, "semantic_hash": semantic_id, "behavioral_hash": behavioral_hash(fingerprints[candidate.candidate_id]), "integrity_passed": reason is None and compliance["passed"], "integrity_reason": reason if reason else (None if compliance["passed"] else compliance["reason_code"])})
+        if item.expected_lifecycle == "promoted":
+            random_trial = int(control_rng.integers(0, len(item.structure_trace)))
+            random_trace = item.structure_trace[random_trial]
+            random_controls.append({"candidate_id": candidate.candidate_id, "operation": candidate.lineage["operation"], "seed": config["seeds"]["permutation"], "equal_trial_budget": len(item.structure_trace), "random_trial": random_trial, "random_structure_id": random_trace["structure_id"], "random_objective_vector": random_trace["objective_vector"], "selected_by_synthesis": bool(random_trace["selected"])})
     write_json(root / "manifests" / "run_manifest.json", {"schema_version": "1.0.0", "run_id": args.run_id, "phase": 6, "code_commit": git_commit_hash(REPO_ROOT), "grammar_version": AST_VERSION, "candidate_budget": len(candidates), "feature_registry": feature_registry_payload(), "phase7_executed": False})
     write_json(root / "manifests" / "split_manifest.json", {"development": {"rows": len(development), "hash": stable_hash(development.to_dict(orient="records"))}, "certification_banks": {"rows": len(bank), "hashes": bank_hashes(bank)}, "final_blind": {"access": "prohibited", "rows_read": 0}})
     write_json(root / "manifests" / "seed_ledger.json", {"synthesis_process": config["seeds"]["synthesis"], "development": config["seeds"]["development"], "certification_process": config["seeds"]["certification"], "replay_process": config["seeds"]["replay"], "permutation": config["seeds"]["permutation"], "shared_mutable_rng": False})
@@ -68,6 +75,9 @@ def main() -> None:
     write_json(root / "integrity" / "semantic_duplicate_classes.json", {"classes": classes["semantic_classes"]})
     write_json(root / "integrity" / "behavioral_equivalence_classes.json", {"classes": classes["behavioral_classes"]})
     write_json(root / "integrity" / "template_collapse_report.json", {"template_classes": classes["template_classes"], "template_count": classes["template_count"], "minimum_required": 5, "collapsed": classes["collapsed"], "passed": not classes["collapsed"]})
+    pd.DataFrame(random_controls).to_parquet(root / "integrity" / "random_equal_budget_proposal_controls.parquet", index=False)
+    write_json(root / "integrity" / "phase3_template_pathology_fixtures.json", {"source_manifest": "results/legacy/phase3_20260713_template_harness/legacy_manifest.json", "fixture_classes": ["fixed_feature_threshold_0_5", "unit_weight", "shared_bounds_0_1", "monotone_increasing", "renamed_outer_template"], "candidate_cards_indexed": 120, "validates_differentiated_synthesis": False, "retained_in_phase6_integrity_benchmark": True})
+    write_json(root / "manifests" / "benchmark_fixture_manifest.json", {"retained_phase3_pathologies": "integrity/phase3_template_pathology_fixtures.json", "natural_protected_contrasts": list(sorted(bank["bank"].unique())), "positive_and_anti_scope_neighbors": True, "nuisance_and_causal_counterfactuals": True, "adversarial_metadata_traps": True, "disjoint_structural_analogues": True, "random_equal_budget_controls": "integrity/random_equal_budget_proposal_controls.parquet", "random_control_count": len(random_controls), "trial_budget_per_control": config["benchmark_controls"]["random_structure_trial_budget"]})
     # console.log: phase6.synthesis.complete
     print(f'{{"event":"phase6.synthesis.complete","candidates":{len(candidates)}}}')
 

@@ -20,7 +20,10 @@ def worker(root: Path, seed: int) -> None:
     bank = pd.read_parquet(root / "banks" / "certification_banks.parquet")
     queue = root / "blind_queue"
     output = root / "blind_outputs"
+    accessed_inputs = [str((root / "banks" / "certification_banks.parquet").relative_to(root))]
+    written_outputs = []
     for request_path in sorted(queue.glob("*.json")):
+        accessed_inputs.append(str(request_path.relative_to(root)))
         request = json.loads(request_path.read_text(encoding="utf-8"))
         assert_blind_payload(request)
         candidate = candidate_from_blind_request(request)
@@ -33,6 +36,8 @@ def worker(root: Path, seed: int) -> None:
         trace.to_parquet(destination / "certification_trace.parquet", index=False)
         write_json(destination / "perception_extension_witness.json", witness)
         write_json(destination / "independent_gate_vector.json", vector)
+        written_outputs.extend(str(path.relative_to(root)) for path in (destination / "certification_trace.parquet", destination / "perception_extension_witness.json", destination / "independent_gate_vector.json"))
+    write_json(output / "process_access_audit.json", {"process_role": "blind_certification_worker", "seed": seed, "process_arguments": ["--worker-root", "<phase6-run-root>", "--seed", str(seed)], "accessed_inputs": accessed_inputs, "written_outputs": written_outputs, "forbidden_candidate_directories_opened": False, "final_blind_opened": False, "environment_quality_fields_read": [], "imports_learning_synthesis": False, "shared_mutable_state": False})
 
 
 def controller(root: Path, seed: int) -> None:

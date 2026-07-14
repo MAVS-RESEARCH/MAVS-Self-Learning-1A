@@ -33,6 +33,10 @@ compute_limits:
   maximum_structure_trials: 8
   maximum_parameter_trials: 27
   maximum_candidates: 40
+benchmark_controls:
+  retained_phase3_template_pathology: required
+  random_equal_budget_proposals_per_operation: 2
+  random_structure_trial_budget: 8
 certification_banks:
   - trigger
   - retained
@@ -46,4 +50,3 @@ certification_banks:
 final_blind_access: prohibited
 results_root: results/perception_closure_v04/phase6
 legacy_index_root: results/legacy
-

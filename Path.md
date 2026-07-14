@@ -1305,6 +1305,27 @@ The authoritative auditor scanned every Phase 6 script and the legacy index entr
 - Artifact size: 3,743,796 bytes under the authoritative run, before Git object/LFS representation.
 - Advancement gate: seal enforcement **passed**; this expected refusal is a destructive-boundary stress test, not an unresolved failure.
 
+### P6-E019 - Post-push adversarial source audit reopened the gate
+
+- Date and phase: 2026-07-14 (Asia/Karachi), Phase 6.
+- Trigger: before issuing the requested final verdict, a source-level review was performed independently of the generated `PASS` summary.
+- Findings: (1) the permutation helper's outcome assertion compared an outcome to itself and therefore did not execute the required operation/expected-class/order metamorphism; (2) schema validation covered candidate contracts but not all ten Version 0.4 schemas and every trace row; (3) operation compliance trusted declarative booleans rather than independently checking executable before/after deltas; (4) search objective vectors were not independently recomputed; (5) the authoritative corpus did not persist explicit retained Phase 3 pathology and random equal-budget proposal-control artifacts; (6) hidden-taint coverage did not enumerate every serialized/checkpoint/log/Parquet surface; and (7) rejection-class tests did not explicitly construct every WorkPlan pathology.
+- Decision: the pushed `0a9a5dc` evidence commit remains immutable history but is classified **superseded for the 100% compliance verdict**. Its sealed run is preserved and will not be deleted or overwritten. Phase 6 was reopened fail-closed.
+- Corrections implemented: real name/operation/expected-class/order permutations with semantic, behavioral, and certification-outcome recomputation; all-schema/all-row validation; independent recomputation of 320 structure and 920 parameter objectives; executable operation payloads and independent delta checks for all ten operations; typed AST inference, bound enforcement, and explicit serialization/deserialization; retained Phase 3 pathology and 20 random equal-budget controls; full JSON/Parquet/process-surface taint scan; actual blind-worker file/process ledger; and explicit constant, no-op, parent/sibling copy, syntactic equivalent, trigger-overfit, anti-scope leak, and certified cost-improvement tests.
+- Advancement gate: **reopened / not passed** until replacement authoritative evidence is generated and audited.
+
+### P6-E020 - Expanded disposable compliance reaudit
+
+- Run: `phase6_compliance_reaudit` (disposable, unsealed).
+- Focused tests: expanded Phase 6 suite **PASS 11/11** after the typed AST test was corrected from invalid numeric leaves under logical `and` to typed comparisons.
+- First expanded audit: **FAIL**. Parquet nullable union fields produced 320 AST schema findings; an evaluator sentinel was incorrectly present in the production effective config; the scope-narrow certification control failed its operation delta before blind certification; and lifecycle became 20/11/9. None was waived.
+- Corrections: strip only Parquet-introduced `null` optional AST fields before schema validation; move the sentinel exclusively to `tests/phase6/fixtures/hidden_taint.json`; give the scope-narrow certification control an executable scope delta that still leaks the frozen anti-scope bank.
+- Clean rerun command chain: named clean, legacy index, synthesis, separation audit, isolated certification, replay, report, and independent audit.
+- Exact result: **PASS with 0 findings** in `147 s`; lifecycle `20/10/10/0`; 40/40 replay.
+- Expanded schema evidence: all ten schemas compiled; 24,600 records validated (`23,040` fingerprints, `920` parameter trials, `320` structure trials, `120` direct ASTs, and all candidate/request/gate/witness/identity contracts); zero schema findings.
+- Expanded anti-gaming evidence: 40 real metamorphic permutation records with zero findings; 387 JSON payloads and 193 Parquet files scanned across schemas, arguments, environment, open-file ledger, imports, IPC, serialized artifacts, checkpoints, and logs; zero hidden-field/sentinel findings.
+- Advancement gate: disposable validation **passed**; replacement committed authoritative execution remains required.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1332,8 +1353,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 3 | Autonomous failure discovery and self-repair | Complete | P3-E000 through P3-E010; frozen authoritative and post-evidence deterministic audits pass |
 | 4 | Full baseline tournament and Pareto audit | Complete | P4-E000 through P4-E010; full paired tournament, deterministic replay, and fail-closed audit pass |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E011; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
-| 6 | Executable diagnostic synthesis and anti-gaming foundation | Complete | P6-E015 through P6-E017; 40-candidate non-vacuous run, 40/40 replay, 204-test regression, and zero-finding independent audit pass |
+| 6 | Executable diagnostic synthesis and anti-gaming foundation | In progress | P6-E019 reopened the gate; expanded disposable reaudit P6-E020 passes, replacement authoritative run pending |
 
 ## Current checkpoint
 
-Phase 0 through Phase 6 are complete and frozen. The accepted Phase 6 source checkpoint is `37846e748df9be5cf24d9ab5683c17b16fceaa9c`; authoritative evidence is under `results/perception_closure_v04/phase6/phase6_authoritative_20260714/`. Phase 7 is not implemented or authorized in this task.
+Phase 0 through Phase 5 are complete and frozen. Phase 6 is reopened for the expanded compliance reaudit; the first sealed authoritative run is preserved but superseded for final-verdict purposes. Phase 7 is not implemented or authorized in this task.

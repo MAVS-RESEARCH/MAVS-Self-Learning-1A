@@ -119,15 +119,15 @@ def synthesize_candidates(development: pd.DataFrame, synthesis_seed: int, develo
 def _candidate(candidate_id: str, name: str, operation: str, expression_ast: dict[str, Any], parameters: dict[str, float], variant_index: int, integrity_control: str | None = None, certification_control: str | None = None) -> ExecutableDiagnostic:
     positive_scope = {"op": "constant", "value": True} if certification_control else comparison("context_match", "scope_lower")
     anti_scope = {"op": "constant", "value": False} if certification_control else comparison("context_match", "anti_scope_upper", "lte")
+    if certification_control and operation == "scope_narrow":
+        positive_scope = {"op": "gte", "left": {"op": "feature", "name": "context_match"}, "right": {"op": "constant", "value": 0.0}}
+        anti_scope = {"op": "lte", "left": {"op": "feature", "name": "context_match"}, "right": {"op": "constant", "value": 0.01}}
     parameters = {**parameters, "scope_lower": float(parameters.get("scope_lower", 0.25)), "anti_scope_upper": float(parameters.get("anti_scope_upper", 0.10))}
     references = set(collect_feature_references(expression_ast)) | set(collect_feature_references(positive_scope)) | set(collect_feature_references(anti_scope))
     parents = [f"phase3-parent-{operation}"]
     if operation == "merge":
         parents.append("phase3-parent-merge-secondary")
-    payload = compliant_payload(operation)
-    if operation == "retire":
-        payload["runtime_influence_before"] = 1.0
-        payload["runtime_influence_after"] = 0.0
+    payload = compliant_payload(operation, expression_ast, parameters, positive_scope, anti_scope)
     candidate = ExecutableDiagnostic(
         candidate_id=candidate_id,
         name=name,

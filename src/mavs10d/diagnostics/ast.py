@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
+import json
 from typing import Any, Mapping, Sequence
 
 import numpy as np
@@ -103,12 +104,19 @@ def validate_ast(node: Mapping[str, Any], parameters: Mapping[str, float] | None
             raise ASTValidationError("not requires exactly one child.")
         for child in children:
             validate_ast(child, parameters)
+            if infer_ast_type(child) != "boolean":
+                raise ASTValidationError(f"{operation} requires boolean children.")
         return
     if operation in COMPARISON_OPERATIONS:
         if "left" not in node or "right" not in node:
             raise ASTValidationError(f"{operation} requires left and right nodes.")
         validate_ast(node["left"], parameters)
         validate_ast(node["right"], parameters)
+        left_type, right_type = infer_ast_type(node["left"]), infer_ast_type(node["right"])
+        if operation == "eq" and left_type != right_type:
+            raise ASTValidationError("eq requires operands of the same type.")
+        if operation != "eq" and (left_type != "number" or right_type != "number"):
+            raise ASTValidationError(f"{operation} requires numeric operands.")
         return
     if operation in ARITHMETIC_OPERATIONS:
         children = node.get("children")
@@ -120,6 +128,8 @@ def validate_ast(node: Mapping[str, Any], parameters: Mapping[str, float] | None
             raise ASTValidationError("clip requires exactly one child.")
         for child in children:
             validate_ast(child, parameters)
+            if infer_ast_type(child) != "number":
+                raise ASTValidationError(f"{operation} requires numeric children.")
         if operation == "clip":
             lower = float(node.get("lower", 0.0))
             upper = float(node.get("upper", 1.0))
@@ -127,6 +137,19 @@ def validate_ast(node: Mapping[str, Any], parameters: Mapping[str, float] | None
                 raise ASTValidationError("clip lower bound exceeds upper bound.")
         return
     raise ASTValidationError(f"Illegal AST operation: {operation!r}.")
+
+
+def infer_ast_type(node: Mapping[str, Any]) -> str:
+    operation = node.get("op")
+    if operation in {"feature", "parameter"}:
+        return "number"
+    if operation == "constant":
+        return "boolean" if isinstance(node.get("value"), bool) else "number"
+    if operation in LOGICAL_OPERATIONS | COMPARISON_OPERATIONS:
+        return "boolean"
+    if operation in ARITHMETIC_OPERATIONS:
+        return "number"
+    raise ASTValidationError(f"Cannot infer type for illegal operation: {operation!r}.")
 
 
 def collect_feature_references(node: Mapping[str, Any]) -> tuple[str, ...]:
@@ -191,7 +214,11 @@ def evaluate_ast(
             if name not in features:
                 raise KeyError(f"Required evidence feature is unavailable: {name}.")
             value = np.asarray(features[name])
-            return np.full(length, value.item()) if value.ndim == 0 else value.astype(float, copy=False)
+            numeric = np.full(length, value.item()) if value.ndim == 0 else value.astype(float, copy=False)
+            spec = FEATURE_REGISTRY[name]
+            if not np.isfinite(numeric).all() or bool(((numeric < spec.lower_bound) | (numeric > spec.upper_bound)).any()):
+                raise ASTValidationError(f"Feature {name} violates finite bounds [{spec.lower_bound}, {spec.upper_bound}].")
+            return numeric
         if operation == "parameter":
             return np.full(length, float(parameters[str(current["name"])]), dtype=float)
         if operation == "constant":
@@ -243,6 +270,20 @@ def ast_complexity(node: Mapping[str, Any]) -> int:
 
 def ast_hash(node: Mapping[str, Any]) -> str:
     return stable_hash({"ast_version": AST_VERSION, "ast": canonicalize_ast(node)})
+
+
+def serialize_ast(node: Mapping[str, Any], parameters: Mapping[str, float] | None = None) -> str:
+    validate_ast(node, parameters)
+    return stable_json_dumps({"ast_version": AST_VERSION, "ast": canonicalize_ast(node)})
+
+
+def deserialize_ast(serialized: str, parameters: Mapping[str, float] | None = None) -> dict[str, Any]:
+    payload = json.loads(serialized)
+    if set(payload) != {"ast_version", "ast"} or payload["ast_version"] != AST_VERSION:
+        raise ASTValidationError("Serialized AST version or envelope is invalid.")
+    ast = dict(payload["ast"])
+    validate_ast(ast, parameters)
+    return ast
 
 
 def template_signature(node: Mapping[str, Any]) -> str:
