@@ -1,0 +1,47 @@
+schema_version: "1.0.0"
+phase: 8
+name: ablation_and_integrity_program
+normative_version: "0.4"
+phase7_dependency:
+  run_id: phase7_authoritative_20260714
+  source_commit: d71d667a377ed2c0dd80a93e38b3ba70554d3a9a
+  audit_sha256: A9D2C8A475B7EEE31B79192E902C0224C0E700CCAEA48460E9D2A9A424DD09C8
+  required_audit_status: PASS
+  required_findings: 0
+  required_gate_count: 17
+  required_family_gate_count: 12
+matrix:
+  synthesis_integrity: [I0, I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11]
+  perception_closure_runtime: [P0, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13, P14, P15]
+  persistence_consolidation: [L0, L1, L2, L3, L4, L5, L6, L7, L8, L9, L10]
+locked_banks:
+  phase7_root: results/perception_closure_v04/phase7/phase7_authoritative_20260714
+  phase7_case_count: 96
+  phase7_library_size: 20000
+  phase4_trace: results/raw/phase4_authoritative/phase4/generation_1_traces.parquet
+  phase4_point_id: mavs_lineage.fixed_full_mavs.fixed.p00
+  phase4_world_count: 500
+  phase4_decision_count: 25000
+seeds:
+  matrix: 810001
+  synthesis: 820001
+  runtime: 830001
+  persistence: 840001
+  permutation: 850001
+  replay: 860001
+matched_budget:
+  synthesis_attempts: 40
+  candidate_budget: 40
+  query_calls_per_case: 8
+  latency_ms_per_case: 20000
+  compute_units_per_case: 40
+  token_budget_per_case: 0
+  memory_bytes: 4194304
+  persistence_bytes: 65536
+gates:
+  protected_regression_tolerance: 0.0
+  minimum_measurable_pressure_delta: 1.0
+  minimum_resolution_gain: 0.01
+  permutation_tolerance: 0.0
+  replay_tolerance: 0.0
+results_root: results/perception_closure_v04/phase8

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P1
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: resolver
+toggle: {resolver: approved_configuration_only}
+unchanged_fields: [locked_banks, seeds, fast_loop, visible_evidence, terminal_policy, budgets, metrics]
+causal_question: What remains unresolved without situational closure?
+expected_direction: residual_escalation_increase
+required_metrics: [initial_unresolved, local_resolution, residual_escalation, uar, frr]
+pass_fail_interpretation: P0 must improve local resolution and residual escalation without protected regression.

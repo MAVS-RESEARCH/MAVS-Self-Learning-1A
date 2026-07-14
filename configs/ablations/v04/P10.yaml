@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P10
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: local_closure_certificate
+toggle: {local_closure_certificate: confidence_terminal}
+unchanged_fields: [locked_banks, seeds, hypotheses, evidence, actions, thresholds, metrics]
+causal_question: Does confidence substitute incorrectly for decision-homogeneous evidence?
+expected_direction: uncertified_or_incorrect_terminal_increase
+required_metrics: [closure_obligation_failures, closure_error, witness_absence, replay_gaps]
+pass_fail_interpretation: Incorrect or uncertified terminals must rise; any P0 uncertified terminal fails the reference.

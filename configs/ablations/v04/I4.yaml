@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I4
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: parameter_fitting
+toggle: {parameter_fitting: fixed_0_5_unit_values}
+unchanged_fields: [locked_banks, seeds, structure_proposals, splits, certifier, scopes_schema, compute_budget]
+causal_question: Does real fitting prevent template collapse and poor scope or calibration?
+expected_direction: fit_or_scope_quality_decrease
+required_metrics: [parameter_diversity, calibration_error, scope_leakage, witness_success, unused_compute]
+pass_fail_interpretation: Fixed parameters must reduce fit, witness, or scope quality; equivalence makes fitting attribution unsupported.

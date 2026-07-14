@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L4
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: negative_knowledge
+toggle: {negative_knowledge: false}
+unchanged_fields: [locked_banks, seeds, positive_memory, diagnostics, query_policies, budgets, metrics]
+causal_question: Does the system rediscover harmful programs and low-yield queries?
+expected_direction: rediscovery_or_cost_increase
+required_metrics: [repeated_failed_programs, repeated_low_yield_queries, rounds, cost, violations]
+pass_fail_interpretation: Rediscovery must rise on recurrence fixtures or negative knowledge is not evidenced.

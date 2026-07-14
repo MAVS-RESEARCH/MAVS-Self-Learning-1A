@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L8
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: persistence_payload
+toggle: {persistence_payload: compact_case_programs_only}
+unchanged_fields: [locked_banks, seeds, retained_byte_budget, ledgers, runtime, metrics]
+causal_question: Are reusable closure operators the most useful memory unit?
+expected_direction: closure_burden_improvement_without_protected_regression
+required_metrics: [rounds, time_to_closure, recurrence, complexity, transfer, scope_leakage]
+pass_fail_interpretation: Superiority over L5-L7 is supported only without protected or scope regression.

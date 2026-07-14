@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/ablation_definition.schema.json",
+  "title": "Version 0.4 Phase 8 ablation definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "group", "reference_id", "isolated_factor", "toggle", "unchanged_fields", "causal_question", "expected_direction", "required_metrics", "pass_fail_interpretation"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"pattern": "^[IPL](?:[0-9]|1[0-5])$"},
+    "group": {"enum": ["synthesis_integrity", "perception_closure_runtime", "persistence_consolidation"]},
+    "reference_id": {"pattern": "^[IPL]0$"},
+    "isolated_factor": {"type": "string", "minLength": 3},
+    "toggle": {"type": "object", "maxProperties": 1, "additionalProperties": {"type": ["boolean", "string", "number"]}},
+    "unchanged_fields": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"type": "string"}},
+    "causal_question": {"type": "string", "minLength": 10},
+    "expected_direction": {"type": "string", "minLength": 3},
+    "required_metrics": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "pass_fail_interpretation": {"type": "string", "minLength": 10}
+  }
+}

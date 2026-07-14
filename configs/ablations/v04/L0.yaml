@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L0
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: full_persistence_and_consolidation
+toggle: {}
+unchanged_fields: [locked_banks, seeds, participant_budget, runtime, metrics, generations]
+causal_question: What does the complete cumulative learner achieve?
+expected_direction: reference_pass
+required_metrics: [uar, frr, residual_escalation, retention, consolidation, scope_leakage, library_growth]
+pass_fail_interpretation: The reference must pass retention, leakage, growth, and Phase 6 integrity gates.

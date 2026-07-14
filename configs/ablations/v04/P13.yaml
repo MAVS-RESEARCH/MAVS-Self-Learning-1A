@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P13
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: unresolved_fallback
+toggle: {unresolved_fallback: reject}
+unchanged_fields: [locked_banks, seeds, resolver, evidence, budgets, metrics, pre_fallback_trace]
+causal_question: What is the false-rejection cost of blunt containment?
+expected_direction: frr_increase
+required_metrics: [frr, safe_exposure, residual_escalation, unresolved_composition]
+pass_fail_interpretation: FRR must materially rise and cannot be presented as autonomy.

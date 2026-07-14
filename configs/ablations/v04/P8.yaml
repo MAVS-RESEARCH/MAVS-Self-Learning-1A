@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P8
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: typed_channels
+toggle: {typed_channels: false}
+unchanged_fields: [locked_banks, seeds, diagnostics, queries, scopes, budgets, resolver]
+causal_question: Do novelty, masking, availability, or scope signals become false danger?
+expected_direction: false_danger_pressure_increase
+required_metrics: [meta_signal_hard_veto, frr, unnecessary_rejection, query_suppression]
+pass_fail_interpretation: False-danger pressure must appear while P0 retains zero typed-channel violations.

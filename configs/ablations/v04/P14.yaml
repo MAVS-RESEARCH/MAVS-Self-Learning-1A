@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P14
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: correlation_policy
+toggle: {correlation_policy: raw_correlation_hard_veto}
+unchanged_fields: [locked_banks, seeds, evidence, cases, budgets, kernel_rules, metrics]
+causal_question: Does pre-DS-CF raw-correlation overbreadth recur?
+expected_direction: safe_correlation_frr_increase
+required_metrics: [safe_correlation_frr, hard_veto_causes, uar, residual_escalation]
+pass_fail_interpretation: Safe correlated cases must reveal overbreadth and favorable aggregates remain non-deployable.

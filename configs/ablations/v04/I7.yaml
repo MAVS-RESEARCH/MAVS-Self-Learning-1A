@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I7
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: hidden_field_exposure
+toggle: {hidden_field_exposure: true}
+unchanged_fields: [locked_banks, seeds, candidate_runtime, public_evidence, metrics, budgets]
+causal_question: Can privileged hidden-world leakage create impossible performance?
+expected_direction: firewall_detection_no_valid_gain
+required_metrics: [hidden_taint_count, impossible_witness_count, valid_performance_delta, contamination_count]
+pass_fail_interpretation: The firewall must detect and quarantine hidden fields; any valid gain or contamination invalidates the harness.

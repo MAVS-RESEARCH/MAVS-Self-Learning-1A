@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L9
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: active_eligibility_cap
+toggle: {active_eligibility_cap: false}
+unchanged_fields: [locked_banks, seeds, stored_library, runtime, cases, query_budget, compute_budget]
+causal_question: Does unlimited eligibility violate sparse influence and library health?
+expected_direction: eligibility_or_retrieval_pressure_increase
+required_metrics: [eligibility_size, active_basis, retrieval_cost, redundancy, scope_leakage, residual_escalation]
+pass_fail_interpretation: Eligibility pressure or pathology must rise; flat results require larger-library testing.

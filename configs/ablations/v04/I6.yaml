@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I6
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: certifier_metadata_exposure
+toggle: {certifier_metadata_exposure: true}
+unchanged_fields: [locked_banks, seeds, executable_inputs, gate_definitions, candidate_budget, runtime]
+causal_question: Does operation and expected-class metadata leakage inflate apparent certification?
+expected_direction: firewall_detection_no_valid_gain
+required_metrics: [taint_count, exposed_promotion_delta, permutation_sensitivity, blind_performance_delta]
+pass_fail_interpretation: The firewall must detect and quarantine exposure and valid blind performance cannot improve.

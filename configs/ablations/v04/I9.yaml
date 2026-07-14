@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I9
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: counterfactual_dependency_audit
+toggle: {counterfactual_dependency_audit: false}
+unchanged_fields: [locked_banks, seeds, scope_gates, retained_gates, holdout_gates, adversarial_gates, fitting]
+causal_question: Can confounded or label-leaking dependencies pass without counterfactual audit?
+expected_direction: counterfactual_violations_increase
+required_metrics: [nuisance_violations, causal_violations, false_witness_rate, promotion_pressure]
+pass_fail_interpretation: Violations must increase on planted confounds; failure to exercise them invalidates the fixture.

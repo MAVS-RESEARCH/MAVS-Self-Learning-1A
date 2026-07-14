@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/ablation_result.schema.json",
+  "title": "Version 0.4 Phase 8 ablation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "condition_id", "group", "status", "case_count", "metrics", "gate_results", "trace_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "condition_id": {"pattern": "^[IPL](?:[0-9]|1[0-5])$"},
+    "group": {"enum": ["synthesis_integrity", "perception_closure_runtime", "persistence_consolidation"]},
+    "status": {"enum": ["PASS", "EXPECTED_DEGRADATION", "EXPECTED_FIREWALL_DETECTION", "NULL", "THEORY_REVISION", "FAIL"]},
+    "case_count": {"type": "integer", "minimum": 1},
+    "metrics": {"type": "object", "minProperties": 1, "additionalProperties": {"type": ["number", "integer", "boolean", "string"]}},
+    "gate_results": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean"}},
+    "trace_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

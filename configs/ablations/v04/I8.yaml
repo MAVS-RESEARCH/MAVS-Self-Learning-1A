@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I8
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: perception_extension_witness_gate
+toggle: {perception_extension_witness_gate: false}
+unchanged_fields: [locked_banks, seeds, other_gates, certifier_blindness, budgets, candidate_count]
+causal_question: Can candidates promote without separating a previously inseparable contrast?
+expected_direction: missing_witness_promotions_increase
+required_metrics: [missing_witness_promotions, noop_promotions, parent_identical_promotions, retained_regression]
+pass_fail_interpretation: Missing-witness promotions must appear and demonstrate why the gate is necessary.

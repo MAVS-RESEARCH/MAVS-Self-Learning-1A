@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P5
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: positive_anti_scope_contract
+toggle: {positive_anti_scope_contract: false}
+unchanged_fields: [locked_banks, seeds, candidate_functions, hypotheses, query_planner, kernel, metrics]
+causal_question: Do explicit positive and anti-scopes prevent leakage and false rejection?
+expected_direction: scope_leakage_or_frr_increase
+required_metrics: [scope_violations, anti_scope_violations, frr, residual_escalation]
+pass_fail_interpretation: Leakage or FRR must rise on neighbor suites or scope attribution is unsupported.

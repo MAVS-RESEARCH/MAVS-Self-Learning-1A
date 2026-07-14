@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L10
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: periodic_recertification
+toggle: {periodic_recertification: false}
+unchanged_fields: [locked_banks, seeds, original_certifications, retained_state, shifted_banks, metrics]
+causal_question: Do stale scopes fail under shifted generations?
+expected_direction: stale_scope_failures_increase
+required_metrics: [stale_scope_activation, scope_leakage, uar, frr, quarantine, rollback, retention]
+pass_fail_interpretation: Shifted-scope failures must rise or re-certification attribution is limited.

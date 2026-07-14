@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P12
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: external_escalation
+toggle: {external_escalation: force_binary}
+unchanged_fields: [locked_banks, seeds, evidence, resolver, budgets, metrics, pre_fallback_trace]
+causal_question: Is apparent zero escalation bought with protected errors?
+expected_direction: protected_error_increase
+required_metrics: [uar, frr, closure_error, residual_escalation, cost]
+pass_fail_interpretation: Zero escalation is only a diagnostic bound and protected errors must expose its safety cost.

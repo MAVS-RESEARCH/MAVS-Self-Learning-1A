@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P9
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: interaction_certificates
+toggle: {interaction_certificates: false}
+unchanged_fields: [locked_banks, seeds, individual_certifications, scopes, sparse_limit, metrics]
+causal_question: Can individually valid diagnostics become unsafe together?
+expected_direction: unsafe_composition_influence_increase
+required_metrics: [uncertified_composition_influence, interaction_violations, uar, frr, conflict]
+pass_fail_interpretation: Planted unsafe combinations must activate or degrade; otherwise the fixture is inadequate.

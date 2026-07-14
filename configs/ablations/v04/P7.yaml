@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P7
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: causal_arbitration
+toggle: {causal_arbitration: additive_severity_stacking}
+unchanged_fields: [locked_banks, seeds, diagnostic_outputs, scopes, queries, kernel_bounds, metrics]
+causal_question: Does additive semantic collapse recreate the ambiguity band?
+expected_direction: frr_or_escalation_increase
+required_metrics: [frr, residual_escalation, channel_conflict, closure_error]
+pass_fail_interpretation: The predicted FRR or escalation pathology must reappear without UAR benefit.

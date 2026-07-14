@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I3
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: behavioral_deduplication
+toggle: {behavioral_deduplication: false}
+unchanged_fields: [locked_banks, seeds, budgets, semantic_deduplication, fitting, operation_constraints, certifier]
+causal_question: Can syntactically distinct but behaviorally identical candidates accumulate?
+expected_direction: behavioral_pressure_increase
+required_metrics: [behavioral_equivalent_count, eligibility_pressure, redundancy, active_basis]
+pass_fail_interpretation: Behavioral equivalents or eligibility pressure must measurably increase.

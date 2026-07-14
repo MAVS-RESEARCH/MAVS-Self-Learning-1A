@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I1
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: structure_search
+toggle: {structure_search: fixed_outer_template_renamed_features}
+unchanged_fields: [locked_banks, seeds, budgets, candidate_count, certifier, metrics]
+causal_question: Does integrity reject the exact Phase 3 template pathology?
+expected_direction: rejected_before_outcome_interpretation
+required_metrics: [template_count, name_only_rejections, promoted_count]
+pass_fail_interpretation: Every fixed-template name-only candidate must be rejected before performance interpretation.

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P0
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: full_perception_closure_runtime
+toggle: {}
+unchanged_fields: [locked_banks, seeds, budgets, diagnostics, scopes, metrics]
+causal_question: What does the complete Version 0.4 Perception-Closure runtime achieve?
+expected_direction: reference_pass
+required_metrics: [uar, frr, residual_escalation, local_resolution, scope_leakage, active_basis]
+pass_fail_interpretation: Every Phase 7 gate must pass or all runtime causal claims stop.

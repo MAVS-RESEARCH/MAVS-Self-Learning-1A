@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I5
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: operation_constraints
+toggle: {operation_constraints: false}
+unchanged_fields: [locked_banks, seeds, candidate_asts, parameter_fits, blind_certifier, budgets]
+causal_question: Do operation labels become metadata rather than executable semantics?
+expected_direction: operation_noncompliance_increase
+required_metrics: [operation_noncompliance, metadata_only_count, parent_identity, promotion_pressure]
+pass_fail_interpretation: Noncompliant labeled operations must increase on the planted operation fixtures.

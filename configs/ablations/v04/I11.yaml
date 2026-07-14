@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I11
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: proposal_engine
+toggle: {proposal_engine: budget_matched_random}
+unchanged_fields: [locked_banks, seeds, grammar, fitting, certifier, candidate_budget, compute_budget]
+causal_question: Does structured synthesis outperform equal-budget random generation?
+expected_direction: valid_or_witnessed_yield_decrease
+required_metrics: [valid_yield, witnessed_yield, semantic_diversity, harmful_noop_rate, search_cost]
+pass_fail_interpretation: Structured synthesis must improve a preregistered yield or closure metric without protected regression.

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P15
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: evidence_access
+toggle: {evidence_access: quarantined_oracle}
+unchanged_fields: [locked_worlds, seeds, outcome_metrics, case_count, reporting, auditor_firewall]
+causal_question: What is the upper bound when all separating evidence is available?
+expected_direction: oracle_upper_bound
+required_metrics: [uar, frr, residual_escalation, rounds, oracle_gap]
+pass_fail_interpretation: This is a quarantined diagnostic upper bound and inclusion in competitive claims fails audit.

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P3
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: conditional_perception_extension
+toggle: {conditional_perception_extension: false}
+unchanged_fields: [locked_banks, seeds, hypotheses, candidates, scopes, budgets, metrics]
+causal_question: Does global utility activate irrelevant diagnostics?
+expected_direction: irrelevant_activation_or_burden_increase
+required_metrics: [conditional_perception_gain, irrelevant_activation, scope_leakage, active_basis, residual_escalation]
+pass_fail_interpretation: Irrelevance, leakage, or burden must rise or conditionality is not evidenced.

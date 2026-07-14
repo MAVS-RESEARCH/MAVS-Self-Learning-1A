@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I0
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: integrity_complete_executable_synthesis
+toggle: {}
+unchanged_fields: [locked_banks, seeds, budgets, candidate_count, certifier, metrics]
+causal_question: What does the integrity-complete synthesis system achieve?
+expected_direction: reference_pass
+required_metrics: [candidate_diversity, template_count, semantic_classes, behavioral_classes, gate_pass_rate, witness_success]
+pass_fail_interpretation: Every Phase 6 gate must pass or all synthesis contrasts are blocked.

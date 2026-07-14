@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L6
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: persistence_payload
+toggle: {persistence_payload: diagnostics_only}
+unchanged_fields: [locked_banks, seeds, retained_byte_budget, ledgers, runtime, metrics]
+causal_question: Are scopes and query policies essential persistent memory?
+expected_direction: scope_leakage_or_query_burden_increase
+required_metrics: [scope_leakage, query_yield, local_resolution, recurrence, negative_transfer]
+pass_fail_interpretation: Leakage or burden must expose missing contextual memory or the persistence model is incomplete.

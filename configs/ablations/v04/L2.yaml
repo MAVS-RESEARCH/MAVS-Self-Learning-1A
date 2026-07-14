@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: L2
+group: persistence_consolidation
+reference_id: L0
+isolated_factor: post_g1_learning
+toggle: {post_g1_learning: frozen_after_g1}
+unchanged_fields: [locked_banks, seeds, g1_state, g2_g3_ledgers, runtime, budgets, metrics]
+causal_question: Does learning beyond initial discovery add value?
+expected_direction: g2_g3_novelty_burden_increase
+required_metrics: [g2_closure, g3_closure, recurrence, new_scope_performance, new_composition_performance, cost]
+pass_fail_interpretation: L0 improvement supports continuing learning; parity or frozen superiority limits the claim.

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I2
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: semantic_deduplication
+toggle: {semantic_deduplication: false}
+unchanged_fields: [locked_banks, seeds, budgets, behavioral_deduplication, fitting, certifier, runtime]
+causal_question: Can name-only or exact semantic duplicates enter certification pressure?
+expected_direction: duplicate_pressure_increase
+required_metrics: [semantic_duplicate_count, certification_pressure, active_eligibility]
+pass_fail_interpretation: Duplicate or certification pressure must increase while the protected harness remains valid.

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: I10
+group: synthesis_integrity
+reference_id: I0
+isolated_factor: template_collapse_alarm
+toggle: {template_collapse_alarm: false}
+unchanged_fields: [locked_banks, seeds, semantic_deduplication, behavioral_deduplication, certification, proposals, budgets]
+causal_question: Would the pipeline publish an attractive one-template run without the collapse alarm?
+expected_direction: planted_collapse_becomes_publishable
+required_metrics: [template_count, collapse_detected, publication_allowed]
+pass_fail_interpretation: The planted one-template run must become publishable only with the alarm disabled.

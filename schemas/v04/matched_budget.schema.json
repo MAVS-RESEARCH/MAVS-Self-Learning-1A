@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/matched_budget.schema.json",
+  "title": "Version 0.4 Phase 8 matched budget",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "condition_id", "reference_id", "declared", "consumed", "unused", "matched", "mismatch_fields"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "condition_id": {"pattern": "^[IPL](?:[0-9]|1[0-5])$"},
+    "reference_id": {"pattern": "^[IPL]0$"},
+    "declared": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "number", "minimum": 0}},
+    "consumed": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "number", "minimum": 0}},
+    "unused": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "number", "minimum": 0}},
+    "matched": {"type": "boolean"},
+    "mismatch_fields": {"type": "array", "items": {"type": "string"}}
+  }
+}

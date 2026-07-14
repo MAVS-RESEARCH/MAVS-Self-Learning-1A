@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P2
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: explicit_hypothesis_set
+toggle: {explicit_hypothesis_set: false}
+unchanged_fields: [locked_banks, seeds, actions, queries, scopes, budgets, metrics]
+causal_question: Does generic confidence choose the wrong perception extension?
+expected_direction: query_waste_or_closure_error_increase
+required_metrics: [separating_action_accuracy, ambiguity_contraction, closure_error, query_waste]
+pass_fail_interpretation: Wrong actions, query waste, or closure error must rise or hypothesis attribution is unsupported.

@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P4
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: active_query_planner
+toggle: {active_query_planner: false}
+unchanged_fields: [locked_banks, seeds, diagnostic_search, evidence_interfaces, budgets, metrics]
+causal_question: How much ambiguity requires targeted observation?
+expected_direction: query_resolution_decrease
+required_metrics: [query_yield, local_resolution, evidence_unavailable_escalation, rounds]
+pass_fail_interpretation: One-query, masked, or multi-step resolution must degrade without protected improvement.

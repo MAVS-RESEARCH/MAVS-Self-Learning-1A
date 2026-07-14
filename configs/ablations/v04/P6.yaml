@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+id: P6
+group: perception_closure_runtime
+reference_id: P0
+isolated_factor: sparse_basis_selection
+toggle: {sparse_basis_selection: false}
+unchanged_fields: [locked_banks, seeds, library, candidates, scopes, budgets, terminal_rules]
+causal_question: Do redundant active diagnostics create conflict and escalation?
+expected_direction: basis_conflict_or_burden_increase
+required_metrics: [active_basis, redundancy, interaction_pressure, frr, residual_escalation, cost]
+pass_fail_interpretation: Basis, conflict, or burden must grow or the library-pathology theory requires revision.

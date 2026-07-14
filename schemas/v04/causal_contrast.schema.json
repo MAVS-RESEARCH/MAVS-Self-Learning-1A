@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/causal_contrast.schema.json",
+  "title": "Version 0.4 Phase 8 causal contrast",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "condition_id", "reference_id", "isolated_factor", "unchanged_fields", "causal_question", "preregistered_expected_direction", "required_metrics", "confidence_method", "observed_deltas", "pass_fail_interpretation", "outcome", "theory_revision", "harness_invalid"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "condition_id": {"pattern": "^[IPL](?:[0-9]|1[0-5])$"},
+    "reference_id": {"pattern": "^[IPL]0$"},
+    "isolated_factor": {"type": "string"},
+    "unchanged_fields": {"type": "array", "items": {"type": "string"}},
+    "causal_question": {"type": "string"},
+    "preregistered_expected_direction": {"type": "string"},
+    "required_metrics": {"type": "array", "items": {"type": "string"}},
+    "confidence_method": {"type": "string"},
+    "observed_deltas": {"type": "object", "additionalProperties": {"type": "number"}},
+    "pass_fail_interpretation": {"type": "string"},
+    "outcome": {"enum": ["PASS", "EXPECTED_DEGRADATION", "EXPECTED_FIREWALL_DETECTION", "NULL", "THEORY_REVISION", "FAIL"]},
+    "theory_revision": {"type": "boolean"},
+    "harness_invalid": {"type": "boolean"}
+  }
+}
