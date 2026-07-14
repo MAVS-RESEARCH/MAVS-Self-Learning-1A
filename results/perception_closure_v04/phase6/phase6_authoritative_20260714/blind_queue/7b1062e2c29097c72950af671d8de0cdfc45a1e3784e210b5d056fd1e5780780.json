@@ -1,0 +1,150 @@
+{
+  "anonymous_semantic_id": "7b1062e2c29097c72950af671d8de0cdfc45a1e3784e210b5d056fd1e5780780",
+  "anti_scope_ast": {
+    "left": {
+      "name": "context_match",
+      "op": "feature"
+    },
+    "op": "lte",
+    "right": {
+      "name": "anti_scope_upper",
+      "op": "parameter"
+    }
+  },
+  "counterfactual_contract": {
+    "causal_interventions": [
+      "protected_signal_inversion"
+    ],
+    "minimum_causal_delta": 0.2,
+    "nuisance_interventions": [
+      "nuisance_marker_permutation"
+    ],
+    "nuisance_tolerance": 1e-09
+  },
+  "evidence_contract": {
+    "availability": "declared_per_case",
+    "failure_behavior": "deactivate",
+    "freshness_seconds": 60.0,
+    "minimum_trust": 0.6,
+    "provenance": "audited_visible_evidence_registry",
+    "sources": [
+      "context_match",
+      "evidence_available",
+      "provenance_strength",
+      "query_signal",
+      "risk_score"
+    ]
+  },
+  "expression_ast": {
+    "children": [
+      {
+        "children": [
+          {
+            "left": {
+              "name": "risk_score",
+              "op": "feature"
+            },
+            "op": "gte",
+            "right": {
+              "name": "threshold",
+              "op": "parameter"
+            }
+          },
+          {
+            "children": [
+              {
+                "left": {
+                  "name": "query_signal",
+                  "op": "feature"
+                },
+                "op": "gte",
+                "right": {
+                  "name": "safe_ceiling",
+                  "op": "parameter"
+                }
+              },
+              {
+                "left": {
+                  "name": "evidence_available",
+                  "op": "feature"
+                },
+                "op": "gte",
+                "right": {
+                  "name": "availability_floor",
+                  "op": "parameter"
+                }
+              }
+            ],
+            "op": "or"
+          }
+        ],
+        "op": "and"
+      },
+      {
+        "left": {
+          "name": "provenance_strength",
+          "op": "feature"
+        },
+        "op": "gte",
+        "right": {
+          "name": "trust_floor",
+          "op": "parameter"
+        }
+      }
+    ],
+    "op": "and"
+  },
+  "frozen_suite_hashes": {
+    "adversarial": "bdfff365d270ccf8a6d5f3a366cd091227f30286ccb3a2b00d92435c18740f3c",
+    "anti_scope": "024c5e5f04546ac8ac5fac239c494719e8e7d9e2bdd54967609b38da04d4005f",
+    "causal_counterfactual": "29ce6156134359df7e780e84ae2076da4423f79e7902d22635103df62c23e1a3",
+    "disjoint_analogue": "a50a614c3db644ac295b43eb3726c2bebb9eab14d155f849654f75784d6e9d65",
+    "holdout": "1da49b63223439931fb40ca54012333dbdc731d9e36f3928fc07e6a706b8e5a7",
+    "nuisance_counterfactual": "93e68f04881ca1eb765f486e00e8a2b816ad6ba14b2a7f3db327d9c74fec7df5",
+    "positive_scope_boundary": "7918d20527254ec15c9e8712481714fafddf7b82569d62fbdadda8eac1d31f83",
+    "retained": "42b75c5c30fbcf508c3a1ba73e868105d557ff6ca8d8e11f3fc30a8dd3e4601f",
+    "trigger": "c28b523ad1e72892c1b9ae08dac3b213897255e22d600bdfff9f7c1fb800b243"
+  },
+  "incumbent_semantic_hash": "76ac5bae2224d487f679755e40d3707b0c49e6b63964f7fcd0c54b23b94c64a6",
+  "influence_contract": {
+    "channel": "terminal",
+    "maximum": 1.0,
+    "minimum": 0.0,
+    "terminal_authority": true
+  },
+  "kernel_rules": {
+    "anti_scope_zero_influence": true,
+    "missing_evidence_deactivates": true,
+    "terminal_requires_scope": true
+  },
+  "metric_definitions": {
+    "protected_error": "incorrect active terminal decision / active decisions",
+    "scope_leakage": "active anti-scope cases / anti-scope cases",
+    "stability": "replay disagreement / cases"
+  },
+  "parameters": {
+    "anti_scope_upper": 0.1,
+    "availability_floor": 0.5,
+    "interaction": 0.5,
+    "masking_floor": 0.5,
+    "persistence_floor": 0.5,
+    "safe_ceiling": 0.5,
+    "scope_lower": 0.25,
+    "scope_upper": 0.75,
+    "threshold": 0.3,
+    "trust_floor": 0.17,
+    "weight": 0.9
+  },
+  "positive_scope_ast": {
+    "left": {
+      "name": "context_match",
+      "op": "feature"
+    },
+    "op": "gte",
+    "right": {
+      "name": "scope_lower",
+      "op": "parameter"
+    }
+  },
+  "schema_version": "1.0.0"
+}

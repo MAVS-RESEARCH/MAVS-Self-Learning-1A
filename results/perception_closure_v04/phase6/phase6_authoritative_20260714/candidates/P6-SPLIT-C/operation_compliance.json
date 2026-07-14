@@ -1,0 +1,8 @@
+{
+  "checks": {
+    "two_distinct_children": true
+  },
+  "operation": "split",
+  "passed": true,
+  "reason_code": null
+}

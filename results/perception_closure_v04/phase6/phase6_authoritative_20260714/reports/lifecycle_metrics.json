@@ -1,0 +1,9 @@
+{
+  "certification_rejected": 10,
+  "integrity_rejected": 10,
+  "promoted": 20,
+  "proposed": 40,
+  "quarantined": 0,
+  "reconciled": true,
+  "replayed": 40
+}

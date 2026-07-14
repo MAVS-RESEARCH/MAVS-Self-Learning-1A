@@ -1,0 +1,108 @@
+{
+  "anti_gaming": {
+    "forbidden_blind_fields": [
+      "candidate_id",
+      "candidate_name",
+      "operation",
+      "expected_outcome",
+      "expected_class",
+      "desired_promotion",
+      "candidate_quality",
+      "generator_truth",
+      "curriculum",
+      "generation",
+      "hidden_world",
+      "oracle_label"
+    ],
+    "reject": [
+      "semantic_duplicate",
+      "behavioral_equivalent",
+      "name_only",
+      "metadata_only",
+      "constant_output",
+      "no_op",
+      "parent_identical",
+      "sibling_identical",
+      "trigger_only_overfit"
+    ]
+  },
+  "authority_levels": {
+    "observation": 0,
+    "query": 1,
+    "soft": 2,
+    "terminal": 3
+  },
+  "certification": {
+    "counterfactual_tolerance": 1e-09,
+    "decision_tolerance": 1e-09,
+    "maximum_complexity": 31,
+    "maximum_protected_error": 0.24,
+    "maximum_scope_leakage": 0.0,
+    "minimum_counterfactual_accuracy": 0.74,
+    "require_disjoint_witness": true
+  },
+  "hidden_taint_sentinel": "PHASE6_EVALUATOR_ONLY_SENTINEL_7F3B2D",
+  "objective_order": [
+    "uar",
+    "frr",
+    "residual_escalation",
+    "scope_leakage",
+    "instability",
+    "complexity"
+  ],
+  "parameter_search": {
+    "calibration": [
+      -0.15,
+      -0.05,
+      0.05,
+      0.15
+    ],
+    "interaction": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "maximum_trials": 27,
+    "scope_lower": [
+      0.15,
+      0.25,
+      0.35
+    ],
+    "scope_upper": [
+      0.65,
+      0.75,
+      0.85
+    ],
+    "threshold": [
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75
+    ],
+    "weight": [
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4
+    ]
+  },
+  "permutation_fields": [
+    "candidate_name",
+    "operation",
+    "expected_class",
+    "proposal_order"
+  ],
+  "schema_version": "1.0.0",
+  "structure_search": {
+    "maximum_trials": 8,
+    "templates": [
+      "risk_and_evidence",
+      "danger_or_low_provenance",
+      "residual_and_context",
+      "temporal_masking_interaction"
+    ]
+  }
+}

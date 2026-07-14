@@ -1,0 +1,108 @@
+{
+  "candidate_id": "P6-ADD-I",
+  "excluded_identity_fields": [
+    "candidate_id",
+    "candidate_name",
+    "operation",
+    "proposal_order",
+    "expected_outcome",
+    "curriculum",
+    "generation"
+  ],
+  "grammar_version": "mavs-diagnostic-ast-v1",
+  "normalized_payload": {
+    "anti_scope_ast": {
+      "left": {
+        "name": "context_match",
+        "op": "feature"
+      },
+      "op": "lte",
+      "right": {
+        "name": "anti_scope_upper",
+        "op": "parameter"
+      }
+    },
+    "ast_version": "mavs-diagnostic-ast-v1",
+    "counterfactual_contract": {
+      "causal_interventions": [
+        "protected_signal_inversion"
+      ],
+      "minimum_causal_delta": 0.2,
+      "nuisance_interventions": [
+        "nuisance_marker_permutation"
+      ],
+      "nuisance_tolerance": 1e-09
+    },
+    "evidence_contract": {
+      "availability": "declared_per_case",
+      "failure_behavior": "deactivate",
+      "freshness_seconds": 60.0,
+      "minimum_trust": 0.6,
+      "provenance": "audited_visible_evidence_registry",
+      "sources": [
+        "context_match",
+        "provenance_strength",
+        "query_signal"
+      ]
+    },
+    "expression_ast": {
+      "children": [
+        {
+          "left": {
+            "name": "provenance_strength",
+            "op": "feature"
+          },
+          "op": "gte",
+          "right": {
+            "name": "trust_floor",
+            "op": "parameter"
+          }
+        },
+        {
+          "left": {
+            "name": "query_signal",
+            "op": "feature"
+          },
+          "op": "gte",
+          "right": {
+            "name": "threshold",
+            "op": "parameter"
+          }
+        }
+      ],
+      "op": "and"
+    },
+    "influence_contract": {
+      "channel": "terminal",
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "terminal_authority": true
+    },
+    "parameters": {
+      "anti_scope_upper": 0.1,
+      "availability_floor": 0.5,
+      "interaction": 0.5,
+      "masking_floor": 0.5,
+      "persistence_floor": 0.5,
+      "safe_ceiling": 0.5,
+      "scope_lower": 0.25,
+      "scope_upper": 0.75,
+      "threshold": 0.45,
+      "trust_floor": 0.17,
+      "weight": 0.8
+    },
+    "positive_scope_ast": {
+      "left": {
+        "name": "context_match",
+        "op": "feature"
+      },
+      "op": "gte",
+      "right": {
+        "name": "scope_lower",
+        "op": "parameter"
+      }
+    }
+  },
+  "schema_version": "1.0.0",
+  "semantic_hash": "774573682cee66c99633867d52b49c9ca21a18407c2d32f1473a014f70fbc96e"
+}

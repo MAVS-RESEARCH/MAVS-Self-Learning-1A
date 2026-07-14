@@ -1,0 +1,127 @@
+{
+  "anti_scope_ast": {
+    "op": "constant",
+    "value": false
+  },
+  "candidate_id": "P6-MERGE-C",
+  "candidate_name": "blind-scope-control-merge",
+  "certification_control": "anti_scope_leak",
+  "counterfactual_contract": {
+    "causal_interventions": [
+      "protected_signal_inversion"
+    ],
+    "minimum_causal_delta": 0.2,
+    "nuisance_interventions": [
+      "nuisance_marker_permutation"
+    ],
+    "nuisance_tolerance": 1e-09
+  },
+  "evidence_contract": {
+    "availability": "declared_per_case",
+    "failure_behavior": "deactivate",
+    "freshness_seconds": 60.0,
+    "minimum_trust": 0.6,
+    "provenance": "audited_visible_evidence_registry",
+    "sources": [
+      "calibration_residual",
+      "provenance_strength",
+      "risk_score"
+    ]
+  },
+  "expression_ast": {
+    "children": [
+      {
+        "left": {
+          "children": [
+            {
+              "children": [
+                {
+                  "name": "calibration_residual",
+                  "op": "feature"
+                },
+                {
+                  "children": [
+                    {
+                      "name": "risk_score",
+                      "op": "feature"
+                    },
+                    {
+                      "name": "weight",
+                      "op": "parameter"
+                    }
+                  ],
+                  "op": "mul"
+                }
+              ],
+              "op": "add"
+            }
+          ],
+          "lower": 0.0,
+          "op": "clip",
+          "upper": 1.0
+        },
+        "op": "gte",
+        "right": {
+          "name": "threshold",
+          "op": "parameter"
+        }
+      },
+      {
+        "left": {
+          "name": "provenance_strength",
+          "op": "feature"
+        },
+        "op": "gte",
+        "right": {
+          "name": "trust_floor",
+          "op": "parameter"
+        }
+      }
+    ],
+    "op": "and"
+  },
+  "influence_contract": {
+    "channel": "terminal",
+    "maximum": 1.0,
+    "minimum": 0.0,
+    "terminal_authority": true
+  },
+  "integrity_control": null,
+  "lineage": {
+    "operation": "merge",
+    "parameter_trace": "parameter_search.parquet",
+    "parents": [
+      "phase3-parent-merge",
+      "phase3-parent-merge-secondary"
+    ],
+    "rollback_target": "phase3-parent-merge",
+    "structure_trace": "structure_search.parquet",
+    "synthesis_evidence": [
+      "synthesis",
+      "development"
+    ],
+    "triggering_contrast": "protected-merge-contrast"
+  },
+  "operation_payload": {
+    "protected_closure_preserved": true,
+    "redundancy_reduction": 0.25
+  },
+  "parameters": {
+    "anti_scope_upper": 0.1,
+    "availability_floor": 0.5,
+    "interaction": 0.5,
+    "masking_floor": 0.5,
+    "persistence_floor": 0.5,
+    "safe_ceiling": 0.5,
+    "scope_lower": 0.35,
+    "scope_upper": 0.75,
+    "threshold": 0.55,
+    "trust_floor": 0.17,
+    "weight": 0.6
+  },
+  "positive_scope_ast": {
+    "op": "constant",
+    "value": true
+  },
+  "schema_version": "1.0.0"
+}

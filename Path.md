@@ -1239,6 +1239,72 @@ The independent audit inspected all 27 Phase 5 checkpoint statements and found z
 - Required outputs: the exact WorkPlan Phase 6 manifest, candidate, integrity, report, claim, split/separation, replay, legacy-index, and independent-audit artifacts. All proposed/rejected/quarantined/promoted counts must reconcile. Attractive safety metrics cannot override a missing integrity artifact or gate.
 - Verification design: focused unit/property/metamorphic/process-isolation/taint/adversarial/schema/statistical/replay tests; inherited pre/post regression; original smoke/trace validation; complete schema scan; hash-identical deterministic replay; console comment adjacency scan; candidate-by-candidate independent recomputation; legacy byte/hash preservation; and a clause-to-evidence audit. Phase 6 remains in progress until every gate passes.
 
+### P6-E015 - Corrected authoritative implementation and stress execution
+
+- Date and phase: 2026-07-14 (Asia/Karachi), Phase 6.
+- Source checkpoint: `37846e748df9be5cf24d9ab5683c17b16fceaa9c`; recorded identically in `manifests/run_manifest.json`, `environment_lock.json`, the legacy indices, and inherited smoke output.
+- Command: `node scripts/run_phase6.mjs --run-id phase6_authoritative_20260714`.
+- Exact result: **PASS**, exit code `0`, wall time `811.3 s`, all 16 orchestrator steps completed.
+- Pre-execution tests: inherited `tests/unit`, `tests/integration`, and `tests/phase0` through `tests/phase5` passed; focused Phase 6 tests passed `9/9`.
+- Post-execution tests: focused Phase 6 tests passed `9/9`; full repository regression passed all 204 tests; inherited synthetic smoke produced and validated 8/8 complete traces inside the isolated Phase 6 run.
+- Candidate benchmark: 40 candidates across ten operations; exactly two promotions, one semantic/name-only integrity control, and one blind anti-scope certification control per operation. Lifecycle reconciled exactly as `20 promoted / 10 integrity rejected / 10 certification rejected / 0 quarantined`; 40/40 candidates replayed deterministically.
+- Search evidence: 320 executable structure trials and 920 parameter trials were persisted. The corpus exercises 12 name-stripped structural templates, exceeding the non-vacuous minimum of five. Every candidate records selected structure/vector, ranges, split, seed, six-part objective, protected-constraint result, rejection rationale, and selected-parameter provenance.
+- Contract evidence: 125 unique per-candidate resolved evidence-reference sets were checked through the audited registry; zero unresolved opaque leaves. All 40 operation-compliance artifacts pass their operation-specific executable semantics. Each candidate contains the exact ten-file contract required by WorkPlan Section 21.
+- Witness evidence: all 20 promotions have a valid causal safe/unsafe separation, zero retained/anti-scope regression, and disjoint-analogue reproduction. All ten anti-scope controls record `anti_scope_regression: true`, `valid: false`, and fail the independent kernel, anti-scope, and perception-extension-witness gates.
+- Identity evidence: semantic and behavioral duplicate classes contain only each deliberate `A/I` source/control pair; no duplicate class contains two promotions. No name-only, metadata-only, constant, no-op, parent-identical, or sibling-identical candidate was promoted.
+- Blindness evidence: certification executed in a separate child process from serialized allowlisted requests; 40/40 request schemas passed; forbidden environment/import/payload fields were zero; final-blind rows read were zero; synthesis/certification/replay seeds were distinct; shared mutable RNG was false.
+- Anti-gaming evidence: name/label/operation/order permutation passed 40/40 with zero findings; hidden-field sentinel taint was zero over 40 payloads; gate distribution was nondegenerate (30 all-pass behavior vectors, ten independent kernel/anti-scope/witness failures); template-collapse, constant/no-op/identity, and behavioral-dedup reports all passed.
+- Result preservation: original Phase 3-5 paths remained in place and were independently rehashed against `results/legacy/*/legacy_manifest.json`. Phase 3 is explicitly classified only as deterministic lifecycle/certification plumbing evidence, not differentiated synthesis evidence.
+- Authoritative artifacts: `results/perception_closure_v04/phase6/phase6_authoritative_20260714/` contains 552 files, 40 candidate directories, complete manifests/banks/integrity/reports/claims/regression evidence, and no Phase 7 execution (`phase7_executed: false`).
+
+### P6-E016 - Exact Phase 6 console comment and statement registry
+
+The authoritative auditor scanned every Phase 6 script and the legacy index entrypoint. All 25 statements have an immediately preceding identifying comment; the complete statements are preserved in `reports/console_log_registry.json` with `passed: true`.
+
+| File | Comment line and exact comment | Statement line and event |
+|---|---|---|
+| `scripts/audit_phase6_integrity.py` | 182 `# console.log: phase6.audit.complete` | 183 `print(...)` event `phase6.audit.complete` |
+| `scripts/certify_phase6_candidates.py` | 72 `# console.log: phase6.certification.worker_complete` | 73 `print(...)` event `phase6.certification.worker_complete` |
+| `scripts/certify_phase6_candidates.py` | 78 `# console.log: phase6.certification.controller_complete` | 79 `print(...)` event `phase6.certification.controller_complete` |
+| `scripts/clean_phase6_results.py` | 23 `# console.log: phase6.clean.named_run` | 24 `print(...)` event `phase6.clean.named_run` |
+| `scripts/index_legacy_results.py` | 44 `# console.log: phase6.legacy_index.complete` | 45 `print(...)` event `phase6.legacy_index.complete` |
+| `scripts/replay_phase6_candidates.py` | 42 `# console.log: phase6.replay.complete` | 43 `print(...)` event `phase6.replay.complete` |
+| `scripts/report_phase6.py` | 59 `# console.log: phase6.report.complete` | 60 `print(...)` event `phase6.report.complete` |
+| `scripts/run_phase6_synthesis.py` | 71 `# console.log: phase6.synthesis.complete` | 72 `print(...)` event `phase6.synthesis.complete` |
+| `scripts/validate_phase6_separation.py` | 45 `# console.log: phase6.separation.complete` | 46 `print(...)` event `phase6.separation.complete` |
+| `scripts/run_phase6.mjs` | 18 `// console.log: phase6.orchestrator.step01.start` | 19 `console.log(...)` event `step01.start` |
+| `scripts/run_phase6.mjs` | 21 `// console.log: phase6.orchestrator.step02.clean_named_run` | 22 `console.log(...)` event `step02.clean_named_run` |
+| `scripts/run_phase6.mjs` | 26 `// console.log: phase6.orchestrator.step03.inherited_tests_before` | 27 `console.log(...)` event `step03.inherited_tests_before` |
+| `scripts/run_phase6.mjs` | 31 `// console.log: phase6.orchestrator.step04.phase6_tests_before` | 32 `console.log(...)` event `step04.phase6_tests_before` |
+| `scripts/run_phase6.mjs` | 36 `// console.log: phase6.orchestrator.step05.index_legacy` | 37 `console.log(...)` event `step05.index_legacy` |
+| `scripts/run_phase6.mjs` | 41 `// console.log: phase6.orchestrator.step06.synthesize` | 42 `console.log(...)` event `step06.synthesize` |
+| `scripts/run_phase6.mjs` | 46 `// console.log: phase6.orchestrator.step07.validate_separation` | 47 `console.log(...)` event `step07.validate_separation` |
+| `scripts/run_phase6.mjs` | 51 `// console.log: phase6.orchestrator.step08.certify` | 52 `console.log(...)` event `step08.certify` |
+| `scripts/run_phase6.mjs` | 56 `// console.log: phase6.orchestrator.step09.replay` | 57 `console.log(...)` event `step09.replay` |
+| `scripts/run_phase6.mjs` | 61 `// console.log: phase6.orchestrator.step10.report` | 62 `console.log(...)` event `step10.report` |
+| `scripts/run_phase6.mjs` | 66 `// console.log: phase6.orchestrator.step11.phase6_tests_after` | 67 `console.log(...)` event `step11.phase6_tests_after` |
+| `scripts/run_phase6.mjs` | 71 `// console.log: phase6.orchestrator.step12.full_regression` | 72 `console.log(...)` event `step12.full_regression` |
+| `scripts/run_phase6.mjs` | 76 `// console.log: phase6.orchestrator.step13.inherited_smoke` | 77 `console.log(...)` event `step13.inherited_smoke` |
+| `scripts/run_phase6.mjs` | 82 `// console.log: phase6.orchestrator.step14.write_orchestration_evidence` | 83 `console.log(...)` event `step14.write_orchestration_evidence` |
+| `scripts/run_phase6.mjs` | 87 `// console.log: phase6.orchestrator.step15.independent_audit` | 88 `console.log(...)` event `step15.independent_audit` |
+| `scripts/run_phase6.mjs` | 92 `// console.log: phase6.orchestrator.step16.complete` | 93 `console.log(...)` event `step16.complete` |
+
+### P6-E017 - Independent exit-gate audit and completion decision
+
+- Audit entrypoint: `python scripts/audit_phase6_integrity.py --run-id phase6_authoritative_20260714` executed by orchestrator step 15 using an independent AST evaluator, canonicalizer, hashing implementation, behavior recomputation, schema traversal, operation/witness/gate validation, replay validation, result-boundary check, legacy checksum check, and console adjacency scan. It imports neither production synthesis nor production certification.
+- Exact audit result: **PASS**, 40/40 candidates enumerated, 0 findings, 20 promotions with exactly two per operation, 10 integrity rejections, 10 certification rejections, 0 quarantines.
+- WorkPlan exit-gate decision: **PASS**. Feature resolution, forbidden-promotion rejection, semantic/behavioral uniqueness, complete search provenance, all ten operation semantics, disjoint witnesses, blind process/schema separation, permutation invariance, zero hidden taint, independent gate recomputation, non-collapsed template diversity, deterministic replay, schema validation, result isolation, legacy preservation, and synthesis-only claim discipline all have direct artifacts.
+- Claim boundary: `CLAIMS.md` is limited to Phase 6 executable synthesis and anti-gaming integrity. It makes no Phase 7 live-runtime, multi-generation, or final blind-bank claim.
+- Seal: `SEALED` binds run `phase6_authoritative_20260714` to source commit `37846e748df9be5cf24d9ab5683c17b16fceaa9c` and final audit SHA-256 `89736F10F24632B93BF68ADA964BF97D5DBF889E32CA3111FB9F4DB277DE9EFC`; the named-run cleaner now refuses deletion.
+- Dependencies: Phase 6 is complete. Phase 7 remains unimplemented and unauthorized in this task; its implementation may begin only from this accepted Phase 6 evidence.
+
+### P6-E018 - Seal enforcement test
+
+- Command: `python scripts/clean_phase6_results.py --run-id phase6_authoritative_20260714` after creating the audit-bound `SEALED` marker.
+- Exact result: expected **nonzero refusal**, `RuntimeError: Refusing to clean a sealed Phase 6 run.` The run remained present; its final audit hash independently recomputed as `89736F10F24632B93BF68ADA964BF97D5DBF889E32CA3111FB9F4DB277DE9EFC` and matched the seal.
+- Artifact size: 3,743,796 bytes under the authoritative run, before Git object/LFS representation.
+- Advancement gate: seal enforcement **passed**; this expected refusal is a destructive-boundary stress test, not an unresolved failure.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1266,8 +1332,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 3 | Autonomous failure discovery and self-repair | Complete | P3-E000 through P3-E010; frozen authoritative and post-evidence deterministic audits pass |
 | 4 | Full baseline tournament and Pareto audit | Complete | P4-E000 through P4-E010; full paired tournament, deterministic replay, and fail-closed audit pass |
 | 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E011; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
-| 6 | Executable diagnostic synthesis and anti-gaming foundation | In progress | P6-E000 through P6-E001; implementation authorized, no exit gate claimed |
+| 6 | Executable diagnostic synthesis and anti-gaming foundation | Complete | P6-E015 through P6-E017; 40-candidate non-vacuous run, 40/40 replay, 204-test regression, and zero-finding independent audit pass |
 
 ## Current checkpoint
 
-Phase 0 through Phase 5 are complete and frozen. Phase 6 is authorized and in progress under WorkPlan Section 21; Phase 7 is not authorized. No Phase 6 completion or Self-Learning synthesis claim exists until the non-vacuous integrity suite and independent exit audit pass.
+Phase 0 through Phase 6 are complete and frozen. The accepted Phase 6 source checkpoint is `37846e748df9be5cf24d9ab5683c17b16fceaa9c`; authoritative evidence is under `results/perception_closure_v04/phase6/phase6_authoritative_20260714/`. Phase 7 is not implemented or authorized in this task.

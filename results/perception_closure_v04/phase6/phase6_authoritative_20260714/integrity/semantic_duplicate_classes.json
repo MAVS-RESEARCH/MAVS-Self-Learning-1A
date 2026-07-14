@@ -1,0 +1,44 @@
+{
+  "classes": [
+    [
+      "P6-RECALIBRATE-A",
+      "P6-RECALIBRATE-I"
+    ],
+    [
+      "P6-SPLIT-A",
+      "P6-SPLIT-I"
+    ],
+    [
+      "P6-MERGE-A",
+      "P6-MERGE-I"
+    ],
+    [
+      "P6-ADD-A",
+      "P6-ADD-I"
+    ],
+    [
+      "P6-SCOPE-NARROW-A",
+      "P6-SCOPE-NARROW-I"
+    ],
+    [
+      "P6-SCOPE-EXPAND-A",
+      "P6-SCOPE-EXPAND-I"
+    ],
+    [
+      "P6-EVIDENCE-RECOVERY-A",
+      "P6-EVIDENCE-RECOVERY-I"
+    ],
+    [
+      "P6-POLICY-INTERACTION-A",
+      "P6-POLICY-INTERACTION-I"
+    ],
+    [
+      "P6-CONFIGURATION-SPECIALIZATION-A",
+      "P6-CONFIGURATION-SPECIALIZATION-I"
+    ],
+    [
+      "P6-RETIRE-A",
+      "P6-RETIRE-I"
+    ]
+  ]
+}

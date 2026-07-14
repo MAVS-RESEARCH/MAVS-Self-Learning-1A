@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "multiple_parents": true,
+    "protected_closure_preserved": true,
+    "redundancy_or_cost_reduced": true
+  },
+  "operation": "merge",
+  "passed": true,
+  "reason_code": null
+}

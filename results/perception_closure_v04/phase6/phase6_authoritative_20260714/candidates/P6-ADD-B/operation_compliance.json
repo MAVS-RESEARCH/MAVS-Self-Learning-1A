@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "new_dependency": true,
+    "new_extension_witness": true
+  },
+  "operation": "add",
+  "passed": true,
+  "reason_code": null
+}

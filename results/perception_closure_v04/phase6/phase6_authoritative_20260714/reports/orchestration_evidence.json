@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "phase6_authoritative_20260714",
+  "completed_steps": [
+    "clean_named_run",
+    "inherited_tests_before",
+    "phase6_tests_before",
+    "legacy_indexed",
+    "synthesis_complete",
+    "separation_validated",
+    "blind_certification_complete",
+    "candidate_replay_complete",
+    "integrity_reports_complete",
+    "phase6_tests_after",
+    "full_regression",
+    "inherited_smoke_after"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "anti_scope_regression": false,
+  "candidate_id": "P6-MERGE-A",
+  "candidate_separates": true,
+  "causal_reason": "registered protected evidence changes while nuisance_marker is excluded",
+  "different_decisions_required": true,
+  "disjoint_reproduction": true,
+  "incumbent_indistinguishable": true,
+  "retained_regression": false,
+  "safe_case_id": "trigger-0000",
+  "supporting_cases": [
+    "trigger-0000",
+    "trigger-0002"
+  ],
+  "terminal_correct": true,
+  "unsafe_case_id": "trigger-0002",
+  "valid": true
+}

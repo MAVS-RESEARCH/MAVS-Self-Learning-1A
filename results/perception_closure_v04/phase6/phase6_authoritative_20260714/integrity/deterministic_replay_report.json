@@ -1,0 +1,288 @@
+{
+  "candidate_count": 40,
+  "failed_count": 0,
+  "passed": true,
+  "passed_count": 40,
+  "records": [
+    {
+      "candidate_id": "P6-RECALIBRATE-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SPLIT-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SPLIT-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SPLIT-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SPLIT-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-MERGE-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-MERGE-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-MERGE-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-MERGE-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-ADD-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-ADD-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-ADD-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-ADD-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RETIRE-A",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RETIRE-B",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RETIRE-I",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    },
+    {
+      "candidate_id": "P6-RETIRE-C",
+      "gate_vector_replayed": true,
+      "passed": true,
+      "trace_replayed": true,
+      "witness_replayed": true
+    }
+  ]
+}

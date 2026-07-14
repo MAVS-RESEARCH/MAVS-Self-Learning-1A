@@ -1,0 +1,8 @@
+{
+  "forbidden_promotions": [],
+  "passed": true,
+  "reason_counts": {
+    "name_only_semantic_duplicate": 10,
+    "none": 30
+  }
+}

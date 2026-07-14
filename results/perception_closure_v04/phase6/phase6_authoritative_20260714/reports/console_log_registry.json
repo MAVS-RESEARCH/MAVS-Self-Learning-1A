@@ -1,0 +1,181 @@
+{
+  "entries": [
+    {
+      "comment": "# console.log: phase6.audit.complete",
+      "comment_line": 182,
+      "file": "scripts/audit_phase6_integrity.py",
+      "line": 183,
+      "statement": "print(f'{{\"event\":\"phase6.audit.complete\",\"status\":\"{report[\"status\"]}\",\"findings\":{report[\"finding_count\"]}}}')"
+    },
+    {
+      "comment": "# console.log: phase6.certification.worker_complete",
+      "comment_line": 72,
+      "file": "scripts/certify_phase6_candidates.py",
+      "line": 73,
+      "statement": "print('{\"event\":\"phase6.certification.worker_complete\"}')"
+    },
+    {
+      "comment": "# console.log: phase6.certification.controller_complete",
+      "comment_line": 78,
+      "file": "scripts/certify_phase6_candidates.py",
+      "line": 79,
+      "statement": "print(f'{{\"event\":\"phase6.certification.controller_complete\",\"run_id\":\"{args.run_id}\"}}')"
+    },
+    {
+      "comment": "# console.log: phase6.clean.named_run",
+      "comment_line": 23,
+      "file": "scripts/clean_phase6_results.py",
+      "line": 24,
+      "statement": "print(f'{{\"event\":\"phase6.clean.named_run\",\"run_id\":\"{args.run_id}\"}}')"
+    },
+    {
+      "comment": "# console.log: phase6.legacy_index.complete",
+      "comment_line": 44,
+      "file": "scripts/index_legacy_results.py",
+      "line": 45,
+      "statement": "print(f'{{\"event\":\"phase6.legacy_index.complete\",\"namespaces\":{len(rows)}}}')"
+    },
+    {
+      "comment": "# console.log: phase6.replay.complete",
+      "comment_line": 42,
+      "file": "scripts/replay_phase6_candidates.py",
+      "line": 43,
+      "statement": "print(f'{{\"event\":\"phase6.replay.complete\",\"candidates\":{len(records)}}}')"
+    },
+    {
+      "comment": "# console.log: phase6.report.complete",
+      "comment_line": 59,
+      "file": "scripts/report_phase6.py",
+      "line": 60,
+      "statement": "print(f'{{\"event\":\"phase6.report.complete\",\"promoted\":{metrics[\"promoted\"]},\"rejected\":{metrics[\"integrity_rejected\"] + metrics[\"certification_rejected\"]}}}')"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step01.start",
+      "comment_line": 18,
+      "file": "scripts/run_phase6.mjs",
+      "line": 19,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step01.start\", run_id: runId }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step02.clean_named_run",
+      "comment_line": 21,
+      "file": "scripts/run_phase6.mjs",
+      "line": 22,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step02.clean_named_run\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step03.inherited_tests_before",
+      "comment_line": 26,
+      "file": "scripts/run_phase6.mjs",
+      "line": 27,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step03.inherited_tests_before\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step04.phase6_tests_before",
+      "comment_line": 31,
+      "file": "scripts/run_phase6.mjs",
+      "line": 32,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step04.phase6_tests_before\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step05.index_legacy",
+      "comment_line": 36,
+      "file": "scripts/run_phase6.mjs",
+      "line": 37,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step05.index_legacy\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step06.synthesize",
+      "comment_line": 41,
+      "file": "scripts/run_phase6.mjs",
+      "line": 42,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step06.synthesize\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step07.validate_separation",
+      "comment_line": 46,
+      "file": "scripts/run_phase6.mjs",
+      "line": 47,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step07.validate_separation\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step08.certify",
+      "comment_line": 51,
+      "file": "scripts/run_phase6.mjs",
+      "line": 52,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step08.certify\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step09.replay",
+      "comment_line": 56,
+      "file": "scripts/run_phase6.mjs",
+      "line": 57,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step09.replay\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step10.report",
+      "comment_line": 61,
+      "file": "scripts/run_phase6.mjs",
+      "line": 62,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step10.report\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step11.phase6_tests_after",
+      "comment_line": 66,
+      "file": "scripts/run_phase6.mjs",
+      "line": 67,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step11.phase6_tests_after\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step12.full_regression",
+      "comment_line": 71,
+      "file": "scripts/run_phase6.mjs",
+      "line": 72,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step12.full_regression\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step13.inherited_smoke",
+      "comment_line": 76,
+      "file": "scripts/run_phase6.mjs",
+      "line": 77,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step13.inherited_smoke\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step14.write_orchestration_evidence",
+      "comment_line": 82,
+      "file": "scripts/run_phase6.mjs",
+      "line": 83,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step14.write_orchestration_evidence\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step15.independent_audit",
+      "comment_line": 87,
+      "file": "scripts/run_phase6.mjs",
+      "line": 88,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step15.independent_audit\" }));"
+    },
+    {
+      "comment": "// console.log: phase6.orchestrator.step16.complete",
+      "comment_line": 92,
+      "file": "scripts/run_phase6.mjs",
+      "line": 93,
+      "statement": "console.log(JSON.stringify({ event: \"phase6.orchestrator.step16.complete\", run_id: runId }));"
+    },
+    {
+      "comment": "# console.log: phase6.synthesis.complete",
+      "comment_line": 71,
+      "file": "scripts/run_phase6_synthesis.py",
+      "line": 72,
+      "statement": "print(f'{{\"event\":\"phase6.synthesis.complete\",\"candidates\":{len(candidates)}}}')"
+    },
+    {
+      "comment": "# console.log: phase6.separation.complete",
+      "comment_line": 45,
+      "file": "scripts/validate_phase6_separation.py",
+      "line": 46,
+      "statement": "print(f'{{\"event\":\"phase6.separation.complete\",\"candidates\":{len(state)}}}')"
+    }
+  ],
+  "entry_count": 25,
+  "passed": true
+}

@@ -1,0 +1,114 @@
+{
+  "anti_scope_ast": {
+    "left": {
+      "name": "context_match",
+      "op": "feature"
+    },
+    "op": "lte",
+    "right": {
+      "name": "anti_scope_upper",
+      "op": "parameter"
+    }
+  },
+  "candidate_id": "P6-SCOPE-NARROW-A",
+  "candidate_name": "documentary-scope_narrow-a",
+  "certification_control": null,
+  "counterfactual_contract": {
+    "causal_interventions": [
+      "protected_signal_inversion"
+    ],
+    "minimum_causal_delta": 0.2,
+    "nuisance_interventions": [
+      "nuisance_marker_permutation"
+    ],
+    "nuisance_tolerance": 1e-09
+  },
+  "evidence_contract": {
+    "availability": "declared_per_case",
+    "failure_behavior": "deactivate",
+    "freshness_seconds": 60.0,
+    "minimum_trust": 0.6,
+    "provenance": "audited_visible_evidence_registry",
+    "sources": [
+      "context_match",
+      "risk_score"
+    ]
+  },
+  "expression_ast": {
+    "children": [
+      {
+        "left": {
+          "name": "risk_score",
+          "op": "feature"
+        },
+        "op": "gte",
+        "right": {
+          "name": "threshold",
+          "op": "parameter"
+        }
+      },
+      {
+        "left": {
+          "name": "context_match",
+          "op": "feature"
+        },
+        "op": "gte",
+        "right": {
+          "name": "scope_lower",
+          "op": "parameter"
+        }
+      }
+    ],
+    "op": "and"
+  },
+  "influence_contract": {
+    "channel": "terminal",
+    "maximum": 1.0,
+    "minimum": 0.0,
+    "terminal_authority": true
+  },
+  "integrity_control": null,
+  "lineage": {
+    "operation": "scope_narrow",
+    "parameter_trace": "parameter_search.parquet",
+    "parents": [
+      "phase3-parent-scope_narrow"
+    ],
+    "rollback_target": "phase3-parent-scope_narrow",
+    "structure_trace": "structure_search.parquet",
+    "synthesis_evidence": [
+      "synthesis",
+      "development"
+    ],
+    "triggering_contrast": "protected-scope_narrow-contrast"
+  },
+  "operation_payload": {
+    "neighbor_deactivated": true,
+    "retained_scope_valid": true
+  },
+  "parameters": {
+    "anti_scope_upper": 0.1,
+    "availability_floor": 0.5,
+    "interaction": 0.5,
+    "masking_floor": 0.5,
+    "persistence_floor": 0.5,
+    "safe_ceiling": 0.5,
+    "scope_lower": 0.25,
+    "scope_upper": 0.75,
+    "threshold": 0.35,
+    "trust_floor": 0.5,
+    "weight": 0.8
+  },
+  "positive_scope_ast": {
+    "left": {
+      "name": "context_match",
+      "op": "feature"
+    },
+    "op": "gte",
+    "right": {
+      "name": "scope_lower",
+      "op": "parameter"
+    }
+  },
+  "schema_version": "1.0.0"
+}
