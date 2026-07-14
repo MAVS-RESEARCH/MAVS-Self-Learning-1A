@@ -844,3 +844,664 @@ Each implementation task owns one contract or module and begins with exact input
 ## 18. `Path.md` execution discipline
 
 `Path.md` is the implementation evidence ledger, not a summary written after the fact. For every work package or meaningful change it must record date/time, phase/generation, plan clauses, exact files, implementation decisions, commands/tests, input/output hashes, result-cleanliness check, metrics, failures, deviations, corrective action, and next gate. A phase may be marked complete only when its WorkPlan exit gate is evidenced. If implementation deviates, `Path.md` records why, impact, approval if required, and whether this plan must be amended.
+
+## 19. Version 0.4 normative extension, evidence boundary, and preservation policy
+
+- **Normative revision:** `MAVS_Self_Learning_Perception_Closure_Architecture_and_Revalidation_v0.4.pdf`.
+- **Normative revision SHA-256:** `2E235F9D4AD2AA9F54243B6C928BC2AA0EA1F7B0D822EE19867CD345E65149D1`.
+- **Extension planning date:** 2026-07-14.
+- **Extension status:** implementation-ready planning only. Appending Phases 6-10 is not evidence that any Version 0.4 module, experiment, gate, or claim has passed.
+- **Precedence:** Sections 19-27 govern the revised Perception-Closure implementation and revalidation. Sections 0-18 remain the immutable plan and historical interpretation for Phases 0-5 except where this section narrows the evidentiary meaning of prior results.
+- **Program rule:** no Version 0.4 output may support a Self-Learning MAVS claim until Phase 6 synthesis-integrity gates, Phase 7 live-runtime gates, Phase 8 ablation/integrity gates, Phase 9 paired and blind revalidation gates, and Phase 10 independent release audit all pass in sequence.
+
+### 19.1 Phase 3 evidentiary reclassification
+
+The retained `phase3_20260713` card corpus contains exactly 120 candidates. All 120 use the same outer executable form: one named feature, operator `>=`, threshold `0.5`, lower/upper bounds `[0.0,1.0]`, monotone-increasing semantics, and one unit weight. Features, primitive labels, operation labels, curricula, domains, generations, candidate IDs, and metadata vary, but the outer computation and fitted values do not. The previous Phase 3 result is therefore a deterministic diagnostic-lifecycle and certification-harness benchmark, not proof of differentiated diagnostic synthesis.
+
+| Prior Phase 3 evidence | Retained interpretation | Prohibited interpretation without a Version 0.4 rerun |
+|---|---|---|
+| Immutable traces, hashes, and deterministic replay | Validates deterministic candidate execution and replay plumbing. | Does not establish that a new semantic distinction was discovered. |
+| Proposal, certification, promotion, rejection, quarantine, rollback, and genealogy state transitions | Validates governed lifecycle orchestration and rollback mechanics. | Does not establish that certification discriminated among naturally varying executable candidates. |
+| Configuration persistence, checkpointing, lineage, and consolidation records | Validates persistence and bookkeeping mechanics. | Does not establish beneficial compounding of genuine diagnostic knowledge. |
+| Candidate cards with varied names, operations, domains, curricula, and generations | Validates schema coverage and metadata transport. | Does not establish executable operation meaning, real parameter optimization, or behavioral diversity. |
+| Existing Phase 3 audit verdict | Remains valid only for the pipeline/lifecycle claims it actually tested. | Must not be cited as evidence of autonomous diagnostic invention, learned perception extension, or high-quality synthesis. |
+
+The reclassification is fail-closed: `pipeline_validity != diagnostic_synthesis_validity`. All prior artifacts remain available and hash-addressable; none may be deleted, relabeled as Version 0.4 evidence, or silently included in a revised claim aggregate.
+
+### 19.2 Results preservation and namespace contract
+
+Previous results are immutable historical evidence. Before Phase 6 execution, an indexing operation must create the following logical layout without deleting or overwriting any existing path:
+
+```text
+results/
+|-- legacy/
+|   |-- phase3_20260713_template_harness/
+|   |-- phase4_original/
+|   `-- phase5_original/
+|-- perception_closure_v04/
+|   |-- phase6/
+|   |-- phase7/
+|   |-- phase8/
+|   |-- phase9/
+|   |   |-- paired_original_bank/
+|   |   `-- blind_bank/
+|   `-- phase10/
+`-- RESULTS_INDEX.md
+```
+
+The existing Phase 3, Phase 4, and Phase 5 evidence is currently distributed across `results/{manifests,checkpoints,raw,processed,aggregates,figures,reports}/<run_id>`. If moving those paths would invalidate manifests, Git LFS pointers, hashes, or published references, they must remain in place. In that case Phase 6 creates immutable indexed copies or content-addressed references under the legacy namespace, with a `legacy_manifest.json` that records every source path, destination/reference path, byte size, SHA-256, Git object/LFS object ID where applicable, original run ID, code SHA, claim status, and copy/link method. A complete byte/hash comparison must pass before a legacy namespace is sealed.
+
+Legacy claim statuses are fixed as follows:
+
+- `phase3_20260713_template_harness`: pipeline-lifecycle and certification-plumbing evidence only;
+- `phase4_original`: historical tournament behavior of the pre-Perception-Closure architecture;
+- `phase5_original`: diagnostic evidence motivating the redesign, including the retained `NOT_SUPPORTED` continual-governance result.
+
+| Legacy logical namespace | Existing source run IDs that must be indexed without mutation |
+|---|---|
+| `results/legacy/phase3_20260713_template_harness/` | `phase3_20260713` under current `manifests`, `checkpoints`, `raw`, `processed`, and `reports` roots. |
+| `results/legacy/phase4_original/` | `phase4_authoritative` under current `manifests`, `raw`, `aggregates`, and `reports` roots. |
+| `results/legacy/phase5_original/` | `phase5_authoritative` under current `manifests`, `raw`, `aggregates`, `figures`, and `reports` roots. |
+
+Every closed Version 0.4 result directory is append-only and contains a manifest binding code SHA, configuration hash, data/ledger hashes, seed ledger, environment lock, schema versions, artifact hashes, and claim status. No script may glob or concatenate legacy and Version 0.4 results. Any paired cross-version comparison requires an explicit `cross_version_comparison_manifest.json`. `results/RESULTS_INDEX.md` must identify every run as current, valid, failed, superseded, diagnostic-only, or release-bearing; default Version 0.4 reports may resolve only within `results/perception_closure_v04/`.
+
+## 20. Revised Perception-Closure architecture and cross-phase contracts
+
+The revised Self-Learning MAVS is a decision-conditioned Diagnostic Sciences system. It first runs the approved fast loop. An unresolved decision becomes an explicit finite safe/unsafe hypothesis-separation problem, not a generic confidence band. The resolver searches for bounded diagnostics, compositions, queries, probes, specialists, tools, or evidence-recovery actions that add protected conditional perception inside the live ambiguity class. It activates the smallest scope-certified nonredundant case program, issues a terminal action only under a closure certificate, and externally escalates only after every valid positive-value perception-extension path is exhausted or unavailable.
+
+The formal implementation is `M^PC = (M, H, O, T, R, Q, V_local, L, V_persist, K, C, S, B, N)`: the base runtime, governance memory, ambiguity ontology, certified executable primitive library, resolver, evidence-acquisition system, local certification, learning operator, persistent certification, immutable kernel, compact persistent basis, governed selector, budget controller, and negative-knowledge base. Per-decision state is `state_t = (e_t, H_t, A_t, Z_t, G_t, Q_t, Lambda_t, budget_t)` and must be serializable at every resolver round.
+
+The population objective is lexicographic: `Lex(UAR, FRR, ResidualEscRate, QueryCost, Latency, Complexity)`. A reduction in escalation or burden cannot compensate for an unsafe-acceptance regression; a false-rejection improvement cannot compensate for an unsafe-acceptance regression. Residual escalation is decomposed as `IrreducibleAmbiguity + EvidenceUnavailable + BudgetExhaustion + ResolverFailure`. `QUERY`, internal diagnostic/probe rounds, and external `ESCALATE` are different event types, counters, costs, and terminal semantics.
+
+### 20.1 Mandatory Version 0.4 data contracts
+
+| Contract | Mandatory content and invariant |
+|---|---|
+| `ExecutableDiagnostic` | Canonical executable AST; fitted parameters; executable positive scope and anti-scope; evidence, influence, and counterfactual contracts; semantic hash; behavioral fingerprint; operation semantics; lineage; search provenance. Names and labels are documentation only. |
+| `Hypothesis` | Semantic regime claim, predicted witnesses, predicted nuisance/causal counterfactuals, discriminating actions, positive scope and defeating anti-scope, and terminal consequence if uniquely supported. |
+| `AmbiguityState` | Surviving hypotheses, safe/unsafe compatibility, evidence keeping each hypothesis alive, equivalence-class hash, unresolved contrast type, candidate separation plan, and round/budget state. It is unresolved only when at least one safe-compatible and one unsafe-compatible hypothesis remain. |
+| `PerceptionAction` | Executable diagnostic/composition/query/probe/specialist/tool/evidence-recovery action; targeted ambiguity; expected protected ambiguity reduction; evidence dependencies; scope proof; cost/privacy/latency budget; authority; semantic identity. |
+| `QueryRecord` | Target ambiguity, expected observation, required source/provenance/trust/freshness, expected and realized ambiguity contraction, cost, latency, outcome, and whether the path becomes negative knowledge. |
+| `ActiveCaseProgram` | Minimal selected executable basis; candidate marginal CMPG; redundancy and interaction analysis; activation certificates; influence graph; typed channels; authority bounds; prohibited-composition checks; program hash. |
+| `LocalClosureCertificate` | Hypothesis separation, witness sufficiency, executable scope, evidence integrity, counterfactual stability, interaction safety, authority, risk justification, kernel preservation, and replay completeness. Every obligation has independent evidence and a reason code. |
+| `ResidualEscalationRecord` | Exact unresolved hypotheses; tried and rejected/executed perception paths; remaining candidates; irreducible/evidence-unavailable/budget-exhausted/resolver-failure reason; budget ledger; proof that no permitted positive-value action remained. |
+| `PersistentKnowledge` | Reusable semantic distinction, scopes/anti-scopes, query policy, legal/prohibited composition, compact case program, failure signature, negative knowledge, retained counterexamples, lineage, certification state, active-eligibility state, and rollback target. |
+
+All schemas are versioned Draft 2020-12 JSON Schemas with strict unknown-field handling at process boundaries. Every record carries run/phase/generation/condition/world/case/round IDs, code/config/data/seed hashes, event time, participant-state hash, and trace-parent hashes. Evaluator-only semantic truth, minimum separating action, expected candidate class, promotion target, and hidden world construction fields are prohibited from participant, synthesis, certification, and persistent-memory schemas.
+
+### 20.2 Cross-phase runtime and learning invariants
+
+- The approved fast loop is always attempted first; only unresolved cases enter Perception Closure.
+- Every unresolved case has explicit competing safe-compatible and unsafe-compatible hypotheses and an ambiguity-equivalence class.
+- Conditional marginal perception gain is evaluated inside the live ambiguity class, never substituted with global diagnostic utility.
+- Positive scope enables consideration; anti-scope, missing contract evidence, or insufficient authority prevents influence.
+- Availability, scope, novelty, and conflict channels are query/adjudication signals by default and cannot directly create danger pressure or hard vetoes.
+- Persistent memory expands the searchable knowledge space, not the simultaneously influential set. Every active primitive must add positive conditional perception and every composition must be certified.
+- One certified causal family owns terminal interpretation unless an interaction certificate permits a multi-family explanation; unrelated severities are never additively stacked.
+- `ACCEPT` and `REJECT` require a terminally homogeneous hypothesis set, an explicit safe/danger witness, and a valid persistent or local closure certificate.
+- `ESCALATE` is legal only after no valid positive-value perception extension remains, necessary evidence is inaccessible, the bounded budget is exhausted, or the resolver fails; the reason is recorded without collapsing internal queries into escalation.
+- Slow-loop promotion compresses repeated successful closure paths into reusable semantics, scopes, anti-scopes, query policies, certified compositions, compact programs, and negative knowledge. It never makes a new diagnostic globally influential by default.
+- Merge, narrow, split, retire, quarantine, and prohibit-composition operations preserve evidence, lineage, counterexamples, and rollback even when active eligibility is removed.
+- Every candidate, resolver round, terminal action, promotion, consolidation action, and escalation is deterministic and independently replayable from pinned manifests.
+
+### 20.3 Theorem targets and empirical assumption audits
+
+The following are theorem/guarantee targets, not established results. Implementation tests must audit their assumptions and may provide finite-fixture proofs or counterexamples, but no empirical pass may be promoted into a universal theorem.
+
+| Target | Required implementation property | Assumptions/evidence that must be audited |
+|---|---|---|
+| Conditional perception extension | A positive-CMPG candidate splits at least one live ambiguity class the incumbent state cannot split. | Correct finite hypothesis representation, identifiable signal, valid protected metric, executable candidate. |
+| Perception closure | Repeated valid updates reduce the ambiguity class until it is decision-homogeneous or no permitted extension remains. | Finite hypotheses/actions, valid evidence updates, monotone elimination where claimed, bounded search. |
+| Zero residual escalation on finitely separable classes | A finite certified sequence within budget closes every covered case without protected error. | Finite separability, accessible evidence, correct scopes/anti-scopes, sufficient budget, exact execution. |
+| Irreducible escalation floor | Observationally identical safe/unsafe cases under every permitted action cannot be terminally separated without error. | Equality of permitted observable distributions and complete action enumeration. |
+| Scope-safe influence | A diagnostic with zero influence outside its certified positive scope cannot directly create scope leakage. | Executable activation certificate, correct anti-scope, complete influence tracing. |
+| Sparse-basis non-inferiority | Removing diagnostics with zero conditional gain preserves closure power for the live ambiguity. | Exact conditional redundancy and no hidden interaction. |
+| Typed-meta safety | Novelty, masking, availability, scope uncertainty, and conflict cannot directly hard-veto. | Kernel and authority enforcement on every path. |
+| Consolidation stability | Retiring dominated eligibility reduces interaction opportunities without worsening protected closure. | Complete retained suite, accurate dominance test, preserved lineage/rollback. |
+
+The strong conditional target `UAR = FRR = ResidualEscRate = 0` applies only to a declared fully observable, finitely separable covered class with certified accessible actions inside budget. Outside that class, residual escalation must converge toward the measured irreducible floor, not an arbitrary abstention target. Phase 7 writes `reports/theorem_assumption_audit.md`; Phase 8 attacks each property; Phase 9 reports empirical scope and counterexamples; Phase 10 limits claim language accordingly.
+
+## 21. Phase 6 - Executable Diagnostic Synthesis and Anti-Gaming Foundation
+
+### Scope
+
+Replace the Phase 3 name-centered bounded-function cards with a canonical executable diagnostic language and a synthesis/certification pipeline that makes renamed boilerplate, constant output, no-op behavior, parent-identical behavior, metadata-only operations, hidden-label leakage, and pre-labelled beneficial/harmful candidates structurally incapable of promotion. Phase 6 must demonstrate genuine structure and parameter search, explicit scope/anti-scope/evidence/influence/counterfactual contracts, name-invariant semantic identity, frozen-bank behavioral identity, independent behavior-only certification, and reproduced perception-extension witnesses before any candidate can enter the live Phase 7 runtime.
+
+Phase 6 depends on the immutable Phase 0 contracts and kernel, the retained Phase 3 lifecycle plumbing, and the legacy indexing contract in Section 19. It may reuse pipeline mechanics but must replace synthesis semantics. Phase 7 is blocked until every Phase 6 integrity gate passes non-vacuously.
+
+### Files made or changed
+
+- `configs/phases/phase6.yaml`, `configs/perception_closure_v04/synthesis.yaml`, audited AST grammar, structure-search spaces, parameter-search ranges, split manifests, certification budgets, permutation suites, and anti-gaming fixtures;
+- `schemas/v04/{diagnostic_ast,diagnostic_contract,structure_search_trace,parameter_search_trace,semantic_identity,behavioral_fingerprint,perception_extension_witness,blind_certification_request,independent_gate_vector,integrity_finding}.schema.json`;
+- `src/mavs10d/diagnostics/{ast,contracts,semantic_hash,behavioral_fingerprint}.py`;
+- `src/mavs10d/learning/{structure_search,parameter_fit,operation_constraints,synthesis}.py`;
+- `src/mavs10d/certification/{blind_api,gates,persistent}.py`;
+- `src/mavs10d/integrity/{template_collapse,permutation_tests,hidden_field_audit}.py`;
+- `src/mavs10d/metrics/synthesis_integrity.py` and `src/mavs10d/reports/synthesis_integrity.py`;
+- `scripts/{index_legacy_results,run_phase6_synthesis,certify_phase6_candidates,audit_phase6_integrity,replay_phase6_candidates}.py` and a Phase 6 orchestrator that cleans only the named, unsealed Version 0.4 Phase 6 run;
+- `tests/phase6/` unit, property, metamorphic, process-isolation, taint, adversarial-integrity, statistical, schema, and deterministic-replay tests;
+- only `results/legacy/`, `results/perception_closure_v04/phase6/`, and `results/RESULTS_INDEX.md` may be created or extended by this phase; original Phase 0-5 result paths remain byte-identical.
+
+### Data and artifact contracts
+
+Every proposed candidate, including integrity rejection and certification rejection, receives a stable candidate directory:
+
+```text
+results/perception_closure_v04/phase6/
+|-- manifests/{run_manifest,split_manifest,seed_ledger,environment_lock}.json
+|-- candidates/<candidate_id>/
+|   |-- candidate.json
+|   |-- structure_search.parquet
+|   |-- parameter_search.parquet
+|   |-- semantic_identity.json
+|   |-- behavioral_fingerprint.parquet
+|   |-- operation_compliance.json
+|   |-- perception_extension_witness.json
+|   |-- blind_request.json
+|   |-- independent_gate_vector.json
+|   `-- certification_trace.parquet
+|-- integrity/
+|   |-- semantic_duplicate_classes.json
+|   |-- behavioral_equivalence_classes.json
+|   |-- template_collapse_report.json
+|   |-- name_label_operation_permutation.json
+|   |-- hidden_field_taint_report.json
+|   |-- blind_api_schema_audit.json
+|   |-- constant_noop_parent_identity_report.json
+|   `-- gate_distribution_investigation.json
+|-- reports/{synthesis_integrity.md,candidate_inventory.parquet,rejections.parquet,phase6_audit.json}
+`-- CLAIMS.md
+```
+
+`candidate.json` contains `expression_ast`, fitted `parameters`, `positive_scope_ast`, `anti_scope_ast`, `evidence_contract`, `influence_contract`, `counterfactual_contract`, and `lineage`. The evidence contract declares sources, provenance, availability, freshness, trust, and failure behavior. The influence contract declares observation/query/soft/terminal authority and numeric bounds. The counterfactual contract declares nuisance-preserving interventions that must not alter output and causal interventions that must. Lineage records parents, exact operation, triggering contrast, synthesis evidence, all search traces, and rollback target.
+
+The canonical semantic hash is `H(NormalizeAST, parameters, positive_scope, anti_scope, evidence_contract, influence_contract, counterfactual_contract)` and explicitly excludes candidate names, IDs, domains used only as labels, curriculum/generation labels, operation text, proposal order, and expected outcome. The behavioral fingerprint records raw and discretized output, activation, query, authority, and terminal influence over frozen trigger, retained, holdout, positive-scope boundary, anti-scope, nuisance counterfactual, causal counterfactual, adversarial, and disjoint-analogue banks.
+
+### Code and coding method
+
+1. Implement a typed bounded AST grammar for predicates, conjunctions, disjunctions, bounded arithmetic, comparisons, temporal and provenance relations, counterfactual comparisons, and query outputs. Parsing, validation, normalization, serialization, deserialization, and evaluation must be deterministic and versioned; opaque feature-name strings cannot execute.
+2. Resolve every feature/evidence leaf through an audited registry declaring type, domain, provenance, availability, trust, units, bounds, missingness behavior, and permitted operations. Zero unresolved references are allowed.
+3. Generate candidate structures from minimal protected failure contrasts. Search over both executable structure and parameter vectors. A threshold of `0.5` or unit weight may be an initialization, never an unexplained default.
+4. Fit thresholds, weights, transforms, calibration values, positive-scope bounds, anti-scope bounds, authority levels, and interaction coefficients with lexicographic `UAR -> FRR -> residual escalation -> scope leakage -> instability -> complexity` objectives. Record every tried structure/vector, search range, split, seed, objective vector, protected-constraint result, rejection reason, and selection rationale.
+5. Enforce nested separation: synthesis/development splits may select candidates; disjoint certification splits decide promotion; final blind banks are inaccessible. Any optional learned search/ranking component follows Section 6 model-card and split discipline and cannot see certification or final labels.
+6. Canonicalize before hashing. Collapse exact semantic duplicates before certification. Reject behavioral equivalents unless a predeclared, independently certified improvement in cost, calibration, scope, or stability exists.
+   Semantic and behavioral deduplication are separate mandatory gates; passing one never substitutes for the other.
+7. Reject candidates that are name-only, metadata-only, constant-output, behaviorally null/no-op, parent-identical, sibling-identical, or unable to change the trigger/contrast/boundary/holdout behavior meaningfully. A versioned recalibration may share a parent AST only when independently fitted parameters and certified gain are proven.
+8. Run synthesis and certification in separate processes with separate hierarchical seeds and serialized schemas. Strip operation label, expected beneficial/harmful class, curriculum slot, desired promotion outcome, candidate-quality label, generator truth, hidden world fields, and candidate name as a quality signal from the certifier request.
+   This is blind behavior-only certification: promotion is determined from executable behavior and protected evidence, never narrative labels or intended outcomes.
+9. Compute kernel, trigger, retained, scope, anti-scope, evidence-integrity, counterfactual, boundary, adversarial, redundancy, protected-error, stability, complexity, and replay gates independently from behavior. Persist the complete gate vector and supporting cases; an all-pass/all-fail distribution triggers a mandatory integrity investigation and cannot be waived narratively.
+10. Require a protected perception-extension witness: the incumbent state cannot distinguish a safe/unsafe pair within tolerance; the pair requires different decisions; the candidate separates it for a causal reason; terminal behavior becomes correct without retained or anti-scope regression; and the witness reproduces on a disjoint neighborhood or structural analogue.
+
+Operation labels have the following machine-checked executable meanings:
+
+| Operation | Required semantic delta and rejection rule |
+|---|---|
+| `recalibrate` | Preserve parent AST structure and semantic dependencies; alter independently fitted calibration/threshold parameters and improve calibration/protected objective. Reject unchanged, hardcoded, or non-improving vectors. |
+| `split` | Produce at least two children with distinct AST behavior or executable scopes that separate regimes conflated by the parent. Reject metadata-only children or behaviorally equivalent siblings. |
+| `merge` | Consume at least two parents and reduce conditional redundancy, cost, or complexity while preserving/improving protected closure. Reject a renamed parent or any loss of required distinction. |
+| `add` | Introduce a new evidence dependency, relation, query, or computation and pass a new perception-extension witness. Reject feature renames and inherited-output aliases. |
+| `scope_narrow` | Change executable positive/anti-scope so the leaked neighboring region is deactivated while retained positive scope remains valid. |
+| `scope_expand` | Add a newly certified executable region and pass new boundary, anti-scope, holdout, and disjoint-analogue tests. |
+| `evidence_recovery` | Execute or consume a new evidence-acquisition path with provenance, availability, cost, and realized information-gain records. Metadata-only routing fails. |
+| `policy_interaction` | Change a typed executable policy/evidence relationship with explicit authority and counterfactual obligations. Merely changing an operation label fails. |
+| `configuration_specialization` | Change context-to-program mapping or terminal governance behavior in the specialized regime while preserving fallback and scope proofs. |
+| `retire` | Remove active influence eligibility while preserving lineage, counterexamples, evidence, replayability, and rollback. A status-label change without runtime exclusion fails. |
+
+### Tests, validation, and audit requirements
+
+- AST tests cover type errors, illegal operations, missing leaves, bound violations, canonical associativity/commutativity where declared, serialization round trips, evaluator equivalence, and deterministic hashes.
+- Semantic metamorphic tests permute names, IDs, labels, operation labels, curriculum/generation labels, and candidate ordering; semantic identity and certification outcomes must remain invariant when executable content is unchanged.
+- Behavioral tests construct syntactically distinct equivalents, constants, no-ops, parent copies, sibling copies, trigger-only overfits, anti-scope leaks, and cost-only improvements; every class must receive the expected independent reason code.
+- Parameter tests prove trials are actually executed, objective values recompute, identical optima have independent provenance, final blind data is unreadable, and hardcoded `0.5`/unit-weight collapse triggers integrity failure.
+- Label-permutation tests shuffle candidate class labels and expected-operation labels. Hidden-field taint tests seed evaluator-only sentinels into world construction and fail on any presence, derivation, serialization, memory retention, or influence in synthesis/certification processes.
+- Blindness tests inspect schemas, process arguments, environment variables, open files, imports, IPC payloads, memory/checkpoint fields, logs, and serialized artifacts. Candidate generation and certification must have separate seed ledgers and no shared mutable state.
+- Independent audit recomputes semantic hashes, fingerprints, operation compliance, witness validity, gate vectors, template counts, and candidate replay from raw artifacts using code that is not imported by the synthesis/certification implementation.
+- The Phase 6 audit enumerates every candidate, not only promotions, and reconciles proposed, integrity-rejected, certification-rejected, quarantined, promoted, and replayed counts exactly.
+
+### Decision allocation and benchmarks
+
+Phase 6 is a candidate-integrity program, not an extension of the prior 300K canonical-decision budget. Before execution, `phase6.yaml` freezes candidate/search budgets, grammar version, every operation stratum, split sizes, frozen audit-bank hashes, and compute limits. The benchmark must include retained Phase 3 template-pathology fixtures, naturally varying protected contrasts, positive/anti-scope neighbors, nuisance and causal counterfactuals, adversarial label/metadata traps, disjoint structural analogues, and random equal-budget proposal controls. Attractive aggregate error rates do not compensate for insufficient candidate diversity or a missing operation stratum.
+
+No result can pass vacuously with zero promoted candidates or one surviving template. The accepted Phase 6 corpus must contain multiple canonical AST structures and independently selected parameter vectors, exercise every operation intended for Phase 7, and retain all failures. Counts and exposure denominators are reported rather than post-hoc padded.
+
+### Exit gate and outputs
+
+Phase 6 passes only when: 100% of feature references resolve to executable ASTs; zero name-only, metadata-only, constant-output, no-op, parent-identical, or sibling-identical candidates are promoted; every promotion has a unique semantic identity except a proven versioned recalibration; every behaviorally equivalent promotion has a predeclared certified improvement; 100% of promoted parameters have complete search provenance; 100% of operations satisfy the table above; 100% of promotions contain a reproduced disjoint perception-extension witness; the certifier schema and runtime are blind; label/name/operation/order permutations preserve outcomes; hidden-field taint is zero; all gate vectors are independently recomputable; template collapse fails closed; and every candidate evaluation replays deterministically.
+
+The exact exit artifacts are the complete candidate directories, integrity reports, independent Phase 6 audit, schema validation report, split/separation audit, deterministic replay report, legacy-index manifest, and a generated `CLAIMS.md` limited to synthesis-integrity statements. Phase 7 cannot begin while any applicable gate is failed, missing, vacuous, or supported only by aggregate UAR/FRR/escalation.
+
+## 22. Phase 7 - Live Perception-Closure Runtime
+
+### Scope
+
+Integrate the Phase 6 executable synthesis substrate into the live situation-conditioned resolver. Preserve the approved fast loop as the first attempt, then convert every unresolved decision into explicit competing hypotheses and a bounded ambiguity-equivalence class. Search conditionally for diagnostics and evidence actions that separate the live safe/unsafe contrast, acquire targeted evidence, assemble the smallest scope-safe diagnostic program, arbitrate typed influence without additive severity stacking, and issue `ACCEPT` or `REJECT` only under a complete local closure certificate. External `ESCALATE` is a residual terminal state available only after valid perception-extension paths are exhausted, inaccessible, outside budget, or the resolver fails.
+
+Phase 7 depends on a sealed passing Phase 6 run and may load only Phase 6 candidates whose executable contracts and independent certifications remain valid. Every runtime-created candidate must pass the same Phase 6 integrity layer. Phase 8 is blocked until all Phase 7 microbenchmark, trace, scope, closure, and residual-escalation gates pass.
+
+### Files made or changed
+
+- `configs/phases/phase7.yaml`, `configs/perception_closure_v04/runtime.yaml`, ambiguity-family fixtures, query/evidence budgets, authority levels L0-L3, typed-channel rules, sparse-basis limits, and microbenchmark manifests;
+- `schemas/v04/{hypothesis,ambiguity_state,perception_action,query_record,active_case_program,local_closure_certificate,residual_escalation,perception_trace,persistent_knowledge}.schema.json`;
+- `src/mavs10d/core/runtime.py` extension preserving the approved fast loop and explicit terminal semantics;
+- `src/mavs10d/resolution/{hypotheses,ambiguity,perception_search,query_planner,program_builder,closure}.py`;
+- `src/mavs10d/diagnostics/{typed_channels,interactions}.py` and Phase 7 integration of `diagnostics/contracts.py`;
+- `src/mavs10d/certification/{local,persistent}.py`;
+- `src/mavs10d/learning/consolidation.py` and `src/mavs10d/memory/negative_knowledge.py`;
+- `src/mavs10d/metrics/perception_closure.py` and runtime reporting adapters;
+- `scripts/{compile_phase7_microbenchmarks,run_phase7_runtime,validate_phase7_traces,audit_phase7_closure,replay_phase7}.py` and a Phase 7 orchestrator;
+- `tests/phase7/` unit, integration, state-machine, metamorphic, leakage, budget, adversarial-query, closure, persistence, and replay tests;
+- only `results/perception_closure_v04/phase7/` and the Version 0.4 index may receive Phase 7 outputs.
+
+### Data and artifact contracts
+
+```text
+results/perception_closure_v04/phase7/
+|-- manifests/{run_manifest,microbenchmark_manifest,seed_ledger,environment_lock,phase6_dependency}.json
+|-- traces/perception_rounds.parquet
+|-- traces/terminal_decisions.parquet
+|-- traces/queries_and_probes.parquet
+|-- traces/escalations.parquet
+|-- certificates/local/<certificate_id>.json
+|-- programs/<program_id>.json
+|-- hypotheses/<case_id>.json
+|-- persistence/{promotion_candidates,consolidation_actions,negative_knowledge}.parquet
+|-- metrics/{case_metrics,round_metrics,family_metrics}.parquet
+|-- integrity/{scope_activation,typed_channels,interaction_safety,trace_replay,phase6_continuity}.json
+`-- reports/{phase7_report.md,phase7_audit.json,CLAIMS.md}
+```
+
+Each unresolved case trace records the fast-loop outcome; explicit hypotheses; the evidence supporting and contradicting each hypothesis; ambiguity-class membership after every round; generated, filtered, rejected, and selected actions; expected and realized conditional perception gain; positive-scope and anti-scope evaluations; evidence availability/trust; query cost and result; active program; typed influence graph; interaction certificate; authority level; budget ledger; terminal closure certificate or residual-escalation decomposition; and complete parent hashes. `QUERY`, internal probe, diagnostic-program execution, resolver round, and external `ESCALATE` are different enum values and tables; no aggregation may alias them.
+
+### Code and coding method
+
+1. Build the visible evidence state and attempt the selected approved configuration. A terminal certified fast-loop result exits without resolver entry; unresolved selector/confidence output alone cannot become `ESCALATE`.
+2. Construct a finite hypothesis set containing at least one safe-compatible and one unsafe-compatible explanation whenever a decision is genuinely unresolved. Each hypothesis declares predicted witnesses, counterfactuals, discriminating evidence actions, scope/anti-scope, and terminal consequence.
+3. Maintain `A_t`, the ambiguity-equivalence class of hypotheses consistent with current evidence and kernel invariants. Classify the unresolved contrast as missing evidence, correlated consensus, scope uncertainty, diagnostic conflict, novelty, policy ambiguity, or a versioned extension with the same full contract.
+4. Generate conditional perception actions from Phase 6 diagnostics/compositions plus queries, counterfactual probes, disjoint specialists, tools, simulations, delayed observations, provenance reconstruction, alternate views, and evidence-recovery actions. Every action must target a named surviving contrast.
+5. Filter through the immutable kernel, executable positive scope, anti-scope, evidence availability, semantic identity, behavioral redundancy, interaction rules, authority, budget, privacy/latency limits, and negative knowledge. Untested compositions remain observation-only; prohibited compositions cannot execute.
+6. Rank valid actions lexicographically by unsafe-acceptance protection, false-rejection protection, expected ambiguity contraction/CMPG, scope risk, cost, and latency. A small safety regression cannot be traded for many closures or reduced escalation.
+7. When the ambiguity is caused by a missing observation, prefer the evidence action with maximum expected protected ambiguity reduction per unit cost. Record both expected and realized query yield. Missing evidence cannot be interpreted as adverse evidence.
+8. Assemble `G_t*`, the smallest legal nonredundant situation-specific program with positive conditional perception gain. Persistent library size may increase the search space but not the simultaneously influential basis. Redundant diagnostics are suppressed and every multi-diagnostic interaction requires a certificate.
+9. Arbitrate typed channels: danger may support `REJECT` under a danger witness; safe may support bounded `ACCEPT`; availability may request evidence or reduce authority; scope gates influence; novelty invokes broad low-authority search; conflict invokes adjudication. Availability, scope, novelty, and conflict never directly hard-veto.
+10. Produce an explanation graph with a primary causal family rather than summing unrelated severities. Multi-family terminal influence is legal only under an explicit interaction certificate.
+11. Execute the chosen query/probe/program, update evidence and hypotheses, and repeat while a valid positive-value extension remains and budget permits. Every round is immutable and replayable.
+12. Issue `ACCEPT` only when surviving hypotheses are safe-homogeneous, a safe witness exists, and all closure obligations pass. Issue `REJECT` only for unsafe-homogeneous hypotheses with a danger witness and all obligations passing.
+13. Issue external `ESCALATE` only for true irreducibility, inaccessible required evidence, exhausted bounded budget, or resolver failure. Persist the untried/invalid candidates and exact proof that no permitted positive-value path remained.
+14. After delayed outcome/governance feedback, route repeated successful local programs through Phase 6 blind persistent certification. Consolidation may merge, narrow, split, retire, quarantine, or prohibit compositions; it preserves evidence/lineage and may not activate a candidate globally.
+15. Persist reusable semantic distinctions, scopes/anti-scopes, high-yield query policies, legal/prohibited interactions, compact closure programs, failure signatures, and negative knowledge. Cap active eligibility, periodically re-certify under shifted priors, and require every persistent diagnostic to outperform its parent or a simpler basis on closure value.
+
+### Tests, validation, and audit requirements
+
+The locked microbenchmark families are authoritative:
+
+| Family | Required behavior |
+|---|---|
+| Immediately separable | Approved fast loop closes; resolver-entry count is zero. |
+| One-query separable | Resolver requests the correct evidence and closes in one internal round. |
+| Multi-step separable | Resolver selects a valid sequence, updates hypotheses correctly, and does not waste budget on irrelevant actions. |
+| Masked safe evidence | Availability/recovery query finds the safe witness; absence is never converted into danger. |
+| Harmful versus benign correlation | Independence/provenance evidence separates mechanisms without a broad raw-correlation veto. |
+| Scope neighbor | Superficial positive-scope similarity is defeated by executable anti-scope; influential leakage is zero. |
+| Conflicting diagnostics | Attribution/counterfactual probes resolve the conflict without additive severity stacking. |
+| New composition | Known primitives form a genuinely new executable distinction with an interaction certificate. |
+| Genuinely new semantic need | Provisional L0/L1 hypotheses guide evidence acquisition but cannot issue an unauthorized terminal action. |
+| Irreducible pair | The resolver proves no permitted action separates the pair and escalates with the irreducible reason. |
+| Adversarial query trap | Poisoned or low-yield evidence paths are rejected using provenance and negative knowledge. |
+| Budget-limited case | Escalation is attributed to budget exhaustion with the complete ledger, not generic uncertainty. |
+
+Tests additionally cover hypothesis consistency/update laws, ambiguity contraction, query accounting, sparse-basis minimality, scope and anti-scope boundaries, authority bounds, typed-channel prohibitions, interaction certificates, kernel invariants, closure-certificate independence, residual decomposition, persistent handoff, consolidation/retirement, negative-knowledge reuse, process/hidden-field isolation, deterministic replay, and all Phase 6 continuity gates. Independent audit code recomputes every certificate obligation and verifies that no terminal action depends on an uncertified or out-of-scope influence path.
+
+### Decision allocation and benchmarks
+
+Phase 7 is a locked runtime microbenchmark and closure-trace program, not part of the old 300K budget. `phase7.yaml` freezes case counts per family, separability/access/scope/novelty/interaction/budget strata, query budgets, latency/privacy costs, library sizes, and seeds before execution. Separability levels are immediate, one-query, multi-step, and irreducible. Evidence access covers available, delayed, costly, corrupted, adversarially masked, and permanently inaccessible. Scope covers clean, neighboring confounder, overlapping families, and structural reset. Novelty covers known primitive, new composition, new scope, and genuinely new semantics. Interaction covers single cause, certified two-family interaction, redundancy, and contradictory witnesses. Budget covers unrestricted diagnostic research, industrial latency, and strict call limits. The same cases replay under library-size sweeps to prove that active basis size remains bounded.
+
+### Exit gate and outputs
+
+Phase 7 passes only with zero observed UAR and FRR on the fully observable core with one-sided bounds; residual escalation equal to the known irreducible mass there; zero deterministic-fixture closure errors; exact separation of query/probe/round/escalation counters; zero influential out-of-scope activation on retained and blind neighbors; bounded median active basis independent of total library size; a preregistered majority of automated queries producing measurable protected ambiguity contraction; zero typed-channel hard-veto violations; zero uncertified/prohibited interaction influence; 100% escalation decomposition; continued Phase 6 integrity for every runtime-created candidate; blind-only persistent handoff; and complete replay of every round, query, hypothesis update, active program, certificate, and terminal action.
+
+The required outputs are all paths in the Phase 7 artifact contract, per-family and per-obligation metrics, all failed closure attempts, query-yield distributions, basis-size/library-size curves, persistence/consolidation records, an independent zero-gap Phase 7 audit, and a `CLAIMS.md` limited to passed runtime/microbenchmark gates. Phase 8 cannot begin until these outputs are sealed and all gates pass.
+
+## 23. Phase 8 - Ablation and Integrity Program
+
+### Scope
+
+Falsify the anti-gaming substrate, live Perception-Closure runtime, and persistence/consolidation theory before spending either Phase 9 three-generation evidence bank. Phase 8 is a staged, preregistered causal matrix on the same locked Phase 7 microbenchmark and a sealed pre-rerun bank. Every comparison uses identical cases, visible information, seeds, method budget, query/tool/model-call budget, latency budget, compute budget, metric code, and report policy except for the one declared factor.
+
+Phase 8 depends on sealed passing Phase 6 and Phase 7 runs. It must not tune the full system or rewrite an expected ablation direction after results are visible. Phase 9 remains blocked until the full system passes, integrity ablations fail or degrade in the causally predicted way without invalidating the harness, architecture/persistence comparisons are complete, and label permutations leave the benchmark invariant.
+
+### Files made or changed
+
+- `configs/phases/phase8.yaml` and exact single-factor configs `configs/ablations/v04/{I0-I11,P0-P15,L0-L10}.yaml`;
+- a Phase 8 ablation registry that validates one declared semantic toggle, produces a normalized config diff, and refuses hidden multi-factor drift;
+- matched-budget and shared-bank execution adapters for synthesis, runtime, persistence, legacy, oracle, and random controls;
+- `schemas/v04/{ablation_definition,ablation_result,causal_contrast,matched_budget}.schema.json`;
+- `scripts/{compile_phase8_matrix,run_phase8_ablations,validate_phase8_isolation,aggregate_phase8,audit_phase8}.py` and orchestrator;
+- `src/mavs10d/metrics/phase8_integrity.py` and causal report generation;
+- `tests/phase8/` registry, isolation, matched-budget, directionality, permutation, leakage, replay, and statistics tests;
+- only `results/perception_closure_v04/phase8/` and the Version 0.4 result index may receive Phase 8 artifacts.
+
+### Common ablation contract
+
+For every ID, `full_config.json`, `ablation_config.json`, `config_diff.json`, `shared_bank_manifest.json`, `matched_budget.json`, `seed_ledger.json`, `metrics.parquet`, `paired_deltas.parquet`, `trace_index.json`, `causal_contrast.json`, `failures.parquet`, and `audit.json` are required under `results/perception_closure_v04/phase8/ablation_results/<ID>/`. `causal_contrast.json` records the isolated factor, unchanged fields, causal question, preregistered expected direction, required metrics, confidence method, pass/fail interpretation, and whether a surprising result revises the theory or invalidates the harness. All negative and null results are retained.
+
+Unless a row says otherwise, the unchanged contract is the full Version 0.4 implementation, same executable candidates, worlds, cases, evidence, seeds, participant initialization, kernel, scopes, budgets, metrics, and operating points. `P15` oracle and leakage ablations `I6/I7` are diagnostic bounds/integrity attacks, never deployable competitors.
+
+### Required synthesis-integrity ablations
+
+| ID | Isolated factor and affected files/config | What remains unchanged | Causal question | Required metrics and artifacts | Pass/fail interpretation |
+|---|---|---|---|---|---|
+| I0 | Full executable synthesis reference; `I0.yaml`, all Phase 6 modules enabled. | Locked Phase 6/7 banks and budgets. | What does the integrity-complete synthesis system achieve? | Base bundle plus candidate diversity, template count, semantic/behavior classes, gate vectors, witness success. | Must pass every Phase 6 gate; otherwise all Phase 8 synthesis comparisons are blocked. |
+| I1 | Replace structure search with fixed outer template plus renamed features; `I1.yaml`, `learning/structure_search.py` toggle. | Parameter/search budget, evidence, certifier, metrics, and candidate count. | Does integrity reject the exact Phase 3 pathology? | Base bundle plus `template_collapse_report.json` and name-only rejection ledger. | Integrity layer must reject before outcome metrics are interpreted; any promotion fails Phase 8. |
+| I2 | Disable semantic hashing/dedup only; `I2.yaml`, `diagnostics/semantic_hash.py`. | Behavioral dedup, fitting, certifier, runtime, and budgets. | Can name-only/exact semantic duplicates enter certification or eligibility? | Duplicate-class counts, certification pressure, active-eligibility growth, semantic collision report. | Duplicate/pressure must measurably increase while protected harness remains valid; no change means the module is not functioning or test diversity is inadequate. |
+| I3 | Disable behavioral fingerprint dedup only; `I3.yaml`, `diagnostics/behavioral_fingerprint.py`. | Semantic hashes, fitting, operation checks, banks, and budgets. | Can syntactically distinct but behaviorally identical candidates accumulate? | Behavioral-equivalence count, eligibility pressure, redundancy, active basis, interaction/conflict. | Equivalents or pressure must increase; protected performance improvement alone cannot justify duplicates. |
+| I4 | Disable parameter fitting and use fixed `0.5`/unit values; `I4.yaml`, `learning/parameter_fit.py`. | Structure proposals, splits, certifier, scopes schema, and compute budget reserved equally. | Does real fitting prevent template collapse and poor scope/calibration? | Parameter distributions, calibration, scope leakage, witness success, protected metrics, unused-budget accounting. | Fixed values should reduce fit/witness/scope quality or reproduce collapse; equivalence requires investigating whether fitting is inert. |
+| I5 | Disable operation-specific constraints only; `I5.yaml`, `learning/operation_constraints.py`. | Candidate ASTs, fits, blind certifier, and banks. | Do operation labels become metadata rather than executable semantics? | Operation compliance by type, metadata-only count, parent/sibling identity, promotion rate. | Noncompliant labeled operations must increase; if none do, fixtures do not exercise the contract. |
+| I6 | Expose operation label and expected class to certifier; `I6.yaml`, `certification/blind_api.py` attack schema. | Executable inputs, bank, gate definitions, and budget. | Does metadata leakage inflate apparent certification? | Blind versus exposed gate accuracy, promotion delta, permutation sensitivity, taint trace. | Exposure must never improve valid blind performance; any improvement is leakage and invalidates affected results. |
+| I7 | Expose hidden world/oracle construction fields; `I7.yaml`, blind API/evaluator firewall attack. | Candidate runtime, public evidence, metrics, and budget. | Can privileged leakage create impossible performance? | Hidden-field taint, performance delta, impossible-witness count, process/file-access trace. | Any improvement or memory contamination invalidates the harness; firewall must flag the attack. |
+| I8 | Remove mandatory perception-extension witness gate; `I8.yaml`, `certification/gates.py`. | All other gates, certifier blindness, banks, and budget. | Can candidates promote without separating a previously inseparable contrast? | Witness-missing promotions, no-op/parent identity, downstream closure value, retained regression. | Missing-witness promotions must appear or the ablation is ineffective; any such promotion demonstrates witness necessity. |
+| I9 | Disable counterfactual dependency audit only; `I9.yaml`, candidate counterfactual gate. | Scope, retained, holdout, adversarial gates, and fitting. | Can confounded or label-leaking dependencies pass? | Nuisance/causal counterfactual violations, leakage, false witness rate, promotion delta. | Violations must increase on planted confounds; failure to detect planted confounds invalidates the test. |
+| I10 | Disable template-collapse alarm only; `I10.yaml`, `integrity/template_collapse.py`. | Semantic/behavior dedup, certification, proposals, and budgets. | Would the pipeline publish a one-template run when aggregate metrics look attractive? | Template distribution, integrity status with/without alarm, publication decision trace. | The planted one-template run must become publishable only under ablation; otherwise the alarm path is not isolated. |
+| I11 | Replace structured proposal generation with budget-matched random generation; `I11.yaml`, proposal-engine selector. | Grammar, fitting, certifier, exact candidate/compute/query budget, and banks. | Does structured synthesis outperform equal-budget random search? | Valid/witnessed candidate yield, protected closure, search cost, semantic diversity, harmful/no-op rate. | Full synthesis must improve at least one preregistered yield/closure metric without protected regression; otherwise structured-discovery attribution is unsupported. |
+
+### Required Perception-Closure runtime ablations
+
+| ID | Isolated factor and affected files/config | What remains unchanged | Causal question | Required metrics and artifacts | Pass/fail interpretation |
+|---|---|---|---|---|---|
+| P0 | Full Version 0.4 runtime reference; `P0.yaml`. | Locked Phase 7 system/banks/budgets. | What does complete Perception Closure achieve? | Base bundle plus all Phase 7 metrics/certificates. | Must pass all Phase 7 gates or runtime causal claims stop. |
+| P1 | Approved configuration only; bypass resolver in `P1.yaml`/`core/runtime.py`. | Same fast loop, cases, evidence, terminal policy, and budget accounting. | What is unresolved without situational closure? | Initial unresolved, local resolution, residual escalation, UAR/FRR. | P0 must improve local resolution/residual escalation without protected regression. |
+| P2 | Remove explicit hypothesis set; generic confidence search in `resolution/hypotheses.py`. | Candidate actions, queries, scopes, and budget. | Does generic confidence choose the wrong perception extension? | Separating-action accuracy, ambiguity contraction, closure error, query waste. | Wrong actions/query waste or closure error should rise; no effect challenges hypothesis representation. |
+| P3 | Replace conditional PE with global utility in `resolution/perception_search.py`. | Hypotheses, candidates, scopes, budgets. | Does global utility activate irrelevant diagnostics? | CMPG, irrelevant activation, scope leakage, active basis, FRR/escalation. | Irrelevance/leakage or burden should rise; otherwise conditionality is not evidenced. |
+| P4 | Disable active query planner; `resolution/query_planner.py`. | Diagnostic search, available evidence interfaces, budgets charged but unused. | How much ambiguity requires targeted observation? | Query yield, local resolution, evidence-unavailable escalation, time/rounds. | One-query/masked/multi-step resolution must degrade without protected improvement. |
+| P5 | Remove positive/anti-scope activation contract; `diagnostics/contracts.py`. | Candidate functions, hypotheses, query planner, kernel. | Do explicit scopes prevent leakage and FRR? | Scope/anti-scope violations, UDI, FRR, residual escalation, neighbor behavior. | Leakage/FRR should rise on neighbor suites; no effect invalidates scope attribution. |
+| P6 | Remove sparse-basis selection; activate all eligible diagnostics in `program_builder.py`. | Library, candidates, scopes, budgets, terminal rules. | Do redundant active diagnostics create conflict and escalation? | Active basis, redundancy, conflict, interaction pressure, FRR/escalation, cost. | Basis/conflict/burden should grow; flat results require revising library-pathology theory. |
+| P7 | Replace causal arbitration with additive severity stacking; `typed_channels.py`/runtime aggregator. | Same diagnostic outputs, scopes, queries, kernel bounds. | Does semantic collapse recreate the ambiguity band? | FRR, escalation, channel contributions, conflict, closure errors. | Predicted FRR/escalation pathology should reappear without UAR benefit. |
+| P8 | Collapse typed channels; `diagnostics/typed_channels.py`. | Diagnostics, queries, scopes, budget, resolver. | Do novelty/masking/scope signals become false danger? | Meta-signal hard-veto count, FRR, unnecessary rejection/escalation, query suppression. | Any false-danger pressure demonstrates necessity; P0 must have zero such violations. |
+| P9 | Disable interaction certificates; `diagnostics/interactions.py`. | Individual certifications, scopes, sparse limit, cases. | Can individually valid diagnostics become unsafe together? | Uncertified composition influence, interaction violations, UAR/FRR, conflict. | Planted unsafe combinations must activate/degrade; no effect means interaction fixtures are inadequate. |
+| P10 | Remove local closure certificate; terminalize by confidence in `resolution/closure.py`. | Hypotheses/evidence/actions and terminal thresholds. | Does confidence substitute incorrectly for decision-homogeneous evidence? | Closure obligation failures, closure UAR/FRR, witness absence, replay gaps. | Incorrect or uncertified terminals should rise; any P0 uncertified terminal is itself a failure. |
+| P11 | Immediately escalate on selector uncertainty; bypass resolver. | Fast loop, escalation semantics, cases, budgets. | What is the causal value of the resolver itself? | Initial unresolved versus residual escalation, local resolution, burden, protected errors. | P0 must reduce residual escalation/closure burden without protected regression. |
+| P12 | Force binary terminal decision; disable external escalation. | Same evidence and resolver up to terminal fallback. | Is apparent zero escalation bought with errors? | UAR, FRR, closure errors, residual escalation, cost. | Escalation reaches zero only as a diagnostic bound; protected errors must expose the safety cost. |
+| P13 | Reject on unresolved; `P13.yaml` terminal fallback. | Same resolver evidence/budget until fallback. | What is the false-rejection cost of blunt containment? | FRR, safe exposure, escalation, unresolved composition. | FRR should materially rise; it cannot be presented as autonomy. |
+| P14 | Raw-correlation hard veto; legacy DS-CF ablation adapter. | Same evidence, cases, cost, and other kernel rules. | Does pre-DS-CF overbreadth recur? | Safe-correlation FRR, hard-veto causes, UAR, escalation. | Safe correlated cases must reveal overbreadth; any favorable aggregate is non-deployable. |
+| P15 | Oracle evidence/closure access; evaluator-only adapter. | Same worlds and outcome metrics; oracle access explicitly uncharged and quarantined. | What is the upper bound when all separating evidence is available? | Oracle gap in UAR/FRR/residual escalation/rounds and evidence-unavailable mass. | Diagnostic upper bound only; inclusion in competitive claims fails audit. |
+
+### Required persistence and consolidation ablations
+
+| ID | Isolated factor and affected files/config | What remains unchanged | Causal question | Required metrics and artifacts | Pass/fail interpretation |
+|---|---|---|---|---|---|
+| L0 | Full persistence plus consolidation; `L0.yaml`. | Same G1-G3 banks, participant budget, and runtime. | What does the complete cumulative learner achieve? | Base bundle plus generation/retention/consolidation metrics. | Reference must pass retention, leakage, growth, and Phase 6 integrity gates. |
+| L1 | Fresh reset each generation; clear all learned state. | Identical later-generation ledgers, seed, code, and compute/memory accounting. | What is the value of all retained governance knowledge? | Paired cumulative-fresh deltas, cold start, closure, burden, protected metrics. | L0 must be no worse on UAR/FRR and improve a preregistered learning/burden metric. |
+| L2 | Freeze after G1; disable later synthesis/consolidation. | G1 state, G2/G3 ledgers, runtime, budgets. | Does learning beyond initial discovery add value? | G2/G3 closure, recurrence, new-scope/composition performance, costs. | L0 improvement supports continuing learning; parity/frozen win limits the claim. |
+| L3 | Disable consolidation/retirement; retain every candidate. | Synthesis, certifications, memory budget accounting, ledgers. | Does library growth recreate leakage/escalation? | Eligibility/library/basis size, redundancy, scope leakage, escalation, FRR, retrieval cost. | Predicted growth pathology should worsen; no effect requires revising consolidation theory. |
+| L4 | Disable negative knowledge. | Positive memory, diagnostics, query policies, budgets. | Does the system rediscover harmful programs and low-yield queries? | Repeated failed program/query rate, time/cost, violations, recurrence. | Rediscovery must rise on recurrence fixtures; otherwise negative knowledge is not evidenced. |
+| L5 | Persist ontology only. | Same byte budget, G2/G3 cases, fast/runtime code. | What does semantic memory contribute without executable diagnostics? | Transfer, TTD/TTC, local resolution, query cost, synthesis count. | Separates semantic recognition from executable closure; no standalone superiority claim. |
+| L6 | Persist diagnostics only; reset scopes/query policies/ontology/programs. | Same retained-byte budget and ledgers. | Are scopes and query policies essential memory? | Scope leakage, query yield, closure, recurrence, negative transfer. | Leakage/burden should expose missing contextual memory; otherwise persistence model is incomplete. |
+| L7 | Persist query policies only. | Diagnostics/scopes/programs reset; same memory budget. | Is reusable evidence acquisition valuable independent of diagnostic growth? | Query yield, rounds, evidence-unavailable escalation, protected metrics. | Improvement supports query-policy memory; no gain limits that claim. |
+| L8 | Persist compact case programs only. | Other learned objects reset; byte budget matched. | Are reusable closure operators the most useful memory unit? | Time/rounds to closure, recurrence, complexity, transfer, leakage. | Compare lexicographically to L5-L7; superiority is supported only without protected/scope regression. |
+| L9 | Remove active-eligibility cap; all retained knowledge searchable/eligible. | Same stored library, runtime, cases, query/compute accounting. | Does unlimited eligibility violate sparse influence/library health? | Eligibility/basis size, retrieval cost, redundancy, leakage, escalation, interactions. | Pressure/pathology should rise; a flat result requires testing larger libraries before accepting the cap theory. |
+| L10 | Disable periodic re-certification. | Original certifications, retained state, shifted G2/G3 banks. | Do stale scopes fail under shifted generations? | Stale-scope activation, leakage, protected errors, quarantine/rollback, retention. | Shifted-scope failures should rise; zero effect limits re-certification attribution. |
+
+### Code and coding method
+
+- Freeze all ablation definitions, expected causal directions, primary metrics, uncertainty methods, and failure interpretations before execution.
+- Validate each ablation against the registry and reject any undeclared config/source difference. Runtime monkey-patching without a serialized toggle is prohibited.
+- Replay identical locked banks and paired seeds. Match synthesis attempts, queries, evidence interfaces, model/tool calls, latency, compute, tokens, memory, and candidate budgets; unused capacity is reported.
+- Separate harness-invalidating leakage attacks from mechanistic performance ablations. I6/I7 success means the firewall detected and quarantined the exposure, not that the exposed method performed well.
+- Report protected metrics first, then local resolution/residual escalation, then perception/scope/integrity, then burden. No burden gain offsets protected regression.
+- Preserve all expected, unexpected, null, negative, and theory-revising results. A failed predicted direction updates the causal theory; it is never silently removed or used to retune the bank.
+
+### Decision allocation and benchmarks
+
+All I/P/L conditions replay the same Phase 7 locked microbenchmark and sealed pre-Phase-9 bank. The pre-rerun bank includes a matched diagnostic replay of the preserved `phase4_original` >=500-world tournament bank where its immutable ledgers can be reproduced; its purpose is to measure whether the old escalation band contracts under Perception Closure, not to supply a new blind claim. Ablation replays do not redefine canonical opportunities. Phase 8 configs freeze exact case counts, strata, seeds, attack fixtures, candidate/query budgets, library sizes, and paired comparisons. The pre-rerun bank is disjoint from the final Phase 9 blind bank and cannot be used to fit Phase 9 parameters after Phase 8 closes.
+
+### Exit gate and outputs
+
+Phase 8 passes only when I0/P0/L0 retain their prerequisite gates; I1 is rejected before performance interpretation; removing semantic or behavioral dedup measurably increases duplicates/eligibility pressure; I6/I7 cannot improve valid blind performance and are detected by taint/firewall audits; P0 improves local resolution over P1 without protected regression; scope/sparse/additive/no-consolidation ablations reproduce predicted pathology or the causal theory is explicitly revised before Phase 9; all comparator budgets and single-factor diffs validate; label/name/operation/order permutations preserve nonsemantic outcomes; no gate is rewritten; and every result replays.
+
+The required outputs are the full per-ID bundles, synthesis/runtime/persistence causal tables, matched-budget ledger, permutation and hidden-field reports, negative/null result inventory, theory-revision ledger, independent Phase 8 audit, and generated Phase 8 `CLAIMS.md`. Phase 9 cannot begin until the full system passes and every integrity/harness condition is resolved fail-closed.
+
+## 24. Phase 9 - Three-Generation Phase 5 Revalidation
+
+### Scope
+
+Repeat the original Phase 5 three-generation question with the intended Perception-Closure Self-Learning MAVS using two isolated tracks: a retrospective paired rerun on the exact original Phase 5 bank and a separately generated, preregistered, sealed, genuinely blind claim-bearing bank. Compare cumulative, fresh, and frozen-after-G1 Version 0.4 learning against legacy, fixed, reduced-learning, random, oracle, raw-memory, and required Phase 8 ablation controls. Evaluate lexicographically by UAR, FRR, residual external escalation, then query/compute/human burden. Preserve the original negative Phase 5 conclusion and use Track A only for diagnostic paired comparison; only Track B may support revised Self-Learning claims after Phase 10.
+
+Phase 9 depends on sealed passing Phase 6-8 artifacts and frozen implementations/hyperparameters. Track A and Track B execute in separate named namespaces, processes, seed ranges, and manifests. No result from Track A may tune, delete, select, or repair a Track B participant.
+
+### Files made or changed
+
+- `configs/phases/phase9.yaml`, `configs/perception_closure_v04/phase9/{paired_original_bank,blind_bank}.yaml`, condition/comparator registry, exact original-bank reproduction manifest, new-bank generator manifest, and generation-boundary persistence matrix;
+- `schemas/v04/{phase9_generation_manifest,phase9_participant_state,generation_summary,phase9_claim_gate}.schema.json`;
+- adapters that replay legacy A0-A49 without importing legacy result files as current evidence, Version 0.4 cumulative/fresh/frozen conditions, fixed MAVS/DS-CF, reduced-learning controls, random proposal, oracle bounds, raw-memory, and selected/full Phase 8 ablations;
+- Phase 9 bank compiler, information-firewall runner, generation-boundary sealer, participant-state auditor, aggregator, and report generator;
+- `src/mavs10d/metrics/{perception_closure,synthesis_integrity,transfer}.py` extensions for Version 0.4 generation metrics and lexicographic paired comparisons;
+- `scripts/{compile_phase9_banks,run_phase9_track,validate_phase9_firewall,validate_phase9_state,aggregate_phase9,audit_phase9}.py` and separate Track A/Track B orchestrators;
+- `tests/phase9/` bank separation, original-ledger identity, participant-state legality, paired replay, hidden-field taint, metrics, trend-gate, result-isolation, and deterministic-replay tests;
+- only the Phase 9 Version 0.4 namespace and result index may receive new Phase 9 artifacts.
+
+### Two-track bank and result contract
+
+```text
+results/perception_closure_v04/phase9/
+|-- paired_original_bank/
+|   |-- manifests/generation_{1,2,3}/
+|   |-- checkpoints/generation_{1,2,3}/
+|   |-- candidate_cards/
+|   |-- decision_traces/
+|   |-- ablation_results/
+|   |-- integrity/
+|   |-- summaries/
+|   `-- reports/
+`-- blind_bank/
+    |-- manifests/generation_{1,2,3}/
+    |-- checkpoints/generation_{1,2,3}/
+    |-- candidate_cards/
+    |-- decision_traces/
+    |-- ablation_results/
+    |-- integrity/
+    |-- summaries/
+    `-- reports/
+```
+
+Track A reuses the original Phase 5 world ledgers under `results/manifests/phase5_authoritative/phase5/generation_{1,2,3}/`, together with the bound schedules, seeds, 300-world x 50-opportunity allocation, and 15,000 canonical opportunities per generation where legally and technically reproducible: 45,000 canonical opportunities total. The legacy manifest must compare source hashes and document every unavailable artifact before execution; silent approximation is prohibited. Track A is never blind and is diagnostic-only.
+
+Track B contains newly generated sealed worlds with the same preregistered families, generation roles, difficulty distribution, 300 x 50 allocation, resource budgets, and 15,000 canonical opportunities per generation: a separate 45,000-opportunity claim bank. It uses new seeds, hidden semantic truth, minimum separating actions, new world identities, and disjoint surface/structural/adversarial realizations. Track B is sealed before any Version 0.4 participant runs. Method/control/ablation replays use the same canonical opportunities and do not inflate either bank's count.
+
+### Required conditions and comparators
+
+| Condition | Required role and state rule |
+|---|---|
+| Version 0.4 cumulative | Retain only certified semantics, scopes, anti-scopes, query policies, compact closure programs, negative knowledge, legal compositions, and condition-valid calibration across G1-G3. |
+| Version 0.4 fresh | Reset all learned state at every generation while replaying the identical ledger; isolates persistence. |
+| Version 0.4 frozen-after-G1 | Learn/certify/consolidate in G1, freeze afterward; isolates continuing synthesis and consolidation. |
+| Legacy A0 full MAVS-SL | Historical architecture control in a quarantined legacy-compatible process. Track A also reruns the complete original A0-A49 registry when reproducible; no legacy result is copied into current metrics. |
+| A1 frozen/no learning | Calibration/distribution-exposure control. |
+| A2 threshold-only | Tests whether any gain is merely parameter tuning. |
+| A3 selector-only | Tests context adaptation without new executable semantics. |
+| Fixed full MAVS and DS-CF lineage | Non-self-learning governance controls with frozen state. |
+| Raw-memory/matched-memory and reduced-learning controls | Bound abstraction versus memorization and isolate retained-state mechanisms under matched bytes. |
+| Random proposal engine | Equal synthesis-candidate/compute budget control for structured discovery. |
+| Oracle evidence or oracle closure | Evaluator-only upper bound, quarantined and never deployable or included in superiority claims. |
+| Phase 8 I/P/L ablations | Run the preregistered claim-critical ablations on both banks with matched budgets; retain the complete Phase 8 matrix in Track A and at minimum every ablation used for a Track B mechanistic claim. Omitted Track B ablations make the associated mechanism claim unsupported. |
+
+### Information firewall and generation protocol
+
+- World generation writes hidden semantic truth, minimum separating action, expected separability, and evaluator outcomes only to an evaluator-owned sealed manifest.
+- Synthesis sees public grammar, permitted evidence, traces, released/delayed outcomes, and public contracts; it never sees operation answers, desired promotion labels, hidden minimal diagnostics, final metrics, or evaluator truth.
+- Certification receives metadata-stripped candidates and frozen suites only through the Phase 6 blind API. Final evaluation is a separate process/container identity with sealed seeds and signed outputs.
+- No post-unseal parameter change, threshold change, candidate deletion, operating-point deletion, metric change, exclusion, or result-directed retry is allowed. Infrastructure failures remain logged and rerun only under predeclared retry rules.
+- G1 covers discovery under initial known and novel ambiguity families and measures cold-start errors, queries, local resolution, genuine synthesis, and promotion quality.
+- G2 covers homologous transfer, altered priors, new scopes, and new compositions and compares cumulative, fresh, and frozen-after-G1 on identical worlds.
+- G3 covers structural reset, adversarial recombination, scope neighbors, evidence masking, library-targeted attacks, and recurrence to determine whether retained perception knowledge compounds or leaks.
+- At each boundary, seal results, persist only condition-legal state, hash checkpoints, audit hidden-field contamination, and prevent any future manifest read. After G3, run retained counterexamples, rotating scope holdouts, template-collapse, label/operation permutation, certifier-blindness, hidden-field taint, and deterministic replay before summaries are generated.
+
+### Metrics and statistical decision rules
+
+| Family | Required generation-level metrics |
+|---|---|
+| Protected decisions | UAR, FRR, closure UAR, closure FRR, unsafe/safe exposure counts, exact/one-sided uncertainty bounds, worst world, and tail behavior. |
+| Autonomy | Initial unresolved rate, automated query/probe/round rates, local resolution rate, residual external escalation, irreducible ambiguity rate/recall, and residual reason decomposition. |
+| Perception | Conditional PE/CMPG, ambiguity contraction per round, selected separating-action accuracy, perception-witness count/reproduction, and query yield. |
+| Scope/influence | Scope leakage, anti-scope violations, unintended decision influence, active basis size, active eligibility, interaction violations, typed-channel violations, and causal-family arbitration. |
+| Synthesis integrity | Canonical AST/template count, semantic hashes, parameter-vector distribution, behavioral equivalence classes, constant/no-op/name-only/parent-identical counts, operation compliance, and search provenance completeness. |
+| Certification integrity | Independent gate vectors, blindness, label/name/operation/order permutation invariance, and trigger/retained/holdout/boundary/counterfactual/adversarial outcomes. |
+| Learning | Feedback-aware time to detection, time to local closure, time to persistent certification, recurrence, consolidation gain, library/eligibility size, negative-knowledge reuse, retention, forgetting, and negative transfer. |
+| Burden | Queries, probes, rounds, model/tool calls, latency, compute, tokens, memory, program complexity, human/domain escalations, and consolidation/re-certification cost. |
+| Traceability | Complete replay rate, manifest/hash integrity, participant-state legality, forbidden future reads, and hidden-field contamination count. |
+
+All comparisons follow `Lex(UAR, FRR, ResidualEscRate, QueryCost, Latency, Complexity)`. Report paired point estimates and preregistered confidence bounds by generation, condition, bank, stratum, and world. Track A and Track B are never pooled. Generation trends use paired G1-G2-G3 slopes with difficulty diagnostics; a favorable G3 mean cannot substitute for a failed trend or cumulative/fresh comparison.
+
+### Tests, validation, and audit requirements
+
+- Prove Track A opportunity/seed/world/schedule hashes match the original Phase 5 bank or publish a pre-execution discrepancy ledger.
+- Prove Track B has zero seed/world/example/template/policy/schedule/hidden-manifest overlap with development, Phase 6 certification, Phase 7/8 banks, Track A, and legacy results; include exact and near-duplicate audits.
+- Validate every participant checkpoint field-by-field against cumulative/fresh/frozen/legacy/fixed/random/oracle/ablation persistence rules and matched storage/compute budgets.
+- Independently recompute UAR, FRR, residual escalation, queries, closure, scope leakage, CMPG, template counts, gate vectors, generation slopes, and cumulative-fresh paired deltas from raw traces.
+- Audit all candidates and terminal paths for Phase 6 integrity continuity, local-certificate validity, scope/anti-scope activation, operation semantics, taint, and result isolation.
+- Replay a pinned complete sample and all protected failures; retain all negative, null, leakage, baseline-win, and theory-revising outcomes.
+
+### Exit gate and outputs
+
+The synthesis-integrity gate requires all Phase 6 gates in every synthesis-enabled generation/condition. The protected-core gate requires zero observed UAR and FRR on fully observable synthetic strata with one-sided bounds and exposures. Residual escalation must be at/near the known irreducible floor with no unexplained mass band. Scope leakage requires zero influential out-of-scope activation on retained and blind scope suites. Template integrity requires zero promoted name-only, constant, no-op, parent-identical, noncompliant, or unwitnessed candidates and no unaudited one-template collapse.
+
+The trend gate requires cumulative residual escalation and scope leakage not to increase G1-G3 under stable/expanding evidence. The cumulative-learning gate requires cumulative to be no worse than fresh on UAR and FRR and to improve at least one of residual escalation, closure rounds, query cost, recurrence, consolidation gain, or time-to-closure with no retention/complexity violation. Track B must reproduce the qualitative mechanism found in Track A without old cases/labels. Required ablations must degrade predicted mechanisms without invalidating the harness. Auditability requires 100% replayable terminal decisions/escalations and zero hidden-field contamination.
+
+Each bank must produce `generation_summary.parquet` and `.csv` for every method/condition/point/generation; candidate directories with ASTs, searches, scopes/anti-scopes, contracts, witnesses, hashes, fingerprints, and gate vectors; decision traces with hypotheses, ambiguity classes, queries, programs, certificates, and residual reasons; integrity reports `template_collapse_report.json`, `permutation_invariance.json`, `certifier_blindness.json`, `hidden_field_audit.json`, and `operation_compliance.json`; matched `ablation_results/`; `REPRODUCE.md`; environment lock; code/data hashes; seed ledger; and signed manifest. Each Track has a generated `CLAIMS.md`; Track A states diagnostic-only, and Track B claims remain provisional until Phase 10.
+
+## 25. Phase 10 - Reproducibility, Claim, and Release Audit
+
+### Scope
+
+Prevent a second interpretive failure by making every revised Self-Learning claim mechanically dependent on candidate-level executable evidence, independently recomputed certification gates, complete perception traces, isolated result namespaces, and signed immutable manifests. Reproduce Phase 6 integrity, Phase 7 closure behavior, Phase 8 causal ablations, and Phase 9 paired/blind results from locked code/data/config/seed/environment inputs. Freeze a release only if the independent audit passes; otherwise preserve the run as diagnostic evidence and explicitly invalidate each affected claim.
+
+Phase 10 depends on sealed Phase 6-9 namespaces. It may read them but cannot rewrite, repair, filter, or regenerate their accepted artifacts in place. Any required correction creates a new Version 0.4 run/version namespace and restarts every dependent gate. No Phase 9 Track B claim is release-bearing before Phase 10 closes.
+
+### Files made or changed
+
+- `configs/phases/phase10.yaml`, independent audit sample plan, protected-failure replay plan, release policy, signing policy, and claim-gate registry;
+- `schemas/v04/{audit_manifest,claim_ledger,release_manifest,replay_comparison,results_isolation_audit}.schema.json`;
+- independent audit implementations under `src/mavs10d/audit_v04/` for AST execution, semantic hashing, behavioral fingerprinting, gate recomputation, metric recomputation, taint scanning, permutation challenges, trace validation, and result isolation; production synthesis/certification metric functions may not be imported to establish independence;
+- `scripts/{audit_v04_candidates,audit_v04_templates,recompute_v04_certification,run_v04_permutation_challenge,audit_v04_hidden_fields,replay_v04,validate_v04_results_isolation,generate_v04_claims,freeze_v04_release}.py`;
+- one-command reproducibility entry points for complete Phase 6 integrity, Phase 7 microbenchmarks, all Phase 8 integrity/architecture/persistence ablations, a reduced Phase 9 rerun, and manifest verification;
+- `tests/phase10/` audit-independence, deliberate-corruption, manifest, signature, taint, permutation, claim-generation, append-only, and release-freeze tests;
+- only `results/perception_closure_v04/phase10/`, final Version 0.4 report pointers, and `results/RESULTS_INDEX.md` may be written by the audit/release process.
+
+### Data and artifact contracts
+
+```text
+results/perception_closure_v04/phase10/
+|-- manifests/{audit_manifest,seed_ledger,environment_lock,input_artifact_index}.json
+|-- candidate_audit/{candidate_inventory,spot_audit,full_template_audit}.parquet
+|-- certification/{recomputed_gate_vectors,gate_mismatches}.parquet
+|-- permutation/{challenge_manifest,outcome_comparison}.json
+|-- taint/{hidden_field_inventory,process_access_audit,memory_scan}.json
+|-- replay/{sample_manifest,protected_failure_manifest,artifact_comparison}.json
+|-- trace/{completeness,lineage,terminal_authority,residual_escalation}.json
+|-- isolation/{legacy_hashes,v04_hashes,cross_version_manifests,overwrite_scan}.json
+|-- claims/{claim_ledger.json,CLAIMS.md,claim_source_map.json}
+|-- release/{release_manifest.json,signatures,tag_record,RESULTS_INDEX.snapshot.md}
+|-- reports/{phase10_audit.json,phase10_audit.md,reproducibility_report.md,release_report.md}
+`-- REPRODUCE.md
+```
+
+`input_artifact_index.json` enumerates every Phase 6-9 manifest and artifact with logical role, physical path, byte size, SHA-256, schema version, code/config/data/seed/environment bindings, Git object or LFS object ID, claim eligibility, and legacy/current status. Every candidate ever proposed has a candidate-level entry linking raw failure evidence, minimal contrast, AST, parameters, complete search trace, contracts, semantic identity, behavioral fingerprint, operation check, witness pair/analogue, independent gate vector, certification decision, promotion/rejection/quarantine, rollback target, runtime use, consolidation/retirement state, and all descendant traces.
+
+### Code and coding method
+
+1. Freeze the audit input index before reading results. Verify Git SHA, dirty-tree state, dependency lock, OS/runtime/hardware metadata, schema versions, configuration hashes, data/ledger hashes, generator hashes, seed hierarchy, process identities, and artifact hashes. Missing or mismatched bindings fail closed.
+2. Re-run a stratified candidate spot audit covering every promoted operation type, every generation/condition/bank, every gate-vector pattern, every semantic/behavioral equivalence class, every rejection reason, and all protected failures. Trace from raw evidence through later runtime use and retirement/rollback.
+3. Run a full template audit over every proposal, not a sample. Normalize all ASTs, enumerate parameter vectors, semantic hashes, behavioral classes, name-only variants, constants, no-ops, parent/sibling identities, operation compliance, and witness coverage. Reconcile totals with Phase 6/9 manifests.
+4. Independently recompute every certification gate from raw traces and frozen cases using `audit_v04/`. Compare values, evidence cases, reason codes, and final vectors exactly or within preregistered numeric tolerances. Production aggregate counters or narrative labels are not audit evidence.
+5. Execute the operation-label permutation challenge: shuffle candidate names, semantic-neutral IDs, operation labels, curriculum labels, generation labels, and candidate order while holding executable artifacts fixed. Certification and metric outcomes must remain invariant. Any changed gate/decision is an integrity failure.
+6. Execute hidden-field taint auditing across source schemas, world/evaluator outputs, process arguments, environment variables, open/read files, IPC, candidate objects, traces, checkpoints, caches, logs, persistent memory, and serialized results. Plant unique evaluator-only sentinels in controlled tests and require zero participant influence or retention.
+7. Deterministically replay the preregistered sample plus every unsafe acceptance, false rejection in protected fixtures, closure error, unexplained escalation, scope leak, harmful promotion, taint event, gate mismatch, quarantine, and rollback. Recompute terminal decisions, queries, programs, certificates, metrics, and hashes.
+8. Validate trace completeness: every canonical opportunity has exactly one terminal record; every unresolved case has hypotheses and round lineage; every query/probe has target/result/cost; every active diagnostic has activation and influence proof; every terminal decision has authority/certificate; every escalation has residual decomposition; every learning transition has provenance and rollback.
+9. Audit result isolation. Verify original Phase 0-5 files remain byte-identical to their legacy-index hashes; no legacy/current silent concatenation exists; Track A and Track B are separate; no Phase 6-8 bank contaminates Track B; every cross-version comparison has an explicit manifest; default reports point only to the current namespace.
+10. Generate `claim_ledger.json` directly from audited gates. Each claim has status `supported`, `partially_supported`, `unsupported`, or `falsified`; exact supporting/failing gates; exposure counts and bounds; bank/condition/generation scope; artifact hashes; and maximum permitted language. Handwritten claim elevation is prohibited.
+11. Provide one-command independent reproduction of Phase 6 integrity tests, Phase 7 microbenchmarks, Phase 8 matrix validation, reduced Phase 9 paired/blind paths, Phase 10 recomputation, and final claim generation. The reduced rerun is a reproducibility check, not a substitute for full Phase 9 evidence.
+12. On success, tag the exact code commit, freeze dependency/container/environment locks, sign manifests and the claim ledger, snapshot `RESULTS_INDEX.md`, and make post-freeze changes require a new namespace/version. Phase 10 does not push, tag, or publish externally without separate user authorization; the plan defines the release artifact, not permission to mutate a remote.
+    Release freezing is complete only when code, environments, manifests, signatures, result pointers, and claim language all bind to the same audited artifact graph.
+
+### Tests, validation, and audit requirements
+
+- Deliberate corruption tests change AST nodes, parameter values, scope bounds, evidence dependencies, gate values, trace rows, seed ledgers, result paths, and signatures; each corruption must be detected with a stable reason code.
+- Audit-independence tests fail if the recomputation package imports production synthesis, certification, aggregation, or claim-decision functions.
+- Environment tests reproduce in a clean pinned environment and prove that unpinned dependency, locale, timezone, hash-randomization, thread count, device, or nondeterministic kernel changes are either controlled or declared.
+- Replay tests compare byte hashes for canonical JSON and exact discrete outputs, and preregister tolerances plus raw values for permitted floating-point artifacts.
+- Candidate-by-candidate reconciliation proves `proposed = integrity_rejected + certification_rejected + quarantined + promoted` under documented mutually exclusive lifecycle states and tracks later retirement/rollback separately.
+- Claim-generator tests inject failed, missing, and contradictory gates and require claim downgrading; an integrity failure can never be rendered as a minor limitation.
+- Release tests reject dirty trees, untracked evidence, missing LFS objects, unsigned manifests, unresolved audit findings, stale result pointers, non-append-only mutation, and any provisional Track B claim.
+
+### Decision allocation and benchmarks
+
+Phase 10 does not create a new scientific opportunity bank. It replays the pinned audit sample, every protected failure, and the reduced preregistered reproduction subset from Phase 6-9. Sample strata and reduced-run sizes are frozen before audit execution and cannot exclude rare failures or inconvenient operation types. Full claim metrics remain those of the complete Phase 9 banks.
+
+### Exit gate and outputs
+
+Phase 10 passes only when all input hashes/manifests validate; every candidate is indexed; the stratified and full template audits reconcile; independent certification and metric recomputation match; permutations are invariant; hidden-field contamination is zero; required replays match; trace/lineage/authority/escalation completeness is 100%; legacy/current and Track A/Track B isolation passes; every claim is mechanically generated from audited artifacts; the reproduction commands pass in the pinned environment; and release manifests/signatures/freeze rules validate.
+
+A failed integrity audit is not a caveat. It invalidates every dependent Self-Learning claim and preserves the affected run only as append-only diagnostic evidence. A negative scientific gate with intact integrity remains a valid negative result and produces `unsupported` or `falsified`, never a concealed result. The final outputs are the complete Phase 10 artifact tree, signed release manifest, independent audit, reproducibility package, frozen result index, and generated claim ledger/`CLAIMS.md`.
+
+## 26. Version 0.4 coverage and advancement audit
+
+| Normative Version 0.4 requirement | WorkPlan enforcement and required evidence |
+|---|---|
+| Prior Phase 3 evidence is accurately bounded | Section 19.1; 120-candidate single-template reclassification, retained pipeline claims, prohibited synthesis claims. |
+| Previous results preserved without overwrite | Section 19.2; immutable legacy indexes/copies, SHA-256/LFS bindings, claim status, no silent concatenation. |
+| Revised result namespace | Sections 19.2 and 21-25; `results/perception_closure_v04/phase6` through `phase10`, including Phase 9 paired/blind subtrees. |
+| Executable canonical AST and explicit evidence dependencies | Phase 6 files, contracts, feature registry, evaluator, zero unresolved strings. |
+| Real structure/parameter/scope/authority search | Phase 6 code steps 3-5 and parameter provenance artifacts/gates. |
+| Positive scope, anti-scope, influence, and counterfactual contracts | Sections 20-21 schemas, executable contract, operation checks, boundary/counterfactual suites. |
+| Name-invariant semantic hashes and behavioral fingerprints | Phase 6 data contract, semantic/behavioral equivalence reports, independent recomputation. |
+| Semantic/behavioral deduplication | Phase 6 gates and Phase 8 I2/I3 causal ablations. |
+| Operation-specific executable meaning | Phase 6 operation table, compliance artifacts, Phase 8 I5. |
+| Perception-extension witness and disjoint analogue | Phase 6 step 10, witness schema/artifact, 100% promotion gate, Phase 8 I8. |
+| Blind independent certification | Phase 6 separate processes/API/gates, label and hidden-field exclusions, Phase 8 I6/I7, Phase 10 recomputation. |
+| Label/name/operation/order permutation tests | Phase 6 integrity suite, Phase 8 closure rule, Phase 9 post-G3 audit, Phase 10 challenge. |
+| Hidden-field taint tests | Phase 6 process/schema scan, Phase 8 I7, Phase 9 firewall, Phase 10 full taint audit. |
+| Template collapse, no-op, constant, parent-identical, name-only rejection | Phase 6 rejection rules and artifacts, Phase 8 I1/I4/I8/I10, Phase 9 integrity metrics, Phase 10 full audit. |
+| Explicit competing hypotheses and ambiguity-equivalence classes | Sections 20 and 22, hypothesis/ambiguity schemas, round traces, tests. |
+| Conditional perception search and targeted evidence acquisition | Phase 7 steps 4-7, query planner/artifacts, Phase 8 P2-P4. |
+| Sparse scope-safe case programs | Phase 7 steps 8-10, program/activation artifacts, Phase 8 P5-P7/L9. |
+| Typed influence and non-additive arbitration | Phase 7 step 9-10, typed-channel/interaction audits, Phase 8 P7-P9. |
+| Local closure certification | Phase 7 steps 11-13 and certificate obligations, Phase 8 P10. |
+| Conditional theorem targets and irreducible boundary remain honest | Section 20.3 assumption audits, Phase 7 finite fixtures, Phase 8 attacks, Phase 9 scoped evidence, Phase 10 claim limits. |
+| QUERY/probe/round/external ESCALATE separation | Sections 20 and 22 trace contracts/gates; Phase 9 autonomy metrics. |
+| Escalation only after valid extension exhaustion | Phase 7 residual proof/decomposition, P1/P4/P11-P15, Phase 9 residual gate, Phase 10 trace audit. |
+| Persistent learning and consolidation without global activation | Sections 20/22, negative knowledge and library-health rules, Phase 8 L0-L10, Phase 9 cumulative controls. |
+| Complete synthesis-integrity ablations I0-I11 | Section 23 exact per-ID factor/files/invariants/question/metrics/artifacts/interpretation. |
+| Complete runtime ablations P0-P15 | Section 23 exact per-ID factor/files/invariants/question/metrics/artifacts/interpretation. |
+| Complete persistence ablations L0-L10 | Section 23 exact per-ID factor/files/invariants/question/metrics/artifacts/interpretation. |
+| Untouched Phase 4 diagnostic rerun | Phase 8 sealed pre-rerun bank; preserved historical bank, matched comparison, diagnostic-only status. |
+| Original Phase 5 paired rerun and new sealed blind bank | Section 24 two-track contract and isolation. |
+| Cumulative, fresh, frozen-after-G1 and all controls | Section 24 comparator matrix, legacy A0-A49 Track A, fixed/reduced/random/oracle/Phase 8 controls. |
+| Lexicographic UAR, FRR, residual escalation, burden | Sections 20 and 24 metrics/rules; no compensatory scalar claim. |
+| Generation, trend, scope, template, cumulative-learning gates | Phase 9 metrics and exit gate. |
+| Exact result/report directory layout | Sections 19.2 and Phase 6-10 artifact trees. |
+| Deterministic replay, manifests, hashes, environment/seed lock | Every phase manifest contract; Phase 10 independent replay and freeze. |
+| Candidate-by-candidate executable release evidence | Phase 6 candidate directory and Phase 10 input index/full reconciliation. |
+| Independent certification recomputation | Phase 10 separate `audit_v04/` implementation and mismatch artifacts. |
+| Trace completeness and results isolation | Phase 10 steps 8-9 and 100% gate. |
+| Claim generation from audited artifacts | Phase 10 claim ledger/status/language and fail-closed generator tests. |
+| Release freezing and fail-closed claim discipline | Phase 10 step 12 and exit rule; failed integrity invalidates dependent claims. |
+
+Advancement is strictly sequential: `Phase 6 integrity -> Phase 7 runtime -> Phase 8 falsification -> Phase 9 paired/blind revalidation -> Phase 10 release audit`. A downstream favorable metric cannot cure a failed upstream gate. A missing artifact, empty/vacuous test, altered bank, silent approximation, unreconciled count, unsigned manifest, or non-replayable result is a failed gate.
+
+## 27. Version 0.4 `Path.md` protocol
+
+Appending Sections 19-27 does not authorize `Path.md` to mark Phase 6, 7, 8, 9, or 10 implemented, started, passed, or complete. Until the user separately authorizes implementation, the Phase ledger remains closed at Phase 5 and may state only that the Version 0.4 work has been planned.
+
+After implementation is authorized, `Path.md` is updated continuously in the existing evidence-ledger style. Every meaningful work step records:
+
+1. date/time, Version 0.4 phase, generation/bank/condition where applicable, and exact WorkPlan clauses;
+2. task performed and scientific/engineering question;
+3. files created, modified, removed, or deliberately preserved, with the reason for each;
+4. implementation decisions, interfaces, invariants, and any deviation from this plan;
+5. exact commands/tests executed, exit status, test counts, seeds, configs, code/data/environment hashes, and runtime;
+6. exact results and exposure denominators, including negative/null outcomes and uncertainty;
+7. generated artifact paths, schemas, byte/hash bindings, and result-namespace isolation proof;
+8. failures, rejected approaches, unresolved gaps, corrective actions, and whether prior evidence was invalidated;
+9. independent audit findings, taint/permutation/replay results, and open reason codes;
+10. commit/checkpoint/freeze identifier where applicable; and
+11. an explicit advancement-gate decision with direct evidence for every condition, not a summary boolean.
+
+No phase is complete until every stated completion condition, artifact contract, test requirement, independent audit, and exit gate in its WorkPlan section passes. Phase 6 cannot be closed by lifecycle plumbing, Phase 7 cannot be closed by aggregate error rates without valid closure traces, Phase 8 cannot be closed without all I/P/L comparisons, Phase 9 cannot be claim-bearing from Track A or an unsealed Track B, and Phase 10 cannot close with any unresolved integrity finding. If a gate fails, `Path.md` records the phase as in progress or failed/blocked according to evidence; it never records implementation success merely because code or a WorkPlan section exists.
