@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/local_closure_certificate.schema.json",
+  "type": "object",
+  "required": ["certificate_id", "case_id", "terminal_action", "surviving_hypotheses", "obligations", "all_passed", "witness_ids", "authority", "parent_hash", "certificate_hash"],
+  "properties": {
+    "certificate_id": {"type": "string"}, "case_id": {"type": "string"}, "terminal_action": {"enum": ["ACCEPT", "REJECT"]},
+    "surviving_hypotheses": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "obligations": {"type": "object", "required": ["hypothesis_separation", "witness_sufficiency", "executable_scope", "evidence_integrity", "counterfactual_stability", "interaction_safety", "authority", "risk_justification", "kernel_preservation", "replay"]},
+    "all_passed": {"type": "boolean"}, "witness_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "authority": {"enum": ["L2", "L3"]}, "parent_hash": {"type": "string"}, "certificate_hash": {"type": "string"}
+  }, "additionalProperties": false
+}

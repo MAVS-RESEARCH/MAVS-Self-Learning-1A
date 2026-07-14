@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/perception_trace.schema.json",
+  "type": "object",
+  "required": ["case_id", "library_size", "fast_loop_outcome", "resolver_entered", "round_count", "query_count", "probe_count", "program_count", "external_escalation_count", "terminal_action", "terminal_authorization", "root_hash", "terminal_hash", "trace_hash"],
+  "properties": {
+    "case_id": {"type": "string"}, "library_size": {"type": "integer", "minimum": 1}, "fast_loop_outcome": {"enum": ["ACCEPT", "REJECT", "UNRESOLVED"]},
+    "resolver_entered": {"type": "boolean"}, "round_count": {"type": "integer", "minimum": 0}, "query_count": {"type": "integer", "minimum": 0},
+    "probe_count": {"type": "integer", "minimum": 0}, "program_count": {"type": "integer", "minimum": 0}, "external_escalation_count": {"type": "integer", "minimum": 0, "maximum": 1},
+    "terminal_action": {"enum": ["ACCEPT", "REJECT", "ESCALATE"]}, "terminal_authorization": {"type": ["string", "null"]},
+    "root_hash": {"type": "string"}, "terminal_hash": {"type": "string"}, "trace_hash": {"type": "string"}
+  }, "additionalProperties": true
+}

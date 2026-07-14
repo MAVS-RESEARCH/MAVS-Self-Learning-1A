@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/active_case_program.schema.json",
+  "type": "object",
+  "required": ["program_id", "case_id", "round_index", "action_ids", "influential_basis", "redundant_suppressed", "scope_certified", "interaction_certificates", "primary_causal_family", "conditional_perception_gain", "program_hash"],
+  "properties": {
+    "program_id": {"type": "string"}, "case_id": {"type": "string"}, "round_index": {"type": "integer", "minimum": 1},
+    "action_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "influential_basis": {"type": "array", "items": {"type": "string"}, "maxItems": 2},
+    "redundant_suppressed": {"type": "array", "items": {"type": "string"}}, "scope_certified": {"type": "boolean"},
+    "interaction_certificates": {"type": "array", "items": {"type": "string"}}, "primary_causal_family": {"type": "string"},
+    "conditional_perception_gain": {"type": "number", "exclusiveMinimum": 0}, "program_hash": {"type": "string"}
+  }, "additionalProperties": false
+}

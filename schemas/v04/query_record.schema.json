@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/query_record.schema.json",
+  "type": "object",
+  "required": ["case_id", "round_index", "action_id", "action_type", "target_contrast", "expected_contraction", "realized_contraction", "cost", "latency_ms", "privacy_units", "result_available", "result_trusted", "provenance_valid", "parent_hash", "record_hash"],
+  "properties": {
+    "case_id": {"type": "string"}, "round_index": {"type": "integer", "minimum": 1}, "action_id": {"type": "string"},
+    "action_type": {"enum": ["QUERY", "PROBE", "DIAGNOSTIC_PROGRAM"]}, "target_contrast": {"type": "string"},
+    "expected_contraction": {"type": "number", "minimum": 0}, "realized_contraction": {"type": "number", "minimum": 0},
+    "cost": {"type": "number", "minimum": 0}, "latency_ms": {"type": "number", "minimum": 0}, "privacy_units": {"type": "number", "minimum": 0},
+    "result_available": {"type": "boolean"}, "result_trusted": {"type": "boolean"}, "provenance_valid": {"type": "boolean"},
+    "parent_hash": {"type": "string"}, "record_hash": {"type": "string"}
+  }, "additionalProperties": true
+}

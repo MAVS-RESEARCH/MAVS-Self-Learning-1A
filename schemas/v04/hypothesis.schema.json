@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/hypothesis.schema.json",
+  "type": "object",
+  "required": ["hypothesis_id", "semantic_claim", "decision_class", "authority", "predicted_witnesses", "predicted_counterfactuals", "discriminating_actions", "positive_scope", "anti_scope", "terminal_consequence", "requirements"],
+  "properties": {
+    "hypothesis_id": {"type": "string", "minLength": 1},
+    "semantic_claim": {"type": "string", "minLength": 1},
+    "decision_class": {"enum": ["safe", "unsafe"]},
+    "authority": {"enum": ["L0", "L1"]},
+    "predicted_witnesses": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "predicted_counterfactuals": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "discriminating_actions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "positive_scope": {"type": "array", "items": {"type": "string"}},
+    "anti_scope": {"type": "array", "items": {"type": "string"}},
+    "terminal_consequence": {"enum": ["ACCEPT", "REJECT"]},
+    "requirements": {"type": "array", "items": {"type": "object", "required": ["field", "operator", "value"]}}
+  },
+  "additionalProperties": false
+}

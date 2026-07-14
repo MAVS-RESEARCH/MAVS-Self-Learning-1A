@@ -1,0 +1,48 @@
+schema_version: "1.0.0"
+phase: 7
+name: live_perception_closure_runtime
+normative_version: "0.4"
+phase6_dependency:
+  run_id: phase6_authoritative_reaudit_20260714
+  source_commit: 210ebd712df13b8df84a54e9889e4db334295c53
+  audit_sha256: 07E087EC0F940943050ECCDCC2C43A7763C8E7D0A2D600C4A37E4AA669A25B5D
+  required_audit_status: PASS
+  required_findings: 0
+microbenchmark:
+  cases_per_family: 8
+  seeds:
+    compilation: 710001
+    runtime: 720001
+    replay: 730001
+    blind_neighbors: 740001
+  families:
+    - immediately_separable
+    - one_query_separable
+    - multi_step_separable
+    - masked_safe_evidence
+    - harmful_vs_benign_correlation
+    - scope_neighbor
+    - conflicting_diagnostics
+    - new_composition
+    - genuinely_new_semantic_need
+    - irreducible_pair
+    - adversarial_query_trap
+    - budget_limited_case
+  library_size_sweep: [20, 200, 2000, 20000]
+  separability_levels: [immediate, one_query, multi_step, irreducible]
+  evidence_access_levels: [available, delayed, costly, corrupted, adversarially_masked, permanently_inaccessible]
+  scope_levels: [clean, neighboring_confounder, overlapping_families, structural_reset]
+  novelty_levels: [known_primitive, new_composition, new_scope, genuinely_new_semantics]
+  interaction_levels: [single_cause, certified_two_family, redundancy, contradictory_witnesses]
+  budget_levels: [diagnostic_research, industrial_latency, strict_call_limit]
+gates:
+  one_sided_alpha: 0.05
+  max_active_basis: 2
+  minimum_query_yield_fraction: 0.50
+  zero_uar: true
+  zero_frr: true
+  zero_scope_leakage: true
+  zero_typed_hard_veto: true
+  zero_uncertified_interaction_influence: true
+  complete_escalation_decomposition: true
+results_root: results/perception_closure_v04/phase7

@@ -1,0 +1,20 @@
+schema_version: "1.0.0"
+contract: phase7-locked-microbenchmarks-v1
+case_generation:
+  deterministic: true
+  truth_isolation: auditor_only
+  runtime_forbidden_fields: [expected_outcome, oracle_label, unsafe, hidden_world, target_decision]
+family_requirements:
+  immediately_separable: fast_loop_only
+  one_query_separable: exactly_one_internal_query
+  multi_step_separable: ordered_relevant_actions_only
+  masked_safe_evidence: absence_never_implies_danger
+  harmful_vs_benign_correlation: provenance_separates_mechanism
+  scope_neighbor: anti_scope_zero_influence
+  conflicting_diagnostics: non_additive_adjudication
+  new_composition: certified_interaction_required
+  genuinely_new_semantic_need: provisional_authority_nonterminal
+  irreducible_pair: irreducibility_proof_required
+  adversarial_query_trap: poisoned_path_rejected
+  budget_limited_case: budget_ledger_required
+blind_scope_suites: [retained_neighbor, blind_neighbor]

@@ -1,0 +1,42 @@
+schema_version: "1.0.0"
+runtime_version: perception-closure-v0.4
+fast_loop_first: true
+terminal_actions: [ACCEPT, REJECT, ESCALATE]
+internal_actions: [QUERY, PROBE, DIAGNOSTIC_PROGRAM, RESOLVER_ROUND]
+ambiguity_types:
+  - missing_evidence
+  - correlated_consensus
+  - scope_uncertainty
+  - diagnostic_conflict
+  - novelty
+  - policy_ambiguity
+  - irreducible
+authority:
+  L0: {terminal: false, description: hypothesis_only}
+  L1: {terminal: false, description: observation_and_query}
+  L2: {terminal: true, description: local_certified}
+  L3: {terminal: true, description: persistent_certified}
+typed_channels:
+  danger: [REJECT]
+  safe: [ACCEPT]
+  availability: [QUERY]
+  scope: [QUERY]
+  novelty: [QUERY, PROBE]
+  conflict: [QUERY, PROBE]
+budgets:
+  diagnostic_research: {max_cost: 20.0, max_latency_ms: 20000, max_calls: 8, max_privacy_units: 5.0}
+  industrial_latency: {max_cost: 8.0, max_latency_ms: 2500, max_calls: 4, max_privacy_units: 2.0}
+  strict_call_limit: {max_cost: 2.0, max_latency_ms: 1000, max_calls: 1, max_privacy_units: 1.0}
+sparse_basis:
+  max_influential_diagnostics: 2
+  redundancy_tolerance: 0.0
+  untested_composition_authority: observation_only
+search:
+  require_named_contrast: true
+  protected_regression_tolerance: 0.0
+  rank_order: [unsafe_acceptance_protection, false_rejection_protection, ambiguity_contraction, scope_risk, cost, latency]
+persistence:
+  repeated_path_minimum: 2
+  active_eligibility_per_family: 4
+  blind_certification_required: true
+  shifted_prior_recertification_required: true

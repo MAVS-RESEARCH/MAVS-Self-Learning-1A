@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/persistent_knowledge.schema.json",
+  "type": "object",
+  "required": ["knowledge_id", "kind", "semantic_distinction", "positive_scope", "anti_scope", "lineage", "status", "active_eligible", "blind_certification", "outperforms_parent", "recertification_due", "knowledge_hash"],
+  "properties": {
+    "knowledge_id": {"type": "string"}, "kind": {"enum": ["primitive", "query_policy", "composition", "closure_program", "failure_signature", "negative_knowledge"]},
+    "semantic_distinction": {"type": "string"}, "positive_scope": {"type": "array", "items": {"type": "string"}}, "anti_scope": {"type": "array", "items": {"type": "string"}},
+    "lineage": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "status": {"enum": ["candidate", "promoted", "merged", "narrowed", "split", "retired", "quarantined", "prohibited"]},
+    "active_eligible": {"type": "boolean"}, "blind_certification": {"type": "object", "required": ["passed", "anonymous_semantic_id", "gate_count"]},
+    "outperforms_parent": {"type": "boolean"}, "recertification_due": {"type": "boolean"}, "knowledge_hash": {"type": "string"}
+  }, "additionalProperties": false
+}

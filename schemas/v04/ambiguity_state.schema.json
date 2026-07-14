@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/ambiguity_state.schema.json",
+  "type": "object",
+  "required": ["case_id", "round_index", "ambiguity_type", "surviving_hypotheses", "safe_count", "unsafe_count", "evidence_hash", "parent_hash", "state_hash"],
+  "properties": {
+    "case_id": {"type": "string"}, "round_index": {"type": "integer", "minimum": 0},
+    "ambiguity_type": {"type": "string"}, "surviving_hypotheses": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "safe_count": {"type": "integer", "minimum": 0}, "unsafe_count": {"type": "integer", "minimum": 0},
+    "evidence_hash": {"type": "string"}, "parent_hash": {"type": ["string", "null"]}, "state_hash": {"type": "string"}
+  }, "additionalProperties": false
+}

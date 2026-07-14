@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/perception_action.schema.json",
+  "type": "object",
+  "required": ["action_id", "action_type", "perception_mode", "target_contrast", "channel", "authority", "expected_contraction", "protected_regression", "scope_risk", "cost", "latency_ms", "privacy_units", "positive_scope", "anti_scope", "provenance_valid", "interaction_status"],
+  "properties": {
+    "action_id": {"type": "string"}, "action_type": {"enum": ["QUERY", "PROBE", "DIAGNOSTIC_PROGRAM"]},
+    "perception_mode": {"enum": ["targeted_query", "counterfactual_probe", "disjoint_specialist", "tool", "simulation", "delayed_observation", "provenance_reconstruction", "alternate_view", "evidence_recovery", "diagnostic_composition"]},
+    "target_contrast": {"type": "string", "minLength": 1}, "channel": {"enum": ["danger", "safe", "availability", "scope", "novelty", "conflict"]},
+    "authority": {"enum": ["L0", "L1", "L2", "L3"]}, "expected_contraction": {"type": "number", "minimum": 0},
+    "protected_regression": {"type": "number", "minimum": 0}, "scope_risk": {"type": "number", "minimum": 0},
+    "cost": {"type": "number", "minimum": 0}, "latency_ms": {"type": "number", "minimum": 0}, "privacy_units": {"type": "number", "minimum": 0},
+    "positive_scope": {"type": "boolean"}, "anti_scope": {"type": "boolean"}, "provenance_valid": {"type": "boolean"},
+    "interaction_status": {"enum": ["single", "certified", "untested", "prohibited"]}
+  }, "additionalProperties": true
+}

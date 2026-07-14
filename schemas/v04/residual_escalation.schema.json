@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mavs-research.local/schemas/v04/residual_escalation.schema.json",
+  "type": "object",
+  "required": ["case_id", "terminal_action", "reason", "irreducible_ambiguity", "evidence_unavailable", "budget_exhaustion", "resolver_failure", "untried_actions", "invalid_actions", "budget_ledger", "no_positive_path_proof", "parent_hash", "record_hash"],
+  "properties": {
+    "case_id": {"type": "string"}, "terminal_action": {"const": "ESCALATE"},
+    "reason": {"enum": ["irreducible_ambiguity", "evidence_unavailable", "budget_exhaustion", "resolver_failure"]},
+    "irreducible_ambiguity": {"type": "integer", "minimum": 0, "maximum": 1}, "evidence_unavailable": {"type": "integer", "minimum": 0, "maximum": 1},
+    "budget_exhaustion": {"type": "integer", "minimum": 0, "maximum": 1}, "resolver_failure": {"type": "integer", "minimum": 0, "maximum": 1},
+    "untried_actions": {"type": "array", "items": {"type": "string"}}, "invalid_actions": {"type": "array", "items": {"type": "object"}},
+    "budget_ledger": {"type": "object"}, "no_positive_path_proof": {"type": "object"}, "parent_hash": {"type": "string"}, "record_hash": {"type": "string"}
+  }, "additionalProperties": false
+}
