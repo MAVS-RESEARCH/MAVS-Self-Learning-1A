@@ -1202,6 +1202,16 @@ The independent audit inspected all 27 Phase 5 checkpoint statements and found z
 - Failure or unresolved gap: authoritative evidence must still be generated from a committed source checkpoint and independently audited.
 - Advancement gate: pre-checkpoint regression **passed**; Phase 6 overall remains in progress.
 
+### P6-E013 - First authoritative run invalidated by witness-contract inconsistency
+
+- Date and phase: 2026-07-14 (Asia/Karachi), Phase 6.
+- Task performed: executed `node scripts/run_phase6.mjs --run-id phase6_authoritative_20260714` from source checkpoint `edf93211b2d68fd9ad89a8de89687b4c8387eea7`, then performed an additional candidate-level evidence probe.
+- Orchestrator result: all 16 steps exited successfully in `337.6 s`; lifecycle was `40/20/10/10/0`, 40/40 replay passed, focused tests passed before and after, full regression passed, inherited smoke validated 8/8 traces, and the independent audit reported zero findings.
+- Post-run finding: all ten deliberate anti-scope certification controls correctly failed kernel and anti-scope gates but their `perception_extension_witness.json` objects had `valid: true`. Witness validity used `scope_leak = active AND anti_scope_ast`; the controls intentionally set the executable anti-scope AST false, so direct activity on the frozen anti-scope bank was not included in the validity conjunction even though `anti_scope_regression: true` was recorded.
+- Correction: witness validity now explicitly requires no active anti-scope-bank case, and the certification regression test asserts both `anti_scope_regression == true` and `valid == false` for controls.
+- Evidence disposition: the first authoritative run is **invalidated and must be cleaned/replaced**, despite its prior zero-finding audit. It will not be cited as final evidence.
+- Advancement gate: **not passed** pending corrected committed rerun.
+
 ### P6-E000 - Authorization, normative lock, and exact phase boundary
 
 - Date/time: 2026-07-14 Asia/Karachi. Accepted repository checkpoint: clean `main` at `bbccd76ea0dbc04b8fe5694d15c51410f56acbd4`, exactly synchronized with `origin/main` before Phase 6 work.

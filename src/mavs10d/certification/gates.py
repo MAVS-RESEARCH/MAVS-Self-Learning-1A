@@ -37,7 +37,8 @@ def perception_extension_witness(candidate: ExecutableDiagnostic, trace: pd.Data
     reproduced = bool(((~analogue["unsafe"]) & (~analogue["discrete_output"].astype(bool))).any() and (analogue["unsafe"] & analogue["discrete_output"].astype(bool)).any())
     separated = not safe.empty and not unsafe.empty
     supporting = ([str(safe.iloc[0]["case_id"]), str(unsafe.iloc[0]["case_id"])] if separated else ["missing-safe", "missing-unsafe"])
-    valid = separated and reproduced and not bool(trace[trace["bank"].isin(["retained", "anti_scope"])]["scope_leak"].any())
+    anti_scope_regression = bool(trace[trace["bank"] == "anti_scope"]["active"].any())
+    valid = separated and reproduced and not bool(trace[trace["bank"] == "retained"]["scope_leak"].any()) and not anti_scope_regression
     return {
         "candidate_id": candidate.candidate_id,
         "incumbent_indistinguishable": True,
@@ -48,7 +49,7 @@ def perception_extension_witness(candidate: ExecutableDiagnostic, trace: pd.Data
         "causal_reason": "registered protected evidence changes while nuisance_marker is excluded",
         "terminal_correct": separated,
         "retained_regression": False,
-        "anti_scope_regression": bool(trace[trace["bank"] == "anti_scope"]["active"].any()),
+        "anti_scope_regression": anti_scope_regression,
         "disjoint_reproduction": reproduced,
         "supporting_cases": supporting,
         "valid": valid,

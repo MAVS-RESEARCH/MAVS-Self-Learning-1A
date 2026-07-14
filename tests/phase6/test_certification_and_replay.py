@@ -18,3 +18,5 @@ def test_behavior_only_certification_separates_valid_and_scope_leak_controls() -
     vector = evaluate_gates(control, control_trace, control_witness, 630001)
     assert not vector["all_passed"]
     assert not vector["gates"]["anti_scope"]["passed"]
+    assert control_witness["anti_scope_regression"]
+    assert not control_witness["valid"]
