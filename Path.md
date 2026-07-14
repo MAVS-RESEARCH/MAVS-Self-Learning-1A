@@ -1627,6 +1627,15 @@ The authoritative independent auditor scanned every Phase 8 script using Python 
 - Final technical verdict: **PASS - 100% compliant with WorkPlan Section 23 Phase 8 as implemented, stress-tested, deterministically replayed, independently audited, and sealed**. Phase 9 remains unimplemented and unauthorized in this task.
 - Publication state: the source checkpoint is `31d7a673ef0a23a24f41485bfc84a5c4541eac88`; the sealed evidence and this ledger entry must still be committed and pushed before completion is reported.
 
+### P8-E007 - Accepted evidence commit and GitHub synchronization
+
+- Evidence commit: `e088c86cc73f176576677a0490e3f8967c1663f8` (`Record sealed Phase 8 validation evidence`), containing the complete 702-file sealed authoritative run and P8-E004 through P8-E006.
+- Remote: `origin`, `https://github.com/MAVS-RESEARCH/MAVS-Self-Learning-1A.git`.
+- Push command: `git push origin main`.
+- Exact result: exit code `0`; remote `main` advanced from `f027f86` to `e088c86` (`f027f86..e088c86 main -> main`).
+- Publication boundary: direct `main` push follows the repository workflow established by the user. No pull request was created, and no Phase 9 work was started.
+- Final documentation: this P8-E007 synchronization record and the completed Phase 8 ledger status are committed and pushed as a documentation-only successor; authoritative source, evidence, replay, audit, and seal hashes remain unchanged.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1656,8 +1665,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 5 | Deep ablation, transfer, and anti-overfit trials | Complete | P5-E007 through P5-E011; 10.74M-row stress run, hash-identical replay, schema validation, and zero-finding audit pass |
 | 6 | Executable diagnostic synthesis and anti-gaming foundation | Complete | P6-E021 through P6-E023; strengthened replacement run, 206-test regression, 24,600 schema records, 1,240 objective recomputations, and zero-finding audit pass |
 | 7 | Live Perception-Closure Runtime | Complete | P7-E005 through P7-E007; sealed 384-execution run, 320 independent certificate recomputations, 266-test regression, 17/17 gates, and zero-finding audit |
-| 8 | Ablation and Integrity Program | In progress | P8-E000 through P8-E003; 39-condition implementation, 345-test regression, 696-file deterministic replay, and zero-finding disposable audit pass; authoritative run pending |
+| 8 | Ablation and Integrity Program | Complete | P8-E004 through P8-E006; sealed 39-condition matrix, 975,000 legacy decision replays, 345-test regression, 697-file deterministic replay, 21/21 clauses, and zero-finding audit |
 
 ## Current checkpoint
 
-Phase 0 through Phase 7 are complete and frozen. The accepted Phase 7 source checkpoint is `d71d667a377ed2c0dd80a93e38b3ba70554d3a9a`; accepted evidence is `results/perception_closure_v04/phase7/phase7_authoritative_20260714/`. Phase 8 is authorized and in progress under P8-E000; Phase 9 remains unauthorized and unimplemented.
+Phase 0 through Phase 8 are complete and frozen. The accepted Phase 8 source checkpoint is `31d7a673ef0a23a24f41485bfc84a5c4541eac88`; accepted evidence is `results/perception_closure_v04/phase8/phase8_authoritative_20260714/`; evidence commit is `e088c86cc73f176576677a0490e3f8967c1663f8`; audit SHA-256 is `6AB6E66FB52B543D0776EF91BDFC5F1C141AEF3503C8A7FD879740F884B7CD7D`. Phase 9 remains unauthorized and unimplemented.
