@@ -18,6 +18,7 @@ import yaml
 SCHEMA_VERSION = "1.0.0"
 REPO_ROOT = Path(__file__).resolve().parents[3]
 CONFIG_PATH = REPO_ROOT / "configs" / "phases" / "phase10.yaml"
+_GIT_BLOBS: dict[str, str] | None = None
 
 
 class AuditFailure(RuntimeError):
@@ -85,11 +86,14 @@ def assert_clean_source_tree(allow_phase10_results: bool = True) -> None:
 
 
 def git_blob_oid(path: Path) -> str | None:
+    global _GIT_BLOBS
     rel = relative(path)
-    tracked = subprocess.run(["git", "ls-files", "--error-unmatch", "--", rel], cwd=REPO_ROOT, capture_output=True, text=True)
-    if tracked.returncode != 0:
-        return None
-    return run_git("hash-object", "--", rel)
+    if _GIT_BLOBS is None:
+        _GIT_BLOBS = {}
+        for line in run_git("ls-files", "-s").splitlines():
+            metadata, tracked_path = line.split("\t", 1)
+            _GIT_BLOBS[tracked_path.replace("\\", "/")] = metadata.split()[1]
+    return _GIT_BLOBS.get(rel)
 
 
 def lfs_oid(path: Path) -> str | None:
@@ -175,4 +179,3 @@ def verify_frozen_input_index() -> dict[str, Any]:
     if mismatches:
         raise AuditFailure("P10_INPUT_ARTIFACT_MISMATCH", "; ".join(mismatches[:20]))
     return index
-

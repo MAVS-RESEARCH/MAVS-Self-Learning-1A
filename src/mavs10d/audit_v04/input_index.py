@@ -55,7 +55,8 @@ def build_input_index() -> dict[str, Any]:
             continue
         candidate = __import__("json").loads((directory / "candidate.json").read_text(encoding="utf-8"))
         lifecycle = __import__("json").loads((p6 / "manifests" / "lifecycle_state.json").read_text(encoding="utf-8"))
-        lifecycle_by_id = {item["candidate_id"]: item for item in lifecycle.get("candidates", lifecycle if isinstance(lifecycle, list) else [])}
+        lifecycle_rows = lifecycle if isinstance(lifecycle, list) else lifecycle.get("candidates", [])
+        lifecycle_by_id = {item["candidate_id"]: item for item in lifecycle_rows}
         candidates.append({
             "candidate_id": candidate["candidate_id"],
             "operation": candidate["lineage"]["operation"],

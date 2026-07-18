@@ -1888,6 +1888,17 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Failures or unresolved gaps: no focused-test failure. Authoritative execution, full regression, independent clause audit, signed manifest, freeze enforcement, evidence commit, and push remain pending.
 - Advancement gate: **not yet passed**. Phase 10 remains in progress.
 
+### P10-E001 - Rejected first authoritative attempt and parser correction
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 10.
+- Source checkpoint attempted: `ab25de8f0afe51a5d0d0f2c76e6873922f327345`.
+- Command: `node scripts/run_phase10.mjs`.
+- Exact result: exit `1` after `801.2 s`. Step 01 isolated cleanup passed; Step 02 focused tests passed **43/43**; Step 03 failed before freezing or writing `input_artifact_index.json`.
+- Failure: `AttributeError: 'list' object has no attribute 'get'` at `src/mavs10d/audit_v04/input_index.py`, caused by treating the top-level Phase 6 `lifecycle_state.json` list as a mapping while constructing candidate descendant links.
+- Evidence disposition: **rejected attempt**. No Phase 10 result, audit, claim, signature, or seal from this attempt is accepted. Phases 6-9 remained byte-untouched.
+- Corrective code: branch explicitly on list versus mapping before building `lifecycle_by_id`. The Git-object lookup was also converted from one read-only Git subprocess per artifact to a single `git ls-files -s` map; this preserves exact Git blob identities while removing unnecessary execution overhead.
+- Advancement state: Phase 10 remains **in progress**. A new source checkpoint and complete clean restart are required.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
