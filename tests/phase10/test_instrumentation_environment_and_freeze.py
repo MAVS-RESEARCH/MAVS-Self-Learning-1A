@@ -2,11 +2,16 @@ from __future__ import annotations
 
 import re
 
-from mavs10d.audit_v04.common import REPO_ROOT, canonical_bytes, stable_hash
+from mavs10d.audit_v04.common import REPO_ROOT, canonical_bytes, porcelain_path, stable_hash
 
 
 def test_canonical_json_is_key_order_invariant():
     assert canonical_bytes({"b": 2, "a": 1}) == canonical_bytes({"a": 1, "b": 2})
+
+
+def test_git_porcelain_path_preserves_leading_status_space():
+    assert porcelain_path(" M results/RESULTS_INDEX.md") == "results/RESULTS_INDEX.md"
+    assert porcelain_path("?? results/perception_closure_v04/phase10/file.json") == "results/perception_closure_v04/phase10/file.json"
 
 
 def test_stable_hash_changes_on_seed_mutation():

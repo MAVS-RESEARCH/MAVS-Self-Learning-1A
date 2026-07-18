@@ -77,12 +77,19 @@ def source_commit() -> str:
 
 
 def assert_clean_source_tree(allow_phase10_results: bool = True) -> None:
-    lines = [line for line in run_git("status", "--porcelain").splitlines() if line.strip()]
+    status = subprocess.run(["git", "status", "--porcelain"], cwd=REPO_ROOT, check=True, capture_output=True, text=True).stdout
+    lines = [line for line in status.splitlines() if line.strip()]
     if allow_phase10_results:
         allowed = ("results/perception_closure_v04/phase10/", "results/RESULTS_INDEX.md")
-        lines = [line for line in lines if not line[3:].replace("\\", "/").startswith(allowed)]
+        lines = [line for line in lines if not porcelain_path(line).startswith(allowed)]
     if lines:
         raise AuditFailure("P10_DIRTY_TREE", "; ".join(lines[:20]))
+
+
+def porcelain_path(line: str) -> str:
+    if len(line) >= 4 and line[2] == " ":
+        return line[3:].replace("\\", "/")
+    return line.lstrip().split(" ", 1)[-1].replace("\\", "/")
 
 
 def git_blob_oid(path: Path) -> str | None:

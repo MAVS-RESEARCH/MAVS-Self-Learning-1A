@@ -1932,6 +1932,16 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Corrective dry-run evidence: strengthened focused tests pass **46/46**; a real fresh isolated environment installed the exact lock and repository without unresolved dependencies, passed 46/46 tests, and was deleted. Lock SHA-256 before the final setuptools/wheel build-lock addition was `27199657bbd266757ee45bd67b084a15c8664461d545fc20802864f3c9468649`; the authoritative run will bind the final lock hash.
 - Advancement state: Phase 10 remains **in progress**. A new source commit, diagnostic archive, complete restart, independent audit, graph verification, and post-freeze stress test are mandatory.
 
+### P10-E005 - Rejected R2 restart before input freeze
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 10.
+- Source checkpoint attempted: `ac91f6397672eee52888fc99249d4402c58a8888`; command `node scripts/run_phase10.mjs`; exit `1`; wall time `16.9 s`.
+- Completed steps: isolated cleanup preserved `diagnostic_runs/`; focused tests passed **47/47**.
+- Failure: the input-freeze clean-tree check rejected the permitted modified result pointer with `P10_DIRTY_TREE: M results/RESULTS_INDEX.md`. The generic Git helper had stripped the leading porcelain-status space, shifting the path slice from `results/...` to `esults/...`.
+- Evidence disposition: rejected before input indexing; no R2 audit artifact exists. The 49-file rejected-run diagnostic archive remains unchanged.
+- Correction: use raw `git status --porcelain` output and a dedicated parser for tracked and untracked status lines. A regression test covers both ` M results/RESULTS_INDEX.md` and `?? results/perception_closure_v04/phase10/...`.
+- Advancement state: Phase 10 remains **in progress**; complete restart required.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
