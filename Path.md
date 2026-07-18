@@ -1778,6 +1778,82 @@ The exact full statement text, not the abbreviated `print(...)`/`console.log(...
 - Corrective implementation: add exact original/compiled identity hashes; write generation-boundary seals before advancing; serialize `program_scope_key`; add actual post-G3 retained-counterexample replay and rotating domain-scope holdouts; move template/permutation integrity, deterministic replay, and post-G3 challenges before aggregation; prevent aggregation from overwriting independently recomputed integrity reports; and make the independent auditor verify order from orchestration evidence, terminal local certificates, boundary seals, identities, and challenge artifacts.
 - Advancement state: Phase 9 is returned to **in progress**. A new source checkpoint, full clean-source rerun, audit, and seal are mandatory.
 
+### P9-E008 - Replacement authoritative execution with exact order, identity, and boundary compliance
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 9.
+- Accepted replacement source checkpoint: `29de9ada2a988c65d89f4bbd9326fbcb96a11377` (`Enforce Phase 9 post-generation audit order`). This supersedes source checkpoint `1e1ce5a` and every result described in P9-E004 through P9-E006.
+- Replacement command: `node scripts/run_phase9.mjs` from a clean working tree after deleting the uncommitted superseded Phase 9 namespace. No superseded participant/result artifact was reused.
+- Exact result: **PASS**, exit code `0`, wall time `1,576.3 s`; all 19 top-level steps and both four-step track orchestrators completed.
+- Corrected execution order: inherited tests -> focused tests -> compile/seal banks -> Track A -> Track B -> independent candidate/template/permutation integrity -> deterministic replay -> retained-counterexample and rotating-scope challenges -> aggregation/summaries -> focused tests -> full regression -> orchestration evidence -> signed manifests -> independent audit -> seal. `orchestration_evidence.json` mechanically proves that integrity, replay, and `post_g3_challenges` precede `aggregate`.
+- Tests: Phase 9 focused tests passed **13/13** before and after execution. Full repository regression passed **358/358**. The additional test proves post-G3 challenge ordering; the bank test recomputes the exact five-component original identity.
+- Exact original identity: for each of G1, G2, and G3, independently serialized `opportunity_ids_sha256`, `world_sequence_sha256`, `seed_sequence_sha256`, `schedule_sha256`, and `public_content_sha256` are identical between the immutable original source and compiled Track A input. The independent audit recomputes and requires all 15 equalities.
+- Generation boundaries: six boundary artifacts, one per track/generation, bind the generation manifest, every condition checkpoint hash, legal-state-only persistence, zero hidden taint, zero future-manifest reads, and `sealed_before_next_generation: true`. Track A seals 103 checkpoints per boundary; Track B seals 35.
+- Post-G3 retained challenges: the final cumulative G3 checkpoint re-executes **630** stratified G1/G2 retained causal-family/residual-reason cases per track, **1,260 total**, before summary generation. Both tracks have protected-error count `0` and scope-leakage count `0`.
+- Rotating scope holdouts: each of six domains is held out on each track before summaries. Every holdout evaluates 12,500 outside-domain G3 cases; all 12 track-domain holdouts have influential out-of-scope activation count `0`.
+- Candidate/integrity challenges: executable-candidate gate continuity, template diversity/collapse, operation compliance, certifier blindness, hidden-field taint, candidate/name/operation/generation/order permutations, and deterministic all-failure replay pass before aggregation and are not overwritten by the aggregator.
+- Evaluation volume remains exact: 90,000 canonical opportunities; 103 Track A and 35 Track B conditions; **6,210,000** decision traces; 414 participant checkpoints; 414 generation, 124,200 world, 2,484 stratum, and 1,656 paired-confidence summary rows. Thresholds, bank membership, seeds, budgets, conditions, and claim rules are unchanged from the preregistered implementation.
+- Protected/cumulative/ablation results: the replacement run reproduces the P9-E004 protected-zero, residual-floor equality, scope-zero, cumulative round/consolidation gains, blind qualitative mechanism, evaluator-only oracle bound, and all claim-critical ablation interpretations exactly. Track A remains diagnostic-only; Track B remains provisional until Phase 10.
+- Replay: **128,606** exact comparisons, including all **108,279** protected failures, have zero mismatches. Version 0.4 terminal paths have valid local certificates; complete replay is `1.0`; taint and forbidden future-read counts are zero.
+- Replacement independent audit: **PASS**, 138 conditions, three generations, **28/28 WorkPlan clauses**, zero findings. The three added clauses prove original opportunity/seed/world/schedule/content identity, generation boundary seals, and post-G3-before-summary order/challenges.
+- Result isolation: 53/53 immutable Phase 5 files and the sealed Phase 6-8 dependencies remain unchanged; Track A and Track B stay isolated; zero finding.
+- Replacement result package: **1,617 files / 155,425,718 bytes**. Track A contains 1,040 files / 101,165,420 bytes with 1,038 indexed pre-audit artifacts. Track B contains 561 files / 44,242,538 bytes with 559 indexed pre-audit artifacts. Remaining files are evaluator-sealed and top-level bank/audit/seal artifacts.
+- Replacement seal: audit SHA-256 `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`; source commit `29de9ad`; audit `PASS`; zero findings; date 2026-07-18; `phase10_executed: false`.
+- Advancement gate: all WorkPlan Section 24 completion conditions and advancement gates pass on the replacement run. Phase 9 is technically complete; evidence commit and GitHub synchronization remain pending.
+
+### P9-E009 - Replacement authoritative console comment and statement registry
+
+The replacement independent auditor records **39/39** Phase 9 log statements with an immediately preceding identifying comment. The exact full statement source is serialized in both track registries; the stable comment/statement line mapping is:
+
+| File | Comment line and exact comment | Statement line |
+|---|---|---|
+| `scripts/aggregate_phase9.py` | 38 `# console.log: phase9.aggregate.complete` | 39 |
+| `scripts/audit_phase9.py` | 42 `# console.log: phase9.audit.complete` | 43 |
+| `scripts/clean_phase9_results.py` | 21 `# console.log: phase9.clean.complete` | 22 |
+| `scripts/compile_phase9_banks.py` | 90 `# console.log: phase9.compile.complete` | 91 |
+| `scripts/finalize_phase9_manifest.py` | 17 `# console.log: phase9.manifest.complete` | 18 |
+| `scripts/phase9_evaluator.py` | 36 `# console.log: phase9.evaluator.release.complete` | 37 |
+| `scripts/replay_phase9.py` | 45 `# console.log: phase9.replay.complete` | 46 |
+| `scripts/run_phase9.mjs` | 12 `// console.log: phase9.orchestrator.step01.start` | 13 |
+| `scripts/run_phase9.mjs` | 14 `// console.log: phase9.orchestrator.step02.clean` | 15 |
+| `scripts/run_phase9.mjs` | 17 `// console.log: phase9.orchestrator.step03.source_cleanliness` | 18 |
+| `scripts/run_phase9.mjs` | 20 `// console.log: phase9.orchestrator.step04.inherited_tests` | 21 |
+| `scripts/run_phase9.mjs` | 23 `// console.log: phase9.orchestrator.step05.phase9_tests_before` | 24 |
+| `scripts/run_phase9.mjs` | 26 `// console.log: phase9.orchestrator.step06.compile_and_seal_banks` | 27 |
+| `scripts/run_phase9.mjs` | 29 `// console.log: phase9.orchestrator.step07.track_a` | 30 |
+| `scripts/run_phase9.mjs` | 32 `// console.log: phase9.orchestrator.step08.track_b` | 33 |
+| `scripts/run_phase9.mjs` | 35 `// console.log: phase9.orchestrator.step09.integrity` | 36 |
+| `scripts/run_phase9.mjs` | 38 `// console.log: phase9.orchestrator.step10.replay` | 39 |
+| `scripts/run_phase9.mjs` | 41 `// console.log: phase9.orchestrator.step11.post_g3_challenges` | 42 |
+| `scripts/run_phase9.mjs` | 44 `// console.log: phase9.orchestrator.step12.aggregate` | 45 |
+| `scripts/run_phase9.mjs` | 47 `// console.log: phase9.orchestrator.step13.phase9_tests_after` | 48 |
+| `scripts/run_phase9.mjs` | 50 `// console.log: phase9.orchestrator.step14.full_regression` | 51 |
+| `scripts/run_phase9.mjs` | 53 `// console.log: phase9.orchestrator.step15.orchestration_evidence` | 54 |
+| `scripts/run_phase9.mjs` | 56 `// console.log: phase9.orchestrator.step16.signed_manifests` | 57 |
+| `scripts/run_phase9.mjs` | 59 `// console.log: phase9.orchestrator.step17.independent_audit` | 60 |
+| `scripts/run_phase9.mjs` | 62 `// console.log: phase9.orchestrator.step18.seal` | 63 |
+| `scripts/run_phase9.mjs` | 65 `// console.log: phase9.orchestrator.step19.complete` | 66 |
+| `scripts/run_phase9_blind.mjs` | 7 `// console.log: phase9.track_b.step01.execute` | 8 |
+| `scripts/run_phase9_blind.mjs` | 10 `// console.log: phase9.track_b.step02.firewall` | 11 |
+| `scripts/run_phase9_blind.mjs` | 13 `// console.log: phase9.track_b.step03.state` | 14 |
+| `scripts/run_phase9_blind.mjs` | 16 `// console.log: phase9.track_b.step04.complete` | 17 |
+| `scripts/run_phase9_paired.mjs` | 7 `// console.log: phase9.track_a.step01.execute` | 8 |
+| `scripts/run_phase9_paired.mjs` | 10 `// console.log: phase9.track_a.step02.firewall` | 11 |
+| `scripts/run_phase9_paired.mjs` | 13 `// console.log: phase9.track_a.step03.state` | 14 |
+| `scripts/run_phase9_paired.mjs` | 16 `// console.log: phase9.track_a.step04.complete` | 17 |
+| `scripts/run_phase9_track.py` | 83 `# console.log: phase9.track.complete` | 84 |
+| `scripts/validate_phase9_firewall.py` | 38 `# console.log: phase9.firewall.complete` | 39 |
+| `scripts/validate_phase9_integrity.py` | 39 `# console.log: phase9.integrity.complete` | 40 |
+| `scripts/validate_phase9_post_g3.py` | 50 `# console.log: phase9.post_g3.complete` | 51 |
+| `scripts/validate_phase9_state.py` | 38 `# console.log: phase9.state.complete` | 39 |
+
+### P9-E010 - Replacement post-seal stress and final verdict before publication
+
+- Seal-enforcement command: `python scripts/clean_phase9_results.py --all-phase9`.
+- Exact result: expected nonzero exit `1`, `RuntimeError: Refusing to clean sealed Phase 9 results.`
+- Audit preservation: before and after SHA-256 is exactly `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`; no replacement artifact changed.
+- Compliance verdict: **PASS - 100% compliant with WorkPlan Section 24 Phase 9**, including literal post-G3-before-summary order, exact original opportunity/seed/world/schedule/content identities, generation-boundary seals, retained counterexamples, rotating scope holdouts, two isolated banks, full comparator/ablation coverage, all metric families, all-failure replay, result isolation, claim discipline, and 28/28 independently audited clauses.
+- Publication state: replacement source checkpoint `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; audit SHA-256 `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`; evidence commit and push remain pending.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1808,8 +1884,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 6 | Executable diagnostic synthesis and anti-gaming foundation | Complete | P6-E021 through P6-E023; strengthened replacement run, 206-test regression, 24,600 schema records, 1,240 objective recomputations, and zero-finding audit pass |
 | 7 | Live Perception-Closure Runtime | Complete | P7-E005 through P7-E007; sealed 384-execution run, 320 independent certificate recomputations, 266-test regression, 17/17 gates, and zero-finding audit |
 | 8 | Ablation and Integrity Program | Complete | P8-E004 through P8-E006; sealed 39-condition matrix, 975,000 legacy decision replays, 345-test regression, 697-file deterministic replay, 21/21 clauses, and zero-finding audit |
-| 9 | Three-Generation Phase 5 Revalidation | In progress | P9-E007 supersedes the first sealed run after detecting audit-order, exact-identity, and boundary-seal gaps before publication |
+| 9 | Three-Generation Phase 5 Revalidation | Complete | P9-E008 through P9-E010; replacement order-correct 90,000-opportunity run, 6.21M traces, 358 tests, 1,260 post-G3 challenges, 28/28 clauses, and zero-finding audit |
 
 ## Current checkpoint
 
-Phase 0 through Phase 8 are complete and frozen. Phase 9 source checkpoint `1e1ce5ac4ce557e3da5ff595583b846cc468dbc8` and audit SHA-256 `BE07824F83ED0314FF8D7897985D0FBA7D293C1FC9C291161ED214CE703D25E3` are superseded diagnostic evidence under P9-E007 and are not accepted for publication. Corrective Phase 9 implementation is in progress; no final Phase 9 advancement gate is currently open.
+Phase 0 through Phase 9 are complete and frozen. The accepted replacement Phase 9 source checkpoint is `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; accepted evidence is `results/perception_closure_v04/phase9/`; audit SHA-256 is `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`. The replacement run passes 28/28 WorkPlan clauses with zero findings. Track A is diagnostic-only and Track B remains provisional until Phase 10. Evidence commit and GitHub synchronization remain pending.

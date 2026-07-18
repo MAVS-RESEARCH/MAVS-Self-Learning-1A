@@ -1,0 +1,9 @@
+{
+  "bank_seal_signature": "7b7b1a3984ffa0f430548b453cb1f9de7a413f7135db2208ae23273da437a57c",
+  "finding_count": 0,
+  "findings": [],
+  "passed": true,
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "track_id": "blind_bank"
+}

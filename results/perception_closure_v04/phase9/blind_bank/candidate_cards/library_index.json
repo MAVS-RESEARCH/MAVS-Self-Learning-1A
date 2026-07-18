@@ -1,0 +1,28 @@
+{
+  "candidate_count": 20,
+  "candidate_ids": [
+    "P6-RECALIBRATE-A",
+    "P6-RECALIBRATE-B",
+    "P6-SPLIT-A",
+    "P6-SPLIT-B",
+    "P6-MERGE-A",
+    "P6-MERGE-B",
+    "P6-ADD-A",
+    "P6-ADD-B",
+    "P6-SCOPE-NARROW-A",
+    "P6-SCOPE-NARROW-B",
+    "P6-SCOPE-EXPAND-A",
+    "P6-SCOPE-EXPAND-B",
+    "P6-EVIDENCE-RECOVERY-A",
+    "P6-EVIDENCE-RECOVERY-B",
+    "P6-POLICY-INTERACTION-A",
+    "P6-POLICY-INTERACTION-B",
+    "P6-CONFIGURATION-SPECIALIZATION-A",
+    "P6-CONFIGURATION-SPECIALIZATION-B",
+    "P6-RETIRE-A",
+    "P6-RETIRE-B"
+  ],
+  "phase6_gate_continuity_required": true,
+  "schema_version": "1.0.0",
+  "source": "results/perception_closure_v04/phase6/phase6_authoritative_reaudit_20260714"
+}

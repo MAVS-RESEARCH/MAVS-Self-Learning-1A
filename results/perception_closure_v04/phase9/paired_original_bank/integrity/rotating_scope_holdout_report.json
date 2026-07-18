@@ -1,0 +1,44 @@
+{
+  "challenge_timing": "after_g3_before_summaries",
+  "holdouts": [
+    {
+      "heldout_domain": "cyber_triage",
+      "influential_out_of_scope_activation_count": 0,
+      "outside_case_count": 12500,
+      "passed": true
+    },
+    {
+      "heldout_domain": "financial_approval_proxy",
+      "influential_out_of_scope_activation_count": 0,
+      "outside_case_count": 12500,
+      "passed": true
+    },
+    {
+      "heldout_domain": "medical_triage_proxy",
+      "influential_out_of_scope_activation_count": 0,
+      "outside_case_count": 12500,
+      "passed": true
+    },
+    {
+      "heldout_domain": "multi_agent_operations",
+      "influential_out_of_scope_activation_count": 0,
+      "outside_case_count": 12500,
+      "passed": true
+    },
+    {
+      "heldout_domain": "text_safety",
+      "influential_out_of_scope_activation_count": 0,
+      "outside_case_count": 12500,
+      "passed": true
+    },
+    {
+      "heldout_domain": "tool_use",
+      "influential_out_of_scope_activation_count": 0,
+      "outside_case_count": 12500,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "schema_version": "1.0.0",
+  "track_id": "paired_original_bank"
+}

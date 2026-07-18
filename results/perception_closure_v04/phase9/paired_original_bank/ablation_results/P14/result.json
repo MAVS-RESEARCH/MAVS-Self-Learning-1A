@@ -1,0 +1,62 @@
+{
+  "causal_question": "Does removing or altering P14 degrade the preregistered mechanism?",
+  "condition_id": "P14",
+  "deltas": [
+    {
+      "ast_pressure_delta": 0.0,
+      "behavioral_pressure_delta": 0.0,
+      "complexity_delta": 0.0,
+      "firewall_detection_delta": 0.0,
+      "frr_delta": 0.0051540487916618945,
+      "gate_failure_delta": 0.0,
+      "generation": 1,
+      "residual_escalation_delta": -0.0016666666666666774,
+      "round_delta": 0.0,
+      "scope_leakage_delta": 0.0
+    },
+    {
+      "ast_pressure_delta": 0.0,
+      "behavioral_pressure_delta": 0.0,
+      "complexity_delta": 0.0,
+      "firewall_detection_delta": 0.0,
+      "frr_delta": 0.006334945865008062,
+      "gate_failure_delta": 0.0,
+      "generation": 2,
+      "residual_escalation_delta": -0.001799999999999996,
+      "round_delta": 0.0,
+      "scope_leakage_delta": 0.0
+    },
+    {
+      "ast_pressure_delta": 0.0,
+      "behavioral_pressure_delta": 0.0,
+      "complexity_delta": 0.0,
+      "firewall_detection_delta": 0.0,
+      "frr_delta": 0.005480104836788182,
+      "gate_failure_delta": 0.0,
+      "generation": 3,
+      "residual_escalation_delta": -0.0014666666666666717,
+      "round_delta": 0.0,
+      "scope_leakage_delta": 0.0
+    }
+  ],
+  "harness_valid": true,
+  "interpretation": "predicted_degradation",
+  "isolated_factor": "P14",
+  "matched_budget": true,
+  "reference_id": "v04_cumulative",
+  "required_metrics": [
+    "uar",
+    "frr",
+    "residual_escalation_rate",
+    "scope_leakage",
+    "mean_rounds"
+  ],
+  "schema_version": "1.0.0",
+  "unchanged": [
+    "bank",
+    "opportunities",
+    "seeds",
+    "budgets",
+    "metrics"
+  ]
+}

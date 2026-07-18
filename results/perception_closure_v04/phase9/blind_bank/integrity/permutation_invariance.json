@@ -1,0 +1,66 @@
+{
+  "candidate_name_permuted": true,
+  "candidate_order_permuted": true,
+  "checks": [
+    {
+      "generation": 1,
+      "original": [
+        6926,
+        4885,
+        3189,
+        14254,
+        0
+      ],
+      "passed": true,
+      "permuted": [
+        6926,
+        4885,
+        3189,
+        14254,
+        0
+      ]
+    },
+    {
+      "generation": 2,
+      "original": [
+        6592,
+        4673,
+        3735,
+        14345,
+        0
+      ],
+      "passed": true,
+      "permuted": [
+        6592,
+        4673,
+        3735,
+        14345,
+        0
+      ]
+    },
+    {
+      "generation": 3,
+      "original": [
+        6214,
+        4581,
+        4205,
+        14294,
+        0
+      ],
+      "passed": true,
+      "permuted": [
+        6214,
+        4581,
+        4205,
+        14294,
+        0
+      ]
+    }
+  ],
+  "generation_label_permuted": true,
+  "metric_delta_max": 0.0,
+  "operation_label_permuted": true,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "track_id": "blind_bank"
+}

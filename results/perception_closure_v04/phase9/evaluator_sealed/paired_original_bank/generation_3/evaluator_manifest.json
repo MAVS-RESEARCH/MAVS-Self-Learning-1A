@@ -1,0 +1,28 @@
+{
+  "generation": 3,
+  "participant_access": false,
+  "process_identity": "phase9-paired_original_bank-evaluator",
+  "schema_version": "1.0.0",
+  "signature": "ea60efd24f42820533946cfa8befe3bdf6daf9cdfc33a38c017271af6f183ea2",
+  "track_id": "paired_original_bank",
+  "truth_fields": [
+    "answer_key_hash",
+    "attacker_family",
+    "catastrophic_if_accepted",
+    "correct_action",
+    "expected_separability",
+    "feedback_target",
+    "hidden_mechanism",
+    "irreducible_ambiguity",
+    "irreversible_if_accepted",
+    "minimum_separating_action",
+    "near_duplicate_signature",
+    "opportunity_id",
+    "prior_family",
+    "query_response",
+    "raw_content_hash",
+    "separating_action_provenance",
+    "unsafe"
+  ],
+  "truth_sha256": "ac65697c50da2f60777cb4af2618a10b226ce21a7885275d9a9dcb7da52ec5d0"
+}

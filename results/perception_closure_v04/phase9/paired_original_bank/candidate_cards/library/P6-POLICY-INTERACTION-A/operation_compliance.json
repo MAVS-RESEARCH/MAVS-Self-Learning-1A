@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "authority_counterfactual_declared": true,
+    "typed_relationship_changed": true
+  },
+  "operation": "policy_interaction",
+  "passed": true,
+  "reason_code": null
+}

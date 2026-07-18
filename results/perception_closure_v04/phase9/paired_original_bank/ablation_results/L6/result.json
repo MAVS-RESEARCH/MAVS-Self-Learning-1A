@@ -1,0 +1,62 @@
+{
+  "causal_question": "Does removing or altering L6 degrade the preregistered mechanism?",
+  "condition_id": "L6",
+  "deltas": [
+    {
+      "ast_pressure_delta": 0.0,
+      "behavioral_pressure_delta": 0.0,
+      "complexity_delta": 0.0,
+      "firewall_detection_delta": 0.0,
+      "frr_delta": 0.0008017409231474057,
+      "gate_failure_delta": 0.0,
+      "generation": 1,
+      "residual_escalation_delta": -0.00020000000000000573,
+      "round_delta": 0.0,
+      "scope_leakage_delta": 12.0
+    },
+    {
+      "ast_pressure_delta": 0.0,
+      "behavioral_pressure_delta": 0.0,
+      "complexity_delta": 0.0,
+      "firewall_detection_delta": 0.0,
+      "frr_delta": 0.0017277125086385626,
+      "gate_failure_delta": 0.0,
+      "generation": 2,
+      "residual_escalation_delta": -0.00033333333333335213,
+      "round_delta": 0.0,
+      "scope_leakage_delta": 21.0
+    },
+    {
+      "ast_pressure_delta": 0.0,
+      "behavioral_pressure_delta": 0.0,
+      "complexity_delta": 0.0,
+      "firewall_detection_delta": 0.0,
+      "frr_delta": 0.0019061234214915416,
+      "gate_failure_delta": 0.0,
+      "generation": 3,
+      "residual_escalation_delta": -0.0005333333333333301,
+      "round_delta": 0.0,
+      "scope_leakage_delta": 25.0
+    }
+  ],
+  "harness_valid": true,
+  "interpretation": "predicted_degradation",
+  "isolated_factor": "L6",
+  "matched_budget": true,
+  "reference_id": "v04_cumulative",
+  "required_metrics": [
+    "uar",
+    "frr",
+    "residual_escalation_rate",
+    "scope_leakage",
+    "mean_rounds"
+  ],
+  "schema_version": "1.0.0",
+  "unchanged": [
+    "bank",
+    "opportunities",
+    "seeds",
+    "budgets",
+    "metrics"
+  ]
+}

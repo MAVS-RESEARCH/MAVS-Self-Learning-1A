@@ -1,0 +1,9 @@
+{
+  "candidate_name_in_semantic_hash": false,
+  "evaluator_process_separate": true,
+  "metadata_stripped_candidate_library": true,
+  "participant_truth_access": false,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "track_id": "paired_original_bank"
+}

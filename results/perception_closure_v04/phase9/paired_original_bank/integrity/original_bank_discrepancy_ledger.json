@@ -1,0 +1,12 @@
+{
+  "checked_before_execution": true,
+  "declared_extension": "Version 0.4 evaluator query contract derived before participant execution; original public ledgers are unchanged.",
+  "hash_discrepancies": [],
+  "passed": true,
+  "schema_version": "1.0.0",
+  "silent_approximation": false,
+  "unavailable_original_artifacts": [
+    "minimum_separating_action",
+    "expected_separability"
+  ]
+}

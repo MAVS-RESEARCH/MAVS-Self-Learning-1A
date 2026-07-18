@@ -1,0 +1,15 @@
+{
+  "forbidden_truth_fields_released": [],
+  "generation": 2,
+  "passed": true,
+  "process_identity": "phase9-paired_original_bank-evaluator",
+  "released_fields": [
+    "opportunity_id",
+    "query_response",
+    "response_signature"
+  ],
+  "request_count": 14277,
+  "response_count": 14277,
+  "schema_version": "1.0.0",
+  "track_id": "paired_original_bank"
+}

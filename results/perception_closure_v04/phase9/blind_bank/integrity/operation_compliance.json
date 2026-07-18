@@ -1,0 +1,13 @@
+{
+  "candidate_count": 20,
+  "constant_count": 0,
+  "independent_gate_failure_count": 0,
+  "missing_witness_count": 0,
+  "name_only_count": 0,
+  "noop_count": 0,
+  "operation_noncompliance_count": 0,
+  "parent_identical_count": 0,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "track_id": "blind_bank"
+}

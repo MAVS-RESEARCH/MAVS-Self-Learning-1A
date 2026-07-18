@@ -1,0 +1,23 @@
+{
+  "claim_status": "provisional_until_phase10",
+  "gates": {
+    "auditability": true,
+    "cumulative_value": true,
+    "generation_slope": true,
+    "protected_core": true,
+    "residual_escalation": true,
+    "scope_leakage": true,
+    "synthesis_integrity": true,
+    "template_integrity": true
+  },
+  "passed": true,
+  "phase10_required": true,
+  "schema_version": "1.0.0",
+  "track_id": "blind_bank",
+  "unsupported_claims": [
+    "deployment performance",
+    "general-domain performance",
+    "oracle-competitive superiority",
+    "final release claim"
+  ]
+}

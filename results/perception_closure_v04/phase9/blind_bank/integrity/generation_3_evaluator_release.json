@@ -1,0 +1,15 @@
+{
+  "forbidden_truth_fields_released": [],
+  "generation": 3,
+  "passed": true,
+  "process_identity": "phase9-blind_bank-evaluator",
+  "released_fields": [
+    "opportunity_id",
+    "query_response",
+    "response_signature"
+  ],
+  "request_count": 14294,
+  "response_count": 14294,
+  "schema_version": "1.0.0",
+  "track_id": "blind_bank"
+}

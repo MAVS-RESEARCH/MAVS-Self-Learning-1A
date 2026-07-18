@@ -1,0 +1,19 @@
+{
+  "participant_namespace": "phase9-blind_bank-participant",
+  "ranges": {
+    "1": [
+      1910000,
+      1910299
+    ],
+    "2": [
+      1920000,
+      1920299
+    ],
+    "3": [
+      1930000,
+      1930299
+    ]
+  },
+  "schema_version": "1.0.0",
+  "track_id": "blind_bank"
+}

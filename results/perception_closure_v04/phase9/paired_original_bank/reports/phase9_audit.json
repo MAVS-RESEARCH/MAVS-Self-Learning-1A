@@ -1,0 +1,11 @@
+{
+  "artifact_count": 1038,
+  "auditor_independence": "raw traces and evaluator manifests recomputed without importing the Phase 9 aggregation module",
+  "condition_count": 103,
+  "finding_count": 0,
+  "findings": [],
+  "generation_count": 3,
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "track_id": "paired_original_bank"
+}

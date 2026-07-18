@@ -1,0 +1,32 @@
+{
+  "generation_diagnostics": [
+    {
+      "generation": 1,
+      "generation_residual_slope": 0.033866666666666656,
+      "generation_scope_slope": 0.0,
+      "irreducible_ambiguity_rate": 0.2126,
+      "residual_escalation_rate": 0.2126,
+      "stable_evidence_residual_rate": 0.0
+    },
+    {
+      "generation": 2,
+      "generation_residual_slope": 0.033866666666666656,
+      "generation_scope_slope": 0.0,
+      "irreducible_ambiguity_rate": 0.249,
+      "residual_escalation_rate": 0.249,
+      "stable_evidence_residual_rate": 0.0
+    },
+    {
+      "generation": 3,
+      "generation_residual_slope": 0.033866666666666656,
+      "generation_scope_slope": 0.0,
+      "irreducible_ambiguity_rate": 0.2803333333333333,
+      "residual_escalation_rate": 0.2803333333333333,
+      "stable_evidence_residual_rate": 0.0
+    }
+  ],
+  "overall_difficulty_may_increase": true,
+  "schema_version": "1.0.0",
+  "stable_evidence_trend_gate": true,
+  "track_id": "blind_bank"
+}

@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "fallback_and_scope_preserved": true,
+    "mapping_or_terminal_changed": true
+  },
+  "operation": "configuration_specialization",
+  "passed": true,
+  "reason_code": null
+}

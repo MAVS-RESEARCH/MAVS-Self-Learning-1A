@@ -1,0 +1,16 @@
+{
+  "old_case_or_label_access": false,
+  "passed": true,
+  "qualitative_mechanism_reproduced": true,
+  "schema_version": "1.0.0",
+  "track_a": {
+    "cumulative_round_gain": true,
+    "protected_zero": true,
+    "scope_zero": true
+  },
+  "track_b": {
+    "cumulative_round_gain": true,
+    "protected_zero": true,
+    "scope_zero": true
+  }
+}

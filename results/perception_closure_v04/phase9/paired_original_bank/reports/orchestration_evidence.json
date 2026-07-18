@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "track_id": "paired_original_bank",
+  "source_commit": "29de9ada2a988c65d89f4bbd9326fbcb96a11377",
+  "completed_steps": [
+    "clean",
+    "source_cleanliness",
+    "inherited_tests",
+    "phase9_tests_before",
+    "banks_sealed",
+    "track_a",
+    "track_b",
+    "integrity",
+    "replay",
+    "post_g3_challenges",
+    "aggregate",
+    "phase9_tests_after",
+    "full_regression"
+  ]
+}

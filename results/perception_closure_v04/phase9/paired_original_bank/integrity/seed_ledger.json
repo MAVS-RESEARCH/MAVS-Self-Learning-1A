@@ -1,0 +1,19 @@
+{
+  "participant_namespace": "phase9-paired_original_bank-participant",
+  "ranges": {
+    "1": [
+      930000,
+      930299
+    ],
+    "2": [
+      940000,
+      940299
+    ],
+    "3": [
+      950000,
+      950299
+    ]
+  },
+  "schema_version": "1.0.0",
+  "track_id": "paired_original_bank"
+}

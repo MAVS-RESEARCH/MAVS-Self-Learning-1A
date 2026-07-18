@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "comment": "# console.log: phase9.aggregate.complete",
+      "comment_line": 38,
+      "passed": true,
+      "path": "scripts/aggregate_phase9.py",
+      "statement": "print(f'{{\"event\":\"phase9.aggregate.complete\",\"track_a_rows\":{len(track_summaries[\"paired_original_bank\"])},\"track_b_rows\":{len(track_summaries[\"blind_bank\"])}}}')",
+      "statement_line": 39
+    },
+    {
+      "comment": "# console.log: phase9.audit.complete",
+      "comment_line": 42,
+      "passed": true,
+      "path": "scripts/audit_phase9.py",
+      "statement": "print(f'{{\"event\":\"phase9.audit.complete\",\"conditions\":{len(condition_registry(\"paired_original_bank\"))+len(condition_registry(\"blind_bank\"))},\"clauses\":{len(clauses)},\"findings\":0}}')",
+      "statement_line": 43
+    },
+    {
+      "comment": "# console.log: phase9.clean.complete",
+      "comment_line": 21,
+      "passed": true,
+      "path": "scripts/clean_phase9_results.py",
+      "statement": "print('{\"event\":\"phase9.clean.complete\",\"scope\":\"phase9_only\"}')",
+      "statement_line": 22
+    },
+    {
+      "comment": "# console.log: phase9.compile.complete",
+      "comment_line": 90,
+      "passed": true,
+      "path": "scripts/compile_phase9_banks.py",
+      "statement": "print('{\"event\":\"phase9.compile.complete\",\"tracks\":2,\"canonical_opportunities\":90000,\"banks_sealed\":true}')",
+      "statement_line": 91
+    },
+    {
+      "comment": "# console.log: phase9.manifest.complete",
+      "comment_line": 17,
+      "passed": true,
+      "path": "scripts/finalize_phase9_manifest.py",
+      "statement": "print('{\"event\":\"phase9.manifest.complete\",\"tracks\":2,\"signed\":true}')",
+      "statement_line": 18
+    },
+    {
+      "comment": "# console.log: phase9.evaluator.release.complete",
+      "comment_line": 36,
+      "passed": true,
+      "path": "scripts/phase9_evaluator.py",
+      "statement": "print(f'{{\"event\":\"phase9.evaluator.release.complete\",\"track\":\"{args.track}\",\"generation\":{args.generation},\"responses\":{len(responses)}}}')",
+      "statement_line": 37
+    },
+    {
+      "comment": "# console.log: phase9.replay.complete",
+      "comment_line": 45,
+      "passed": true,
+      "path": "scripts/replay_phase9.py",
+      "statement": "print(f'{{\"event\":\"phase9.replay.complete\",\"replayed\":{total},\"protected_failures\":{protected_failures},\"mismatches\":0}}')",
+      "statement_line": 46
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step01.start",
+      "comment_line": 12,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step01.start\" }));",
+      "statement_line": 13
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step02.clean",
+      "comment_line": 14,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step02.clean\" }));",
+      "statement_line": 15
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step03.source_cleanliness",
+      "comment_line": 17,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step03.source_cleanliness\" }));",
+      "statement_line": 18
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step04.inherited_tests",
+      "comment_line": 20,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step04.inherited_tests\" }));",
+      "statement_line": 21
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step05.phase9_tests_before",
+      "comment_line": 23,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step05.phase9_tests_before\" }));",
+      "statement_line": 24
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step06.compile_and_seal_banks",
+      "comment_line": 26,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step06.compile_and_seal_banks\" }));",
+      "statement_line": 27
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step07.track_a",
+      "comment_line": 29,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step07.track_a\" }));",
+      "statement_line": 30
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step08.track_b",
+      "comment_line": 32,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step08.track_b\" }));",
+      "statement_line": 33
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step09.integrity",
+      "comment_line": 35,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step09.integrity\" }));",
+      "statement_line": 36
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step10.replay",
+      "comment_line": 38,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step10.replay\" }));",
+      "statement_line": 39
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step11.post_g3_challenges",
+      "comment_line": 41,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step11.post_g3_challenges\" }));",
+      "statement_line": 42
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step12.aggregate",
+      "comment_line": 44,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step12.aggregate\" }));",
+      "statement_line": 45
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step13.phase9_tests_after",
+      "comment_line": 47,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step13.phase9_tests_after\" }));",
+      "statement_line": 48
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step14.full_regression",
+      "comment_line": 50,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step14.full_regression\" }));",
+      "statement_line": 51
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step15.orchestration_evidence",
+      "comment_line": 53,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step15.orchestration_evidence\" }));",
+      "statement_line": 54
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step16.signed_manifests",
+      "comment_line": 56,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step16.signed_manifests\" }));",
+      "statement_line": 57
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step17.independent_audit",
+      "comment_line": 59,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step17.independent_audit\" }));",
+      "statement_line": 60
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step18.seal",
+      "comment_line": 62,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step18.seal\" }));",
+      "statement_line": 63
+    },
+    {
+      "comment": "// console.log: phase9.orchestrator.step19.complete",
+      "comment_line": 65,
+      "passed": true,
+      "path": "scripts/run_phase9.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.orchestrator.step19.complete\", source_commit: sourceCommit, audit_sha256: auditSha }));",
+      "statement_line": 66
+    },
+    {
+      "comment": "// console.log: phase9.track_b.step01.execute",
+      "comment_line": 7,
+      "passed": true,
+      "path": "scripts/run_phase9_blind.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_b.step01.execute\" }));",
+      "statement_line": 8
+    },
+    {
+      "comment": "// console.log: phase9.track_b.step02.firewall",
+      "comment_line": 10,
+      "passed": true,
+      "path": "scripts/run_phase9_blind.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_b.step02.firewall\" }));",
+      "statement_line": 11
+    },
+    {
+      "comment": "// console.log: phase9.track_b.step03.state",
+      "comment_line": 13,
+      "passed": true,
+      "path": "scripts/run_phase9_blind.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_b.step03.state\" }));",
+      "statement_line": 14
+    },
+    {
+      "comment": "// console.log: phase9.track_b.step04.complete",
+      "comment_line": 16,
+      "passed": true,
+      "path": "scripts/run_phase9_blind.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_b.step04.complete\" }));",
+      "statement_line": 17
+    },
+    {
+      "comment": "// console.log: phase9.track_a.step01.execute",
+      "comment_line": 7,
+      "passed": true,
+      "path": "scripts/run_phase9_paired.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_a.step01.execute\" }));",
+      "statement_line": 8
+    },
+    {
+      "comment": "// console.log: phase9.track_a.step02.firewall",
+      "comment_line": 10,
+      "passed": true,
+      "path": "scripts/run_phase9_paired.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_a.step02.firewall\" }));",
+      "statement_line": 11
+    },
+    {
+      "comment": "// console.log: phase9.track_a.step03.state",
+      "comment_line": 13,
+      "passed": true,
+      "path": "scripts/run_phase9_paired.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_a.step03.state\" }));",
+      "statement_line": 14
+    },
+    {
+      "comment": "// console.log: phase9.track_a.step04.complete",
+      "comment_line": 16,
+      "passed": true,
+      "path": "scripts/run_phase9_paired.mjs",
+      "statement": "console.log(JSON.stringify({ event: \"phase9.track_a.step04.complete\" }));",
+      "statement_line": 17
+    },
+    {
+      "comment": "# console.log: phase9.track.complete",
+      "comment_line": 83,
+      "passed": true,
+      "path": "scripts/run_phase9_track.py",
+      "statement": "print(f'{{\"event\":\"phase9.track.complete\",\"track\":\"{args.track}\",\"conditions\":{len(conditions)},\"trace_rows\":{trace_count}}}')",
+      "statement_line": 84
+    },
+    {
+      "comment": "# console.log: phase9.firewall.complete",
+      "comment_line": 38,
+      "passed": true,
+      "path": "scripts/validate_phase9_firewall.py",
+      "statement": "print(f'{{\"event\":\"phase9.firewall.complete\",\"track\":\"{args.track}\",\"findings\":0}}')",
+      "statement_line": 39
+    },
+    {
+      "comment": "# console.log: phase9.integrity.complete",
+      "comment_line": 39,
+      "passed": true,
+      "path": "scripts/validate_phase9_integrity.py",
+      "statement": "print('{\"event\":\"phase9.integrity.complete\",\"tracks\":2,\"candidate_libraries\":40,\"failures\":0}')",
+      "statement_line": 40
+    },
+    {
+      "comment": "# console.log: phase9.post_g3.complete",
+      "comment_line": 50,
+      "passed": true,
+      "path": "scripts/validate_phase9_post_g3.py",
+      "statement": "print(f'{{\"event\":\"phase9.post_g3.complete\",\"tracks\":2,\"retained_cases\":{total_retained},\"findings\":0}}')",
+      "statement_line": 51
+    },
+    {
+      "comment": "# console.log: phase9.state.complete",
+      "comment_line": 38,
+      "passed": true,
+      "path": "scripts/validate_phase9_state.py",
+      "statement": "print(f'{{\"event\":\"phase9.state.complete\",\"track\":\"{args.track}\",\"checkpoints\":{report[\"checkpoint_count\"]},\"findings\":0}}')",
+      "statement_line": 39
+    }
+  ],
+  "schema_version": "1.0.0",
+  "statement_count": 39
+}

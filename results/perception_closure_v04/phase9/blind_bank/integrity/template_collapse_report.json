@@ -1,0 +1,12 @@
+{
+  "behavioral_hash_count": 20,
+  "candidate_count": 20,
+  "one_template_collapse": false,
+  "operation_count": 10,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "semantic_hash_count": 20,
+  "template_count": 20,
+  "track_id": "blind_bank",
+  "unaudited_collapse": false
+}

@@ -1,0 +1,10 @@
+{
+  "case_count": 630,
+  "challenge_timing": "after_g3_before_summaries",
+  "final_checkpoint_reused": true,
+  "passed": true,
+  "protected_error_count": 0,
+  "schema_version": "1.0.0",
+  "scope_leakage_count": 0,
+  "track_id": "blind_bank"
+}

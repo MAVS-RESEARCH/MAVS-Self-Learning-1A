@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "blind_exact_duplicates": 0,
+    "blind_near_duplicates": 0,
+    "prior_exact_overlap": 0,
+    "prior_near_overlap": 0
+  },
+  "passed": true,
+  "schema_version": "1.0.0"
+}

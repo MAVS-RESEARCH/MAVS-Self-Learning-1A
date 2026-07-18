@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "executed_acquisition": true,
+    "provenance_cost_information_gain": true
+  },
+  "operation": "evidence_recovery",
+  "passed": true,
+  "reason_code": null
+}

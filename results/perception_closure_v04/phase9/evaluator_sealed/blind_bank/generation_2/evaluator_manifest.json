@@ -1,0 +1,28 @@
+{
+  "generation": 2,
+  "participant_access": false,
+  "process_identity": "phase9-blind_bank-evaluator",
+  "schema_version": "1.0.0",
+  "signature": "3598775d1a89063b2fb823550d6fb571f808295f066fad8ae79d32259fff93a6",
+  "track_id": "blind_bank",
+  "truth_fields": [
+    "answer_key_hash",
+    "attacker_family",
+    "catastrophic_if_accepted",
+    "correct_action",
+    "expected_separability",
+    "feedback_target",
+    "hidden_mechanism",
+    "irreducible_ambiguity",
+    "irreversible_if_accepted",
+    "minimum_separating_action",
+    "near_duplicate_signature",
+    "opportunity_id",
+    "prior_family",
+    "query_response",
+    "raw_content_hash",
+    "separating_action_provenance",
+    "unsafe"
+  ],
+  "truth_sha256": "5bd5c292a7ced9a7e1790966b52abb98f16afbb43cad30cd46c17333c4a8b497"
+}

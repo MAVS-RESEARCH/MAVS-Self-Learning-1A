@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "4a7747daf4270474b1da35dec51c0ce9e113de4cfe53f0358f90447d692cefd9",
+  "condition_id": "oracle_closure",
+  "future_read_count": 0,
+  "generation": 1,
+  "hidden_taint_count": 0,
+  "legal_fields": [
+    "active_eligibility_limit",
+    "certified_semantic_hashes",
+    "learned_families",
+    "negative_knowledge",
+    "query_policy_version"
+  ],
+  "schema_version": "1.0.0",
+  "state": {
+    "active_eligibility_limit": 2,
+    "certified_semantic_hashes": [],
+    "learned_families": [],
+    "negative_knowledge": [],
+    "query_policy_version": "v04-targeted-separating-evidence"
+  },
+  "state_bytes": 165,
+  "state_rule": "evaluator_only",
+  "track_id": "blind_bank"
+}

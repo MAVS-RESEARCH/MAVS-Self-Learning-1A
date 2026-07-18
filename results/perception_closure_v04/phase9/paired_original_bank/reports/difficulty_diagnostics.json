@@ -1,0 +1,32 @@
+{
+  "generation_diagnostics": [
+    {
+      "generation": 1,
+      "generation_residual_slope": 0.029299999999999993,
+      "generation_scope_slope": 0.0,
+      "irreducible_ambiguity_rate": 0.21666666666666667,
+      "residual_escalation_rate": 0.21666666666666667,
+      "stable_evidence_residual_rate": 0.0
+    },
+    {
+      "generation": 2,
+      "generation_residual_slope": 0.029299999999999993,
+      "generation_scope_slope": 0.0,
+      "irreducible_ambiguity_rate": 0.24613333333333334,
+      "residual_escalation_rate": 0.24613333333333334,
+      "stable_evidence_residual_rate": 0.0
+    },
+    {
+      "generation": 3,
+      "generation_residual_slope": 0.029299999999999993,
+      "generation_scope_slope": 0.0,
+      "irreducible_ambiguity_rate": 0.27526666666666666,
+      "residual_escalation_rate": 0.27526666666666666,
+      "stable_evidence_residual_rate": 0.0
+    }
+  ],
+  "overall_difficulty_may_increase": true,
+  "schema_version": "1.0.0",
+  "stable_evidence_trend_gate": true,
+  "track_id": "paired_original_bank"
+}

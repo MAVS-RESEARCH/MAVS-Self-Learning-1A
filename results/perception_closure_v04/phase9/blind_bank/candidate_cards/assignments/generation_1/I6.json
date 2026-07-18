@@ -1,0 +1,10 @@
+{
+  "active_basis_maximum": 2,
+  "condition_id": "I6",
+  "generation": 1,
+  "library_index": "candidate_cards/library_index.json",
+  "phase6_integrity_continuity": true,
+  "retained_semantics": 20,
+  "schema_version": "1.0.0",
+  "track_id": "blind_bank"
+}
