@@ -1854,6 +1854,14 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Compliance verdict: **PASS - 100% compliant with WorkPlan Section 24 Phase 9**, including literal post-G3-before-summary order, exact original opportunity/seed/world/schedule/content identities, generation-boundary seals, retained counterexamples, rotating scope holdouts, two isolated banks, full comparator/ablation coverage, all metric families, all-failure replay, result isolation, claim discipline, and 28/28 independently audited clauses.
 - Publication state: replacement source checkpoint `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; audit SHA-256 `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`; evidence commit and push remain pending.
 
+### P9-E011 - Accepted replacement evidence commit
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 9.
+- Evidence commit: `c07da4679bf799faa46c2001e5e021630b3ddf45` (`Record sealed replacement Phase 9 evidence`).
+- Commit scope: the complete 1,617-file replacement sealed Phase 9 package plus P9-E008 through P9-E010. It excludes the superseded first sealed namespace, which was never committed.
+- Provenance: source checkpoint `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; accepted audit SHA-256 `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`; 28/28 WorkPlan clauses; zero audit findings.
+- Publication state: documentation successor commit and GitHub push remain pending.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1888,4 +1896,4 @@ No later phase may be marked in progress until the preceding phase exit gate has
 
 ## Current checkpoint
 
-Phase 0 through Phase 9 are complete and frozen. The accepted replacement Phase 9 source checkpoint is `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; accepted evidence is `results/perception_closure_v04/phase9/`; audit SHA-256 is `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`. The replacement run passes 28/28 WorkPlan clauses with zero findings. Track A is diagnostic-only and Track B remains provisional until Phase 10. Evidence commit and GitHub synchronization remain pending.
+Phase 0 through Phase 9 are complete and frozen. The accepted replacement Phase 9 source checkpoint is `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; accepted evidence is `results/perception_closure_v04/phase9/`; evidence commit is `c07da4679bf799faa46c2001e5e021630b3ddf45`; audit SHA-256 is `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`. The replacement run passes 28/28 WorkPlan clauses with zero findings. Track A is diagnostic-only and Track B remains provisional until Phase 10. Documentation commit and GitHub synchronization remain pending.
