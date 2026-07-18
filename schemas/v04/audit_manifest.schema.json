@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "audit_manifest.schema.json",
+  "type": "object",
+  "required": ["schema_version", "phase", "source_commit", "input_index_sha256", "sample_plan_sha256", "environment_lock_sha256", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "phase": {"const": 10},
+    "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "input_index_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "sample_plan_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "environment_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["PASS", "FAIL"]}
+  },
+  "additionalProperties": true
+}
+

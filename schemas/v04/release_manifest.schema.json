@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "release_manifest.schema.json",
+  "type": "object",
+  "required": ["schema_version", "release_id", "source_commit", "audit_sha256", "claim_ledger_sha256", "artifact_graph", "freeze_policy", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "release_id": {"type": "string", "minLength": 1},
+    "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "audit_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_ledger_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "artifact_graph": {"type": "array", "minItems": 1},
+    "freeze_policy": {"type": "object"},
+    "status": {"enum": ["FROZEN", "INVALID"]}
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "results_isolation_audit.schema.json",
+  "type": "object",
+  "required": ["schema_version", "legacy_files_checked", "legacy_mismatches", "track_overlap", "contamination_findings", "overwrite_findings", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "legacy_files_checked": {"type": "integer", "minimum": 1},
+    "legacy_mismatches": {"const": 0},
+    "track_overlap": {"const": 0},
+    "contamination_findings": {"const": 0},
+    "overwrite_findings": {"const": 0},
+    "status": {"const": "PASS"}
+  },
+  "additionalProperties": true
+}

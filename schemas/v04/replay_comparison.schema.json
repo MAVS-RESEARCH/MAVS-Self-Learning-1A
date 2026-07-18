@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "replay_comparison.schema.json",
+  "type": "object",
+  "required": ["schema_version", "sample_count", "protected_failure_count", "comparison_count", "mismatch_count", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "sample_count": {"type": "integer", "minimum": 0},
+    "protected_failure_count": {"type": "integer", "minimum": 0},
+    "comparison_count": {"type": "integer", "minimum": 1},
+    "mismatch_count": {"const": 0},
+    "status": {"const": "PASS"}
+  },
+  "additionalProperties": true
+}
+

@@ -1872,6 +1872,22 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Publication boundary: direct `main` push follows the repository workflow established by the user. No pull request was created. Phase 10 remains unimplemented and unauthorized in this task.
 - Final synchronization: this P9-E012 record is committed and pushed as a documentation-only successor; the accepted result, signed manifests, audit, and seal hashes remain unchanged.
 
+## Phase 10 - Reproducibility, Claim, and Release Audit
+
+### P10-E000 - Normative re-read, authorization boundary, and implementation checkpoint
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 10.
+- Normative sources read: `MAVS_Self_Learning_Perception_Closure_Architecture_and_Revalidation_v0.4.pdf`, visually verified pages 35-36 and extracted Section 29; `WorkPlan.md` Section 25 read in full. The two sources agree on candidate spot/full-template audits, independent certification, label/name/order permutation, hidden-field taint, pinned and protected-failure replay, results isolation, gate-generated claims, independent reproduction, and release freeze.
+- Authorized scope: implement WorkPlan Section 25 only. Phase 10 may read sealed Phases 6-9 but cannot rewrite, repair, filter, or regenerate accepted upstream artifacts. No new scientific bank or model training is authorized or required. Any upstream mismatch must fail closed and require a new Version 0.4 namespace.
+- External action boundary: the established repository workflow authorizes committing and pushing the completed phase. WorkPlan Section 25 separately prohibits creating or publishing the external release tag without distinct authorization; `release/tag_record.json` will bind the proposed tag to the exact source commit while recording that the external tag was not created.
+- Files added at this checkpoint: `configs/phases/phase10.yaml`; five Phase 10 schemas; the independent `src/mavs10d/audit_v04/` package; all prescribed audit/replay/claim/freeze scripts; `scripts/run_phase10.mjs`; and `tests/phase10/`.
+- Implementation method: freeze and hash every Phase 6-9 input before analytic reads; use a separate AST/semantic/gate/metric implementation that cannot import production synthesis, certification, aggregation, runtime-decision, or claim-decision functions; perform complete candidate and trace reconciliation; generate claim language only from audited gates; sign release artifacts with an ephemeral Ed25519 private key that is never serialized; freeze only after zero findings.
+- Instrumentation rule: `scripts/run_phase10.mjs` contains 18 factual `console.log` statements, each immediately preceded by an identifying `// Phase 10 step` comment. Every Phase 10 Python command also emits a factual step record with an immediately preceding `# Phase 10 step` comment. Exact final line mappings will be recorded after source stabilization.
+- Tests executed at this checkpoint: `python -m compileall -q src/mavs10d/audit_v04 scripts` and `python -m pytest tests/phase10 -q`.
+- Exact result: compile exit `0`; focused tests **43/43 passed**. Tests cover independent AST/semantic behavior, raw-trace gate computation, nine deliberate-corruption classes with stable reason codes, eight release fail-closed conditions, lifecycle reconciliation, claim downgrade/falsification, schemas, import independence, deterministic serialization, instrumentation comments, environment controls, append-only cleaner contract, and private-key non-persistence.
+- Failures or unresolved gaps: no focused-test failure. Authoritative execution, full regression, independent clause audit, signed manifest, freeze enforcement, evidence commit, and push remain pending.
+- Advancement gate: **not yet passed**. Phase 10 remains in progress.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1903,7 +1919,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 7 | Live Perception-Closure Runtime | Complete | P7-E005 through P7-E007; sealed 384-execution run, 320 independent certificate recomputations, 266-test regression, 17/17 gates, and zero-finding audit |
 | 8 | Ablation and Integrity Program | Complete | P8-E004 through P8-E006; sealed 39-condition matrix, 975,000 legacy decision replays, 345-test regression, 697-file deterministic replay, 21/21 clauses, and zero-finding audit |
 | 9 | Three-Generation Phase 5 Revalidation | Complete | P9-E008 through P9-E010; replacement order-correct 90,000-opportunity run, 6.21M traces, 358 tests, 1,260 post-G3 challenges, 28/28 clauses, and zero-finding audit |
+| 10 | Reproducibility, Claim, and Release Audit | In progress | P10-E000; implementation compiled and 43/43 focused pre-execution tests pass; authoritative audit and freeze pending |
 
 ## Current checkpoint
 
-Phase 0 through Phase 9 are complete, frozen, and synchronized to GitHub. The accepted replacement Phase 9 source checkpoint is `29de9ada2a988c65d89f4bbd9326fbcb96a11377`; accepted evidence is `results/perception_closure_v04/phase9/`; evidence commit is `c07da4679bf799faa46c2001e5e021630b3ddf45`; audit SHA-256 is `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`. The replacement run passes 28/28 WorkPlan clauses with zero findings. Track A is diagnostic-only and Track B remains provisional until Phase 10.
+Phase 0 through Phase 9 are complete and frozen. Phase 10 implementation is in progress at P10-E000. The accepted Phase 9 audit SHA-256 remains `C8B59B25E85E05FB5D600257783C4021F9790DCEAFFB888F389610D805BCE8F8`; Track B remains provisional until the Phase 10 claim and release gates pass.

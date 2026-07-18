@@ -1,0 +1,64 @@
+schema_version: "1.0.0"
+phase: 10
+name: reproducibility_claim_release_audit
+normative_version: "0.4"
+results_root: results/perception_closure_v04/phase10
+inputs:
+  phase6: results/perception_closure_v04/phase6/phase6_authoritative_reaudit_20260714
+  phase7: results/perception_closure_v04/phase7/phase7_authoritative_20260714
+  phase8: results/perception_closure_v04/phase8/phase8_authoritative_20260714
+  phase9: results/perception_closure_v04/phase9
+  legacy_manifests:
+    - results/legacy/phase3_20260713_template_harness/legacy_manifest.json
+    - results/legacy/phase4_original/legacy_manifest.json
+    - results/legacy/phase5_original/legacy_manifest.json
+audit_sample:
+  seed: 1010001
+  candidate_spot_count: 30
+  phase7_cases_per_family: 8
+  phase8_rows_per_ablation: 8
+  phase9_rows_per_track_generation_condition: 4
+  include_all_promoted_operations: true
+  include_all_gate_patterns: true
+  include_all_equivalence_classes: true
+  include_all_rejection_reasons: true
+  include_all_protected_failures: true
+reduced_reproduction:
+  phase6_candidates: 40
+  phase7_cases: 96
+  phase8_ablations: 39
+  phase9_rows_per_track_generation_condition: 4
+numeric_tolerances:
+  certification: 1.0e-12
+  metrics: 1.0e-12
+  replay: 0.0
+release_policy:
+  fail_closed: true
+  require_clean_source_tree: true
+  require_zero_findings: true
+  require_zero_hidden_taint: true
+  require_complete_traces: true
+  require_signed_manifests: true
+  prohibit_provisional_claims: true
+  post_freeze_namespace_required: true
+  release_id: perception_closure_v04_phase10_20260718
+  external_tag: v0.4-perception-closure-audited
+  external_tag_authorized: false
+signing_policy:
+  algorithm: ed25519
+  private_key_persistence: prohibited
+  public_key_artifact: release/signatures/public_key.pem
+claim_gate_registry:
+  executable_synthesis:
+    required: [input_integrity, candidate_reconciliation, template_integrity, certification_match]
+  perception_closure_runtime:
+    required: [trace_completeness, replay_match, permutation_invariance, hidden_taint_zero]
+  three_generation_blind_transfer:
+    required: [phase9_blind_gate, result_isolation, metric_recomputation, cumulative_value]
+  universal_zero_error:
+    required: [finite_covered_class_only]
+    forced_status: unsupported
+  deployment_readiness:
+    required: [external_operational_validation]
+    forced_status: unsupported
+
