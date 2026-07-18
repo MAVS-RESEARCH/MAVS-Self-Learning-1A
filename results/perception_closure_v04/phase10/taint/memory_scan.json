@@ -1,0 +1,7 @@
+{
+  "candidate_checkpoint_cache_log_memory_scan": true,
+  "participant_artifact_count": 3391,
+  "retained_sentinel_count": 0,
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,3564 @@
+{
+  "candidate_count": 40,
+  "changed_gate_count": 0,
+  "changed_gate_or_decision_count": 0,
+  "changed_metric_outcome_count": 0,
+  "comparisons": [
+    {
+      "candidate_id": "P6-ADD-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-B",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-ADD-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-C",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-ADD-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-I",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-ADD-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-B",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-B",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-I",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-I",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-B",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-B",
+      "permuted_operation": "recalibrate"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-I",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-C",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-B",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-MERGE-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-I",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-MERGE-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-I",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-MERGE-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-I",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-MERGE-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-A",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-C",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-B",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-B",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-A",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-A",
+      "permuted_operation": "recalibrate"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-A",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-I",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-A",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-RETIRE-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-C",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-RETIRE-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-A",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-RETIRE-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-I",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-RETIRE-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-C",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-C",
+      "permuted_operation": "recalibrate"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-A",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-B",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-A",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-C",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-B",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-C",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-A",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-SPLIT-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-C",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-SPLIT-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-A",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SPLIT-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-C",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SPLIT-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-I",
+      "permuted_operation": "recalibrate"
+    }
+  ],
+  "metric_comparisons": [
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A1_frozen/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A1_frozen/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A1_frozen/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A2_threshold_only/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A2_threshold_only/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A2_threshold_only/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "1e6f03f2eebbc3fa604b42650c5fe3d0ec00a2d293c709c6a7102a8e245a718d",
+      "outcome_invariant": true,
+      "permuted_sha256": "1e6f03f2eebbc3fa604b42650c5fe3d0ec00a2d293c709c6a7102a8e245a718d",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A3_selector_only/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "8e9e9c29bf3951e6cedff133c968e00ceb8304a2da3f7370483d3a18cad8b54e",
+      "outcome_invariant": true,
+      "permuted_sha256": "8e9e9c29bf3951e6cedff133c968e00ceb8304a2da3f7370483d3a18cad8b54e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A3_selector_only/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "b028b69a86eaffa658186e0b3bbc7e6501568d85a27d8a74d9c94abb7480bdea",
+      "outcome_invariant": true,
+      "permuted_sha256": "b028b69a86eaffa658186e0b3bbc7e6501568d85a27d8a74d9c94abb7480bdea",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/A3_selector_only/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/ds_cf_lineage/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/ds_cf_lineage/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/ds_cf_lineage/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/fixed_full_mavs/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/fixed_full_mavs/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/fixed_full_mavs/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I0/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I0/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I0/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "outcome_invariant": true,
+      "permuted_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I1/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "outcome_invariant": true,
+      "permuted_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I1/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "outcome_invariant": true,
+      "permuted_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I1/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I10/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I10/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I10/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "b308a4ef9664e9b5a2752f78e04fc83ba1ebcd26342c7c24286a2b2347d0911b",
+      "outcome_invariant": true,
+      "permuted_sha256": "b308a4ef9664e9b5a2752f78e04fc83ba1ebcd26342c7c24286a2b2347d0911b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I11/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "857e5d4e6b73cb76b5e5cccdd9dc66f4c9aafdc210391d574aaf691f12cc6f05",
+      "outcome_invariant": true,
+      "permuted_sha256": "857e5d4e6b73cb76b5e5cccdd9dc66f4c9aafdc210391d574aaf691f12cc6f05",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I11/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "6c0499e6afdb6a9660fcf4046a5b4cdbf01c4632c98ab81f58314eded8cfa7e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "6c0499e6afdb6a9660fcf4046a5b4cdbf01c4632c98ab81f58314eded8cfa7e1",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I11/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I2/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I2/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I2/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I3/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I3/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I3/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cea7ff5a3f2054c2a0dbe32c8bcc69a1856b4b6a197be7cc8ca560cd83db8c40",
+      "outcome_invariant": true,
+      "permuted_sha256": "cea7ff5a3f2054c2a0dbe32c8bcc69a1856b4b6a197be7cc8ca560cd83db8c40",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I4/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "1fb40ab6286ec8aa1b674f527176d5f26e07efa611d169a228822aca8aa23049",
+      "outcome_invariant": true,
+      "permuted_sha256": "1fb40ab6286ec8aa1b674f527176d5f26e07efa611d169a228822aca8aa23049",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I4/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f845c628dcd1948dd480c5a98affc75525b2078befad69a7d8e97ea36e037abd",
+      "outcome_invariant": true,
+      "permuted_sha256": "f845c628dcd1948dd480c5a98affc75525b2078befad69a7d8e97ea36e037abd",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I4/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I5/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I5/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I5/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I6/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I6/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I6/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I7/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I7/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I7/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I8/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I8/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I8/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "e2f699e173709098f2cd522ad5dc9b5b904a3ec043f23f4b61ae6e67dac32cd3",
+      "outcome_invariant": true,
+      "permuted_sha256": "e2f699e173709098f2cd522ad5dc9b5b904a3ec043f23f4b61ae6e67dac32cd3",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I9/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "04e24730a6113c98cedaae0d9311bd99084cca1207a9d2c0716b476da8908422",
+      "outcome_invariant": true,
+      "permuted_sha256": "04e24730a6113c98cedaae0d9311bd99084cca1207a9d2c0716b476da8908422",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I9/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7ae68e160057802c7884e0d4e04e14b4dc2b550060715c71fba87078227125f5",
+      "outcome_invariant": true,
+      "permuted_sha256": "7ae68e160057802c7884e0d4e04e14b4dc2b550060715c71fba87078227125f5",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/I9/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L0/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L0/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L0/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L1/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "outcome_invariant": true,
+      "permuted_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L1/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "outcome_invariant": true,
+      "permuted_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L1/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "outcome_invariant": true,
+      "permuted_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L10/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "outcome_invariant": true,
+      "permuted_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L10/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "outcome_invariant": true,
+      "permuted_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L10/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L2/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "outcome_invariant": true,
+      "permuted_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L2/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "outcome_invariant": true,
+      "permuted_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L2/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "outcome_invariant": true,
+      "permuted_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L3/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "outcome_invariant": true,
+      "permuted_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L3/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "outcome_invariant": true,
+      "permuted_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L3/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cea7ff5a3f2054c2a0dbe32c8bcc69a1856b4b6a197be7cc8ca560cd83db8c40",
+      "outcome_invariant": true,
+      "permuted_sha256": "cea7ff5a3f2054c2a0dbe32c8bcc69a1856b4b6a197be7cc8ca560cd83db8c40",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L4/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "1fb40ab6286ec8aa1b674f527176d5f26e07efa611d169a228822aca8aa23049",
+      "outcome_invariant": true,
+      "permuted_sha256": "1fb40ab6286ec8aa1b674f527176d5f26e07efa611d169a228822aca8aa23049",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L4/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f845c628dcd1948dd480c5a98affc75525b2078befad69a7d8e97ea36e037abd",
+      "outcome_invariant": true,
+      "permuted_sha256": "f845c628dcd1948dd480c5a98affc75525b2078befad69a7d8e97ea36e037abd",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L4/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cea7ff5a3f2054c2a0dbe32c8bcc69a1856b4b6a197be7cc8ca560cd83db8c40",
+      "outcome_invariant": true,
+      "permuted_sha256": "cea7ff5a3f2054c2a0dbe32c8bcc69a1856b4b6a197be7cc8ca560cd83db8c40",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L5/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "1fb40ab6286ec8aa1b674f527176d5f26e07efa611d169a228822aca8aa23049",
+      "outcome_invariant": true,
+      "permuted_sha256": "1fb40ab6286ec8aa1b674f527176d5f26e07efa611d169a228822aca8aa23049",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L5/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f845c628dcd1948dd480c5a98affc75525b2078befad69a7d8e97ea36e037abd",
+      "outcome_invariant": true,
+      "permuted_sha256": "f845c628dcd1948dd480c5a98affc75525b2078befad69a7d8e97ea36e037abd",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L5/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "outcome_invariant": true,
+      "permuted_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L6/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "outcome_invariant": true,
+      "permuted_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L6/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "outcome_invariant": true,
+      "permuted_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L6/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "outcome_invariant": true,
+      "permuted_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L7/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "outcome_invariant": true,
+      "permuted_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L7/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "outcome_invariant": true,
+      "permuted_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L7/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L8/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L8/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L8/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "outcome_invariant": true,
+      "permuted_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L9/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "outcome_invariant": true,
+      "permuted_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L9/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "outcome_invariant": true,
+      "permuted_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/L9/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "1e6f03f2eebbc3fa604b42650c5fe3d0ec00a2d293c709c6a7102a8e245a718d",
+      "outcome_invariant": true,
+      "permuted_sha256": "1e6f03f2eebbc3fa604b42650c5fe3d0ec00a2d293c709c6a7102a8e245a718d",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_A0/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "8e9e9c29bf3951e6cedff133c968e00ceb8304a2da3f7370483d3a18cad8b54e",
+      "outcome_invariant": true,
+      "permuted_sha256": "8e9e9c29bf3951e6cedff133c968e00ceb8304a2da3f7370483d3a18cad8b54e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_A0/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "b028b69a86eaffa658186e0b3bbc7e6501568d85a27d8a74d9c94abb7480bdea",
+      "outcome_invariant": true,
+      "permuted_sha256": "b028b69a86eaffa658186e0b3bbc7e6501568d85a27d8a74d9c94abb7480bdea",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_A0/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A00/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A00/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A00/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A01/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A01/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A01/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A02/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A02/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A02/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A03/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A03/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A03/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A04/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A04/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A04/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "outcome_invariant": true,
+      "permuted_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A05/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A05/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A05/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0a4fbd05779bed8d845374768de49425c5621969f5acd501c678f417c9f6960d",
+      "outcome_invariant": true,
+      "permuted_sha256": "0a4fbd05779bed8d845374768de49425c5621969f5acd501c678f417c9f6960d",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A06/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "13723bceb66276090f8366dc4d4c0270dbfa8ee599bc43ac79ee1f8fe2ffeaa7",
+      "outcome_invariant": true,
+      "permuted_sha256": "13723bceb66276090f8366dc4d4c0270dbfa8ee599bc43ac79ee1f8fe2ffeaa7",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A06/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "9fdc2489c1098f84179e07d40912fbe69233c19ac1eca038e5f51ffb3489f5d9",
+      "outcome_invariant": true,
+      "permuted_sha256": "9fdc2489c1098f84179e07d40912fbe69233c19ac1eca038e5f51ffb3489f5d9",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A06/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A07/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A07/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A07/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A08/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A08/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A08/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A09/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A09/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A09/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A10/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A10/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A10/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A11/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A11/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A11/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A12/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A12/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A12/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A13/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A13/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A13/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A14/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A14/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A14/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A15/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A15/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A15/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "213bb21f9df7b0f8d9a69adf94ff5d77df28d763a50c5a63005b287d67a1835f",
+      "outcome_invariant": true,
+      "permuted_sha256": "213bb21f9df7b0f8d9a69adf94ff5d77df28d763a50c5a63005b287d67a1835f",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A16/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "2b3e8c884385e1d4b9ba87e478f195383868a72c79b6ac144d9f0672c3d6b706",
+      "outcome_invariant": true,
+      "permuted_sha256": "2b3e8c884385e1d4b9ba87e478f195383868a72c79b6ac144d9f0672c3d6b706",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A16/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "d69298c8dd7deda22319ec2dbf73f24ab52a73870ccc5f3ff9c5c2a158947b36",
+      "outcome_invariant": true,
+      "permuted_sha256": "d69298c8dd7deda22319ec2dbf73f24ab52a73870ccc5f3ff9c5c2a158947b36",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A16/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "5c0588765b655e5c95005a39290bd8e7a5c461d3bc77bb03402f848d5499b7f1",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c0588765b655e5c95005a39290bd8e7a5c461d3bc77bb03402f848d5499b7f1",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A17/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a162ef042f3b16558592d2ccc28c9a0642f21478ae67396a3088b830109a2d50",
+      "outcome_invariant": true,
+      "permuted_sha256": "a162ef042f3b16558592d2ccc28c9a0642f21478ae67396a3088b830109a2d50",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A17/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0a091bfe3db70bfab5e13a0b539e904267f94e1e4bbcb974bec16746b295f626",
+      "outcome_invariant": true,
+      "permuted_sha256": "0a091bfe3db70bfab5e13a0b539e904267f94e1e4bbcb974bec16746b295f626",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A17/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "213bb21f9df7b0f8d9a69adf94ff5d77df28d763a50c5a63005b287d67a1835f",
+      "outcome_invariant": true,
+      "permuted_sha256": "213bb21f9df7b0f8d9a69adf94ff5d77df28d763a50c5a63005b287d67a1835f",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A18/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "2b3e8c884385e1d4b9ba87e478f195383868a72c79b6ac144d9f0672c3d6b706",
+      "outcome_invariant": true,
+      "permuted_sha256": "2b3e8c884385e1d4b9ba87e478f195383868a72c79b6ac144d9f0672c3d6b706",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A18/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "d69298c8dd7deda22319ec2dbf73f24ab52a73870ccc5f3ff9c5c2a158947b36",
+      "outcome_invariant": true,
+      "permuted_sha256": "d69298c8dd7deda22319ec2dbf73f24ab52a73870ccc5f3ff9c5c2a158947b36",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A18/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A19/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A19/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A19/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "84f32760ec0228a3eede2fe44ccf13b0fd94da7c2463bfc22856284ee0aa7488",
+      "outcome_invariant": true,
+      "permuted_sha256": "84f32760ec0228a3eede2fe44ccf13b0fd94da7c2463bfc22856284ee0aa7488",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A20/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "230833246716c30bf9e82c9fcd2cf08b5350ff556d9cafcddedb7015cb14ea93",
+      "outcome_invariant": true,
+      "permuted_sha256": "230833246716c30bf9e82c9fcd2cf08b5350ff556d9cafcddedb7015cb14ea93",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A20/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0c5ebf30389cffd1313df5c07733a1b6d3fa0bc797e9a83789aea2bf66aaaf59",
+      "outcome_invariant": true,
+      "permuted_sha256": "0c5ebf30389cffd1313df5c07733a1b6d3fa0bc797e9a83789aea2bf66aaaf59",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A20/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a76e2ee00aaddd80c0ffced3faecaaf789bbc92fdb36d2e910d8654fd32ebca6",
+      "outcome_invariant": true,
+      "permuted_sha256": "a76e2ee00aaddd80c0ffced3faecaaf789bbc92fdb36d2e910d8654fd32ebca6",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A21/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "20225798c80c0e04b78b78799ecbc368d0e7ce88878ab76c14a39dcb0703e225",
+      "outcome_invariant": true,
+      "permuted_sha256": "20225798c80c0e04b78b78799ecbc368d0e7ce88878ab76c14a39dcb0703e225",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A21/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "125a80633875791af82c2d742f81d3d3de41b0de4cff1067998a90f2d50f1bd0",
+      "outcome_invariant": true,
+      "permuted_sha256": "125a80633875791af82c2d742f81d3d3de41b0de4cff1067998a90f2d50f1bd0",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A21/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "31662d6f618c96413df526efdc882fc39d3255728800dd49fa5b4f2b4a3183ab",
+      "outcome_invariant": true,
+      "permuted_sha256": "31662d6f618c96413df526efdc882fc39d3255728800dd49fa5b4f2b4a3183ab",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A22/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "de2fa7a60780471ab5051683b461970de90399282c1c4ae374298a8f1942ff21",
+      "outcome_invariant": true,
+      "permuted_sha256": "de2fa7a60780471ab5051683b461970de90399282c1c4ae374298a8f1942ff21",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A22/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4cf75aa845498434a389a1df96bfc79a5d297eaff2f9a79ec626ff84ea1d8477",
+      "outcome_invariant": true,
+      "permuted_sha256": "4cf75aa845498434a389a1df96bfc79a5d297eaff2f9a79ec626ff84ea1d8477",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A22/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A23/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A23/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A23/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A24/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A24/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A24/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A25/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A25/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A25/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A26/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A26/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A26/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A27/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A27/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A27/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "outcome_invariant": true,
+      "permuted_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A28/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A28/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A28/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A29/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A29/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A29/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "eb9402a6aaa36a4e2a264d8172c74ac0de4372e7c51a88304a1789ed7006b497",
+      "outcome_invariant": true,
+      "permuted_sha256": "eb9402a6aaa36a4e2a264d8172c74ac0de4372e7c51a88304a1789ed7006b497",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A30/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a26e8a2de2e5ec83865f2875dcacc3175030c24486ae495df4e63745694ca9e2",
+      "outcome_invariant": true,
+      "permuted_sha256": "a26e8a2de2e5ec83865f2875dcacc3175030c24486ae495df4e63745694ca9e2",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A30/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "60581025188ac6f1b28973356487a5bc23db4b82d7d0f9766e9b1ffabf289794",
+      "outcome_invariant": true,
+      "permuted_sha256": "60581025188ac6f1b28973356487a5bc23db4b82d7d0f9766e9b1ffabf289794",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A30/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "outcome_invariant": true,
+      "permuted_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A31/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A31/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A31/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "b98331bb34a64bcf99308f04239ec5bb31a255ed45bb5027ec058195c519d597",
+      "outcome_invariant": true,
+      "permuted_sha256": "b98331bb34a64bcf99308f04239ec5bb31a255ed45bb5027ec058195c519d597",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A32/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "fd2bb0d2f6b10a95cad4fb1bd6d06dfabf30553ec170286c12b81b01aaabf5b0",
+      "outcome_invariant": true,
+      "permuted_sha256": "fd2bb0d2f6b10a95cad4fb1bd6d06dfabf30553ec170286c12b81b01aaabf5b0",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A32/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "56c10bfd78de486f96ba250b85cbfffb43fc6afb98632572f987c79cbe633d96",
+      "outcome_invariant": true,
+      "permuted_sha256": "56c10bfd78de486f96ba250b85cbfffb43fc6afb98632572f987c79cbe633d96",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A32/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A33/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A33/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A33/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A34/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A34/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A34/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A35/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A35/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A35/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A36/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A36/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A36/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A37/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A37/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A37/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A38/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A38/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A38/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A39/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A39/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A39/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A40/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A40/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A40/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A41/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A41/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A41/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "outcome_invariant": true,
+      "permuted_sha256": "a2bc4cea8dcfafd97c0620bfff04935ead6d39cb0f4c4993defbb327284309de",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A42/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A42/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A42/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A43/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A43/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A43/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A44/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "bbf79640d0ba141cbc6c81e6b840e4e5c7b5765807074583ae77b2eb237e94e1",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A44/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "outcome_invariant": true,
+      "permuted_sha256": "616153bfab1c74686cd80545e7bce7a4da73e60fd3836e975bae65ab6bbcce7a",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A44/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A45/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A45/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A45/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A46/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A46/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A46/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A47/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A47/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A47/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A48/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A48/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A48/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A49/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "outcome_invariant": true,
+      "permuted_sha256": "c6b991f2cd361a421f1555eca0cb0cec87c6d5e57389d3062ec58910c4f34a1c",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A49/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "outcome_invariant": true,
+      "permuted_sha256": "7b535ec5a307e51d8415687228660a86fa8c4c3d445f7ccfd1a9604f0f13ba04",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/legacy_registry_A49/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/matched_memory/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "42dc33cc679afc81ce6bbf1e7e12a25f29e1c9fccf7037aae5624cbc8404c028",
+      "outcome_invariant": true,
+      "permuted_sha256": "42dc33cc679afc81ce6bbf1e7e12a25f29e1c9fccf7037aae5624cbc8404c028",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/matched_memory/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "11107b7f49f2cac23b242ab9d4ddcf2522ce1e7b715c7d0e889fcad47a90d479",
+      "outcome_invariant": true,
+      "permuted_sha256": "11107b7f49f2cac23b242ab9d4ddcf2522ce1e7b715c7d0e889fcad47a90d479",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/matched_memory/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/oracle_closure/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/oracle_closure/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/oracle_closure/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P0/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P0/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P0/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "outcome_invariant": true,
+      "permuted_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P1/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "outcome_invariant": true,
+      "permuted_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P1/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "outcome_invariant": true,
+      "permuted_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P1/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f04524c19f23a87f7454b43764ce66fe58786336106f5560828c8982da67d042",
+      "outcome_invariant": true,
+      "permuted_sha256": "f04524c19f23a87f7454b43764ce66fe58786336106f5560828c8982da67d042",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P10/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dabd002b45ad13392f1afdddd0260042f75e7668cc780f42f290c6352275775a",
+      "outcome_invariant": true,
+      "permuted_sha256": "dabd002b45ad13392f1afdddd0260042f75e7668cc780f42f290c6352275775a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P10/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99d8896cf1f1f304ef43c72f935c8dbf2fc406675093c4a661817d73e8fcfc78",
+      "outcome_invariant": true,
+      "permuted_sha256": "99d8896cf1f1f304ef43c72f935c8dbf2fc406675093c4a661817d73e8fcfc78",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P10/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "outcome_invariant": true,
+      "permuted_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P11/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "outcome_invariant": true,
+      "permuted_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P11/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "outcome_invariant": true,
+      "permuted_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P11/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "8377c9cad0a53a5e3d6a7ed1752ab4c601542d7e4d589452054ccd9c08388080",
+      "outcome_invariant": true,
+      "permuted_sha256": "8377c9cad0a53a5e3d6a7ed1752ab4c601542d7e4d589452054ccd9c08388080",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P12/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "d211e74e12c95a458fadcf90dea0faf6519c478ed59d88e4e9e641efc0d57e1d",
+      "outcome_invariant": true,
+      "permuted_sha256": "d211e74e12c95a458fadcf90dea0faf6519c478ed59d88e4e9e641efc0d57e1d",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P12/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "497477e50d4c3e78f593b4d8f3bcf4a97399f3d2feaeac7cb3e6a53da433f786",
+      "outcome_invariant": true,
+      "permuted_sha256": "497477e50d4c3e78f593b4d8f3bcf4a97399f3d2feaeac7cb3e6a53da433f786",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P12/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "30f90e3858794ddce8083a1e4c18fab1eec915cde85f0085bf8fe714b8e10e93",
+      "outcome_invariant": true,
+      "permuted_sha256": "30f90e3858794ddce8083a1e4c18fab1eec915cde85f0085bf8fe714b8e10e93",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P13/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ad288a67fd3a7342fb2186a656db45b9f19158b225d51dd4826918c7604b2bf2",
+      "outcome_invariant": true,
+      "permuted_sha256": "ad288a67fd3a7342fb2186a656db45b9f19158b225d51dd4826918c7604b2bf2",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P13/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c5c8ff4c3fdd152b72dcbf1b99db5c066100dff559a23b4183a6ebf1e4f97a05",
+      "outcome_invariant": true,
+      "permuted_sha256": "c5c8ff4c3fdd152b72dcbf1b99db5c066100dff559a23b4183a6ebf1e4f97a05",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P13/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "8c4d447fc536cde2011ed5975241a7f7a14741a5c859f5044ab15aaca0d20d62",
+      "outcome_invariant": true,
+      "permuted_sha256": "8c4d447fc536cde2011ed5975241a7f7a14741a5c859f5044ab15aaca0d20d62",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P14/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "55ba0d458b01af24f4f685f1db26404c2dae882b88b798eab4f50d0dcee1cfab",
+      "outcome_invariant": true,
+      "permuted_sha256": "55ba0d458b01af24f4f685f1db26404c2dae882b88b798eab4f50d0dcee1cfab",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P14/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "642faf25771629217d4b0939ac15aa71ff9b3d83b9f8c0c6321cf88f75833ca7",
+      "outcome_invariant": true,
+      "permuted_sha256": "642faf25771629217d4b0939ac15aa71ff9b3d83b9f8c0c6321cf88f75833ca7",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P14/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P15/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P15/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P15/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "b308a4ef9664e9b5a2752f78e04fc83ba1ebcd26342c7c24286a2b2347d0911b",
+      "outcome_invariant": true,
+      "permuted_sha256": "b308a4ef9664e9b5a2752f78e04fc83ba1ebcd26342c7c24286a2b2347d0911b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P2/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "857e5d4e6b73cb76b5e5cccdd9dc66f4c9aafdc210391d574aaf691f12cc6f05",
+      "outcome_invariant": true,
+      "permuted_sha256": "857e5d4e6b73cb76b5e5cccdd9dc66f4c9aafdc210391d574aaf691f12cc6f05",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P2/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "6c0499e6afdb6a9660fcf4046a5b4cdbf01c4632c98ab81f58314eded8cfa7e1",
+      "outcome_invariant": true,
+      "permuted_sha256": "6c0499e6afdb6a9660fcf4046a5b4cdbf01c4632c98ab81f58314eded8cfa7e1",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P2/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "outcome_invariant": true,
+      "permuted_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P3/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "outcome_invariant": true,
+      "permuted_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P3/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "outcome_invariant": true,
+      "permuted_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P3/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "outcome_invariant": true,
+      "permuted_sha256": "ebedeca068607cae5d7e80d6ef644537e58c70ecfa1cebd5a6704d21bc74029b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P4/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "outcome_invariant": true,
+      "permuted_sha256": "0443862dd157b6bbf8423a1205d28814e433472173210782fc7d9ae587218e3a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P4/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "outcome_invariant": true,
+      "permuted_sha256": "dbd4cd815632312a56213d5e64d0e47cef1f421271831e7677b77fffb6fa8f53",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P4/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "outcome_invariant": true,
+      "permuted_sha256": "897c80b2c7e767ff9c5c7ac81d023da4c87d473cd1b4edf7457df39638091421",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P5/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "outcome_invariant": true,
+      "permuted_sha256": "c44b894281ac9ca928fb6ba04aad3c2b848d4f356bb9801484cf1451446a2b35",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P5/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "outcome_invariant": true,
+      "permuted_sha256": "cbe7520aab4f9d408018fd96e8fbfa80e6f1a7c6d77dd0fc8b3d959ad26a6836",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P5/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P6/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P6/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P6/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "e07a7eaccb3eb1984eb071126d15b984e48d430f2a03daf1868ee3ad152d2895",
+      "outcome_invariant": true,
+      "permuted_sha256": "e07a7eaccb3eb1984eb071126d15b984e48d430f2a03daf1868ee3ad152d2895",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P7/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ab1915e1e9b114d85b91faac2816fb7c7fe6acc108ce09219f91ff06fffa1037",
+      "outcome_invariant": true,
+      "permuted_sha256": "ab1915e1e9b114d85b91faac2816fb7c7fe6acc108ce09219f91ff06fffa1037",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P7/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4d4e2e465053c131d3f43d5690c01ffe8760c4ea578096ba190e998127bb2f5e",
+      "outcome_invariant": true,
+      "permuted_sha256": "4d4e2e465053c131d3f43d5690c01ffe8760c4ea578096ba190e998127bb2f5e",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P7/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "e07a7eaccb3eb1984eb071126d15b984e48d430f2a03daf1868ee3ad152d2895",
+      "outcome_invariant": true,
+      "permuted_sha256": "e07a7eaccb3eb1984eb071126d15b984e48d430f2a03daf1868ee3ad152d2895",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P8/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "ab1915e1e9b114d85b91faac2816fb7c7fe6acc108ce09219f91ff06fffa1037",
+      "outcome_invariant": true,
+      "permuted_sha256": "ab1915e1e9b114d85b91faac2816fb7c7fe6acc108ce09219f91ff06fffa1037",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P8/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4d4e2e465053c131d3f43d5690c01ffe8760c4ea578096ba190e998127bb2f5e",
+      "outcome_invariant": true,
+      "permuted_sha256": "4d4e2e465053c131d3f43d5690c01ffe8760c4ea578096ba190e998127bb2f5e",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P8/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f04524c19f23a87f7454b43764ce66fe58786336106f5560828c8982da67d042",
+      "outcome_invariant": true,
+      "permuted_sha256": "f04524c19f23a87f7454b43764ce66fe58786336106f5560828c8982da67d042",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P9/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "dabd002b45ad13392f1afdddd0260042f75e7668cc780f42f290c6352275775a",
+      "outcome_invariant": true,
+      "permuted_sha256": "dabd002b45ad13392f1afdddd0260042f75e7668cc780f42f290c6352275775a",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P9/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "99d8896cf1f1f304ef43c72f935c8dbf2fc406675093c4a661817d73e8fcfc78",
+      "outcome_invariant": true,
+      "permuted_sha256": "99d8896cf1f1f304ef43c72f935c8dbf2fc406675093c4a661817d73e8fcfc78",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/P9/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "2d9d7b51c306d44bc6bb9e684875b52284ed84cef3bb9f7404d1c9c972296905",
+      "outcome_invariant": true,
+      "permuted_sha256": "2d9d7b51c306d44bc6bb9e684875b52284ed84cef3bb9f7404d1c9c972296905",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/random_proposal/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "7dc979ead9ec2cae89008fb54305fd4ef1f1aa2a235507373ddf0784b320bac4",
+      "outcome_invariant": true,
+      "permuted_sha256": "7dc979ead9ec2cae89008fb54305fd4ef1f1aa2a235507373ddf0784b320bac4",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/random_proposal/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "3f588045eb9448ec9b6bd441dffd4a6b5f85737b25d07816330d5e30d03f8115",
+      "outcome_invariant": true,
+      "permuted_sha256": "3f588045eb9448ec9b6bd441dffd4a6b5f85737b25d07816330d5e30d03f8115",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/random_proposal/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "outcome_invariant": true,
+      "permuted_sha256": "540604046751fdd645d58931758f62bae06c4fd07b29797ceb579606a5195778",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/raw_memory/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "42dc33cc679afc81ce6bbf1e7e12a25f29e1c9fccf7037aae5624cbc8404c028",
+      "outcome_invariant": true,
+      "permuted_sha256": "42dc33cc679afc81ce6bbf1e7e12a25f29e1c9fccf7037aae5624cbc8404c028",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/raw_memory/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "11107b7f49f2cac23b242ab9d4ddcf2522ce1e7b715c7d0e889fcad47a90d479",
+      "outcome_invariant": true,
+      "permuted_sha256": "11107b7f49f2cac23b242ab9d4ddcf2522ce1e7b715c7d0e889fcad47a90d479",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/raw_memory/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "1e6f03f2eebbc3fa604b42650c5fe3d0ec00a2d293c709c6a7102a8e245a718d",
+      "outcome_invariant": true,
+      "permuted_sha256": "1e6f03f2eebbc3fa604b42650c5fe3d0ec00a2d293c709c6a7102a8e245a718d",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/reduced_learning/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "8e9e9c29bf3951e6cedff133c968e00ceb8304a2da3f7370483d3a18cad8b54e",
+      "outcome_invariant": true,
+      "permuted_sha256": "8e9e9c29bf3951e6cedff133c968e00ceb8304a2da3f7370483d3a18cad8b54e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/reduced_learning/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "b028b69a86eaffa658186e0b3bbc7e6501568d85a27d8a74d9c94abb7480bdea",
+      "outcome_invariant": true,
+      "permuted_sha256": "b028b69a86eaffa658186e0b3bbc7e6501568d85a27d8a74d9c94abb7480bdea",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/reduced_learning/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_cumulative/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7561286b83c48232403fa2f04ac9d162f4d2a66409371a9fbd0410c00bf039e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_cumulative/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "outcome_invariant": true,
+      "permuted_sha256": "adcc46b63a8977757eba13eae2355daa6ca8b0998131674e072126b67ede4b01",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_cumulative/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_fresh/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "outcome_invariant": true,
+      "permuted_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_fresh/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "outcome_invariant": true,
+      "permuted_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_fresh/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "outcome_invariant": true,
+      "permuted_sha256": "41227f30fbc23248941c723a88281adf469fe55903dc3b30138792a35de59168",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_frozen_after_g1/generation_1.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "outcome_invariant": true,
+      "permuted_sha256": "31da1c05ad44765416119f0d993088cb0fa83adfbfadf78a3fcf3f4c49d648f0",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_frozen_after_g1/generation_2.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "outcome_invariant": true,
+      "permuted_sha256": "4c7baaf9e0e0888f2956f7dfe993da86ab20f09ab9b35d0d86d7d3564f8152f7",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/paired_original_bank/decision_traces/v04_frozen_after_g1/generation_3.parquet",
+      "track": "paired_original_bank"
+    },
+    {
+      "baseline_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A1_frozen/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "outcome_invariant": true,
+      "permuted_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A1_frozen/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "outcome_invariant": true,
+      "permuted_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A1_frozen/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A2_threshold_only/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "outcome_invariant": true,
+      "permuted_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A2_threshold_only/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "outcome_invariant": true,
+      "permuted_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A2_threshold_only/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "007f1c312951c735b1891d73360372b25e67cb944922adfdd90ecba0fccd4337",
+      "outcome_invariant": true,
+      "permuted_sha256": "007f1c312951c735b1891d73360372b25e67cb944922adfdd90ecba0fccd4337",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A3_selector_only/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5b8575f67e51e4de9a8d7b3f7ed1857bcc57aeb76a817b4ef99edfdb85476277",
+      "outcome_invariant": true,
+      "permuted_sha256": "5b8575f67e51e4de9a8d7b3f7ed1857bcc57aeb76a817b4ef99edfdb85476277",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A3_selector_only/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "4bb921c8a22f5ba0d0bd9416fb4ee3c3f69f78ca7cb25b32c5288ef667485b8f",
+      "outcome_invariant": true,
+      "permuted_sha256": "4bb921c8a22f5ba0d0bd9416fb4ee3c3f69f78ca7cb25b32c5288ef667485b8f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/A3_selector_only/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/ds_cf_lineage/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "outcome_invariant": true,
+      "permuted_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/ds_cf_lineage/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "outcome_invariant": true,
+      "permuted_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/ds_cf_lineage/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/fixed_full_mavs/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "outcome_invariant": true,
+      "permuted_sha256": "cc2452ee8f09d7f67ea3bd247eaa58ae53ae4fcd2b8b262d0e56f0cf8131032b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/fixed_full_mavs/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "outcome_invariant": true,
+      "permuted_sha256": "11c1f93f823c082c890af00fab07f3b8d29817455cd9a3d8ae7aa0f54ba4df66",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/fixed_full_mavs/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "outcome_invariant": true,
+      "permuted_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I1/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I1/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "outcome_invariant": true,
+      "permuted_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I1/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I2/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I2/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I2/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I3/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I3/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I3/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I6/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I6/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I6/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I7/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I7/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I7/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I8/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I8/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I8/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "e0279530d51d946b183097adaea1ee49fd74cd492fbe0cd7196f65ae15702aff",
+      "outcome_invariant": true,
+      "permuted_sha256": "e0279530d51d946b183097adaea1ee49fd74cd492fbe0cd7196f65ae15702aff",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I9/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "4e5769d3715a9eb12d9faf246e57f3d897ea1c7e54ec1b5f1ae897de2c8bd5e9",
+      "outcome_invariant": true,
+      "permuted_sha256": "4e5769d3715a9eb12d9faf246e57f3d897ea1c7e54ec1b5f1ae897de2c8bd5e9",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I9/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "b74de07d44177cddecf194022f62e00a28da0b1d41ba3389aa86c892d6851ff0",
+      "outcome_invariant": true,
+      "permuted_sha256": "b74de07d44177cddecf194022f62e00a28da0b1d41ba3389aa86c892d6851ff0",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/I9/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L1/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "outcome_invariant": true,
+      "permuted_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L1/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "outcome_invariant": true,
+      "permuted_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L1/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f2668bbc51ec6248bc5d5066089e283251c249937e5ce09897b9253a865a6df7",
+      "outcome_invariant": true,
+      "permuted_sha256": "f2668bbc51ec6248bc5d5066089e283251c249937e5ce09897b9253a865a6df7",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L10/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2ffafb8aa9148716862ec20fbb9f57af41dab2e72d02f0054a5fe4d78bb9eae9",
+      "outcome_invariant": true,
+      "permuted_sha256": "2ffafb8aa9148716862ec20fbb9f57af41dab2e72d02f0054a5fe4d78bb9eae9",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L10/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "74d077092a368d3cb5491cd9d02ef0db7d29a7747cf190646a8979dec0fcd2d8",
+      "outcome_invariant": true,
+      "permuted_sha256": "74d077092a368d3cb5491cd9d02ef0db7d29a7747cf190646a8979dec0fcd2d8",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L10/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L2/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "outcome_invariant": true,
+      "permuted_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L2/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "outcome_invariant": true,
+      "permuted_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L2/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f2668bbc51ec6248bc5d5066089e283251c249937e5ce09897b9253a865a6df7",
+      "outcome_invariant": true,
+      "permuted_sha256": "f2668bbc51ec6248bc5d5066089e283251c249937e5ce09897b9253a865a6df7",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L3/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2ffafb8aa9148716862ec20fbb9f57af41dab2e72d02f0054a5fe4d78bb9eae9",
+      "outcome_invariant": true,
+      "permuted_sha256": "2ffafb8aa9148716862ec20fbb9f57af41dab2e72d02f0054a5fe4d78bb9eae9",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L3/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "74d077092a368d3cb5491cd9d02ef0db7d29a7747cf190646a8979dec0fcd2d8",
+      "outcome_invariant": true,
+      "permuted_sha256": "74d077092a368d3cb5491cd9d02ef0db7d29a7747cf190646a8979dec0fcd2d8",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L3/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "a06abd3b512fc11c63f319b569eb26704a8f7341294ce12d323c298fe9e8b62c",
+      "outcome_invariant": true,
+      "permuted_sha256": "a06abd3b512fc11c63f319b569eb26704a8f7341294ce12d323c298fe9e8b62c",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L4/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "bb8c92503f25efb46026e6540e4381e06e480adab5f22f11d51b64429c15dcdc",
+      "outcome_invariant": true,
+      "permuted_sha256": "bb8c92503f25efb46026e6540e4381e06e480adab5f22f11d51b64429c15dcdc",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L4/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "d69439610308b9eba74ed6a4efad932d4d9c163e259e8b96e29978d1c5b69c57",
+      "outcome_invariant": true,
+      "permuted_sha256": "d69439610308b9eba74ed6a4efad932d4d9c163e259e8b96e29978d1c5b69c57",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/L4/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "007f1c312951c735b1891d73360372b25e67cb944922adfdd90ecba0fccd4337",
+      "outcome_invariant": true,
+      "permuted_sha256": "007f1c312951c735b1891d73360372b25e67cb944922adfdd90ecba0fccd4337",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/legacy_A0/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5b8575f67e51e4de9a8d7b3f7ed1857bcc57aeb76a817b4ef99edfdb85476277",
+      "outcome_invariant": true,
+      "permuted_sha256": "5b8575f67e51e4de9a8d7b3f7ed1857bcc57aeb76a817b4ef99edfdb85476277",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/legacy_A0/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "4bb921c8a22f5ba0d0bd9416fb4ee3c3f69f78ca7cb25b32c5288ef667485b8f",
+      "outcome_invariant": true,
+      "permuted_sha256": "4bb921c8a22f5ba0d0bd9416fb4ee3c3f69f78ca7cb25b32c5288ef667485b8f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/legacy_A0/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/matched_memory/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "4303a13848f3377d793b67bc21c82e5507395508217ba02917a0b63a887734d8",
+      "outcome_invariant": true,
+      "permuted_sha256": "4303a13848f3377d793b67bc21c82e5507395508217ba02917a0b63a887734d8",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/matched_memory/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "d3c5d60da9a45c0af450674514b1660fe28913723d59ba6be1ac08a120a46bf3",
+      "outcome_invariant": true,
+      "permuted_sha256": "d3c5d60da9a45c0af450674514b1660fe28913723d59ba6be1ac08a120a46bf3",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/matched_memory/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/oracle_closure/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/oracle_closure/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "outcome_invariant": true,
+      "permuted_sha256": "99713355aa6c90bd72c7626903aa1254fd8527e694edecbdc5ad49d07c7d797b",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/oracle_closure/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "outcome_invariant": true,
+      "permuted_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P1/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P1/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "outcome_invariant": true,
+      "permuted_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P1/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "befc7a19db4a23ab1f89adb40710cfc3dc3d57c557873fb861fcac1c2bfe5d62",
+      "outcome_invariant": true,
+      "permuted_sha256": "befc7a19db4a23ab1f89adb40710cfc3dc3d57c557873fb861fcac1c2bfe5d62",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P10/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5f3c15ba5a55b5f4051ffb21ef1f9fe31d88b8bdcc4d5592637f6db575468378",
+      "outcome_invariant": true,
+      "permuted_sha256": "5f3c15ba5a55b5f4051ffb21ef1f9fe31d88b8bdcc4d5592637f6db575468378",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P10/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "95ba5cf9053dc6ef9f54686ac3240120701f746fb508d3b1442c7a790ad795fe",
+      "outcome_invariant": true,
+      "permuted_sha256": "95ba5cf9053dc6ef9f54686ac3240120701f746fb508d3b1442c7a790ad795fe",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P10/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "outcome_invariant": true,
+      "permuted_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P11/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P11/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "outcome_invariant": true,
+      "permuted_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P11/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "outcome_invariant": true,
+      "permuted_sha256": "b10b3558c642a62c236e75ad324c041bf91010bb5fd9b47db9f1c225ad9a14be",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P4/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "outcome_invariant": true,
+      "permuted_sha256": "f7ac77ea2f6c203cd11f8dfaf366bb4a92a6006b100bebcc7ab1bd7270353b8e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P4/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "outcome_invariant": true,
+      "permuted_sha256": "630d6967b5d5f1164b6aaaf333b2dbab5ce01d10ff70a7a5be637b01ed89aef3",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P4/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "f2668bbc51ec6248bc5d5066089e283251c249937e5ce09897b9253a865a6df7",
+      "outcome_invariant": true,
+      "permuted_sha256": "f2668bbc51ec6248bc5d5066089e283251c249937e5ce09897b9253a865a6df7",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P5/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2ffafb8aa9148716862ec20fbb9f57af41dab2e72d02f0054a5fe4d78bb9eae9",
+      "outcome_invariant": true,
+      "permuted_sha256": "2ffafb8aa9148716862ec20fbb9f57af41dab2e72d02f0054a5fe4d78bb9eae9",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P5/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "74d077092a368d3cb5491cd9d02ef0db7d29a7747cf190646a8979dec0fcd2d8",
+      "outcome_invariant": true,
+      "permuted_sha256": "74d077092a368d3cb5491cd9d02ef0db7d29a7747cf190646a8979dec0fcd2d8",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P5/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P6/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P6/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P6/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "7e2e43bddf4822b19c4344f4e4896e67d03c19e2e68f9bfd651a1db0bb898bc1",
+      "outcome_invariant": true,
+      "permuted_sha256": "7e2e43bddf4822b19c4344f4e4896e67d03c19e2e68f9bfd651a1db0bb898bc1",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P7/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "26cb4783b6b613809df9dfb885ca68446ebb6ebb8326c310ba4bfe5e614019dc",
+      "outcome_invariant": true,
+      "permuted_sha256": "26cb4783b6b613809df9dfb885ca68446ebb6ebb8326c310ba4bfe5e614019dc",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P7/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "378eee6e361975fff7bf96933c90086cc3b943709788bd8520b7f6ad7f205fd8",
+      "outcome_invariant": true,
+      "permuted_sha256": "378eee6e361975fff7bf96933c90086cc3b943709788bd8520b7f6ad7f205fd8",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P7/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "7e2e43bddf4822b19c4344f4e4896e67d03c19e2e68f9bfd651a1db0bb898bc1",
+      "outcome_invariant": true,
+      "permuted_sha256": "7e2e43bddf4822b19c4344f4e4896e67d03c19e2e68f9bfd651a1db0bb898bc1",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P8/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "26cb4783b6b613809df9dfb885ca68446ebb6ebb8326c310ba4bfe5e614019dc",
+      "outcome_invariant": true,
+      "permuted_sha256": "26cb4783b6b613809df9dfb885ca68446ebb6ebb8326c310ba4bfe5e614019dc",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P8/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "378eee6e361975fff7bf96933c90086cc3b943709788bd8520b7f6ad7f205fd8",
+      "outcome_invariant": true,
+      "permuted_sha256": "378eee6e361975fff7bf96933c90086cc3b943709788bd8520b7f6ad7f205fd8",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P8/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "befc7a19db4a23ab1f89adb40710cfc3dc3d57c557873fb861fcac1c2bfe5d62",
+      "outcome_invariant": true,
+      "permuted_sha256": "befc7a19db4a23ab1f89adb40710cfc3dc3d57c557873fb861fcac1c2bfe5d62",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P9/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5f3c15ba5a55b5f4051ffb21ef1f9fe31d88b8bdcc4d5592637f6db575468378",
+      "outcome_invariant": true,
+      "permuted_sha256": "5f3c15ba5a55b5f4051ffb21ef1f9fe31d88b8bdcc4d5592637f6db575468378",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P9/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "95ba5cf9053dc6ef9f54686ac3240120701f746fb508d3b1442c7a790ad795fe",
+      "outcome_invariant": true,
+      "permuted_sha256": "95ba5cf9053dc6ef9f54686ac3240120701f746fb508d3b1442c7a790ad795fe",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/P9/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "28fb83b42700ebaf69f5ad7a92a5e73147bfc24bbb61e97f3f4e7403bfc50628",
+      "outcome_invariant": true,
+      "permuted_sha256": "28fb83b42700ebaf69f5ad7a92a5e73147bfc24bbb61e97f3f4e7403bfc50628",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/random_proposal/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5076f0e2e271839203553f0b96bede8dccdffabf6f0e1080988d7ebdc59beab4",
+      "outcome_invariant": true,
+      "permuted_sha256": "5076f0e2e271839203553f0b96bede8dccdffabf6f0e1080988d7ebdc59beab4",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/random_proposal/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "107feccd8762ef4dab29fc1774a92797f0764ab1965046c557648922c239e2fc",
+      "outcome_invariant": true,
+      "permuted_sha256": "107feccd8762ef4dab29fc1774a92797f0764ab1965046c557648922c239e2fc",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/random_proposal/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "outcome_invariant": true,
+      "permuted_sha256": "5c4a730066ebc55e7ed6faeb08e1280cd9bb56c1b17bc0eabcb6b55c43b28102",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/raw_memory/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "4303a13848f3377d793b67bc21c82e5507395508217ba02917a0b63a887734d8",
+      "outcome_invariant": true,
+      "permuted_sha256": "4303a13848f3377d793b67bc21c82e5507395508217ba02917a0b63a887734d8",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/raw_memory/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "d3c5d60da9a45c0af450674514b1660fe28913723d59ba6be1ac08a120a46bf3",
+      "outcome_invariant": true,
+      "permuted_sha256": "d3c5d60da9a45c0af450674514b1660fe28913723d59ba6be1ac08a120a46bf3",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/raw_memory/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "007f1c312951c735b1891d73360372b25e67cb944922adfdd90ecba0fccd4337",
+      "outcome_invariant": true,
+      "permuted_sha256": "007f1c312951c735b1891d73360372b25e67cb944922adfdd90ecba0fccd4337",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/reduced_learning/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "5b8575f67e51e4de9a8d7b3f7ed1857bcc57aeb76a817b4ef99edfdb85476277",
+      "outcome_invariant": true,
+      "permuted_sha256": "5b8575f67e51e4de9a8d7b3f7ed1857bcc57aeb76a817b4ef99edfdb85476277",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/reduced_learning/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "4bb921c8a22f5ba0d0bd9416fb4ee3c3f69f78ca7cb25b32c5288ef667485b8f",
+      "outcome_invariant": true,
+      "permuted_sha256": "4bb921c8a22f5ba0d0bd9416fb4ee3c3f69f78ca7cb25b32c5288ef667485b8f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/reduced_learning/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_cumulative/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "outcome_invariant": true,
+      "permuted_sha256": "315cb2762ee35ea975ae3f10eb1c66beb91a2e6f6e4f17cd216b7ae9aff68f2e",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_cumulative/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "outcome_invariant": true,
+      "permuted_sha256": "8a6e0e37a7c270f88ca85d24f658bcd684f73dba657cb6e375375477234ad404",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_cumulative/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_fresh/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "outcome_invariant": true,
+      "permuted_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_fresh/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "outcome_invariant": true,
+      "permuted_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_fresh/generation_3.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "outcome_invariant": true,
+      "permuted_sha256": "2177da4d3b52de9345f11183789c297fd8b55d345407cf2e464a4642506ad352",
+      "physical_generation": 1,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_frozen_after_g1/generation_1.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "outcome_invariant": true,
+      "permuted_sha256": "fbeeadb53ba3b28dc4e9ffeaffee08df8fe3a902dd8087f94d37251ed90cfef6",
+      "physical_generation": 2,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_frozen_after_g1/generation_2.parquet",
+      "track": "blind_bank"
+    },
+    {
+      "baseline_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "outcome_invariant": true,
+      "permuted_sha256": "998159677799bd95ac34fba8c05086f93ea7ebacee2e1eafe35acf0ad3392d7f",
+      "physical_generation": 3,
+      "trace_path": "results/perception_closure_v04/phase9/blind_bank/decision_traces/v04_frozen_after_g1/generation_3.parquet",
+      "track": "blind_bank"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

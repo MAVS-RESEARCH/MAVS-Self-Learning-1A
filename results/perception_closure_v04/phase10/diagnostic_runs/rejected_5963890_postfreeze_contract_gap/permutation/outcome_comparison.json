@@ -1,0 +1,248 @@
+{
+  "candidate_count": 40,
+  "changed_gate_or_decision_count": 0,
+  "comparisons": [
+    {
+      "candidate_id": "P6-ADD-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-B",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-ADD-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-C",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-ADD-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-I",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-ADD-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-B",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-B",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-I",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-I",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-CONFIGURATION-SPECIALIZATION-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-B",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-B",
+      "permuted_operation": "recalibrate"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-I",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-C",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-EVIDENCE-RECOVERY-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-B",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-MERGE-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-I",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-MERGE-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-I",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-MERGE-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-I",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-MERGE-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-A",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-C",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-B",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-B",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-POLICY-INTERACTION-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-A",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RECALIBRATE-A",
+      "permuted_operation": "recalibrate"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-A",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-I",
+      "permuted_operation": "scope_expand"
+    },
+    {
+      "candidate_id": "P6-RECALIBRATE-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-NARROW-A",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-RETIRE-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-C",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-RETIRE-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-A",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-RETIRE-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-I",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-RETIRE-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-C",
+      "permuted_operation": "evidence_recovery"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-C",
+      "permuted_operation": "recalibrate"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-A",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SPLIT-B",
+      "permuted_operation": "scope_narrow"
+    },
+    {
+      "candidate_id": "P6-SCOPE-EXPAND-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-A",
+      "permuted_operation": "retire"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-SCOPE-EXPAND-C",
+      "permuted_operation": "merge"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-ADD-B",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-C",
+      "permuted_operation": "split"
+    },
+    {
+      "candidate_id": "P6-SCOPE-NARROW-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-RETIRE-A",
+      "permuted_operation": "policy_interaction"
+    },
+    {
+      "candidate_id": "P6-SPLIT-A",
+      "outcome_invariant": true,
+      "permuted_name": "P6-POLICY-INTERACTION-C",
+      "permuted_operation": "add"
+    },
+    {
+      "candidate_id": "P6-SPLIT-B",
+      "outcome_invariant": true,
+      "permuted_name": "P6-CONFIGURATION-SPECIALIZATION-A",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SPLIT-C",
+      "outcome_invariant": true,
+      "permuted_name": "P6-EVIDENCE-RECOVERY-C",
+      "permuted_operation": "configuration_specialization"
+    },
+    {
+      "candidate_id": "P6-SPLIT-I",
+      "outcome_invariant": true,
+      "permuted_name": "P6-MERGE-I",
+      "permuted_operation": "recalibrate"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

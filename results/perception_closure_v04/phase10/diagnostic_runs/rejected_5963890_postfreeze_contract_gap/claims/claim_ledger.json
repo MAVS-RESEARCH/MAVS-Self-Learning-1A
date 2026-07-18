@@ -1,0 +1,185 @@
+{
+  "claims": [
+    {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "claim_id": "executable_diagnostic_synthesis",
+      "exposure_counts_and_bounds": {},
+      "gate_results": {
+        "candidate_reconciliation": true,
+        "certification_match": true,
+        "input_integrity": true,
+        "template_integrity": true
+      },
+      "maximum_permitted_language": "Executable differentiated diagnostic synthesis is supported for the audited Phase 6 grammar, operations, banks, and candidate lifecycle.",
+      "required_gates": [
+        "input_integrity",
+        "candidate_reconciliation",
+        "template_integrity",
+        "certification_match"
+      ],
+      "scope": "Phase 6 candidate population and frozen certification banks",
+      "status": "supported",
+      "supporting_or_failing_gates": [
+        "input_integrity",
+        "candidate_reconciliation",
+        "template_integrity",
+        "certification_match"
+      ]
+    },
+    {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "claim_id": "perception_closure_runtime",
+      "exposure_counts_and_bounds": {},
+      "gate_results": {
+        "hidden_taint_zero": true,
+        "permutation_invariance": true,
+        "replay_match": true,
+        "trace_completeness": true
+      },
+      "maximum_permitted_language": "Perception Closure is supported on the declared finite Phase 7 and Phase 9 covered classes, subject to the recorded evidence and budget assumptions.",
+      "required_gates": [
+        "trace_completeness",
+        "replay_match",
+        "permutation_invariance",
+        "hidden_taint_zero"
+      ],
+      "scope": "Declared finite covered classes only",
+      "status": "supported",
+      "supporting_or_failing_gates": [
+        "trace_completeness",
+        "replay_match",
+        "permutation_invariance",
+        "hidden_taint_zero"
+      ]
+    },
+    {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "claim_id": "three_generation_blind_transfer",
+      "exposure_counts_and_bounds": {
+        "bank": "blind_bank",
+        "frr": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frr_one_sided_upper": [
+          0.0003413357229905545,
+          0.0003395560180596835,
+          0.00034590762447872514
+        ],
+        "generations": [
+          1,
+          2,
+          3
+        ],
+        "opportunities": 45000,
+        "residual_escalation": [
+          0.2126,
+          0.249,
+          0.2803333333333333
+        ],
+        "safe_exposures": 26255,
+        "uar": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "uar_one_sided_upper": [
+          0.0004811263538760935,
+          0.00048470726465288383,
+          0.00047232687831733067
+        ],
+        "unsafe_exposures": 18745
+      },
+      "gate_results": {
+        "cumulative_value": true,
+        "metric_recomputation": true,
+        "phase9_blind_gate": true,
+        "result_isolation": true
+      },
+      "maximum_permitted_language": "The audited blind three-generation bank supports cumulative perception-closure learning with protected errors and scope leakage remaining zero and burden improving relative to fresh learning.",
+      "required_gates": [
+        "phase9_blind_gate",
+        "result_isolation",
+        "metric_recomputation",
+        "cumulative_value"
+      ],
+      "scope": "Sealed Phase 9 Track B; not general-domain deployment",
+      "status": "supported",
+      "supporting_or_failing_gates": [
+        "phase9_blind_gate",
+        "result_isolation",
+        "metric_recomputation",
+        "cumulative_value"
+      ]
+    },
+    {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "claim_id": "universal_zero_error",
+      "exposure_counts_and_bounds": {},
+      "gate_results": {
+        "finite_covered_class_only": false
+      },
+      "maximum_permitted_language": "No universal zero-error or zero-escalation claim is permitted outside the certified finite covered class.",
+      "required_gates": [
+        "finite_covered_class_only"
+      ],
+      "scope": "Outside the declared covered class",
+      "status": "unsupported",
+      "supporting_or_failing_gates": [
+        "finite_covered_class_only"
+      ]
+    },
+    {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "claim_id": "deployment_readiness",
+      "exposure_counts_and_bounds": {},
+      "gate_results": {
+        "external_operational_validation": false
+      },
+      "maximum_permitted_language": "No production deployment-readiness claim is supported by these research banks.",
+      "required_gates": [
+        "external_operational_validation"
+      ],
+      "scope": "External operational environments",
+      "status": "unsupported",
+      "supporting_or_failing_gates": [
+        "external_operational_validation"
+      ]
+    }
+  ],
+  "generated": true,
+  "generator": "mavs10d.audit_v04.claims",
+  "schema_version": "1.0.0",
+  "source_audit_sha256": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00"
+}

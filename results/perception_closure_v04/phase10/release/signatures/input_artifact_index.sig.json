@@ -1,0 +1,7 @@
+{
+  "algorithm": "ed25519",
+  "schema_version": "1.0.0",
+  "signature_base64": "E6iHAlky1vOxpNo24hET4P6g0bzJftVvOSQcjT+E42uXre/KfAlnjCBKQKCCNOUMZkQ7reMZAasZ5DfoiBcaDA==",
+  "signed_path": "results/perception_closure_v04/phase10/manifests/input_artifact_index.json",
+  "signed_sha256": "32420abfe752b4a2441fef7d48e1e78c64eb238e1d2baa9e8e08d3c3507480e4"
+}

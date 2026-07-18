@@ -1,0 +1,26 @@
+{
+  "all_names_invariant": true,
+  "all_operations_compliant_when_integrity_passed": true,
+  "all_promoted_cover_banks_generations_conditions": true,
+  "all_promoted_have_valid_witnesses": true,
+  "all_required_files_present": true,
+  "all_semantic_behavioral_hashes_match": true,
+  "behavioral_class_count": 30,
+  "candidate_count": 40,
+  "gate_pattern_count": 2,
+  "indexed_candidate_count": 40,
+  "lifecycle_counts": {
+    "certification_rejected": 10,
+    "integrity_rejected": 10,
+    "promoted": 20
+  },
+  "operation_count": 10,
+  "reconciliation_equation": "proposed = integrity_rejected + certification_rejected + quarantined + promoted",
+  "reconciliation_passed": true,
+  "schema_version": "1.0.0",
+  "semantic_class_count": 30,
+  "spot_count": 30,
+  "spot_gate_pattern_count": 2,
+  "spot_operation_count": 10,
+  "status": "PASS"
+}

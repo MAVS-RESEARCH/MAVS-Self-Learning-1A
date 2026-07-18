@@ -1,0 +1,19 @@
+{
+  "categories": {
+    "closure_error": 2093807,
+    "false_rejection": 76475,
+    "gate_mismatch": 948,
+    "harmful_promotion": 0,
+    "quarantine": 0,
+    "rollback": 0,
+    "scope_leak": 704,
+    "taint_event": 0,
+    "unexplained_escalation": 0,
+    "unsafe_acceptance": 31804
+  },
+  "complete": true,
+  "protected_failure_count": 2203738,
+  "records_sha256": "2bd8f87814545696eac34e7e33ddfb473f3d646b79c8059f1839701726ca614a",
+  "schema_version": "1.0.0",
+  "source": "all Phase 9 condition-generation traces joined with sealed evaluator truth"
+}

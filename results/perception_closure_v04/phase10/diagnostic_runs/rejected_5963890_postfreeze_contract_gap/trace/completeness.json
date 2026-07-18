@@ -1,0 +1,22 @@
+{
+  "canonical_terminal_records_checked": 6210384,
+  "completeness_rate": 1.0,
+  "duplicate_or_missing_terminal_count": 0,
+  "missing_hypothesis_count": 0,
+  "missing_round_lineage_count": 0,
+  "per_track": {
+    "blind_bank": {
+      "checkpoint_files": 105,
+      "condition_generation_files": 105,
+      "terminal_rows": 1575000
+    },
+    "paired_original_bank": {
+      "checkpoint_files": 309,
+      "condition_generation_files": 309,
+      "terminal_rows": 4635000
+    }
+  },
+  "query_probe_contract_gap_count": 0,
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

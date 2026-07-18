@@ -1,0 +1,42 @@
+{
+  "all_forbidden_controls_rejected": true,
+  "all_names_invariant": true,
+  "all_operations_compliant_when_integrity_passed": true,
+  "all_promoted_cover_banks_generations_conditions": true,
+  "all_promoted_have_valid_witnesses": true,
+  "all_required_files_present": true,
+  "all_semantic_behavioral_hashes_match": true,
+  "behavioral_class_count": 30,
+  "candidate_count": 40,
+  "constant_output_count": 0,
+  "expected_phase9_condition_coverage": 42,
+  "gate_pattern_count": 2,
+  "indexed_candidate_count": 40,
+  "lifecycle_counts": {
+    "certification_rejected": 10,
+    "integrity_rejected": 10,
+    "promoted": 20
+  },
+  "name_only_count": 10,
+  "noop_count": 0,
+  "operation_count": 10,
+  "parent_identical_count": 0,
+  "phase6_phase9_candidate_totals_reconcile": true,
+  "reconciliation_equation": "proposed = integrity_rejected + certification_rejected + quarantined + promoted",
+  "reconciliation_passed": true,
+  "schema_version": "1.0.0",
+  "semantic_class_count": 30,
+  "sibling_identity_count": 20,
+  "spot_behavioral_class_count": 30,
+  "spot_count": 30,
+  "spot_covers_all_semantic_behavioral_classes": true,
+  "spot_gate_pattern_count": 2,
+  "spot_operation_count": 10,
+  "spot_rejection_reasons": [
+    "behavior_only_certification_gate_failed",
+    "independent_integrity_gate_failed"
+  ],
+  "spot_semantic_class_count": 30,
+  "status": "PASS",
+  "template_signature_count": 12
+}

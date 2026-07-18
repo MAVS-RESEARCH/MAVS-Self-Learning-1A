@@ -1,0 +1,7 @@
+{
+  "algorithm": "ed25519",
+  "schema_version": "1.0.0",
+  "signature_base64": "RJ2U7/pbHlEr1dqo2u9WTz8e3LKVBodC4Gm5llyHgp1pYbZzsF+AmFBMt6npbLoDJ7ToRlN/WAgUFzkbcNDvCQ==",
+  "signed_path": "results/perception_closure_v04/phase10/claims/claim_ledger.json",
+  "signed_sha256": "0359ad39a339042e7c3ef2ab3353b9d8ab2fc67ca9d8abe95e77b613fa96e44f"
+}

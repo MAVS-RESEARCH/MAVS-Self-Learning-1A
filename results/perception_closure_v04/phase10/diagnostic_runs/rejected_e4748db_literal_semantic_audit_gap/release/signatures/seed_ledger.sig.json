@@ -1,0 +1,7 @@
+{
+  "algorithm": "ed25519",
+  "schema_version": "1.0.0",
+  "signature_base64": "OikDIm61VOt0tNyULufcXVWBd8QxAHkXt38G4rkyrTiUnodw/ab75twf4yy9tJtvWqSjm5jrcxtG1vDVTC6PAA==",
+  "signed_path": "results/perception_closure_v04/phase10/manifests/seed_ledger.json",
+  "signed_sha256": "8536d946850f70074b88e44cf00c99a8439a012f3d9ba8399a859a4ed9bab6ca"
+}

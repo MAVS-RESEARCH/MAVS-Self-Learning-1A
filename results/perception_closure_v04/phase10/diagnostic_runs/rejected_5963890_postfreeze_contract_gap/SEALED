@@ -1,0 +1,10 @@
+{
+  "audit_sha256": "529630ba931535cbd5e2fa6bb88525d97ee5ffc48a839b6ca892edee7b7f52dc",
+  "claim_ledger_sha256": "0359ad39a339042e7c3ef2ab3353b9d8ab2fc67ca9d8abe95e77b613fa96e44f",
+  "post_freeze_namespace_required": true,
+  "release_id": "perception_closure_v04_phase10_20260718",
+  "release_manifest_sha256": "7dc4381348e27e4b7b912097c49511b375450d7d67cce000c53e55ba6db4df5c",
+  "schema_version": "1.0.0",
+  "source_commit": "5963890bfdb9c8a3b986ed83d19d7cd2024f0325",
+  "status": "FROZEN"
+}

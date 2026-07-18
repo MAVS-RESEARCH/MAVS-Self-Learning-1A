@@ -1,0 +1,9 @@
+{
+  "environment_forbidden_hits": [],
+  "participant_sentinel_hits": [],
+  "production_import_hits": [],
+  "schema_version": "1.0.0",
+  "sentinel_planted": "PHASE10_EVALUATOR_ONLY_SENTINEL_7C34A1D9",
+  "sentinel_rejected": true,
+  "status": "PASS"
+}

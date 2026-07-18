@@ -1,0 +1,20 @@
+{
+  "fail_closed": true,
+  "gates": {
+    "candidate_reconciliation": true,
+    "certification_match": true,
+    "cumulative_value": true,
+    "external_operational_validation": false,
+    "finite_covered_class_only": false,
+    "hidden_taint_zero": true,
+    "input_integrity": true,
+    "metric_recomputation": true,
+    "permutation_invariance": true,
+    "phase9_blind_gate": true,
+    "replay_match": true,
+    "result_isolation": true,
+    "template_integrity": true,
+    "trace_completeness": true
+  },
+  "schema_version": "1.0.0"
+}

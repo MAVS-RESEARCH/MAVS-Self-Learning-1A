@@ -1,0 +1,23 @@
+{
+  "artifact_graph_sha256": "c148f2305096878ea00a0497c50560cdbbceb1ef35c2265027dc0d387e5aa686",
+  "audit_sha256": "5ad16e25fbdf863e511bdccc17ace7616066a71897532cff82829f2675ae1874",
+  "claim_ledger_sha256": "0359ad39a339042e7c3ef2ab3353b9d8ab2fc67ca9d8abe95e77b613fa96e44f",
+  "post_freeze_namespace_required": true,
+  "public_key_sha256": "b25eff96bfbc8a5048a5118bf19677adc9ca1da0f7ab57b7d69693f5135ea020",
+  "release_id": "perception_closure_v04_phase10_20260718_r3",
+  "release_manifest_sha256": "a387070f7b85d9fb069857d09fce8a3d9d304822cbb915c974c0edb875dffa78",
+  "release_report_sha256": "d3868460ea5d2cbe1fe4834e8c03abd5467b43dd289e755e6aa84328f78b6ae6",
+  "results_index_sha256": "d0d21e2209e16435619079715aa9cc76b4028cac01797623b7c17d12820cc3d7",
+  "schema_version": "1.0.0",
+  "signature_sha256": {
+    "audit_manifest.sig.json": "7821c71f35f1667a52c379a49363f33e04d94c4307af323971b145fdbc5793e1",
+    "claim_ledger.sig.json": "c99b3c3703f0f74b93af7048080adf47a385862cf2f0029a23b529e0e13f1f5a",
+    "environment_lock.sig.json": "43d0a83768f74818fa45139e97103654adda385d4ab2ec03718e99a23b550ab2",
+    "input_artifact_index.sig.json": "eff6eb2276946d914c7e1544c4da85738cc8e6ccb2bf000e85d71d317a2e3975",
+    "phase10_audit.sig.json": "0ac43bcdf51d4278368171c729a5cfe1bc5471e8fab9b6ffc4b7b08f83a88e88",
+    "release_manifest.sig.json": "75ddf1bd8317ebc68e332878c931228755133a882705a142a27ff86cda02e809",
+    "seed_ledger.sig.json": "818ea4212056620ef75374002c0f797656d474131f04e919ec0c9dfea773867b"
+  },
+  "source_commit": "33d806a42bf87c12a62b4d2724274dc957112a80",
+  "status": "FROZEN"
+}

@@ -1,11 +1,17 @@
 # Results Index
 
-Original result locations remain byte-identical. Legacy namespaces below are immutable indexed references with per-file checksums.
+## Preserved legacy evidence
 
-| Namespace | Files | Manifest |
-|---|---:|---|
-| `phase3_20260713_template_harness` | 89 | `results/legacy/phase3_20260713_template_harness/legacy_manifest.json` |
-| `phase4_original` | 32 | `results/legacy/phase4_original/legacy_manifest.json` |
-| `phase5_original` | 53 | `results/legacy/phase5_original/legacy_manifest.json` |
+- `results/legacy/phase3_20260713_template_harness/`
+- `results/legacy/phase4_original/`
+- `results/legacy/phase5_original/`
 
-Revised Version 0.4 evidence is isolated under `results/perception_closure_v04/`.
+## Perception Closure Version 0.4
+
+- Phase 6: sealed synthesis-integrity evidence
+- Phase 7: sealed live runtime evidence
+- Phase 8: sealed ablation evidence
+- Phase 9: sealed paired and blind three-generation evidence
+- Phase 10: audited release package
+
+Default Version 0.4 claims: `results/perception_closure_v04/phase10/claims/CLAIMS.md`

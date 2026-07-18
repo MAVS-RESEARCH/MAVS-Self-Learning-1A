@@ -1,0 +1,247 @@
+{
+  "artifact_graph": [
+    {
+      "bytes": 868,
+      "path": "results/perception_closure_v04/phase10/candidate_audit/candidate_audit_summary.json",
+      "sha256": "47dc2fbbc903407cf466c1e4819f3b619642303d8f32d3d832074cce7352c1d9"
+    },
+    {
+      "bytes": 36490,
+      "path": "results/perception_closure_v04/phase10/candidate_audit/candidate_inventory.parquet",
+      "sha256": "ed107ee02f0da71d17849edbaad54edbd7067fdb443dd3869931964921a9f678"
+    },
+    {
+      "bytes": 40312,
+      "path": "results/perception_closure_v04/phase10/candidate_audit/full_template_audit.parquet",
+      "sha256": "a0ca407acabfc390f1fc2aed0c694129569b8080cbee0d7cf9ea2e7869ab1c32"
+    },
+    {
+      "bytes": 36354,
+      "path": "results/perception_closure_v04/phase10/candidate_audit/spot_audit.parquet",
+      "sha256": "1dbc074a694a71ce44fc8d9f282b9e98bf311f8091994e19ee455f00bc5691d0"
+    },
+    {
+      "bytes": 5595,
+      "path": "results/perception_closure_v04/phase10/certification/gate_mismatches.parquet",
+      "sha256": "6b473e09d9a48b12a6e6c9a1b9298360587143c0169afbf6f4720cf0ff98df4d"
+    },
+    {
+      "bytes": 3527,
+      "path": "results/perception_closure_v04/phase10/certification/metric_mismatches.parquet",
+      "sha256": "99baf1c97a73dc458caadf083030b16a487a17f9e026959c09cf66119f63b20c"
+    },
+    {
+      "bytes": 9422,
+      "path": "results/perception_closure_v04/phase10/certification/recomputed_gate_vectors.parquet",
+      "sha256": "577a5c1ac92fd75fea5b651869a72ffc76efe25208a1c4d2b08fd135e772c6c4"
+    },
+    {
+      "bytes": 12590,
+      "path": "results/perception_closure_v04/phase10/certification/recomputed_phase9_metrics.parquet",
+      "sha256": "e312a89ef2cd61f018d660fc8ba6f7e889df8eab94c9ccaf470d1dac1ac5142c"
+    },
+    {
+      "bytes": 7446,
+      "path": "results/perception_closure_v04/phase10/claims/claim_ledger.json",
+      "sha256": "0359ad39a339042e7c3ef2ab3353b9d8ab2fc67ca9d8abe95e77b613fa96e44f"
+    },
+    {
+      "bytes": 3660,
+      "path": "results/perception_closure_v04/phase10/claims/claim_source_map.json",
+      "sha256": "7820bf8a076494383eacdf7468582805be09770826b2e75c65a5dede86f99de3"
+    },
+    {
+      "bytes": 1374,
+      "path": "results/perception_closure_v04/phase10/claims/CLAIMS.md",
+      "sha256": "78c8c971396e214e50de69bb0e4e7ee296cf33ba6c52499e02db3d8f57788aff"
+    },
+    {
+      "bytes": 481,
+      "path": "results/perception_closure_v04/phase10/isolation/cross_version_manifests.json",
+      "sha256": "524204ef92f9e5089700b8139db8add7ef4b86b6cabe5002f11654bdeb2a7845"
+    },
+    {
+      "bytes": 54931,
+      "path": "results/perception_closure_v04/phase10/isolation/legacy_hashes.json",
+      "sha256": "d3e8ca983e0d13c30afae3b7ddd535d0ed306c100e9cdf8c11806187d6d4d866"
+    },
+    {
+      "bytes": 179,
+      "path": "results/perception_closure_v04/phase10/isolation/overwrite_scan.json",
+      "sha256": "79e617774254ab98b36cc1830ae9367bd4a4d396360ec413b97d7956ff9f6ff3"
+    },
+    {
+      "bytes": 249,
+      "path": "results/perception_closure_v04/phase10/isolation/results_isolation_audit.json",
+      "sha256": "d3d9faf1a8d7fe985ec3484e8a902bdcc523d1f2d54db67dcb8fbbb3d4d9ed47"
+    },
+    {
+      "bytes": 182,
+      "path": "results/perception_closure_v04/phase10/isolation/v04_hashes.json",
+      "sha256": "19c1219c8d4a67ac0a26c9902cbe0d46b609d76c278da0b37bc1f26b5d1b94c4"
+    },
+    {
+      "bytes": 2149,
+      "path": "results/perception_closure_v04/phase10/manifests/audit_manifest.json",
+      "sha256": "ec15095ad154ce2d576c91daa27078abbcbe9d8a6e0b580be0042ba8e96212c0"
+    },
+    {
+      "bytes": 10721,
+      "path": "results/perception_closure_v04/phase10/manifests/environment_lock.json",
+      "sha256": "193961e3293a3f55c6e30705baf79c9de5eae30c88cffabaa767b1d91f646fad"
+    },
+    {
+      "bytes": 3937035,
+      "path": "results/perception_closure_v04/phase10/manifests/input_artifact_index.json",
+      "sha256": "23af60245c206ef3bb111a88df957561e22f4b26694c5d93344dbdb65af9704a"
+    },
+    {
+      "bytes": 507,
+      "path": "results/perception_closure_v04/phase10/manifests/INPUT_INDEX_FROZEN.json",
+      "sha256": "4880f878b5732dc5252da2a34937a384c7a7153a0a5e8b969cb7b798159f4e06"
+    },
+    {
+      "bytes": 1246,
+      "path": "results/perception_closure_v04/phase10/manifests/sample_plan.json",
+      "sha256": "160983c29ce2c56757497ea64121a860a0a9691c2a3c9acaa4f035f4ba0a3fcf"
+    },
+    {
+      "bytes": 5011,
+      "path": "results/perception_closure_v04/phase10/manifests/seed_ledger.json",
+      "sha256": "8536d946850f70074b88e44cf00c99a8439a012f3d9ba8399a859a4ed9bab6ca"
+    },
+    {
+      "bytes": 4347,
+      "path": "results/perception_closure_v04/phase10/permutation/challenge_manifest.json",
+      "sha256": "69edeedf508e0bd180781c8b3d377d0adb1e1a9b04b0ca7941ae968beeb215f2"
+    },
+    {
+      "bytes": 7391,
+      "path": "results/perception_closure_v04/phase10/permutation/outcome_comparison.json",
+      "sha256": "4c900707557dbc7065cb934af004281a8fec93093ee4aff3f6179e557fb52625"
+    },
+    {
+      "bytes": 532,
+      "path": "results/perception_closure_v04/phase10/release/RESULTS_INDEX.snapshot.md",
+      "sha256": "d0d21e2209e16435619079715aa9cc76b4028cac01797623b7c17d12820cc3d7"
+    },
+    {
+      "bytes": 337,
+      "path": "results/perception_closure_v04/phase10/release/tag_record.json",
+      "sha256": "bb2069c4609b9edcd965145320b79506a67f79863bcffc98fee0432efce8b3b5"
+    },
+    {
+      "bytes": 143988,
+      "path": "results/perception_closure_v04/phase10/replay/artifact_comparison.json",
+      "sha256": "de2e5f25b30e35748cc7c85ca1dd45e5ced9ff21e680cbb5f5b5af932c8fb3e2"
+    },
+    {
+      "bytes": 274,
+      "path": "results/perception_closure_v04/phase10/replay/protected_failure_manifest.json",
+      "sha256": "8a5f3df79511a7755d24ffb56ade6e94a8a9f1c0b5ae8455edfe17e2292a4830"
+    },
+    {
+      "bytes": 517284,
+      "path": "results/perception_closure_v04/phase10/replay/sample_manifest.json",
+      "sha256": "308acd442375c267850b36b6a0e10d74ad4d989b8869767a9e6a62faf42610b3"
+    },
+    {
+      "bytes": 98,
+      "path": "results/perception_closure_v04/phase10/reports/certification_summary.json",
+      "sha256": "3e91cb20ba3015f4a9567cc1d32ab8d249a8f2ef7d4cef367b69056df65b636c"
+    },
+    {
+      "bytes": 79,
+      "path": "results/perception_closure_v04/phase10/reports/metric_recomputation_summary.json",
+      "sha256": "9e6e9d2a30e2be3e3a558ca121c433468dbb8c96c57ba7700a0a5aa9cc8853c3"
+    },
+    {
+      "bytes": 2149,
+      "path": "results/perception_closure_v04/phase10/reports/phase10_audit.json",
+      "sha256": "ec15095ad154ce2d576c91daa27078abbcbe9d8a6e0b580be0042ba8e96212c0"
+    },
+    {
+      "bytes": 88,
+      "path": "results/perception_closure_v04/phase10/reports/phase10_audit.md",
+      "sha256": "4bf0741fb5890d9042880475fdd69b1093011d5cd5d585c83d1fce32684ea202"
+    },
+    {
+      "bytes": 560,
+      "path": "results/perception_closure_v04/phase10/reports/preclaim_gate_audit.json",
+      "sha256": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00"
+    },
+    {
+      "bytes": 206,
+      "path": "results/perception_closure_v04/phase10/reports/reproducibility_report.md",
+      "sha256": "185b3bc077653f8ea6a0e0a4c80e8a92d2bb2e3062fe0ff78cb726918c0d0c77"
+    },
+    {
+      "bytes": 911,
+      "path": "results/perception_closure_v04/phase10/reports/reproducibility_summary.json",
+      "sha256": "4605cbb2a73e868916f401d9ee1490f976921c94f5d9fce28987b30563c273a6"
+    },
+    {
+      "bytes": 751,
+      "path": "results/perception_closure_v04/phase10/REPRODUCE.md",
+      "sha256": "2f34c3218671f8b376240c95e332ba21e2860385a82c26b823093713a669a40c"
+    },
+    {
+      "bytes": 381057,
+      "path": "results/perception_closure_v04/phase10/taint/hidden_field_inventory.json",
+      "sha256": "43beb054e94f89f9c19becc5bae6d38afed11c9c601a1de6474914c1a176bdd1"
+    },
+    {
+      "bytes": 183,
+      "path": "results/perception_closure_v04/phase10/taint/memory_scan.json",
+      "sha256": "21340c6913220dd4431aa4334b846450c40a72dcb41da3b6b65a48b456956f37"
+    },
+    {
+      "bytes": 259,
+      "path": "results/perception_closure_v04/phase10/taint/process_access_audit.json",
+      "sha256": "9526037d8faaff0308195f42a5a8afd9f2d96fc57ed722ae60b0e396000b4f42"
+    },
+    {
+      "bytes": 594,
+      "path": "results/perception_closure_v04/phase10/trace/completeness.json",
+      "sha256": "8439853f906b7046c0d8ac6add0ed4f5a9359af78de6cb8d7a475f630bb156a5"
+    },
+    {
+      "bytes": 184,
+      "path": "results/perception_closure_v04/phase10/trace/lineage.json",
+      "sha256": "c5558979369e148f8be429793c26bedf6984e4e9bbdb6fab0ba1d81b6fb6c4a9"
+    },
+    {
+      "bytes": 131,
+      "path": "results/perception_closure_v04/phase10/trace/residual_escalation.json",
+      "sha256": "353885538b1b139d834948ac0bf615af6dc7d46437e78e3201329bdf49d0c661"
+    },
+    {
+      "bytes": 140,
+      "path": "results/perception_closure_v04/phase10/trace/terminal_authority.json",
+      "sha256": "afa9d700c0561a370e8a43147044fe3e09493007271a62dd9ffe1c9c210c58db"
+    }
+  ],
+  "audit_sha256": "ec15095ad154ce2d576c91daa27078abbcbe9d8a6e0b580be0042ba8e96212c0",
+  "claim_ledger_sha256": "0359ad39a339042e7c3ef2ab3353b9d8ab2fc67ca9d8abe95e77b613fa96e44f",
+  "environment_lock_sha256": "193961e3293a3f55c6e30705baf79c9de5eae30c88cffabaa767b1d91f646fad",
+  "freeze_policy": {
+    "external_tag": "v0.4-perception-closure-audited",
+    "external_tag_authorized": false,
+    "fail_closed": true,
+    "post_freeze_namespace_required": true,
+    "prohibit_provisional_claims": true,
+    "release_id": "perception_closure_v04_phase10_20260718_r2",
+    "require_clean_source_tree": true,
+    "require_complete_traces": true,
+    "require_signed_manifests": true,
+    "require_zero_findings": true,
+    "require_zero_hidden_taint": true
+  },
+  "input_index_sha256": "23af60245c206ef3bb111a88df957561e22f4b26694c5d93344dbdb65af9704a",
+  "public_key_sha256": "731386a647cfda0ced5b95967fa937c1071e1f1c5fcabd78adaafda044303a2f",
+  "release_id": "perception_closure_v04_phase10_20260718_r2",
+  "results_index_sha256": "d0d21e2209e16435619079715aa9cc76b4028cac01797623b7c17d12820cc3d7",
+  "schema_version": "1.0.0",
+  "source_commit": "e4748db3b70cf0632f6362a8c79d25cefd72a09a",
+  "status": "FROZEN"
+}

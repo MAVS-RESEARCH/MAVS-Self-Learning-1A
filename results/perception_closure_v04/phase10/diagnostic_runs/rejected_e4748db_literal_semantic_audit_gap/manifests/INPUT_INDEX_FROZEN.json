@@ -1,0 +1,9 @@
+{
+  "artifact_graph_sha256": "1f4b6b5252fa2efdbc9eed9b3d8d2936f4fca6b511d2e40fe0bd154274b49bb4",
+  "environment_lock_sha256": "193961e3293a3f55c6e30705baf79c9de5eae30c88cffabaa767b1d91f646fad",
+  "frozen": true,
+  "input_artifact_index_sha256": "23af60245c206ef3bb111a88df957561e22f4b26694c5d93344dbdb65af9704a",
+  "sample_plan_sha256": "160983c29ce2c56757497ea64121a860a0a9691c2a3c9acaa4f035f4ba0a3fcf",
+  "schema_version": "1.0.0",
+  "source_commit": "e4748db3b70cf0632f6362a8c79d25cefd72a09a"
+}

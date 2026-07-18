@@ -1,0 +1,9 @@
+{
+  "external_tag_authorized": false,
+  "external_tag_created": false,
+  "reason": "WorkPlan prohibits external tagging without separate user authorization.",
+  "schema_version": "1.0.0",
+  "source_commit": "5963890bfdb9c8a3b986ed83d19d7cd2024f0325",
+  "tag": "v0.4-perception-closure-audited",
+  "tag_binding_recorded": true
+}

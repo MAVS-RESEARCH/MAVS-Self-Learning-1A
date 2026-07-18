@@ -1,0 +1,79 @@
+{
+  "claims": {
+    "deployment_readiness": {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "gates": {
+        "external_operational_validation": false
+      },
+      "status": "unsupported"
+    },
+    "executable_diagnostic_synthesis": {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "gates": {
+        "candidate_reconciliation": true,
+        "certification_match": true,
+        "input_integrity": true,
+        "template_integrity": true
+      },
+      "status": "supported"
+    },
+    "perception_closure_runtime": {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "gates": {
+        "hidden_taint_zero": true,
+        "permutation_invariance": true,
+        "replay_match": true,
+        "trace_completeness": true
+      },
+      "status": "supported"
+    },
+    "three_generation_blind_transfer": {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "gates": {
+        "cumulative_value": true,
+        "metric_recomputation": true,
+        "phase9_blind_gate": true,
+        "result_isolation": true
+      },
+      "status": "supported"
+    },
+    "universal_zero_error": {
+      "artifact_hashes": {
+        "phase10_preclaim_audit": "54e28e9fd445b98c3338f609bfcc2920e3b243894c62264dc053042915734a00",
+        "phase6_audit": "07e087ec0f940943050eccdcc2c43a7763c8e7d0a2d600c4a37e4aa669a25b5d",
+        "phase7_audit": "a9d2c8a475b7eee31b79192e902c0224c0e700ccaea48460e9d2a9a424dd09c8",
+        "phase8_audit": "6ab6e66fb52b543d0776ef91bdfc5f1c141aef3503c8a7fd879740f884b7cd7d",
+        "phase9_audit": "c8b59b25e85e05fb5d600257783c4021f9790dceaffb888f389610d805bce8f8"
+      },
+      "gates": {
+        "finite_covered_class_only": false
+      },
+      "status": "unsupported"
+    }
+  },
+  "schema_version": "1.0.0"
+}

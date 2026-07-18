@@ -1,0 +1,23 @@
+{
+  "command": [
+    "C:\\Users\\Saif malik\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-m",
+    "pytest",
+    "tests/phase6",
+    "tests/phase7",
+    "tests/phase8",
+    "tests/phase10",
+    "-q"
+  ],
+  "manifest_verification": true,
+  "phase10_recomputation": true,
+  "phase6_integrity": true,
+  "phase7_microbenchmarks": true,
+  "phase8_all_ablations": true,
+  "phase9_reduced_rows": 1752,
+  "pytest_exit_code": 0,
+  "pytest_stderr": "",
+  "pytest_stdout": "........................................................................ [ 36%]\n........................................................................ [ 73%]\n...................................................                      [100%]\n",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

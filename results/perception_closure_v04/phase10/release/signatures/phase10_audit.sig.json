@@ -1,0 +1,7 @@
+{
+  "algorithm": "ed25519",
+  "schema_version": "1.0.0",
+  "signature_base64": "EoC3/oTAHw70uMyywRrpXDVhDAEeO/ixQKc+3UqVmFAQhObjbxUtdQw01QJxaFNBGU+FlJJwDm/fE0HRP0e0Cg==",
+  "signed_path": "results/perception_closure_v04/phase10/reports/phase10_audit.json",
+  "signed_sha256": "5ad16e25fbdf863e511bdccc17ace7616066a71897532cff82829f2675ae1874"
+}

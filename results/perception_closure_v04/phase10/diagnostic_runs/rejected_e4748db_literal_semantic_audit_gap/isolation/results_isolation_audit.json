@@ -1,0 +1,10 @@
+{
+  "contamination_findings": 0,
+  "default_reports_current_namespace_only": true,
+  "legacy_files_checked": 174,
+  "legacy_mismatches": 0,
+  "overwrite_findings": 0,
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "track_overlap": 0
+}

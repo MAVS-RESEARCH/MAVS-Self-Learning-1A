@@ -1,0 +1,16 @@
+{
+  "comparisons": [
+    {
+      "comparison": "legacy_phase5_vs_phase9_paired",
+      "explicit": true,
+      "manifest": "results/perception_closure_v04/phase9/paired_original_bank/manifests/generation_1/generation_manifest.json"
+    },
+    {
+      "comparison": "phase9_paired_vs_blind",
+      "explicit": true,
+      "manifest": "results/perception_closure_v04/phase9/BANKS_SEALED.json"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "silent_concatenation": false
+}

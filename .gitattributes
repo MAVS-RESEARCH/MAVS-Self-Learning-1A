@@ -1,3 +1,4 @@
 results/raw/*.jsonl filter=lfs diff=lfs merge=lfs -text
 results/processed/step_metrics.csv filter=lfs diff=lfs merge=lfs -text
 results/raw/*/phase5/generation_*_traces.parquet filter=lfs diff=lfs merge=lfs -text
+results/perception_closure_v04/phase10/** -text -diff

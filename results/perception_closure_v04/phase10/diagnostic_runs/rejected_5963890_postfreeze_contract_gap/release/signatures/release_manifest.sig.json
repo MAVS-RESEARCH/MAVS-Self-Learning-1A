@@ -1,0 +1,7 @@
+{
+  "algorithm": "ed25519",
+  "schema_version": "1.0.0",
+  "signature_base64": "Zy70wJqdcmpqGhnTxhtLbA+PnMmDb3kXoCgIxhISnOuZhndcrQNpRhPC6/dhAAkkPTg42OY31QpfPW6Mqh6JDw==",
+  "signed_path": "results/perception_closure_v04/phase10/release/release_manifest.json",
+  "signed_sha256": "7dc4381348e27e4b7b912097c49511b375450d7d67cce000c53e55ba6db4df5c"
+}

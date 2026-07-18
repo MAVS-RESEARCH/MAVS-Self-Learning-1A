@@ -1,0 +1,7 @@
+{
+  "algorithm": "ed25519",
+  "schema_version": "1.0.0",
+  "signature_base64": "XMqqSXkCty6qps/ZbsJThBxfxGCaNeurrzKPRMzNjdy8nR8Puhne+UiSwIXPypLlTY0MoMH+6JwMOZyVYRiKDQ==",
+  "signed_path": "results/perception_closure_v04/phase10/manifests/environment_lock.json",
+  "signed_sha256": "193961e3293a3f55c6e30705baf79c9de5eae30c88cffabaa767b1d91f646fad"
+}

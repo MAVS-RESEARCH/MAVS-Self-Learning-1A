@@ -1,0 +1,22 @@
+{
+  "clean_environment": {
+    "created": true,
+    "deleted_after_execution": true,
+    "dependency_install": "PASS",
+    "isolated_site_packages": true,
+    "lock_sha256": "1003d6fe1a3039c1a3df76699e481b9b5e2d78da55f037f2b5653c534c3732aa",
+    "source_execution": "committed_source_via_pinned_pythonpath"
+  },
+  "component": "all",
+  "manifest_verification": true,
+  "phase10_recomputation": true,
+  "phase6_integrity": true,
+  "phase7_microbenchmarks": true,
+  "phase8_all_ablations": true,
+  "phase9_reduced_rows": 1752,
+  "pytest_exit_code": 0,
+  "pytest_stderr": "",
+  "pytest_stdout": "........................................................................ [ 35%]\n........................................................................ [ 70%]\n...........................................................              [100%]\n",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

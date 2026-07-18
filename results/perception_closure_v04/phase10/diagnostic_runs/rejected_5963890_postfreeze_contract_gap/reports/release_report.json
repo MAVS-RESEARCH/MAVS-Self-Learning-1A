@@ -1,0 +1,10 @@
+{
+  "artifact_count": 41,
+  "private_key_persisted": false,
+  "release_id": "perception_closure_v04_phase10_20260718",
+  "schema_version": "1.0.0",
+  "signature_count": 3,
+  "signatures_valid": true,
+  "source_commit": "5963890bfdb9c8a3b986ed83d19d7cd2024f0325",
+  "status": "PASS"
+}

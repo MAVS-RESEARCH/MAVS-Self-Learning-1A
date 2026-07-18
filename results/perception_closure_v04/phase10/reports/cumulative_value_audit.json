@@ -1,0 +1,56 @@
+{
+  "generations": [
+    2,
+    3
+  ],
+  "paired_rows_complete": true,
+  "rows": [
+    {
+      "anti_scope_violations": 0,
+      "cumulative_compute_units": 46845.0,
+      "cumulative_frr": 0.0,
+      "cumulative_latency_ms": 1239570.0,
+      "cumulative_mean_rounds": 1.0264666666666666,
+      "cumulative_residual_escalation": 0.249,
+      "cumulative_uar": 0.0,
+      "forgetting": 0.0,
+      "fresh_compute_units": 60138.0,
+      "fresh_frr": 0.0,
+      "fresh_latency_ms": 1438965.0,
+      "fresh_mean_rounds": 1.9126666666666667,
+      "fresh_residual_escalation": 0.249,
+      "fresh_uar": 0.0,
+      "generation": 2,
+      "library_size": 20,
+      "negative_transfer": 0.0,
+      "scope_leakage": 0
+    },
+    {
+      "anti_scope_violations": 0,
+      "cumulative_compute_units": 46598.0,
+      "cumulative_frr": 0.0,
+      "cumulative_latency_ms": 1240140.0,
+      "cumulative_mean_rounds": 0.9876,
+      "cumulative_residual_escalation": 0.2803333333333333,
+      "cumulative_uar": 0.0,
+      "forgetting": 0.0,
+      "fresh_compute_units": 60372.0,
+      "fresh_frr": 0.0,
+      "fresh_latency_ms": 1446750.0,
+      "fresh_mean_rounds": 1.9058666666666666,
+      "fresh_residual_escalation": 0.2803333333333333,
+      "fresh_uar": 0.0,
+      "generation": 3,
+      "library_size": 20,
+      "negative_transfer": 0.0,
+      "scope_leakage": 0
+    }
+  ],
+  "safety_noninferiority": true,
+  "schema_version": "1.0.0",
+  "scope_forgetting_growth_integrity": true,
+  "source_path": "results/perception_closure_v04/phase9/blind_bank/summaries/generation_summary.parquet",
+  "source_sha256": "0e136d5979b52eabb5040f02e83035df0500dbbde50bfd5db2675fb549d51856",
+  "status": "PASS",
+  "strict_burden_improvement": true
+}
