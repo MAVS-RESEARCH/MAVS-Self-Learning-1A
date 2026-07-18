@@ -3,7 +3,7 @@
   "$id": "phase9_generation_manifest.schema.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "track_id", "generation", "world_count", "opportunity_count", "public_ledger_sha256", "public_fields", "evaluator_manifest_sha256", "sealed_before_participant", "signature"],
+  "required": ["schema_version", "track_id", "generation", "world_count", "opportunity_count", "public_ledger_sha256", "public_fields", "evaluator_manifest_sha256", "compiled_identity", "sealed_before_participant", "signature"],
   "properties": {
     "schema_version": {"const": "1.0.0"},
     "track_id": {"enum": ["paired_original_bank", "blind_bank"]},
@@ -16,9 +16,9 @@
     "public_fields": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "evaluator_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "source_identity": {"type": "object"},
+    "compiled_identity": {"type": "object", "required": ["opportunity_ids_sha256", "world_sequence_sha256", "seed_sequence_sha256", "schedule_sha256", "public_content_sha256"]},
     "separation": {"type": "object"},
     "sealed_before_participant": {"type": "boolean"},
     "signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
   }
 }
-

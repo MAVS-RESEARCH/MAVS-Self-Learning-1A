@@ -1689,6 +1689,95 @@ The authoritative independent auditor scanned every Phase 8 script using Python 
 - Instrumentation result: the independent AST/JavaScript scanner found **37/37** Phase 9 log statements with an immediately preceding identifying comment. Exact stabilized lines will be recorded from the authoritative audit.
 - Advancement state: disposable stress and audit pass. The disposable namespace must be removed; a clean source commit and a fresh authoritative run are required before completion.
 
+### P9-E004 - Authoritative committed-source execution, gates, audit, and seal
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 9.
+- Accepted source checkpoint: `1e1ce5ac4ce557e3da5ff595583b846cc468dbc8` (`Implement Phase 9 three-generation revalidation`). The working tree was clean before the run; all bank, environment, track, signed-manifest, audit, and seal artifacts bind this commit.
+- Authoritative command: `node scripts/run_phase9.mjs`.
+- Exact orchestration result: **PASS**, exit code `0`, wall time `1,308.8 s`; all 18 top-level orchestration steps and both four-step track orchestrators completed.
+- Test gates: inherited Phase 0-8 tests passed before compilation; Phase 9 focused tests passed **12/12** before and after execution; full repository regression passed **357/357** after execution. No test was skipped or converted to a placeholder.
+- Bank result: exactly **90,000 canonical opportunities**: the exact 45,000-opportunity original-bank diagnostic track and a separately generated/sealed 45,000-opportunity blind bank. Track B seeds are disjoint, public/evaluator fields are separated, and exact/near-duplicate overlap counts are zero. The banks were sealed before the first participant process.
+- Track A result: 103 conditions, three generations, **4,635,000** raw decision traces, **309** schema-valid condition checkpoints, 309 generation summaries, 92,700 world summaries, 1,854 stratum summaries, and 1,236 paired-confidence rows. The original A0-A49 registry is re-executed; no legacy result row is copied into current metrics. Claim status is **diagnostic-only**.
+- Track B result: 35 conditions, three generations, **1,575,000** raw decision traces, **105** schema-valid condition checkpoints, 105 generation summaries, 31,500 world summaries, 630 stratum summaries, and 420 paired-confidence rows. All 21 claim-critical ablations are present. Claim status is **provisional until Phase 10**.
+- Protected and residual evidence: Version 0.4 cumulative/fresh/frozen have observed UAR `0`, FRR `0`, closure UAR `0`, closure FRR `0`, stable-evidence residual `0`, and scope leakage `0` in all six track-generation combinations. One-sided 95% zero-event upper bounds range from `0.000453-0.000485` for UAR and `0.000340-0.000357` for FRR. Residual escalation equals the evaluator-labeled irreducible floor exactly in every generation; no unexplained residual mass exists.
+- Cumulative evidence: on Track A cumulative rounds improve from `1.906933` in G1 to `1.021733` in G2 and `0.983933` in G3, versus fresh `1.906933`, `1.903600`, `1.897733`. On Track B cumulative is `1.900533`, `1.026467`, `0.987600` versus fresh `1.900533`, `1.912667`, `1.905867`. G2/G3 consolidation gains are `0.881867/0.913800` and `0.886200/0.918267`; UAR, FRR, scope, retention, and complexity do not regress.
+- Blind transfer: Track B reproduces Track A’s protected-zero, scope-zero, and cumulative-round-gain mechanism without old case or label access. Track A and Track B are not pooled.
+- Ablation evidence: every Track B claim-critical ablation produces its predicted degradation or quarantined integrity detection with matched banks/budgets. Track A retains the expected I0/P0/L0 references, L8 compact-program null, and P15 oracle upper bound; all null/negative/baseline-win outcomes are retained. `oracle_closure` and P15 have UAR/FRR/escalation `0/0/0`, remain evaluator-only and noncompetitive, and are excluded from deployable claims.
+- Replay and traceability: **128,606** exact replay comparisons, covering pinned samples plus **all 108,279 protected failures**, have zero mismatches. Complete replay rate is `1.0`; hidden-field contamination and forbidden future reads are zero in every Version 0.4 summary.
+- Integrity: 20 promoted executable candidates per track preserve canonical ASTs, parameter searches, positive scopes, anti-scopes, evidence/influence/counterfactual contracts, semantic hashes, behavioral fingerprints, witnesses, and independent gate vectors. Operation compliance, certifier blindness, template-collapse, parameter-vector, label/name/operation/generation/order permutation, firewall, checkpoint legality, and result-isolation reports all pass.
+- Independent audit: **PASS**, 138 conditions, three generations, **25/25** WorkPlan clauses, zero findings. Track A audit indexes 1,032 pre-audit artifacts; Track B indexes 553. Result-isolation independently rehashes all 53 immutable original Phase 5 files and verifies Phase 6-8 seals with zero finding.
+- Result package: **1,605 files / 154,185,142 bytes** under `results/perception_closure_v04/phase9/`. Track A contains 1,034 files / 100,267,974 bytes; Track B contains 555 files / 43,899,565 bytes; remaining files are evaluator-sealed/top-level audit and seal artifacts. Previous results remain byte-preserved.
+- Seal: audit SHA-256 `BE07824F83ED0314FF8D7897985D0FBA7D293C1FC9C291161ED214CE703D25E3`; `SEALED` records audit status `PASS`, zero findings, source commit `1e1ce5a`, seal date 2026-07-18, and `phase10_executed: false`.
+- Advancement gate: all Phase 9 synthesis-integrity, protected-core, residual-floor, scope, template, stable-evidence trend, cumulative-learning, blind-transfer, ablation, auditability, replay, taint, isolation, and claim-boundary gates pass. Phase 9 is technically complete; evidence commit and GitHub synchronization remain pending.
+
+### P9-E005 - Exact authoritative console comment and statement registry
+
+The authoritative independent auditor scanned every Phase 9 Python script using AST call detection and every Phase 9 JavaScript orchestration script using statement detection. All **37/37** statements have an immediately preceding identifying comment; both track registries record `passed: true`.
+
+| File | Comment line and exact comment | Statement line and exact statement |
+|---|---|---|
+| `scripts/aggregate_phase9.py` | 38 `# console.log: phase9.aggregate.complete` | 39 `print(...)` |
+| `scripts/audit_phase9.py` | 42 `# console.log: phase9.audit.complete` | 43 `print(...)` |
+| `scripts/clean_phase9_results.py` | 21 `# console.log: phase9.clean.complete` | 22 `print(...)` |
+| `scripts/compile_phase9_banks.py` | 86 `# console.log: phase9.compile.complete` | 87 `print(...)` |
+| `scripts/finalize_phase9_manifest.py` | 17 `# console.log: phase9.manifest.complete` | 18 `print(...)` |
+| `scripts/phase9_evaluator.py` | 36 `# console.log: phase9.evaluator.release.complete` | 37 `print(...)` |
+| `scripts/replay_phase9.py` | 45 `# console.log: phase9.replay.complete` | 46 `print(...)` |
+| `scripts/run_phase9.mjs` | 12 `// console.log: phase9.orchestrator.step01.start` | 13 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 14 `// console.log: phase9.orchestrator.step02.clean` | 15 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 17 `// console.log: phase9.orchestrator.step03.source_cleanliness` | 18 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 20 `// console.log: phase9.orchestrator.step04.inherited_tests` | 21 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 23 `// console.log: phase9.orchestrator.step05.phase9_tests_before` | 24 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 26 `// console.log: phase9.orchestrator.step06.compile_and_seal_banks` | 27 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 29 `// console.log: phase9.orchestrator.step07.track_a` | 30 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 32 `// console.log: phase9.orchestrator.step08.track_b` | 33 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 35 `// console.log: phase9.orchestrator.step09.aggregate` | 36 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 38 `// console.log: phase9.orchestrator.step10_integrity` | 39 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 41 `// console.log: phase9.orchestrator.step11.replay` | 42 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 44 `// console.log: phase9.orchestrator.step12.phase9_tests_after` | 45 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 47 `// console.log: phase9.orchestrator.step13.full_regression` | 48 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 50 `// console.log: phase9.orchestrator.step14.orchestration_evidence` | 51 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 53 `// console.log: phase9.orchestrator.step15.signed_manifests` | 54 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 56 `// console.log: phase9.orchestrator.step16.independent_audit` | 57 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 59 `// console.log: phase9.orchestrator.step17.seal` | 60 `console.log(...)` |
+| `scripts/run_phase9.mjs` | 62 `// console.log: phase9.orchestrator.step18.complete` | 63 `console.log(...)` |
+| `scripts/run_phase9_blind.mjs` | 7 `// console.log: phase9.track_b.step01.execute` | 8 `console.log(...)` |
+| `scripts/run_phase9_blind.mjs` | 10 `// console.log: phase9.track_b.step02.firewall` | 11 `console.log(...)` |
+| `scripts/run_phase9_blind.mjs` | 13 `// console.log: phase9.track_b.step03.state` | 14 `console.log(...)` |
+| `scripts/run_phase9_blind.mjs` | 16 `// console.log: phase9.track_b.step04.complete` | 17 `console.log(...)` |
+| `scripts/run_phase9_paired.mjs` | 7 `// console.log: phase9.track_a.step01.execute` | 8 `console.log(...)` |
+| `scripts/run_phase9_paired.mjs` | 10 `// console.log: phase9.track_a.step02.firewall` | 11 `console.log(...)` |
+| `scripts/run_phase9_paired.mjs` | 13 `// console.log: phase9.track_a.step03.state` | 14 `console.log(...)` |
+| `scripts/run_phase9_paired.mjs` | 16 `// console.log: phase9.track_a.step04.complete` | 17 `console.log(...)` |
+| `scripts/run_phase9_track.py` | 72 `# console.log: phase9.track.complete` | 73 `print(...)` |
+| `scripts/validate_phase9_firewall.py` | 38 `# console.log: phase9.firewall.complete` | 39 `print(...)` |
+| `scripts/validate_phase9_integrity.py` | 39 `# console.log: phase9.integrity.complete` | 40 `print(...)` |
+| `scripts/validate_phase9_state.py` | 38 `# console.log: phase9.state.complete` | 39 `print(...)` |
+
+The exact full statement text, not the abbreviated `print(...)`/`console.log(...)` display above, is serialized in each track’s `reports/console_log_registry.json` together with the source path, comment line/text, statement line/text, and per-record pass value.
+
+### P9-E006 - Post-seal stress and final technical verdict before publication
+
+- Seal-enforcement command: `python scripts/clean_phase9_results.py --all-phase9`.
+- Exact result: expected nonzero exit `1`, `RuntimeError: Refusing to clean sealed Phase 9 results.` The Phase 9 namespace remained intact.
+- Seal preservation: audit SHA-256 before and after the attempted clean remained `BE07824F83ED0314FF8D7897985D0FBA7D293C1FC9C291161ED214CE703D25E3`.
+- Previous-result preservation: `result_isolation_audit.json` reports `passed: true`, zero findings, and 53/53 immutable Phase 5 indexed files unchanged; sealed Phase 6, 7, and 8 dependencies remain present. No legacy result was overwritten or pooled.
+- No-training/anti-overfit evidence: Phase 9 trains no opaque model and performs no post-unseal parameter or threshold change. It uses frozen Phase 6 executable candidates, fixed Phase 7 closure contracts, a retrospective diagnostic track, a separately seeded and sealed blind bank, exact and near-duplicate audits, separate evaluator processes, matched canonical ledgers and budgets, world-paired confidence intervals, nonsemantic permutations, complete negative/null retention, and all-failure replay.
+- Claim discipline: Track A is explicitly diagnostic-only; Track B is explicitly provisional until Phase 10. Deployment, general-domain, oracle-competitive, and final release claims remain unsupported. Phase 10 has not executed.
+- Final technical verdict: **PASS - 100% compliant with WorkPlan Section 24 Phase 9 as implemented, stress-tested, replayed, independently audited, result-isolated, and sealed**.
+- Publication state: the source checkpoint is `1e1ce5ac4ce557e3da5ff595583b846cc468dbc8`; sealed evidence and this ledger entry must still be committed and pushed before final completion is reported.
+
+### P9-E007 - Post-seal compliance escalation and withdrawal of the first completion verdict
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 9.
+- Audit action: after the first sealed run but before evidence publication, WorkPlan Section 24’s information-firewall/generation protocol was re-read literally against the orchestration sequence and serialized identity artifacts.
+- Compliance gap 1: WorkPlan requires retained counterexamples, rotating scope holdouts, template/operation/label permutation, certifier blindness, hidden-field taint, and deterministic replay to execute after G3 **before summaries are generated**. Source checkpoint `1e1ce5a` generated summaries before the template/permutation and replay stages. The outputs passed numerically, but the order was noncompliant.
+- Compliance gap 2: Track A recorded the original public file hash and opportunity identity, but did not serialize independent opportunity, seed-sequence, world-sequence, full schedule, and public-content hashes on both sides of the original-versus-compiled identity comparison.
+- Compliance gap 3: generation manifests and checkpoint hashes existed, but explicit generation-boundary seal artifacts did not bind every checkpoint, hidden-taint count, future-read count, and the guarantee that the boundary closed before the next generation.
+- Disposition: the P9-E004 through P9-E006 run is **superseded and not accepted as final Phase 9 evidence** despite its zero-finding audit. Its completion verdict is withdrawn. It will not be committed as the authoritative result package.
+- Corrective implementation: add exact original/compiled identity hashes; write generation-boundary seals before advancing; serialize `program_scope_key`; add actual post-G3 retained-counterexample replay and rotating domain-scope holdouts; move template/permutation integrity, deterministic replay, and post-G3 challenges before aggregation; prevent aggregation from overwriting independently recomputed integrity reports; and make the independent auditor verify order from orchestration evidence, terminal local certificates, boundary seals, identities, and challenge artifacts.
+- Advancement state: Phase 9 is returned to **in progress**. A new source checkpoint, full clean-source rerun, audit, and seal are mandatory.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:
@@ -1719,8 +1808,8 @@ No later phase may be marked in progress until the preceding phase exit gate has
 | 6 | Executable diagnostic synthesis and anti-gaming foundation | Complete | P6-E021 through P6-E023; strengthened replacement run, 206-test regression, 24,600 schema records, 1,240 objective recomputations, and zero-finding audit pass |
 | 7 | Live Perception-Closure Runtime | Complete | P7-E005 through P7-E007; sealed 384-execution run, 320 independent certificate recomputations, 266-test regression, 17/17 gates, and zero-finding audit |
 | 8 | Ablation and Integrity Program | Complete | P8-E004 through P8-E006; sealed 39-condition matrix, 975,000 legacy decision replays, 345-test regression, 697-file deterministic replay, 21/21 clauses, and zero-finding audit |
-| 9 | Three-Generation Phase 5 Revalidation | In progress | P9-E000 and P9-E001 authorize the fail-closed two-track implementation; no gate has passed yet |
+| 9 | Three-Generation Phase 5 Revalidation | In progress | P9-E007 supersedes the first sealed run after detecting audit-order, exact-identity, and boundary-seal gaps before publication |
 
 ## Current checkpoint
 
-Phase 0 through Phase 8 are complete and frozen. The accepted Phase 8 source checkpoint is `31d7a673ef0a23a24f41485bfc84a5c4541eac88`; accepted evidence is `results/perception_closure_v04/phase8/phase8_authoritative_20260714/`; evidence commit is `e088c86cc73f176576677a0490e3f8967c1663f8`; audit SHA-256 is `6AB6E66FB52B543D0776EF91BDFC5F1C141AEF3503C8A7FD879740F884B7CD7D`. Phase 9 is authorized and in progress under P9-E000; no Phase 9 exit gate has passed.
+Phase 0 through Phase 8 are complete and frozen. Phase 9 source checkpoint `1e1ce5ac4ce557e3da5ff595583b846cc468dbc8` and audit SHA-256 `BE07824F83ED0314FF8D7897985D0FBA7D293C1FC9C291161ED214CE703D25E3` are superseded diagnostic evidence under P9-E007 and are not accepted for publication. Corrective Phase 9 implementation is in progress; no final Phase 9 advancement gate is currently open.

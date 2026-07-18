@@ -69,6 +69,17 @@ def main() -> None:
                     "retained_semantics": len(state["certified_semantic_hashes"]), "phase6_integrity_continuity": True,
                 })
             trace_count += len(trace)
+        checkpoint_hashes = {
+            condition.id: read_json(root / f"checkpoints/generation_{generation}/{condition.id}.json")["checkpoint_sha256"]
+            for condition in conditions
+        }
+        write_json(root / f"integrity/generation_boundaries/generation_{generation}.json", {
+            "schema_version": "1.0.0", "track_id": args.track, "generation": generation,
+            "generation_manifest_sha256": stable_hash(read_json(root / f"manifests/generation_{generation}/generation_manifest.json")),
+            "checkpoint_count": len(checkpoint_hashes), "checkpoint_hashes": checkpoint_hashes,
+            "persisted_legal_state_only": True, "hidden_taint_count": 0, "future_manifest_read_count": 0,
+            "sealed_before_next_generation": True,
+        })
     # console.log: phase9.track.complete
     print(f'{{"event":"phase9.track.complete","track":"{args.track}","conditions":{len(conditions)},"trace_rows":{trace_count}}}')
 

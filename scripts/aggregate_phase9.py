@@ -104,11 +104,6 @@ def _empty_integrity() -> dict[str, int]:
 
 def _write_integrity(track_id: str, summary: pd.DataFrame) -> None:
     root = track_root(track_id); v04 = summary[summary["condition_id"] == "v04_cumulative"]
-    template = {"schema_version": "1.0.0", "track_id": track_id, "canonical_ast_count": int(v04["canonical_ast_count"].max()), "template_count": int(v04["template_count"].max()), "behavioral_equivalence_classes": int(v04["behavioral_equivalence_classes"].max()), "one_template_collapse": False, "unaudited_collapse": False, "passed": int(v04["template_count"].min()) > 1}
-    write_json(root / "integrity/template_collapse_report.json", template)
-    write_json(root / "integrity/permutation_invariance.json", {"schema_version": "1.0.0", "label_name_operation_order_invariant": True, "repetitions": 25, "metric_delta_max": 0.0, "passed": True})
-    write_json(root / "integrity/certifier_blindness.json", {"schema_version": "1.0.0", "metadata_stripped_candidate_library": True, "evaluator_process_separate": True, "participant_truth_access": False, "passed": True})
-    write_json(root / "integrity/operation_compliance.json", {"schema_version": "1.0.0", "operation_noncompliance_count": int(v04["operation_noncompliance_count"].sum()), "constant_count": int(v04["constant_count"].sum()), "noop_count": int(v04["noop_count"].sum()), "name_only_count": int(v04["name_only_count"].sum()), "parent_identical_count": int(v04["parent_identical_count"].sum()), "unwitnessed_count": int(v04["witness_reproduction_failure_count"].sum()), "passed": all(int(v04[column].sum()) == 0 for column in ["operation_noncompliance_count", "constant_count", "noop_count", "name_only_count", "parent_identical_count", "witness_reproduction_failure_count"])})
     residual_rows = []
     for generation in (1, 2, 3):
         trace = pd.read_parquet(root / f"decision_traces/v04_cumulative/generation_{generation}.parquet")

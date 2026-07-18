@@ -10,7 +10,7 @@ from pathlib import Path
 import pandas as pd
 
 from mavs10d.core.hashing import file_sha256, stable_hash
-from mavs10d.revalidation.banks import blind_generation, hidden_fields, original_generation
+from mavs10d.revalidation.banks import blind_generation, hidden_fields, original_generation, public_identity
 from mavs10d.revalidation.conditions import condition_manifest
 from phase9_common import PHASE6_ROOT, PHASE7_ROOT, PHASE8_ROOT, PHASE9_ROOT, REPO_ROOT, dependency_lock, environment_lock, load_yaml, read_json, track_root, write_frame, write_json
 
@@ -53,6 +53,7 @@ def main() -> None:
                 "public_ledger_sha256": file_sha256(public_path), "public_fields": sorted(bank.public.columns),
                 "evaluator_manifest_sha256": file_sha256(evaluator_dir / "evaluator_manifest.json"),
                 "source_identity": bank.source_identity,
+                "compiled_identity": public_identity(bank.public),
                 "separation": {"forbidden_public_fields": sorted(hidden_fields()), "overlap": sorted(set(bank.public.columns) & hidden_fields()), "participant_final_access": False},
                 "sealed_before_participant": True,
             }
@@ -64,6 +65,9 @@ def main() -> None:
                 source_rel = bank.source_identity["public_source"]
                 if indexed.get(source_rel) != bank.source_identity["public_sha256"]:
                     source_discrepancies.append({"generation": generation, "artifact": source_rel, "reason": "legacy_index_hash_mismatch"})
+                for field in ("opportunity_ids_sha256", "world_sequence_sha256", "seed_sequence_sha256", "schedule_sha256", "public_content_sha256"):
+                    if body["compiled_identity"][field] != bank.source_identity[field]:
+                        source_discrepancies.append({"generation": generation, "artifact": field, "reason": "original_identity_mismatch"})
             else:
                 blind_identity.extend(bank.evaluator[["raw_content_hash", "near_duplicate_signature"]].astype(str).to_dict(orient="records"))
         _copy_candidate_library(root)
@@ -119,4 +123,3 @@ def _overlap_report(prior: dict[str, set[str]], blind: list[dict[str, str]]) -> 
 
 if __name__ == "__main__":
     main()
-

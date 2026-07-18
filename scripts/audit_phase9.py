@@ -59,6 +59,11 @@ def _audit_track(track_id: str) -> list[dict[str, Any]]:
         try: jsonschema.validate(manifest, gen_schema)
         except jsonschema.ValidationError as error: findings.append({"gate": "manifest_schema", "generation": generation, "detail": error.message})
         if manifest["signature"] != stable_hash({key: value for key, value in manifest.items() if key != "signature"}): findings.append({"gate": "manifest_signature", "generation": generation})
+        if track_id == "paired_original_bank" and any(manifest["compiled_identity"].get(field) != manifest["source_identity"].get(field) for field in ("opportunity_ids_sha256", "world_sequence_sha256", "seed_sequence_sha256", "schedule_sha256", "public_content_sha256")):
+            findings.append({"gate": "original_opportunity_seed_world_schedule_identity", "generation": generation})
+        boundary = read_json(root / f"integrity/generation_boundaries/generation_{generation}.json")
+        if not boundary["sealed_before_next_generation"] or not boundary["persisted_legal_state_only"] or boundary["hidden_taint_count"] or boundary["future_manifest_read_count"] or boundary["checkpoint_count"] != len(condition_registry(track_id)):
+            findings.append({"gate": "generation_boundary", "generation": generation})
         truth = pd.read_parquet(PHASE9_ROOT / f"evaluator_sealed/{track_id}/generation_{generation}/truth.parquet").set_index("opportunity_id")
         for condition in condition_registry(track_id):
             trace = pd.read_parquet(root / f"decision_traces/{condition.id}/generation_{generation}.parquet")
@@ -68,10 +73,12 @@ def _audit_track(track_id: str) -> list[dict[str, Any]]:
             recomputed = {"uar": float((unsafe & (joined["terminal_action"] == "ACCEPT")).sum() / unsafe.sum()), "frr": float((safe & (joined["terminal_action"] == "REJECT")).sum() / safe.sum()), "residual_escalation_rate": float(joined["external_escalate"].mean()), "query_cost": float(joined["query_count"].sum()), "scope_leakage": int(joined["scope_leakage"].sum()), "complete_replay_rate": float(joined["replay_complete"].mean())}
             stored = summary[(summary["condition_id"] == condition.id) & (summary["generation"] == generation)].iloc[0]
             if any(abs(float(stored[key]) - float(value)) > 1e-12 for key, value in recomputed.items()): findings.append({"gate": "metric_recomputation", "generation": generation, "condition": condition.id})
+            if condition.id == "v04_cumulative" and bool(((trace["terminal_action"] != "ESCALATE") & ~trace["closure_certificate_valid"].astype(bool)).any()):
+                findings.append({"gate": "local_certificate_continuity", "generation": generation})
     claim = read_json(root / "reports/phase9_claim_gate.json")
     try: jsonschema.validate(claim, claim_schema)
     except jsonschema.ValidationError as error: findings.append({"gate": "claim_schema", "detail": error.message})
-    for required in ("template_collapse_report.json", "permutation_invariance.json", "certifier_blindness.json", "hidden_field_audit.json", "operation_compliance.json", "participant_state_audit.json", "replay_report.json"):
+    for required in ("template_collapse_report.json", "permutation_invariance.json", "certifier_blindness.json", "hidden_field_audit.json", "operation_compliance.json", "participant_state_audit.json", "replay_report.json", "retained_counterexample_report.json", "rotating_scope_holdout_report.json"):
         item = read_json(root / ("integrity/" + required))
         if not item.get("passed", item.get("status") == "PASS"): findings.append({"gate": "integrity_report", "artifact": required})
     if not claim["passed"]: findings.append({"gate": "claim_gate"})
@@ -121,8 +128,10 @@ def _workplan_clauses() -> dict[str, bool]:
     expected_nulls = {"I0", "P0", "L0", "L8", "P15"}
     a_ablations = [read_json(path) for path in aroot.glob("ablation_results/*/result.json")]
     b_ablations = [read_json(path) for path in broot.glob("ablation_results/*/result.json")]
+    orchestration = read_json(aroot / "reports/orchestration_evidence.json")["completed_steps"]
     return {
         "paired_original_45000": all(len(pd.read_parquet(aroot / f"manifests/generation_{g}/public_ledger.parquet")) == 15000 for g in (1,2,3)),
+        "original_opportunity_seed_world_schedule_identity": all(all(read_json(aroot / f"manifests/generation_{g}/generation_manifest.json")["compiled_identity"][field] == read_json(aroot / f"manifests/generation_{g}/generation_manifest.json")["source_identity"][field] for field in ("opportunity_ids_sha256","world_sequence_sha256","seed_sequence_sha256","schedule_sha256","public_content_sha256")) for g in (1,2,3)),
         "blind_sealed_45000": all(len(pd.read_parquet(broot / f"manifests/generation_{g}/public_ledger.parquet")) == 15000 for g in (1,2,3)),
         "track_a_full_a0_a49": len([item for item in condition_registry("paired_original_bank") if item.id.startswith("legacy_registry_A")]) == 50,
         "cumulative_fresh_frozen": all(identifier in set(a["condition_id"]) and identifier in set(b["condition_id"]) for identifier in ("v04_cumulative","v04_fresh","v04_frozen_after_g1")),
@@ -130,6 +139,7 @@ def _workplan_clauses() -> dict[str, bool]:
         "phase8_full_track_a_claim_critical_track_b": len([item for item in condition_registry("paired_original_bank") if item.id.startswith(("I","P","L"))]) == 39 and len([item for item in condition_registry("blind_bank") if item.id.startswith(("I","P","L"))]) == 21,
         "information_firewall": read_json(aroot / "integrity/hidden_field_audit.json")["passed"] and read_json(broot / "integrity/hidden_field_audit.json")["passed"],
         "state_legality": read_json(aroot / "integrity/participant_state_audit.json")["status"] == "PASS" and read_json(broot / "integrity/participant_state_audit.json")["status"] == "PASS",
+        "generation_boundaries_sealed": all((root / f"integrity/generation_boundaries/generation_{g}.json").exists() for root in (aroot,broot) for g in (1,2,3)),
         "lexicographic_metrics": all(column in a.columns and column in b.columns for column in ("uar","frr","residual_escalation_rate","query_cost","latency_ms","program_complexity")),
         "all_metric_families": all(column in b.columns for column in ("conditional_cmpg","scope_leakage","canonical_ast_count","independent_gate_failure_count","consolidation_gain","complete_replay_rate")),
         "protected_residual_scope_template_trend_cumulative_gates": ca["passed"] and cb["passed"],
@@ -145,6 +155,7 @@ def _workplan_clauses() -> dict[str, bool]:
         "separate_evaluator_process_and_oracle_quarantine": all(all((root / f"integrity/oracle_quarantine/generation_{generation}/oracle_actions.parquet").exists() for generation in (1,2,3)) for root in (aroot,broot)),
         "signed_manifests": all((root / "SIGNED_MANIFEST.json").exists() for root in (aroot,broot)),
         "replay_complete": read_json(aroot / "integrity/replay_report.json")["passed"] and read_json(broot / "integrity/replay_report.json")["passed"],
+        "post_g3_challenges_before_summaries": all(read_json(root / "integrity/retained_counterexample_report.json")["passed"] and read_json(root / "integrity/rotating_scope_holdout_report.json")["passed"] for root in (aroot,broot)) and orchestration.index("integrity") < orchestration.index("aggregate") and orchestration.index("replay") < orchestration.index("aggregate") and orchestration.index("post_g3_challenges") < orchestration.index("aggregate"),
         "claims_boundaries": "diagnostic-only" in (aroot / "reports/CLAIMS.md").read_text(encoding="utf-8") and "provisional" in (broot / "reports/CLAIMS.md").read_text(encoding="utf-8"),
         "previous_results_preserved": _result_isolation()["passed"],
     }

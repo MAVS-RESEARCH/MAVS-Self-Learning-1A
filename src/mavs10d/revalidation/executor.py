@@ -144,6 +144,7 @@ def execute_generation(
         "terminal_action": action, "local_resolved": local_resolved, "external_escalate": external,
         "residual_reason": np.where(external & (response.to_numpy() == "NO_SEPARATING_EVIDENCE"), "irreducible_no_separating_evidence", np.where(external, "condition_withheld_closure_path", "none")),
         "closure_certificate_valid": certified & ~external, "active_program": np.where(condition.synthesis_enabled, "phase6-certified-sparse-v04", "fixed-governance"),
+        "program_scope_key": family,
         "active_basis_size": np.where(condition.synthesis_enabled, np.where(ambiguity, 2, 1), 1),
         "active_eligibility": np.where(condition.synthesis_enabled, 2, 0), "scope_leakage": scope_leak,
         "anti_scope_violation": anti_scope, "unintended_influence": scope_leak,

@@ -32,3 +32,9 @@ def test_every_javascript_console_log_has_identifying_comment() -> None:
             if "console.log(" in line and not line.strip().startswith("//"):
                 assert lines[index - 1].strip().startswith("// console.log:"), (path, index + 1)
 
+
+def test_post_g3_challenges_precede_summary_generation() -> None:
+    source = (ROOT / "scripts/run_phase9.mjs").read_text(encoding="utf-8")
+    assert source.index('completed.push("integrity")') < source.index('completed.push("aggregate")')
+    assert source.index('completed.push("replay")') < source.index('completed.push("aggregate")')
+    assert source.index('completed.push("post_g3_challenges")') < source.index('completed.push("aggregate")')

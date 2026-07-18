@@ -4,7 +4,7 @@ import inspect
 from pathlib import Path
 
 from mavs10d.core.hashing import file_sha256
-from mavs10d.revalidation.banks import blind_generation, hidden_fields, original_generation
+from mavs10d.revalidation.banks import blind_generation, hidden_fields, original_generation, public_identity
 from mavs10d.revalidation.executor import execute_generation
 
 
@@ -17,6 +17,7 @@ def test_original_bank_is_exact_and_complete() -> None:
     assert len(bank.public) == 15_000
     assert bank.public["world_id"].nunique() == 300
     assert bank.source_identity["public_sha256"] == file_sha256(source)
+    assert all(bank.source_identity[field] == public_identity(bank.public)[field] for field in ("opportunity_ids_sha256", "world_sequence_sha256", "seed_sequence_sha256", "schedule_sha256", "public_content_sha256"))
     assert not (set(bank.public.columns) & hidden_fields())
 
 
@@ -33,4 +34,3 @@ def test_blind_bank_has_new_identity_and_native_separating_actions() -> None:
 def test_participant_executor_has_no_truth_argument() -> None:
     parameters = set(inspect.signature(execute_generation).parameters)
     assert not parameters & {"truth", "unsafe", "hidden", "evaluator", "minimum_separating_action"}
-

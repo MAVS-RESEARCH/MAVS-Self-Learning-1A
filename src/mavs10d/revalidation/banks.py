@@ -30,12 +30,17 @@ def original_generation(generation: int) -> GenerationBank:
     public = pd.read_parquet(public_path)
     hidden = pd.DataFrame(json.loads(hidden_path.read_text(encoding="utf-8"))["outcomes"])
     evaluator = _extend_evaluator(hidden, public, "retrospective_derived_query_contract")
+    identity = public_identity(public)
     return GenerationBank(public, evaluator, {
         "public_source": public_path.relative_to(REPO_ROOT).as_posix(),
         "public_sha256": file_sha256(public_path),
         "hidden_source": hidden_path.relative_to(REPO_ROOT).as_posix(),
         "hidden_sha256": file_sha256(hidden_path),
         "opportunity_ids_sha256": stable_hash(public["opportunity_id"].tolist()),
+        "world_sequence_sha256": identity["world_sequence_sha256"],
+        "seed_sequence_sha256": identity["seed_sequence_sha256"],
+        "schedule_sha256": identity["schedule_sha256"],
+        "public_content_sha256": identity["public_content_sha256"],
     })
 
 
@@ -89,4 +94,23 @@ def hidden_fields() -> set[str]:
         "hidden_mechanism", "prior_family", "feedback_target", "attacker_family", "raw_content_hash",
         "near_duplicate_signature", "answer_key_hash", "minimum_separating_action", "expected_separability",
         "irreducible_ambiguity", "query_response", "separating_action_provenance",
+    }
+
+
+def public_identity(public: pd.DataFrame) -> dict[str, str]:
+    """Hash exact opportunity, world, seed, schedule, and content identities independently."""
+
+    worlds = public.drop_duplicates("world_id", keep="first").sort_values(["world_index", "world_id"])
+    schedule_fields = [
+        "world_id", "world_seed", "world_index", "benchmark_stratum", "reset_type", "domain",
+        "heldout_domain", "corruption_family", "heldout_corruption_family", "composition_id",
+        "heldout_composition_id", "generator_id", "policy_id",
+    ]
+    ordered = public.sort_values(["world_index", "step", "opportunity_id"])
+    return {
+        "opportunity_ids_sha256": stable_hash(ordered["opportunity_id"].astype(str).tolist()),
+        "world_sequence_sha256": stable_hash(worlds["world_id"].astype(str).tolist()),
+        "seed_sequence_sha256": stable_hash(worlds["world_seed"].astype(int).tolist()),
+        "schedule_sha256": stable_hash(worlds[schedule_fields].to_dict(orient="records")),
+        "public_content_sha256": stable_hash(ordered.sort_index(axis=1).to_dict(orient="records")),
     }

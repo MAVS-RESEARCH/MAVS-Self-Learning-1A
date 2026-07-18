@@ -32,33 +32,35 @@ run("node", ["scripts/run_phase9_paired.mjs"]); completed.push("track_a");
 // console.log: phase9.orchestrator.step08.track_b
 console.log(JSON.stringify({ event: "phase9.orchestrator.step08.track_b" }));
 run("node", ["scripts/run_phase9_blind.mjs"]); completed.push("track_b");
-// console.log: phase9.orchestrator.step09.aggregate
-console.log(JSON.stringify({ event: "phase9.orchestrator.step09.aggregate" }));
-run("python", ["scripts/aggregate_phase9.py"]); completed.push("aggregate");
-// console.log: phase9.orchestrator.step10_integrity
-console.log(JSON.stringify({ event: "phase9.orchestrator.step10.integrity" }));
+// console.log: phase9.orchestrator.step09.integrity
+console.log(JSON.stringify({ event: "phase9.orchestrator.step09.integrity" }));
 run("python", ["scripts/validate_phase9_integrity.py"]); completed.push("integrity");
-// console.log: phase9.orchestrator.step11.replay
-console.log(JSON.stringify({ event: "phase9.orchestrator.step11.replay" }));
+// console.log: phase9.orchestrator.step10.replay
+console.log(JSON.stringify({ event: "phase9.orchestrator.step10.replay" }));
 run("python", ["scripts/replay_phase9.py"]); completed.push("replay");
-// console.log: phase9.orchestrator.step12.phase9_tests_after
-console.log(JSON.stringify({ event: "phase9.orchestrator.step12.phase9_tests_after" }));
+// console.log: phase9.orchestrator.step11.post_g3_challenges
+console.log(JSON.stringify({ event: "phase9.orchestrator.step11.post_g3_challenges" }));
+run("python", ["scripts/validate_phase9_post_g3.py"]); completed.push("post_g3_challenges");
+// console.log: phase9.orchestrator.step12.aggregate
+console.log(JSON.stringify({ event: "phase9.orchestrator.step12.aggregate" }));
+run("python", ["scripts/aggregate_phase9.py"]); completed.push("aggregate");
+// console.log: phase9.orchestrator.step13.phase9_tests_after
+console.log(JSON.stringify({ event: "phase9.orchestrator.step13.phase9_tests_after" }));
 run("python", ["-m", "pytest", "-q", "tests/phase9"]); completed.push("phase9_tests_after");
-// console.log: phase9.orchestrator.step13.full_regression
-console.log(JSON.stringify({ event: "phase9.orchestrator.step13.full_regression" }));
+// console.log: phase9.orchestrator.step14.full_regression
+console.log(JSON.stringify({ event: "phase9.orchestrator.step14.full_regression" }));
 run("python", ["-m", "pytest", "-q"]); completed.push("full_regression");
-// console.log: phase9.orchestrator.step14.orchestration_evidence
-console.log(JSON.stringify({ event: "phase9.orchestrator.step14.orchestration_evidence" }));
+// console.log: phase9.orchestrator.step15.orchestration_evidence
+console.log(JSON.stringify({ event: "phase9.orchestrator.step15.orchestration_evidence" }));
 for (const track of ["paired_original_bank", "blind_bank"]) { mkdirSync(resolve(phaseRoot, track, "reports"), { recursive: true }); writeFileSync(resolve(phaseRoot, track, "reports", "orchestration_evidence.json"), `${JSON.stringify({ schema_version: "1.0.0", track_id: track, source_commit: sourceCommit, completed_steps: completed }, null, 2)}\n`, "utf8"); } completed.push("orchestration_evidence");
-// console.log: phase9.orchestrator.step15.signed_manifests
-console.log(JSON.stringify({ event: "phase9.orchestrator.step15.signed_manifests" }));
+// console.log: phase9.orchestrator.step16.signed_manifests
+console.log(JSON.stringify({ event: "phase9.orchestrator.step16.signed_manifests" }));
 run("python", ["scripts/finalize_phase9_manifest.py"]); completed.push("signed_manifests");
-// console.log: phase9.orchestrator.step16.independent_audit
-console.log(JSON.stringify({ event: "phase9.orchestrator.step16.independent_audit" }));
+// console.log: phase9.orchestrator.step17.independent_audit
+console.log(JSON.stringify({ event: "phase9.orchestrator.step17.independent_audit" }));
 run("python", ["scripts/audit_phase9.py"]); completed.push("independent_audit");
-// console.log: phase9.orchestrator.step17.seal
-console.log(JSON.stringify({ event: "phase9.orchestrator.step17.seal" }));
+// console.log: phase9.orchestrator.step18.seal
+console.log(JSON.stringify({ event: "phase9.orchestrator.step18.seal" }));
 const auditBytes = readFileSync(resolve(phaseRoot, "phase9_audit.json")); const audit = JSON.parse(auditBytes.toString("utf8")); if (audit.status !== "PASS" || audit.finding_count !== 0) throw new Error("Cannot seal failing Phase 9 evidence."); const auditSha = createHash("sha256").update(auditBytes).digest("hex").toUpperCase(); writeFileSync(resolve(phaseRoot, "SEALED"), `schema_version: 1.0.0\nsource_commit: ${sourceCommit}\naudit_status: PASS\naudit_findings: 0\naudit_sha256: ${auditSha}\nsealed_date: 2026-07-18\nphase10_executed: false\n`, "utf8"); completed.push("sealed");
-// console.log: phase9.orchestrator.step18.complete
-console.log(JSON.stringify({ event: "phase9.orchestrator.step18.complete", source_commit: sourceCommit, audit_sha256: auditSha }));
-
+// console.log: phase9.orchestrator.step19.complete
+console.log(JSON.stringify({ event: "phase9.orchestrator.step19.complete", source_commit: sourceCommit, audit_sha256: auditSha }));
