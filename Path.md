@@ -1899,6 +1899,17 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Corrective code: branch explicitly on list versus mapping before building `lifecycle_by_id`. The Git-object lookup was also converted from one read-only Git subprocess per artifact to a single `git ls-files -s` map; this preserves exact Git blob identities while removing unnecessary execution overhead.
 - Advancement state: Phase 10 remains **in progress**. A new source checkpoint and complete clean restart are required.
 
+### P10-E002 - Rejected second attempt and artifact-directory correction
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 10.
+- Source checkpoint attempted: `2217250c97c83e4f7d2f0a17bc1d02bac6a1dc29`.
+- Command and result: `node scripts/run_phase10.mjs`, exit `1`, wall time `44.2 s`.
+- Completed evidence before rejection: focused tests **43/43**; frozen input indexing enumerated **3,341** Phase 6-9 artifacts and all **40** candidates, bound to source commit `2217250c`, input-index SHA-256 `bd50aa6d6b9dd427ea3fc2e28338e7999fd5f80240a1178a2667f38db8e11583`.
+- Failure: Step 04 raised `OSError: Cannot save file into a non-existent directory ... phase10/candidate_audit` before writing candidate Parquet evidence.
+- Evidence disposition: **rejected attempt**. Its unsealed Phase 10 namespace must be removed by Step 01 of the replacement run. The frozen index proves upstream readability but is not accepted release evidence.
+- Corrective code: candidate and certification Parquet writers now create their exact WorkPlan contract directories before writing. A focused regression test requires both directory-creation calls.
+- Advancement state: Phase 10 remains **in progress**; no completion claim is permitted.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:

@@ -46,3 +46,9 @@ def test_release_private_key_persistence_is_prohibited():
     assert "private_key = None" in text
     assert "PrivateFormat" not in text
 
+
+def test_parquet_writers_create_contract_directories():
+    candidate_source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "candidate_audit.py").read_text(encoding="utf-8")
+    certification_source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "certification.py").read_text(encoding="utf-8")
+    assert 'root.mkdir(parents=True, exist_ok=True)' in candidate_source
+    assert 'output.mkdir(parents=True, exist_ok=True)' in certification_source

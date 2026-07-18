@@ -69,6 +69,7 @@ def _candidate_rows() -> tuple[list[dict[str, Any]], dict[str, Any]]:
 def audit_candidates() -> dict[str, Any]:
     rows, index = _candidate_rows()
     root = result_root() / "candidate_audit"
+    root.mkdir(parents=True, exist_ok=True)
     frame = pd.DataFrame(rows).sort_values("candidate_id")
     frame.to_parquet(root / "candidate_inventory.parquet", index=False)
     sample_ids = set(read_json(result_root() / "manifests" / "sample_plan.json")["candidate_ids"])
@@ -111,4 +112,3 @@ def audit_candidates() -> dict[str, Any]:
     }
     write_json(root / "candidate_audit_summary.json", summary)
     return summary
-

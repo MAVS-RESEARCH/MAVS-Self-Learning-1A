@@ -63,6 +63,7 @@ def recompute_certification() -> dict[str, Any]:
     cfg = config()
     p6 = REPO_ROOT / cfg["inputs"]["phase6"]
     output = result_root() / "certification"
+    output.mkdir(parents=True, exist_ok=True)
     rows: list[dict[str, Any]] = []
     mismatches: list[dict[str, Any]] = []
     for directory in sorted((p6 / "candidates").iterdir()):
@@ -133,9 +134,9 @@ def recompute_phase9_metrics() -> dict[str, Any]:
                 recorded = float(expected[metric])
                 comparisons.append({"track": track, "condition_id": condition, "generation": generation, "metric": metric, "recomputed": float(value), "recorded": recorded, "delta": abs(float(value) - recorded)})
     output = result_root() / "certification"
+    output.mkdir(parents=True, exist_ok=True)
     frame = pd.DataFrame(comparisons)
     frame.to_parquet(output / "recomputed_phase9_metrics.parquet", index=False)
     mismatch = frame[frame["delta"] > config()["numeric_tolerances"]["metrics"]]
     mismatch.to_parquet(output / "metric_mismatches.parquet", index=False)
     return {"comparison_count": len(frame), "mismatch_count": len(mismatch), "status": "PASS" if mismatch.empty else "FAIL"}
-
