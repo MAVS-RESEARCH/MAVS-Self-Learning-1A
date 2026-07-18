@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any
+import json
 
 from .common import (
     REPO_ROOT,
@@ -11,7 +12,6 @@ from .common import (
     all_files,
     artifact_role,
     assert_clean_source_tree,
-    binding_flags,
     config,
     environment_record,
     file_sha256,
@@ -35,19 +35,87 @@ def build_input_index() -> dict[str, Any]:
     artifacts: list[dict[str, Any]] = []
     for path in all_files(roots.values()):
         phase = next(key for key, phase_root in roots.items() if path.is_relative_to(phase_root))
+        detected_schema = SCHEMA_VERSION
+        if path.suffix.lower() == ".json" and path.stat().st_size < 20_000_000:
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+                if isinstance(payload, dict):
+                    detected_schema = str(payload.get("schema_version", SCHEMA_VERSION))
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                detected_schema = "opaque-json"
         artifacts.append({
             "logical_role": artifact_role(path),
             "physical_path": relative(path),
             "byte_size": path.stat().st_size,
             "sha256": file_sha256(path),
-            "schema_version": SCHEMA_VERSION,
-            "bindings": binding_flags(path),
+            "schema_version": detected_schema,
             "git_object_id": git_blob_oid(path),
             "lfs_object_id": lfs_oid(path),
             "claim_eligibility": "diagnostic_only" if phase in {"phase6", "phase7", "phase8"} or "paired_original_bank" in relative(path) else "phase10_gate_dependent",
             "legacy_current_status": "current_v04",
             "phase": int(phase.removeprefix("phase")),
         })
+    phase_bindings: dict[int, dict[str, Any]] = {}
+    for phase_number in (6, 7, 8, 9):
+        phase_artifacts = [item for item in artifacts if item["phase"] == phase_number]
+        source_commits: set[str] = set()
+        for item in phase_artifacts:
+            item_path = Path(item["physical_path"])
+            name = item_path.name.lower()
+            if item_path.suffix.lower() == ".json" and ("manifest" in name or "audit" in name or item_path.parent.name.lower() == "manifests"):
+                try:
+                    payload = json.loads((REPO_ROOT / item["physical_path"]).read_text(encoding="utf-8"))
+                    if isinstance(payload, dict):
+                        for key in ("source_commit", "code_commit", "git_commit", "code_sha"):
+                            if isinstance(payload.get(key), str) and len(payload[key]) >= 7:
+                                source_commits.add(payload[key])
+                except (json.JSONDecodeError, UnicodeDecodeError):
+                    pass
+        configs = [(item["physical_path"], item["sha256"]) for item in phase_artifacts if any(token in Path(item["physical_path"]).name.lower() for token in ("config", "registry"))]
+        governing_configs = [REPO_ROOT / "configs" / "phases" / f"phase{phase_number}.yaml"]
+        if phase_number == 6:
+            governing_configs.append(REPO_ROOT / "configs" / "perception_closure_v04" / "synthesis.yaml")
+        elif phase_number == 7:
+            governing_configs.extend(REPO_ROOT / "configs" / "perception_closure_v04" / name for name in ("runtime.yaml", "phase7_microbenchmarks.yaml"))
+        elif phase_number == 8:
+            governing_configs.extend(path for prefix in ("I", "P", "L") for path in sorted((REPO_ROOT / "configs" / "ablations").glob(f"{prefix}*.yaml")))
+        elif phase_number == 9:
+            governing_configs.extend(sorted((REPO_ROOT / "configs" / "perception_closure_v04" / "phase9").glob("*.yaml")))
+        configs.extend((relative(path), file_sha256(path)) for path in governing_configs if path.is_file())
+        configs = sorted(set(configs))
+        seeds = [(item["physical_path"], item["sha256"]) for item in phase_artifacts if "seed" in Path(item["physical_path"]).name.lower()]
+        environments = [(item["physical_path"], item["sha256"]) for item in phase_artifacts if "environment" in Path(item["physical_path"]).name.lower()]
+        generators = [(item["physical_path"], item["sha256"]) for item in phase_artifacts if "generator" in Path(item["physical_path"]).name.lower()]
+        manifests = [(item["physical_path"], item["sha256"]) for item in phase_artifacts if "manifest" in Path(item["physical_path"]).name.lower() or "audit" in Path(item["physical_path"]).name.lower() or Path(item["physical_path"]).parent.name.lower() == "manifests"]
+        binding_payload = {
+            "code_commits": sorted(source_commits),
+            "config_artifacts": [{"physical_path": path, "sha256": digest} for path, digest in configs],
+            "config_bindings_sha256": stable_hash(configs),
+            "config_artifact_count": len(configs),
+            "seed_artifacts": [{"physical_path": path, "sha256": digest} for path, digest in seeds],
+            "seed_bindings_sha256": stable_hash(seeds),
+            "seed_artifact_count": len(seeds),
+            "environment_artifacts": [{"physical_path": path, "sha256": digest} for path, digest in environments],
+            "environment_bindings_sha256": stable_hash(environments),
+            "environment_artifact_count": len(environments),
+            "generator_artifacts": [{"physical_path": path, "sha256": digest} for path, digest in (generators or manifests)],
+            "generator_bindings_sha256": stable_hash({"code_commits": sorted(source_commits), "artifacts": generators or manifests}),
+            "generator_artifact_count": len(generators or manifests),
+            "data_artifact_graph_sha256": stable_hash([(item["physical_path"], item["sha256"]) for item in phase_artifacts]),
+            "data_artifact_count": len(phase_artifacts),
+        }
+        phase_bindings[phase_number] = binding_payload | {"binding_record_sha256": stable_hash(binding_payload)}
+    for item in artifacts:
+        binding = phase_bindings[item["phase"]]
+        item["bindings"] = {
+            "phase_binding_record_sha256": binding["binding_record_sha256"],
+            "code_commits": binding["code_commits"],
+            "config_bindings_sha256": binding["config_bindings_sha256"],
+            "seed_bindings_sha256": binding["seed_bindings_sha256"],
+            "environment_bindings_sha256": binding["environment_bindings_sha256"],
+            "generator_bindings_sha256": binding["generator_bindings_sha256"],
+            "data_sha256": item["sha256"],
+        }
     p6 = roots["phase6"]
     candidates: list[dict[str, Any]] = []
     for directory in sorted((p6 / "candidates").iterdir()):
@@ -114,6 +182,7 @@ def build_input_index() -> dict[str, Any]:
         "candidate_count": len(candidates),
         "artifacts": artifacts,
         "candidates": candidates,
+        "phase_bindings": phase_bindings,
     }
     write_json(root / "manifests" / "environment_lock.json", environment)
     write_json(root / "manifests" / "seed_ledger.json", {"schema_version": SCHEMA_VERSION, "phase10_seed": cfg["audit_sample"]["seed"], "upstream_seed_artifacts": [a["physical_path"] for a in artifacts if "seed" in a["physical_path"].lower()]})

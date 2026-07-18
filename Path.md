@@ -1942,6 +1942,20 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Correction: use raw `git status --porcelain` output and a dedicated parser for tracked and untracked status lines. A regression test covers both ` M results/RESULTS_INDEX.md` and `?? results/perception_closure_v04/phase10/...`.
 - Advancement state: Phase 10 remains **in progress**; complete restart required.
 
+### P10-E006 - Rejected R2 sealed run after semantic audit escalation
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 10.
+- Source checkpoint attempted: `e4748db3b70cf0632f6362a8c79d25cefd72a09a`; command `node scripts/run_phase10.mjs`; exit `0`; wall time `1,738 s`.
+- Reported evidence before escalation: focused tests **48/48** before and after; 3,341 indexed artifacts and 40 candidates; 600 independent certification gates and 6,624 Phase 9 metric comparisons with zero mismatch; 40 invariant permutations; 1,530-artifact taint scan; 110,445 replay comparisons; 6,210,384 complete trace terminals; zero legacy/current or paired/blind isolation findings; clean-environment reproduction; complete regression; 25/25 audit clauses; 44-artifact graph; seven valid Ed25519 signatures; and a read-only zero-finding release verification.
+- Literal compliance gap 1: each indexed artifact's `bindings` object contained boolean availability indicators instead of explicit code commits and hashed config/data/seed/environment/generator identities. This did not satisfy WorkPlan Section 25's binding contract.
+- Literal compliance gap 2: full-template `constant_output`, `noop`, and `parent_identical` fields were emitted as fixed false values rather than computed from behavioral fingerprints/candidate controls. A zero count produced that way was not evidence.
+- Literal compliance gap 3: deterministic replay re-read and hash-compared stored trace rows. It did not independently recompute terminal decisions, query/probe/round behavior, active programs, scopes, certificates, and condition state before comparison.
+- Literal compliance gap 4: the claim generator and final audit set `cumulative_value` to a constant true rather than deriving it from sealed blind G2/G3 cumulative-versus-fresh safety, burden, scope, forgetting, and growth evidence.
+- Literal compliance gap 5: the sentinel string did not use the production blind boundary's rejected prefix; therefore a real production boundary invocation would not necessarily reject the planted value.
+- Verdict withdrawal: R2 is **rejected and not release-bearing**. Its generated claim statuses, zero-finding audit, signatures, and seal are not accepted. The complete sealed run will be preserved byte-for-byte under `results/perception_closure_v04/phase10/diagnostic_runs/rejected_e4748db_literal_semantic_audit_gap/` and excluded from the replacement release graph.
+- Corrective implementation: serialize explicit phase binding records and hashes; compute behavioral/template controls; reconcile every candidate and Phase 9 library; add an independent Phase 9 replay engine with no production runtime imports; compare every replay component for the pinned sample and all protected errors; derive cumulative value from sealed blind rows; execute the sentinel through the production blind API; and make the final audit require these exact artifacts and component counts.
+- Advancement state: Phase 10 remains **in progress**. A new source checkpoint, immutable diagnostic archive, complete R3 restart, zero-finding audit, signed freeze, and post-freeze adversarial checks are mandatory.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:

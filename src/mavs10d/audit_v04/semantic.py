@@ -69,3 +69,20 @@ def name_invariant(candidate: Mapping[str, Any], replacement: str) -> bool:
     mutated["candidate_id"] = replacement
     mutated["candidate_name"] = replacement
     return semantic_hash(candidate) == semantic_hash(mutated)
+
+
+def template_signature(node: Mapping[str, Any]) -> str:
+    def strip(value: Any) -> Any:
+        if isinstance(value, list):
+            return [strip(item) for item in value]
+        if not isinstance(value, dict):
+            return value
+        operation = value.get("op")
+        if operation == "feature":
+            return {"op": "feature", "name": "<feature>"}
+        if operation == "parameter":
+            return {"op": "parameter", "name": "<parameter>"}
+        if operation == "constant":
+            return {"op": "constant", "value": "<constant>"}
+        return {key: strip(child) for key, child in value.items()}
+    return stable_hash(strip(canonicalize_ast(node)))

@@ -10,7 +10,7 @@ from typing import Any
 import pandas as pd
 
 from .common import REPO_ROOT, config, read_json, result_root, verify_frozen_input_index, write_json
-from .semantic import behavior_hash, name_invariant, semantic_hash
+from .semantic import behavior_hash, name_invariant, semantic_hash, template_signature
 
 
 REQUIRED_FILES = (
@@ -40,6 +40,14 @@ def _candidate_rows() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         missing = [name for name in REQUIRED_FILES if not (directory / name).is_file()]
         recomputed_semantic = semantic_hash(candidate)
         recomputed_behavior = behavior_hash(fingerprint.to_dict(orient="records"))
+        raw_unique = int(fingerprint["raw_output"].nunique(dropna=False))
+        discrete_unique = int(fingerprint["discrete_output"].nunique(dropna=False))
+        active_count = int(fingerprint["active"].astype(bool).sum())
+        maximum_influence = float(fingerprint["terminal_influence"].abs().max())
+        assignment_paths = [Path(path) for path in entry["phase9_assignment_artifacts"]]
+        assignment_banks = {part for path in assignment_paths for part in path.parts if part in {"paired_original_bank", "blind_bank"}}
+        assignment_generations = {part for path in assignment_paths for part in path.parts if part.startswith("generation_")}
+        assignment_conditions = {path.stem for path in assignment_paths}
         rows.append({
             "candidate_id": candidate_id,
             "operation": candidate["lineage"]["operation"],
@@ -54,6 +62,7 @@ def _candidate_rows() -> tuple[list[dict[str, Any]], dict[str, Any]]:
             "recorded_behavioral_hash": recorded["behavioral_hash"],
             "parameter_vector": json.dumps(candidate["parameters"], sort_keys=True),
             "normalized_ast": json.dumps(identity["normalized_payload"], sort_keys=True),
+            "template_signature": template_signature(candidate["expression_ast"]),
             "name_invariant": name_invariant(candidate, "PERMUTED-NAME"),
             "operation_compliant": bool(operation.get("passed", operation.get("compliant", False))),
             "witness_valid": bool(witness["valid"]),
@@ -63,9 +72,13 @@ def _candidate_rows() -> tuple[list[dict[str, Any]], dict[str, Any]]:
             "runtime_descendant_count": len(entry["runtime_descendants"]),
             "phase9_assignment_count": len(entry["phase9_assignment_artifacts"]),
             "descendant_trace_count": len(entry["descendant_traces"]),
-            "bank_coverage_count": len({"paired_original_bank", "blind_bank"}) if recorded["lifecycle"] == "promoted" else 0,
-            "generation_coverage_count": 3 if recorded["lifecycle"] == "promoted" else 0,
+            "bank_coverage_count": len(assignment_banks),
+            "generation_coverage_count": len(assignment_generations),
+            "condition_coverage_count": len(assignment_conditions),
             "all_hashes_match": recomputed_semantic == identity["semantic_hash"] and recomputed_behavior == recorded["behavioral_hash"],
+            "constant_output": raw_unique <= 1 or discrete_unique <= 1,
+            "noop": active_count == 0 or maximum_influence == 0.0,
+            "parent_identical": candidate.get("integrity_control") == "parent_identical",
         })
     return rows, index
 
@@ -85,14 +98,16 @@ def audit_candidates() -> dict[str, Any]:
     full["semantic_class_size"] = full["semantic_hash"].map({key: len(value) for key, value in semantic_classes.items()})
     full["behavioral_class_size"] = full["behavioral_hash"].map({key: len(value) for key, value in behavioral_classes.items()})
     full["name_only_variant"] = full["candidate_id"].str.endswith("-I")
-    full["constant_output"] = False
-    full["noop"] = False
-    full["parent_identical"] = False
     full["sibling_identity"] = full["semantic_class_size"] > 1
     full.to_parquet(root / "full_template_audit.parquet", index=False)
     lifecycle = Counter(frame["lifecycle"])
     proposed = len(frame)
     reconciliation = proposed == lifecycle["integrity_rejected"] + lifecycle["certification_rejected"] + lifecycle["quarantined"] + lifecycle["promoted"]
+    p9 = REPO_ROOT / config()["inputs"]["phase9"]
+    phase9_library_sets = [set(read_json(p9 / track / "candidate_cards" / "library_index.json")["candidate_ids"]) for track in ("paired_original_bank", "blind_bank")]
+    promoted_ids = set(frame.loc[frame["lifecycle"] == "promoted", "candidate_id"])
+    promoted = frame.loc[frame["lifecycle"] == "promoted"]
+    expected_condition_coverage = int(promoted["condition_coverage_count"].max()) if len(promoted) else 0
     summary = {
         "schema_version": "1.0.0",
         "candidate_count": proposed,
@@ -104,6 +119,15 @@ def audit_candidates() -> dict[str, Any]:
         "spot_gate_pattern_count": spot["gate_pattern"].nunique(),
         "semantic_class_count": len(semantic_classes),
         "behavioral_class_count": len(behavioral_classes),
+        "spot_semantic_class_count": spot["semantic_hash"].nunique(),
+        "spot_behavioral_class_count": spot["behavioral_hash"].nunique(),
+        "spot_rejection_reasons": sorted(spot.loc[spot["lifecycle"] != "promoted", "lifecycle_reason"].unique().tolist()),
+        "template_signature_count": frame["template_signature"].nunique(),
+        "sibling_identity_count": int(full["sibling_identity"].sum()),
+        "constant_output_count": int(frame["constant_output"].sum()),
+        "noop_count": int(frame["noop"].sum()),
+        "parent_identical_count": int(frame["parent_identical"].sum()),
+        "name_only_count": int(frame["candidate_id"].str.endswith("-I").sum()),
         "lifecycle_counts": dict(lifecycle),
         "reconciliation_equation": "proposed = integrity_rejected + certification_rejected + quarantined + promoted",
         "reconciliation_passed": reconciliation,
@@ -112,8 +136,39 @@ def audit_candidates() -> dict[str, Any]:
         "all_names_invariant": bool(frame["name_invariant"].all()),
         "all_operations_compliant_when_integrity_passed": bool(frame.loc[frame["integrity_passed"], "operation_compliant"].all()),
         "all_promoted_have_valid_witnesses": bool(frame.loc[frame["lifecycle"] == "promoted", "witness_valid"].all()),
-        "all_promoted_cover_banks_generations_conditions": bool((frame.loc[frame["lifecycle"] == "promoted", "bank_coverage_count"] == 2).all() and (frame.loc[frame["lifecycle"] == "promoted", "generation_coverage_count"] == 3).all() and (frame.loc[frame["lifecycle"] == "promoted", "phase9_assignment_count"] > 0).all() and (frame.loc[frame["lifecycle"] == "promoted", "descendant_trace_count"] > 0).all()),
-        "status": "PASS" if reconciliation and len(spot) == 30 and spot["operation"].nunique() == 10 and frame["all_hashes_match"].all() else "FAIL",
+        "expected_phase9_condition_coverage": expected_condition_coverage,
+        "all_promoted_cover_banks_generations_conditions": bool(
+            (promoted["bank_coverage_count"] == 2).all()
+            and (promoted["generation_coverage_count"] == 3).all()
+            and (promoted["condition_coverage_count"] == expected_condition_coverage).all()
+            and expected_condition_coverage > 0
+            and (promoted["phase9_assignment_count"] > 0).all()
+            and (promoted["descendant_trace_count"] > 0).all()
+        ),
+        "spot_covers_all_semantic_behavioral_classes": spot["semantic_hash"].nunique() == len(semantic_classes) and spot["behavioral_hash"].nunique() == len(behavioral_classes),
+        "phase6_phase9_candidate_totals_reconcile": all(library == promoted_ids for library in phase9_library_sets),
+        "all_forbidden_controls_rejected": bool(
+            (~frame.loc[frame["constant_output"] | frame["noop"] | frame["parent_identical"] | frame["candidate_id"].str.endswith("-I"), "lifecycle"].eq("promoted")).all()
+        ),
     }
+    required = (
+        reconciliation
+        and proposed == index["candidate_count"]
+        and len(spot) == 30
+        and spot["operation"].nunique() == frame["operation"].nunique() == 10
+        and summary["spot_covers_all_semantic_behavioral_classes"]
+        and summary["spot_gate_pattern_count"] == summary["gate_pattern_count"]
+        and set(summary["spot_rejection_reasons"]) == set(frame.loc[frame["lifecycle"] != "promoted", "lifecycle_reason"].unique())
+        and summary["all_required_files_present"]
+        and summary["all_semantic_behavioral_hashes_match"]
+        and summary["all_names_invariant"]
+        and summary["all_operations_compliant_when_integrity_passed"]
+        and summary["all_promoted_have_valid_witnesses"]
+        and summary["all_promoted_cover_banks_generations_conditions"]
+        and summary["phase6_phase9_candidate_totals_reconcile"]
+        and summary["all_forbidden_controls_rejected"]
+        and summary["template_signature_count"] > 1
+    )
+    summary["status"] = "PASS" if required else "FAIL"
     write_json(root / "candidate_audit_summary.json", summary)
     return summary

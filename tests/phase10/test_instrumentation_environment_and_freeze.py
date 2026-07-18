@@ -64,6 +64,17 @@ def test_release_verifier_requires_complete_contract():
         assert artifact in source
 
 
+def test_input_index_serializes_hashed_binding_identities():
+    source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "input_index.py").read_text(encoding="utf-8")
+    for field in ("code_commits", "config_artifacts", "seed_artifacts", "environment_artifacts", "generator_artifacts", "data_artifact_graph_sha256", "binding_record_sha256"):
+        assert field in source
+
+
+def test_taint_sentinel_uses_production_rejected_prefix():
+    source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "taint.py").read_text(encoding="utf-8")
+    assert "PHASE6_EVALUATOR_ONLY_SENTINEL_PHASE10" in source
+
+
 def test_parquet_writers_create_contract_directories():
     candidate_source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "candidate_audit.py").read_text(encoding="utf-8")
     certification_source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "certification.py").read_text(encoding="utf-8")

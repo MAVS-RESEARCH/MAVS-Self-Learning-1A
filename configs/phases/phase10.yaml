@@ -41,7 +41,7 @@ release_policy:
   require_signed_manifests: true
   prohibit_provisional_claims: true
   post_freeze_namespace_required: true
-  release_id: perception_closure_v04_phase10_20260718_r2
+  release_id: perception_closure_v04_phase10_20260718_r3
   external_tag: v0.4-perception-closure-audited
   external_tag_authorized: false
 signing_policy:

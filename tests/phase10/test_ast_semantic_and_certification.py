@@ -6,7 +6,7 @@ import pandas as pd
 
 from mavs10d.audit_v04.ast_execution import complexity, execute
 from mavs10d.audit_v04.certification import recompute_gate_values
-from mavs10d.audit_v04.semantic import name_invariant, semantic_hash
+from mavs10d.audit_v04.semantic import name_invariant, semantic_hash, template_signature
 
 
 def candidate():
@@ -45,6 +45,13 @@ def test_semantic_hash_canonicalizes_commutative_children():
     second = copy.deepcopy(first)
     second["expression_ast"]["children"].reverse()
     assert semantic_hash(first) == semantic_hash(second)
+
+
+def test_template_signature_ignores_literal_values_but_retains_structure():
+    first = candidate()["expression_ast"]
+    second = copy.deepcopy(first)
+    second["right"]["name"] = "different_parameter"
+    assert template_signature(first) == template_signature(second)
 
 
 def test_gate_recomputation_uses_raw_trace():

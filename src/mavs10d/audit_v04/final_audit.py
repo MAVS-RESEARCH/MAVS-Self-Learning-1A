@@ -8,6 +8,7 @@ from typing import Any
 
 from jsonschema import validate
 
+from .claims import evaluate_cumulative_value
 from .common import REPO_ROOT, config, file_sha256, read_json, result_root, source_commit, write_json
 
 
@@ -40,6 +41,8 @@ def build_final_audit() -> dict[str, Any]:
     metric_summary = read_json(root / "reports" / "metric_recomputation_summary.json")
     reproduction = read_json(root / "reports" / "reproducibility_summary.json")
     claim_ledger = read_json(root / "claims" / "claim_ledger.json")
+    input_index = read_json(root / "manifests" / "input_artifact_index.json")
+    cumulative = evaluate_cumulative_value()
     validate(claim_ledger, read_json(REPO_ROOT / "schemas" / "v04" / "claim_ledger.schema.json"))
     independent, import_hits = _independence()
     required_prefreeze_artifacts = [
@@ -48,19 +51,19 @@ def build_final_audit() -> dict[str, Any]:
         root / "candidate_audit" / "full_template_audit.parquet", root / "claims" / "claim_ledger.json",
     ]
     gates = {
-        "input_integrity": read_json(root / "manifests" / "INPUT_INDEX_FROZEN.json")["frozen"],
+        "input_integrity": read_json(root / "manifests" / "INPUT_INDEX_FROZEN.json")["frozen"] and _binding_integrity(input_index),
         "candidate_reconciliation": candidates["reconciliation_passed"],
-        "template_integrity": candidates["all_semantic_behavioral_hashes_match"] and candidates["all_names_invariant"],
+        "template_integrity": candidates["status"] == "PASS" and candidates["all_semantic_behavioral_hashes_match"] and candidates["all_names_invariant"],
         "certification_match": certification_summary["mismatch_count"] == 0,
         "metric_recomputation": metric_summary["mismatch_count"] == 0,
         "permutation_invariance": permutation["changed_gate_or_decision_count"] == 0,
-        "hidden_taint_zero": taint_process["status"] == "PASS" and taint_memory["status"] == "PASS",
-        "replay_match": replay["mismatch_count"] == 0,
+        "hidden_taint_zero": taint_process["status"] == "PASS" and taint_memory["status"] == "PASS" and len(taint_process["surface_coverage"]) == 13,
+        "replay_match": replay["mismatch_count"] == 0 and replay["production_executor_imported"] is False and replay["terminal_comparison_count"] > 0 and replay["query_probe_round_comparison_count"] > 0 and replay["program_scope_comparison_count"] > 0 and replay["certification_comparison_count"] > 0,
         "trace_completeness": completeness["status"] == "PASS" and lineage["status"] == "PASS" and authority["status"] == "PASS" and residual["status"] == "PASS",
         "result_isolation": isolation["status"] == "PASS",
         "audit_independence": independent,
         "phase9_blind_gate": read_json(REPO_ROOT / config()["inputs"]["phase9"] / "phase9_audit.json")["status"] == "PASS",
-        "cumulative_value": True,
+        "cumulative_value": cumulative["status"] == "PASS",
         "finite_covered_class_only": False,
         "external_operational_validation": False,
         "reproduction_commands": reproduction["status"] == "PASS",
@@ -104,3 +107,20 @@ def build_final_audit() -> dict[str, Any]:
     lines = ["# Phase 10 Independent Audit", "", f"Status: {audit['status']}", "", f"Findings: {audit['finding_count']}", "", f"WorkPlan clauses: {sum(audit['workplan_clauses'].values())}/{len(audit['workplan_clauses'])}", ""]
     (root / "reports" / "phase10_audit.md").write_text("\n".join(lines), encoding="utf-8")
     return audit
+
+
+def _binding_integrity(index: dict[str, Any]) -> bool:
+    required_hashes = ("config_bindings_sha256", "seed_bindings_sha256", "environment_bindings_sha256", "generator_bindings_sha256")
+    phases = index.get("phase_bindings", {})
+    if set(map(str, phases)) != {"6", "7", "8", "9"} and set(phases) != {6, 7, 8, 9}:
+        return False
+    for binding in phases.values():
+        if not binding.get("code_commits") or any(not binding.get(key) for key in required_hashes):
+            return False
+        if any(binding.get(key, 0) <= 0 for key in ("config_artifact_count", "seed_artifact_count", "environment_artifact_count", "generator_artifact_count", "data_artifact_count")):
+            return False
+    return all(
+        item.get("bindings", {}).get("data_sha256") == item.get("sha256")
+        and item.get("bindings", {}).get("phase_binding_record_sha256")
+        for item in index.get("artifacts", [])
+    )

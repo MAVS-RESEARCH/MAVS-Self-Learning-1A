@@ -147,6 +147,7 @@ def binding_flags(path: Path) -> dict[str, bool]:
 def environment_record() -> dict[str, Any]:
     freeze = subprocess.run([sys.executable, "-m", "pip", "freeze", "--all"], capture_output=True, text=True, check=True).stdout.splitlines()
     node = subprocess.run(["node", "--version"], capture_output=True, text=True, check=True).stdout.strip()
+    phase10_lock = REPO_ROOT / "configs" / "phases" / "phase10_requirements.lock"
     return {
         "schema_version": SCHEMA_VERSION,
         "python": sys.version,
@@ -163,6 +164,8 @@ def environment_record() -> dict[str, Any]:
         "nondeterministic_kernel": False,
         "dependencies": sorted(freeze),
         "dependency_lock_sha256": stable_hash(sorted(freeze)),
+        "phase10_requirements_lock_sha256": file_sha256(phase10_lock),
+        "process_identity": {"role": "independent_phase10_auditor", "implementation": "mavs10d.audit_v04", "executable": sys.executable},
     }
 
 
