@@ -57,6 +57,10 @@ def build_input_index() -> dict[str, Any]:
         lifecycle = __import__("json").loads((p6 / "manifests" / "lifecycle_state.json").read_text(encoding="utf-8"))
         lifecycle_rows = lifecycle if isinstance(lifecycle, list) else lifecycle.get("candidates", [])
         lifecycle_by_id = {item["candidate_id"]: item for item in lifecycle_rows}
+        lifecycle_record = lifecycle_by_id.get(candidate["candidate_id"], {})
+        promoted = lifecycle_record.get("lifecycle") == "promoted"
+        phase9_assignments = sorted(path for path in roots["phase9"].glob("*_bank/candidate_cards/assignments/generation_*/*.json")) if promoted else []
+        phase9_traces = sorted(path for path in roots["phase9"].glob("*_bank/decision_traces/*/generation_*.parquet")) if promoted else []
         candidates.append({
             "candidate_id": candidate["candidate_id"],
             "operation": candidate["lineage"]["operation"],
@@ -72,8 +76,22 @@ def build_input_index() -> dict[str, Any]:
             "witness": relative(directory / "perception_extension_witness.json"),
             "independent_gate_vector": relative(directory / "independent_gate_vector.json"),
             "certification_trace": relative(directory / "certification_trace.parquet"),
-            "lifecycle": lifecycle_by_id.get(candidate["candidate_id"], {}),
+            "lifecycle": lifecycle_record,
+            "promotion_rejection_quarantine": lifecycle_record.get("lifecycle"),
+            "rollback_target": candidate["lineage"].get("rollback_target"),
+            "runtime_use": {
+                "phase7_trace_root": relative(roots["phase7"] / "traces") if promoted else None,
+                "phase9_library_member": promoted,
+                "phase9_assignment_count": len(phase9_assignments),
+            },
+            "consolidation_retirement_state": {
+                "operation": candidate["lineage"]["operation"],
+                "lifecycle": lifecycle_record.get("lifecycle"),
+                "retirement_candidate": candidate["lineage"]["operation"] == "retire",
+            },
             "runtime_descendants": [relative(path) for path in sorted((roots["phase7"] / "programs").glob("*.json")) if candidate["candidate_id"] in path.read_text(encoding="utf-8", errors="ignore")],
+            "phase9_assignment_artifacts": [relative(path) for path in phase9_assignments],
+            "descendant_traces": [relative(path) for path in phase9_traces],
             "phase9_descendant_root": relative(roots["phase9"]),
         })
     environment = environment_record()

@@ -36,7 +36,7 @@ def verify_signature(record_path: Path, public_key_path: Path) -> bool:
 
 def _artifact_graph(root: Path) -> list[dict[str, Any]]:
     excluded = {"release_manifest.json", "SEALED"}
-    return [{"path": relative(path), "bytes": path.stat().st_size, "sha256": file_sha256(path)} for path in sorted(root.rglob("*")) if path.is_file() and path.name not in excluded and "release/signatures" not in path.as_posix()]
+    return [{"path": relative(path), "bytes": path.stat().st_size, "sha256": file_sha256(path)} for path in sorted(root.rglob("*")) if path.is_file() and path.name not in excluded and "release/signatures" not in path.as_posix() and "diagnostic_runs" not in path.parts and path.name not in {"release_report.json", "release_report.md"}]
 
 
 def freeze_release() -> dict[str, Any]:
@@ -67,6 +67,12 @@ def freeze_release() -> dict[str, Any]:
         "reason": "WorkPlan prohibits external tagging without separate user authorization.",
     }
     write_json(root / "release" / "tag_record.json", tag_record)
+    private_key = Ed25519PrivateKey.generate()
+    public_key = private_key.public_key()
+    signature_root = root / "release" / "signatures"
+    signature_root.mkdir(parents=True, exist_ok=True)
+    public_path = signature_root / "public_key.pem"
+    public_path.write_bytes(public_key.public_bytes(serialization.Encoding.PEM, serialization.PublicFormat.SubjectPublicKeyInfo))
     graph = _artifact_graph(root)
     manifest = {
         "schema_version": SCHEMA_VERSION, "release_id": cfg["release_policy"]["release_id"],
@@ -75,26 +81,31 @@ def freeze_release() -> dict[str, Any]:
         "environment_lock_sha256": file_sha256(root / "manifests" / "environment_lock.json"),
         "input_index_sha256": file_sha256(root / "manifests" / "input_artifact_index.json"),
         "results_index_sha256": file_sha256(index_path), "artifact_graph": graph,
+        "public_key_sha256": file_sha256(public_path),
         "freeze_policy": cfg["release_policy"], "status": "FROZEN",
     }
     manifest_path = root / "release" / "release_manifest.json"
     write_json(manifest_path, manifest)
     validate(manifest, read_json(REPO_ROOT / "schemas" / "v04" / "release_manifest.schema.json"))
-    private_key = Ed25519PrivateKey.generate()
-    public_key = private_key.public_key()
-    signature_root = root / "release" / "signatures"
-    signature_root.mkdir(parents=True, exist_ok=True)
-    public_path = signature_root / "public_key.pem"
-    public_path.write_bytes(public_key.public_bytes(serialization.Encoding.PEM, serialization.PublicFormat.SubjectPublicKeyInfo))
-    manifest_signature = _sign(private_key, manifest_path, signature_root / "release_manifest.sig.json")
-    claim_signature = _sign(private_key, root / "claims" / "claim_ledger.json", signature_root / "claim_ledger.sig.json")
-    audit_signature = _sign(private_key, root / "reports" / "phase10_audit.json", signature_root / "phase10_audit.sig.json")
+    signed_paths = {
+        "release_manifest": manifest_path,
+        "audit_manifest": root / "manifests" / "audit_manifest.json",
+        "input_artifact_index": root / "manifests" / "input_artifact_index.json",
+        "environment_lock": root / "manifests" / "environment_lock.json",
+        "seed_ledger": root / "manifests" / "seed_ledger.json",
+        "claim_ledger": root / "claims" / "claim_ledger.json",
+        "phase10_audit": root / "reports" / "phase10_audit.json",
+    }
+    signature_paths = []
+    for name, signed_path in signed_paths.items():
+        signature_path = signature_root / f"{name}.sig.json"
+        _sign(private_key, signed_path, signature_path)
+        signature_paths.append(signature_path)
     private_key = None
-    signature_status = all(verify_signature(path, public_path) for path in (signature_root / "release_manifest.sig.json", signature_root / "claim_ledger.sig.json", signature_root / "phase10_audit.sig.json"))
-    release_report = {"schema_version": SCHEMA_VERSION, "release_id": manifest["release_id"], "artifact_count": len(graph), "signature_count": 3, "signatures_valid": signature_status, "private_key_persisted": False, "source_commit": source_commit(), "status": "PASS" if signature_status else "FAIL"}
+    signature_status = all(verify_signature(path, public_path) for path in signature_paths)
+    release_report = {"schema_version": SCHEMA_VERSION, "release_id": manifest["release_id"], "artifact_count": len(graph), "signature_count": len(signature_paths), "signatures_valid": signature_status, "private_key_persisted": False, "source_commit": source_commit(), "status": "PASS" if signature_status else "FAIL"}
     write_json(root / "reports" / "release_report.json", release_report)
     (root / "reports" / "release_report.md").write_text(f"# Phase 10 Release Report\n\nStatus: {release_report['status']}\n\nArtifacts: {len(graph)}\n\nSignatures valid: {signature_status}\n", encoding="utf-8")
-    seal = {"schema_version": SCHEMA_VERSION, "release_id": manifest["release_id"], "source_commit": source_commit(), "audit_sha256": manifest["audit_sha256"], "release_manifest_sha256": file_sha256(manifest_path), "claim_ledger_sha256": manifest["claim_ledger_sha256"], "status": "FROZEN", "post_freeze_namespace_required": True}
+    seal = {"schema_version": SCHEMA_VERSION, "release_id": manifest["release_id"], "source_commit": source_commit(), "audit_sha256": manifest["audit_sha256"], "release_manifest_sha256": file_sha256(manifest_path), "claim_ledger_sha256": manifest["claim_ledger_sha256"], "public_key_sha256": file_sha256(public_path), "signature_sha256": {path.name: file_sha256(path) for path in signature_paths}, "release_report_sha256": file_sha256(root / "reports" / "release_report.json"), "results_index_sha256": file_sha256(index_path), "artifact_graph_sha256": __import__("hashlib").sha256(canonical_bytes(graph)).hexdigest(), "status": "FROZEN", "post_freeze_namespace_required": True}
     write_json(root / "SEALED", seal)
     return release_report
-

@@ -59,5 +59,8 @@ run("-m", ["pytest", "tests/phase10", "-q"]);
 // Phase 10 step 17: sign manifests, snapshot pointers, and freeze the release namespace.
 console.log('{"event":"phase10.step17.start","action":"release_freeze"}');
 run("scripts/freeze_v04_release.py");
-// Phase 10 step 18: report successful completion only after the immutable seal exists.
-console.log('{"event":"phase10.step18.complete","status":"PASS","release":"FROZEN"}');
+// Phase 10 step 18: independently verify graph coverage, seals, claims, and signatures.
+console.log('{"event":"phase10.step18.start","action":"verify_frozen_release"}');
+run("scripts/verify_v04_release.py");
+// Phase 10 step 19: report successful completion only after read-only freeze verification.
+console.log('{"event":"phase10.step19.complete","status":"PASS","release":"FROZEN"}');

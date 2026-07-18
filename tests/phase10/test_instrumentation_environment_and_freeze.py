@@ -17,7 +17,7 @@ def test_every_phase10_console_log_has_immediate_comment():
     path = REPO_ROOT / "scripts" / "run_phase10.mjs"
     lines = path.read_text(encoding="utf-8").splitlines()
     indexes = [index for index, line in enumerate(lines) if "console.log(" in line]
-    assert len(indexes) == 18
+    assert len(indexes) == 19
     assert all(index > 0 and lines[index - 1].strip().startswith("// Phase 10 step") for index in indexes)
 
 
@@ -45,6 +45,12 @@ def test_release_private_key_persistence_is_prohibited():
     text = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "release.py").read_text(encoding="utf-8")
     assert "private_key = None" in text
     assert "PrivateFormat" not in text
+
+
+def test_release_verifier_requires_complete_contract():
+    source = (REPO_ROOT / "src" / "mavs10d" / "audit_v04" / "release_verify.py").read_text(encoding="utf-8")
+    for artifact in ("audit_manifest.json", "reproducibility_report.md", "REPRODUCE.md", "claim_ledger.json", "SEALED"):
+        assert artifact in source
 
 
 def test_parquet_writers_create_contract_directories():

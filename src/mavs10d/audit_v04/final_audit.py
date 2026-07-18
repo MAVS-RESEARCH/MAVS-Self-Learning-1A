@@ -42,6 +42,11 @@ def build_final_audit() -> dict[str, Any]:
     claim_ledger = read_json(root / "claims" / "claim_ledger.json")
     validate(claim_ledger, read_json(REPO_ROOT / "schemas" / "v04" / "claim_ledger.schema.json"))
     independent, import_hits = _independence()
+    required_prefreeze_artifacts = [
+        root / "REPRODUCE.md", root / "reports" / "reproducibility_report.md",
+        root / "candidate_audit" / "candidate_inventory.parquet", root / "candidate_audit" / "spot_audit.parquet",
+        root / "candidate_audit" / "full_template_audit.parquet", root / "claims" / "claim_ledger.json",
+    ]
     gates = {
         "input_integrity": read_json(root / "manifests" / "INPUT_INDEX_FROZEN.json")["frozen"],
         "candidate_reconciliation": candidates["reconciliation_passed"],
@@ -60,6 +65,7 @@ def build_final_audit() -> dict[str, Any]:
         "external_operational_validation": False,
         "reproduction_commands": reproduction["status"] == "PASS",
         "claim_generation": claim_ledger["generated"] is True and all(claim["status"] in {"supported", "partially_supported", "unsupported", "falsified"} for claim in claim_ledger["claims"]),
+        "prefreeze_artifact_contract": all(path.is_file() for path in required_prefreeze_artifacts),
     }
     required_integrity = [key for key in gates if key not in {"finite_covered_class_only", "external_operational_validation"}]
     findings = [{"reason_code": "P10_GATE_FAILED", "gate": gate} for gate in required_integrity if not gates[gate]]
@@ -72,7 +78,7 @@ def build_final_audit() -> dict[str, Any]:
         "gates": gates,
         "workplan_clauses": {
             "sealed_phase6_9_read_only": gates["input_integrity"], "complete_input_artifact_index": gates["input_integrity"],
-            "candidate_spot_audit": candidates["spot_count"] == 30, "full_template_audit": gates["template_integrity"],
+            "candidate_spot_audit": candidates["spot_count"] == 30 and candidates["all_promoted_cover_banks_generations_conditions"], "full_template_audit": gates["template_integrity"],
             "candidate_lifecycle_reconciliation": gates["candidate_reconciliation"], "independent_certification": gates["certification_match"],
             "independent_metrics": gates["metric_recomputation"], "operation_label_name_order_permutation": gates["permutation_invariance"],
             "hidden_field_taint_and_sentinel": gates["hidden_taint_zero"], "pinned_and_protected_replay": gates["replay_match"],
@@ -82,7 +88,7 @@ def build_final_audit() -> dict[str, Any]:
             "claim_gate_registry": True, "claim_status_vocabulary": gates["claim_generation"], "fail_closed_claim_language": gates["claim_generation"],
             "one_command_reproduction": gates["reproduction_commands"], "environment_seed_lock": True,
             "audit_implementation_independent": gates["audit_independence"], "schema_contracts": True,
-            "release_manifest_signing_ready": True, "post_freeze_new_namespace": True,
+            "release_manifest_signing_ready": gates["prefreeze_artifact_contract"], "post_freeze_new_namespace": True,
         },
         "finding_count": len(findings), "findings": findings, "status": "PASS" if not findings else "FAIL",
     }
@@ -93,6 +99,7 @@ def build_final_audit() -> dict[str, Any]:
         audit["finding_count"] = len(audit["findings"])
         audit["status"] = "FAIL"
     write_json(root / "reports" / "phase10_audit.json", audit)
+    write_json(root / "manifests" / "audit_manifest.json", audit)
     validate(audit, read_json(REPO_ROOT / "schemas" / "v04" / "audit_manifest.schema.json"))
     lines = ["# Phase 10 Independent Audit", "", f"Status: {audit['status']}", "", f"Findings: {audit['finding_count']}", "", f"WorkPlan clauses: {sum(audit['workplan_clauses'].values())}/{len(audit['workplan_clauses'])}", ""]
     (root / "reports" / "phase10_audit.md").write_text("\n".join(lines), encoding="utf-8")

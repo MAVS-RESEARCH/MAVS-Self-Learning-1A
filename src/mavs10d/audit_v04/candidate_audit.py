@@ -61,6 +61,10 @@ def _candidate_rows() -> tuple[list[dict[str, Any]], dict[str, Any]]:
             "search_rows": len(pd.read_parquet(directory / "structure_search.parquet")) + len(pd.read_parquet(directory / "parameter_search.parquet")),
             "missing_file_count": len(missing),
             "runtime_descendant_count": len(entry["runtime_descendants"]),
+            "phase9_assignment_count": len(entry["phase9_assignment_artifacts"]),
+            "descendant_trace_count": len(entry["descendant_traces"]),
+            "bank_coverage_count": len({"paired_original_bank", "blind_bank"}) if recorded["lifecycle"] == "promoted" else 0,
+            "generation_coverage_count": 3 if recorded["lifecycle"] == "promoted" else 0,
             "all_hashes_match": recomputed_semantic == identity["semantic_hash"] and recomputed_behavior == recorded["behavioral_hash"],
         })
     return rows, index
@@ -108,6 +112,7 @@ def audit_candidates() -> dict[str, Any]:
         "all_names_invariant": bool(frame["name_invariant"].all()),
         "all_operations_compliant_when_integrity_passed": bool(frame.loc[frame["integrity_passed"], "operation_compliant"].all()),
         "all_promoted_have_valid_witnesses": bool(frame.loc[frame["lifecycle"] == "promoted", "witness_valid"].all()),
+        "all_promoted_cover_banks_generations_conditions": bool((frame.loc[frame["lifecycle"] == "promoted", "bank_coverage_count"] == 2).all() and (frame.loc[frame["lifecycle"] == "promoted", "generation_coverage_count"] == 3).all() and (frame.loc[frame["lifecycle"] == "promoted", "phase9_assignment_count"] > 0).all() and (frame.loc[frame["lifecycle"] == "promoted", "descendant_trace_count"] > 0).all()),
         "status": "PASS" if reconciliation and len(spot) == 30 and spot["operation"].nunique() == 10 and frame["all_hashes_match"].all() else "FAIL",
     }
     write_json(root / "candidate_audit_summary.json", summary)

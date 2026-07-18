@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import shutil
+from pathlib import Path
 
 from mavs10d.audit_v04.common import result_root
 
@@ -12,11 +13,16 @@ def main() -> None:
     if (root / "SEALED").exists():
         raise RuntimeError("P10_RELEASE_FROZEN: refusing to clean sealed Phase 10 results")
     if root.exists():
-        shutil.rmtree(root)
+        for child in root.iterdir():
+            if child.name == "diagnostic_runs":
+                continue
+            if child.is_dir():
+                shutil.rmtree(child)
+            else:
+                child.unlink()
     # Phase 10 step: report isolated namespace cleanup.
     print('{"event":"phase10.clean.complete","scope":"phase10_only"}')
 
 
 if __name__ == "__main__":
     main()
-
