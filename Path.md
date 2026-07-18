@@ -1910,6 +1910,17 @@ The replacement independent auditor records **39/39** Phase 9 log statements wit
 - Corrective code: candidate and certification Parquet writers now create their exact WorkPlan contract directories before writing. A focused regression test requires both directory-creation calls.
 - Advancement state: Phase 10 remains **in progress**; no completion claim is permitted.
 
+### P10-E003 - Rejected third attempt, full fail-closed findings, and audit-definition corrections
+
+- Date and phase: 2026-07-18 (Asia/Karachi), Phase 10.
+- Source checkpoint attempted: `c38b71831923ee93062fdd46173021077a98117d`; command `node scripts/run_phase10.mjs`; exit `1`; wall time `816.4 s`.
+- Gates that passed before rejection: 3,341-artifact/40-candidate input freeze; 40-candidate lifecycle reconciliation; 600/600 independent certification gates; **6,624/6,624** raw-trace Phase 9 metric comparisons; 40/40 metadata/order permutation challenges; replay of **1,752** pinned rows plus **108,279** protected failures with zero mismatches; 174/174 legacy hashes; zero Track A/Track B opportunity overlap; zero upstream overwrite; reduced reproduction; and the complete repository regression.
+- Fail-closed findings: template audit reported 40 semantic-hash mismatches while behavioral hashes actually matched; taint audit counted 40 evaluator-side certification-trace `unsafe` columns and two self-referential source literals; trace audit treated four legitimate Phase 7 executions per case as duplicates, required undocumented `target`/`result` names instead of `target_contrast`/`result_available`, and required learning lineage on nonlearning legacy/oracle checkpoints; isolation audit interpreted 190 legitimate copied artifact hashes as blind-bank case contamination. The generated dependent claims were therefore correctly `falsified`, and no release freeze ran.
+- Additional failure: final claim-schema validation rejected the mechanically emitted `generator` field because the schema omitted that declared property.
+- Evidence disposition: **rejected diagnostic attempt**. No Phase 10 completion, claim elevation, release signature, or seal is accepted.
+- Corrective method: independently implement the documented commutative AST canonicalization before semantic hashing; distinguish evaluator-only traces from participant influence/retention zones; use AST import analysis rather than string matching; validate Phase 7 terminal executions by unique trace hashes and documented query-field aliases; require provenance/rollback only for learning state rules and bind rollback to the prior generation checkpoint; test bank contamination by exact opportunity/case identity intersection; add `generator` to the claim schema; compute the WorkPlan clause count from the actual matrix.
+- Advancement state: Phase 10 remains **in progress**. Every correction requires focused tests, a new source checkpoint, and a complete clean restart.
+
 ## Execution rules for this path
 
 This document will be updated while work is performed, not reconstructed after a run. Every phase entry must record:

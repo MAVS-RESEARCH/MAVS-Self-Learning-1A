@@ -39,6 +39,14 @@ def test_semantic_hash_detects_parameter_change():
     assert semantic_hash(candidate()) != semantic_hash(changed)
 
 
+def test_semantic_hash_canonicalizes_commutative_children():
+    first = candidate()
+    first["expression_ast"] = {"op": "and", "children": [first["expression_ast"], first["positive_scope_ast"]]}
+    second = copy.deepcopy(first)
+    second["expression_ast"]["children"].reverse()
+    assert semantic_hash(first) == semantic_hash(second)
+
+
 def test_gate_recomputation_uses_raw_trace():
     rows = []
     for bank in ["trigger", "retained", "anti_scope", "positive_scope_boundary", "adversarial", "nuisance_counterfactual", "causal_counterfactual"]:
@@ -47,4 +55,3 @@ def test_gate_recomputation_uses_raw_trace():
     witness = {"valid": True}
     values = recompute_gate_values(candidate(), frame, witness)
     assert values["kernel"][1] and values["protected_error"][1] and values["replay"][1]
-

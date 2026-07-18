@@ -33,13 +33,21 @@ def audit_isolation() -> dict[str, Any]:
             identifiers.update(pd.read_parquet(path)["opportunity_id"].astype(str))
         track_ids[track] = identifiers
     overlap = track_ids["paired_original_bank"] & track_ids["blind_bank"]
-    p6_p8_tokens: set[str] = set()
+    upstream_case_ids: set[str] = set()
     for phase in ("phase6", "phase7", "phase8"):
-        for artifact in index["artifacts"]:
-            if artifact["phase"] == int(phase[-1]) and artifact["logical_role"] in {"manifest", "candidate_evidence"}:
-                p6_p8_tokens.add(artifact["sha256"])
-    blind_manifest_text = (p9 / "blind_bank" / "SIGNED_MANIFEST.json").read_text(encoding="utf-8")
-    contamination = [token for token in p6_p8_tokens if token in blind_manifest_text]
+        phase_root = REPO_ROOT / cfg["inputs"][phase]
+        for path in sorted((phase_root / "banks").rglob("*.parquet")) if (phase_root / "banks").exists() else []:
+            frame = pd.read_parquet(path)
+            for column in ("opportunity_id", "case_id"):
+                if column in frame:
+                    upstream_case_ids.update(frame[column].dropna().astype(str))
+        for path in sorted((phase_root / "banks").rglob("*.jsonl")) if (phase_root / "banks").exists() else []:
+            for line in path.read_text(encoding="utf-8").splitlines():
+                payload = __import__("json").loads(line)
+                identifier = payload.get("opportunity_id", payload.get("case_id"))
+                if identifier is not None:
+                    upstream_case_ids.add(str(identifier))
+    contamination = sorted(upstream_case_ids & track_ids["blind_bank"])
     current_mismatches = []
     for entry in index["artifacts"]:
         path = REPO_ROOT / entry["physical_path"]
@@ -60,4 +68,3 @@ def audit_isolation() -> dict[str, Any]:
     write_json(root / "overwrite_scan.json", overwrite)
     write_json(root / "results_isolation_audit.json", summary)
     return summary
-

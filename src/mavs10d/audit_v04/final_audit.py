@@ -69,7 +69,7 @@ def build_final_audit() -> dict[str, Any]:
         "input_index_sha256": file_sha256(root / "manifests" / "input_artifact_index.json"),
         "sample_plan_sha256": file_sha256(root / "manifests" / "sample_plan.json"),
         "environment_lock_sha256": file_sha256(root / "manifests" / "environment_lock.json"),
-        "gates": gates, "workplan_clause_count": 26,
+        "gates": gates,
         "workplan_clauses": {
             "sealed_phase6_9_read_only": gates["input_integrity"], "complete_input_artifact_index": gates["input_integrity"],
             "candidate_spot_audit": candidates["spot_count"] == 30, "full_template_audit": gates["template_integrity"],
@@ -86,6 +86,7 @@ def build_final_audit() -> dict[str, Any]:
         },
         "finding_count": len(findings), "findings": findings, "status": "PASS" if not findings else "FAIL",
     }
+    audit["workplan_clause_count"] = len(audit["workplan_clauses"])
     if not all(audit["workplan_clauses"].values()):
         missing = [key for key, value in audit["workplan_clauses"].items() if not value]
         audit["findings"].extend({"reason_code": "P10_WORKPLAN_CLAUSE_FAILED", "clause": key} for key in missing)

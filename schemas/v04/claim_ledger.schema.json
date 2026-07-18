@@ -6,6 +6,7 @@
   "properties": {
     "schema_version": {"const": "1.0.0"},
     "generated": {"const": true},
+    "generator": {"type": "string", "minLength": 1},
     "source_audit_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "claims": {
       "type": "array",
@@ -21,4 +22,3 @@
   },
   "additionalProperties": false
 }
-

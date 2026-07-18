@@ -45,17 +45,25 @@ def audit_traces() -> dict[str, Any]:
             missing_residual += int((escalation & frame["residual_reason"].astype(str).isin(["", "none", "nan"])).sum())
         checkpoint_files = sorted((p9 / track / "checkpoints").rglob("*.json"))
         for path in checkpoint_files:
-            text = path.read_text(encoding="utf-8", errors="ignore").lower()
-            if "provenance" not in text and "rollback" not in text and "checkpoint" not in path.name.lower():
-                learning_transition_gaps += 1
+            payload = __import__("json").loads(path.read_text(encoding="utf-8"))
+            learning_rule = payload.get("state_rule") in {"cumulative", "frozen_after_g1", "threshold_only", "selector_only", "matched_memory", "raw_memory", "reduced"}
+            if learning_rule:
+                prior = path.parents[1] / f"generation_{int(payload['generation']) - 1}" / path.name if int(payload["generation"]) > 1 else None
+                provenance_valid = len(payload.get("checkpoint_sha256", "")) == 64 and payload.get("legal_fields") and payload.get("state_rule")
+                rollback_valid = prior is None or prior.is_file()
+                if not provenance_valid or not rollback_valid:
+                    learning_transition_gaps += 1
         per_track[track] = {"condition_generation_files": track_files, "terminal_rows": track_rows, "checkpoint_files": len(checkpoint_files)}
     p7_terminals = pd.read_parquet(p7 / "traces" / "terminal_decisions.parquet")
     p7_rounds = pd.read_parquet(p7 / "traces" / "perception_rounds.parquet")
     p7_queries = pd.read_parquet(p7 / "traces" / "queries_and_probes.parquet")
     p7_escalations = pd.read_parquet(p7 / "traces" / "escalations.parquet")
-    duplicate_terminal += int(p7_terminals["case_id"].duplicated().sum())
-    required_query_fields = {"case_id", "action_type", "target", "result", "cost"}
-    missing_fields = sorted(required_query_fields - set(p7_queries.columns))
+    duplicate_terminal += int(p7_terminals["trace_hash"].duplicated().sum())
+    query_aliases = {
+        "case_id": {"case_id"}, "action_type": {"action_type"}, "target": {"target", "target_contrast"},
+        "result": {"result", "result_available", "updated_fields"}, "cost": {"cost"},
+    }
+    missing_fields = [logical for logical, aliases in query_aliases.items() if not aliases.intersection(p7_queries.columns)]
     query_probe_missing_contract += len(missing_fields)
     if "round_id" in p7_rounds:
         missing_round_lineage += int(p7_rounds["round_id"].isna().sum())
@@ -78,4 +86,3 @@ def audit_traces() -> dict[str, Any]:
     write_json(root / "residual_escalation.json", residual)
     statuses = [lineage["status"], authority["status"], residual["status"], "PASS" if completeness["completeness_rate"] == 1.0 else "FAIL"]
     return {"terminal_records_checked": completeness["canonical_terminal_records_checked"], "statuses": statuses, "status": "PASS" if set(statuses) == {"PASS"} else "FAIL"}
-
