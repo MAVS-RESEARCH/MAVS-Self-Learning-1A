@@ -57,6 +57,8 @@ def replay() -> dict[str, Any]:
     phase7_trace_path = phase7 / "traces" / "perception_traces.parquet"
     phase7_terminal = pd.read_parquet(phase7_terminal_path)
     phase7_trace = pd.read_parquet(phase7_trace_path)
+    phase7_escalations = pd.read_parquet(phase7 / "traces" / "escalations.parquet")
+    phase7_escalation_ids = set(phase7_escalations.loc[phase7_escalations["library_size"] == phase7_escalations["library_size"].max(), "case_id"].astype(str))
     phase7_selected = phase7_terminal[phase7_terminal["library_size"] == phase7_terminal["library_size"].max()].sort_values("case_id")
     phase7_columns = ["terminal_action", "terminal_authorization", "round_count", "query_count", "probe_count", "program_count", "external_escalation_count", "trace_hash"]
     phase7_left = phase7_selected.set_index("case_id")[phase7_columns]
@@ -68,7 +70,10 @@ def replay() -> dict[str, Any]:
             mismatches.append({"phase": 7, "field": column, "count": count})
     for case_id, row in phase7_left.iterrows():
         authorization = str(row["terminal_authorization"])
-        certificate_exists = authorization == "EXTERNAL_ESCALATE" or (phase7 / "certificates" / "local" / f"{authorization}.json").is_file()
+        certificate_exists = (
+            (str(row["terminal_action"]).upper() == "ESCALATE" and str(case_id) in phase7_escalation_ids)
+            or (str(row["terminal_action"]).upper() != "ESCALATE" and (phase7 / "certificates" / "local" / f"{authorization}.json").is_file())
+        )
         if not certificate_exists:
             mismatches.append({"phase": 7, "case_id": str(case_id), "field": "terminal_authorization", "count": 1})
         sample_records.append({

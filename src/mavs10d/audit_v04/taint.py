@@ -55,13 +55,15 @@ def audit_hidden_fields() -> dict[str, Any]:
                 columns = [str(column).lower() for column in pq.ParquetFile(path).schema.names]
                 keys = set(columns)
             lowered_path = "/" + path.relative_to(REPO_ROOT).as_posix().lower()
-            evaluator_only = any(token in lowered_path for token in ("certification_trace", "auditor_", "evaluator_", "/truth", "/failures", "/audit.", "/audit/", "/banks/", "hidden_outcomes", "oracle_"))
+            legacy_schema = lowered_path.startswith("/schemas/phase") and not lowered_path.startswith("/schemas/v04/")
+            evaluator_only = legacy_schema or any(token in lowered_path for token in ("certification_trace", "auditor_", "evaluator_", "/truth", "/failures", "/audit.", "/audit/", "/banks/", "hidden_outcomes", "oracle_", "retained_counterexample_traces"))
             hits = sorted(FORBIDDEN & keys) if not evaluator_only else []
             if hits:
                 prohibited_key_hits.extend({"path": path.relative_to(REPO_ROOT).as_posix(), "field": field} for field in hits)
             if SENTINEL.lower() in text.lower():
                 sentinel_hits.append(path.relative_to(REPO_ROOT).as_posix())
-            inventory.append({"path": path.relative_to(REPO_ROOT).as_posix(), "zone": "evaluator_only" if evaluator_only else "participant_influence_eligible", "field_count": len(keys), "forbidden_fields": hits})
+            zone = "legacy_nonparticipant_schema" if legacy_schema else ("evaluator_only" if evaluator_only else "participant_influence_eligible")
+            inventory.append({"path": path.relative_to(REPO_ROOT).as_posix(), "zone": zone, "field_count": len(keys), "forbidden_fields": hits})
     sentinel_process = __import__("subprocess").run([
         __import__("sys").executable, "-c",
         f"from mavs10d.certification.blind_api import assert_blind_payload; assert_blind_payload({{'public_score':0.5,'marker':'{SENTINEL}'}})",
