@@ -86,6 +86,23 @@ def generation_improvement_slope(values: list[float]) -> float:
     return sum((index - x_mean) * (value - sum(values) / len(values)) for index, value in enumerate(values)) / denominator
 
 
+def lexicographic_phase9_key(metrics: dict[str, float]) -> tuple[float, ...]:
+    """Lower-is-better preregistered Phase 9 comparison order."""
+
+    return tuple(float(metrics[name]) for name in ("uar", "frr", "residual_escalation_rate", "query_cost", "latency_ms", "program_complexity"))
+
+
+def lexicographic_phase9_compare(left: dict[str, float], right: dict[str, float], tolerance: float = 1e-12) -> int:
+    """Return -1 when left wins, 0 on equality, and 1 when right wins."""
+
+    for left_value, right_value in zip(lexicographic_phase9_key(left), lexicographic_phase9_key(right)):
+        if left_value < right_value - tolerance:
+            return -1
+        if left_value > right_value + tolerance:
+            return 1
+    return 0
+
+
 def _safe_ratio(numerator: int, denominator: int) -> float:
     if numerator < 0 or denominator < 0 or numerator > denominator:
         raise ValueError("Invalid estimand counts.")

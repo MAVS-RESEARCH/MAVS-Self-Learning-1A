@@ -1,0 +1,12 @@
+schema_version: "1.0.0"
+track_id: blind_bank
+claim_status: provisional_until_phase10
+participant_seed_namespace: phase9-track-b-participant
+evaluator_seed_namespace: phase9-track-b-evaluator
+generator: perception_closure_v04_blind_independent_v1
+seal_before_participant_execution: true
+zero_overlap_required: true
+post_unseal_retuning: false
+allow_track_a_artifact_reads: false
+separate_process_identity: phase9-track-b-evaluator
+

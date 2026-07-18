@@ -1,0 +1,68 @@
+schema_version: "1.0.0"
+phase: 9
+name: three_generation_phase5_revalidation
+normative_version: "0.4"
+dependencies:
+  phase6_root: results/perception_closure_v04/phase6/phase6_authoritative_reaudit_20260714
+  phase7_root: results/perception_closure_v04/phase7/phase7_authoritative_20260714
+  phase8_root: results/perception_closure_v04/phase8/phase8_authoritative_20260714
+  phase8_audit_sha256: 6AB6E66FB52B543D0776EF91BDFC5F1C141AEF3503C8A7FD879740F884B7CD7D
+  phase8_required_status: PASS
+  phase8_required_findings: 0
+banks:
+  generations: [1, 2, 3]
+  worlds_per_generation: 300
+  opportunities_per_world: 50
+  opportunities_per_generation: 15000
+  opportunities_per_bank: 45000
+  paired_original_source: results/manifests/phase5_authoritative/phase5
+  original_index: results/legacy/phase5_original/legacy_manifest.json
+  blind_seed_ranges:
+    1: [1910000, 1910299]
+    2: [1920000, 1920299]
+    3: [1930000, 1930299]
+  blind_generator_id: perception_closure_v04_blind_independent_v1
+condition_sets:
+  track_a:
+    include_legacy_a0_a49: true
+    phase8_ablation_scope: full
+  track_b:
+    include_legacy_a0_a49: false
+    phase8_ablation_scope: claim_critical
+    claim_critical_ablations: [I1, I2, I3, I6, I7, I8, I9, P1, P4, P5, P6, P7, P8, P9, P10, P11, L1, L2, L3, L4, L10]
+matched_budget:
+  queries_per_opportunity: 1
+  probes_per_opportunity: 1
+  rounds_per_opportunity: 2
+  compute_units_per_opportunity: 8
+  latency_ms_per_opportunity: 2500
+  memory_bytes: 4194304
+  persistence_bytes: 65536
+  program_complexity_nodes: 12
+decision_contract:
+  high_confidence_accept: 0.02
+  high_confidence_reject: 0.98
+  query_low: 0.02
+  query_high: 0.98
+  irreducible_when_evidence_missing: true
+  scope_activation_minimum: 0.20
+  scope_activation_maximum: 0.95
+  active_basis_maximum: 2
+  phase6_gate_count: 15
+statistics:
+  alpha: 0.05
+  paired_bootstrap_repetitions: 2000
+  permutation_repetitions: 25
+  replay_sample_per_generation_condition: 50
+  stable_evidence_tolerance: 0.0
+gates:
+  protected_error_tolerance: 0.0
+  scope_leakage_tolerance: 0.0
+  irreducible_floor_tolerance: 0.0
+  replay_tolerance: 0.0
+  hidden_taint_tolerance: 0
+  retention_complexity_tolerance: 0.0
+model_training: none
+post_unseal_retuning: false
+track_pooling: false
+results_root: results/perception_closure_v04/phase9

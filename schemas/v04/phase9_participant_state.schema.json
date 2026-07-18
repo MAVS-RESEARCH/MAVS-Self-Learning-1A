@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase9_participant_state.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "track_id", "condition_id", "generation", "state_rule", "legal_fields", "state", "state_bytes", "checkpoint_sha256", "hidden_taint_count", "future_read_count"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "track_id": {"enum": ["paired_original_bank", "blind_bank"]},
+    "condition_id": {"type": "string", "minLength": 1},
+    "generation": {"enum": [1, 2, 3]},
+    "state_rule": {"type": "string"},
+    "legal_fields": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "state": {"type": "object"},
+    "state_bytes": {"type": "integer", "minimum": 0, "maximum": 4194304},
+    "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "hidden_taint_count": {"const": 0},
+    "future_read_count": {"const": 0}
+  }
+}
+

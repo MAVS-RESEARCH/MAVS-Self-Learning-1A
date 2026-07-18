@@ -1,0 +1,11 @@
+schema_version: "1.0.0"
+track_id: paired_original_bank
+claim_status: diagnostic_only
+participant_seed_namespace: phase9-track-a-participant
+evaluator_seed_namespace: phase9-track-a-evaluator
+source_bank: results/manifests/phase5_authoritative/phase5
+exact_original_identity_required: true
+allow_preexecution_discrepancy_ledger: true
+allow_track_b_tuning: false
+separate_process_identity: phase9-track-a-evaluator
+

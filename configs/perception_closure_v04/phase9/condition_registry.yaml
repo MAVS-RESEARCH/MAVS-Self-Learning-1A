@@ -1,0 +1,17 @@
+schema_version: "1.0.0"
+core:
+  - {id: v04_cumulative, method: perception_closure_v04, state_rule: cumulative, competitive: true}
+  - {id: v04_fresh, method: perception_closure_v04, state_rule: fresh, competitive: true}
+  - {id: v04_frozen_after_g1, method: perception_closure_v04, state_rule: frozen_after_g1, competitive: true}
+  - {id: legacy_A0, method: legacy_mavs_sl, state_rule: cumulative, competitive: true}
+  - {id: A1_frozen, method: legacy_mavs_sl, state_rule: fixed, competitive: true}
+  - {id: A2_threshold_only, method: legacy_mavs_sl, state_rule: threshold_only, competitive: true}
+  - {id: A3_selector_only, method: legacy_mavs_sl, state_rule: selector_only, competitive: true}
+  - {id: fixed_full_mavs, method: fixed_mavs, state_rule: fixed, competitive: true}
+  - {id: ds_cf_lineage, method: ds_cf, state_rule: fixed, competitive: true}
+  - {id: raw_memory, method: memory_control, state_rule: raw_memory, competitive: true}
+  - {id: matched_memory, method: memory_control, state_rule: matched_memory, competitive: true}
+  - {id: reduced_learning, method: reduced_learning, state_rule: reduced, competitive: true}
+  - {id: random_proposal, method: random_proposal, state_rule: cumulative, competitive: true}
+  - {id: oracle_closure, method: oracle, state_rule: evaluator_only, competitive: false, oracle: true}
+

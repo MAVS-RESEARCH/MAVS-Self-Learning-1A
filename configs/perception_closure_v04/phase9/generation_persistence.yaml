@@ -1,0 +1,12 @@
+schema_version: "1.0.0"
+cumulative:
+  persist: [certified_semantics, scopes, anti_scopes, query_policies, compact_closure_programs, negative_knowledge, legal_compositions, condition_valid_calibration]
+  reset: [case_transients, evaluator_responses, hidden_truth, final_metrics]
+fresh:
+  persist: []
+  reset: [all_learned_state, case_transients, evaluator_responses, hidden_truth, final_metrics]
+frozen_after_g1:
+  persist: [g1_certified_semantics, g1_scopes, g1_anti_scopes, g1_query_policies, g1_compact_closure_programs, g1_negative_knowledge, g1_legal_compositions, g1_condition_valid_calibration]
+  reset: [post_g1_synthesis, post_g1_consolidation, case_transients, evaluator_responses, hidden_truth, final_metrics]
+forbidden_all_conditions: [operation_answers, promotion_labels, minimum_separating_actions, evaluator_truth, final_metrics, future_generation_manifest]
+

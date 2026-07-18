@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "generation_summary.schema.json",
+  "type": "object",
+  "required": ["track_id", "method", "condition_id", "point_id", "generation", "opportunity_count", "uar", "frr", "residual_escalation_rate", "query_cost", "latency_ms", "program_complexity", "scope_leakage", "complete_replay_rate"],
+  "properties": {
+    "track_id": {"type": "string"}, "method": {"type": "string"}, "condition_id": {"type": "string"}, "point_id": {"type": "string"},
+    "generation": {"enum": [1, 2, 3]}, "opportunity_count": {"const": 15000},
+    "uar": {"type": "number", "minimum": 0, "maximum": 1}, "frr": {"type": "number", "minimum": 0, "maximum": 1},
+    "residual_escalation_rate": {"type": "number", "minimum": 0, "maximum": 1}, "query_cost": {"type": "number", "minimum": 0},
+    "latency_ms": {"type": "number", "minimum": 0}, "program_complexity": {"type": "number", "minimum": 0},
+    "scope_leakage": {"type": "number", "minimum": 0}, "complete_replay_rate": {"type": "number", "minimum": 0, "maximum": 1}
+  }
+}
+

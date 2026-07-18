@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase9_generation_manifest.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "track_id", "generation", "world_count", "opportunity_count", "public_ledger_sha256", "public_fields", "evaluator_manifest_sha256", "sealed_before_participant", "signature"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "track_id": {"enum": ["paired_original_bank", "blind_bank"]},
+    "generation": {"enum": [1, 2, 3]},
+    "world_count": {"const": 300},
+    "opportunity_count": {"const": 15000},
+    "seed_min": {"type": "integer"},
+    "seed_max": {"type": "integer"},
+    "public_ledger_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "public_fields": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "evaluator_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_identity": {"type": "object"},
+    "separation": {"type": "object"},
+    "sealed_before_participant": {"type": "boolean"},
+    "signature": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}
+

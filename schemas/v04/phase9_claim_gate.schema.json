@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase9_claim_gate.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "track_id", "claim_status", "gates", "passed", "phase10_required", "unsupported_claims"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "track_id": {"enum": ["paired_original_bank", "blind_bank"]},
+    "claim_status": {"enum": ["diagnostic_only", "provisional_until_phase10", "unsupported"]},
+    "gates": {"type": "object", "additionalProperties": {"type": "boolean"}},
+    "passed": {"type": "boolean"},
+    "phase10_required": {"const": true},
+    "unsupported_claims": {"type": "array", "items": {"type": "string"}}
+  }
+}
+
