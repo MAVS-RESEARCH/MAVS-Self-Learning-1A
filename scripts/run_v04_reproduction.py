@@ -26,11 +26,9 @@ def _clean_environment(test_paths: list[str], environment: dict[str, str]) -> tu
         install_lock = subprocess.run([str(clean_python), "-m", "pip", "install", "--disable-pip-version-check", "-r", str(lock)], cwd=REPO_ROOT, env=environment, capture_output=True, text=True)
         if install_lock.returncode != 0:
             return install_lock, {"created": True, "dependency_install": "FAIL", "lock_sha256": file_sha256(lock)}
-        install_project = subprocess.run([str(clean_python), "-m", "pip", "install", "--disable-pip-version-check", "--no-build-isolation", "--no-deps", "-e", "."], cwd=REPO_ROOT, env=environment, capture_output=True, text=True)
-        if install_project.returncode != 0:
-            return install_project, {"created": True, "dependency_install": "PASS", "project_install": "FAIL", "lock_sha256": file_sha256(lock)}
-        completed = subprocess.run([str(clean_python), "-m", "pytest", *test_paths, "-q"], cwd=REPO_ROOT, env=environment, capture_output=True, text=True)
-        return completed, {"created": True, "isolated_site_packages": True, "dependency_install": "PASS", "project_install": "PASS", "lock_sha256": file_sha256(lock), "deleted_after_execution": True}
+        clean_environment = {**environment, "PYTHONPATH": str(REPO_ROOT / "src")}
+        completed = subprocess.run([str(clean_python), "-m", "pytest", *test_paths, "-q"], cwd=REPO_ROOT, env=clean_environment, capture_output=True, text=True)
+        return completed, {"created": True, "isolated_site_packages": True, "dependency_install": "PASS", "source_execution": "committed_source_via_pinned_pythonpath", "lock_sha256": file_sha256(lock), "deleted_after_execution": True}
     finally:
         if environment_root.exists():
             shutil.rmtree(environment_root)

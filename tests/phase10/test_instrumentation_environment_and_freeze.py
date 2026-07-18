@@ -36,6 +36,12 @@ def test_release_config_declares_determinism_controls():
     assert "seed: 1010001" in text and "algorithm: ed25519" in text and "fail_closed: true" in text
 
 
+def test_clean_environment_does_not_edit_install_into_workspace():
+    source = (REPO_ROOT / "scripts" / "run_v04_reproduction.py").read_text(encoding="utf-8")
+    assert '"PYTHONPATH": str(REPO_ROOT / "src")' in source
+    assert '"-e", "."' not in source
+
+
 def test_cleaner_refuses_sealed_namespace_by_contract():
     text = (REPO_ROOT / "scripts" / "clean_phase10_results.py").read_text(encoding="utf-8")
     assert "P10_RELEASE_FROZEN" in text and 'root / "SEALED"' in text
